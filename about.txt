@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Material Icons
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNZIhI8tIHh.ttf
+- Font License: undefined)

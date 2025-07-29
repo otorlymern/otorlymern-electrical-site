@@ -1,0 +1,212 @@
+/* fonts */
+@font-face {
+    font-family: 'Lyno-Jean';
+    src: url('Lyno-Jean 2.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Lyno-Stan';
+    src: url('Lyno-Stan 2.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Lyno-Ulys';
+    src: url('Lyno-Ulys 2.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ecommandfont';
+  src: url('fonts/EnterCommand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.photopile figure {
+  max-width: 250px;    /* ← set this to match your polaroid frame’s width */
+}
+
+.photopile figure img {
+  display: block;
+  width: 100%;
+  height: auto;        /* preserves aspect ratio */
+}
+.photopile { 
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.photopile figure { 
+  display: inline-block;
+  max-width: 40%;
+  background: white;
+  box-shadow: 1px 4px 5px rgba(0,0,0,0.55);
+  transform: rotate(2deg);
+  margin: 0 -25px;
+}
+.photopile figure img {
+  max-width: calc(100% - 2rem);
+  margin: 1rem 1rem 0 1rem;
+  border: 2px rgb(0,0,0,0.55) inset;
+}
+.photopile figcaption {
+  text-align: center;
+  margin: 0.5rem 1rem 1rem 1rem;
+  font-size: 0.8rem;
+  color: black;
+}
+.photopile figure:hover { 
+  z-index: 3;
+}
+.photopile figure:nth-child(2n) { 
+  transform: rotate(-10deg);
+}
+.photopile figure:nth-child(3n) {
+  transform: rotate(5deg);
+}
+.photopile figure:nth-child(4n) { 
+  transform: rotate(4deg);
+}
+.photopile figure:nth-child(5n) { 
+  transform: rotate(-2deg);
+}
+.photopile figure:nth-child(6n) {
+  transform: rotate(-7deg);
+}
+
+/* Basic Body Styles with Tiled Background */
+body {
+  background-color: #fdf6e3;
+  background-image: url('../images/tape-audio-0090.gif');
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  color: #333;
+  font-family: 'Lyno-Stan', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.nav-bar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #7b3f00; /* brown background */
+  justify-content: center;
+  font-family: 'Lyno-Stan', sans-serif;
+}
+
+.nav-bar > li {
+  position: relative;
+}
+
+.nav-bar a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff5e1;
+  background-color: #7b3f00;
+}
+
+.nav-bar a:hover {
+  background-color: #aa4c1b;
+  color: #ffeedc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #cd9066;
+  min-width: 180px;
+  z-index: 1000;
+  border: 2px solid #5a2f00;
+  font-size: 90%;
+}
+
+.dropdown-content a {
+  padding: 8px 12px;
+  color: #fff5e1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Model Figure Caption Font */
+.model-figure {
+  font-family: 'ecommandfont', sans-serif;
+}
+
+/* Local Lists Styling */
+ul {
+  list-style: square;
+  margin-left: 20px;
+  padding: 0;
+  line-height: 1.6;
+  text-align: left;
+}
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Ensure section background uses tiled body BG */
+section {
+  background: transparent;
+}
+
+/* 3D Model Viewer Placeholder */
+figure.model-figure {
+  text-align: left;
+  background-color: #aa4935;
+  border: 1px solid #a0522d;
+  padding: 10px;
+  margin: 20px auto;
+  max-width: 300px;
+  box-shadow: 2.7px 4px 0 #d2691e;
+}
+
+@keyframes wiggle-title {
+  1% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
+  50% { transform: rotateX(10deg) rotateY(15deg) scale(0.95); }
+  100% { transform: rotateX(-10deg) rotateY(-15deg) scale(0.85); }
+}
+
+@keyframes wiggle-slow {
+  0%, 100% { transform: rotateX(10deg) rotateZ(0deg); }
+  50% { transform: rotateX(90deg) rotateZ(4deg); }
+}
+.threeD {
+  display: block;
+  text-align: center;
+  perspective: 5000px; 
+  transform-style: preserve-3d;
+}
+ .wiggle-title {
+  font-family: 'Lyno-Jean',sans-serif;
+  font-size: 3em; 
+  display: inline-block;
+  transform-origin: center;
+  animation: wiggle 20s infinite ease-in-out;
+  text-shadow: 2px 4px 3px rgba(0,0.3,0.1,0.7);
+}
+  
+/* Highlight Styling */
+.highlight {
+  background-color: rgba(255,250,240,0.8);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+/* Footer */
+footer {
+  background-color: #8b4513;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  font-family: 'Lyno-Stan', Arial, sans-serif;
+  font-size: 0.9em;
+}
+.footer-badges {
+  display: inline;
+  max-height: 50px;
+}

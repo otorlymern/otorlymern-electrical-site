@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music – OES</title>
+  <link rel="stylesheet" href="../musicstyle.css">
+  <style>
+    /* Hug-the-text translucent highlight */
+    .highlight {
+      display: inline-block;
+      background-color: rgba(255,250,240,0.8);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      line-height: 1.2;
+    }
+    /* Float images to the right */
+    .image-right {
+      float: right;
+      margin: 0 0 0.7em 0.5em;
+      max-height: 500px;
+      max-width: 200px;
+    }
+    .header-image {
+      max-height: 50px;
+      max-width: 100px;
+    }
+    /* ensure section shows tiled body background */
+    section.music-section {
+      background: transparent;
+    }
+  </style>
+</head>
+     <nav>
+     <ul class="nav-bar">
+
+        <!-- Music dropdown -->
+
+        <li class="dropdown">
+          <a href="music.html">Music</a>
+          <ul class="dropdown-content">
+            <li><a href="music/discography.html"><img src="images/tape-audio-0090.gif" 				alt=“musicdropdownbullet”>Discography</a></li>
+            <li><a ref="music/studio.html"><img src="images/tape-audio-0090.gif" alt="musicdropdownbullet">OEStudio Audio Gear</a></li>
+            <li><a href="music/techniques.html"><img src="images/tape-audio-0090.gif" alt="musicdropdownbullet">Techniques</a></li>
+            <li><a href="/music/resources.html"><img src="images/tape-audio-0090.gif" alt="musicdropdownbullet">Resources</a></li>
+          </ul>
+        </li>
+
+        <!-- Video dropdown -->
+
+        <li class="dropdown">
+          <a href="video.html">Video</a>
+          <ul class="dropdown-content">
+            <li><a href="video/gear.html"><img src="images/camera-011.gif" alt="viddropdownbullet">OEStudio Video Gear</a></li>
+            <li><a href="video/techniques.html"><img src="images/camera-011.gif" alt="viddropdownbullet">Techniques</a></li>
+            <li><a href="video/archive.html"><img src="images/camera-011.gif" alt=“viddropdownbullet”>Archive</a></li>
+          </ul>
+        </li>
+
+        <!-- Lit dropdown -->
+
+        <li class="dropdown">
+          <a href="lit.html">Lit</a>
+          <ul class="dropdown-content">
+            <li><a href="lit/acalfiction.html"><img src="images/newspaper-08.gif" alt=“litdropdownbullet”>Short Fiction</a></li>
+		  	<li><a href="lit/articles.html"><img src="images/newspaper-08.gif" alt=“litdropdownbullet>Articles</a></li>
+            <li><a href="lit/links.html"><img src="images/newspaper-08.gif" alt=“litdropdownbullet>Links/<br>Publications</a></li>
+          </ul>
+        </li>
+
+        <!-- DIY dropdown -->
+
+        <li class="dropdown">
+          <a href="DIY.html">DIY</a>
+          <ul class="dropdown-content">
+            <li><a href="/DIY/projects.html"><img src="images/keyboard-computer-0443.gif" alt="">Audio/Video Projects</a></li>
+            <li><a href="DIY/builds.html"><img src="images/keyboard-computer-0443.gif" alt="">Gear Mods/REfurbs/builds</a></li>
+            <li><a href="DIY/designers.html"><img src="images/keyboard-computer-0443.gif" alt="">Designers</a></li>
+            <li><a href="DIY/archive.html"><img src="images/keyboard-computer-0443.gif" alt="">Schematics/Circuits Archive</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  <!-- HEADER -->
+  <header >
+    <h1> class="threeD wiggle-title" OES Studio </h1>
+  </header>
+<!-- Studio Photo Pile-->
+<div class="photopile">
+  <figure>
+    <img src="../images/StraightonOEStudio.JPG" alt="OEStudioShot-StraightOn">
+    <figcaption>OEStudio, straigt on. </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/leftside-modularOEStudio.JPG" alt="OestudioLeft-ModularsandRackunits">
+    <figcaption>Left Side of OEStudio</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/right-3stacksynthrackOEStudio.JPG" alt="3stackkeyboardsynthrightsideOEstudio">
+    <figcaption>Right side of the studio</figcaption>
+  </figure>
+   <figure>
+    <img src="../putneyswopeinhiselement.jpeg" alt="Studio Mask" class="image-right">
+    <figcaption>Right side of the studio</figcaption>
+  </figure>
+</div>
+<!--List of Audio Gear-->
+ <body>
+  <section class="music-section">
+    <h2 class="highlight">
+      <img src="../images/korgaddcover.png" class="header-image" alt="KorgSynthesizersKorgSYnthesizers">Synthesizers
+      <img src="../images/korgaddcover.png" class="header-image" alt="KorgSynthesizers">
+    </h2>
+
+    <!-- DX7 3D MODEL -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <figure class="model-figure">
+      <model-viewer
+        src="../models/yamaha_dx7.glb"
+        alt="3D model of Yamaha DX7"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+        style="width:100%; height:220px; background:#aa4935;">
+      </model-viewer>
+      <figcaption class="highlight" style="font-family:ecommandfont; font-size:1.1em; margin-top:5px;">
+        <details>
+          <summary style="cursor:pointer;font-family:ecommandfont;">Yamaha DX7</summary>
+          <p style="font-size:0.9em;">
+            The <strong>Yamaha DX7</strong> single-handedly changed the synth landscape in 1983… ten years of menu-diving and unsatisfying button presses.
+          </p>
+        </details>
+      </figcaption>
+    </figure>
+
+    <!-- SYNTH LIST -->
+    <ul>
+      <li><a href="serge.html"><span class="highlight">Serge-style Modular System</span></a></li>
+      <li><a href="diwiard.html"><span class="highlight">Wiard Music Weasel</span></a></li>
+      <li><a href="music/synths/casio.html"><span class="highlight">Casio CZ-101</span></a></li>
+      <li><a href="music/synths/Ensoniq.html"><span class="highlight">Ensoniq Esq-1</span></a></li>
+      <li><a href="./Roland_JX-3P_Owners_Manual.pdf"><span class="highlight">Roland JX-3P w/ PG-200</span></a></li>
+      <li><a href="music/synths/Korg.html"><span class="highlight">Korg DW-6000</span></a></li>
+      <li><a href="music/synths/granular.html"><span class="highlight">Basto MicroGranny Granular</span></a></li>
+      <li><a href="music/synths/elektron.html"><span class="highlight">Elektron Model:Cycles</span></a></li>
+      <li><a href="music/synths/fmsynths.html"><span class="highlight">Volca FM 2</span></a></li>
+      <li><a href="music/synths/softsynths_programming.html"><span class="highlight">norns Monome</span></a></li>
+    </ul>
+
+    <!-- EFFECTS -->
+    <h2 class="highlight">
+      <img src="../spacestationglamourshot.png" class="header-image" alt="">Effects Processors
+      <img src="../spacestationglamourshot.png" class="header-image" alt="">
+    </h2>
+    <ul>
+      <li><a href="../DOCS/672A_Manual.pdf"><span class="highlight">Orban 672a EQ</span></a></li>
+      <li><a href="#"><span class="highlight">Orban Spring Reverb</span></a></li>
+      <li><a href="music/synths/fx.html"><span class="highlight">Delta Lab AD1024</span></a></li>
+      <li><a href="music/synths/fx.html"><span class="highlight">Meng Qi Wingie 2</span></a></li>
+      <li><a href="music/synths/fx.html"><span class="highlight">Parametric Tube EQ</span></a></li>
+      <li><a href="music/synths/fx.html"><span class="highlight">Ashley Blueface Comp</span></a></li>
+      <li><a href="music/synths/fx.html"><span class="highlight">Fostex 3040 Comp</span></a></li>
+      <li><a href="music/synths/fx.html"><span class="highlight">Really Nice Limiting Amp</span></a></li>
+    </ul>
+ 
+ 
+  <!-- TAPE MACHINES -->
+    <h2 class="highlight">
+      <img src="../images/spinningcassette.gif" class="header-image" alt="">Tape Machines
+      <img src="../images/spinningcassette.gif" class="header-image" alt="">
+    </h2>
+    <!-- TASCAM 32 3D MODEL -->
+    <figure class="model-figure">
+      <model-viewer
+        src="../models/recorder_tascam_32.glb"
+        alt="3D model of Tascam 32 reel-to-reel"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+        style="width:100%; height:220px; background:#aa4935;">
+      </model-viewer>
+      <figcaption class="highlight" style="font-family:ecommandfont; font-size:1.1em; margin-top:5px;">
+        <details>
+          <summary style="cursor:pointer;font-family:ecommandfont;">Tascam 32</summary>
+          <p style="font-size:0.9em;">
+            The <strong>Tascam 32</strong> is a half-track quarter-inch master recorder… the perfect pro-sumer centerpiece for a home studio.
+          </p>
+        </details>
+      </figcaption>
+    </figure>
+  <!-- TAPE MACHINES -->
+  
+    <ul>
+      <li><span class="highlight">Tascam MFP01</span></li>
+      <li><span class="highlight">Tascam 242</span></li>
+      <li><span class="highlight">Tascam 244</span></li>
+      <li><span class="highlight">Tascam 246</span></li>
+      <li><span class="highlight">Tascam 424</span></li>
+      <li><span class="highlight">Tascam 488ii</span></li>
+      <li><span class="highlight">Yamaha Mt4x</span></li>
+      <li><span class="highlight">Teac 2440</span></li>
+      <li><span class="highlight">Teac 3340</span></li>
+      <li><span class="highlight">Revox A77</span></li>
+      <li><span class="highlight">Tascam 32</span></li>
+      <li><span class="highlight">Fostex R8</span></li>
+    </ul>
+
+  </section>
+
+  <!-- FOOTER -->
+   <footer>
+    <p>&copy; 2025 – Otorlymern Electrical Systems</p>
+    <div class="footer-badges">
+      <img src="images/Untitled-removebg-preview.png" class="footer-badges">
+      <img src="worldwideweb_badge.gif" class="footer-badges">
+      <img src="images/oesspunlogogreybackground.png" class="footer-badges">
+    </div>
+  </footer>
+
+</body>
+</html>
