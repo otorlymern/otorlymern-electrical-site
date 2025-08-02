@@ -19,6 +19,13 @@
 
 
 /* Navigation */
+/* Remove bullets from all unordered lists in the navbar */
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-bar {
   list-style: none;
   padding: 0;
