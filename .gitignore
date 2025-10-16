@@ -1,0 +1,21 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# build/cache (if added later)
+dist/
+node_modules/
+
+# heavy/originals (keep out of repo)
+*.psd
+*.tif
+*.tiff
+*.kra
+*.xcf
+*.mov
+*.mp4
+*.mkv
+*.avi
+*.prores
+originals/
