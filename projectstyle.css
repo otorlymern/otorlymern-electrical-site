@@ -1,0 +1,59 @@
+/* projectstyle.css */
+
+/* Container for entire project page */
+.project-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title */
+.project-title {
+  font-family: 'Lyno-Jean', sans-serif;
+  font-size: 2em;
+  color: #a0522d;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* PDF viewer: pages side-by-side */
+.pdf-viewer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2em;
+}
+
+/* Each embedded page */
+.pdf-page {
+  flex: 1 1 30%;
+  border: 2px solid #a0522d;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Make the <object> fill its container */
+.pdf-page object {
+  width: 100%;
+  height: 400px; /* adjust if you want taller/thinner */
+}
+
+/* Sections under the PDF */
+.project-sections h2 {
+  font-family: 'Lyno-Jean', sans-serif;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #a0522d;
+  border-bottom: 1px solid #a0522d;
+  padding-bottom: 0.2em;
+}
+
+.project-sections p,
+.project-sections ul {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.project-sections ul {
+  list-style: square inside;
+}
