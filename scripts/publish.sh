@@ -2,21 +2,16 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-branch=$(git rev-parse --abbrev-ref HEAD)
-[ "$branch" = "staging" ] || { echo "Switch to staging (git checkout staging)"; exit 1; }
-
-# Push latest staging commits
-git push origin staging
-
-# Open a PR to main if one doesn't exist
-if ! gh pr view --base main >/dev/null 2>&1; then
-  gh pr create --base main --title "Publish: $(date +%F)" --body "Auto-publish from script."
-fi
-
-# Merge the PR and delete remote branch
-gh pr merge --merge --delete-branch
-
-# Trigger the GitHub Action to deploy main to Neocities
-gh workflow run "Deploy to Neocities (manual)" --ref main
-
-echo "✅ Published: staging → main merged, deploy triggered. Check GitHub → Actions for status."
+echo ""
+echo "╭───────────────────────────────────────────────────────────────╮"
+echo "│ Publish via VS Code palette                                   │"
+echo "├───────────────────────────────────────────────────────────────┤"
+echo "│ This project now deploys with the Neocities VS Code extension.│"
+echo "│ Use the command palette (⇧⌘P / Ctrl+Shift+P) →                │"
+echo "│   “Neocities: Upload Current Workspace”                       │"
+echo "│ when you’re ready to push live.                               │"
+echo "│                                                               │"
+echo "│ If you ever need to automate again, feel free to rewrite this │"
+echo "│ script or ping me for help.                                   │"
+echo "╰───────────────────────────────────────────────────────────────╯"
+echo ""
