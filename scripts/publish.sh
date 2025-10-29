@@ -2,16 +2,31 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-echo ""
-echo "╭───────────────────────────────────────────────────────────────╮"
-echo "│ Publish via VS Code palette                                   │"
-echo "├───────────────────────────────────────────────────────────────┤"
-echo "│ This project now deploys with the Neocities VS Code extension.│"
-echo "│ Use the command palette (⇧⌘P / Ctrl+Shift+P) →                │"
-echo "│   “Neocities: Upload Current Workspace”                       │"
-echo "│ when you’re ready to push live.                               │"
-echo "│                                                               │"
-echo "│ If you ever need to automate again, feel free to rewrite this │"
-echo "│ script or ping me for help.                                   │"
-echo "╰───────────────────────────────────────────────────────────────╯"
-echo ""
+branch=$(git rev-parse --abbrev-ref HEAD)
+[ "$branch" = "main" ] || { echo "Switch to main (git checkout main)"; exit 1; }
+
+echo "Pushing current main branch to origin…"
+git push origin main
+
+deploy_flag=${1:-}
+case "$deploy_flag" in
+  --deploy)
+    answer="y"
+    ;;
+  --skip-deploy)
+    answer="n"
+    ;;
+  *)
+    read -r -p "Trigger Neocities deploy workflow now? [y/N] " answer
+    ;;
+esac
+
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+  echo "Triggering GitHub workflow: Deploy to Neocities (manual)…"
+  gh workflow run "Deploy to Neocities (manual)" --ref main
+  echo "✅ Deploy request sent. Check GitHub → Actions for status."
+else
+  echo "Skipping deploy. Run:"
+  echo "  gh workflow run \"Deploy to Neocities (manual)\" --ref main"
+  echo "whenever you’re ready to publish."
+fi
