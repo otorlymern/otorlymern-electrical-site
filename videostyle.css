@@ -1,0 +1,58 @@
+/* videostyle.css */
+
+@import url("./style.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050308;
+  color: #f2ede0;
+  font-family: 'Lyno-Stan', Arial, sans-serif;
+  line-height: 1.65;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.75rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lyno-Jean', Arial, sans-serif;
+  letter-spacing: 0.05em;
+  color: #fbd27c;
+  margin-bottom: 1rem;
+}
+
+p,
+li {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #9fe7ff;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #ffe8ac;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+.split-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .split-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}

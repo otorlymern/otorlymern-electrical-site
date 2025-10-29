@@ -19,3 +19,6 @@ node_modules/
 *.avi
 *.prores
 originals/
+
+# locally-kept oversized refs
+systems/music/resources/devarahi*
