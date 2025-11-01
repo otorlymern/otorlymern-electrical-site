@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'Lyno-Jean';
-  src: url('Lyno-Jean 2.otf') format('opentype');
+  src: url('../Lyno-Jean 2.otf') format('opentype');
 }
 @font-face {
   font-family: 'Lyno-Stan';
-  src: url('Lyno-Stan 2.otf') format('opentype');
+  src: url('../Lyno-Stan 2.otf') format('opentype');
 }
 @font-face {
   font-family: 'Lyno-Ulys';
-  src: url('Lyno-Ulys 2.otf') format('opentype');
+  src: url('../Lyno-Ulys 2.otf') format('opentype');
 }
 @font-face {
   font-family: 'ecommandfont';
-  src: url('fonts/EnterCommand.ttf') format('truetype');
+  src: url('../fonts/EnterCommand.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
    1% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
    50%     { transform: rotateX(10deg) rotateY(15deg) scale(0.95); }
    100%    { transform: rotateX(-10deg) rotateY(-15deg) scale(0.85); }
-   
+
 }
 
 @keyframes wiggle-title {
@@ -36,6 +36,14 @@
   1%  { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
   50%     { transform: rotateX(20deg) rotateY(10deg) rotateZ(5deg); }
    100%     { transform: rotateX(-20deg) rotateY(-10deg) rotateZ(-5deg); }
+}
+
+@keyframes moveBlob {
+  0%   { transform: translate(0, 0) scale(1.1) rotate(20deg); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%  { transform: translate(24px, -32px) scale(1.2) rotate(32deg); border-radius: 50% 60% 60% 40% / 40% 60% 30% 60%; }
+  50%  { transform: translate(-42px, 20px) scale(1.28) rotate(58deg); border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%; }
+  75%  { transform: translate(30px, 16px) scale(1.12) rotate(118deg); border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%; }
+  100% { transform: translate(0, 0) scale(1.35) rotate(180deg); border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%; }
 }
 
 /* Navigation */
@@ -125,6 +133,13 @@ body {
   overflow-x: hidden;
 }
 
+header,
+main,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
 /* Section Highlight for Headings & List Items */
 .music-section h2,
 .video-section h2,
@@ -143,7 +158,7 @@ body {
 /* Sections */
 section div {
   margin: 30px auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .music-section,
@@ -155,22 +170,22 @@ section div {
   z-index: 2;
 }
 .music-section {
-  background-image: url("images/audio-tape-0437.gif");
+  background-image: url("../images/audio-tape-0437.gif");
   background-repeat: repeat;
   background-size: auto;
 }
 .video-section {
-  background-image: url("images/staticsnow.png");
+  background-image: url("../images/staticsnow.png");
   background-repeat: no-repeat;
   background-size: auto 1000px;
 }
 .lit-section {
-  background: url("images/5NOWA1a.png");
+  background: url("../images/5NOWA1a.png");
   background-repeat: no-repeat;
   background-size: auto 1000px;
 }
 .diy-section {
-  background: url("images/pcbbg.png");
+  background: url("../images/pcbbg.png");
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -186,6 +201,50 @@ section div {
 .wiggle-slow {
   animation: wiggle 20s infinite alternate ease-in-out;
 }
+
+.blob-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.blob {
+  position: absolute;
+  mix-blend-mode: luminosity;
+  opacity: 0.55;
+  animation: moveBlob infinite alternate ease-in-out;
+}
+
+.blob-red {
+  background: #d94e4e;
+  width: 420px;
+  height: 310px;
+  top: 12%;
+  left: 8%;
+  animation-duration: 18s;
+}
+
+.blob-blue {
+  background: #b0e0e6;
+  width: 320px;
+  height: 430px;
+  top: 48%;
+  left: 68%;
+  animation-duration: 22s;
+}
+
+.blob-red-2 {
+  background: #fffba7;
+  width: 260px;
+  height: 360px;
+  top: 72%;
+  left: 38%;
+  animation-duration: 14s;
+}
+
 footer {
   background-color: #8b4513;
   color: #fff;

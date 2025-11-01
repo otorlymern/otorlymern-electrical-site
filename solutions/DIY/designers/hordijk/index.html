@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title><!-- Technique Title --></title>
-  <link rel="stylesheet" href="/css/musicstyle.css"/>
-  <style>
-    /* Optional: tighten readable column */
-    .technique { max-width: 900px; margin: 0 auto; padding: 16px; }
-    .meta { font-family: ecommandfont, sans-serif; font-size: 1.05em; }
-    .callout { background: rgba(255,250,240,0.9); border-left: 4px solid #a0522d; padding: 8px 12px; margin: 12px 0; }
-    .step img { max-width: 100%; height: auto; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rob Hordijk Resources</title>
+  <link rel="stylesheet" href="/css/uc.css">
 </head>
 <body>
-  <!-- reuse the same nav as techniques.html, adjust paths -->
   <header>
-   <nav>
+    <nav>
                 <ul class="nav-bar">
           <li><a href="/index.html">Home</a></li>
           <li class="dropdown">
@@ -52,44 +44,43 @@
             </ul>
           </li>
         </ul>
-</nav>
+    </nav>
   </header>
 
-  <main class="technique">
-    <h1 class="threeD"><span class="wiggle-title"><!-- Technique Title --></span></h1>
-    <p class="meta highlight">Difficulty: ★★☆ · Time: ~45 min · Gear: <!-- list core gear --></p>
+  <main>
+    <section class="title-section">
+      <div class="title-container">
+        <h1 class="threeD">
+          <span class="wiggle-title">
+            <img src="/images/underconstruction.png" alt="Rob Hordijk">
+            Rob Hordijk Library
+          </span>
+        </h1>
+      </div>
+    </section>
 
-    <h2 class="highlight">Overview</h2>
-    <p><!-- short what/why --></p>
-
-    <h2 class="highlight">Signal Flow</h2>
-    <p><!-- short description; add an image diagram if you want --></p>
-    <!-- <img src="diagram.png" alt="Signal flow diagram"> -->
-
-    <h2 class="highlight">Steps</h2>
-    <ol class="step">
-      <li><!-- step --></li>
-      <li><!-- step --></li>
-      <li><!-- step --></li>
-    </ol>
-
-    <div class="callout"><strong>Gotchas:</strong> <!-- common pitfalls, levels, impedance, clocking --></div>
-
-    <h2 class="highlight">References & Further Reading</h2>
-    <ul>
-      <li><!-- link to PDFs on your site, manuals, your DIY pages, etc. --></li>
-    </ul>
-
-    <p class="meta"><a href="/solutions/DIY/techniques/musictech/index.html">← Back to Techniques</a></p>
+    <section>
+      <p class="lead">Collected schematics, manuals, and reference diagrams for Rob Hordijk’s chaotic and feedback-driven instrument designs.</p>
+      <ul class="docs">
+        <li><a href="nordmodularbook.pdf" target="_blank" rel="noopener noreferrer">Nord Modular Book</a> — walkthrough of patching concepts that underpin the Benjolin and Blippoo Box.</li>
+        <li><a href="BLIPPOOBOXDIAGRAM.jpg" target="_blank" rel="noopener noreferrer">Blippoo Box Block Diagram</a> — signal flow for the double wide band chaos machine.</li>
+        <li><a href="RUNGLER_flowchart.jpg" target="_blank" rel="noopener noreferrer">Rungler Flowchart</a> — explaination of Hordijk’s pseudo-random voltage generator.</li>
+        <li><a href="jh_storm_tide_1.pdf" target="_blank" rel="noopener noreferrer">Storm Tide Flanger Notes</a> — three-part deep dive into the triple chorus/flanger circuit.</li>
+        <li><a href="twinpeak-manual.pdf" target="_blank" rel="noopener noreferrer">Twin Peak Resonator Manual</a> — official documentation for the dual-peak filter.</li>
+        <li><a href="benjolinschematic_164.pdf" target="_blank" rel="noopener noreferrer">Benjolin Schematic</a> — core chaos oscillator and rungler topology.</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 – Otorlymern Electrical Systems</p>
     <div class="footer-badges">
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb"></a>
       <img src="/images/Untitled-removebg-preview.png" class="footer-badges" alt="">
       <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="">
-      <img src="/images/oesspunlogogreybackground.png" class="footer-badges" alt="">
+      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="">
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb"></a>
     </div>
-    </footer>
+  </footer>
 </body>
 </html>
