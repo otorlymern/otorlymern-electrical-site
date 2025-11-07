@@ -5,8 +5,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <title>Otorlymern Electrical Services</title>
       <link rel="stylesheet" href="/css/style.css"/>
+      <link rel="stylesheet" href="/css/altstyle.css"/>
     </head>
-    <body>
+    <body class="cv-dark-page">
 <header>
 <nav>
                 <ul class="nav-bar">
@@ -20,19 +21,7 @@
               <li><a href="/music/resources/index.html">Resources</a></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a href="/services/services.html">Services</a>
-            <ul class="dropdown-content">
-              <li><a href="/services/experience.html">Experience / Bio / CV</a></li>
-              <li><a href="/services/repairrequest.html">Repair Request</a></li>
-              <li><a href="/services/consultingrequest.html">Analog Studio Consulting</a></li>
-              <li><a href="/services/engineeringrequest.html">Engineering / Recording</a></li>
-              <li><a href="/services/analogmmrequest.html">Analog Mastering or Mixing</a></li>
-              <li><a href="/services/tapewarmth.html">Analog Glue and Warmth</a></li>
-              <li><a href="/services/installationrequest.html">A/V Installation</a></li>
-              <li><a href="/services/comissionrequest.html">Commission A/V Art</a></li>
-            </ul>
-          </li>
+          <li><a href="/services/services.html">Services</a></li>
           <li class="dropdown">
             <a href="/solutions/solutions.html">Solutions</a>
             <ul class="dropdown-content">
@@ -46,59 +35,65 @@
         </ul>
 </nav>
 </header>
-      <main>
+    <div class="blob-container" aria-hidden="true">
+      <div class="blob blob-red"></div>
+      <div class="blob blob-blue"></div>
+      <div class="blob blob-red-2"></div>
+    </div>
+      <main class="cv-main services-main">
         <section class="title-section">
           <div class="title-container">
             <h1 class="threeD">
               <span class="wiggle-title">
-                <img src="/images/Untitled-removebg-preview.png" alt="Services Logo">
+                <img src="/images/solutionsv4.png" alt="Services Logo">
                 Services
               </span>
             </h1>
           </div>
         </section>
 
-        <section class="services-intro">
+        <section class="cv-card services-intro">
           <p>Otorlymern Electrical Services keeps analog dreams alive: we repair, restore, and reimagine audio/video gear while helping artists build studios, capture performances, and finish releases. Everything is sliding-scale and conversation-first—tell us what you need, and we’ll figure out a path that matches your budget and timeline.</p>
           <p>Browse the offerings below for quick links into each workflow. Every form lands in the same inbox (contact@otorlymern-services.com), so feel free to mix and match if your project crosses multiple lanes.</p>
         </section>
 
-        <section class="services-grid">
-          <article class="service-card">
-            <h2>Repairs &amp; Restorations</h2>
-            <p>Tape decks, synths, mixers, drum machines, video processors—if it spins, glows, or hums, we’ll bring it back to spec (or better).</p>
-            <a href="repairrequest.html">Start a repair request →</a>
-          </article>
-          <article class="service-card">
-            <h2>Studio Consulting &amp; Home Recording</h2>
-            <p>Room layouts, hybrid routing, patchbay logic, gear selection, and home-studio ergonomics tailored to your workflow.</p>
-            <a href="consultingrequest.html">Consulting request →</a><br>
-            <a href="/systems/home-recording.html">Explore home recording →</a>
-          </article>
-          <article class="service-card">
-            <h2>Engineering &amp; Recording</h2>
-            <p>Tracking, overdubs, location recording, and live documentation with the OEStudio toolkit or fly-in rigs.</p>
-            <a href="engineeringrequest.html">Share your session details →</a>
-          </article>
-          <article class="service-card">
-            <h2>Analog Mixing, Mastering &amp; Glue</h2>
-            <p>Stereo mix polishing, stem summing, tape/tube saturation chains, and bespoke analog warmth treatments.</p>
-            <a href="analogmmrequest.html">Analog mastering / mixing →</a><br>
-            <a href="tapewarmth.html">Tape &amp; transformer glue →</a>
-          </article>
-          <article class="service-card">
-            <h2>A/V Installations</h2>
-            <p>Immersive environments, galleries, and site-specific works that need synchronized sound, video, and control.</p>
-            <a href="installationrequest.html">Installation request →</a>
-          </article>
-          <article class="service-card">
-            <h2>Commissioned A/V Art</h2>
-            <p>Analog video pieces, modular compositions, tape collages, and interdisciplinary performances crafted to brief.</p>
-            <a href="comissionrequest.html">Commission a piece →</a>
-          </article>
+        <section class="cv-card services-grid-card">
+          <div class="services-grid">
+            <article class="service-card">
+              <h2>Repairs &amp; Restorations</h2>
+              <p>Tape decks, synths, mixers, drum machines, video processors—if it spins, glows, or hums, we’ll bring it back to spec (or better).</p>
+              <a href="repairrequest.html">Start a repair request →</a>
+            </article>
+            <article class="service-card">
+              <h2>Studio Consulting &amp; Home Recording</h2>
+              <p>Room layouts, hybrid routing, patchbay logic, gear selection, and home-studio ergonomics tailored to your workflow.</p>
+              <a href="consultingrequest.html">Consulting request →</a><br>
+              <a href="/systems/home-recording.html">Explore home recording →</a>
+            </article>
+            <article class="service-card">
+              <h2>Engineering &amp; Recording</h2>
+              <p>Tracking, overdubs, location recording, and live documentation with the OEStudio toolkit or fly-in rigs.</p>
+              <a href="engineeringrequest.html">Share your session details →</a>
+            </article>
+            <article class="service-card">
+              <h2>Tape Bounce</h2>
+              <p>Re-amp your mixes or stems onto real tape for instant glue, saturation, and cohesive analog depth.</p>
+              <a href="tapebounce.html">Request a tape bounce →</a>
+            </article>
+            <article class="service-card">
+              <h2>A/V Installations</h2>
+              <p>Immersive environments, galleries, and site-specific works that need synchronized sound, video, and control.</p>
+              <a href="installationrequest.html">Installation request →</a>
+            </article>
+            <article class="service-card">
+              <h2>Commissioned A/V Art</h2>
+              <p>Analog video pieces, modular compositions, tape collages, and interdisciplinary performances crafted to brief.</p>
+              <a href="comissionrequest.html">Commission a piece →</a>
+            </article>
+          </div>
         </section>
 
-        <section class="services-experience">
+        <section class="cv-card services-experience">
           <h2>Need references?</h2>
           <p>Get a sense of past projects and collaborations on the <a href="experience.html">Experience / Bio / CV</a> page, then drop a line with any specific questions.</p>
         </section>
@@ -112,43 +107,84 @@
             font-display: swap;
           }
 
+          .services-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+          }
+
           .services-intro p {
             font-family: 'EnterCommand', monospace;
-            font-size: 30px;
-            line-height: 1.45;
-            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            line-height: 1.48;
+            color: #ffe5be;
+          }
+
+          .services-grid-card {
+            padding: 1.8rem 1.6rem;
           }
 
           .services-grid {
             display: grid;
             gap: 1.75rem;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            margin: 3rem auto;
-            max-width: 1100px;
           }
 
           .service-card {
-            background: rgba(255, 253, 208, 0.8);
-            border: 2px solid #7b3f00;
-            border-radius: 8px;
-            padding: 1.25rem;
-            box-shadow: 4px 6px 0 rgba(0,0,0,0.15);
+            background: rgba(57, 29, 10, 0.78);
+            border: 1px solid rgba(255, 221, 168, 0.35);
+            border-radius: 12px;
+            padding: 1.35rem;
+            box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.28);
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
           }
 
           .service-card h2 {
             font-family: 'Lyno-Jean', sans-serif;
-            margin-bottom: 0.75rem;
+            margin: 0;
+            color: #ffe5be;
+          }
+
+          .service-card p {
+            margin: 0;
+            color: #f6d7ad;
+            line-height: 1.55;
           }
 
           .service-card a {
             display: inline-block;
-            margin-top: 0.75rem;
+            margin-top: auto;
             font-weight: 600;
+            color: #ffd9a6;
+            text-decoration: underline;
+          }
+
+          .service-card a:hover {
+            color: #ffebc9;
           }
 
           .services-experience {
             text-align: center;
-            margin-bottom: 4rem;
+          }
+
+          .services-experience h2 {
+            color: #ffe5be;
+            margin-bottom: 0.6rem;
+          }
+
+          .services-experience p {
+            color: #f6d7ad;
+          }
+
+          .services-experience a {
+            color: #ffd9a6;
+            text-decoration: underline;
+          }
+
+          .services-experience a:hover {
+            color: #ffebc9;
           }
         </style>
       </main>

@@ -122,8 +122,16 @@ section {
   font-size: 3em; 
   display: inline-block;
   transform-origin: center;
-  animation: wiggle 20s infinite ease-in-out;
-  text-shadow: 2px 4px 3px rgba(0,0.3,0.1,0.7);
+ animation: wiggle 20s infinite ease-in-out;
+ text-shadow: 2px 4px 3px rgba(0,0.3,0.1,0.7);
+}
+
+.wiggle-title img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.35rem;
 }
   
 /* Highlight Styling */

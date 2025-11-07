@@ -1,49 +1,97 @@
 @font-face {
-  font-family: 'Lyno-Jean';
-  src: url('../Lyno-Jean 2.otf') format('opentype');
+  font-family: "Lyno-Jean";
+  src: url("../Lyno-Jean 2.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Lyno-Stan';
-  src: url('../Lyno-Stan 2.otf') format('opentype');
+  font-family: "Lyno-Stan";
+  src: url("../Lyno-Stan 2.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Lyno-Ulys';
-  src: url('../Lyno-Ulys 2.otf') format('opentype');
+  font-family: "Lyno-Ulys";
+  src: url("../Lyno-Ulys 2.otf") format("opentype");
 }
 @font-face {
-  font-family: 'ecommandfont';
-  src: url('../fonts/EnterCommand.ttf') format('truetype');
+  font-family: "ecommandfont";
+  src: url("../fonts/EnterCommand.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @keyframes wiggle {
-    1% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
-  50%     { transform: rotateX(10deg) rotateY(15deg) scale(0.95); }
-  100%    { transform: rotateX(-10deg) rotateY(-15deg) scale(0.85); }
-  50%     { transform: rotateX(10deg) rotateY(15deg) scale(0.95); }
-   1% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
-   50%     { transform: rotateX(10deg) rotateY(15deg) scale(0.95); }
-   100%    { transform: rotateX(-10deg) rotateY(-15deg) scale(0.85); }
-
+  1% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+  100% {
+    transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+  }
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+  1% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+  100% {
+    transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+  }
 }
 
 @keyframes wiggle-title {
-1%  { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-  50%     { transform: rotateX(20deg) rotateY(10deg) rotateZ(5deg); }
-  100%     { transform: rotateX(-20deg) rotateY(-10deg) rotateZ(-5deg); }
-  50%     { transform: rotateX(20deg) rotateY(10deg) rotateZ(5deg); }
-  1%  { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-  50%     { transform: rotateX(20deg) rotateY(10deg) rotateZ(5deg); }
-   100%     { transform: rotateX(-20deg) rotateY(-10deg) rotateZ(-5deg); }
+  1% {
+      transform: rotateX(0deg) rotateY(0deg) scale(1);
+    }
+
+    50% {
+      transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+    }
+
+    100% {
+      transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+    }
+
+    50% {
+      transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+    }
+
+    1% {
+      transform: rotateX(0deg) rotateY(0deg) scale(1);
+    }
+
+    50% {
+      transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+    }
+
+    100% {
+      transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+    }
 }
 
 @keyframes moveBlob {
-  0%   { transform: translate(0, 0) scale(1.1) rotate(20deg); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  25%  { transform: translate(24px, -32px) scale(1.2) rotate(32deg); border-radius: 50% 60% 60% 40% / 40% 60% 30% 60%; }
-  50%  { transform: translate(-42px, 20px) scale(1.28) rotate(58deg); border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%; }
-  75%  { transform: translate(30px, 16px) scale(1.12) rotate(118deg); border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%; }
-  100% { transform: translate(0, 0) scale(1.35) rotate(180deg); border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%; }
+  0% {
+    transform: translate(60px, 2px) scale(1) rotate(200deg);
+    border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    transform: translate(24px, 30px) scale(0.99) rotate(22deg);
+    border-radius: 50% 60% 60% 40% / 40% 60% 30% 60%;
+  }
+  50% {
+    transform: translate(-42px, 20px) scale(1.08) rotate(58deg);
+    border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%;
+  }
+  75% {
+    transform: translate(30px, -16px) scale(0.91) rotate(118deg);
+    border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%;
+  }
+  100% {
+    transform: translate(0, 0) scale(0.97) rotate(180deg);
+    border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%;
+  }
 }
 
 /* Navigation */
@@ -60,7 +108,16 @@
   display: flex;
   background-color: #7b3f00; /* brown background */
   justify-content: center;
-  font-family: 'Lyno-Stan', sans-serif;
+  font-family: "Lyno-Stan", sans-serif;
+}
+nav {
+  position: relative;
+  z-index: 40;
+}
+.nav-bar,
+.nav-bar > li {
+  position: relative;
+  z-index: inherit;
 }
 
 .nav-bar > li {
@@ -69,7 +126,7 @@
 
 .nav-bar a {
   display: block;
-  padding: 10px 15px;
+  padding: 7px 7px;
   text-decoration: none;
   color: #fff5e1;
   background-color: #7b3f00;
@@ -104,22 +161,66 @@
   padding: 10px 10px;
   position: relative;
 }
+.title-container {
+  perspective: 1600px;
+  perspective-origin: center 42%;
+}
 .title-container h2,
 .title-container .threeD,
 .title-container .wiggle {
   position: relative;
-  font-family: 'Lyno-Jean', Arial, sans-serif;
+  font-family: "Lyno-Jean", sans-serif;
   font-size: 2em;
-  perspective: 1000px;
   transform-style: preserve-3d;
-  display: inline-block;
   transform-origin: center;
-  animation: wiggle-title 20s infinite ease-in-out;
-  z-index: 10;
+  z-index: 1;
+}
+.wiggle-title {
+  display: inline-block;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  backface-visibility: hidden;
+  will-change: transform;
+  animation: wiggle-title 48s infinite ease-in-out;
+  filter: drop-shadow(0 26px 52px rgba(0, 0, 0, 0.2));
+}
+:is(h1, h2, h3, h4, h5, h6).wiggle-title {
+  display: block;
+}
+.wiggle-title img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.35rem;
+  transform: translateZ(16px);
+  transform-origin: center;
+}
+
+.system-photo {
+  margin: 2.5rem auto;
+  max-width: 960px;
+  padding: 0 1rem;
+}
+
+.system-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.18);
+  display: block;
+}
+
+.system-photo-caption {
+  font-family: "EnterCommand", monospace;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-top: 0.85rem;
+  color: #4a3621;
 }
 /* Intro Paragraph Attributes */
 .intro-paragraphs {
-  font-family: 'ecommandfont', sans-serif;
+  font-family: "ecommandfont", sans-serif;
   font-size: 1.6em;
   color: #333;
 }
@@ -127,17 +228,23 @@
 body {
   background-color: #fdf6e3;
   color: #333;
-  font-family: 'Lyno-Stan', Arial, sans-serif;
+  font-family: "Lyno-Stan", Arial, sans-serif;
   margin: 10px;
   padding: 10px;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
-header,
+header {
+  position: relative;
+  z-index: 40;
+}
+
 main,
 footer {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* Section Highlight for Headings & List Items */
@@ -153,12 +260,16 @@ footer {
   padding: 0.2em 0.4em;
   border-radius: 4px;
   display: inline-block;
+  position: relative;
+  z-index: 4;
 }
 
 /* Sections */
 section div {
   margin: 30px auto;
   max-width: 1000px;
+  position: relative;
+  z-index: 4;
 }
 
 .music-section,
@@ -167,7 +278,7 @@ section div {
 .diy-section {
   padding: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .music-section {
   background-image: url("../images/audio-tape-0437.gif");
@@ -195,20 +306,21 @@ section div {
   height: 50px;
 }
 .wiggle {
-  animation: wiggle 10s infinite alternate ease-in-out;
-}
-
-.wiggle-slow {
   animation: wiggle 20s infinite alternate ease-in-out;
 }
 
+.wiggle-slow {
+  animation: wiggle 40s infinite alternate ease-in-out;
+}
+
 .blob-container {
-  position: fixed;
+  position: absolute;
   inset: 0;
-  width: 100%;
-  pointer-events: none;
+  width: 80%;
+  height: 80%;
+  pointer-events: visibleStroke;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
 }
 
 .blob {
@@ -224,7 +336,7 @@ section div {
   height: 310px;
   top: 12%;
   left: 8%;
-  animation-duration: 18s;
+  animation-duration: 30s;
 }
 
 .blob-blue {
@@ -233,7 +345,7 @@ section div {
   height: 430px;
   top: 48%;
   left: 68%;
-  animation-duration: 22s;
+  animation-duration: 29s;
 }
 
 .blob-red-2 {
@@ -242,7 +354,7 @@ section div {
   height: 360px;
   top: 72%;
   left: 38%;
-  animation-duration: 14s;
+  animation-duration: 19s;
 }
 
 footer {
@@ -251,7 +363,7 @@ footer {
   text-align: center;
   padding: 5px;
   width: 100%;
-  font-family: 'Lyno-Stan', Arial, sans-serif;
+  font-family: "Lyno-Stan", Arial, sans-serif;
   font-size: 0.9em;
 }
 .footer-badges {
