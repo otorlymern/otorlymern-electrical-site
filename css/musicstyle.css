@@ -311,7 +311,7 @@ figcaption.highlight {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 2200px;
+  min-height: 4600px;
   pointer-events: none;
   z-index: 0;
 }
@@ -325,27 +325,114 @@ figcaption.highlight {
   --tilt: -4deg;
 }
 
-@keyframes stickerFloat {
+@keyframes stickerDriftA {
   0% {
-    transform: translateY(0) rotate(var(--tilt));
+    transform: translate(-30px, -20px) rotate(calc(var(--tilt) - 2deg)) scale(0.96);
   }
-  50% {
-    transform: translateY(-14px) rotate(calc(var(--tilt) + 2deg));
+  20% {
+    transform: translate(90px, -140px) rotate(calc(var(--tilt) + 4deg)) scale(1.02);
+  }
+  40% {
+    transform: translate(160px, 10px) rotate(calc(var(--tilt) + 1deg)) scale(1.04);
+  }
+  60% {
+    transform: translate(-60px, 140px) rotate(calc(var(--tilt) - 3deg)) scale(1.01);
+  }
+  80% {
+    transform: translate(-180px, -40px) rotate(calc(var(--tilt) + 2deg)) scale(0.98);
   }
   100% {
-    transform: translateY(0) rotate(var(--tilt));
+    transform: translate(20px, 120px) rotate(calc(var(--tilt) - 1deg)) scale(1.03);
   }
 }
 
-@keyframes stickerSway {
+@keyframes stickerDriftB {
   0% {
-    transform: translateX(0) rotate(var(--tilt));
+    transform: translate(20px, -30px) rotate(calc(var(--tilt) + 1deg)) scale(0.94);
+  }
+  25% {
+    transform: translate(-80px, -160px) rotate(calc(var(--tilt) - 4deg)) scale(1.03);
   }
   50% {
-    transform: translateX(-12px) rotate(calc(var(--tilt) - 2deg));
+    transform: translate(-10px, 40px) rotate(calc(var(--tilt) + 3deg)) scale(1.07);
+  }
+  75% {
+    transform: translate(120px, 90px) rotate(calc(var(--tilt) - 2deg)) scale(1);
   }
   100% {
-    transform: translateX(0) rotate(var(--tilt));
+    transform: translate(-140px, 10px) rotate(calc(var(--tilt) + 2deg)) scale(1.02);
+  }
+}
+
+@keyframes stickerDriftC {
+  0% {
+    transform: translate(-40px, 0) rotate(calc(var(--tilt) - 1deg)) scale(0.97);
+  }
+  20% {
+    transform: translate(70px, -110px) rotate(calc(var(--tilt) + 5deg)) scale(1.05);
+  }
+  45% {
+    transform: translate(30px, 90px) rotate(calc(var(--tilt) - 3deg)) scale(1.01);
+  }
+  65% {
+    transform: translate(-120px, 40px) rotate(calc(var(--tilt) + 2deg)) scale(0.99);
+  }
+  100% {
+    transform: translate(110px, -80px) rotate(calc(var(--tilt) - 2deg)) scale(1.04);
+  }
+}
+
+@keyframes stickerDriftD {
+  0% {
+    transform: translate(0, 0) rotate(calc(var(--tilt) - 2deg)) scale(0.95);
+  }
+  15% {
+    transform: translate(80px, -140px) rotate(calc(var(--tilt) + 2deg)) scale(1.02);
+  }
+  40% {
+    transform: translate(-140px, -90px) rotate(calc(var(--tilt) + 5deg)) scale(1.06);
+  }
+  70% {
+    transform: translate(60px, 130px) rotate(calc(var(--tilt) - 3deg)) scale(1);
+  }
+  100% {
+    transform: translate(-100px, 60px) rotate(calc(var(--tilt) + 1deg)) scale(1.03);
+  }
+}
+
+@keyframes stickerDriftE {
+  0% {
+    transform: translate(-20px, -20px) rotate(calc(var(--tilt) + 1deg)) scale(0.94);
+  }
+  30% {
+    transform: translate(140px, -80px) rotate(calc(var(--tilt) - 3deg)) scale(1.06);
+  }
+  55% {
+    transform: translate(-40px, 150px) rotate(calc(var(--tilt) + 4deg)) scale(1.01);
+  }
+  80% {
+    transform: translate(-160px, -30px) rotate(calc(var(--tilt) - 2deg)) scale(0.98);
+  }
+  100% {
+    transform: translate(40px, 80px) rotate(calc(var(--tilt) + 3deg)) scale(1.04);
+  }
+}
+
+@keyframes stickerDriftF {
+  0% {
+    transform: translate(-60px, 0) rotate(calc(var(--tilt) - 3deg)) scale(0.96);
+  }
+  25% {
+    transform: translate(40px, -150px) rotate(calc(var(--tilt) + 4deg)) scale(1.05);
+  }
+  50% {
+    transform: translate(160px, 20px) rotate(calc(var(--tilt) - 1deg)) scale(1.02);
+  }
+  75% {
+    transform: translate(-20px, 140px) rotate(calc(var(--tilt) + 2deg)) scale(0.99);
+  }
+  100% {
+    transform: translate(-150px, -60px) rotate(calc(var(--tilt) - 2deg)) scale(1.03);
   }
 }
 
@@ -353,57 +440,42 @@ figcaption.highlight {
   top: 820px;
   left: 60%;
   --tilt: -6deg;
-  animation: op1Wander 11s ease-in-out infinite alternate;
+  animation: stickerDriftA 48s ease-in-out infinite alternate;
 }
 
 .sticker-korg {
   top: 3140px;
   left: 72%;
   --tilt: -8deg;
-  animation: stickerFloat 18s ease-in-out infinite;
+  animation: stickerDriftB 60s ease-in-out infinite alternate;
 }
 
 .sticker-jx3p {
   top: 2420px;
   right: 4%;
   --tilt: 12deg;
-  animation: stickerSway 24s ease-in-out infinite;
+  animation: stickerDriftC 54s ease-in-out infinite alternate;
 }
 
 .sticker-tascam {
   top: 4000px;
   right: 12%;
   --tilt: -4deg;
-  animation: stickerFloat 21s ease-in-out infinite;
+  animation: stickerDriftD 62s ease-in-out infinite alternate;
 }
 
 .sticker-mt4x {
   top: 1350px;
   left: 8%;
   --tilt: 6deg;
-  animation: stickerSway 26s ease-in-out infinite alternate;
+  animation: stickerDriftE 58s ease-in-out infinite alternate;
 }
 
 .sticker-fxunit {
   top: 1900px;
   right: 18%;
   --tilt: -14deg;
-  animation: stickerFloat 28s ease-in-out infinite;
-}
-
-@keyframes op1Wander {
-  0% {
-    transform: translate(-40px, -10px) rotate(calc(var(--tilt) - 2deg)) scale(0.9);
-  }
-  30% {
-    transform: translate(10px, -35px) rotate(calc(var(--tilt) + 6deg)) scale(1);
-  }
-  60% {
-    transform: translate(45px, 6px) rotate(calc(var(--tilt) - 4deg)) scale(1.05);
-  }
-  100% {
-    transform: translate(-25px, 30px) rotate(calc(var(--tilt) + 4deg)) scale(0.95);
-  }
+  animation: stickerDriftF 64s ease-in-out infinite alternate;
 }
 
 @media (max-width: 900px) {
