@@ -672,7 +672,7 @@ footer {
   inset: 0;
   width: 80%;
   height: 80%;
-  pointer-events: visibleStroke;
+  pointer-events: none;
   overflow: hidden;
   z-index: 3;
 }

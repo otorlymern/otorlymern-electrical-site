@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Otorlymern Electrical Services — Sell Us Your Gear</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/css/musicstyle.css"/>
+  <link rel="stylesheet" href="/css/altstyle.css"/>
+</head>
+<body class="service-page service-tile-consult">
+<header>
+<nav>
+        <ul class="nav-bar">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="/systems/systems.html">Systems</a>
+            <ul class="dropdown-content">
+              <li><a href="/music/studio.html">OEStudio</a></li>
+              <li><a href="/systems/rrr.html">Rehabs, Refurbs &amp; Restorations</a></li>
+              <li><a href="/systems/home-recording.html">Home Recording</a></li>
+              <li><a href="/music/resources/index.html">Resources</a></li>
+            </ul>
+          </li>
+          <li><a href="/services/index.html">Services</a></li>
+          <li class="dropdown">
+            <a href="/solutions/index.html">Solutions</a>
+            <ul class="dropdown-content">
+              <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+              <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+              <li><a href="/solutions/DIY/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+              <li><a href="/solutions/DIY/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
+              <li><a href="/solutions/resources/index">Links / Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+</nav>
+</header>
+<main>
+  <section class="title-section">
+    <div class="title-container">
+      <h1 class="threeD">
+        <span class="wiggle-title">
+          <img src="/images/servicesv2.png" alt="Services Logo">
+          Sell Us Your Gear / Junk Pickup
+        </span>
+      </h1>
+    </div>
+  </section>
+
+  <p>Moving, downsizing, or just tired of storing a busted tape machine you swear you’ll fix one day? We buy, trade, and responsibly recycle audio/video gear regardless of condition.</p>
+  <p>Tell us what you’ve got, where it’s hiding, and whether you want cash, credit toward repairs, or just a quick pickup so your floor stops creaking.</p>
+
+  <section class="win98-wrap">
+    <div class="win98-window">
+      <div class="win98-titlebar">
+        <span>OES — Sell Us Your Gear</span>
+        <div class="win98-controls" aria-hidden="true">
+          <span>_</span><span>[]</span><span>X</span>
+        </div>
+      </div>
+
+      <form id="sellGearForm"
+            action="https://formspree.io/f/mwpnybrw"
+            method="POST"
+            enctype="multipart/form-data"
+            novalidate>
+
+        <input type="hidden" name="_subject" value="Sell Us Your Gear Submission">
+
+        <label class="hp">Leave this field empty:
+          <input type="text" name="website">
+        </label>
+
+        <div class="row">
+          <label class="short">
+            <span class="lbl">Name:</span>
+            <input type="text" name="Name" autocomplete="name" />
+          </label>
+
+          <label class="short">
+            <span class="lbl">Email:</span>
+            <input type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
+          </label>
+        </div>
+
+        <label class="long">
+          <span class="lbl">Pickup city / neighborhood:</span>
+          <input type="text" name="location" placeholder="e.g., Highland Park garage, third-floor storage, etc." />
+        </label>
+
+        <label class="long">
+          <span class="lbl">Gear we should know about:</span>
+          <textarea name="gear_list" rows="5" placeholder="List models, mods, missing pieces, and what’s included."></textarea>
+        </label>
+
+        <div class="row">
+          <label class="short">
+            <span class="lbl">Condition:</span>
+            <select name="condition">
+              <option value="plays">Fully working</option>
+              <option value="needs-work">Works but needs TLC</option>
+              <option value="dead">Dead / for parts</option>
+              <option value="unknown">Unknown</option>
+            </select>
+          </label>
+
+          <label class="short">
+            <span class="lbl">Value / Trade idea:</span>
+            <input type="text" name="value" placeholder="Cash price, trade wish list, or donation" />
+          </label>
+        </div>
+
+        <label class="tall">
+          <span class="lbl">Anything else we should know?</span>
+          <textarea name="notes" rows="6" placeholder="Access issues, missing cables, sentimental attachments, etc."></textarea>
+        </label>
+
+        <div class="row">
+          <label class="short">
+            <span class="lbl">Photos / docs:</span>
+            <input type="file" name="files" accept="image/*,application/pdf" multiple />
+          </label>
+          <label class="short">
+            <span class="lbl">Phone (optional):</span>
+            <input type="text" name="phone" placeholder="If text is easier" />
+          </label>
+        </div>
+
+        <div class="buttons">
+          <button type="submit">Send Details</button>
+          <button type="reset">Clear</button>
+        </div>
+
+        <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<style>
+@font-face {
+  font-family: 'EnterCommand';
+  src: url('../fonts/EnterCommand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.title-section + p,
+.title-section + p + p {
+  font-family: 'EnterCommand', monospace;
+  font-size: 32px;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.win98-wrap {
+  max-width: 820px;
+  margin: 2rem auto;
+  font-family: 'EnterCommand', monospace;
+}
+
+.win98-window {
+  background: #c0c0c0;
+  border: 1px solid #000;
+  box-shadow: 6px 8px 18px rgba(0,0,0,0.8);
+  padding: 8px;
+  font-family: 'EnterCommand', monospace;
+  font-size: 26px;
+}
+
+.win98-titlebar {
+  position: relative;
+  padding-right: 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  white-space: nowrap;
+  background: linear-gradient(#000080, #1084d0);
+  color: #fff;
+  padding: 0px 8px;
+  font-weight: 700;
+  font-size: 30px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.win98-controls{
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.win98-controls span {
+  display: inline-block;
+  border: 1px solid #fff;
+  background: #c0c0c0;
+  color: #000;
+  width: 22px;
+  height: 19px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 18px;
+}
+
+form {
+  margin-top: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.7em;
+  color: #000;
+}
+
+.lbl {
+  font-weight: 700;
+}
+
+.short {
+  flex: 1 1 220px;
+}
+
+.long,
+.tall {
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  font-family: 'EnterCommand', monospace;
+  font-size: 1em;
+  padding: 0.3em 0.4em;
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+  color: #000;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  font-family: 'EnterCommand', monospace;
+  font-size: 0.9em;
+  padding: 0.5em 1.25em;
+  border: 2px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.status {
+  margin-top: 1.2rem;
+  min-height: 1.4em;
+  font-size: 0.8em;
+}
+</style>
+
+<footer>
+  <p>&copy; 2025 – Otorlymern Electrical Systems</p>
+  <div class="footer-badges">
+    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb"></a>
+    <img src="/images/servicesv2.png" class="footer-badges" alt="Services badge">
+    <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge">
+    <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OE Circle Logo">
+    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb"></a>
+  </div>
+</footer>
+
+</body>
+</html>
