@@ -1,17 +1,7 @@
-name: Deploy to Neocities (manual)
-on:
-  workflow_dispatch:
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install neocities CLI
-        run: |
-          curl -fsSL https://raw.githubusercontent.com/neocities/neocities-cli/master/neocities > neocities
-          chmod +x neocities
-      - name: Publish site
-        env:
-          NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_KEY }}
-        run: |
-          ./neocities push .
+   - name: Deploy to Neocities
+      uses: bcomnes/deploy-to-neocities@v3
+      with:
+        api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+        cleanup: true
+        neocities_supporter: true 
+        dist_dir: site/
