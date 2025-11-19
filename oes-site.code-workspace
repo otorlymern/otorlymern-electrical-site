@@ -1,22 +1,24 @@
 {
-	"folders": [
-		{
-			"name": "site",
-			"path": "."
-		}
-	],
-	"settings": {
-		"path-intellisense.mappings": {
-			"/images": "${workspaceRoot}/images",
-			"/css": "${workspaceRoot}/css",
-			"/js": "${workspaceRoot}/js",
-			"/music": "${workspaceRoot}/music",
-			"/video": "${workspaceRoot}/video",
-			"/lit": "${workspaceRoot}/lit",
-			"/diy": "${workspaceRoot}/diy"
-		},
-		"liveServer.settings.port": 5501,
-		"liveServer.settings.root": "/",
-		"git.confirmSync": false
-	}
+  "folders": [
+    {
+      "name": "site",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "path-intellisense.mappings": {
+      "/images": "${workspaceRoot}/images",
+      "/css": "${workspaceRoot}/css",
+      "/js": "${workspaceRoot}/js",
+      "/music": "${workspaceRoot}/music",
+      "/video": "${workspaceRoot}/video",
+      "/lit": "${workspaceRoot}/lit",
+      "/diy": "${workspaceRoot}/diy"
+    },
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.root": "/",
+    "git.confirmSync": false,
+    "workbench.externalBrowser": "chrome",
+    "workbench.activityBar.iconClickBehavior": "focus"
+  }
 }
