@@ -19,6 +19,7 @@
     "liveServer.settings.root": "/",
     "git.confirmSync": false,
     "workbench.externalBrowser": "chrome",
-    "workbench.activityBar.iconClickBehavior": "focus"
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "editor.defaultFormatter": "vscode.html-language-features"
   }
 }
