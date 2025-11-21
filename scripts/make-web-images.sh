@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 set -euo pipefail
 IN_DIR="${PWD}/assets-src"
 OUT_DIR="${PWD}/images"
@@ -15,3 +15,4 @@ for f in "$IN_DIR"/*.{jpg,JPG,jpeg,JPEG,png,PNG}; do
        --resampleWidth "$MAXW" --out "$out" >/dev/null
 done
 echo "✅ Images ready in $OUT_DIR"
+

@@ -17,10 +17,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Install Neocities CLI
+        run: |
+          sudo gem install --user-install --no-document neocities
+          echo "$(ruby -e 'puts Gem.user_dir')/bin" >> "$GITHUB_PATH"
+
       - name: Deploy to Neocities
-        uses: bcomnes/deploy-to-neocities@v3
-        with:
-          api_key: ${{ secrets.NEOCITIES_API_KEY }}
-          dist_dir: .
-          cleanup: true
-          neocities_supporter: true
+        env:
+          NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_KEY }}
+        run: neocities push .
