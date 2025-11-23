@@ -21,6 +21,27 @@
     }
     /* ensure section shows tiled body background */
     section.music-section { background: transparent; }
+
+    .studio-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1.5rem auto 2rem;
+    }
+
+    .studio-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    .studio-logo {
+      max-width: 220px;
+      height: auto;
+    }
   </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
@@ -33,7 +54,7 @@
                             <a href="/systems/systems.html">Systems</a>
                             <ul class="dropdown-content">
                               <li><a href="/music/studio.html">OEStudio</a></li>
-                              <li><a href="/systems/rrr.html">Rehabs, Refurbs &amp; Restorations</a></li>
+                              <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
                               <li><a href="/systems/home-recording.html">Home Recording</a></li>
                               <li><a href="/solutions/resources/index.html">Resources</a></li>
                             </ul>
@@ -52,7 +73,7 @@
                         </ul>
     </nav>
   </header>
-
+<!--Floating Images-->
   <div class="sticker-wall" aria-hidden="true">
     <img src="../images/korg_brochure78_p2.jpg" alt="" class="sticker sticker-korg" />
     <img src="../images/roland_jx3p_bro83p23.jpg" alt="" class="sticker sticker-jx3p" />
@@ -62,7 +83,12 @@
     <img src="../images/op-1.gif" alt="OP-1 animated sticker" class="sticker sticker-op1" />
   </div>
 
-  <h1 class="threeD wiggle-title">OES Studio</h1>
+  <div class="studio-hero">
+    <h1 class="threeD wiggle-title studio-title">
+      <img src="../systems/systemsv4.png" alt="" class="studio-logo"/></h1>
+      <h1 classs="threeD wiggle-title">OES Studio
+    </h1>
+  </div>
 
   <!-- Studio Photo Pile -->
   <div class="photopile">
@@ -83,12 +109,13 @@
       <figcaption>Studio mask</figcaption>
     </figure>
   </div>
-
+<!-- Gear List -->-->
   <main>
     <section class="music-section">
       <div class="gear-block">
         <h2 class="highlight">
-          <img src="../images/korgaddcover.png" class="header-image" alt="Korg logo" />Synthesizers
+          <img src="../images/korgaddcover.png" class="header-image" alt="Korg logo" />
+          <span class="title-text">Synthesizers</span>
           <img src="../images/korgaddcover.png" class="header-image" alt="Korg logo" />
         </h2>
         <ul class="gear-list">
@@ -110,8 +137,8 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/koii1.png" class="header-image" alt="sampler animation" />
-          Drum Machines / Samplers
-          <img src="../images/koii1.png" class="header-image" alt=sampler animation" />
+          <span class="title-text">Drum Machines / Samplers</span>
+          <img src="../images/koii1.png" class="header-image" alt="sampler animation" />
         </h2>
         <ul class="gear-list">
           <li>Tr-808 Clone</li>
@@ -124,7 +151,8 @@
 
       <div class="gear-block">
         <h2 class="highlight">
-          <img src="/images/spacestationglamourshot.png" class="header-image" alt="rack gear" />Effects Processors
+          <img src="/images/spacestationglamourshot.png" class="header-image" alt="rack gear" />
+          <span class="title-text">Effects Processors</span>
           <img src="/images/spacestationglamourshot.png" class="header-image" alt="rack gear" />
         </h2>
         <ul class="gear-list">
@@ -152,7 +180,7 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/pyle2.png" class="header-image" alt="Acoustic instrument icon" />
-          Non‑Electronic Music Instruments
+          <span class="title-text">Non‑Electronic Music Instruments</span>
           <img src="../images/pyle2.png" class="header-image" alt="Acoustic instrument icon" />
         </h2>
         <ul class="gear-list">
@@ -171,7 +199,7 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/animbongo2.gif" class="header-image" alt="Percussion clip art" />
-          Non‑Electronic Music Percussion Instruments
+          <span class="title-text">Non‑Electronic Music Percussion Instruments</span>
           <img src="../images/animbongo2.gif" class="header-image" alt="Percussion clip art" />
         </h2>
         <ul class="gear-list">
@@ -185,7 +213,7 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/Mt4x.png" class="header-image" alt="Mixer illustration" />
-          Mixing and Routing
+          <span class="title-text">Mixing and Routing</span>
           <img src="../images/Mt4x.png" class="header-image" alt="Mixer illustration" />
         </h2>
         <ul class="gear-list">

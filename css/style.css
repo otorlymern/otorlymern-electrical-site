@@ -389,7 +389,8 @@ nav {
 /* Intro Paragraph Attributes */
 .intro-paragraphs {
   font-family: "ecommandfont", sans-serif;
-  font-size: 1.6em;
+  font-size: 1.7em;
+  font-weight: 600;
   color: #333;
 }
 

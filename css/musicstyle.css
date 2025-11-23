@@ -1,16 +1,19 @@
 /* fonts */
 @font-face {
-    font-family: 'Lyno-Jean';
-    src: url('../Lyno-Jean 2.otf') format('opentype');
+  font-family: 'Lyno-Jean';
+  src: url('../Lyno-Jean 2.otf') format('opentype');
 }
+
 @font-face {
-    font-family: 'Lyno-Stan';
-    src: url('../Lyno-Stan 2.otf') format('opentype');
+  font-family: 'Lyno-Stan';
+  src: url('../Lyno-Stan 2.otf') format('opentype');
 }
+
 @font-face {
-    font-family: 'Lyno-Ulys';
-    src: url('../Lyno-Ulys 2.otf') format('opentype');
+  font-family: 'Lyno-Ulys';
+  src: url('../Lyno-Ulys 2.otf') format('opentype');
 }
+
 @font-face {
   font-family: 'ecommandfont';
   src: url('../fonts/EnterCommand.ttf') format('truetype');
@@ -27,12 +30,13 @@
   padding: 0;
   margin: 0;
   display: flex;
-  background-color: #7b3f00; /* brown background */
+  background-color: #7b3f00;
+  /* brown background */
   justify-content: center;
   font-family: 'Lyno-Stan', sans-serif;
 }
 
-.nav-bar > li {
+.nav-bar>li {
   position: relative;
 }
 
@@ -73,54 +77,66 @@
 
 
 .photopile figure {
-  max-width: 250px;    /* ← set this to match your polaroid frame’s width */
+  max-width: 250px;
+  /* ← set this to match your polaroid frame’s width */
 }
 
 .photopile figure img {
   display: block;
   width: 100%;
-  height: auto;        /* preserves aspect ratio */
+  height: auto;
+  /* preserves aspect ratio */
 }
+
 .photopile {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+
 .photopile figure {
   display: inline-block;
   max-width: 40%;
   background: white;
-  box-shadow: 1px 4px 5px rgba(0,0,0,0.55);
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
   transform: rotate(2deg);
   margin: 0 -25px;
 }
+
 .photopile figure img {
   max-width: calc(100% - 2rem);
   margin: 1rem 1rem 0 1rem;
-  border: 2px rgb(0,0,0,0.55) inset;
+  border: 2px rgb(0, 0, 0, 0.55) inset;
 }
+
 .photopile figcaption {
   text-align: center;
   margin: 0.5rem 1rem 1rem 1rem;
   font-size: 0.8rem;
   color: black;
 }
+
 .photopile figure:hover {
   z-index: 3;
 }
+
 .photopile figure:nth-child(2n) {
   transform: rotate(-10deg);
 }
+
 .photopile figure:nth-child(3n) {
   transform: rotate(5deg);
 }
+
 .photopile figure:nth-child(4n) {
   transform: rotate(4deg);
 }
+
 .photopile figure:nth-child(5n) {
   transform: rotate(-2deg);
 }
+
 .photopile figure:nth-child(6n) {
   transform: rotate(-7deg);
 }
@@ -170,33 +186,51 @@ ul {
   margin-left: 20px;
   padding: 0;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
 }
+
 li {
   margin-bottom: 0.5em;
 }
 
 .gear-block {
-  text-align: center;
+  text-align: left;
   margin: 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .gear-block h2 {
   margin-bottom: 1.1rem;
-  text-align: center;
+  text-align: left;
+  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f0bb82;
+}
+
+.gear-block h2 .title-text {
+  background: #a7d9f9;
+  padding: 0.2rem 0.5rem;
+  border: 2px solid rgba(255, 186, 47, 0.78);
+  border-radius: 12px;
 }
 
 .gear-list {
   list-style: square;
-  padding: 1.25rem 2rem 1.4rem;
-  margin: 0 auto;
-  width: min(90%, 640px);
+  padding: 1.25rem 2.25rem 1.4rem 2.75rem;
+  margin: 23px;
+  margin-left: 23;
+  margin-right: auto;
+  width: min(95%, 760px);
   background-color: #7b3f00;
-  color: #fff5e1;
+  color: #f7e0b3;
   border-radius: 20px;
-  border: 2px solid rgba(255, 245, 225, 0.75);
+  border: 2px solid rgba(255, 186, 47, 0.78);
   box-shadow: 6px 8px 0 rgba(47, 18, 0, 0.85);
-  text-align: center;
+  text-align: left;
   line-height: 1.7;
   list-style-position: inside;
   padding-left: 0;
@@ -237,28 +271,45 @@ figure.model-figure {
 /* Animations */
 
 @keyframes wiggle-title {
-  0% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
-  50% { transform: rotateX(10deg) rotateY(15deg) scale(0.95); }
-  100% { transform: rotateX(-10deg) rotateY(-15deg) scale(0.85); }
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+  }
 }
 
 @keyframes wiggle-slow {
-  0%, 100% { transform: rotateX(10deg) rotateZ(0deg); }
-  50% { transform: rotateX(90deg) rotateZ(4deg); }
+
+  0%,
+  100% {
+    transform: rotateX(10deg) rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateX(90deg) rotateZ(4deg);
+  }
 }
+
 .threeD {
   display: block;
   text-align: center;
   perspective: 5000px;
   transform-style: preserve-3d;
 }
- .wiggle-title {
+
+.wiggle-title {
   font-family: 'Lyno-Jean';
   font-size: 3em;
   display: inline-block;
- transform-origin: center;
- animation: wiggle-title 20s infinite ease-in-out;
- text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  transform-origin: center;
+  animation: wiggle-title 20s infinite ease-in-out;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 .wiggle-title img {
@@ -329,18 +380,23 @@ figcaption.highlight {
   0% {
     transform: translate(-30px, -20px) rotate(calc(var(--tilt) - 2deg)) scale(0.96);
   }
+
   20% {
     transform: translate(90px, -140px) rotate(calc(var(--tilt) + 4deg)) scale(1.02);
   }
+
   40% {
     transform: translate(160px, 10px) rotate(calc(var(--tilt) + 1deg)) scale(1.04);
   }
+
   60% {
     transform: translate(-60px, 140px) rotate(calc(var(--tilt) - 3deg)) scale(1.01);
   }
+
   80% {
     transform: translate(-180px, -40px) rotate(calc(var(--tilt) + 2deg)) scale(0.98);
   }
+
   100% {
     transform: translate(20px, 120px) rotate(calc(var(--tilt) - 1deg)) scale(1.03);
   }
@@ -350,15 +406,19 @@ figcaption.highlight {
   0% {
     transform: translate(20px, -30px) rotate(calc(var(--tilt) + 1deg)) scale(0.94);
   }
+
   25% {
     transform: translate(-80px, -160px) rotate(calc(var(--tilt) - 4deg)) scale(1.03);
   }
+
   50% {
     transform: translate(-10px, 40px) rotate(calc(var(--tilt) + 3deg)) scale(1.07);
   }
+
   75% {
     transform: translate(120px, 90px) rotate(calc(var(--tilt) - 2deg)) scale(1);
   }
+
   100% {
     transform: translate(-140px, 10px) rotate(calc(var(--tilt) + 2deg)) scale(1.02);
   }
@@ -368,15 +428,19 @@ figcaption.highlight {
   0% {
     transform: translate(-40px, 0) rotate(calc(var(--tilt) - 1deg)) scale(0.97);
   }
+
   20% {
     transform: translate(70px, -110px) rotate(calc(var(--tilt) + 5deg)) scale(1.05);
   }
+
   45% {
     transform: translate(30px, 90px) rotate(calc(var(--tilt) - 3deg)) scale(1.01);
   }
+
   65% {
     transform: translate(-120px, 40px) rotate(calc(var(--tilt) + 2deg)) scale(0.99);
   }
+
   100% {
     transform: translate(110px, -80px) rotate(calc(var(--tilt) - 2deg)) scale(1.04);
   }
@@ -386,15 +450,19 @@ figcaption.highlight {
   0% {
     transform: translate(0, 0) rotate(calc(var(--tilt) - 2deg)) scale(0.95);
   }
+
   15% {
     transform: translate(80px, -140px) rotate(calc(var(--tilt) + 2deg)) scale(1.02);
   }
+
   40% {
     transform: translate(-140px, -90px) rotate(calc(var(--tilt) + 5deg)) scale(1.06);
   }
+
   70% {
     transform: translate(60px, 130px) rotate(calc(var(--tilt) - 3deg)) scale(1);
   }
+
   100% {
     transform: translate(-100px, 60px) rotate(calc(var(--tilt) + 1deg)) scale(1.03);
   }
@@ -404,15 +472,19 @@ figcaption.highlight {
   0% {
     transform: translate(-20px, -20px) rotate(calc(var(--tilt) + 1deg)) scale(0.94);
   }
+
   30% {
     transform: translate(140px, -80px) rotate(calc(var(--tilt) - 3deg)) scale(1.06);
   }
+
   55% {
     transform: translate(-40px, 150px) rotate(calc(var(--tilt) + 4deg)) scale(1.01);
   }
+
   80% {
     transform: translate(-160px, -30px) rotate(calc(var(--tilt) - 2deg)) scale(0.98);
   }
+
   100% {
     transform: translate(40px, 80px) rotate(calc(var(--tilt) + 3deg)) scale(1.04);
   }
@@ -422,15 +494,19 @@ figcaption.highlight {
   0% {
     transform: translate(-60px, 0) rotate(calc(var(--tilt) - 3deg)) scale(0.96);
   }
+
   25% {
     transform: translate(40px, -150px) rotate(calc(var(--tilt) + 4deg)) scale(1.05);
   }
+
   50% {
     transform: translate(160px, 20px) rotate(calc(var(--tilt) - 1deg)) scale(1.02);
   }
+
   75% {
     transform: translate(-20px, 140px) rotate(calc(var(--tilt) + 2deg)) scale(0.99);
   }
+
   100% {
     transform: translate(-150px, -60px) rotate(calc(var(--tilt) - 2deg)) scale(1.03);
   }
@@ -496,6 +572,7 @@ footer {
   font-family: 'Lyno-Stan', Arial, sans-serif;
   font-size: 0.9em;
 }
+
 .footer-badges {
   display: inline;
   max-height: 50px;
