@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")/.."
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 [ "$branch" = "main" ] || { echo "Switch to main (git checkout main)"; exit 1; }
