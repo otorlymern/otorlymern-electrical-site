@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OES Analog Video Library</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/altstyle.css" />
+    <link rel="stylesheet" href="/css/videolibrary.css" />
+  </head>
+  <body class="cv-dark-page vhs-library">
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="/systems/systems.html">Systems</a>
+            <ul class="dropdown-content">
+              <li><a href="/music/studio.html">OEStudio</a></li>
+              <li>
+                <a href="/systems/rrr.html"
+                  >Repairs, Refurbs &amp; Restorations</a
+                >
+              </li>
+              <li><a href="/systems/home-recording.html">Home Recording</a></li>
+              <li><a href="/video/videolibrary.html">Video Library</a></li>
+              <li><a href="/solutions/resources/index.html">Resources</a></li>
+            </ul>
+          </li>
+          <li><a href="/services/index.html">Services</a></li>
+          <li class="dropdown">
+            <a href="/solutions/index.html">Solutions</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="/solutions/DIY/projects/index.html"
+                  >DIY Audio and Video</a
+                >
+              </li>
+              <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+              <li>
+                <a href="/solutions/DIY/techniques/musictech/index.html"
+                  >Synthesis, Composition and Recording</a
+                >
+              </li>
+              <li>
+                <a href="/solutions/DIY/techniques/vidtech/videotechniques.html"
+                  >Analog &amp; Digital Video Manipulation and Synthesis</a
+                >
+              </li>
+              <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="blob-container" aria-hidden="true">
+      <div class="blob blob-red"></div>
+      <div class="blob blob-blue"></div>
+      <div class="blob blob-red-2"></div>
+    </div>
+
+    <main class="library-main">
+      <section class="title-section library-hero">
+        <div class="title-container">
+          <p class="hero-kicker">OES Video Library</p>
+          <h1 class="threeD">
+            <span class="wiggle-title">Video Library</span>
+          </h1>
+          <p class="hero-description">
+            Drag a tape from the shelf into the deck
+          </p>
+        </div>
+      </section>
+
+      <section class="library-stage">
+        <div class="shelf-column">
+          <div class="shelf-header">
+            <h2 class="shelf-title">Video Shelf</h2>
+            <p class="shelf-copy">
+              Every tape is draggable. Drop it onto the VCR
+            </p>
+          </div>
+          <div class="tape-shelf" id="tapeShelf">
+            <div
+              class="tape"
+              draggable="true"
+              data-video-url="https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff"
+              data-title="b&amp;btransparentgraphics-over-tdLiquidbg"
+              data-description="Edutainment video on the dangers of computing while swimming. Graphics taken from an episode of Bits and Bytes,liuid background created by me in TouchDesigner."
+            >
+              <div class="tape-label">b&amp;btransparentgraphics-over-tdLiquidbg</div>
+              <div class="2025">SP</div>
+              <div class="tape-tag">VHS</div>
+            </div>
+
+            <div
+              class="tape"
+              draggable="true"
+              data-video-url="https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a"
+              data-title="Girl of Graph (Digitial) (2025)"
+              data-description="an Otorlymern Electrical Services announcment about the use of Computer Graphics"
+            >
+              <div class="tape-label">Girl of Graph (Digitial) (2025)</div>
+              <div class="tape-year">EP</div>
+              <div class="tape-tag">HiFi</div>
+            </div>
+
+            <div
+              class="tape"
+              draggable="true"
+              data-video-url="https://videos.scanlines.xyz/videos/embed/be59fe4d-997c-499f-859c-fac3c8591162"
+              data-title="Sensual Crash (VHS) (2025)"
+              data-description="watchout if nudity makees you say... ICK! composed using VSERPI: WavePools an Ambico two Channel video Mixer, Panasonic VCR, and the videot tapes entitled Sensual Massage part 1 and three tape box ..."
+            >
+              <div class="tape-label">Sensual Crash (VHS) (2025)</div>
+              <div class="tape-year">LP</div>
+              <div class="tape-tag">TEST</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-column">
+            <div class="crt-shell">
+              <div class="crt-frame">
+                <div class="crt-screen">
+                  <iframe
+                    id="videoFrame"
+                    class="tv-screen"
+                    src="about:blank"
+                    loading="lazy"
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    title="OES video deck"
+                  ></iframe>
+                  <div class="scanlines"></div>
+                  <div class="crt-glare"></div>
+                </div>
+              </div>
+              <div class="crt-caption">
+                <span class="pilot-light" aria-hidden="true"></span>
+                <span class="crt-caption__text"OES Video Library></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vcr">
+            <div class="vcr-title-bar">
+              <span>OTORLYMERN ELECTRICAL SYSTEMS VCR-2000</span>
+              <span id="vcrIndicator">IDLE</span>
+            </div>
+
+            <div class="vcr-slot" id="vcrSlot" aria-live="polite">DROP TAPE HERE</div>
+
+            <div class="vcr-buttons">
+              <button type="button" class="vcr-btn" id="btnPlay">Play</button>
+              <button type="button" class="vcr-btn" id="btnPause">Pause</button>
+              <button type="button" class="vcr-btn" id="btnStop">Stop</button>
+              <button type="button" class="vcr-btn" id="btnEject">Eject</button>
+              <button type="button" class="vcr-btn" id="btnStatic">Static</button>
+            </div>
+
+            <div class="status-panel" aria-live="polite">
+              <span class="status-label">STATUS:</span>
+              <span id="statusMessage">Ready for tape.</span>
+            </div>
+          </div>
+
+          <div class="tape-notes" id="tapeNotes">
+            <h3 id="notesTitle">OES Video Gear (0921)</h3>
+            <p id="notesDesc">Default house reel.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Otorlymern Electrical Systems</p>
+      <div class="footer-badges">
+        <a href="https://reverb.com/shop/otorlymern-electrical"
+          ><img
+            src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+            alt="Shop My Store on Reverb"
+        /></a>
+        <img
+          src="/images/Untitled-removebg-preview.png"
+          class="footer-badges"
+          alt="OES badge"
+        />
+        <img
+          src="/images/worldwideweb_badge.gif"
+          class="footer-badges"
+          alt="World Wide Web badge"
+        />
+        <img
+          src="/images/OESCirclelogo1.png"
+          class="footer-badges"
+          alt="OES circle logo"
+        />
+        <a href="https://reverb.com/shop/otorlymern-electrical"
+          ><img
+            src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+            alt="Shop My Store on Reverb"
+        /></a>
+      </div>
+    </footer>
+
+    <script>
+      const tapes = document.querySelectorAll(".tape");
+      const vcrSlot = document.getElementById("vcrSlot");
+      const videoFrame = document.getElementById("videoFrame");
+      const statusMessage = document.getElementById("statusMessage");
+      const vcrIndicator = document.getElementById("vcrIndicator");
+      const notesTitle = document.getElementById("notesTitle");
+      const notesDesc = document.getElementById("notesDesc");
+
+      const defaultVideoSrc = "/video/0921.mp4";
+      const defaultTitle = "OES Video Gear (0921)";
+      const defaultDescription = "Default house reel.";
+
+      let currentTapeTitle = defaultTitle;
+      let currentVideoUrl = defaultVideoSrc;
+      let currentDescription = defaultDescription;
+      let isPaused = false;
+
+      const buildEmbedUrl = (url) => {
+        if (!url) return "";
+        const baseUrl = url.replace(/([?&])autoplay=.*$/i, "");
+        const hasQuery = baseUrl.includes("?");
+        const params =
+          "loop=1&autoplay=1&title=0&warningTitle=0&controlBar=0&peertubeLink=0&p2p=0";
+        return hasQuery ? `${baseUrl}&${params}` : `${baseUrl}?${params}`;
+      };
+
+      const loadEmbed = (url) => {
+        const finalUrl = buildEmbedUrl(url);
+        videoFrame.srcdoc = "";
+        videoFrame.removeAttribute("sandbox");
+        videoFrame.src = finalUrl;
+      };
+
+      const loadDefaultVideo = () => {
+        videoFrame.src = "about:blank";
+        videoFrame.srcdoc = `
+          <style>
+            * { box-sizing: border-box; }
+            html, body {
+              margin: 0;
+              width: 100%;
+              height: 100%;
+              background: #000;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            video {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              background: #000;
+            }
+          </style>
+          <video autoplay muted loop playsinline controls src="${defaultVideoSrc}"></video>
+        `;
+        vcrSlot.textContent = `>> NOW PLAYING: ${defaultTitle}`;
+        vcrIndicator.textContent = "PLAY";
+        statusMessage.textContent = `Playing "${defaultTitle}"`;
+        notesTitle.textContent = defaultTitle;
+        notesDesc.textContent = defaultDescription;
+      };
+
+      tapes.forEach((tape) => {
+        tape.addEventListener("dragstart", (event) => {
+          const url = tape.dataset.videoUrl;
+          const title =
+            tape.dataset.title || tape.querySelector(".tape-label").textContent;
+          const description = tape.dataset.description || "No description available.";
+
+          event.dataTransfer.setData("text/plain", url);
+          event.dataTransfer.setData("text/tape-title", title);
+          event.dataTransfer.setData("text/tape-description", description);
+          event.dataTransfer.effectAllowed = "copy";
+
+          statusMessage.textContent = `LOADING ${title} ... (dragging)`;
+        });
+      });
+
+      vcrSlot.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        vcrSlot.classList.add("vcr-slot--active");
+      });
+
+      vcrSlot.addEventListener("dragleave", () => {
+        vcrSlot.classList.remove("vcr-slot--active");
+      });
+
+      vcrSlot.addEventListener("drop", (event) => {
+        event.preventDefault();
+        vcrSlot.classList.remove("vcr-slot--active");
+
+        const url = event.dataTransfer.getData("text/plain");
+        const title =
+          event.dataTransfer.getData("text/tape-title") || "Unknown Tape";
+        const description =
+          event.dataTransfer.getData("text/tape-description") ||
+          "No description available.";
+
+        if (!url) {
+          statusMessage.textContent = "That tape seems blank.";
+          return;
+        }
+
+        currentVideoUrl = url;
+        currentTapeTitle = title;
+        currentDescription = description;
+
+        loadEmbed(url);
+
+        vcrSlot.textContent = `>> NOW PLAYING: ${title}`;
+        vcrIndicator.textContent = "PLAY";
+        statusMessage.textContent = `Playing "${title}"`;
+        notesTitle.textContent = title;
+        notesDesc.textContent = description;
+        isPaused = false;
+      });
+
+      const playCurrent = () => {
+        if (!currentVideoUrl) {
+          loadDefaultVideo();
+          return;
+        }
+        if (currentVideoUrl === defaultVideoSrc) {
+          loadDefaultVideo();
+        } else {
+          loadEmbed(currentVideoUrl);
+          vcrIndicator.textContent = "PLAY";
+          statusMessage.textContent = `Playing "${currentTapeTitle}"`;
+        }
+        isPaused = false;
+      };
+
+      document.getElementById("btnStop").addEventListener("click", () => {
+        videoFrame.src = "about:blank";
+        videoFrame.srcdoc = "";
+        vcrIndicator.textContent = "STOP";
+        statusMessage.textContent = `Stopped "${currentTapeTitle || "Tape"}"`;
+        isPaused = false;
+      });
+
+      document.getElementById("btnPlay").addEventListener("click", () => {
+        playCurrent();
+      });
+
+      document.getElementById("btnPause").addEventListener("click", () => {
+        videoFrame.src = "about:blank";
+        videoFrame.srcdoc = "";
+        vcrIndicator.textContent = "PAUSE";
+        statusMessage.textContent = `Paused "${currentTapeTitle || "Tape"}"`;
+        isPaused = true;
+      });
+
+      document.getElementById("btnEject").addEventListener("click", () => {
+        currentVideoUrl = defaultVideoSrc;
+        currentTapeTitle = defaultTitle;
+        currentDescription = defaultDescription;
+        loadDefaultVideo();
+        statusMessage.textContent = "Tape ejected. Default reel rolling.";
+        isPaused = false;
+      });
+
+      document.getElementById("btnStatic").addEventListener("click", () => {
+        videoFrame.src = "about:blank";
+        videoFrame.srcdoc = "";
+        vcrIndicator.textContent = "STATIC";
+        statusMessage.textContent = "Channel drift / no signal.";
+        isPaused = false;
+      });
+
+      loadDefaultVideo();
+    </script>
+  </body>
+</html>
