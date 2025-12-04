@@ -1,8 +1,11 @@
-/* OES CRT video library wall */
+/* Analog video wall styling */
+
+@import url("./style.css");
+@import url("./altstyle.css");
 
 @font-face {
   font-family: "VCR OSD Mono";
-  src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+  src: url("../fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,10 +19,7 @@
 }
 
 body.vhs-library {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(255, 217, 166, 0.08), transparent 18%),
-    radial-gradient(circle at 78% 22%, rgba(125, 241, 180, 0.06), transparent 18%),
-    #2c1606;
+  background: radial-gradient(circle at 12% 18%, rgba(255, 217, 166, 0.08), transparent 18%), radial-gradient(circle at 78% 22%, rgba(125, 241, 180, 0.06), transparent 18%), #2c1606;
   color: #fcefd8;
   font-family: "VCR OSD Mono", "Lyno-Stan", monospace;
 }
@@ -98,6 +98,8 @@ body.vhs-library .nav-bar a:hover {
   line-height: 1.5;
 }
 
+/* CRT wall */
+
 .wall-intro {
   background: linear-gradient(135deg, rgba(20, 10, 6, 0.82), rgba(12, 6, 3, 0.85));
   border: 1px solid rgba(255, 221, 168, 0.2);
@@ -117,39 +119,32 @@ body.vhs-library .nav-bar a:hover {
 
 .wall-grid {
   display: grid;
-  gap: 1.1rem;
+  gap: 1rem;
   align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  justify-items: center;
 }
 
 .library-wall-grid {
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  justify-items: center;
 }
 
-@media (min-width: 1080px) {
-  .wall-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .wall-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+@media (max-width: 900px) {
+  .library-wall-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
 .tv-unit {
   width: 100%;
-  max-width: 520px;
+  max-width: 500px;
   background: linear-gradient(150deg, rgba(28, 13, 6, 0.9), rgba(12, 6, 3, 0.94));
   border: 1px solid rgba(255, 221, 168, 0.26);
   border-radius: 11px;
-  padding: 1rem 1rem 1.1rem;
+  padding: 0.9rem 0.9rem 1rem;
   box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.45), 0 14px 36px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -163,7 +158,7 @@ body.vhs-library .nav-bar a:hover {
   pointer-events: none;
 }
 
-.tv-unit > * {
+.tv-unit>* {
   position: relative;
   z-index: 1;
 }
@@ -179,47 +174,37 @@ body.vhs-library .nav-bar a:hover {
   opacity: 0;
 }
 
+/* CRT shell */
+
 .crt-shell {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
-  margin-bottom: 0.5rem;
-  align-items: center;
-}
-
-.crt-shell--wall {
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
+  margin-bottom: 3.5rem;
 }
 
 .crt-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at 50% 35%, rgba(20, 10, 6, 0.6), rgba(10, 5, 3, 0.85));
-  border-radius: 18px;
-  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.crt-shell--wall {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .crt-frame--wall {
   background: none;
 }
 
-/* Aligns video to the transparent window of the Sony Trinitron frame */
 .crt-screen {
   position: absolute;
-  top: 20.4%;
-  left: 20.3%;
-  width: 59.7%;
-  height: 42.3%;
+  inset: 10% 10% 16% 10%;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow:
-    inset 0 0 30px rgba(0, 0, 0, 0.7),
-    0 0 24px rgba(125, 241, 180, 0.28);
-  background: #000;
-  z-index: 1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(125, 241, 180, 0.28);
 }
 
 .tv-screen {
@@ -231,6 +216,7 @@ body.vhs-library .nav-bar a:hover {
   position: relative;
   z-index: 1;
   object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 .tv-screen--embed {
@@ -241,12 +227,7 @@ body.vhs-library .nav-bar a:hover {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.22) 0px,
-      rgba(0, 0, 0, 0.22) 2px,
-      rgba(255, 255, 255, 0) 3px
-    );
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.22) 0px, rgba(0, 0, 0, 0.22) 2px, rgba(255, 255, 255, 0) 3px);
   mix-blend-mode: soft-light;
   opacity: 0.5;
   z-index: 2;
@@ -256,22 +237,19 @@ body.vhs-library .nav-bar a:hover {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-      115deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.03) 38%,
-      rgba(255, 255, 255, 0) 60%
-    );
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03) 38%, rgba(255, 255, 255, 0) 60%);
   z-index: 3;
 }
 
 .trinitron-overlay {
   position: absolute;
-  inset: 0;
+  inset: -14%;
   background: url("/video/sonycrtfrfame.png") center center / contain no-repeat;
   pointer-events: none;
-  opacity: 0.96;
-  z-index: 5;
+  opacity: 0.9;
+  transform: translateY(-75px) scale(1.5);
+  transform-origin: center top;
+  z-index: 6;
 }
 
 .screen-overlay {
@@ -280,11 +258,7 @@ body.vhs-library .nav-bar a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-      circle at 30% 30%,
-      rgba(251, 215, 163, 0.08),
-      rgba(12, 7, 4, 0.7)
-    );
+  background: radial-gradient(circle at 30% 30%, rgba(251, 215, 163, 0.08), rgba(12, 7, 4, 0.7));
   color: var(--crt-amber);
   font-family: "VCR OSD Mono", monospace;
   letter-spacing: 0.12em;
@@ -303,14 +277,11 @@ body.vhs-library .nav-bar a:hover {
 
 .tv-unit.tv-static .screen-overlay {
   opacity: 0.9;
-  background:
-    repeating-linear-gradient(
-      to bottom,
+  background: repeating-linear-gradient(to bottom,
       rgba(255, 255, 255, 0.08) 0,
       rgba(255, 255, 255, 0.08) 1px,
       rgba(0, 0, 0, 0.08) 2px,
-      rgba(0, 0, 0, 0.08) 3px
-    ),
+      rgba(0, 0, 0, 0.08) 3px),
     linear-gradient(120deg, rgba(255, 217, 166, 0.08), rgba(12, 7, 4, 0.9));
   animation: crtSnow 0.18s steps(2) infinite;
 }
@@ -347,6 +318,8 @@ body.vhs-library .nav-bar a:hover {
   background: radial-gradient(circle at 30% 30%, #9fe7c6, #2b7a52 75%);
   box-shadow: 0 0 10px #7df1b4, 0 0 0 2px rgba(125, 241, 180, 0.28);
 }
+
+/* VCR cards */
 
 .vcr {
   padding: 0.8rem 0.9rem 0.95rem;
@@ -454,6 +427,6 @@ body.vhs-library .nav-bar a:hover {
 
 @media (max-width: 640px) {
   .crt-frame {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
   }
 }
