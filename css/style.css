@@ -741,6 +741,24 @@ footer {
   object-fit: cover;
 }
 
+.highlight-crt-frame {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  background: #000;
+  overflow: hidden;
+}
+
+.highlight-crt-overlay {
+  position: absolute;
+  inset: -8%;
+  background: url("/video/sonycrtfrfame.png") center center / contain no-repeat;
+  transform: translateY(4%) scale(1.15);
+  transform-origin: center top;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
 .highlight-body {
   padding: 0.95rem 1rem 1.2rem 1rem;
   display: flex;
