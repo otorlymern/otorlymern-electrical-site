@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 INDIR="${ROOT_DIR}/scripts/assets-src"
-OUTDIR="${ROOT_DIR}/video"
+OUTDIR="${ROOT_DIR}/assets-cmprsd"
 THUMB_DIR="${ROOT_DIR}/images/video-thumbs"
 
 mkdir -p "$OUTDIR" "$THUMB_DIR"

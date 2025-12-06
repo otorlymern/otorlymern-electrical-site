@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 IN_DIR="${ROOT_DIR}/scripts/assets-src"
-OUT_DIR="${ROOT_DIR}/images"
+OUT_DIR="${ROOT_DIR}/assets-cmprsd"
 PDF_PRESET="${1:-/ebook}"
 
 command -v gs >/dev/null || { echo "Ghostscript (gs) is required for PDF compression."; exit 1; }

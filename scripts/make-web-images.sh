@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 IN_DIR="${ROOT_DIR}/scripts/assets-src"
-OUT_DIR="${ROOT_DIR}/images"
+OUT_DIR="${ROOT_DIR}/assets-cmprsd"
 MAXW="${1:-1600}"
 QUALITY="${2:-0.82}"
 
@@ -16,8 +16,7 @@ for f in "$IN_DIR"/*.{jpg,JPG,jpeg,JPEG,png,PNG}; do
   out="$OUT_DIR/${base%.*}.jpg"
   echo "• $base → $(basename "$out")"
   sips -s format jpeg "$f" --setProperty formatOptions "$QUALITY" \
-       --setProperty profile "sRGB IEC61966-2.1" \
-       --resampleWidth "$MAXW" --out "$out" >/dev/null
+     --resampleWidth "$MAXW" --out "$out" >/dev/null
 done
 
 echo "✅ Images ready in $OUT_DIR"
