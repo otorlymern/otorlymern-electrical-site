@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-INDIR="${PWD}/assets-src"
-OUTDIR="${PWD}/video"
-THUMB_DIR="${PWD}/images/video-thumbs"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+INDIR="${ROOT_DIR}/scripts/assets-src"
+OUTDIR="${ROOT_DIR}/video"
+THUMB_DIR="${ROOT_DIR}/images/video-thumbs"
 
-mkdir -p "$OUTDIR" "$THUMBDIR"
+mkdir -p "$OUTDIR" "$THUMB_DIR"
 shopt -s nullglob
 
-for f in "$INDIR"/.{mov,mp4,mkv,avi,mpg}; do
+for f in "$INDIR"/*.{mov,mp4,mkv,avi,mpg,MOV,MP4,MKV,AVI,MPG}; do
   base=$(basename "$f")
-  stem="${base%.}"
+  stem="${base%.*}"
   out="${OUTDIR}/${stem}.mp4"
   thumb="${THUMB_DIR}/${stem}.jpg"
 
@@ -26,4 +28,4 @@ for f in "$INDIR"/.{mov,mp4,mkv,avi,mpg}; do
   ffmpeg -y -i "$out" -ss 00:00:03 -vframes 1 "$thumb"
 done
 
-echo "✅ Videos ready in $OUTDIR (thumbs in $THUMBDIR)"
+echo "✅ Videos ready in $OUTDIR (thumbs in $THUMB_DIR)"
