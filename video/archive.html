@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <title>OES CRT Wall</title>
     <style>
+      @font-face {
+        font-family: "VCR OSD Mono";
+        src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       body {
         margin: 0;
-        font-family: "VCR_OSD_MONO_1.001.ttf", sans-serif;
+        font-family: "VCR OSD Mono", monospace;
         background: #00001099 url('/images/staticsnow.png');
         color: #06602174;
       }
 
       .wrapper {
-        max-width: 1100px;
-        margin: 0 auto;        padding: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px;
       }
 
       .page-title {
@@ -35,30 +44,36 @@
       /* MAIN CRT */
       .main-crt-wrapper {
         position: relative;
-        margin-bottom: 18px;
-        border-radius: 14px 14px 6px 6px;
-        border: 4px solid #5a5f62;
-        background: radial-gradient(circle at top, #101030, #010105 70%);
-        box-shadow: 0 0 18px #00ff9988;
-        padding: 10px;
+        margin: 0 auto 22px;
+        max-width: 1200px;
+        padding: 0 8px;
+        overflow: visible;
+        width: 100%;
       }
 
       .main-crt-bezel {
         position: relative;
-        background: linear-gradient(#0b000096, #9795959a);
-        border-radius: 10px;
-        padding: 6px;
-        box-shadow: inset 0 0 10px #000000;
+        width: 100%;
+        padding-top: 87.5%;
+        background: radial-gradient(circle at top, #101030, #010105 70%);
+        border-radius: 18px;
+        box-shadow: 0 0 22px #00ff9988, 0 14px 28px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
       }
 
       .main-crt-screen-frame {
-        position: relative;
-        width: 100%;
-        padding-top: 56.25%; /* 16:9 */
-        background: #dad4c9;
+        width: 75.6%;
+        height: 62.1%;
+        left: 12.7%;
+        top: 11.4%;
+        background: #0b0b0f;
         overflow: hidden;
-        border-radius: 6px;
+        border-radius: 12px;
         border: 2px solid #91969488;
+        box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+        position: absolute;
+        z-index: 2;
       }
 
       .main-crt-screen {
@@ -67,20 +82,33 @@
         border: none;
         width: 100%;
         height: 100%;
-        background: #555454;
+        background: #060606;
+        z-index: 1;
       }
 
       .main-scanlines {
         pointer-events: none;
         position: absolute;
         inset: 0;
-        background:
+        background: repeating-linear-gradient(
           to bottom,
-          rgba(0,0,0,0.28),
-          rgba(0,0,0,0.28) 2px,
-          rgba(0,0,0,0.0) 3px
+          rgba(0, 0, 0, 0.28),
+          rgba(0, 0, 0, 0.28) 2px,
+          rgba(0, 0, 0, 0.0) 3px
         );
         mix-blend-mode: multiply;
+        z-index: 2;
+      }
+
+      .main-crt-overlay {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        background: url("/video/crt-overlays/crt-main.png") center/contain
+          no-repeat;
+        mix-blend-mode: screen;
+        opacity: 0.95;
+        z-index: 4;
       }
 
       .main-crt-label {
@@ -91,6 +119,8 @@
         color: #aaffdd;
         text-transform: uppercase;
         letter-spacing: 2px;
+        position: relative;
+        z-index: 5;
       }
 
       .main-crt-label span:last-child {
@@ -110,86 +140,76 @@
 
       .crt-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-        margin-bottom: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+        margin-bottom: 20px;
       }
 
       .crt-tile {
         position: relative;
-        background: radial-gradient(circle at top left, #303050, #050509 70%);
-        border-radius: 8px 8px 4px 4px;
-        padding: 4px;
-        border: 2px solid #222f22;
-        box-shadow: 0 0 6px #000000;
+        background: linear-gradient(180deg, rgba(10, 20, 14, 0.72), rgba(6, 14, 8, 0.5));
+        border-radius: 14px;
+        padding: 10px 8px 12px;
+        border: 1px solid #1f3a2f;
+        box-shadow: 0 8px 20px #000000;
         cursor: grab;
         transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, border-color 0.08s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
       }
 
       .crt-tile:hover {
         transform: translateY(-6px);
-        box-shadow: 0 0 12px #2aff88;
-        border-color: #969896;
+        box-shadow: 0 0 18px #2aff88;
+        border-color: #66ffcc;
       }
 
       .crt-tile.active {
-        box-shadow: 0 0 16px #33ff66;
+        box-shadow: 0 0 22px #33ff66;
         border-color: #66ffcc;
       }
 
       .crt-inner-frame {
         position: relative;
         width: 100%;
-        padding-top: 75%; /* 4:3 little CRTs */
-        background: #b56e6e;
-        border-radius: 4px;
+        aspect-ratio: 5 / 3;
+        background: radial-gradient(circle at 40% 20%, rgba(102, 141, 120, 0.08), rgba(0, 0, 0, 0.6));
+        border-radius: 12px;
         overflow: hidden;
-        border: 1px solid #111111;
+        border: 1px solid #0f1b14;
+        box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
       }
 
       .crt-thumb {
-        position: absolute;
-        inset: 0;
+        position: relative;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        image-rendering: pixelated;
-        filter: contrast(1.1) saturate(1.2);
+        object-fit: contain;
+        image-rendering: auto;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
       }
 
       .crt-mini-scan {
-        pointer-events: none;
-        position: absolute;
-        inset: 0;
-        z-index: 5;
-        background: repeating-linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.926),
-          rgba(0,0,0,0.32) 2px,
-          rgba(0,0,0,0.02) 3px
-        );
-        mix-blend-mode: overlay;
+        display: none;
       }
 
       .crt-label {
-        margin-top: 3px;
-        font-size: 9px;
-        color: #7eb58f;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-top: 0;
+        font-size: 11px;
+        color: #88ffbb;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
       }
 
       .crt-meta {
-        font-size: 8px;
-        color: #88ffbb;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1px;
-      }
-
-      .crt-meta span {
-        opacity: 0.9;
+        display: none;
       }
 
       .footer-note {
@@ -235,10 +255,11 @@
             ></iframe>
             <div class="main-scanlines"></div>
           </div>
-          <div class="main-crt-label">
-            <span id="mainTitle">NO SIGNAL</span>
-            <span id="mainStatus">CH 00 • LINE IN</span>
-          </div>
+          <div class="main-crt-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="main-crt-label">
+          <span id="mainTitle">NO SIGNAL</span>
+          <span id="mainStatus">CH 00 • LINE IN</span>
         </div>
       </div>
 
@@ -249,89 +270,68 @@
         <div
           class="crt-tile"
           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_1"
-          data-title="VSERPI Feedback Etude"
-          data-meta="CH 01 • SP"
+          data-title="Title 1 (VHS) (YEAR)"
+          data-meta="VHS CHANNEL 01"
         >
           <div class="crt-inner-frame">
-            <!-- Use a static GIF / PNG / JPG thumbnail here -->
             <img
               class="crt-thumb"
-              src="thumb-vserpi-etude.gif"
-              alt="VSERPI Feedback Etude"
+              src="/video/vhs_tapes/vhsreal1.png"
+              alt="Title 1 (VHS) (YEAR)"
             />
-            <div class="crt-mini-scan"></div>
           </div>
-          <div class="crt-label">VSERPI Feedback Etude</div>
-          <div class="crt-meta">
-            <span>SCANLINES</span>
-            <span>CH 01</span>
-          </div>
+          <div class="crt-label">Title 1 (VHS) (YEAR)</div>
         </div>
 
         <!-- CRT 2 -->
         <div
           class="crt-tile"
           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_2"
-          data-title="Tape Loop / CRT Orbit"
-          data-meta="CH 02 • EP"
+          data-title="Title 2 (VHS) (YEAR)"
+          data-meta="VHS CHANNEL 02"
         >
           <div class="crt-inner-frame">
             <img
               class="crt-thumb"
-              src="thumb-crt-orbit.gif"
-              alt="Tape Loop / CRT Orbit"
+              src="/video/vhs_tapes/vhsreal2.png"
+              alt="Title 2 (VHS) (YEAR)"
             />
-            <div class="crt-mini-scan"></div>
           </div>
-          <div class="crt-label">Tape Loop / CRT Orbit</div>
-          <div class="crt-meta">
-            <span>4-TRACK</span>
-            <span>CH 02</span>
-          </div>
+          <div class="crt-label">Title 2 (VHS) (YEAR)</div>
         </div>
 
         <!-- CRT 3 -->
         <div
           class="crt-tile"
           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_3"
-          data-title="Composite Snow Studies"
-          data-meta="CH 03 • LP"
+          data-title="Title 3 (VHS) (YEAR)"
+          data-meta="VHS CHANNEL 03"
         >
           <div class="crt-inner-frame">
             <img
               class="crt-thumb"
-              src="thumb-composite-snow.gif"
-              alt="Composite Snow Studies"
+              src="/video/vhs_tapes/vhsreal3.png"
+              alt="Title 3 (VHS) (YEAR)"
             />
-            <div class="crt-mini-scan"></div>
           </div>
-          <div class="crt-label">Composite Snow Studies</div>
-          <div class="crt-meta">
-            <span>NOISE FLOOR</span>
-            <span>CH 03</span>
-          </div>
+          <div class="crt-label">Title 3 (VHS) (YEAR)</div>
         </div>
 
         <!-- CRT 4 -->
         <div
           class="crt-tile"
           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_4"
-          data-title="VSERPI / Audio Reactive"
-          data-meta="CH 04 • LIVE"
+          data-title="Title 4 (VHS) (YEAR)"
+          data-meta="VHS CHANNEL 04"
         >
           <div class="crt-inner-frame">
             <img
               class="crt-thumb"
-              src="thumb-audio-reactive.gif"
-              alt="VSERPI / Audio Reactive"
+              src="/video/vhs_tapes/vhsreal4.png"
+              alt="Title 4 (VHS) (YEAR)"
             />
-            <div class="crt-mini-scan"></div>
           </div>
-          <div class="crt-label">VSERPI / Audio Reactive</div>
-          <div class="crt-meta">
-            <span>LIVE MIX</span>
-            <span>CH 04</span>
-          </div>
+          <div class="crt-label">Title 4 (VHS) (YEAR)</div>
         </div>
 
         <!-- Add more CRT tiles as needed using the same pattern -->
