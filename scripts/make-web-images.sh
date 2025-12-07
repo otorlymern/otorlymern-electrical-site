@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 IN_DIR="${ROOT_DIR}/scripts/assets-src"
-OUT_DIR="${ROOT_DIR}/assets-cmprsd"
+OUT_DIR="${ROOT_DIR}/scripts/assets-cmprsd"
 MAXW="${1:-1600}"
 QUALITY="${2:-0.82}"
 

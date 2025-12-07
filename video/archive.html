@@ -1,373 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>OES CRT Wall</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Verdana", sans-serif;
-      background: #000010 url('bg-grid-tile.gif');
-      color: #c9ffd9;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>OES CRT Wall</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "VCR_OSD_MONO_1.001.ttf", sans-serif;
+        background: #00001099 url('/images/staticsnow.png');
+        color: #06602174;
+      }
 
-    .wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px;
-    }
-
-    .page-title {
-      font-size: 22px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-align: center;
-      margin-bottom: 4px;
-      text-shadow: 0 0 6px #33ff66;
-    }
-
-    .page-subtitle {
-      font-size: 11px;
-      text-align: center;
-      color: #88ffbb;
-      margin-bottom: 16px;
-    }
-
-    /* MAIN CRT */
-    .main-crt-wrapper {
-      position: relative;
-      margin-bottom: 18px;
-      border-radius: 14px 14px 6px 6px;
-      border: 4px solid #33ff66;
-      background: radial-gradient(circle at top, #101030, #010105 70%);
-      box-shadow: 0 0 18px #00ff99;
-      padding: 10px;
-    }
-
-    .main-crt-bezel {
-      position: relative;
-      background: linear-gradient(#050505, #181818);
-      border-radius: 10px;
-      padding: 6px;
-      box-shadow: inset 0 0 10px #000000;
-    }
-
-    .main-crt-screen-frame {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 */
-      background: #000000;
-      overflow: hidden;
-      border-radius: 6px;
-      border: 2px solid #111111;
-    }
-
-    .main-crt-screen {
-      position: absolute;
-      inset: 0;
-      border: none;
-      width: 100%;
-      height: 100%;
-      background: #000000;
-    }
-
-    .main-scanlines {
-      pointer-events: none;
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.28),
-        rgba(0,0,0,0.28) 2px,
-        rgba(0,0,0,0.0) 3px
-      );
-      mix-blend-mode: multiply;
-    }
-
-    .main-crt-label {
-      margin-top: 6px;
-      font-size: 11px;
-      display: flex;
-      justify-content: space-between;
-      color: #aaffdd;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .main-crt-label span:last-child {
-      font-family: "Courier New", monospace;
-      font-size: 10px;
-      color: #77ffbb;
-    }
-
-    /* CRT WALL */
-    .wall-title {
-      font-size: 11px;
-      margin: 8px 0 4px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #66ffaa;
-    }
-
-    .crt-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .crt-tile {
-      position: relative;
-      background: radial-gradient(circle at top left, #303050, #050509 70%);
-      border-radius: 8px 8px 4px 4px;
-      padding: 4px;
-      border: 2px solid #222f22;
-      box-shadow: 0 0 6px #000000;
-      cursor: pointer;
-      transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, border-color 0.08s;
-    }
-
-    .crt-tile:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 12px #2aff88;
-      border-color: #33ff66;
-    }
-
-    .crt-tile.active {
-      box-shadow: 0 0 16px #33ff66;
-      border-color: #66ffcc;
-    }
-
-    .crt-inner-frame {
-      position: relative;
-      width: 100%;
-      padding-top: 75%; /* 4:3 little CRTs */
-      background: #000000;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid #111111;
-    }
-
-    .crt-thumb {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      image-rendering: pixelated;
-      filter: contrast(1.1) saturate(1.2);
-    }
-
-    .crt-mini-scan {
-      pointer-events: none;
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.32),
-        rgba(0,0,0,0.32) 2px,
-        rgba(0,0,0,0.02) 3px
-      );
-      mix-blend-mode: multiply;
-    }
-
-    .crt-label {
-      margin-top: 3px;
-      font-size: 9px;
-      color: #c9ffd9;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .crt-meta {
-      font-size: 8px;
-      color: #88ffbb;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1px;
-    }
-
-    .crt-meta span {
-      opacity: 0.9;
-    }
-
-    .footer-note {
-      font-size: 9px;
-      color: #77ffbb;
-      border-top: 1px dashed #224422;
-      padding-top: 6px;
-      text-align: center;
-    }
-
-    @media (max-width: 700px) {
       .wrapper {
-        padding: 8px;
+        max-width: 1100px;
+        margin: 0 auto;        padding: 16px;
       }
+
       .page-title {
-        font-size: 18px;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 4px;
+        text-shadow: 0 0 6px #09c13728;
       }
+
+      .page-subtitle {
+        font-size: 11px;
+        text-align: center;
+        color: #88ffbb;
+        margin-bottom: 16px;
+      }
+
+      /* MAIN CRT */
+      .main-crt-wrapper {
+        position: relative;
+        margin-bottom: 18px;
+        border-radius: 14px 14px 6px 6px;
+        border: 4px solid #5a5f62;
+        background: radial-gradient(circle at top, #101030, #010105 70%);
+        box-shadow: 0 0 18px #00ff9988;
+        padding: 10px;
+      }
+
+      .main-crt-bezel {
+        position: relative;
+        background: linear-gradient(#0b000096, #9795959a);
+        border-radius: 10px;
+        padding: 6px;
+        box-shadow: inset 0 0 10px #000000;
+      }
+
+      .main-crt-screen-frame {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 */
+        background: #dad4c9;
+        overflow: hidden;
+        border-radius: 6px;
+        border: 2px solid #91969488;
+      }
+
+      .main-crt-screen {
+        position: absolute;
+        inset: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        background: #555454;
+      }
+
+      .main-scanlines {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        background:
+          to bottom,
+          rgba(0,0,0,0.28),
+          rgba(0,0,0,0.28) 2px,
+          rgba(0,0,0,0.0) 3px
+        );
+        mix-blend-mode: multiply;
+      }
+
+      .main-crt-label {
+        margin-top: 6px;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        color: #aaffdd;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .main-crt-label span:last-child {
+        font-family: "Courier New", monospace;
+        font-size: 10px;
+        color: #77ffbb;
+      }
+
+      /* CRT WALL */
+      .wall-title {
+        font-size: 11px;
+        margin: 8px 0 4px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #abb9b2;
+      }
+
       .crt-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin-bottom: 18px;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="page-title">OES MULTI-CRT CONTROL ROOM</div>
-    <div class="page-subtitle">
-      Click a monitor below to route a tape to the main screen. Videos hosted on videos.scanlines.xyz.
-    </div>
 
-    <!-- MAIN CRT PLAYER -->
-    <div class="main-crt-wrapper">
-      <div class="main-crt-bezel">
-        <div class="main-crt-screen-frame">
-          <iframe
-            id="mainFrame"
-            class="main-crt-screen"
-            src="about:blank"
-            loading="lazy"
-            sandbox="allow-same-origin allow-scripts allow-popups"
-            allowfullscreen
-          ></iframe>
-          <div class="main-scanlines"></div>
-        </div>
-        <div class="main-crt-label">
-          <span id="mainTitle">NO SIGNAL</span>
-          <span id="mainStatus">CH 00 • LINE IN</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- CRT WALL -->
-    <div class="wall-title">Wall of Sets / Select a Tape Channel</div>
-    <div class="crt-grid" id="crtGrid">
-      <!-- CRT 1 -->
-      <div class="crt-tile"
-           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_1"
-           data-title="VSERPI Feedback Etude"
-           data-meta="CH 01 • SP">
-        <div class="crt-inner-frame">
-          <!-- Use a static GIF / PNG / JPG thumbnail here -->
-          <img class="crt-thumb" src="thumb-vserpi-etude.gif" alt="VSERPI Feedback Etude">
-          <div class="crt-mini-scan"></div>
-        </div>
-        <div class="crt-label">VSERPI Feedback Etude</div>
-        <div class="crt-meta">
-          <span>SCANLINES</span>
-          <span>CH 01</span>
-        </div>
-      </div>
-
-      <!-- CRT 2 -->
-      <div class="crt-tile"
-           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_2"
-           data-title="Tape Loop / CRT Orbit"
-           data-meta="CH 02 • EP">
-        <div class="crt-inner-frame">
-          <img class="crt-thumb" src="thumb-crt-orbit.gif" alt="Tape Loop / CRT Orbit">
-          <div class="crt-mini-scan"></div>
-        </div>
-        <div class="crt-label">Tape Loop / CRT Orbit</div>
-        <div class="crt-meta">
-          <span>4-TRACK</span>
-          <span>CH 02</span>
-        </div>
-      </div>
-
-      <!-- CRT 3 -->
-      <div class="crt-tile"
-           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_3"
-           data-title="Composite Snow Studies"
-           data-meta="CH 03 • LP">
-        <div class="crt-inner-frame">
-          <img class="crt-thumb" src="thumb-composite-snow.gif" alt="Composite Snow Studies">
-          <div class="crt-mini-scan"></div>
-        </div>
-        <div class="crt-label">Composite Snow Studies</div>
-        <div class="crt-meta">
-          <span>NOISE FLOOR</span>
-          <span>CH 03</span>
-        </div>
-      </div>
-
-      <!-- CRT 4 -->
-      <div class="crt-tile"
-           data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_4"
-           data-title="VSERPI / Audio Reactive"
-           data-meta="CH 04 • LIVE">
-        <div class="crt-inner-frame">
-          <img class="crt-thumb" src="thumb-audio-reactive.gif" alt="VSERPI / Audio Reactive">
-          <div class="crt-mini-scan"></div>
-        </div>
-        <div class="crt-label">VSERPI / Audio Reactive</div>
-        <div class="crt-meta">
-          <span>LIVE MIX</span>
-          <span>CH 04</span>
-        </div>
-      </div>
-
-      <!-- Add more CRT tiles as needed using the same pattern -->
-    </div>
-
-    <div class="footer-note">
-      Tip: you can use animated GIF static or low-res thumbnails here so it still feels alive<br>
-      even when nothing is playing on the main CRT.
-    </div>
-  </div>
-
-  <script>
-    const mainFrame = document.getElementById('mainFrame');
-    const mainTitle = document.getElementById('mainTitle');
-    const mainStatus = document.getElementById('mainStatus');
-    const crtGrid = document.getElementById('crtGrid');
-    const tiles = Array.from(document.querySelectorAll('.crt-tile'));
-
-    function setActiveTile(tile) {
-      tiles.forEach(t => t.classList.remove('active'));
-      if (tile) tile.classList.add('active');
-    }
-
-    function routeToMain(tile) {
-      const url = tile.getAttribute('data-video-url');
-      const title = tile.getAttribute('data-title') || 'Untitled';
-      const meta = tile.getAttribute('data-meta') || '';
-
-      if (!url) return;
-
-      mainFrame.src = url;
-      mainTitle.textContent = title;
-      mainStatus.textContent = meta || 'PLAYING';
-
-      setActiveTile(tile);
-    }
-
-    crtGrid.addEventListener('click', function (event) {
-      const tile = event.target.closest('.crt-tile');
-      if (!tile) return;
-      routeToMain(tile);
-    });
-
-    // Optionally: auto-load the first CRT on page load
-    window.addEventListener('DOMContentLoaded', function () {
-      if (tiles.length > 0) {
-        routeToMain(tiles[0]);
+      .crt-tile {
+        position: relative;
+        background: radial-gradient(circle at top left, #303050, #050509 70%);
+        border-radius: 8px 8px 4px 4px;
+        padding: 4px;
+        border: 2px solid #222f22;
+        box-shadow: 0 0 6px #000000;
+        cursor: grab;
+        transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, border-color 0.08s;
       }
-    });
-  </script>
-</body>
-</html>
- <footer>
-    <p>&copy; 2025 – Otorlymern Electrical Systems</p>
-    <div class="footer-badges">
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb"></a>
-      <img src="/images/Untitled-removebg-preview.png" class="footer-badges">
-      <img src="/images/worldwideweb_badge.gif" class="footer-badges">
-      <img src="/images/OESCirclelogo1.png" class="footer-badges">
-<a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb"></a>
+
+      .crt-tile:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 12px #2aff88;
+        border-color: #969896;
+      }
+
+      .crt-tile.active {
+        box-shadow: 0 0 16px #33ff66;
+        border-color: #66ffcc;
+      }
+
+      .crt-inner-frame {
+        position: relative;
+        width: 100%;
+        padding-top: 75%; /* 4:3 little CRTs */
+        background: #b56e6e;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid #111111;
+      }
+
+      .crt-thumb {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        image-rendering: pixelated;
+        filter: contrast(1.1) saturate(1.2);
+      }
+
+      .crt-mini-scan {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.926),
+          rgba(0,0,0,0.32) 2px,
+          rgba(0,0,0,0.02) 3px
+        );
+        mix-blend-mode: overlay;
+      }
+
+      .crt-label {
+        margin-top: 3px;
+        font-size: 9px;
+        color: #7eb58f;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .crt-meta {
+        font-size: 8px;
+        color: #88ffbb;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1px;
+      }
+
+      .crt-meta span {
+        opacity: 0.9;
+      }
+
+      .footer-note {
+        font-size: 9px;
+        color: #597616;
+        border-top: 1px dashed #224422;
+        padding-top: 6px;
+        text-align: center;
+      }
+
+      @media (max-width: 700px) {
+        .wrapper {
+          padding: 8px;
+        }
+        .page-title {
+          font-size: 18px;
+        }
+        .crt-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="page-title">OES MULTI-CRT CONTROL ROOM</div>
+      <div class="page-subtitle">
+        Click a monitor below to route a tape to the main screen. Videos hosted
+        on videos.scanlines.xyz.
+      </div>
+
+      <!-- MAIN CRT PLAYER -->
+      <div class="main-crt-wrapper">
+        <div class="main-crt-bezel">
+          <div class="main-crt-screen-frame">
+            <iframe
+              id="mainFrame"
+              class="main-crt-screen"
+              src="about:blank"
+              loading="lazy"
+              sandbox="allow-same-origin allow-scripts allow-popups"
+              allowfullscreen
+            ></iframe>
+            <div class="main-scanlines"></div>
+          </div>
+          <div class="main-crt-label">
+            <span id="mainTitle">NO SIGNAL</span>
+            <span id="mainStatus">CH 00 • LINE IN</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CRT WALL -->
+      <div class="wall-title">Wall of Sets / Select a Tape Channel</div>
+      <div class="crt-grid" id="crtGrid">
+        <!-- CRT 1 -->
+        <div
+          class="crt-tile"
+          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_1"
+          data-title="VSERPI Feedback Etude"
+          data-meta="CH 01 • SP"
+        >
+          <div class="crt-inner-frame">
+            <!-- Use a static GIF / PNG / JPG thumbnail here -->
+            <img
+              class="crt-thumb"
+              src="thumb-vserpi-etude.gif"
+              alt="VSERPI Feedback Etude"
+            />
+            <div class="crt-mini-scan"></div>
+          </div>
+          <div class="crt-label">VSERPI Feedback Etude</div>
+          <div class="crt-meta">
+            <span>SCANLINES</span>
+            <span>CH 01</span>
+          </div>
+        </div>
+
+        <!-- CRT 2 -->
+        <div
+          class="crt-tile"
+          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_2"
+          data-title="Tape Loop / CRT Orbit"
+          data-meta="CH 02 • EP"
+        >
+          <div class="crt-inner-frame">
+            <img
+              class="crt-thumb"
+              src="thumb-crt-orbit.gif"
+              alt="Tape Loop / CRT Orbit"
+            />
+            <div class="crt-mini-scan"></div>
+          </div>
+          <div class="crt-label">Tape Loop / CRT Orbit</div>
+          <div class="crt-meta">
+            <span>4-TRACK</span>
+            <span>CH 02</span>
+          </div>
+        </div>
+
+        <!-- CRT 3 -->
+        <div
+          class="crt-tile"
+          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_3"
+          data-title="Composite Snow Studies"
+          data-meta="CH 03 • LP"
+        >
+          <div class="crt-inner-frame">
+            <img
+              class="crt-thumb"
+              src="thumb-composite-snow.gif"
+              alt="Composite Snow Studies"
+            />
+            <div class="crt-mini-scan"></div>
+          </div>
+          <div class="crt-label">Composite Snow Studies</div>
+          <div class="crt-meta">
+            <span>NOISE FLOOR</span>
+            <span>CH 03</span>
+          </div>
+        </div>
+
+        <!-- CRT 4 -->
+        <div
+          class="crt-tile"
+          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_4"
+          data-title="VSERPI / Audio Reactive"
+          data-meta="CH 04 • LIVE"
+        >
+          <div class="crt-inner-frame">
+            <img
+              class="crt-thumb"
+              src="thumb-audio-reactive.gif"
+              alt="VSERPI / Audio Reactive"
+            />
+            <div class="crt-mini-scan"></div>
+          </div>
+          <div class="crt-label">VSERPI / Audio Reactive</div>
+          <div class="crt-meta">
+            <span>LIVE MIX</span>
+            <span>CH 04</span>
+          </div>
+        </div>
+
+        <!-- Add more CRT tiles as needed using the same pattern -->
+      </div>
+
+      <div class="footer-note">
+        Tip: you can use animated GIF static or low-res thumbnails here so it
+        still feels alive<br />
+        even when nothing is playing on the main CRT.
+      </div>
     </div>
-  </footer>
-</body>
+
+    <script>
+      const mainFrame = document.getElementById("mainFrame");
+      const mainTitle = document.getElementById("mainTitle");
+      const mainStatus = document.getElementById("mainStatus");
+      const crtGrid = document.getElementById("crtGrid");
+      const tiles = Array.from(document.querySelectorAll(".crt-tile"));
+
+      function setActiveTile(tile) {
+        tiles.forEach((t) => t.classList.remove("active"));
+        if (tile) tile.classList.add("active");
+      }
+
+      function routeToMain(tile) {
+        const url = tile.getAttribute("data-video-url");
+        const title = tile.getAttribute("data-title") || "Untitled";
+        const meta = tile.getAttribute("data-meta") || "";
+
+        if (!url) return;
+
+        mainFrame.src = url;
+        mainTitle.textContent = title;
+        mainStatus.textContent = meta || "PLAYING";
+
+        setActiveTile(tile);
+      }
+
+      crtGrid.addEventListener("click", function (event) {
+        const tile = event.target.closest(".crt-tile");
+        if (!tile) return;
+        routeToMain(tile);
+      });
+
+      // Optionally: auto-load the first CRT on page load
+      window.addEventListener("DOMContentLoaded", function () {
+        if (tiles.length > 0) {
+          routeToMain(tiles[0]);
+        }
+      });
+    </script>
+    <footer>
+      <p>&copy; 2025 – Otorlymern Electrical Systems</p>
+      <div class="footer-badges">
+        <a href="https://reverb.com/shop/otorlymern-electrical"
+          ><img
+            src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+            alt="Shop My Store on Reverb"
+        /></a>
+        <img src="/images/worldwideweb_badge.gif" class="footer-badges" />
+        <a href="https://reverb.com/shop/otorlymern-electrical"
+          ><img
+            src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+            alt="Shop My Store on Reverb"
+        /></a>
+      </div>
+    </footer>
+  </body>
 </html>
