@@ -113,6 +113,23 @@ body.vhs-library .nav-bar a:hover {
   border-radius: 18px;
   padding: 1.2rem;
   box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.45), 0 16px 46px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.vhs-logo-bg {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1280px;
+  max-width: 95%;
+  aspect-ratio: 1280 / 654;
+  background: url("/images/VHSlogo.png") center/contain no-repeat;
+  opacity: 0.25;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+  z-index: 1;
 }
 
 .wall-grid {
@@ -121,6 +138,8 @@ body.vhs-library .nav-bar a:hover {
   align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .library-wall-grid {
