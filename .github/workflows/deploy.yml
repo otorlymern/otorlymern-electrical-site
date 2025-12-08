@@ -28,4 +28,3 @@ jobs:
           cleanup: true
           neocities_supporter: true
           dist_dir: .
-          include_dotfiles: false
