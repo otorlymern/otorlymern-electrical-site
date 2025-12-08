@@ -21,11 +21,11 @@ case "$deploy_flag" in
 esac
 
 if [[ "$answer" =~ ^[Yy]$ ]]; then
-  echo "Triggering GitHub workflow: Deploy to Neocities (manual)…"
-  gh workflow run "Deploy to Neocities (manual)" --ref main
+  echo "Triggering GitHub workflow: Deploy to Neocities…"
+  gh workflow run "Deploy to Neocities" --ref main
   echo "✅ Deploy request sent. Check GitHub → Actions for status."
 else
   echo "Skipping deploy. Run:"
-  echo "  gh workflow run \"Deploy to Neocities (manual)\" --ref main"
+  echo "  gh workflow run \"Deploy to Neocities\" --ref main"
   echo "whenever you’re ready to publish."
 fi
