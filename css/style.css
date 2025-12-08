@@ -845,11 +845,11 @@ footer {
 .blob-container {
   position: absolute;
   inset: 0;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: min(75vh, 900px);
   pointer-events: none;
   overflow: hidden;
-  z-index: 3;
+  z-index: 0;
 }
 
 .blob {

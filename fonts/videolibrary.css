@@ -54,7 +54,7 @@ body.vhs-library .nav-bar a:hover {
 
 .vhs-library .blob-container {
   width: 115%;
-  height: 115%;
+  height: min(70vh, 820px);
   left: -7%;
   top: -7%;
   right: auto;

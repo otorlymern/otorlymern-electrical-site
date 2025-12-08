@@ -16,10 +16,13 @@
 }
 
 body.vhs-library {
+  /* VHS logo tiled at roughly 1/6 size over the solid base */
   background:
+    url("/images/VHSlogo.png") repeat,
     radial-gradient(circle at 12% 18%, rgba(255, 217, 166, 0.08), transparent 18%),
     radial-gradient(circle at 78% 22%, rgba(125, 241, 180, 0.06), transparent 18%),
     #2c1606;
+  background-size: 213px auto, auto, auto, auto;
   color: #fcefd8;
   font-family: "VCR OSD Mono", "Lyno-Stan", monospace;
 }
@@ -54,7 +57,7 @@ body.vhs-library .nav-bar a:hover {
 
 .vhs-library .blob-container {
   width: 115%;
-  height: 115%;
+  height: min(70vh, 820px);
   left: -7%;
   top: -7%;
   right: auto;
