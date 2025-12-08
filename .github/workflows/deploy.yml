@@ -17,6 +17,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Strip repo-only files before deploy
+        run: |
+          rm -rf .git .github scripts tmp models oes-site.code-workspace .neocitiesignore
+
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3
         with:
