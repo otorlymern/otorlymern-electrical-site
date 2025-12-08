@@ -1,0 +1,14 @@
+# Skip repo metadata and local tooling
+.git
+.github
+.gitignore
+scripts/
+tmp/
+models/
+oes-site.code-workspace
+.DS_Store
+
+# Editor/IDE cruft
+*.swp
+*.swo
+*.log
