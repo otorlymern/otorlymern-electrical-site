@@ -20,7 +20,12 @@ jobs:
       - name: Strip repo-only files before deploy
         run: |
           rm -rf .git .github scripts tmp models oes-site.code-workspace .neocitiesignore
-          rm -f "solutions/DIY/projects/The Art Of Electronics - Horowitz & Hill.pdf"
+          rm -f \
+            "solutions/DIY/projects/The Art Of Electronics - Horowitz & Hill.pdf" \
+            "solutions/techniques/resources/Curtis_Roads_Composing_Electronic_music.pdf" \
+            "solutions/techniques/resources/oram_anindividual.pdf" \
+            "solutions/techniques/resources/LearnMusicWithSynths1974.pdf" \
+            "solutions/DIY/projects/Music183-184.pdf"
 
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3
