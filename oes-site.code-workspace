@@ -7,19 +7,35 @@
   ],
   "settings": {
     "path-intellisense.mappings": {
-      "/images": "${workspaceRoot}/images",
-      "/css": "${workspaceRoot}/css",
-      "/js": "${workspaceRoot}/js",
-      "/music": "${workspaceRoot}/music",
-      "/video": "${workspaceRoot}/video",
-      "/lit": "${workspaceRoot}/lit",
-      "/diy": "${workspaceRoot}/diy"
+      "/images": "${workspaceFolder}/images",
+      "/css": "${workspaceFolder}/css",
+      "/fonts": "${workspaceFolder}/fonts",
+      "/music": "${workspaceFolder}/music",
+      "/video": "${workspaceFolder}/video",
+      "/solutions": "${workspaceFolder}/solutions",
+      "/services": "${workspaceFolder}/services",
+      "/systems": "${workspaceFolder}/systems",
+      "/scripts": "${workspaceFolder}/scripts",
+      "/diy": "${workspaceFolder}/solutions/DIY"
     },
     "liveServer.settings.port": 5501,
     "liveServer.settings.root": "/",
     "git.confirmSync": false,
     "workbench.externalBrowser": "chrome",
     "workbench.activityBar.iconClickBehavior": "focus",
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.tabSize": 2,
+    "editor.rulers": [
+      120
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/tmp": true
+    },
+    "files.watcherExclude": {
+      "**/.DS_Store": true,
+      "**/tmp/**": true
+    }
   }
 }
