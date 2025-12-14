@@ -1,19 +1,25 @@
 /* Fonts */
 @font-face {
     font-family: 'Lyno-Jean';
-    src: url('Lyno-Jean 2.otf') format('opentype');
+    src: url('../Lyno-Jean 2.otf') format('opentype');
 }
 @font-face {
     font-family: 'Lyno-Stan';
-    src: url('Lyno-Stan 2.otf') format('opentype');
+    src: url('../Lyno-Stan 2.otf') format('opentype');
 }
 @font-face {
     font-family: 'Lyno-Ulys';
-    src: url('Lyno-Ulys 2.otf') format('opentype');
+    src: url('../Lyno-Ulys 2.otf') format('opentype');
 }
 @font-face {
   font-family: 'ecommandfont';
-  src: url('fonts/EnterCommand.ttf') format('truetype');
+  src: url('../fonts/EnterCommand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EnterCommand';
+  src: url('../fonts/EnterCommand.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -130,7 +136,7 @@ nav li:hover .dropdown-content {
 
 body {
   background-color: #fdf6e3;
-  background-image: url("images/solderpen1.png");
+  background-image: url("../images/solderpen1.png");
   background-repeat: repeat;
   background-size: 50px 50px;
   color: #333;
