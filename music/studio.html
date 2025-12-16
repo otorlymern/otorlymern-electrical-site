@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OES Studio – Music</title>
-  <!-- This file lives at /music/studio.html; musicstyle.css is at site root -->
   <link rel="stylesheet" href="/css/musicstyle.css" />
   <style>
 
@@ -32,8 +31,9 @@
 
     .studio-title {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.35rem;
       text-align: center;
       margin: 0;
     }
@@ -42,36 +42,42 @@
       max-width: 220px;
       height: auto;
     }
+
+    .studio-hero-text {
+      display: block;
+      font-size: clamp(2.4rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
   </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <header>
     <nav>
-                                                <ul class="nav-bar">
-                          <li><a href="/index.html">Home</a></li>
-                          <li class="dropdown">
-                            <a href="/systems/systems.html">Systems</a>
-                            <ul class="dropdown-content">
-                              <li><a href="/music/studio.html">OEStudio</a></li>
-                              <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-                              <li><a href="/systems/home-recording.html">Home Recording</a></li>
-                              <li><a href="/video/videolibrary.html">Video Library</a></li>
-                              <li><a href="/solutions/resources/index.html">Resources</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="/services/index.html">Services</a></li>
-                          <li class="dropdown">
-                            <a href="/solutions/index.html">Solutions</a>
-                            <ul class="dropdown-content">
-                              <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
-                              <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-                              <li><a href="/solutions/DIY/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
-                              <li><a href="/solutions/DIY/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
-                              <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
-                            </ul>
-                          </li>
-                        </ul>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/systems/systems.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown">
+          <a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
   </header>
 <!--Floating Images-->
@@ -86,8 +92,8 @@
 
   <div class="studio-hero">
     <h1 class="threeD wiggle-title studio-title">
-      <img src="../systems/systemsv4.png" alt="" class="studio-logo"/></h1>
-      <h1 classs="threeD wiggle-title">OES Studio
+      <img src="../systems/systemsv4.png" alt="OES Systems logo" class="studio-logo" />
+      <span class="studio-hero-text">OES Studio</span>
     </h1>
   </div>
 
@@ -110,13 +116,13 @@
       <figcaption>Studio mask</figcaption>
     </figure>
   </div>
-<!-- Gear List -->-->
+<!-- Gear List -->
   <main>
     <section class="music-section">
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/korgaddcover.png" class="header-image" alt="Korg logo" />
-          <span class="title-text">Synthesizers</span>
+          Synthesizers
           <img src="../images/korgaddcover.png" class="header-image" alt="Korg logo" />
         </h2>
         <ul class="gear-list">
@@ -138,7 +144,7 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/koii1.png" class="header-image" alt="sampler animation" />
-          <span class="title-text">Drum Machines / Samplers</span>
+          Drum Machines / Samplers
           <img src="../images/koii1.png" class="header-image" alt="sampler animation" />
         </h2>
         <ul class="gear-list">
@@ -146,14 +152,14 @@
           <li>Tr-606</li>
           <li>Arturia MicroBrute</li>
           <li>Teenage Engineering EP-133</li>
-          <em>Teenage Engineering EP-40<em>Riddim</em></li>
+          <li>Teenage Engineering EP-40 <em>Riddim</em></li>
         </ul>
       </div>
 
       <div class="gear-block">
         <h2 class="highlight">
           <img src="/images/spacestationglamourshot.png" class="header-image" alt="rack gear" />
-          <span class="title-text">Effects Processors</span>
+          Effects Processors
           <img src="/images/spacestationglamourshot.png" class="header-image" alt="rack gear" />
         </h2>
         <ul class="gear-list">
@@ -181,7 +187,7 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/acoustic-guitar-title-img.png" class="header-image" alt="Acoustic instrument icon" />
-          <span class="title-text">Non‑Electronic Music Instruments</span>
+          Non‑Electronic Music Instruments
           <img src="../images/acoustic-guitar-title-img.png" class="header-image" alt="Acoustic instrument icon" />
         </h2>
         <ul class="gear-list">
@@ -199,9 +205,9 @@
 
       <div class="gear-block">
         <h2 class="highlight">
-          <img src="../images/.gif" class="header-image" alt="Percussion clip art" />
-          <span class="title-text">Non‑Electronic Music Percussion Instruments</span>
-          <img src="../images/.gif" class="header-image" alt="Percussion clip art" />
+          <img src="../images/drums8bitclipart.png" class="header-image" alt="Percussion clip art" />
+          Non‑Electronic Music Percussion Instruments
+          <img src="../images/drums8bitclipart.png" class="header-image" alt="Percussion clip art" />
         </h2>
         <ul class="gear-list">
           <li>Hand Painted Halfsize Tambourine</li>
@@ -214,7 +220,7 @@
       <div class="gear-block">
         <h2 class="highlight">
           <img src="../images/Mt4x.png" class="header-image" alt="Mixer illustration" />
-          <span class="title-text">Mixing and Routing</span>
+          Mixing and Routing
           <img src="../images/Mt4x.png" class="header-image" alt="Mixer illustration" />
         </h2>
         <ul class="gear-list">
@@ -245,7 +251,8 @@
 
       <div class="gear-block">
         <h2 class="highlight">
-          <img src="../images/spinningcassette.gif" class="header-image" alt="cassette" />Tape Machines
+          <img src="../images/spinningcassette.gif" class="header-image" alt="cassette" />
+          Tape Machines
           <img src="../images/spinningcassette.gif" class="header-image" alt="cassette" />
         </h2>
 
@@ -287,12 +294,13 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 – Otorlymern Electrical Systems</p>
+    <p>&copy; 2025 – Otorlymern Electrical Systems – OEStudio</p>
     <div class="footer-badges">
-      <a href="https://reverb.com/shop/otorlymern-electrical"><img src="http://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
-      <img src="/images/Untitled-removebg-preview.png" class="footer-badges" alt="badge" />
-      <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="www badge" />
-      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES logo" />
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
+      <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
+      <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
+      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
     </div>
   </footer>
 </body>
