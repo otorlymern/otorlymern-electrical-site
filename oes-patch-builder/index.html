@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patch Notation Builder | Otorlymern Electrical Systems</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./patch-builder.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="/systems/systems.html">Systems</a>
+            <ul class="dropdown-content">
+              <li><a href="/music/studio.html">OEStudio</a></li>
+              <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+              <li><a href="/systems/home-recording.html">Home Recording</a></li>
+              <li><a href="/video/videolibrary.html">Video Library</a></li>
+              <li><a href="/solutions/resources/index.html">Resources</a></li>
+            </ul>
+          </li>
+          <li><a href="/services/index.html">Services</a></li>
+          <li class="dropdown">
+            <a href="/solutions/index.html">Solutions</a>
+            <ul class="dropdown-content">
+              <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+              <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+              <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+              <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
+              <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="patch-builder-page">
+      <section class="title-section">
+        <div class="title-container">
+          <h1 class="threeD wiggle-title">Patch Notation Builder</h1>
+        </div>
+      </section>
+
+      <section class="intro-section">
+        <p class="patch-builder-lede">
+          Drop OE patch icons onto the canvas, drag them into place, and connect outputs to inputs to sketch a patch.
+          When you're ready to share, export a PNG of exactly what you see.
+        </p>
+        <div class="builder-actions">
+          <button class="oe-button" type="button" data-export>Export PNG</button>
+          <button class="oe-button secondary" type="button" data-open-legend>Legend</button>
+          <span class="legend">
+            Click output → input to add a cable. Click a cable to delete. Select a node and press Delete/Backspace to remove.
+          </span>
+        </div>
+      </section>
+
+      <section class="builder-layout">
+        <aside class="palette-panel" aria-label="Icon palette">
+          <h2 class="wiggle">Palette</h2>
+          <p class="canvas-notes">Grouped by sources/modifiers. Icons come from PT_Symbols_SVG.</p>
+          <div data-palette></div>
+        </aside>
+
+        <section class="canvas-panel">
+          <div class="canvas-toolbar">
+            <div>
+              <h2 class="wiggle-slow">Canvas</h2>
+              <p class="canvas-notes">
+                Drag nodes to reposition. Cables update automatically.
+              </p>
+            </div>
+          </div>
+          <div class="canvas-wrapper" data-canvas-wrapper>
+            <svg id="patch-canvas" role="img" aria-label="Patch canvas">
+              <g id="cable-layer"></g>
+              <g id="node-layer"></g>
+            </svg>
+          </div>
+          <p class="status-line" data-status>Loading icons…</p>
+        </section>
+      </section>
+    </main>
+
+    <div class="retro-overlay" id="legendOverlay" hidden>
+      <div
+        class="retro-window"
+        id="legendWindow"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="legendTitle"
+      >
+        <div class="retro-titlebar" id="legendTitlebar">
+          <div class="retro-title-left">
+            <span class="retro-appicon" aria-hidden="true"></span>
+            <span class="retro-title" id="legendTitle">Patch Icons Legend</span>
+          </div>
+          <div class="retro-title-right">
+            <button class="retro-winbtn retro-min" id="legendMinBtn" type="button" aria-label="Minimize"></button>
+            <button class="retro-winbtn retro-max" id="legendMaxBtn" type="button" aria-label="Maximize"></button>
+            <button class="retro-winbtn retro-close" id="legendCloseBtn" type="button" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="retro-menubar">
+          <span>File</span>
+          <span>Edit</span>
+          <span>View</span>
+          <span>Favorites</span>
+          <span>Tools</span>
+          <span>Help</span>
+        </div>
+
+        <div class="retro-toolbar">
+          <button class="retro-toolbtn" type="button">Back</button>
+          <button class="retro-toolbtn" type="button">Forward</button>
+          <div class="retro-sep" aria-hidden="true"></div>
+          <span class="retro-label">Address</span>
+          <input class="retro-address" type="text" value="PT_Symbols_SVG" readonly />
+        </div>
+
+        <div class="retro-body">
+          <aside class="retro-sidebar">
+            <div class="retro-pane-title">Folders</div>
+            <div class="retro-tree" id="legendTree"></div>
+            <div class="retro-note">
+              Browse the patch symbol set used in the builder. Click a folder to see its icons.
+            </div>
+          </aside>
+
+          <div class="retro-content">
+            <div class="retro-content-header">
+              <div class="retro-breadcrumb" id="legendBreadcrumb">PT_Symbols_SVG</div>
+              <div class="retro-count" id="legendCount">0 items</div>
+            </div>
+            <div class="retro-grid" id="legendGrid">
+              <div class="retro-loading">Loading symbols…</div>
+            </div>
+            <div class="retro-statusbar">
+              <span id="legendStatusLeft">Ready</span>
+              <span id="legendStatusRight">Explorer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="retro-taskbtn" id="legendTaskBtn" type="button" hidden>Legend</button>
+
+    <script src="./patch-builder.js" type="module"></script>
+  </body>
+</html>

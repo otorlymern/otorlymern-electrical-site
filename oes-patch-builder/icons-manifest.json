@@ -1,0 +1,445 @@
+{
+  "generatedAt": "2025-12-31T19:03:41.448Z",
+  "categories": [
+    {
+      "id": "audio-sources",
+      "label": "Audio Sources",
+      "icons": [
+        {
+          "file": "audio-src.svg",
+          "path": "PT_Symbols_SVG/audio-sources/audio-src.svg"
+        },
+        {
+          "file": "granular-synth.svg",
+          "path": "PT_Symbols_SVG/audio-sources/granular-synth.svg"
+        },
+        {
+          "file": "microphone-input.svg",
+          "path": "PT_Symbols_SVG/audio-sources/microphone-input.svg"
+        },
+        {
+          "file": "noise.svg",
+          "path": "PT_Symbols_SVG/audio-sources/noise.svg"
+        },
+        {
+          "file": "physical-mod-generic.svg",
+          "path": "PT_Symbols_SVG/audio-sources/physical-mod-generic.svg"
+        },
+        {
+          "file": "physical-mod-membrane.svg",
+          "path": "PT_Symbols_SVG/audio-sources/physical-mod-membrane.svg"
+        },
+        {
+          "file": "physical-mod-pipe.svg",
+          "path": "PT_Symbols_SVG/audio-sources/physical-mod-pipe.svg"
+        },
+        {
+          "file": "physical-mod-string.svg",
+          "path": "PT_Symbols_SVG/audio-sources/physical-mod-string.svg"
+        },
+        {
+          "file": "sample-player.svg",
+          "path": "PT_Symbols_SVG/audio-sources/sample-player.svg"
+        },
+        {
+          "file": "sample-rec.svg",
+          "path": "PT_Symbols_SVG/audio-sources/sample-rec.svg"
+        },
+        {
+          "file": "speech-synthesis.svg",
+          "path": "PT_Symbols_SVG/audio-sources/speech-synthesis.svg"
+        },
+        {
+          "file": "vco-pwm.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-pwm.svg"
+        },
+        {
+          "file": "vco-ramp.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-ramp.svg"
+        },
+        {
+          "file": "vco-saw.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-saw.svg"
+        },
+        {
+          "file": "vco-sine.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-sine.svg"
+        },
+        {
+          "file": "vco-square.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-square.svg"
+        },
+        {
+          "file": "vco-triangle.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-triangle.svg"
+        },
+        {
+          "file": "vco-wavetable.svg",
+          "path": "PT_Symbols_SVG/audio-sources/vco-wavetable.svg"
+        }
+      ]
+    },
+    {
+      "id": "audio-modifiers",
+      "label": "Audio Modifiers",
+      "icons": [
+        {
+          "file": "attenuator.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/attenuator.svg"
+        },
+        {
+          "file": "audio-processor-generic.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/audio-processor-generic.svg"
+        },
+        {
+          "file": "chorus.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/chorus.svg"
+        },
+        {
+          "file": "clipper.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/clipper.svg"
+        },
+        {
+          "file": "crossfader.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/crossfader.svg"
+        },
+        {
+          "file": "delay.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/delay.svg"
+        },
+        {
+          "file": "inverter.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/inverter.svg"
+        },
+        {
+          "file": "lpg.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/lpg.svg"
+        },
+        {
+          "file": "mixer-inverting.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/mixer-inverting.svg"
+        },
+        {
+          "file": "mixer.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/mixer.svg"
+        },
+        {
+          "file": "phase-shifter.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/phase-shifter.svg"
+        },
+        {
+          "file": "rectifier-full.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/rectifier-full.svg"
+        },
+        {
+          "file": "rectifier-half.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/rectifier-half.svg"
+        },
+        {
+          "file": "resonator.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/resonator.svg"
+        },
+        {
+          "file": "reverb.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/reverb.svg"
+        },
+        {
+          "file": "ringmod.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/ringmod.svg"
+        },
+        {
+          "file": "switch.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/switch.svg"
+        },
+        {
+          "file": "vca.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vca.svg"
+        },
+        {
+          "file": "vcf-bandpass.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-bandpass.svg"
+        },
+        {
+          "file": "vcf-comb.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-comb.svg"
+        },
+        {
+          "file": "vcf-highpass-res.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-highpass-res.svg"
+        },
+        {
+          "file": "vcf-highpass.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-highpass.svg"
+        },
+        {
+          "file": "vcf-lowpass-res.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-lowpass-res.svg"
+        },
+        {
+          "file": "vcf-lowpass.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-lowpass.svg"
+        },
+        {
+          "file": "vcf-notch.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/vcf-notch.svg"
+        },
+        {
+          "file": "wavefolder.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/wavefolder.svg"
+        },
+        {
+          "file": "waveshaper.svg",
+          "path": "PT_Symbols_SVG/audio-modifiers/waveshaper.svg"
+        }
+      ]
+    },
+    {
+      "id": "cv-sources",
+      "label": "CV Sources",
+      "icons": [
+        {
+          "file": "bias-voltage.svg",
+          "path": "PT_Symbols_SVG/cv-sources/bias-voltage.svg"
+        },
+        {
+          "file": "cv-recorder.svg",
+          "path": "PT_Symbols_SVG/cv-sources/cv-recorder.svg"
+        },
+        {
+          "file": "cv-src-generic.svg",
+          "path": "PT_Symbols_SVG/cv-sources/cv-src-generic.svg"
+        },
+        {
+          "file": "env-ad-loop.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-ad-loop.svg"
+        },
+        {
+          "file": "env-ad.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-ad.svg"
+        },
+        {
+          "file": "env-adsr-loop.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-adsr-loop.svg"
+        },
+        {
+          "file": "env-adsr.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-adsr.svg"
+        },
+        {
+          "file": "env-ahdsr-loop.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-ahdsr-loop.svg"
+        },
+        {
+          "file": "env-ahdsr.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-ahdsr.svg"
+        },
+        {
+          "file": "env-ar-loop.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-ar-loop.svg"
+        },
+        {
+          "file": "env-ar.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-ar.svg"
+        },
+        {
+          "file": "env-dadsr-loop.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-dadsr-loop.svg"
+        },
+        {
+          "file": "env-dasdr.svg",
+          "path": "PT_Symbols_SVG/cv-sources/env-dasdr.svg"
+        },
+        {
+          "file": "envelope-follower.svg",
+          "path": "PT_Symbols_SVG/cv-sources/envelope-follower.svg"
+        },
+        {
+          "file": "keyboard-ctrl.svg",
+          "path": "PT_Symbols_SVG/cv-sources/keyboard-ctrl.svg"
+        },
+        {
+          "file": "lfo-bpm-saw.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-bpm-saw.svg"
+        },
+        {
+          "file": "lfo-bpm-sine.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-bpm-sine.svg"
+        },
+        {
+          "file": "lfo-bpm-square.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-bpm-square.svg"
+        },
+        {
+          "file": "lfo-bpm-triangle.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-bpm-triangle.svg"
+        },
+        {
+          "file": "lfo-reset-sync.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-reset-sync.svg"
+        },
+        {
+          "file": "lfo-saw.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-saw.svg"
+        },
+        {
+          "file": "lfo-sine.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-sine.svg"
+        },
+        {
+          "file": "lfo-square.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-square.svg"
+        },
+        {
+          "file": "lfo-triangle.svg",
+          "path": "PT_Symbols_SVG/cv-sources/lfo-triangle.svg"
+        },
+        {
+          "file": "master-clock.svg",
+          "path": "PT_Symbols_SVG/cv-sources/master-clock.svg"
+        },
+        {
+          "file": "random-smooth.svg",
+          "path": "PT_Symbols_SVG/cv-sources/random-smooth.svg"
+        },
+        {
+          "file": "random-stepped.svg",
+          "path": "PT_Symbols_SVG/cv-sources/random-stepped.svg"
+        },
+        {
+          "file": "seq-cv-gate.svg",
+          "path": "PT_Symbols_SVG/cv-sources/seq-cv-gate.svg"
+        },
+        {
+          "file": "touch-ctrl.svg",
+          "path": "PT_Symbols_SVG/cv-sources/touch-ctrl.svg"
+        },
+        {
+          "file": "trigger-pattern-generator.svg",
+          "path": "PT_Symbols_SVG/cv-sources/trigger-pattern-generator.svg"
+        },
+        {
+          "file": "voltage-slider.svg",
+          "path": "PT_Symbols_SVG/cv-sources/voltage-slider.svg"
+        }
+      ]
+    },
+    {
+      "id": "cv-modifiers",
+      "label": "CV Modifiers",
+      "icons": [
+        {
+          "file": "buffered-multiple.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/buffered-multiple.svg"
+        },
+        {
+          "file": "clock-divider.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/clock-divider.svg"
+        },
+        {
+          "file": "clock-multiplier.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/clock-multiplier.svg"
+        },
+        {
+          "file": "comparator.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/comparator.svg"
+        },
+        {
+          "file": "cv-attenuator.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-attenuator.svg"
+        },
+        {
+          "file": "cv-attenuverter.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-attenuverter.svg"
+        },
+        {
+          "file": "cv-inverter.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-inverter.svg"
+        },
+        {
+          "file": "cv-matrix-mixer.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-matrix-mixer.svg"
+        },
+        {
+          "file": "cv-mixer-attenuverting.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-mixer-attenuverting.svg"
+        },
+        {
+          "file": "cv-mixer.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-mixer.svg"
+        },
+        {
+          "file": "cv-mod-generic.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-mod-generic.svg"
+        },
+        {
+          "file": "cv-rectifier-full.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-rectifier-full.svg"
+        },
+        {
+          "file": "cv-rectifier-half.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-rectifier-half.svg"
+        },
+        {
+          "file": "cv-switch.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-switch.svg"
+        },
+        {
+          "file": "cv-utility-mixer.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/cv-utility-mixer.svg"
+        },
+        {
+          "file": "gate-delay.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/gate-delay.svg"
+        },
+        {
+          "file": "logic-and.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-and.svg"
+        },
+        {
+          "file": "logic-nand.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-nand.svg"
+        },
+        {
+          "file": "logic-nor.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-nor.svg"
+        },
+        {
+          "file": "logic-not.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-not.svg"
+        },
+        {
+          "file": "logic-or.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-or.svg"
+        },
+        {
+          "file": "logic-xnor.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-xnor.svg"
+        },
+        {
+          "file": "logic-xor.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/logic-xor.svg"
+        },
+        {
+          "file": "precision-adder.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/precision-adder.svg"
+        },
+        {
+          "file": "quantizer.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/quantizer.svg"
+        },
+        {
+          "file": "sample-and-hold.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/sample-and-hold.svg"
+        },
+        {
+          "file": "slew-limiter.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/slew-limiter.svg"
+        },
+        {
+          "file": "vca-dc.svg",
+          "path": "PT_Symbols_SVG/cv-modifiers/vca-dc.svg"
+        }
+      ]
+    }
+  ]
+}
