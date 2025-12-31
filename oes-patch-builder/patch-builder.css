@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "ms-w98-ui-main";
+  src: url("../fonts/ms-w98-ui-main/MSW98UI-Regular.woff2") format("woff2"),
+    url("../fonts/ms-w98-ui-main/MSW98UI-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ms-w98-ui-main";
+  src: url("../fonts/ms-w98-ui-main/MSW98UI-Bold.woff2") format("woff2"),
+    url("../fonts/ms-w98-ui-main/MSW98UI-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.patch-builder-page,
+.builder-actions,
+.palette-panel,
+.canvas-panel {
+  font-family: "ms-w98-ui-main", Arial, sans-serif;
+}
+
+body {
+  font-family: "ms-w98-ui-main", Arial, sans-serif;
+}
+
 .patch-builder-page {
   max-width: 1400px;
   margin: 0 auto;
@@ -38,7 +67,7 @@
 
 .palette-group h3 {
   margin: 0 0 0.2rem;
-  font-family: "Lyno-Jean", sans-serif;
+  font-family: "ms-w98-ui-main", sans-serif;
 }
 
 .palette-hint {
@@ -112,7 +141,7 @@
   border: 2px solid #1376d8;
   border-radius: 999px;
   padding: 0.55rem 1.2rem;
-  font-family: "Lyno-Stan", sans-serif;
+  font-family: "ms-w98-ui-main", sans-serif;
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.12);
@@ -127,7 +156,7 @@
 
 .oe-button.secondary {
   background: #fffef8;
-  color: #3d1c00;
+  color: #1376d8;
   border-color: rgba(44, 21, 0, 0.25);
 }
 
@@ -148,9 +177,9 @@
 }
 
 .status-line {
-  margin: 0.6rem 0 0;
+  margin: 0.6rem 00;
   font-size: 0.95rem;
-  color: #1376d8;
+  color: #0a4a6a;
 }
 
 .patch-node {
@@ -159,11 +188,11 @@
 }
 
 .patch-node:hover {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 4px 8px rgba(19, 18, 18, 0.727));
 }
 
 .patch-node.is-selected .node-label {
-  fill: #f9bc42;
+  fill: #1376d8;
   font-weight: 700;
 }
 
@@ -183,7 +212,7 @@
 }
 
 .port.pending {
-  stroke: #d94e4e;
+  stroke: #1376d8;
   stroke-width: 2.2;
 }
 
@@ -194,7 +223,7 @@
 .legend {
   font-size: 0.9rem;
   margin: 0.5rem 0 0;
-  color: #f9bc42;
+  color: #42c8f9;
 }
 
 @media (max-width: 960px) {
@@ -205,4 +234,358 @@
   .palette-panel {
     position: static;
   }
+}
+
+/* ===== Retro Legend Window (Win98 gray/teal) ===== */
+
+
+.retro-overlay,
+.retro-window,
+.retro-taskbtn {
+  font-family: "ms-w98-ui-main";
+}
+
+.retro-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 6vh;
+}
+
+.retro-window {
+  position: absolute;
+  left: 8vw;
+  top: 10vh;
+  width: min(980px, 86vw);
+  height: min(620px, 78vh);
+  background: #d4d0c8;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  border: 2px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+}
+
+.retro-titlebar {
+  height: 30px;
+  background: linear-gradient(90deg, #0a4a6a, #19ade2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px 0 8px;
+  user-select: none;
+  cursor: grab;
+}
+
+.retro-title-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.retro-appicon {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.retro-title {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.retro-title-right {
+  display: flex;
+  gap: 4px;
+}
+
+.retro-winbtn {
+  width: 18px;
+  height: 18px;
+  background: #d4d0c8;
+  border: 1px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.retro-winbtn:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.retro-min::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 2px;
+  background: #000;
+}
+
+.retro-max::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 2px solid #000;
+  background: transparent;
+}
+
+.retro-close::before {
+  content: "×";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #000;
+  transform: translateY(-1px);
+}
+
+.retro-menubar {
+  height: 24px;
+  background: #d4d0c8;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.retro-toolbar {
+  height: 34px;
+  background: #d4d0c8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #808080;
+}
+
+.retro-toolbtn {
+  padding: 4px 10px;
+  background: #d4d0c8;
+  border: 1px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.retro-toolbtn:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.retro-sep {
+  width: 1px;
+  height: 18px;
+  background: #808080;
+  margin: 0 6px;
+}
+
+.retro-label {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.retro-address {
+  flex: 1;
+  height: 22px;
+  background: #fff;
+  border: 1px solid #000;
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.retro-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 0;
+}
+
+.retro-sidebar {
+  background: #c9c6bf;
+  border-right: 1px solid #808080;
+  padding: 10px;
+  overflow: auto;
+}
+
+.retro-pane-title {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.retro-tree {
+  background: #d4d0c8;
+  border: 1px solid #000;
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  padding: 6px;
+  font-size: 12px;
+}
+
+.retro-tree-item {
+  padding: 5px 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.retro-tree-item:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.retro-tree-item.active {
+  background: a#0a4a6a;
+  color: #fff;
+}
+
+.retro-note {
+  font-size: 12px;
+  line-height: 1.25;
+  background: #d4d0c8;
+  border: 1px solid #000;
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.retro-content {
+  background: #fff;
+  border-left: 1px solid #fff;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.retro-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-bottom: 1px solid #cfcfcf;
+  background: #f7f7f7;
+}
+
+.retro-breadcrumb {
+  font-family: ui-monospace, Menlo, monospace;
+}
+
+.retro-count {
+  opacity: 0.75;
+}
+
+.retro-grid {
+  padding: 12px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 14px;
+  align-content: start;
+}
+
+.retro-item {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+  padding: 6px 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.retro-item:hover {
+  border-color: #0a4a6a;
+  background: rgba(10, 74, 106, 0.08);
+}
+
+.retro-icon {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.retro-icon img {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+
+.retro-filename {
+  font-size: 11px;
+  text-align: center;
+  word-break: break-word;
+  line-height: 1.1;
+}
+
+.retro-loading {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.retro-statusbar {
+  height: 24px;
+  background: #d4d0c8;
+  border-top: 1px solid #808080;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.retro-taskbtn {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 10000;
+  padding: 10px 12px;
+  background: #d4d0c8;
+  border: 2px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  cursor: pointer;
 }

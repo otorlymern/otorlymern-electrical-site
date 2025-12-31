@@ -13,6 +13,19 @@ const cableLayer = document.getElementById("cable-layer");
 const nodeLayer = document.getElementById("node-layer");
 const exportButton = document.querySelector("[data-export]");
 const legendOpenButton = document.querySelector("[data-open-legend]");
+const legendOverlay = document.getElementById("legendOverlay");
+const legendWindow = document.getElementById("legendWindow");
+const legendTitlebar = document.getElementById("legendTitlebar");
+const legendCloseBtn = document.getElementById("legendCloseBtn");
+const legendMinBtn = document.getElementById("legendMinBtn");
+const legendMaxBtn = document.getElementById("legendMaxBtn");
+const legendTaskBtn = document.getElementById("legendTaskBtn");
+const legendTree = document.getElementById("legendTree");
+const legendGrid = document.getElementById("legendGrid");
+const legendBreadcrumb = document.getElementById("legendBreadcrumb");
+const legendCount = document.getElementById("legendCount");
+const legendStatusLeft = document.getElementById("legendStatusLeft");
+const legendStatusRight = document.getElementById("legendStatusRight");
 
 const nodes = new Map();
 const connections = [];
@@ -22,6 +35,17 @@ let pendingConnection = null;
 let selectedNodeId = null;
 let dragState = null;
 let manifestData = null;
+let legendManifest = null;
+let legendActiveCategory = null;
+let legendMaximized = false;
+let legendDragState = null;
+
+const LEGEND_CATEGORY_ORDER = [
+  "audio-sources",
+  "audio-modifiers",
+  "cv-sources",
+  "cv-modifiers",
+];
 
 const PORT_PRESETS = {
   "audio-sources": {
@@ -81,7 +105,9 @@ async function init() {
 async function loadManifest() {
   setStatus("Loading icons…");
   try {
-    const response = await fetch("./icons-manifest.json", { cache: "no-cache" });
+    const response = await fetch("./icons-manifest.json", {
+      cache: "no-cache",
+    });
     if (!response.ok) throw new Error("Failed to fetch manifest");
     manifestData = await response.json();
     renderPalette(manifestData.categories || []);
@@ -223,11 +249,7 @@ function addNode(
     const current = nodes.get(id);
     dragState = {
       nodeId: id,
-      offset: offsetFromPointer(
-        event,
-        current?.x ?? x,
-        current?.y ?? y
-      ),
+      offset: offsetFromPointer(event, current?.x ?? x, current?.y ?? y),
     };
     group.setPointerCapture(event.pointerId);
   });
@@ -280,7 +302,10 @@ function buildPortsForNode(group, nodeId, categoryId) {
     circle.setAttribute("r", "6");
     circle.setAttribute("cx", portConfig.x);
     circle.setAttribute("cy", portConfig.y);
-    circle.setAttribute("fill", portConfig.type === "cv" ? "#1c6f8b" : "#7b3f00");
+    circle.setAttribute(
+      "fill",
+      portConfig.type === "cv" ? "#1c6f8b" : "#7b3f00"
+    );
     circle.setAttribute("stroke", "#fff");
     circle.setAttribute("stroke-width", "1.5");
 
@@ -332,7 +357,12 @@ function updateNodePosition(node) {
 
 function handleOutputClick(nodeId, port) {
   clearPendingConnection();
-  pendingConnection = { nodeId, portId: port.id, type: port.type, element: port.element };
+  pendingConnection = {
+    nodeId,
+    portId: port.id,
+    type: port.type,
+    element: port.element,
+  };
   port.element.classList.add("pending");
   setStatus("Output selected. Click a matching input.");
 }
@@ -344,7 +374,11 @@ function handleInputClick(nodeId, port) {
     return;
   }
 
-  addConnection(pendingConnection, { nodeId, portId: port.id, type: port.type });
+  addConnection(pendingConnection, {
+    nodeId,
+    portId: port.id,
+    type: port.type,
+  });
   clearPendingConnection();
 }
 
@@ -496,7 +530,10 @@ async function exportPatchAsPng() {
     height: Math.max(bounds.height + padding * 2, 240),
   };
 
-  clone.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+  clone.setAttribute(
+    "viewBox",
+    `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`
+  );
   clone.setAttribute("width", viewBox.width);
   clone.setAttribute("height", viewBox.height);
 
@@ -601,3 +638,264 @@ function contentBounds() {
 
   return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
 }
+
+/* ===== Legend Overlay (Win98 Explorer style) ===== */
+function formatCategoryLabel(id) {
+  return (id || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+async function ensureLegendManifest() {
+  if (legendManifest) return legendManifest;
+  if (manifestData) {
+    legendManifest = manifestData;
+    return legendManifest;
+  }
+  const res = await fetch("./icons-manifest.json", { cache: "no-cache" });
+  if (!res.ok) throw new Error("Failed to load icons-manifest.json");
+  legendManifest = await res.json();
+  return legendManifest;
+}
+
+function buildLegendTree(categories = []) {
+  if (!legendTree) return;
+  legendTree.innerHTML = "";
+  const orderedIds = LEGEND_CATEGORY_ORDER.filter((id) =>
+    categories.some((c) => c.id === id)
+  );
+  orderedIds.forEach((id) => {
+    const item = document.createElement("div");
+    item.className = "retro-tree-item";
+    item.dataset.cat = id;
+    const label =
+      categories.find((c) => c.id === id)?.label || formatCategoryLabel(id);
+    item.textContent = label;
+    item.addEventListener("pointerdown", (event) => {
+      event.stopPropagation();
+      setLegendActive(id);
+    });
+    legendTree.appendChild(item);
+  });
+}
+
+function setLegendActive(catId) {
+  legendActiveCategory = catId;
+  if (legendTree) {
+    legendTree.querySelectorAll(".retro-tree-item").forEach((el) => {
+      el.classList.toggle("active", el.dataset.cat === catId);
+    });
+  }
+
+  const cat = legendManifest?.categories?.find((c) => c.id === catId);
+  const files = cat?.icons || [];
+  if (legendBreadcrumb) {
+    legendBreadcrumb.textContent = `PT_Symbols_SVG\\${catId}`;
+  }
+  if (legendCount) {
+    legendCount.textContent = `${files.length} items`;
+  }
+  if (legendStatusLeft) {
+    legendStatusLeft.textContent = cat?.label || formatCategoryLabel(catId);
+  }
+  if (legendStatusRight) {
+    legendStatusRight.textContent = "Explorer";
+  }
+
+  renderLegendGrid(files);
+}
+
+function renderLegendGrid(icons = []) {
+  if (!legendGrid) return;
+  legendGrid.innerHTML = "";
+  if (!icons.length) {
+    const empty = document.createElement("div");
+    empty.className = "retro-loading";
+    empty.textContent = "No symbols found.";
+    legendGrid.appendChild(empty);
+    return;
+  }
+
+  icons.forEach((icon) => {
+    const item = document.createElement("div");
+    item.className = "retro-item";
+
+    const iconWrap = document.createElement("div");
+    iconWrap.className = "retro-icon";
+
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.alt = icon.file;
+    img.src = icon.path;
+
+    const label = document.createElement("div");
+    label.className = "retro-filename";
+    label.textContent = icon.file;
+
+    iconWrap.appendChild(img);
+    item.appendChild(iconWrap);
+    item.appendChild(label);
+    legendGrid.appendChild(item);
+  });
+}
+
+async function openLegend() {
+  if (!legendOverlay || !legendWindow) return;
+  legendOverlay.hidden = false;
+  legendWindow.style.display = "flex";
+  if (legendTaskBtn) legendTaskBtn.hidden = true;
+
+  if (!legendManifest) {
+    if (legendGrid) {
+      legendGrid.innerHTML = `<div class="retro-loading">Loading symbols…</div>`;
+    }
+    try {
+      legendManifest = await ensureLegendManifest();
+      buildLegendTree(legendManifest.categories || []);
+      const first =
+        LEGEND_CATEGORY_ORDER.find((id) =>
+          (legendManifest.categories || []).some((c) => c.id === id)
+        ) ||
+        legendManifest.categories?.[0]?.id ||
+        "audio-sources";
+      setLegendActive(first);
+    } catch (error) {
+      console.error(error);
+      if (legendGrid) {
+        legendGrid.innerHTML = `<div class="retro-loading">Failed to load icons-manifest.json</div>`;
+      }
+    }
+  } else {
+    const targetCat =
+      legendActiveCategory ||
+      LEGEND_CATEGORY_ORDER.find((id) =>
+        legendManifest.categories?.some((c) => c.id === id)
+      ) ||
+      legendManifest.categories?.[0]?.id;
+    if (targetCat) setLegendActive(targetCat);
+  }
+}
+
+function closeLegend() {
+  if (!legendOverlay) return;
+  legendOverlay.hidden = true;
+  legendWindow?.style.setProperty("display", "flex");
+}
+
+function minimizeLegend() {
+  if (!legendWindow || !legendOverlay || !legendTaskBtn) return;
+  legendWindow.style.display = "none";
+  legendOverlay.hidden = true;
+  legendTaskBtn.hidden = false;
+}
+
+function restoreLegend() {
+  if (!legendWindow || !legendOverlay || !legendTaskBtn) return;
+  legendWindow.style.display = "flex";
+  legendOverlay.hidden = false;
+  legendTaskBtn.hidden = true;
+}
+
+function toggleLegendMaximize() {
+  if (!legendWindow) return;
+  legendMaximized = !legendMaximized;
+  if (legendMaximized) {
+    legendWindow.dataset.prev = JSON.stringify({
+      left: legendWindow.style.left,
+      top: legendWindow.style.top,
+      width: legendWindow.style.width,
+      height: legendWindow.style.height,
+    });
+    legendWindow.style.left = "2vw";
+    legendWindow.style.top = "3vh";
+    legendWindow.style.width = "96vw";
+    legendWindow.style.height = "92vh";
+  } else {
+    try {
+      const prev = JSON.parse(legendWindow.dataset.prev || "{}") || {};
+      legendWindow.style.left = prev.left || "8vw";
+      legendWindow.style.top = prev.top || "10vh";
+      legendWindow.style.width = prev.width || "";
+      legendWindow.style.height = prev.height || "";
+    } catch {
+      legendWindow.style.left = "8vw";
+      legendWindow.style.top = "10vh";
+      legendWindow.style.width = "";
+      legendWindow.style.height = "";
+    }
+  }
+}
+
+function startLegendDrag(event) {
+  if (!legendWindow || !legendTitlebar) return;
+  if (event.target?.closest?.(".retro-title-right")) return;
+  const rect = legendWindow.getBoundingClientRect();
+  legendDragState = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    left: rect.left,
+    top: rect.top,
+  };
+  legendTitlebar.setPointerCapture(event.pointerId);
+  legendTitlebar.style.cursor = "grabbing";
+}
+
+function moveLegendDrag(event) {
+  if (!legendDragState || event.pointerId !== legendDragState.pointerId) return;
+  const dx = event.clientX - legendDragState.startX;
+  const dy = event.clientY - legendDragState.startY;
+  const newLeft = Math.max(8, legendDragState.left + dx);
+  const newTop = Math.max(8, legendDragState.top + dy);
+  legendWindow.style.left = `${newLeft}px`;
+  legendWindow.style.top = `${newTop}px`;
+}
+
+function endLegendDrag(event) {
+  if (!legendDragState || event.pointerId !== legendDragState.pointerId) return;
+  legendDragState = null;
+  if (legendTitlebar) {
+    legendTitlebar.releasePointerCapture(event.pointerId);
+    legendTitlebar.style.cursor = "grab";
+  }
+}
+
+function bindLegendEvents() {
+  legendOpenButton?.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    openLegend();
+  });
+  legendCloseBtn?.addEventListener("pointerdown", (event) => {
+    event.stopPropagation();
+    closeLegend();
+  });
+  legendMinBtn?.addEventListener("pointerdown", (event) => {
+    event.stopPropagation();
+    minimizeLegend();
+  });
+  legendMaxBtn?.addEventListener("pointerdown", (event) => {
+    event.stopPropagation();
+    toggleLegendMaximize();
+  });
+  legendTaskBtn?.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    restoreLegend();
+  });
+  legendOverlay?.addEventListener("pointerdown", (event) => {
+    if (event.target === legendOverlay) {
+      closeLegend();
+    }
+  });
+  if (legendTitlebar) {
+    legendTitlebar.addEventListener("pointerdown", startLegendDrag);
+    legendTitlebar.addEventListener("pointermove", moveLegendDrag);
+    legendTitlebar.addEventListener("pointerup", endLegendDrag);
+    legendTitlebar.addEventListener("pointercancel", endLegendDrag);
+  }
+  window.addEventListener("keydown", (event) => {
+    if (legendOverlay?.hidden) return;
+    if (event.key === "Escape") {
+      closeLegend();
+    }
+  });
+}
+
+bindLegendEvents();

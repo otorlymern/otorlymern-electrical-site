@@ -16,7 +16,11 @@
             <a href="/systems/systems.html">Systems</a>
             <ul class="dropdown-content">
               <li><a href="/music/studio.html">OEStudio</a></li>
-              <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+              <li>
+                <a href="/systems/rrr.html"
+                  >Repairs, Refurbs &amp; Restorations</a
+                >
+              </li>
               <li><a href="/systems/home-recording.html">Home Recording</a></li>
               <li><a href="/video/videolibrary.html">Video Library</a></li>
               <li><a href="/solutions/resources/index.html">Resources</a></li>
@@ -26,11 +30,27 @@
           <li class="dropdown">
             <a href="/solutions/index.html">Solutions</a>
             <ul class="dropdown-content">
-              <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
-              <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-              <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
-              <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
-              <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+              <li>
+                <a href="/solutions/DIY/projects/index.html"
+                  >DIY Audio and Video</a
+                >
+              </li>
+              <li>
+                <a href="/solutions/DIY/designers/index.html">DIY Pioneers</a>
+              </li>
+              <li>
+                <a href="/solutions/techniques/musictech/index.html"
+                  >Synthesis, Composition and Recording</a
+                >
+              </li>
+              <li>
+                <a href="/solutions/techniques/vidtech/videotechniques.html"
+                  >Analog &amp; Digital Video Manipulation and Synthesis</a
+                >
+              </li>
+              <li>
+                <a href="/solutions/resources/index.html">Links / Resources</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -46,14 +66,20 @@
 
       <section class="intro-section">
         <p class="patch-builder-lede">
-          Drop OE patch icons onto the canvas, drag them into place, and connect outputs to inputs to sketch a patch.
-          When you're ready to share, export a PNG of exactly what you see.
+          Drop OE patch icons onto the canvas, drag them into place, and connect
+          outputs to inputs to sketch a patch. When you're ready to share,
+          export a PNG of exactly what you see.
         </p>
         <div class="builder-actions">
-          <button class="oe-button" type="button" data-export>Export PNG</button>
-          <button class="oe-button secondary" type="button" data-open-legend>Legend</button>
+          <button class="oe-button" type="button" data-export>
+            Export PNG
+          </button>
+          <button class="oe-button secondary" type="button" data-open-legend>
+            Legend
+          </button>
           <span class="legend">
-            Click output → input to add a cable. Click a cable to delete. Select a node and press Delete/Backspace to remove.
+            Click output → input to add a cable. Click a cable to delete. Select
+            a node and press Delete/Backspace to remove.
           </span>
         </div>
       </section>
@@ -61,7 +87,9 @@
       <section class="builder-layout">
         <aside class="palette-panel" aria-label="Icon palette">
           <h2 class="wiggle">Palette</h2>
-          <p class="canvas-notes">Grouped by sources/modifiers. Icons come from PT_Symbols_SVG.</p>
+          <p class="canvas-notes">
+            Grouped by sources/modifiers. Icons come from PT_Symbols_SVG.
+          </p>
           <div data-palette></div>
         </aside>
 
@@ -99,9 +127,24 @@
             <span class="retro-title" id="legendTitle">Patch Icons Legend</span>
           </div>
           <div class="retro-title-right">
-            <button class="retro-winbtn retro-min" id="legendMinBtn" type="button" aria-label="Minimize"></button>
-            <button class="retro-winbtn retro-max" id="legendMaxBtn" type="button" aria-label="Maximize"></button>
-            <button class="retro-winbtn retro-close" id="legendCloseBtn" type="button" aria-label="Close"></button>
+            <button
+              class="retro-winbtn retro-min"
+              id="legendMinBtn"
+              type="button"
+              aria-label="Minimize"
+            ></button>
+            <button
+              class="retro-winbtn retro-max"
+              id="legendMaxBtn"
+              type="button"
+              aria-label="Maximize"
+            ></button>
+            <button
+              class="retro-winbtn retro-close"
+              id="legendCloseBtn"
+              type="button"
+              aria-label="Close"
+            ></button>
           </div>
         </div>
 
@@ -119,7 +162,12 @@
           <button class="retro-toolbtn" type="button">Forward</button>
           <div class="retro-sep" aria-hidden="true"></div>
           <span class="retro-label">Address</span>
-          <input class="retro-address" type="text" value="PT_Symbols_SVG" readonly />
+          <input
+            class="retro-address"
+            type="text"
+            value="PT_Symbols_SVG"
+            readonly
+          />
         </div>
 
         <div class="retro-body">
@@ -127,13 +175,16 @@
             <div class="retro-pane-title">Folders</div>
             <div class="retro-tree" id="legendTree"></div>
             <div class="retro-note">
-              Browse the patch symbol set used in the builder. Click a folder to see its icons.
+              Browse the patch symbol set used in the builder. Click a folder to
+              see its icons.
             </div>
           </aside>
 
           <div class="retro-content">
             <div class="retro-content-header">
-              <div class="retro-breadcrumb" id="legendBreadcrumb">PT_Symbols_SVG</div>
+              <div class="retro-breadcrumb" id="legendBreadcrumb">
+                PT_Symbols_SVG
+              </div>
               <div class="retro-count" id="legendCount">0 items</div>
             </div>
             <div class="retro-grid" id="legendGrid">
@@ -147,7 +198,9 @@
         </div>
       </div>
     </div>
-    <button class="retro-taskbtn" id="legendTaskBtn" type="button" hidden>Legend</button>
+    <button class="retro-taskbtn" id="legendTaskBtn" type="button" hidden>
+      Legend
+    </button>
 
     <script src="./patch-builder.js" type="module"></script>
   </body>
