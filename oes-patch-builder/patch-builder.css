@@ -30,21 +30,29 @@
 .patch-builder-body header nav,
 .patch-builder-body .nav-bar {
   background: #d8c8ff;
-  font-family: "ms-w98-ui-main", Arial, sans-serif !important;
   box-shadow: none !important;
   filter: none !important;
 }
 
 .patch-builder-body .nav-bar a,
 .patch-builder-body .nav-bar span,
-.patch-builder-body .nav-bar .dropdown-content a {
-  background: #d8c8ff;
-  color: #1e1e1e;
-  font-family: "ms-w98-ui-main", Arial, sans-serif !important;
-}
-
+.patch-builder-body .nav-bar .dropdown-content a,
 .patch-builder-body .dropdown-content {
   background: #d8c8ff;
+  color: #1e1e1e;
+}
+.patch-builder-body nav,
+.patch-builder-body .nav-bar,
+.patch-builder-body .nav-bar a,
+.patch-builder-body .nav-bar .dropdown-content a {
+  font-family: "Lyno-Stan", Arial, sans-serif !important;
+}
+
+.patch-builder-body nav,
+.patch-builder-body .nav-bar,
+.patch-builder-body .nav-bar a,
+.patch-builder-body .nav-bar .dropdown-content a {
+  font-family: "Lyno-Stan", Arial, sans-serif !important;
 }
 
 /* Workspace tiling layout: windows stretch to fill empty space */
