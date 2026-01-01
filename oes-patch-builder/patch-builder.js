@@ -5,27 +5,21 @@ const NODE_SIZE = 90;
 const NODE_HALF = NODE_SIZE / 2;
 const PORT_OFFSET = 10;
 
-const paletteContainer = document.querySelector("[data-palette]");
+const workspace = document.querySelector("[data-workspace]");
 const statusEl = document.querySelector("[data-status]");
 const canvasWrapper = document.querySelector("[data-canvas-wrapper]");
 const canvas = document.getElementById("patch-canvas");
 const cableLayer = document.getElementById("cable-layer");
 const nodeLayer = document.getElementById("node-layer");
 const exportButton = document.querySelector("[data-export]");
-const legendOpenButton = document.querySelector("[data-open-legend]");
-const legendOverlay = document.getElementById("legendOverlay");
-const legendWindow = document.getElementById("legendWindow");
-const legendTitlebar = document.getElementById("legendTitlebar");
-const legendCloseBtn = document.getElementById("legendCloseBtn");
-const legendMinBtn = document.getElementById("legendMinBtn");
-const legendMaxBtn = document.getElementById("legendMaxBtn");
-const legendTaskBtn = document.getElementById("legendTaskBtn");
-const legendTree = document.getElementById("legendTree");
-const legendGrid = document.getElementById("legendGrid");
-const legendBreadcrumb = document.getElementById("legendBreadcrumb");
-const legendCount = document.getElementById("legendCount");
-const legendStatusLeft = document.getElementById("legendStatusLeft");
-const legendStatusRight = document.getElementById("legendStatusRight");
+
+// Palette containers are now per-category windows.
+const paletteContainers = new Map(
+  Array.from(document.querySelectorAll("[data-palette]")).map((el) => [
+    el.getAttribute("data-palette"),
+    el,
+  ])
+);
 
 const nodes = new Map();
 const connections = [];
@@ -35,12 +29,12 @@ let pendingConnection = null;
 let selectedNodeId = null;
 let dragState = null;
 let manifestData = null;
-let legendManifest = null;
-let legendActiveCategory = null;
-let legendMaximized = false;
-let legendDragState = null;
 
-const LEGEND_CATEGORY_ORDER = [
+// Window dragging
+let windowDrag = null;
+let topZ = 10;
+
+const CATEGORY_ORDER = [
   "audio-sources",
   "audio-modifiers",
   "cv-sources",
@@ -49,24 +43,32 @@ const LEGEND_CATEGORY_ORDER = [
 
 const PORT_PRESETS = {
   "audio-sources": {
-    inputs: [],
+    inputs: [
+      { type: "cv", x: 0, y: -NODE_HALF - PORT_OFFSET },
+      { type: "audio", x: 0, y: NODE_HALF + PORT_OFFSET },
+    ],
     outputs: [{ type: "audio", x: NODE_HALF + PORT_OFFSET, y: 0 }],
   },
   "cv-sources": {
-    inputs: [],
+    inputs: [
+      { type: "cv", x: 0, y: -NODE_HALF - PORT_OFFSET },
+      { type: "audio", x: 0, y: NODE_HALF + PORT_OFFSET },
+    ],
     outputs: [{ type: "cv", x: NODE_HALF + PORT_OFFSET, y: 0 }],
   },
   "audio-modifiers": {
     inputs: [
-      { type: "audio", x: -NODE_HALF - PORT_OFFSET, y: -8 },
+      { type: "audio", x: -NODE_HALF - PORT_OFFSET, y: -10 },
+      { type: "cv", x: -NODE_HALF - PORT_OFFSET, y: 10 },
       { type: "cv", x: 0, y: -NODE_HALF - PORT_OFFSET },
     ],
-    outputs: [{ type: "audio", x: NODE_HALF + PORT_OFFSET, y: -8 }],
+    outputs: [{ type: "audio", x: NODE_HALF + PORT_OFFSET, y: 0 }],
   },
   "cv-modifiers": {
     inputs: [
-      { type: "cv", x: -NODE_HALF - PORT_OFFSET, y: -16 },
-      { type: "cv", x: -NODE_HALF - PORT_OFFSET, y: 16 },
+      { type: "cv", x: -NODE_HALF - PORT_OFFSET, y: -12 },
+      { type: "cv", x: -NODE_HALF - PORT_OFFSET, y: 12 },
+      { type: "cv", x: 0, y: -NODE_HALF - PORT_OFFSET },
     ],
     outputs: [{ type: "cv", x: NODE_HALF + PORT_OFFSET, y: 0 }],
   },
@@ -75,11 +77,15 @@ const PORT_PRESETS = {
 init();
 
 async function init() {
+  if (!canvas || !workspace) return;
+
   canvas.setAttribute("viewBox", `0 0 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}`);
-  canvas.setAttribute("width", CANVAS_WIDTH);
-  canvas.setAttribute("height", CANVAS_HEIGHT);
+  canvas.removeAttribute("width");
+  canvas.removeAttribute("height");
 
   attachCanvasEvents();
+  initWindowLayout();
+
   await loadManifest();
 
   exportButton?.addEventListener("click", () => {
@@ -92,14 +98,182 @@ async function init() {
   document.addEventListener("keydown", (event) => {
     if (!selectedNodeId) return;
     if (event.key === "Delete" || event.key === "Backspace") {
-      // Avoid clobbering typed input if the user adds form fields later.
       const activeTag = document.activeElement?.tagName;
-      if (activeTag && ["INPUT", "TEXTAREA"].includes(activeTag)) {
-        return;
-      }
+      if (activeTag && ["INPUT", "TEXTAREA"].includes(activeTag)) return;
       removeNode(selectedNodeId);
     }
   });
+}
+
+function attachWindowEvents() {
+  const windows = Array.from(document.querySelectorAll(".w98-window"));
+
+  // close buttons do nothing (per request), but stop drag initiation.
+  windows.forEach((win) => {
+    win.querySelector(".w98-close")?.addEventListener("pointerdown", (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+
+  // drag by titlebar
+  windows.forEach((win) => {
+    const handle = win.querySelector("[data-drag-handle]");
+    if (!handle) return;
+
+    handle.addEventListener("pointerdown", (event) => {
+      if (event.target?.closest?.(".w98-close")) return;
+      event.preventDefault();
+
+      const rect = win.getBoundingClientRect();
+      const wsRect = workspace.getBoundingClientRect();
+
+      windowDrag = {
+        pointerId: event.pointerId,
+        win,
+        wsRect,
+        startX: event.clientX,
+        startY: event.clientY,
+        left: rect.left - wsRect.left,
+        top: rect.top - wsRect.top,
+      };
+
+      topZ += 1;
+      win.style.zIndex = String(topZ);
+
+      handle.setPointerCapture(event.pointerId);
+      handle.style.cursor = "grabbing";
+    });
+
+    handle.addEventListener("pointermove", (event) => {
+      if (!windowDrag || windowDrag.pointerId !== event.pointerId) return;
+      const { win, wsRect } = windowDrag;
+
+      const dx = event.clientX - windowDrag.startX;
+      const dy = event.clientY - windowDrag.startY;
+
+      const nextLeft = windowDrag.left + dx;
+      const nextTop = windowDrag.top + dy;
+
+      const maxLeft = Math.max(0, wsRect.width - win.offsetWidth);
+      const maxTop = Math.max(0, wsRect.height - win.offsetHeight);
+
+      win.style.left = `${clamp(nextLeft, 0, maxLeft)}px`;
+      win.style.top = `${clamp(nextTop, 0, maxTop)}px`;
+    });
+
+    handle.addEventListener("pointerup", (event) => {
+      if (!windowDrag || windowDrag.pointerId !== event.pointerId) return;
+      handle.releasePointerCapture(event.pointerId);
+      handle.style.cursor = "grab";
+
+      const moved = windowDrag.win;
+      windowDrag = null;
+
+      // Keep palette windows "connected" by at least one edge.
+      if (moved?.dataset?.dockGroup === "palette") {
+        ensurePaletteConnectivity(moved);
+      } else if (moved?.dataset?.dockGroup === "canvas") {
+        // optional: keep canvas away from edges slightly
+      }
+    });
+  });
+}
+
+function initWindowLayout() {
+  // Grid layout now controls positioning; no-op.
+  return;
+}
+
+function clampWindowToWorkspace(win) {
+  if (!win) return;
+  const wsRect = workspace.getBoundingClientRect();
+  const left = parseFloat(win.style.left || "0");
+  const top = parseFloat(win.style.top || "0");
+  const maxLeft = Math.max(0, wsRect.width - win.offsetWidth);
+  const maxTop = Math.max(0, wsRect.height - win.offsetHeight);
+  win.style.left = `${clamp(left, 0, maxLeft)}px`;
+  win.style.top = `${clamp(top, 0, maxTop)}px`;
+}
+
+function ensurePaletteConnectivity(movedWin) {
+  const paletteWins = Array.from(
+    document.querySelectorAll('.w98-window[data-dock-group="palette"]')
+  );
+
+  const moved = rectInWorkspace(movedWin);
+  const others = paletteWins.filter((w) => w !== movedWin);
+  if (!others.length) return;
+
+  const wsRect = workspace.getBoundingClientRect();
+  const maxLeft = Math.max(0, wsRect.width - movedWin.offsetWidth);
+  const maxTop = Math.max(0, wsRect.height - movedWin.offsetHeight);
+
+  movedWin.style.left = `${clamp(best.left, 0, maxLeft)}px`;
+  movedWin.style.top = `${clamp(best.top, 0, maxTop)}px`;
+}
+
+function rectInWorkspace(el) {
+  const wsRect = workspace.getBoundingClientRect();
+  const r = el.getBoundingClientRect();
+  return {
+    left: r.left - wsRect.left,
+    top: r.top - wsRect.top,
+    right: r.right - wsRect.left,
+    bottom: r.bottom - wsRect.top,
+    width: r.width,
+    height: r.height,
+  };
+}
+
+function rectsTouch(a, b) {
+  const eps = 3; // pixels
+  const overlapY = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 12;
+  const overlapX = Math.min(a.right, b.right) - Math.max(a.left, b.left) > 12;
+
+  const touchLeft = Math.abs(a.left - b.right) <= eps && overlapY;
+  const touchRight = Math.abs(a.right - b.left) <= eps && overlapY;
+  const touchTop = Math.abs(a.top - b.bottom) <= eps && overlapX;
+  const touchBottom = Math.abs(a.bottom - b.top) <= eps && overlapX;
+
+  return touchLeft || touchRight || touchTop || touchBottom;
+}
+
+function bestSnap(moved, target) {
+  // Find smallest translation that makes moved touch target by an edge,
+  // keeping the moved window's current size.
+  const candidates = [];
+
+  // Snap moved's left to target's right
+  candidates.push({
+    left: target.right,
+    top: clamp(moved.top, target.top - moved.height + 24, target.bottom - 24),
+    dist: Math.abs(moved.left - target.right),
+  });
+
+  // Snap moved's right to target's left
+  candidates.push({
+    left: target.left - moved.width,
+    top: clamp(moved.top, target.top - moved.height + 24, target.bottom - 24),
+    dist: Math.abs(moved.right - target.left),
+  });
+
+  // Snap moved's top to target's bottom
+  candidates.push({
+    left: clamp(moved.left, target.left - moved.width + 24, target.right - 24),
+    top: target.bottom,
+    dist: Math.abs(moved.top - target.bottom),
+  });
+
+  // Snap moved's bottom to target's top
+  candidates.push({
+    left: clamp(moved.left, target.left - moved.width + 24, target.right - 24),
+    top: target.top - moved.height,
+    dist: Math.abs(moved.bottom - target.top),
+  });
+
+  candidates.sort((a, b) => a.dist - b.dist);
+  return candidates[0];
 }
 
 async function loadManifest() {
@@ -119,27 +293,20 @@ async function loadManifest() {
 }
 
 function renderPalette(categories) {
-  paletteContainer.innerHTML = "";
+  // Clear all category containers
+  paletteContainers.forEach((container) => (container.innerHTML = ""));
 
-  categories.forEach((category) => {
-    const section = document.createElement("section");
-    section.className = "palette-group";
-
-    const heading = document.createElement("h3");
-    heading.textContent = category.label || category.id;
-
-    const hint = document.createElement("p");
-    hint.className = "palette-hint";
-    hint.textContent = "Click to add or drag onto the canvas.";
-
-    const grid = document.createElement("div");
-    grid.className = "icon-grid";
+  const byId = new Map(categories.map((c) => [c.id, c]));
+  CATEGORY_ORDER.forEach((categoryId) => {
+    const category = byId.get(categoryId);
+    const grid = paletteContainers.get(categoryId);
+    if (!category || !grid) return;
 
     category.icons.forEach((icon) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "palette-icon";
-      button.dataset.category = category.id;
+      button.dataset.category = categoryId;
       button.dataset.icon = icon.path;
       button.dataset.label = icon.file.replace(".svg", "");
       button.draggable = true;
@@ -150,16 +317,21 @@ function renderPalette(categories) {
       img.loading = "lazy";
       button.appendChild(img);
 
+      const name = document.createElement("span");
+      name.className = "icon-name";
+      name.textContent = icon.file;
+      button.appendChild(name);
+
       button.addEventListener("click", () => {
         const x = CANVAS_WIDTH / 2 + (Math.random() * 80 - 40);
         const y = CANVAS_HEIGHT / 2 + (Math.random() * 60 - 30);
-        addNode(icon.path, category.id, button.dataset.label, x, y);
+        addNode(icon.path, categoryId, button.dataset.label, x, y);
       });
 
       button.addEventListener("dragstart", (event) => {
         const payload = JSON.stringify({
           iconPath: icon.path,
-          categoryId: category.id,
+          categoryId,
           label: button.dataset.label,
         });
         event.dataTransfer.setData("application/json", payload);
@@ -168,9 +340,6 @@ function renderPalette(categories) {
 
       grid.appendChild(button);
     });
-
-    section.append(heading, hint, grid);
-    paletteContainer.appendChild(section);
   });
 }
 
@@ -184,8 +353,8 @@ function attachCanvasEvents() {
     const payload =
       event.dataTransfer.getData("application/json") ||
       event.dataTransfer.getData("text/plain");
-
     if (!payload) return;
+
     try {
       const data = JSON.parse(payload);
       const point = svgPointFromEvent(event);
@@ -195,6 +364,7 @@ function attachCanvasEvents() {
     }
   });
 
+  // Only clear state when the user clicks the background, not ports/nodes/cables.
   canvas.addEventListener("pointerdown", (event) => {
     if (
       event.target?.closest?.(".port") ||
@@ -208,33 +378,28 @@ function attachCanvasEvents() {
   });
 }
 
-function addNode(
-  iconPath,
-  categoryId,
-  label,
-  x = CANVAS_WIDTH / 2,
-  y = CANVAS_HEIGHT / 2
-) {
+function addNode(iconPath, categoryId, label, x, y) {
   const id = `node-${++nodeCounter}`;
   const group = document.createElementNS(SVG_NS, "g");
   group.classList.add("patch-node");
   group.dataset.nodeId = id;
+  group.dataset.category = categoryId;
 
-  const icon = document.createElementNS(SVG_NS, "image");
-  icon.setAttributeNS("http://www.w3.org/1999/xlink", "href", iconPath);
-  icon.setAttribute("href", iconPath);
-  icon.setAttribute("width", NODE_SIZE);
-  icon.setAttribute("height", NODE_SIZE);
-  icon.setAttribute("x", -NODE_HALF);
-  icon.setAttribute("y", -NODE_HALF);
-  icon.setAttribute("preserveAspectRatio", "xMidYMid meet");
-  group.appendChild(icon);
+  const image = document.createElementNS(SVG_NS, "image");
+  image.setAttribute("href", iconPath);
+  image.setAttribute("x", -NODE_HALF);
+  image.setAttribute("y", -NODE_HALF);
+  image.setAttribute("width", NODE_SIZE);
+  image.setAttribute("height", NODE_SIZE);
+  image.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  group.appendChild(image);
 
   const labelEl = document.createElementNS(SVG_NS, "text");
   labelEl.setAttribute("text-anchor", "middle");
+  labelEl.setAttribute("x", "0");
   labelEl.setAttribute("y", NODE_HALF + 16);
   labelEl.setAttribute("fill", "#3d1c00");
-  labelEl.setAttribute("font-family", "EnterCommand, monospace");
+  labelEl.setAttribute("font-family", "ms-w98-ui-main, Arial, sans-serif");
   labelEl.setAttribute("font-size", "12px");
   labelEl.classList.add("node-label");
   labelEl.textContent = label || categoryId;
@@ -243,7 +408,6 @@ function addNode(
   const ports = buildPortsForNode(group, id, categoryId);
 
   group.addEventListener("pointerdown", (event) => {
-    // Ignore drags that begin on a port; ports manage their own clicks.
     if (event.target.closest(".port")) return;
     event.stopPropagation();
     const current = nodes.get(id);
@@ -257,15 +421,11 @@ function addNode(
   group.addEventListener("pointermove", (event) => {
     if (!dragState || dragState.nodeId !== id) return;
     const point = svgPointFromEvent(event);
-    const newX = point.x - dragState.offset.x;
-    const newY = point.y - dragState.offset.y;
-    moveNode(id, newX, newY);
+    moveNode(id, point.x - dragState.offset.x, point.y - dragState.offset.y);
   });
 
   group.addEventListener("pointerup", (event) => {
-    if (dragState?.nodeId === id) {
-      dragState = null;
-    }
+    if (dragState?.nodeId === id) dragState = null;
     group.releasePointerCapture(event.pointerId);
   });
 
@@ -275,7 +435,7 @@ function addNode(
     selectNode(id);
   });
 
-  const node = {
+  nodes.set(id, {
     id,
     categoryId,
     iconPath,
@@ -284,12 +444,9 @@ function addNode(
     y,
     element: group,
     ports,
-  };
-
-  nodes.set(id, node);
+  });
   nodeLayer.appendChild(group);
-  updateNodePosition(node);
-  setStatus("Node added. Click an output port, then an input to connect.");
+  updateNodePosition(nodes.get(id));
 }
 
 function buildPortsForNode(group, nodeId, categoryId) {
@@ -304,7 +461,7 @@ function buildPortsForNode(group, nodeId, categoryId) {
     circle.setAttribute("cy", portConfig.y);
     circle.setAttribute(
       "fill",
-      portConfig.type === "cv" ? "#1c6f8b" : "#7b3f00"
+      portConfig.type === "cv" ? "#008080" : "#d8c8ff"
     );
     circle.setAttribute("stroke", "#fff");
     circle.setAttribute("stroke-width", "1.5");
@@ -337,14 +494,12 @@ function buildPortsForNode(group, nodeId, categoryId) {
 
   preset.inputs.forEach((config, index) => addPort(config, "input", index));
   preset.outputs.forEach((config, index) => addPort(config, "output", index));
-
   return ports;
 }
 
 function moveNode(nodeId, x, y) {
   const node = nodes.get(nodeId);
   if (!node) return;
-
   node.x = x;
   node.y = y;
   updateNodePosition(node);
@@ -373,7 +528,6 @@ function handleInputClick(nodeId, port) {
     setStatus("Type mismatch. Connect audio-to-audio or cv-to-cv.");
     return;
   }
-
   addConnection(pendingConnection, {
     nodeId,
     portId: port.id,
@@ -389,23 +543,14 @@ function addConnection(from, to) {
   line.setAttribute("stroke", from.type === "cv" ? "#1c6f8b" : "#7b3f00");
   line.setAttribute("stroke-width", "3");
   line.setAttribute("stroke-linecap", "round");
-  if (from.type === "cv") {
-    line.setAttribute("stroke-dasharray", "10 6");
-  }
+  if (from.type === "cv") line.setAttribute("stroke-dasharray", "10 6");
 
   line.addEventListener("pointerdown", (event) => {
     event.stopPropagation();
     removeConnection(id);
   });
 
-  const connection = {
-    id,
-    from,
-    to,
-    type: from.type,
-    element: line,
-  };
-
+  const connection = { id, from, to, type: from.type, element: line };
   connections.push(connection);
   cableLayer.appendChild(line);
   updateCablePosition(connection);
@@ -431,28 +576,20 @@ function updateCablePosition(connection) {
   const toNode = nodes.get(connection.to.nodeId);
   if (!fromNode || !toNode) return;
 
-  const fromPort = findPort(fromNode, connection.from.portId);
-  const toPort = findPort(toNode, connection.to.portId);
+  const fromPort = fromNode.ports.find((p) => p.id === connection.from.portId);
+  const toPort = toNode.ports.find((p) => p.id === connection.to.portId);
   if (!fromPort || !toPort) return;
 
-  const start = portPosition(fromNode, fromPort);
-  const end = portPosition(toNode, toPort);
+  const start = {
+    x: fromNode.x + fromPort.xOffset,
+    y: fromNode.y + fromPort.yOffset,
+  };
+  const end = { x: toNode.x + toPort.xOffset, y: toNode.y + toPort.yOffset };
 
   connection.element.setAttribute("x1", start.x);
   connection.element.setAttribute("y1", start.y);
   connection.element.setAttribute("x2", end.x);
   connection.element.setAttribute("y2", end.y);
-}
-
-function findPort(node, portId) {
-  return node.ports.find((port) => port.id === portId);
-}
-
-function portPosition(node, port) {
-  return {
-    x: node.x + port.xOffset,
-    y: node.y + port.yOffset,
-  };
 }
 
 function selectNode(nodeId) {
@@ -468,8 +605,7 @@ function selectNode(nodeId) {
 
 function clearSelectedNode() {
   if (!selectedNodeId) return;
-  const node = nodes.get(selectedNodeId);
-  node?.element.classList.remove("is-selected");
+  nodes.get(selectedNodeId)?.element.classList.remove("is-selected");
   selectedNodeId = null;
 }
 
@@ -477,7 +613,6 @@ function removeNode(nodeId) {
   const node = nodes.get(nodeId);
   if (!node) return;
 
-  // Remove connections related to this node.
   [...connections].forEach((connection) => {
     if (connection.from.nodeId === nodeId || connection.to.nodeId === nodeId) {
       removeConnection(connection.id);
@@ -491,9 +626,7 @@ function removeNode(nodeId) {
 }
 
 function clearPendingConnection() {
-  if (pendingConnection?.element) {
-    pendingConnection.element.classList.remove("pending");
-  }
+  pendingConnection?.element?.classList.remove("pending");
   pendingConnection = null;
 }
 
@@ -564,338 +697,63 @@ async function exportPatchAsPng() {
 
       const pngData = exportCanvas.toDataURL("image/png");
       const link = document.createElement("a");
+      link.download = "oes-patch-notation.png";
       link.href = pngData;
-      link.download = "patch.png";
-      document.body.appendChild(link);
       link.click();
-      link.remove();
       resolve();
     };
     image.onerror = reject;
     image.src = url;
   });
 
-  setStatus("Exported patch.png");
+  setStatus("patch downloaded.");
 }
 
-async function inlineImages(svg) {
-  const images = Array.from(svg.querySelectorAll("image"));
+async function inlineImages(svgElement) {
+  const images = Array.from(svgElement.querySelectorAll("image"));
   await Promise.all(
-    images.map(async (image) => {
+    images.map(async (img) => {
       const href =
-        image.getAttribute("href") ||
-        image.getAttributeNS("http://www.w3.org/1999/xlink", "href");
+        img.getAttribute("href") ||
+        img.getAttributeNS("http://www.w3.org/1999/xlink", "href");
       if (!href || href.startsWith("data:")) return;
-
-      const response = await fetch(href);
-      const blob = await response.blob();
-      const dataUrl = await blobToDataUrl(blob);
-      image.setAttribute("href", dataUrl);
+      const dataUrl = await fetchAsDataUrl(href);
+      if (dataUrl) img.setAttribute("href", dataUrl);
     })
   );
 }
 
-function blobToDataUrl(blob) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(blob);
-  });
+async function fetchAsDataUrl(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const blob = await res.blob();
+    return await new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
 }
 
 function contentBounds() {
-  if (!nodes.size && !connections.length) {
-    return { x: 0, y: 0, width: CANVAS_WIDTH, height: CANVAS_HEIGHT };
-  }
+  // bounds based on nodes
+  const nodeList = Array.from(nodes.values());
+  if (!nodeList.length) return { x: 0, y: 0, width: 400, height: 400 };
 
-  let minX = Infinity;
-  let minY = Infinity;
-  let maxX = -Infinity;
-  let maxY = -Infinity;
+  const xs = nodeList.map((n) => n.x);
+  const ys = nodeList.map((n) => n.y);
 
-  nodes.forEach((node) => {
-    minX = Math.min(minX, node.x - NODE_HALF - PORT_OFFSET);
-    minY = Math.min(minY, node.y - NODE_HALF - PORT_OFFSET);
-    maxX = Math.max(maxX, node.x + NODE_HALF + PORT_OFFSET);
-    maxY = Math.max(maxY, node.y + NODE_HALF + PORT_OFFSET);
-  });
-
-  connections.forEach((connection) => {
-    const fromNode = nodes.get(connection.from.nodeId);
-    const toNode = nodes.get(connection.to.nodeId);
-    if (!fromNode || !toNode) return;
-    const fromPort = findPort(fromNode, connection.from.portId);
-    const toPort = findPort(toNode, connection.to.portId);
-    if (!fromPort || !toPort) return;
-    const start = portPosition(fromNode, fromPort);
-    const end = portPosition(toNode, toPort);
-    minX = Math.min(minX, start.x, end.x);
-    minY = Math.min(minY, start.y, end.y);
-    maxX = Math.max(maxX, start.x, end.x);
-    maxY = Math.max(maxY, start.y, end.y);
-  });
+  const minX = Math.min(...xs) - NODE_HALF - 40;
+  const maxX = Math.max(...xs) + NODE_HALF + 40;
+  const minY = Math.min(...ys) - NODE_HALF - 40;
+  const maxY = Math.max(...ys) + NODE_HALF + 80;
 
   return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
 }
 
-/* ===== Legend Overlay (Win98 Explorer style) ===== */
-function formatCategoryLabel(id) {
-  return (id || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+function clamp(v, min, max) {
+  return Math.max(min, Math.min(max, v));
 }
-
-async function ensureLegendManifest() {
-  if (legendManifest) return legendManifest;
-  if (manifestData) {
-    legendManifest = manifestData;
-    return legendManifest;
-  }
-  const res = await fetch("./icons-manifest.json", { cache: "no-cache" });
-  if (!res.ok) throw new Error("Failed to load icons-manifest.json");
-  legendManifest = await res.json();
-  return legendManifest;
-}
-
-function buildLegendTree(categories = []) {
-  if (!legendTree) return;
-  legendTree.innerHTML = "";
-  const orderedIds = LEGEND_CATEGORY_ORDER.filter((id) =>
-    categories.some((c) => c.id === id)
-  );
-  orderedIds.forEach((id) => {
-    const item = document.createElement("div");
-    item.className = "retro-tree-item";
-    item.dataset.cat = id;
-    const label =
-      categories.find((c) => c.id === id)?.label || formatCategoryLabel(id);
-    item.textContent = label;
-    item.addEventListener("pointerdown", (event) => {
-      event.stopPropagation();
-      setLegendActive(id);
-    });
-    legendTree.appendChild(item);
-  });
-}
-
-function setLegendActive(catId) {
-  legendActiveCategory = catId;
-  if (legendTree) {
-    legendTree.querySelectorAll(".retro-tree-item").forEach((el) => {
-      el.classList.toggle("active", el.dataset.cat === catId);
-    });
-  }
-
-  const cat = legendManifest?.categories?.find((c) => c.id === catId);
-  const files = cat?.icons || [];
-  if (legendBreadcrumb) {
-    legendBreadcrumb.textContent = `PT_Symbols_SVG\\${catId}`;
-  }
-  if (legendCount) {
-    legendCount.textContent = `${files.length} items`;
-  }
-  if (legendStatusLeft) {
-    legendStatusLeft.textContent = cat?.label || formatCategoryLabel(catId);
-  }
-  if (legendStatusRight) {
-    legendStatusRight.textContent = "Explorer";
-  }
-
-  renderLegendGrid(files);
-}
-
-function renderLegendGrid(icons = []) {
-  if (!legendGrid) return;
-  legendGrid.innerHTML = "";
-  if (!icons.length) {
-    const empty = document.createElement("div");
-    empty.className = "retro-loading";
-    empty.textContent = "No symbols found.";
-    legendGrid.appendChild(empty);
-    return;
-  }
-
-  icons.forEach((icon) => {
-    const item = document.createElement("div");
-    item.className = "retro-item";
-
-    const iconWrap = document.createElement("div");
-    iconWrap.className = "retro-icon";
-
-    const img = document.createElement("img");
-    img.loading = "lazy";
-    img.alt = icon.file;
-    img.src = icon.path;
-
-    const label = document.createElement("div");
-    label.className = "retro-filename";
-    label.textContent = icon.file;
-
-    iconWrap.appendChild(img);
-    item.appendChild(iconWrap);
-    item.appendChild(label);
-    legendGrid.appendChild(item);
-  });
-}
-
-async function openLegend() {
-  if (!legendOverlay || !legendWindow) return;
-  legendOverlay.hidden = false;
-  legendWindow.style.display = "flex";
-  if (legendTaskBtn) legendTaskBtn.hidden = true;
-
-  if (!legendManifest) {
-    if (legendGrid) {
-      legendGrid.innerHTML = `<div class="retro-loading">Loading symbols…</div>`;
-    }
-    try {
-      legendManifest = await ensureLegendManifest();
-      buildLegendTree(legendManifest.categories || []);
-      const first =
-        LEGEND_CATEGORY_ORDER.find((id) =>
-          (legendManifest.categories || []).some((c) => c.id === id)
-        ) ||
-        legendManifest.categories?.[0]?.id ||
-        "audio-sources";
-      setLegendActive(first);
-    } catch (error) {
-      console.error(error);
-      if (legendGrid) {
-        legendGrid.innerHTML = `<div class="retro-loading">Failed to load icons-manifest.json</div>`;
-      }
-    }
-  } else {
-    const targetCat =
-      legendActiveCategory ||
-      LEGEND_CATEGORY_ORDER.find((id) =>
-        legendManifest.categories?.some((c) => c.id === id)
-      ) ||
-      legendManifest.categories?.[0]?.id;
-    if (targetCat) setLegendActive(targetCat);
-  }
-}
-
-function closeLegend() {
-  if (!legendOverlay) return;
-  legendOverlay.hidden = true;
-  legendWindow?.style.setProperty("display", "flex");
-}
-
-function minimizeLegend() {
-  if (!legendWindow || !legendOverlay || !legendTaskBtn) return;
-  legendWindow.style.display = "none";
-  legendOverlay.hidden = true;
-  legendTaskBtn.hidden = false;
-}
-
-function restoreLegend() {
-  if (!legendWindow || !legendOverlay || !legendTaskBtn) return;
-  legendWindow.style.display = "flex";
-  legendOverlay.hidden = false;
-  legendTaskBtn.hidden = true;
-}
-
-function toggleLegendMaximize() {
-  if (!legendWindow) return;
-  legendMaximized = !legendMaximized;
-  if (legendMaximized) {
-    legendWindow.dataset.prev = JSON.stringify({
-      left: legendWindow.style.left,
-      top: legendWindow.style.top,
-      width: legendWindow.style.width,
-      height: legendWindow.style.height,
-    });
-    legendWindow.style.left = "2vw";
-    legendWindow.style.top = "3vh";
-    legendWindow.style.width = "96vw";
-    legendWindow.style.height = "92vh";
-  } else {
-    try {
-      const prev = JSON.parse(legendWindow.dataset.prev || "{}") || {};
-      legendWindow.style.left = prev.left || "8vw";
-      legendWindow.style.top = prev.top || "10vh";
-      legendWindow.style.width = prev.width || "";
-      legendWindow.style.height = prev.height || "";
-    } catch {
-      legendWindow.style.left = "8vw";
-      legendWindow.style.top = "10vh";
-      legendWindow.style.width = "";
-      legendWindow.style.height = "";
-    }
-  }
-}
-
-function startLegendDrag(event) {
-  if (!legendWindow || !legendTitlebar) return;
-  if (event.target?.closest?.(".retro-title-right")) return;
-  const rect = legendWindow.getBoundingClientRect();
-  legendDragState = {
-    pointerId: event.pointerId,
-    startX: event.clientX,
-    startY: event.clientY,
-    left: rect.left,
-    top: rect.top,
-  };
-  legendTitlebar.setPointerCapture(event.pointerId);
-  legendTitlebar.style.cursor = "grabbing";
-}
-
-function moveLegendDrag(event) {
-  if (!legendDragState || event.pointerId !== legendDragState.pointerId) return;
-  const dx = event.clientX - legendDragState.startX;
-  const dy = event.clientY - legendDragState.startY;
-  const newLeft = Math.max(8, legendDragState.left + dx);
-  const newTop = Math.max(8, legendDragState.top + dy);
-  legendWindow.style.left = `${newLeft}px`;
-  legendWindow.style.top = `${newTop}px`;
-}
-
-function endLegendDrag(event) {
-  if (!legendDragState || event.pointerId !== legendDragState.pointerId) return;
-  legendDragState = null;
-  if (legendTitlebar) {
-    legendTitlebar.releasePointerCapture(event.pointerId);
-    legendTitlebar.style.cursor = "grab";
-  }
-}
-
-function bindLegendEvents() {
-  legendOpenButton?.addEventListener("pointerdown", (event) => {
-    event.preventDefault();
-    openLegend();
-  });
-  legendCloseBtn?.addEventListener("pointerdown", (event) => {
-    event.stopPropagation();
-    closeLegend();
-  });
-  legendMinBtn?.addEventListener("pointerdown", (event) => {
-    event.stopPropagation();
-    minimizeLegend();
-  });
-  legendMaxBtn?.addEventListener("pointerdown", (event) => {
-    event.stopPropagation();
-    toggleLegendMaximize();
-  });
-  legendTaskBtn?.addEventListener("pointerdown", (event) => {
-    event.preventDefault();
-    restoreLegend();
-  });
-  legendOverlay?.addEventListener("pointerdown", (event) => {
-    if (event.target === legendOverlay) {
-      closeLegend();
-    }
-  });
-  if (legendTitlebar) {
-    legendTitlebar.addEventListener("pointerdown", startLegendDrag);
-    legendTitlebar.addEventListener("pointermove", moveLegendDrag);
-    legendTitlebar.addEventListener("pointerup", endLegendDrag);
-    legendTitlebar.addEventListener("pointercancel", endLegendDrag);
-  }
-  window.addEventListener("keydown", (event) => {
-    if (legendOverlay?.hidden) return;
-    if (event.key === "Escape") {
-      closeLegend();
-    }
-  });
-}
-
-bindLegendEvents();
