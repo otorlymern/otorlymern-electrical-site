@@ -178,7 +178,11 @@ footer,
 
 nav {
   position: relative;
-  z-index: 300;
+  z-index: 4000;
+}
+
+nav .dropdown-content {
+  z-index: 5000;
 }
 
 
