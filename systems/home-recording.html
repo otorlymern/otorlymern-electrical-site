@@ -121,6 +121,7 @@
       font-family: 'VCR OSD Mono', monospace;
       font-weight: 700;
       letter-spacing: 0.02em;
+      font-size: 0.7em;
       width: min(100%, 320px);
       text-align: right;
     }
@@ -134,6 +135,20 @@
       min-height: 70px;
       border-radius: 8px;
       background: rgba(0, 0, 0, 0.15);
+    }
+
+    .right-stack {
+      display: grid;
+      gap: 1rem;
+      justify-items: end;
+      align-items: start;
+    }
+
+    .computer-note {
+      width: min(100%, 320px);
+      min-height: 2.6rem;
+      text-align: right;
+      margin: 0;
     }
 
     .text-panel {
@@ -165,6 +180,7 @@
       padding: 1rem 1.2rem;
       border-radius: 12px;
       box-shadow: 4px 6px 0 rgba(35, 14, 0, 0.75);
+      font-size: 0.7em;
     }
 
     .media-frame {
@@ -427,15 +443,18 @@
               aint even big. Well it can be, and is sometimes, but it doesnt have to be.</p>
             <p>Im gunna walk you through geetting started recording without the danged computer so buckle up, its not
               gunna be the prettiest thing at first but who wants pretty anyway? you ready? openminded? lets go.</p>
-            <aside class="callout">
-              <p><strong>Computer boy, with his little computer computing the day away. thats you. dont you feel silly
-                  and bad?
-                  like a silly little computer boy, clicking and touching anything you could ever want?</strong>.</p>
+          </div>
+          <div class="right-stack">
+            <figure class="media-frame right-media">
+              <img src="/images/perfclipartcomputer.webp" alt="Cartoon computer icon">
+            </figure>
+            <p class="computer-note"></p>
+            <aside class="quote-box">
+              <p>Computer boy, with his little computer computing the day away. thats you. dont you feel silly and bad?
+                like a silly little computer boy, clicking and touching anything you could ever want?</p>
+              <div class="quote-media" aria-hidden="true"></div>
             </aside>
           </div>
-          <figure class="media-frame right-media">
-            <img src="/images/perfclipartcomputer.webp" alt="Cartoon computer icon">
-          </figure>
         </div>
       </section>
 
