@@ -266,6 +266,15 @@
       overflow: hidden;
     }
 
+    .crt-frame--youtube {
+      background: #050403;
+      aspect-ratio: 4/ 3;
+      --embed-top: 29%;
+      --embed-right: 90%;
+      --embed-bottom: 90%;
+      --embed-left: 20%;
+    }
+
     .crt-video {
       width: 100%;
       height: 100%;
@@ -273,11 +282,44 @@
       display: block;
     }
 
+    .crt-embed {
+      position: absolute;
+      inset: 9% 8% 12% 8%;
+      width: auto;
+      height: auto;
+      border: 0;
+      display: block;
+    }
+
+    .crt-frame--youtube .crt-embed {
+      inset: var(--embed-top) var(--embed-right) var(--embed-bottom) var(--embed-left);
+      border-radius: 6px;
+    }
+
     .crt-overlay {
       position: absolute;
       inset: 0;
       background: url('/video/crt-overlays/Sony-KV-20TTriniton-Tube-TV-RF-Composite-1993-Televisions_700x700%20copy.png') center/contain no-repeat;
       pointer-events: none;
+    }
+
+    .crt-frame--youtube .crt-overlay {
+      inset: 0;
+      transform: none;
+    }
+
+    .tv-bottom {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .tv-bottom .crt-unit {
+      width: min(100%, 520px);
+    }
+
+    .section-gap {
+      height: 2.5rem;
     }
 
     .crt-label {
@@ -378,6 +420,74 @@
 
     <div class="content-wrap">
       <section class="text-panel intro-paragraphs">
+        <h2>Home Recording: <br>Then vs. Now</h2>
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <p>Home recording. even though these days its hardly worth making the distinction, there was a time when
+              home recording was thought of as a pipe dream, and those who were early adopters were laughed at, called
+              fools, because audio engineering and the musical recording proces was supposed to be extremely difficult,
+              extremely unattaainable without the deep pockets of a record label, the pockets you wouldnt have any coice
+              but to make deeper by giving them large percentages (in certain situations as large as 100 percent, which
+              i like to say is the largest percent) of any of the money made on anything you recorded ever, because they
+              had us over the proverbial barrel.aaaa
+              <b>Home recording. even though these days its hardly worth making the distinction, there was a time when
+                home recording was thought of as a pipe dream, and those who were early adopters were laughed at, called
+                fools, because audio engineering and the musical recording proces was supposed to be extremely difficult,
+                extremely unattaainable without the deep pockets of a record label, the pockets you wouldnt have any coice
+                but to make deeper by giving them large percentages (in certain situations as large as 100 percent, which
+                i like to say is the largest percent) of any of the money made on anything you recorded ever, because
+                they had us over the proverbial barrel.</b>
+            </p>
+            <p>A great example of the attitude towards home recording, as recently
+              as 1984, is this interveiw with one of the pioneers of home recording,the most prolific home recording
+              artists ever to live and, i believe, one of the best pop song writers of all time, personal hero and
+              constant inspiration of mine, the unparallelled R. Stevie Moore. He began home recording in the late
+              60's, and by this i mean multitracking, building songs one instrument at a time all alone, which is
+              astonishing because there was no piecve of eqipment advertised as capable of doing that at the time.We'll
+              get into how he achieved this, but watch the interveiwer ask about this so called "home recording", he even
+              goes as far as to ask stevie if he started "recording in his home" as some sort of joke. Stevie after being
+              thrown by the incredularity of the dumb interviewer and the surprising disdain for even the idea of trying
+              to record without spending a years salary, gives a simple, poingent and genuine answer by saying, firsly
+              recording himself at his home is simpler, it doesnt require multiple people with clashing personalities, hes
+              says its cheaper, at the time he had a cassette club and had released 109 albums of original music, a feat
+              in prolificism only capable when the artist controls the means of production and distribution, and summing
+              up his point he very soberly states that he does it for freedom. damn near brings a tear to my eye.</p>
+          </div>
+          <aside class="quote-stack">
+            <div class="quote-box">
+              <p>If you are unfamiliar with R. Stevie Moore, I would start with something like <em>Glad Music</em>,
+                <Sheetrock>
+                </Sheetrock> or <em>Delicate Tensions</em> two wonderful LPs release first in the 70s and 80s, but which
+                have
+                been recently (enough) reissued and should be available. I was lucky enough to realease a tape for the
+                man
+                whileback on my tape label OJC Recordings, a later less appreiated release entitled <em>Kaffeeklsch</em>
+                which i
+                feel shows beautifully is range as a song writer, instrumentalist, viocalist, and home recordist.
+                Check it out on the OJC bandcamp or spotify or R Stevies bandcamp and if you dig it I (am pretty sure) i
+                have a
+                couple extra copies, if interested email me at augie@otorlymern-electrical.com</p>
+              <div class="quote-media" aria-hidden="true"></div>
+            </div>
+          </aside>
+        </div>
+        <div class="tv-bottom">
+          <div class="crt-unit">
+            <div class="crt-frame crt-frame--youtube">
+              <iframe class="crt-embed" width="600" height="500"
+                src="https://www.youtube-nocookie.com/embed/yqkwJDG5grk?si=CdO_ljrcEzJk0UoX&amp;controls=0&amp;start=898&amp;clip=UgkxHU-lAChgvyJ6A4AsndcBN1x7qDFkfmZU&amp;clipt=EPjoNxjk1zo"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="crt-overlay" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-gap" aria-hidden="true"></div>
+
+      <section class="text-panel intro-paragraphs">
         <h2>Why tape still matters</h2>
         <div class="intro-grid">
           <div class="intro-copy">
@@ -386,11 +496,13 @@
               american pursuit of "more" or "easier" (the goal of which i guess would be to eventually not have to do
               anything?) we have engineered the hell out of everything to get maximum ease of use, maximum array of
               choice, maximum control, maximum perfection.</p>
-            <p>Sure it sounds good but its absolutely paralizing. Boot up a DAW, that lets say you torrented, and
-              immediately you have multiple orchetras worth of virtual instruments, an imposssibly large selection of
-              effects, processors, manipulators and editing tools, and theres no skill required either, as lomg as you
-              have a basic understadning of how to bop around on a macbook your a youtube video and a half away from
-              being your own Brian Eno. Or whoever, Rolamd Kirk.</p>
+            <p>Sure it sounds good but its <em>absolutely paralizing</em>. Boot up a DAW, that lets say you torrented,
+              and immediately for zero dollars you have multiple orchetras worth of virtual instruments, an imposssibly
+              large selection of effects, processors, manipulators and editing tools, and theres no skill required
+              either, as lomg as you have a basic understadning of how to bop around on a macbook your a youtube video
+              and a half away from being your own Brian Eno. Or whoever, Rolamd Kirk. Or maybe you are bad with
+              computers, like an old guy, in that case thers a HUGE learning curve! and thatsno fun! all that free
+              stuff and u cant even make it do <em>squat!</em></p>
             <p>The perfect has become so attainable and the possibilities so endless that (ill speak only formyself
               here) i run into one of a couple of issues right away. What instrument do i pick? lets say i go with
               synth, my reasoning being a synth at least isnt as much of an emulation as an oboe, because a computer
@@ -403,22 +515,17 @@
               prey to a particular type of brain disease the kind where I end up 10 hours later with the same midi
               notes on the piano roll and a cramped hand and a noyjing of a song, and by them im numb to muisc,
               analyzed it to death, absolute paralyzation of choice leading to a complete lack of productivity,
-              creativity and fun.</p>
-            <p>Now thats what it did to me, and i immediately knew i didnt wanna make music if a DAW come stock with
-              everything you cvould ever want and theres even more and betterer plug ins sprinkled cyberspace infinitly
-              and i have to have them all so i can finally make my music and suddenly its three weeks later, not a
-              single second of music made, hard drive busting at the seems with pirated software of the best rack gear,
-              analog synths, digital synths, effects units, compressors, amp and cab emulators and so on that a man
-              could possibly want and thats about the point someone might find this page.</p>
-            <p>because perfection is boring when its so attainable, anyone patient can make a perfect, even beautiful
-              song but does that a musciain make? does that a recording artist make? are you really even recording if
-              you never input anything external into the system or are you jusst a computer engineer, moving digital
-              midi around, until you hiy some arbitrary mark no one knows and damn if they care. at what point are you
-              doing something closer to clerical work than recording music?</p>
+              creativity and fun.and oh yeahm, no songs neither.</p>
+            <p>at least that was my harrowing experience. because perfection is boring when its so attainable, anyone
+              patient can make a "perfect" song but does that a musciain make? does that a recording artist make? are
+              you really even recording if you never input anything external into the system, just steer ones and zeros
+              around like a little computer boy? thats not music guy, thats being a computer boy and silly at that.</p>
           </div>
           <aside class="quote-stack">
             <div class="quote-box">
-              <p>Limitations are completely underrated.</p>
+              <p>In our effort to achieve the perfect music making machine we forgot that so much of what forces the
+                recording artist to think outside the box, innovate through problem solving, were (i mean are) the
+                limitations that come with hardware and the finality that comes with commiting something to tape.</p>
               <div class="quote-media" aria-hidden="true"></div>
             </div>
             <div class="quote-box">
@@ -433,30 +540,43 @@
         <h2>First tip: ditch the computer</h2>
         <div class="split">
           <div>
-            <p>If that rings true at all you gotta chuck the computer, you can come back to it once you know what you
-              want but if you are just getting into recording your own music, my first tip would be chuck the dang
+            <p>If that rings true at all you gotta chuck the computer, you can come back to it once you
+              know what you
+              want but if you are just getting into recording your own music, my first tip would be chuck
+              the dang
               camputer.</p>
-            <p><em>and then theyll say "well im sorry i dont have a million dollars for all the fancy crap u have
+            <p><em>and then theyll say "well im sorry i dont have a million dollars for all the fancy crap
+                u have
                 shining
-                in your shiny music making room nor do i have the spcace for a buncha toys plus the danged racket i'll
-                make in the process!"</em> well guess what? it aint expensive, and it aint loud, and it aint shiny, it
+                in your shiny music making room nor do i have the spcace for a buncha toys plus the danged
+                racket i'll
+                make in the process!"</em> well guess what? it aint expensive, and it aint loud, and it
+              aint shiny, it
               aint even big. Well it can be, and is sometimes, but it doesnt have to be.</p>
-            <p>Im gunna walk you through geetting started recording without the danged computer so buckle up, its not
-              gunna be the prettiest thing at first but who wants pretty anyway? you ready? openminded? lets go.</p>
+            <p>Im gunna walk you through geetting started recording without the danged computer so buckle
+              up, its not
+              gunna be the prettiest thing at first but who wants pretty anyway? you ready? openminded?
+              lets go.</p>
           </div>
           <div class="right-stack">
             <figure class="media-frame right-media">
               <img src="/images/perfclipartcomputer.webp" alt="Cartoon computer icon">
+              <p class="computer-note"> all these dang options, look at them go, so fast, so many, enough
+                to make ur
+                darn
+                head spin!</p>
             </figure>
-            <p class="computer-note"></p>
             <aside class="quote-box">
-              <p>Computer boy, with his little computer computing the day away. thats you. dont you feel silly and bad?
-                like a silly little computer boy, clicking and touching anything you could ever want?</p>
+              <p>Computer boy, with his little computer computing the day away. thats you. dont you feel
+                silly and bad? like a silly little computer boy, clicking and touching anything you
+                could ever want?</p>
               <div class="quote-media" aria-hidden="true"></div>
             </aside>
           </div>
         </div>
       </section>
+
+      <div class="section-gap" aria-hidden="true"></div>
 
       <section class="text-panel">
         <h2>If Not Computer, Than What?</h2>
@@ -583,11 +703,11 @@
         <h2>PDF embeds</h2>
         <div class="pdf-grid">
           <div>
-            <iframe class="pdf-embed" src="/video/Introduction.pdf" title="PDF embed slot A"></iframe>
+            <iframe class="pdf-embed" src="" title="PDF embed slot A"></iframe>
             <p class="highlight">PDF slot A (replace the source when ready).</p>
           </div>
           <div>
-            <iframe class="pdf-embed" src="/images/gnat_schematics.pdf" title="PDF embed slot B"></iframe>
+            <iframe class="pdf-embed" src="/" title="PDF embed slot B"></iframe>
             <p class="highlight">PDF slot B (replace the source when ready).</p>
           </div>
         </div>
