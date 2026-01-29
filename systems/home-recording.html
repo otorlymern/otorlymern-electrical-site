@@ -328,6 +328,80 @@
       font-size: 0.95rem;
     }
 
+    .choice-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      align-items: end;
+    }
+
+    .choice-option {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      height: 100%;
+    }
+
+    .choice-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+      border: 2px dashed rgba(90, 47, 0, 0.5);
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .choice-card {
+      background: #fdf6e3;
+      border: 3px solid #5a2f00;
+      border-radius: 20px;
+      padding: 1rem 1.2rem 1.2rem;
+      box-shadow: 6px 7px 0 rgba(47, 18, 1, 0.65);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+      color: inherit;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1.4;
+      width: 100%;
+    }
+
+    .choice-title {
+      align-self: flex-start;
+      background: #7b3f00;
+      color: #fff5e1;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-family: 'VCR OSD Mono', monospace;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      font-size: 0.8em;
+    }
+
+    .choice-card p {
+      margin: 0;
+    }
+
+    .choice-panel.choice-selected .choice-card.is-faded {
+      opacity: 0;
+      transform: scale(0.9) rotate(-3deg);
+      filter: blur(6px);
+      pointer-events: none;
+    }
+
+    .choice-panel.choice-selected .choice-card.is-selected {
+      transform: scale(1.02);
+    }
+
     .pdf-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -423,57 +497,48 @@
         <h2>Home Recording: <br>Then vs. Now</h2>
         <div class="intro-grid">
           <div class="intro-copy">
-            <p>Home recording. even though these days its hardly worth making the distinction, there was a time when
-              home recording was thought of as a pipe dream, and those who were early adopters were laughed at, called
-              fools, because audio engineering and the musical recording proces was supposed to be extremely difficult,
-              extremely unattaainable without the deep pockets of a record label, the pockets you wouldnt have any coice
-              but to make deeper by giving them large percentages (in certain situations as large as 100 percent, which
-              i like to say is the largest percent) of any of the money made on anything you recorded ever, because they
-              had us over the proverbial barrel.aaaa
-              <b>Home recording. even though these days its hardly worth making the distinction, there was a time when
-                home recording was thought of as a pipe dream, and those who were early adopters were laughed at, called
-                fools, because audio engineering and the musical recording proces was supposed to be extremely
-                difficult,
-                extremely unattaainable without the deep pockets of a record label, the pockets you wouldnt have any
-                coice
-                but to make deeper by giving them large percentages (in certain situations as large as 100 percent,
-                which
-                i like to say is the largest percent) of any of the money made on anything you recorded ever, because
-                they had us over the proverbial barrel.</b>
+            <p>Home recording wasnt always the effortless, sunday stroll with your best gal coupla scoops of that
+              delectible froxen cream perched every so daintliy a top a thin hard waffle forced by the icecream boy to
+              be conical. </p>
+            <p>No, there was a time when home recording was by most, not even an idea that ever crossed their minds and
+              to the few who wondered why, wondered if they could record serious multitrack music as a single
+              individual. Well those early adopters were largely laughed at, then thrown a unch of intimidating gargin
+              that would make any non-music engineering dorks head spin. Signal to noise ratio this, generation-loss
+              that, tape types, bias settings, demagging the things and so on and so forth because audio engineering and
+              the musical recording proces was supposed to be extremely difficulty extremely unattaainable without the
+              deep pockets of a record label, the pockets you wouldnt have any choice but to make deeper by giving them
+              large percentages (in certain situations as large as 100 percent, which i find be the largest percent) of
+              any of the money made on anything you recorded ever, because they had us over the proverbial barrel./p>
+              <b>Home recording. even though these days its hardly
             </p>
-            <p>A great example of the attitude towards home recording, as recently
-              as 1984, is this interveiw with one of the pioneers of home recording,the most prolific home recording
-              artists ever to live and, i believe, one of the best pop song writers of all time, personal hero and
-              constant inspiration of mine, the unparallelled R. Stevie Moore. He began home recording in the late
-              60's, and by this i mean multitracking, building songs one instrument at a time all alone, which is
-              astonishing because there was no piecve of eqipment advertised as capable of doing that at the time.We'll
-              get into how he achieved this, but watch the interveiwer ask about this so called "home recording", he
-              even
-              goes as far as to ask stevie if he started "recording in his home" as some sort of joke. Stevie after
-              being
-              thrown by the incredularity of the dumb interviewer and the surprising disdain for even the idea of trying
-              to record without spending a years salary, gives a simple, poingent and genuine answer by saying, firsly
-              recording himself at his home is simpler, it doesnt require multiple people with clashing personalities,
-              hes
-              says its cheaper, at the time he had a cassette club and had released 109 albums of original music, a feat
-              in prolificism only capable when the artist controls the means of production and distribution, and summing
-              up his point he very soberly states that he does it for freedom. damn near brings a tear to my eye.</p>
+            <p>A great example of the attitude towards home recording, as recently as 1984, is this interveiw with one
+              of the pioneers of home recording,the most prolific home recording artists ever to live and, i believe,
+              one of the best pop song writers of all time, personal hero and constant inspiration of mine, the
+              unparallelled R. Stevie Moore. He began home recording in the late60's, and by this i mean multitracking,
+              building songs one instrument at a time all alone, which is astonishing because there was no piecve of
+              eqipment advertised as capable of doing that at the time.We'll get into how he achieved this, but watch
+              the interveiwer ask about this so called "home recording", he even goes as far as to ask stevie if he
+              started "recording in his home" as some sort of joke. Stevie after being thrown by the incredularity of
+              the dumb interviewer and the surprising disdain for even the idea of trying to record without spending a
+              years salary, gives a simple, poingent and genuine answer by saying, firsly recording himself at his home
+              is simpler, it doesnt require multiple people with clashing personalities and he says its cheaper. at the
+              time he had a cassette club and had released 109 albums of original music, a feat in prolificism only
+              capable when the artist controls the means of production and distribution, and summing
+              up his point he very soberly states that he does it for freedom. damn near brings a tear to my eye.
+              <B>ROLL IT!</B>
+            </p>
           </div>
+
           <aside class="quote-stack">
             <div class="quote-box">
-
               <div class="quote-media" aria-hidden="true">
-                <p>If you are unfamiliar with R. Stevie Moore, I would start with something like <em>Glad Music</em>,
-                  <em>
-                    Sheetrock</em> or <em>Delicate Tensions</em> two wonderful LPs release first in the 70s and 80s, but
-                  which
-                  have
-                  been recently (enough) reissued and should be available. I was lucky enough to realease a tape for the
-                  man
-                  whileback on my tape label OJC Recordings, a later less appreiated release entitled
-                  <em>Kaffeeklsch</em>
-                  which i
-                  feel shows beautifully is range as a song writer, instrumentalist, viocalist, and home recordist.
+                <p>If you are unfamiliar with R. Stevie Moore, I would start with something like <em>Glad
+                    Music</em>,<em> Sheetrock</em> or <em>Delicate Tensions</em> two wonderful LPs release first in the
+                  70s and 80s, but which have been recently (enough) reissued and should be available. I was lucky
+                  enough to realease a tape for the man whileback on my tape label OJC Recordings, a later less
+                  appreiated release entitled <em>Kaffeeklsch</em> which i feel shows beautifully is range as a song
+                  writer, instrumentalist, viocalist, and home recordist.
+
                   Check it out on the OJC bandcamp or spotify or R Stevies bandcamp and if you dig it I (am pretty sure)
                   i
                   have a
@@ -616,23 +681,36 @@
 
       <section class="text-panel">
         <h2>If Not Computer, Than What?</h2>
-        <div class="split">
-          <div>
-            <p>we have a couple options here.
-              <b>LIKE THIS:</b>
-            </p>
-            <figure class="mfp01-inline">
-              <img src="/images/mfp01-left.png" alt="Tascam MFP01 four-track recorder" ">
-            </figure>
+        <div class="choice-panel" id="choicePanel">
+          <div class="choice-grid">
+            <div class="choice-option">
+              <div class="choice-image" aria-hidden="true"></div>
+              <button class="choice-card" type="button" data-choice="panasonic">
+                <span class="choice-title">Panasonic Slimeline Cassette Recorder</span>
+                <p>your run of the mill little cassette recorder, i think you vould get away a microcassette
+                  dictaphone or normal cassette dictaphone, basically any tape machine that is smallish, portable, has
+                  a built in mic, and has easy access to the the tape transpprt.</p>
+              </button>
+            </div>
+            <div class="choice-option">
+              <div class="choice-image" aria-hidden="true"></div>
+              <button class="choice-card" type="button" data-choice="stereo">
+                <span class="choice-title">Two Stereo Tape Recorders</span>
+                <p>type you would see on your folks stereo stereo, can be a one dual deck (most of them) or two seperate
+                  decks, one acn be a reel to reel one can be a cassette deck,, you can mix and match speeds and reel
+                  sizes,,, all that.</p>
+              </button>
+            </div>
+            <div class="choice-option">
+              <div class="choice-image" aria-hidden="true"></div>
+              <button class="choice-card" type="button" data-choice="iphone">
+                <span class="choice-title">iPhone (or equivalent)</span>
+                <p>I dont have any of these stupid things ! your dumb im just gunna stand over there and look at my
+                  iPhone (or equivalent smart device) until you perish</p>
+              </button>
+            </div>
           </div>
-          <aside class=" media-frame recording-caption">
-              <p class="highlight">The Tascam MFP01 four-track cassette recorder.</p>
-              <p>its the simplest 4 track on the (secondhand) market, the learning curve is practically a straight line
-                so
-                STOP BEING
-                SO SCARED.</p>
-              </aside>
-          </div>
+        </div>
       </section>
 
       <section class="text-panel">
@@ -758,6 +836,25 @@
       </section>
     </div>
   </main>
+
+  <script>
+    (function () {
+      const panel = document.getElementById('choicePanel');
+      if (!panel) {
+        return;
+      }
+      const cards = Array.from(panel.querySelectorAll('.choice-card'));
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          panel.classList.add('choice-selected');
+          cards.forEach((item) => {
+            item.classList.toggle('is-selected', item === card);
+            item.classList.toggle('is-faded', item !== card);
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>
