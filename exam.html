@@ -1,0 +1,238 @@
+<head>
+  <style>
+    body {
+      background-color: black;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* CONTAINER */
+    .tv-container {
+      position: relative;
+      width: 100vw;
+      max-width: 600px;
+      aspect-ratio: 4/ 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* THE TV FRAME */
+    .tv-frame {
+      position: absolute;
+      top: -49;
+      left: 5;
+      width: 600px;
+      height: 400;
+      background-image: url('video/crt-overlays/Sony-KV1221RTrinitron-CRT-TV-overlay.png');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* THE SCREEN CONTENT */
+    .tv-screen {
+      width: 30%;
+      height: 40%;
+      background: #16481f;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      overflow: hidden;
+      margin-top: -23%;
+      margin-left: 0%;
+      transform: scaleY(0) scaleX(0);
+      filter: brightness(5);
+      visibility: hidden;
+    }
+
+    /* SCREEN POWERS ON */
+    .tv-screen.tv-on {
+      visibility: visible;
+      animation: tvOn 1s ease-out forwards;
+    }
+
+    /* ANIMATED STATIC OVERLAY */
+    .static-overlay {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      opacity: 0.18;
+      z-index: 2;
+      pointer-events: none;
+      background-image: repeating-radial-gradient(circle at 50% 50%, #fff, #000 0.00085px);
+      background-size: 100px 100px;
+      animation: static-flicker 0.15s steps(4) infinite;
+    }
+
+    @keyframes static-flicker {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(-1%, 2%);
+      }
+
+      50% {
+        transform: translate(-2%, -1%);
+      }
+
+      75% {
+        transform: translate(1%, -2%);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    /* Scanlines */
+    .tv-screen::after {
+      content: " ";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+      background-size: 100% 4px, 3px 100%;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    @keyframes tvOn {
+      0% {
+        transform: scaleY(0.005) scaleX(0);
+        filter: brightness(5);
+      }
+
+      50% {
+        transform: scaleY(0.005) scaleX(1);
+        filter: brightness(3);
+      }
+
+      100% {
+        transform: scaleY(1) scaleX(1);
+        filter: brightness(1);
+      }
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 4;
+      position: relative;
+    }
+
+    nav li {
+      margin: -3px;
+    }
+
+    nav a {
+      background-color: #1a1a1a;
+      color: white;
+      text-decoration: none;
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(0.5rem, 1vw, 10rem);
+      padding: 0vw 1vw;
+      border-left: 0.4vw solid #0072bc;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+      transition: all 0.2s;
+      text-transform: uppercase;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background-color: #e0e0e0;
+      color: black;
+      transform: scale(1.05) rotate(-1deg);
+    }
+
+    /* Nav image class for clarity and maintainability */
+    .nav-img {
+      max-width: 300px;
+      max-height: 300px;
+      width: auto;
+      height: auto;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    footer {
+      background-color: #8b4513;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      width: 100%;
+      font-family: "Lyno-Stan", Arial, sans-serif;
+      font-size: 0.9em;
+    }
+
+    .footer-badges {
+      display: inline;
+      max-height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="tv-container">
+      <div class="tv-screen tv-on" id="tvScreen">
+        <div class="static-overlay"></div>
+        <ul>
+          <li><a href="services/index.html">Services</a></li>
+          <li><a href="systems/systems.html">Systems</a></li>
+        </ul>
+        </nav>
+      </div>
+
+      <div class="tv-frame"></div>
+    </div>fffff
+
+    <script>
+      const tvImage = new Image();
+      const tvScreen = document.getElementById('tvScreen');
+
+      tvImage.src = 'ibm.png';
+
+      tvImage.onload = () => {
+        requestAnimationFrame(() => {
+          tvScreen.classList.add('tv-on');
+        });
+      };
+    </script>
+    <footer>
+      <p>&copy; 2025 – Otorlymern Electrical Systems – Home</p>
+      <div class="footer-badges">
+        <a href="https://reverb.com/shop/otorlymern-electrical"><img
+            src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+            alt="Shop My Store on Reverb" /></a>
+        <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
+        <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
+        <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
+        <a href="https://reverb.com/shop/otorlymern-electrical"><img
+            src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+            alt="Shop My Store on Reverb" /></a>
+      </div>
+    </footer>
+</body>
+</main>
+
+</html>
