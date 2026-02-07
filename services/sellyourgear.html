@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Otorlymern Electrical Services — Sell Us Your Gear</title>
+  <link rel="stylesheet" href="/css/system7.css/style.css"/>
   <link rel="stylesheet" href="/css/style.css"/>
   <link rel="stylesheet" href="/css/musicstyle.css"/>
   <link rel="stylesheet" href="/css/altstyle.css"/>
+  <link rel="stylesheet" href="/css/system7-services.css"/>
 </head>
 <body class="service-page service-tile-consult">
 <header>
@@ -53,241 +55,94 @@
   <p>Moving, downsizing, or just tired of storing a busted tape machine you swear you’ll fix one day? We buy, trade, and responsibly recycle audio/video gear regardless of condition.</p>
   <p>Tell us what you’ve got, where it’s hiding, and whether you want cash, credit toward repairs, or just a quick pickup so your floor stops creaking.</p>
 
-  <section class="win98-wrap">
-    <div class="win98-window">
-      <div class="win98-titlebar">
-        <span>OES — Sell Us Your Gear</span>
-        <div class="win98-controls" aria-hidden="true">
-          <span>_</span><span>[]</span><span>X</span>
-        </div>
+  <section class="service-form-window">
+    <div class="window">
+      <div class="title-bar">
+        <button aria-label="Close" class="close"></button>
+        <h1 class="title">OES — Sell Us Your Gear</h1>
+        <button aria-label="Resize" class="resize"></button>
       </div>
+      <div class="separator"></div>
+      <div class="window-pane">
+        <form id="sellGearForm"
+              class="system7-form"
+              action="https://formspree.io/f/mwpnybrw"
+              method="POST"
+              enctype="multipart/form-data"
+              novalidate>
 
-      <form id="sellGearForm"
-            action="https://formspree.io/f/mwpnybrw"
-            method="POST"
-            enctype="multipart/form-data"
-            novalidate>
+          <input type="hidden" name="_subject" value="Sell Us Your Gear Submission">
 
-        <input type="hidden" name="_subject" value="Sell Us Your Gear Submission">
-
-        <label class="hp">Leave this field empty:
-          <input type="text" name="website">
-        </label>
-
-        <div class="row">
-          <label class="short">
-            <span class="lbl">Name:</span>
-            <input type="text" name="Name" autocomplete="name" />
+          <label class="hp">Leave this field empty:
+            <input type="text" name="website">
           </label>
 
-          <label class="short">
-            <span class="lbl">Email:</span>
-            <input type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
-          </label>
-        </div>
+          <div class="field-row split">
+            <div class="field-row stack">
+              <label for="sell-name">Name:</label>
+              <input id="sell-name" type="text" name="Name" autocomplete="name" />
+            </div>
 
-        <label class="long">
-          <span class="lbl">Pickup city / neighborhood:</span>
-          <input type="text" name="location" placeholder="e.g., Highland Park garage, third-floor storage, etc." />
-        </label>
+            <div class="field-row stack">
+              <label for="sell-email">Email:</label>
+              <input id="sell-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
+            </div>
+          </div>
 
-        <label class="long">
-          <span class="lbl">Gear we should know about:</span>
-          <textarea name="gear_list" rows="5" placeholder="List models, mods, missing pieces, and what’s included."></textarea>
-        </label>
+          <div class="field-row stack">
+            <label for="sell-location">Pickup city / neighborhood:</label>
+            <input id="sell-location" type="text" name="location" placeholder="e.g., Highland Park garage, third-floor storage, etc." />
+          </div>
 
-        <div class="row">
-          <label class="short">
-            <span class="lbl">Condition:</span>
-            <select name="condition">
-              <option value="plays">Fully working</option>
-              <option value="needs-work">Works but needs TLC</option>
-              <option value="dead">Dead / for parts</option>
-              <option value="unknown">Unknown</option>
-            </select>
-          </label>
+          <div class="field-row stack">
+            <label for="sell-gear">Gear we should know about:</label>
+            <textarea id="sell-gear" name="gear_list" rows="5" placeholder="List models, mods, missing pieces, and what’s included."></textarea>
+          </div>
 
-          <label class="short">
-            <span class="lbl">Value / Trade idea:</span>
-            <input type="text" name="value" placeholder="Cash price, trade wish list, or donation" />
-          </label>
-        </div>
+          <div class="field-row split">
+            <div class="field-row stack">
+              <label for="sell-condition">Condition:</label>
+              <select id="sell-condition" name="condition">
+                <option value="plays">Fully working</option>
+                <option value="needs-work">Works but needs TLC</option>
+                <option value="dead">Dead / for parts</option>
+                <option value="unknown">Unknown</option>
+              </select>
+            </div>
 
-        <label class="tall">
-          <span class="lbl">Anything else we should know?</span>
-          <textarea name="notes" rows="6" placeholder="Access issues, missing cables, sentimental attachments, etc."></textarea>
-        </label>
+            <div class="field-row stack">
+              <label for="sell-value">Value / Trade idea:</label>
+              <input id="sell-value" type="text" name="value" placeholder="Cash price, trade wish list, or donation" />
+            </div>
+          </div>
 
-        <div class="row">
-          <label class="short">
-            <span class="lbl">Photos / docs:</span>
-            <input type="file" name="upload" accept="image/*,application/pdf" multiple />
-          </label>
-          <label class="short">
-            <span class="lbl">Phone (optional):</span>
-            <input type="text" name="phone" placeholder="If text is easier" />
-          </label>
-        </div>
+          <div class="field-row stack">
+            <label for="sell-notes">Anything else we should know?</label>
+            <textarea id="sell-notes" name="notes" rows="6" placeholder="Access issues, missing cables, sentimental attachments, etc."></textarea>
+          </div>
 
-        <div class="buttons">
-          <button type="submit">Send Details</button>
-          <button type="reset">Clear</button>
-        </div>
+          <div class="field-row split">
+            <div class="field-row stack">
+              <label for="sell-upload">Photos / docs:</label>
+              <input id="sell-upload" type="file" name="upload" accept="image/*,application/pdf" multiple />
+            </div>
+            <div class="field-row stack">
+              <label for="sell-phone">Phone (optional):</label>
+              <input id="sell-phone" type="text" name="phone" placeholder="If text is easier" />
+            </div>
+          </div>
 
-        <div id="formStatus" class="status" role="status" aria-live="polite"></div>
-      </form>
+          <div class="field-row actions">
+            <button class="btn btn-default" type="submit">Send Details</button>
+            <button class="btn" type="reset">Clear</button>
+          </div>
+
+          <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
     </div>
   </section>
 </main>
-
-<style>
-@font-face {
-  font-family: 'EnterCommand';
-  src: url('../fonts/EnterCommand.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.title-section + p,
-.title-section + p + p {
-  font-family: 'EnterCommand', monospace;
-  font-size: 32px;
-  line-height: 1.45;
-  margin-bottom: 1rem;
-}
-
-.win98-wrap {
-  max-width: 820px;
-  margin: 2rem auto;
-  font-family: 'EnterCommand', monospace;
-}
-
-.win98-window {
-  background: #c0c0c0;
-  border: 1px solid #000;
-  box-shadow: 6px 8px 18px rgba(0,0,0,0.8);
-  padding: 8px;
-  font-family: 'EnterCommand', monospace;
-  font-size: 26px;
-}
-
-.win98-titlebar {
-  position: relative;
-  padding-right: 0px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: flex-start;
-  white-space: nowrap;
-  background: linear-gradient(#000080, #1084d0);
-  color: #fff;
-  padding: 0px 8px;
-  font-weight: 700;
-  font-size: 30px;
-  height: 30px;
-  box-sizing: border-box;
-}
-
-.win98-controls{
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 6px;
-}
-
-.win98-controls span {
-  display: inline-block;
-  border: 1px solid #fff;
-  background: #c0c0c0;
-  color: #000;
-  width: 22px;
-  height: 19px;
-  line-height: 18px;
-  text-align: center;
-  font-size: 18px;
-}
-
-form {
-  margin-top: 1.5rem;
-}
-
-.row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 0.7em;
-  color: #000;
-}
-
-.lbl {
-  font-weight: 700;
-}
-
-.short {
-  flex: 1 1 220px;
-}
-
-.long,
-.tall {
-  width: 100%;
-}
-
-input,
-textarea,
-select {
-  font-family: 'EnterCommand', monospace;
-  font-size: 1em;
-  padding: 0.3em 0.4em;
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-  color: #000;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.buttons {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 10px;
-}
-
-button {
-  font-family: 'EnterCommand', monospace;
-  font-size: 0.9em;
-  padding: 0.5em 1.25em;
-  border: 2px solid #000;
-  background: #fff;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #000;
-  color: #fff;
-}
-
-.hp {
-  position: absolute;
-  left: -9999px;
-}
-
-.status {
-  margin-top: 1.2rem;
-  min-height: 1.4em;
-  font-size: 0.8em;
-}
-</style>
 
 <footer>
   <p>&copy; 2025 – Otorlymern Electrical Services – Sell Your Gear</p>
