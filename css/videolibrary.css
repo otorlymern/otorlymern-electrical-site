@@ -264,6 +264,48 @@ body.vhs-library .nav-bar a:hover {
   object-fit: cover;
 }
 
+.mute-toggle {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(8, 8, 8, 0.6);
+  color: #f2f2f2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 6;
+}
+
+.mute-toggle:hover {
+  background: rgba(8, 8, 8, 0.8);
+}
+
+.mute-toggle:focus-visible {
+  outline: 2px solid rgba(255, 204, 143, 0.9);
+  outline-offset: 2px;
+}
+
+.mute-toggle__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.mute-toggle.is-muted::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 24px;
+  background: #ffb3b3;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
 .scanlines {
   pointer-events: none;
   position: absolute;
