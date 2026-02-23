@@ -1,426 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>OES CRT Wall</title>
-    <style>
-      @font-face {
-        font-family: "VCR OSD Mono";
-        src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
 
-      body {
-        margin: 0;
-        font-family: "VCR OSD Mono", monospace;
-        background: #00001099 url('/images/staticsnow.png');
-        color: #06602174;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <title>OES CRT Wall</title>
+  <style>
+    @font-face {
+      font-family: "VCR OSD Mono";
+      src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 
+    :root {
+      --terminal-green: #39ff14;
+      --terminal-gray: #232323;
+    }
+
+    body {
+      margin: 0;
+      font-family: "VCR OSD Mono", monospace;
+      background-color: var(--terminal-gray);
+      background-image: linear-gradient(rgba(35, 35, 35, 0.78),
+          rgba(35, 35, 35, 0.78)),
+        url("/images/staticsnow.png");
+      background-repeat: repeat, repeat;
+      background-size: auto, auto;
+      color: var(--terminal-green);
+    }
+
+    body,
+    body * {
+      color: var(--terminal-green) !important;
+      /* heavier, legible weight and a soft drop shadow */
+      font-weight: 700 !important;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 255, 0, 0.04) !important;
+    }
+
+    /* remove the dark highlight "background" behind inline text
+         so text sits directly on the backdrop; keep box-decoration-break
+         settings for elements that may wrap */
+    body :is(a, p, li, span, .page-title, .page-subtitle, .wall-title, .crt-label, .footer-note) {
+      background-color: transparent;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .page-title {
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-align: center;
+      margin-bottom: 4px;
+      text-shadow: 0 0 6px #09c13728;
+    }
+
+    .page-subtitle {
+      font-size: 11px;
+      text-align: center;
+      color: #88ffbb;
+      margin-bottom: 16px;
+    }
+
+    /* MAIN CRT */
+    .main-crt-wrapper {
+      position: relative;
+      margin: 0 auto 22px;
+      max-width: 1200px;
+      padding: 0 8px;
+      overflow: visible;
+      width: 100%;
+    }
+
+    .main-crt-bezel {
+      position: relative;
+      width: 100%;
+      padding-top: 87.5%;
+      background: radial-gradient(circle at top, #101030, #010105 70%);
+      border-radius: 18px;
+      box-shadow: 0 0 22px #00ff9988, 0 14px 28px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    .main-crt-screen-frame {
+      width: 75.6%;
+      height: 62.1%;
+      left: 12.7%;
+      top: 11.4%;
+      background: #0b0b0f;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #91969488;
+      box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+      position: absolute;
+      z-index: 2;
+    }
+
+    .main-crt-screen {
+      position: absolute;
+      inset: 0;
+      border: none;
+      width: 100%;
+      height: 100%;
+      background: #060606;
+      z-index: 1;
+    }
+
+    .main-scanlines {
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.28),
+          rgba(0, 0, 0, 0.28) 2px,
+          rgba(0, 0, 0, 0.0) 3px);
+      mix-blend-mode: multiply;
+      z-index: 2;
+    }
+
+    .main-crt-overlay {
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      background: url("/video/crt-overlays/crt-main.png") center/contain no-repeat;
+      mix-blend-mode: screen;
+      opacity: 0.95;
+      z-index: 4;
+    }
+
+    .main-crt-label {
+      margin-top: 6px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      color: #aaffdd;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .main-crt-label span:last-child {
+      font-family: "Courier New", monospace;
+      font-size: 10px;
+      color: #77ffbb;
+    }
+
+    /* CRT WALL */
+    .wall-title {
+      font-size: 11px;
+      margin: 8px 0 4px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #abb9b2;
+    }
+
+    .crt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .crt-tile {
+      position: relative;
+      background: linear-gradient(180deg, rgba(10, 20, 14, 0.72), rgba(6, 14, 8, 0.5));
+      border-radius: 14px;
+      padding: 10px 8px 12px;
+      border: 1px solid #1f3a2f;
+      box-shadow: 0 8px 20px #000000;
+      cursor: grab;
+      transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, border-color 0.08s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .crt-tile:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 18px #2aff88;
+      border-color: #66ffcc;
+    }
+
+    .crt-tile.active {
+      box-shadow: 0 0 22px #33ff66;
+      border-color: #66ffcc;
+    }
+
+    .crt-inner-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 5 / 3;
+      background: radial-gradient(circle at 40% 20%, rgba(102, 141, 120, 0.08), rgba(0, 0, 0, 0.6));
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #0f1b14;
+      box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+    }
+
+    .crt-thumb {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: auto;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
+    }
+
+    .crt-mini-scan {
+      display: none;
+    }
+
+    .crt-label {
+      margin-top: 0;
+      font-size: 11px;
+      color: #88ffbb;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .crt-meta {
+      display: none;
+    }
+
+    .footer-note {
+      font-size: 9px;
+      color: #597616;
+      border-top: 1px dashed #224422;
+      padding-top: 6px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
       .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 16px;
+        padding: 8px;
       }
 
       .page-title {
-        font-size: 22px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        text-align: center;
-        margin-bottom: 4px;
-        text-shadow: 0 0 6px #09c13728;
-      }
-
-      .page-subtitle {
-        font-size: 11px;
-        text-align: center;
-        color: #88ffbb;
-        margin-bottom: 16px;
-      }
-
-      /* MAIN CRT */
-      .main-crt-wrapper {
-        position: relative;
-        margin: 0 auto 22px;
-        max-width: 1200px;
-        padding: 0 8px;
-        overflow: visible;
-        width: 100%;
-      }
-
-      .main-crt-bezel {
-        position: relative;
-        width: 100%;
-        padding-top: 87.5%;
-        background: radial-gradient(circle at top, #101030, #010105 70%);
-        border-radius: 18px;
-        box-shadow: 0 0 22px #00ff9988, 0 14px 28px rgba(0, 0, 0, 0.6);
-        overflow: hidden;
-      }
-
-      .main-crt-screen-frame {
-        width: 75.6%;
-        height: 62.1%;
-        left: 12.7%;
-        top: 11.4%;
-        background: #0b0b0f;
-        overflow: hidden;
-        border-radius: 12px;
-        border: 2px solid #91969488;
-        box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-        position: absolute;
-        z-index: 2;
-      }
-
-      .main-crt-screen {
-        position: absolute;
-        inset: 0;
-        border: none;
-        width: 100%;
-        height: 100%;
-        background: #060606;
-        z-index: 1;
-      }
-
-      .main-scanlines {
-        pointer-events: none;
-        position: absolute;
-        inset: 0;
-        background: repeating-linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.28),
-          rgba(0, 0, 0, 0.28) 2px,
-          rgba(0, 0, 0, 0.0) 3px
-        );
-        mix-blend-mode: multiply;
-        z-index: 2;
-      }
-
-      .main-crt-overlay {
-        pointer-events: none;
-        position: absolute;
-        inset: 0;
-        background: url("/video/crt-overlays/crt-main.png") center/contain
-          no-repeat;
-        mix-blend-mode: screen;
-        opacity: 0.95;
-        z-index: 4;
-      }
-
-      .main-crt-label {
-        margin-top: 6px;
-        font-size: 12px;
-        display: flex;
-        justify-content: space-between;
-        color: #aaffdd;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        z-index: 5;
-      }
-
-      .main-crt-label span:last-child {
-        font-family: "Courier New", monospace;
-        font-size: 10px;
-        color: #77ffbb;
-      }
-
-      /* CRT WALL */
-      .wall-title {
-        font-size: 11px;
-        margin: 8px 0 4px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #abb9b2;
+        font-size: 18px;
       }
 
       .crt-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 14px;
-        margin-bottom: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+    }
+  </style>
+</head>
 
-      .crt-tile {
-        position: relative;
-        background: linear-gradient(180deg, rgba(10, 20, 14, 0.72), rgba(6, 14, 8, 0.5));
-        border-radius: 14px;
-        padding: 10px 8px 12px;
-        border: 1px solid #1f3a2f;
-        box-shadow: 0 8px 20px #000000;
-        cursor: grab;
-        transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, border-color 0.08s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
+<body>
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/systems/systems.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown">
+          <a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and
+                Synthesis</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="wrapper">
+    <div class="page-title">OES MULTI-CRT CONTROL ROOM</div>
+    <div class="page-subtitle">
+      Click a monitor below to route a tape to the main screen. Videos hosted
+      on videos.scanlines.xyz.
+    </div>
 
-      .crt-tile:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 0 18px #2aff88;
-        border-color: #66ffcc;
-      }
-
-      .crt-tile.active {
-        box-shadow: 0 0 22px #33ff66;
-        border-color: #66ffcc;
-      }
-
-      .crt-inner-frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 5 / 3;
-        background: radial-gradient(circle at 40% 20%, rgba(102, 141, 120, 0.08), rgba(0, 0, 0, 0.6));
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid #0f1b14;
-        box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 6px;
-      }
-
-      .crt-thumb {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        image-rendering: auto;
-        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
-      }
-
-      .crt-mini-scan {
-        display: none;
-      }
-
-      .crt-label {
-        margin-top: 0;
-        font-size: 11px;
-        color: #88ffbb;
-        text-align: center;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      .crt-meta {
-        display: none;
-      }
-
-      .footer-note {
-        font-size: 9px;
-        color: #597616;
-        border-top: 1px dashed #224422;
-        padding-top: 6px;
-        text-align: center;
-      }
-
-      @media (max-width: 700px) {
-        .wrapper {
-          padding: 8px;
-        }
-        .page-title {
-          font-size: 18px;
-        }
-        .crt-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-    </style>
-  </head>
-  <body>
-<header>
-  <nav>
-    <ul class="nav-bar">
-      <li><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/systems/systems.html">Systems</a>
-        <ul class="dropdown-content">
-          <li><a href="/music/studio.html">OEStudio</a></li>
-          <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-          <li><a href="/systems/home-recording.html">Home Recording</a></li>
-          <li><a href="/video/videolibrary.html">Video Library</a></li>
-          <li><a href="/solutions/resources/index.html">Resources</a></li>
-        </ul>
-      </li>
-      <li><a href="/services/index.html">Services</a></li>
-      <li class="dropdown">
-        <a href="/solutions/index.html">Solutions</a>
-        <ul class="dropdown-content">
-                    <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
-<li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
-          <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-          <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
-          <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
-          <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
-    <div class="wrapper">
-      <div class="page-title">OES MULTI-CRT CONTROL ROOM</div>
-      <div class="page-subtitle">
-        Click a monitor below to route a tape to the main screen. Videos hosted
-        on videos.scanlines.xyz.
+    <!-- MAIN CRT PLAYER -->
+    <div class="main-crt-wrapper">
+      <div class="main-crt-bezel">
+        <div class="main-crt-screen-frame">
+          <iframe id="mainFrame" class="main-crt-screen" src="about:blank" loading="lazy"
+            sandbox="allow-same-origin allow-scripts allow-popups" allowfullscreen></iframe>
+          <div class="main-scanlines"></div>
+        </div>
+        <div class="main-crt-overlay" aria-hidden="true"></div>
       </div>
-
-      <!-- MAIN CRT PLAYER -->
-      <div class="main-crt-wrapper">
-        <div class="main-crt-bezel">
-          <div class="main-crt-screen-frame">
-            <iframe
-              id="mainFrame"
-              class="main-crt-screen"
-              src="about:blank"
-              loading="lazy"
-              sandbox="allow-same-origin allow-scripts allow-popups"
-              allowfullscreen
-            ></iframe>
-            <div class="main-scanlines"></div>
-          </div>
-          <div class="main-crt-overlay" aria-hidden="true"></div>
-        </div>
-        <div class="main-crt-label">
-          <span id="mainTitle">NO SIGNAL</span>
-          <span id="mainStatus">CH 00 • LINE IN</span>
-        </div>
-      </div>
-
-      <!-- CRT WALL -->
-      <div class="wall-title">Wall of Sets / Select a Tape Channel</div>
-      <div class="crt-grid" id="crtGrid">
-        <!-- CRT 1 -->
-        <div
-          class="crt-tile"
-          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_1"
-          data-title="Title 1 (VHS) (YEAR)"
-          data-meta="VHS CHANNEL 01"
-        >
-          <div class="crt-inner-frame">
-            <img
-              class="crt-thumb"
-              src="/video/vhs_tapes/vhsreal1.png"
-              alt="Title 1 (VHS) (YEAR)"
-            />
-          </div>
-          <div class="crt-label">Title 1 (VHS) (YEAR)</div>
-        </div>
-
-        <!-- CRT 2 -->
-        <div
-          class="crt-tile"
-          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_2"
-          data-title="Title 2 (VHS) (YEAR)"
-          data-meta="VHS CHANNEL 02"
-        >
-          <div class="crt-inner-frame">
-            <img
-              class="crt-thumb"
-              src="/video/vhs_tapes/vhsreal2.png"
-              alt="Title 2 (VHS) (YEAR)"
-            />
-          </div>
-          <div class="crt-label">Title 2 (VHS) (YEAR)</div>
-        </div>
-
-        <!-- CRT 3 -->
-        <div
-          class="crt-tile"
-          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_3"
-          data-title="Title 3 (VHS) (YEAR)"
-          data-meta="VHS CHANNEL 03"
-        >
-          <div class="crt-inner-frame">
-            <img
-              class="crt-thumb"
-              src="/video/vhs_tapes/vhsreal3.png"
-              alt="Title 3 (VHS) (YEAR)"
-            />
-          </div>
-          <div class="crt-label">Title 3 (VHS) (YEAR)</div>
-        </div>
-
-        <!-- CRT 4 -->
-        <div
-          class="crt-tile"
-          data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_4"
-          data-title="Title 4 (VHS) (YEAR)"
-          data-meta="VHS CHANNEL 04"
-        >
-          <div class="crt-inner-frame">
-            <img
-              class="crt-thumb"
-              src="/video/vhs_tapes/vhsreal4.png"
-              alt="Title 4 (VHS) (YEAR)"
-            />
-          </div>
-          <div class="crt-label">Title 4 (VHS) (YEAR)</div>
-        </div>
-
-        <!-- Add more CRT tiles as needed using the same pattern -->
-      </div>
-
-      <div class="footer-note">
-        Tip: you can use animated GIF static or low-res thumbnails here so it
-        still feels alive<br />
-        even when nothing is playing on the main CRT.
+      <div class="main-crt-label">
+        <span id="mainTitle">NO SIGNAL</span>
+        <span id="mainStatus">CH 00 • LINE IN</span>
       </div>
     </div>
 
-    <script>
-      const mainFrame = document.getElementById("mainFrame");
-      const mainTitle = document.getElementById("mainTitle");
-      const mainStatus = document.getElementById("mainStatus");
-      const crtGrid = document.getElementById("crtGrid");
-      const tiles = Array.from(document.querySelectorAll(".crt-tile"));
+    <!-- CRT WALL -->
+    <div class="wall-title">Wall of Sets / Select a Tape Channel</div>
+    <div class="crt-grid" id="crtGrid">
+      <!-- CRT 1 -->
+      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_1"
+        data-title="Title 1 (VHS) (YEAR)" data-meta="VHS CHANNEL 01">
+        <div class="crt-inner-frame">
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal1.png" alt="Title 1 (VHS) (YEAR)" />
+        </div>
+        <div class="crt-label">Title 1 (VHS) (YEAR)</div>
+      </div>
 
-      function setActiveTile(tile) {
-        tiles.forEach((t) => t.classList.remove("active"));
-        if (tile) tile.classList.add("active");
-      }
+      <!-- CRT 2 -->
+      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_2"
+        data-title="Title 2 (VHS) (YEAR)" data-meta="VHS CHANNEL 02">
+        <div class="crt-inner-frame">
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal2.png" alt="Title 2 (VHS) (YEAR)" />
+        </div>
+        <div class="crt-label">Title 2 (VHS) (YEAR)</div>
+      </div>
 
-      function routeToMain(tile) {
-        const url = tile.getAttribute("data-video-url");
-        const title = tile.getAttribute("data-title") || "Untitled";
-        const meta = tile.getAttribute("data-meta") || "";
+      <!-- CRT 3 -->
+      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_3"
+        data-title="Title 3 (VHS) (YEAR)" data-meta="VHS CHANNEL 03">
+        <div class="crt-inner-frame">
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal3.png" alt="Title 3 (VHS) (YEAR)" />
+        </div>
+        <div class="crt-label">Title 3 (VHS) (YEAR)</div>
+      </div>
 
-        if (!url) return;
+      <!-- CRT 4 -->
+      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_4"
+        data-title="Title 4 (VHS) (YEAR)" data-meta="VHS CHANNEL 04">
+        <div class="crt-inner-frame">
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal4.png" alt="Title 4 (VHS) (YEAR)" />
+        </div>
+        <div class="crt-label">Title 4 (VHS) (YEAR)</div>
+      </div>
 
-        mainFrame.src = url;
-        mainTitle.textContent = title;
-        mainStatus.textContent = meta || "PLAYING";
+      <!-- Add more CRT tiles as needed using the same pattern -->
+    </div>
 
-        setActiveTile(tile);
-      }
-
-      crtGrid.addEventListener("click", function (event) {
-        const tile = event.target.closest(".crt-tile");
-        if (!tile) return;
-        routeToMain(tile);
-      });
-
-      // Optionally: auto-load the first CRT on page load
-      window.addEventListener("DOMContentLoaded", function () {
-        if (tiles.length > 0) {
-          routeToMain(tiles[0]);
-        }
-      });
-    </script>
-    <footer>
-  <p>&copy; 2025 – Otorlymern Electrical Systems – Archive</p>
-  <div class="footer-badges">
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
-    <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
-    <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
-    <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
+    <div class="footer-note">
+      Tip: you can use animated GIF static or low-res thumbnails here so it
+      still feels alive<br />
+      even when nothing is playing on the main CRT.
+    </div>
   </div>
-</footer>
-  </body>
+
+  <script>
+    const mainFrame = document.getElementById("mainFrame");
+    const mainTitle = document.getElementById("mainTitle");
+    const mainStatus = document.getElementById("mainStatus");
+    const crtGrid = document.getElementById("crtGrid");
+    const tiles = Array.from(document.querySelectorAll(".crt-tile"));
+
+    function setActiveTile(tile) {
+      tiles.forEach((t) => t.classList.remove("active"));
+      if (tile) tile.classList.add("active");
+    }
+
+    function routeToMain(tile) {
+      const url = tile.getAttribute("data-video-url");
+      const title = tile.getAttribute("data-title") || "Untitled";
+      const meta = tile.getAttribute("data-meta") || "";
+
+      if (!url) return;
+
+      mainFrame.src = url;
+      mainTitle.textContent = title;
+      mainStatus.textContent = meta || "PLAYING";
+
+      setActiveTile(tile);
+    }
+
+    crtGrid.addEventListener("click", function (event) {
+      const tile = event.target.closest(".crt-tile");
+      if (!tile) return;
+      routeToMain(tile);
+    });
+
+    // Optionally: auto-load the first CRT on page load
+    window.addEventListener("DOMContentLoaded", function () {
+      if (tiles.length > 0) {
+        routeToMain(tiles[0]);
+      }
+    });
+  </script>
+  <footer>
+    <p>&copy; 2025 – Otorlymern Electrical Systems – Archive</p>
+    <div class="footer-badges">
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img
+          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+          alt="Shop My Store on Reverb" /></a>
+      <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
+      <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
+      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img
+          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+          alt="Shop My Store on Reverb" /></a>
+    </div>
+  </footer>
+</body>
+
 </html>
