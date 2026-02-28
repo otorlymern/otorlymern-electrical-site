@@ -2,7 +2,9 @@
   "config": {
     "recentLimit": 8,
     "hideSoldOlderThanDays": 900,
-    "defaultManualId": "revox-a77"
+    "defaultManualId": "revox-a77",
+    "dataVersion": "2026-02-28",
+    "assetBaseUrl": ""
   },
   "manuals": [
     {
