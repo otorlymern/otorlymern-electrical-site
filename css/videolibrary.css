@@ -94,6 +94,29 @@ body.vhs-library .nav-bar a:hover {
   font-size: 0.95rem;
 }
 
+.library-hero-title {
+  margin: 0.2rem 0 0.85rem;
+  font-family: "Lyno-Jean", sans-serif;
+  font-size: clamp(3.4rem, 11vw, 9.8rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.library-hero-title .wiggle-title {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 28px);
+}
+
+.library-hero-title .hero-vcr-gif {
+  width: clamp(78px, 11vw, 170px);
+  height: auto;
+  transform: translateY(-0.06em);
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45));
+}
+
 .hero-description {
   max-width: 740px;
   margin: 0.4rem auto 0;
@@ -399,6 +422,18 @@ body.vhs-library .nav-bar a:hover {
   letter-spacing: 0.08em;
   padding: 0 0.1rem 0.15rem;
   text-transform: uppercase;
+}
+
+.crt-caption__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.crt-caption__link:hover .crt-caption__text,
+.crt-caption__link:focus-visible .crt-caption__text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .pilot-light {

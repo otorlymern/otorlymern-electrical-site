@@ -1,0 +1,685 @@
+(() => {
+  const DATA_URL = "/manuals/data/archive.json";
+  const STORAGE_KEY = "oes.manuals.lastOpenedId";
+  const PDFJS_SCRIPT_URL = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+  const PDFJS_WORKER_URL = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+  const state = {
+    config: {
+      recentLimit: 8,
+      hideSoldOlderThanDays: null,
+      defaultManualId: null,
+    },
+    manuals: [],
+    soldUnits: [],
+    manualById: new Map(),
+    filteredManuals: [],
+    selectedManualId: null,
+    selectedManualCode: null,
+    currentPdfUrl: null,
+    pdfDoc: null,
+    pageNum: 1,
+    zoomFactor: 1,
+    pdfJsReadyPromise: null,
+  };
+
+  const els = {};
+
+  function getEl(id) {
+    return document.getElementById(id);
+  }
+
+  function normalize(str) {
+    return (str || "")
+      .toString()
+      .trim()
+      .toUpperCase()
+      .replace(/\s+/g, "");
+  }
+
+  function tokenize(str) {
+    return (str || "")
+      .toLowerCase()
+      .split(/[^a-z0-9-]+/)
+      .filter(Boolean);
+  }
+
+  function formatDate(value) {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return "Unknown";
+    }
+    return new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }).format(date);
+  }
+
+  function escapeHtml(str) {
+    return (str || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function readManualIdFromLocation() {
+    const url = new URL(window.location.href);
+    const queryId = url.searchParams.get("m");
+    if (queryId) {
+      return queryId;
+    }
+
+    const path = window.location.pathname.replace(/\/+$/, "");
+    const parts = path.split("/").filter(Boolean);
+    if (parts.length >= 2 && parts[0] === "manuals" && parts[1] !== "index.html") {
+      return parts[1];
+    }
+
+    return null;
+  }
+
+  function writeManualIdToLocation(manualId) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("m", manualId);
+    window.history.replaceState({}, "", `${url.pathname}?${url.searchParams.toString()}`);
+  }
+
+  function updateStatus(text) {
+    els.searchStatus.textContent = text || "";
+  }
+
+  function setSelectedManualInStorage(manualId) {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, manualId);
+    } catch (_) {
+      // No-op when storage is blocked.
+    }
+  }
+
+  function getStoredManualId() {
+    try {
+      return window.localStorage.getItem(STORAGE_KEY);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function findExactManualCodeMatch(normalizedCode) {
+    if (!normalizedCode) {
+      return null;
+    }
+
+    const soldUnit = state.soldUnits.find((unit) => unit._manualCodeNormalized === normalizedCode);
+    if (soldUnit) {
+      const manual = state.manualById.get(soldUnit.manualId);
+      if (manual) {
+        return {
+          manual,
+          manualCode: soldUnit.manualCode,
+          source: "soldUnit",
+        };
+      }
+    }
+
+    const manual = state.manuals.find((entry) => entry._manualCodeNormalized === normalizedCode);
+    if (manual) {
+      return {
+        manual,
+        manualCode: manual.manualCode || "",
+        source: "manual",
+      };
+    }
+
+    return null;
+  }
+
+  function fuzzySearchManuals(query) {
+    const tokens = tokenize(query);
+    if (!tokens.length) {
+      return [...state.manuals];
+    }
+
+    const queryLower = query.toLowerCase();
+
+    return state.manuals
+      .map((manual) => {
+        let score = 0;
+        if (manual._searchText.includes(queryLower)) {
+          score += 8;
+        }
+
+        for (const token of tokens) {
+          if (manual._searchText.includes(token)) {
+            score += 2;
+          }
+        }
+
+        if (manual._manualCodeNormalized && manual._manualCodeNormalized.includes(normalize(query))) {
+          score += 5;
+        }
+
+        return { manual, score };
+      })
+      .filter((row) => row.score > 0)
+      .sort((a, b) => {
+        if (b.score !== a.score) {
+          return b.score - a.score;
+        }
+        return new Date(b.manual.updatedAt).getTime() - new Date(a.manual.updatedAt).getTime();
+      })
+      .map((row) => row.manual);
+  }
+
+  function renderManualResults(manuals, activeId) {
+    els.manualSearchResults.innerHTML = "";
+
+    manuals.forEach((manual) => {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `manual-result${manual.id === activeId ? " is-active" : ""}`;
+      button.setAttribute("data-manual-id", manual.id);
+      button.innerHTML = `
+        <div class="result-title">${escapeHtml(manual.title)}</div>
+        <div class="result-meta">${escapeHtml(manual.brand)} · ${escapeHtml(manual.model)}${manual.manualCode ? ` · ${escapeHtml(manual.manualCode)}` : ""}</div>
+      `;
+      button.addEventListener("click", () => {
+        selectManual(manual.id, {
+          from: "results",
+          manualCode: manual.manualCode || null,
+        });
+      });
+
+      li.appendChild(button);
+      els.manualSearchResults.appendChild(li);
+    });
+  }
+
+  function getRecentSoldUnits() {
+    const limit = Number(state.config.recentLimit) || 8;
+    const days = state.config.hideSoldOlderThanDays;
+    const now = Date.now();
+
+    let list = [...state.soldUnits];
+    if (typeof days === "number" && days > 0) {
+      const maxAgeMs = days * 24 * 60 * 60 * 1000;
+      list = list.filter((unit) => {
+        const age = now - new Date(unit.soldDate).getTime();
+        return age <= maxAgeMs;
+      });
+    }
+
+    return list.slice(0, limit);
+  }
+
+  function renderRecentUnits(activeManualCode) {
+    const recentUnits = getRecentSoldUnits();
+    els.recentUnitsList.innerHTML = "";
+    els.recentCount.textContent = `${recentUnits.length} shown`;
+
+    recentUnits.forEach((unit) => {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+
+      const isActive = activeManualCode && normalize(activeManualCode) === unit._manualCodeNormalized;
+      button.className = `recent-unit${isActive ? " is-active" : ""}`;
+      button.innerHTML = `
+        <div class="result-title">${escapeHtml(unit.manualCode)} · ${escapeHtml(unit.itemName)}</div>
+        <div class="result-meta">${formatDate(unit.soldDate)} · ${escapeHtml(unit.platform)}${unit.serial ? ` · S/N ${escapeHtml(unit.serial)}` : ""}</div>
+      `;
+
+      button.addEventListener("click", () => {
+        selectManual(unit.manualId, {
+          from: "recent",
+          manualCode: unit.manualCode,
+        });
+      });
+
+      if (unit.listingUrl) {
+        button.title = `Open listing: ${unit.listingUrl}`;
+      }
+
+      li.appendChild(button);
+      els.recentUnitsList.appendChild(li);
+    });
+  }
+
+  function updateManualJsonLd(manual) {
+    if (!manual) {
+      els.manualJsonld.textContent = "{}";
+      return;
+    }
+
+    const shareUrl = `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      headline: `${manual.title} Manual`,
+      name: `${manual.title} Manual`,
+      about: `${manual.brand} ${manual.model}`,
+      keywords: (manual.tags || []).join(", "),
+      datePublished: manual.createdAt,
+      dateModified: manual.updatedAt,
+      url: shareUrl,
+      publisher: {
+        "@type": "Organization",
+        name: "Otorlymern Electrical Systems",
+        url: "https://otorlymern-electrical.com/",
+      },
+      mainEntityOfPage: shareUrl,
+      associatedMedia: {
+        "@type": "MediaObject",
+        contentUrl: manual.pdfUrl,
+      },
+    };
+
+    els.manualJsonld.textContent = JSON.stringify(jsonLd, null, 2);
+  }
+
+  function updateManualMeta(manual, manualCodeOverride) {
+    els.manualTitle.textContent = manual.title;
+    els.manualBrand.textContent = manual.brand;
+    els.manualModel.textContent = manual.model;
+    els.manualCode.textContent = manualCodeOverride || manual.manualCode || "Not assigned";
+    els.manualUpdated.textContent = formatDate(manual.updatedAt);
+    els.manualNotes.textContent = manual.notes || "";
+
+    const shareUrl = `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
+    els.copyShareButton.setAttribute("data-share-url", shareUrl);
+    els.openPdfExternal.href = manual.pdfUrl;
+
+    const serviceUrl = new URL("/services/repairrequest.html", window.location.origin);
+    serviceUrl.searchParams.set("brand", manual.brand);
+    serviceUrl.searchParams.set("model", manual.model);
+    if (manualCodeOverride || manual.manualCode) {
+      serviceUrl.searchParams.set("manualCode", manualCodeOverride || manual.manualCode);
+    }
+    serviceUrl.searchParams.set("source", "manuals-archive");
+    els.serviceButton.href = `${serviceUrl.pathname}?${serviceUrl.searchParams.toString()}`;
+
+    updateManualJsonLd(manual);
+  }
+
+  async function loadPdfJsIfNeeded() {
+    if (window.pdfjsLib) {
+      return window.pdfjsLib;
+    }
+
+    if (state.pdfJsReadyPromise) {
+      return state.pdfJsReadyPromise;
+    }
+
+    state.pdfJsReadyPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = PDFJS_SCRIPT_URL;
+      script.async = true;
+      script.onload = () => {
+        if (!window.pdfjsLib) {
+          reject(new Error("PDF.js script loaded without pdfjsLib"));
+          return;
+        }
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER_URL;
+        resolve(window.pdfjsLib);
+      };
+      script.onerror = () => reject(new Error("Failed to load PDF.js"));
+      document.head.appendChild(script);
+    });
+
+    return state.pdfJsReadyPromise;
+  }
+
+  async function renderPdfPage() {
+    if (!state.pdfDoc) {
+      return;
+    }
+
+    const page = await state.pdfDoc.getPage(state.pageNum);
+    const canvas = els.pdfCanvas;
+    const context = canvas.getContext("2d", { alpha: false });
+    const baseViewport = page.getViewport({ scale: 1 });
+
+    const availableWidth = Math.max(320, els.pdfCanvasWrap.clientWidth - 18);
+    const fitScale = (availableWidth / baseViewport.width) * state.zoomFactor;
+    const viewport = page.getViewport({ scale: fitScale });
+
+    canvas.width = Math.ceil(viewport.width);
+    canvas.height = Math.ceil(viewport.height);
+
+    await page.render({
+      canvasContext: context,
+      viewport,
+    }).promise;
+
+    els.pageIndicator.textContent = `Page ${state.pageNum} / ${state.pdfDoc.numPages}`;
+    els.zoomIndicator.textContent = `${Math.round(state.zoomFactor * 100)}%`;
+
+    els.prevPageButton.disabled = state.pageNum <= 1;
+    els.nextPageButton.disabled = state.pageNum >= state.pdfDoc.numPages;
+  }
+
+  async function showPdfWithPdfJs(pdfUrl) {
+    const pdfjsLib = await loadPdfJsIfNeeded();
+
+    if (state.currentPdfUrl !== pdfUrl) {
+      state.currentPdfUrl = pdfUrl;
+      state.pageNum = 1;
+      state.zoomFactor = 1;
+      const loadingTask = pdfjsLib.getDocument(pdfUrl);
+      state.pdfDoc = await loadingTask.promise;
+    }
+
+    els.viewerEmpty.classList.add("is-hidden");
+    els.pdfFallback.classList.add("is-hidden");
+    els.pdfJsContainer.classList.remove("is-hidden");
+
+    await renderPdfPage();
+  }
+
+  function showPdfFallback(pdfUrl) {
+    state.pdfDoc = null;
+    state.currentPdfUrl = pdfUrl;
+    els.viewerEmpty.classList.add("is-hidden");
+    els.pdfJsContainer.classList.add("is-hidden");
+    els.pdfFallback.classList.remove("is-hidden");
+    els.pdfFallback.src = pdfUrl;
+  }
+
+  async function openManualPdf(pdfUrl) {
+    try {
+      await showPdfWithPdfJs(pdfUrl);
+    } catch (err) {
+      showPdfFallback(pdfUrl);
+      updateStatus("PDF.js unavailable, using embedded PDF fallback.");
+    }
+  }
+
+  function applySearch(query) {
+    const trimmed = query.trim();
+    if (!trimmed) {
+      state.filteredManuals = [...state.manuals].sort((a, b) => {
+        return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+      });
+      updateStatus(`Showing all manuals (${state.filteredManuals.length}).`);
+      return;
+    }
+
+    const exact = findExactManualCodeMatch(normalize(trimmed));
+    if (exact) {
+      state.filteredManuals = [exact.manual];
+      updateStatus(
+        `Exact code match from ${exact.source === "soldUnit" ? "sold unit" : "manual"}: ${exact.manualCode || exact.manual.manualCode}`
+      );
+      return;
+    }
+
+    state.filteredManuals = fuzzySearchManuals(trimmed);
+    if (!state.filteredManuals.length) {
+      updateStatus("No manuals matched that query.");
+    } else {
+      updateStatus(`Found ${state.filteredManuals.length} matching manual${state.filteredManuals.length === 1 ? "" : "s"}.`);
+    }
+  }
+
+  async function selectManual(manualId, options = {}) {
+    const manual = state.manualById.get(manualId);
+    if (!manual) {
+      return;
+    }
+
+    state.selectedManualId = manual.id;
+    state.selectedManualCode = options.manualCode || manual.manualCode || null;
+
+    updateManualMeta(manual, state.selectedManualCode);
+    renderManualResults(state.filteredManuals, manual.id);
+    renderRecentUnits(state.selectedManualCode);
+
+    writeManualIdToLocation(manual.id);
+    setSelectedManualInStorage(manual.id);
+
+    await openManualPdf(manual.pdfUrl);
+  }
+
+  function bindUiEvents() {
+    els.sidebarToggle.addEventListener("click", () => {
+      const open = !els.archiveSidebar.classList.contains("is-open");
+      els.archiveSidebar.classList.toggle("is-open", open);
+      els.sidebarToggle.setAttribute("aria-expanded", String(open));
+    });
+
+    els.manualSearchInput.addEventListener("input", () => {
+      applySearch(els.manualSearchInput.value);
+      renderManualResults(state.filteredManuals, state.selectedManualId);
+    });
+
+    els.manualSearchForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const query = els.manualSearchInput.value.trim();
+      if (!query) {
+        applySearch("");
+        renderManualResults(state.filteredManuals, state.selectedManualId);
+        return;
+      }
+
+      const exact = findExactManualCodeMatch(normalize(query));
+      if (exact) {
+        await selectManual(exact.manual.id, {
+          from: "search",
+          manualCode: exact.manualCode,
+        });
+        return;
+      }
+
+      applySearch(query);
+      renderManualResults(state.filteredManuals, state.selectedManualId);
+      if (state.filteredManuals[0]) {
+        await selectManual(state.filteredManuals[0].id, {
+          from: "search-fuzzy",
+          manualCode: state.filteredManuals[0].manualCode || null,
+        });
+      }
+    });
+
+    els.copyShareButton.addEventListener("click", async () => {
+      const shareUrl = els.copyShareButton.getAttribute("data-share-url");
+      if (!shareUrl) {
+        return;
+      }
+
+      const previous = els.copyShareButton.textContent;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(shareUrl);
+        } else {
+          const input = document.createElement("input");
+          input.value = shareUrl;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand("copy");
+          input.remove();
+        }
+        els.copyShareButton.textContent = "Copied";
+      } catch (_) {
+        els.copyShareButton.textContent = "Copy failed";
+      }
+      window.setTimeout(() => {
+        els.copyShareButton.textContent = previous;
+      }, 1200);
+    });
+
+    els.prevPageButton.addEventListener("click", async () => {
+      if (!state.pdfDoc || state.pageNum <= 1) {
+        return;
+      }
+      state.pageNum -= 1;
+      await renderPdfPage();
+    });
+
+    els.nextPageButton.addEventListener("click", async () => {
+      if (!state.pdfDoc || state.pageNum >= state.pdfDoc.numPages) {
+        return;
+      }
+      state.pageNum += 1;
+      await renderPdfPage();
+    });
+
+    els.zoomOutButton.addEventListener("click", async () => {
+      if (!state.pdfDoc) {
+        return;
+      }
+      state.zoomFactor = Math.max(0.6, state.zoomFactor - 0.1);
+      await renderPdfPage();
+    });
+
+    els.zoomInButton.addEventListener("click", async () => {
+      if (!state.pdfDoc) {
+        return;
+      }
+      state.zoomFactor = Math.min(2.4, state.zoomFactor + 0.1);
+      await renderPdfPage();
+    });
+
+    window.addEventListener("resize", () => {
+      if (state.pdfDoc) {
+        window.requestAnimationFrame(() => {
+          renderPdfPage().catch(() => {
+            // Ignore resize render errors.
+          });
+        });
+      }
+    });
+
+    els.emailSignupForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = els.signupEmail.value.trim();
+      if (!email) {
+        return;
+      }
+
+      const subject = encodeURIComponent("OES updates signup");
+      const body = encodeURIComponent(`Please add this email to OES updates: ${email}`);
+      window.location.href = `mailto:info@otorlymern-electrical.com?subject=${subject}&body=${body}`;
+    });
+  }
+
+  function normalizeData(raw) {
+    state.config = {
+      ...state.config,
+      ...(raw.config || {}),
+    };
+
+    state.manuals = (raw.manuals || []).map((manual) => {
+      const entry = {
+        ...manual,
+        tags: manual.tags || [],
+      };
+      entry._manualCodeNormalized = normalize(entry.manualCode || "");
+      entry._searchText = [
+        entry.title,
+        entry.brand,
+        entry.model,
+        entry.manualCode,
+        ...(entry.tags || []),
+      ]
+        .join(" ")
+        .toLowerCase();
+      return entry;
+    });
+
+    state.soldUnits = (raw.soldUnits || [])
+      .map((unit) => ({
+        ...unit,
+        _manualCodeNormalized: normalize(unit.manualCode),
+      }))
+      .sort((a, b) => new Date(b.soldDate).getTime() - new Date(a.soldDate).getTime());
+
+    state.manualById = new Map(state.manuals.map((manual) => [manual.id, manual]));
+  }
+
+  async function loadData() {
+    const response = await fetch(DATA_URL, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Failed to load archive data: ${response.status}`);
+    }
+
+    const data = await response.json();
+    normalizeData(data);
+  }
+
+  async function initialize() {
+    Object.assign(els, {
+      sidebarToggle: getEl("sidebarToggle"),
+      archiveSidebar: getEl("archiveSidebar"),
+      manualSearchForm: getEl("manualSearchForm"),
+      manualSearchInput: getEl("manualSearchInput"),
+      manualSearchResults: getEl("manualSearchResults"),
+      searchStatus: getEl("searchStatus"),
+      recentUnitsList: getEl("recentUnitsList"),
+      recentCount: getEl("recentCount"),
+      serviceButton: getEl("serviceButton"),
+      emailSignupForm: getEl("emailSignupForm"),
+      signupEmail: getEl("signupEmail"),
+
+      manualTitle: getEl("manualTitle"),
+      manualBrand: getEl("manualBrand"),
+      manualModel: getEl("manualModel"),
+      manualCode: getEl("manualCode"),
+      manualUpdated: getEl("manualUpdated"),
+      manualNotes: getEl("manualNotes"),
+      copyShareButton: getEl("copyShareButton"),
+      openPdfExternal: getEl("openPdfExternal"),
+
+      viewerEmpty: getEl("viewerEmpty"),
+      pdfJsContainer: getEl("pdfJsContainer"),
+      pdfCanvasWrap: getEl("pdfCanvasWrap"),
+      pdfCanvas: getEl("pdfCanvas"),
+      pdfFallback: getEl("pdfFallback"),
+      prevPageButton: getEl("prevPageButton"),
+      nextPageButton: getEl("nextPageButton"),
+      zoomOutButton: getEl("zoomOutButton"),
+      zoomInButton: getEl("zoomInButton"),
+      pageIndicator: getEl("pageIndicator"),
+      zoomIndicator: getEl("zoomIndicator"),
+
+      manualJsonld: getEl("manual-jsonld"),
+    });
+
+    bindUiEvents();
+
+    try {
+      await loadData();
+    } catch (error) {
+      updateStatus("Could not load archive data. Please contact OES support.");
+      els.viewerEmpty.textContent = "Manual archive data failed to load.";
+      return;
+    }
+
+    applySearch("");
+    renderManualResults(state.filteredManuals, null);
+    renderRecentUnits(null);
+
+    const urlManualId = readManualIdFromLocation();
+    const storedManualId = getStoredManualId();
+    const defaultId = state.config.defaultManualId || (state.manuals[0] && state.manuals[0].id);
+
+    const startupId =
+      (urlManualId && state.manualById.has(urlManualId) && urlManualId) ||
+      (storedManualId && state.manualById.has(storedManualId) && storedManualId) ||
+      defaultId;
+
+    if (startupId) {
+      await selectManual(startupId, {
+        from: "startup",
+      });
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initialize().catch(() => {
+      updateStatus("Initialization failed. Please refresh or contact OES.");
+    });
+  });
+})();

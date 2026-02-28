@@ -41,17 +41,17 @@
 
     body,
     body * {
-      color: var(--terminal-green) !important;
+      color: var(blue) !important;
       /* heavier, legible weight and a soft drop shadow */
-      font-weight: 700 !important;
-      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 255, 0, 0.04) !important;
+      font-weight: 750 !important;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(157, 204, 157, 0.777) !important;
     }
 
 
     body :is(a, p, li, span, .page-title, .page-subtitle, .wall-title, .crt-label, .footer-note) {
       background-color: transparent;
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
+      box-decoration-break: slice;
+      -webkit-box-decoration-break: slice;
     }
 
     .wrapper {
@@ -62,17 +62,18 @@
 
     .page-title {
       font-size: 22px;
+      color: rgba(107, 151, 234, 0.621);
       text-transform: uppercase;
       letter-spacing: 3px;
       text-align: center;
-      margin-bottom: 4px;
-      text-shadow: 0 0 6px #09c13728;
+      margin-bottom: 10px;
+      text-shadow: 0, 0, 0, 6px;
     }
 
     .page-subtitle {
-      font-size: 11px;
+      font-size: 16px;
       text-align: center;
-      color: #88ffbb;
+      color: rgba(107, 151, 234, 0.621);
       margin-bottom: 16px;
     }
 
@@ -99,8 +100,8 @@
       height: 62.1%;
       left: 12.7%;
       top: 11.4%;
-      background: url("/images/staticsnow.png"),
-        box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.8),
+      ,
+      box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.8),
         inset 0 0 0 1px rgba(255, 212, 212, 0.06);
       position: absolute;
       z-index: 2;
@@ -108,24 +109,23 @@
     }
 
     .main-crt-screen {
-      position: absolute;
+      position: relative;
       inset: 0;
       border: none;
       width: 100%;
       height: 100%;
-      background: #060606;
-      z-index: 1;
+      background: url("/images/staticsnow.png") z-index: 10;
     }
 
     .main-scanlines {
-      pointer-events: none;
+      pointer-events: auto;
       position: absolute;
       inset: 0;
       background: repeating-linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.28),
-          rgba(0, 0, 0, 0.28) 2px,
-          rgba(0, 0, 0, 0.0) 3px);
-      mix-blend-mode: multiply;
+          rgba(146, 139, 139, 0.28),
+          rgb(10, 200, 80) 101px,
+          rgba(35, 87, 175, 0.89) 3px);
+      mix-blend-mode: plus-lighter;
       z-index: 2;
     }
 
@@ -135,35 +135,38 @@
       inset: 0;
       background: url("/video/crt-overlays/crt-main.png") center/contain no-repeat;
       mix-blend-mode: screen;
-      opacity: 0.95;
+      opacity: .7;
       z-index: 4;
     }
 
     .main-crt-label {
+      font-family: "Courier New", monospace;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 19px;
       display: flex;
       justify-content: space-between;
-      color: #aaffdd;
+      color: darkgrey;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       position: relative;
       z-index: 5;
     }
 
     .main-crt-label span:last-child {
       font-family: "Courier New", monospace;
-      font-size: 10px;
-      color: #77ffbb;
+      font-size: 16px;
+      color: light gray;
     }
 
-    /* CRT WALL */
+    /* VHS SHELF */
     .wall-title {
-      font-size: 11px;
-      margin: 8px 0 4px;
+      font-family: "Courier New", monospace;
+      font-size: 20px;
+      margin: 30px 0 30px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #abb9b2;
+      letter-spacing: 7px;
+      color: black;
+      z-index: 15;
     }
 
     .crt-grid {
@@ -190,28 +193,27 @@
 
     .crt-tile:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 18px #2aff88;
-      border-color: #66ffcc;
+      box-shadow: 0 0 18px #000006;
+      border-color: #111111;
     }
 
     .crt-tile.active {
-      box-shadow: 0 0 22px #33ff66;
-      border-color: #66ffcc;
+      box-shadow: 10px 10px 112px #6fe956 border-color: floralwhite;
     }
 
     .crt-inner-frame {
       position: relative;
       width: 100%;
-      aspect-ratio: 5 / 3;
+      aspect-ratio: 4 / 3;
       background: radial-gradient(circle at 40% 20%, rgba(102, 141, 120, 0.08), rgba(0, 0, 0, 0.6));
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #0f1b14;
-      box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65);
+      border: 5px solid #0f1b14;
+      box-shadow: inset 0 14px 15px rgba(0, 9, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 6px;
+      padding: 8px;
     }
 
     .crt-thumb {
@@ -219,32 +221,32 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      image-rendering: auto;
-      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
+      image-rendering: pixelated;
+      filter: drop-shadow(0 14px 15px rgba(0.8, 0.6, 0.4, 0.9));
     }
 
     .crt-mini-scan {
-      display: none;
+      display: legacy;
     }
 
     .crt-label {
-      margin-top: 0;
-      font-size: 11px;
-      color: #88ffbb;
+      margin-top: 0.6;
+      font-size: 14px;
+      color: var(--terminal-green);
       text-align: center;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
     }
 
     .crt-meta {
-      display: none;
+      display: -webkit-inline-box;
     }
 
     .footer-note {
-      font-size: 9px;
-      color: #597616;
-      border-top: 1px dashed #224422;
-      padding-top: 6px;
+      font-size: 12px;
+      color: #b8bbaf;
+      border-top: 1px line #224422;
+      padding-top: 12px;
       text-align: center;
     }
 
@@ -319,42 +321,47 @@
     </div>
 
     <!-- CRT WALL -->
-    <div class="wall-title">Wall of Sets / Select a Tape Channel</div>
+    <div class="wall-title">VHS Shelf / Select a Tape To watch on CRT Above</div>
     <div class="crt-grid" id="crtGrid">
       <!-- CRT 1 -->
-      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_1"
-        data-title="Title 1 (VHS) (YEAR)" data-meta="VHS CHANNEL 01">
+      <div class="crt-tile"
+        data-video-url="https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff?loop=1&amp;autoplay=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
+        data-title="Liquid Edutainment (Digital) (2025)" data-meta="VHS CHANNEL 01">
         <div class="crt-inner-frame">
-          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal1.png" alt="Title 1 (VHS) (YEAR)" />
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal1.png" alt="Liquid Edutainment (Digital) (2025)" />
         </div>
-        <div class="crt-label">Title 1 (VHS) (YEAR)</div>
+        <div class="crt-label">Liquid Edutainment (Digital) (2025)</div>
       </div>
 
       <!-- CRT 2 -->
-      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_2"
-        data-title="Title 2 (VHS) (YEAR)" data-meta="VHS CHANNEL 02">
+      <div class="crt-tile"
+        data-video-url="https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a?loop=1&amp;autoplay=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
+        data-title="Girl of Graph (Digital) (2025)" data-meta="VHS CHANNEL 02">
         <div class="crt-inner-frame">
-          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal2.png" alt="Title 2 (VHS) (YEAR)" />
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal2.png" alt="Girl of Graph (Digital) (2025)" />
         </div>
-        <div class="crt-label">Title 2 (VHS) (YEAR)</div>
+        <div class="crt-label">Girl of Graph (Digital) (2025)</div>
       </div>
 
       <!-- CRT 3 -->
-      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_3"
-        data-title="Title 3 (VHS) (YEAR)" data-meta="VHS CHANNEL 03">
+      <div class="crt-tile"
+        data-video-url="https://videos.scanlines.xyz/videos/embed/be59fe4d-997c-499f-859c-fac3c8591162?stop=44m30s&amp;loop=1&amp;autoplay=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0&amp;p2p=0"
+        data-title="Sensual Crash (VHS) (2025)" data-meta="VHS CHANNEL 03">
         <div class="crt-inner-frame">
-          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal3.png" alt="Title 3 (VHS) (YEAR)" />
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal3.png" alt="Sensual Crash (VHS) (2025)" />
         </div>
-        <div class="crt-label">Title 3 (VHS) (YEAR)</div>
+        <div class="crt-label">Sensual Crash (VHS) (2025)</div>
       </div>
 
       <!-- CRT 4 -->
-      <div class="crt-tile" data-video-url="https://videos.scanlines.xyz/videos/embed/VIDEO_ID_4"
-        data-title="Title 4 (VHS) (YEAR)" data-meta="VHS CHANNEL 04">
+      <div class="crt-tile"
+        data-video-url="https://videos.scanlines.xyz/videos/embed/d1501670-dbe4-4af2-bd28-52788f79e328?loop=1&amp;autoplay=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0&amp;p2p=0"
+        data-title="Soulmate Specialists Studio Tour (Digital) (2025)" data-meta="VHS CHANNEL 04">
         <div class="crt-inner-frame">
-          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal4.png" alt="Title 4 (VHS) (YEAR)" />
+          <img class="crt-thumb" src="/video/vhs_tapes/vhsreal4.png"
+            alt="Soulmate Specialists Studio Tour (Digital) (2025)" />
         </div>
-        <div class="crt-label">Title 4 (VHS) (YEAR)</div>
+        <div class="crt-label">Soulmate Specialists Studio Tour (Digital) (2025)</div>
       </div>
 
       <!-- Add more CRT tiles as needed using the same pattern -->

@@ -1,0 +1,195 @@
+{
+  "config": {
+    "recentLimit": 8,
+    "hideSoldOlderThanDays": 900,
+    "defaultManualId": "revox-a77"
+  },
+  "manuals": [
+    {
+      "id": "revox-a77",
+      "title": "Revox A77 User Manual",
+      "brand": "Revox",
+      "model": "A77",
+      "manualCode": "OES-REVOX-A77",
+      "tags": ["tape", "reel-to-reel", "calibration", "transport"],
+      "pdfUrl": "/solutions/techniques/resources/Revox_A77_User_Manual_EN.pdf",
+      "thumbnailUrl": "/images/r2r1.png",
+      "notes": "Service alignment and operation reference for shipped A77 units.",
+      "createdAt": "2025-09-14",
+      "updatedAt": "2026-02-21"
+    },
+    {
+      "id": "arp-2600",
+      "title": "ARP 2600 Owners Manual",
+      "brand": "ARP",
+      "model": "2600",
+      "manualCode": "OES-ARP-2600",
+      "tags": ["synthesizer", "semi-modular", "signal flow", "patching"],
+      "pdfUrl": "/solutions/techniques/resources/arp-2600-owners-manual.pdf",
+      "thumbnailUrl": "/images/arp2600.webp",
+      "notes": "Patch architecture and operation guide for ARP 2600 units serviced by OES.",
+      "createdAt": "2025-08-12",
+      "updatedAt": "2026-01-29"
+    },
+    {
+      "id": "roland-jx3p",
+      "title": "Roland JX-3P Owners Manual",
+      "brand": "Roland",
+      "model": "JX-3P",
+      "manualCode": "OES-JX3P-OWNERS",
+      "tags": ["roland", "poly synth", "patch memory", "programmer"],
+      "pdfUrl": "/images/Roland_JX-3P_Owners_Manual.pdf",
+      "thumbnailUrl": "/images/roland_jx3p_bro83p23.jpg",
+      "notes": "User-facing operation manual included with restored JX-3P shipments.",
+      "createdAt": "2025-11-02",
+      "updatedAt": "2026-02-10"
+    },
+    {
+      "id": "buchla-cookbook",
+      "title": "Suzanne Ciani Buchla Cookbook",
+      "brand": "Buchla",
+      "model": "200 Series",
+      "manualCode": "OES-BUCHLA-COOKBOOK",
+      "tags": ["buchla", "west coast", "patch examples", "composition"],
+      "pdfUrl": "/solutions/techniques/musictech/Ciani_BuchlaCookbook.pdf",
+      "thumbnailUrl": "/images/emumodular.jpg",
+      "notes": "Patch-building reference supplied with select Buchla-oriented systems.",
+      "createdAt": "2025-07-17",
+      "updatedAt": "2026-01-14"
+    },
+    {
+      "id": "hordijk-twinpeak",
+      "title": "Twin Peak Resonator Manual",
+      "brand": "Hordijk",
+      "model": "Twin Peak",
+      "manualCode": "OES-HORDIJK-TWINPEAK",
+      "tags": ["filter", "resonator", "hordijk", "module"],
+      "pdfUrl": "/solutions/DIY/designers/hordijk/twinpeak-manual.pdf",
+      "thumbnailUrl": "/solutions/DIY/designers/hordijk/WiardSystem.jpg",
+      "notes": "Reference guide for Twin Peak inspired builds and serviced modules.",
+      "createdAt": "2025-10-05",
+      "updatedAt": "2026-02-01"
+    },
+    {
+      "id": "hordijk-nordmodular",
+      "title": "Nord Modular Book (Hordijk)",
+      "brand": "Clavia",
+      "model": "Nord Modular",
+      "manualCode": "OES-NORDMOD-HORDIJK",
+      "tags": ["nord modular", "digital patching", "hordijk", "modular"],
+      "pdfUrl": "/solutions/DIY/designers/hordijk/nordmodularbook.pdf",
+      "thumbnailUrl": "/solutions/DIY/designers/hordijk/BLIPPOOBOXDIAGRAM.jpg",
+      "notes": "Companion reference used in OES modular setup and education sessions.",
+      "createdAt": "2025-06-21",
+      "updatedAt": "2026-01-08"
+    },
+    {
+      "id": "synth-and-recording",
+      "title": "Synthesizers and Recording",
+      "brand": "Educational",
+      "model": "Reference Guide",
+      "manualCode": "OES-SYNTH-REC-GUIDE",
+      "tags": ["recording", "signal chain", "studio workflow", "reference"],
+      "pdfUrl": "/solutions/techniques/musictech/synthesizers-and-recording.pdf",
+      "thumbnailUrl": "/images/mixerblurbg.JPG",
+      "notes": "General studio setup and gain-staging reference included with mixed rigs.",
+      "createdAt": "2025-05-10",
+      "updatedAt": "2026-01-02"
+    },
+    {
+      "id": "learn-music-with-synths",
+      "title": "Learn Music With Synthesizers (1974)",
+      "brand": "Educational",
+      "model": "Vintage Guide",
+      "manualCode": "OES-LEARN-SYNTHS-1974",
+      "tags": ["learning", "history", "synthesis", "basics"],
+      "pdfUrl": "/solutions/techniques/resources/LearnMusicWithSynths1974.pdf",
+      "thumbnailUrl": "/images/handbook.png",
+      "notes": "Starter text for beginner support packages and class follow-up.",
+      "createdAt": "2025-04-03",
+      "updatedAt": "2025-12-19"
+    }
+  ],
+  "soldUnits": [
+    {
+      "id": "sold-2026-001",
+      "manualId": "revox-a77",
+      "manualCode": "OES-REVERB-011",
+      "itemName": "Revox A77 Mk IV Service + Alignment Unit",
+      "soldDate": "2026-02-22",
+      "platform": "Reverb",
+      "serial": "A77-18429",
+      "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
+    },
+    {
+      "id": "sold-2026-002",
+      "manualId": "roland-jx3p",
+      "manualCode": "OES-REVERB-009",
+      "itemName": "Roland JX-3P Restored + Calibrated",
+      "soldDate": "2026-02-10",
+      "platform": "Reverb",
+      "serial": "JX3P-29316",
+      "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
+    },
+    {
+      "id": "sold-2026-003",
+      "manualId": "arp-2600",
+      "manualCode": "OES-REVERB-008",
+      "itemName": "ARP 2600 Setup Package",
+      "soldDate": "2026-01-27",
+      "platform": "Direct",
+      "serial": "ARP2600-102",
+      "listingUrl": ""
+    },
+    {
+      "id": "sold-2025-014",
+      "manualId": "hordijk-twinpeak",
+      "manualCode": "OES-EBAY-142",
+      "itemName": "Twin Peak Resonator Build",
+      "soldDate": "2025-12-19",
+      "platform": "eBay",
+      "serial": "TP-041",
+      "listingUrl": ""
+    },
+    {
+      "id": "sold-2025-013",
+      "manualId": "revox-a77",
+      "manualCode": "OES-DIRECT-044",
+      "itemName": "Revox A77 Playback Deck",
+      "soldDate": "2025-11-26",
+      "platform": "Direct",
+      "serial": "A77-17280",
+      "listingUrl": ""
+    },
+    {
+      "id": "sold-2025-010",
+      "manualId": "synth-and-recording",
+      "manualCode": "OES-CLASS-031",
+      "itemName": "Home Recording Starter Bundle",
+      "soldDate": "2025-10-14",
+      "platform": "Direct",
+      "serial": "HR-031",
+      "listingUrl": ""
+    },
+    {
+      "id": "sold-2025-008",
+      "manualId": "buchla-cookbook",
+      "manualCode": "OES-REVERB-006",
+      "itemName": "Buchla Patch Reference Kit",
+      "soldDate": "2025-09-30",
+      "platform": "Reverb",
+      "serial": "BK-006",
+      "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
+    },
+    {
+      "id": "sold-2025-005",
+      "manualId": "learn-music-with-synths",
+      "manualCode": "OES-DIRECT-021",
+      "itemName": "Beginner Synthesis Learning Pack",
+      "soldDate": "2025-08-07",
+      "platform": "Direct",
+      "serial": "LS-021",
+      "listingUrl": ""
+    }
+  ]
+}

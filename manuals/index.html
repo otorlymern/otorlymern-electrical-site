@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OES Manuals Archive | Vintage Audio Manuals & Support</title>
+  <meta name="description"
+    content="Find your Otorlymern Electrical Systems manual fast by Manual Code or model. Vintage audio manuals, support links, service and restoration help." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://otorlymern-electrical.com/manuals/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/altstyle.css" />
+  <link rel="stylesheet" href="/manuals/manuals-archive.css" />
+
+  <script type="application/ld+json" id="archive-page-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "OES Manuals Archive",
+    "description": "Manual lookup and support portal for Otorlymern Electrical Systems vintage audio units.",
+    "url": "https://otorlymern-electrical.com/manuals/"
+  }
+  </script>
+  <script type="application/ld+json" id="manual-jsonld">{}</script>
+</head>
+
+<body class="manuals-archive-page">
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/systems/systems.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown">
+          <a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and
+                Synthesis</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="archive-shell">
+    <section class="archive-hero title-section">
+      <div class="title-container">
+        <h1 class="threeD archive-title"><span class="wiggle-title">Manuals Archive</span></h1>
+        <p class="archive-subtitle">One QR code. Every shipped unit. Find your exact manual and support path in seconds.</p>
+      </div>
+    </section>
+
+    <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-expanded="false" aria-controls="archiveSidebar">
+      Search + Recent Units
+    </button>
+
+    <div class="archive-layout">
+      <aside id="archiveSidebar" class="archive-sidebar" aria-label="Manual lookup tools">
+        <section class="side-block">
+          <h2>Find Your Manual</h2>
+          <form id="manualSearchForm" class="search-form" role="search" aria-label="Search manuals">
+            <label for="manualSearchInput">Manual Code or Model Keyword</label>
+            <div class="search-row">
+              <input id="manualSearchInput" name="q" type="search" placeholder="e.g., OES-REVERB-011 or A77"
+                autocomplete="off" />
+              <button type="submit">Find</button>
+            </div>
+          </form>
+          <p class="side-help">Exact code match checks sold-unit codes first, then manual codes.</p>
+          <div id="searchStatus" class="search-status" role="status" aria-live="polite"></div>
+          <ul id="manualSearchResults" class="manual-results" aria-label="Manual search results"></ul>
+        </section>
+
+        <section class="side-block">
+          <div class="block-head">
+            <h2>Recent Sold Units</h2>
+            <span id="recentCount" class="small-note"></span>
+          </div>
+          <ul id="recentUnitsList" class="recent-units" aria-label="Recent sold units"></ul>
+        </section>
+
+        <section class="side-block cta-block">
+          <h2>Need Help?</h2>
+          <p>Service, restoration, calibration, and classes.</p>
+          <a id="serviceButton" class="cta-button" href="/services/repairrequest.html">Need Service For This Unit</a>
+          <a class="text-link" href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a>
+          <a class="text-link" href="/services/experience.html">Classes / Sessions</a>
+          <a class="text-link" href="https://reverb.com/shop/otorlymern-electrical#shop-reviews" target="_blank"
+            rel="noopener noreferrer">Read Reverb Reviews</a>
+          <a class="text-link" href="mailto:info@otorlymern-electrical.com?subject=OES%20Manual%20Support">Contact OES</a>
+        </section>
+
+        <section class="side-block signup-block" aria-label="Email updates">
+          <h2>Optional Updates</h2>
+          <p>Get occasional updates about new uploads and support notes.</p>
+          <form id="emailSignupForm" class="signup-form">
+            <label for="signupEmail">Email</label>
+            <div class="signup-row">
+              <input id="signupEmail" name="email" type="email" placeholder="you@example.com" required />
+              <button type="submit">Join</button>
+            </div>
+          </form>
+        </section>
+      </aside>
+
+      <section class="archive-main" aria-label="Manual viewer">
+        <article class="manual-meta" aria-live="polite">
+          <div class="manual-meta-head">
+            <h2 id="manualTitle">Select a manual</h2>
+            <div class="meta-actions">
+              <button id="copyShareButton" type="button">Copy Share Link</button>
+              <a id="openPdfExternal" href="#" target="_blank" rel="noopener noreferrer">Open PDF</a>
+            </div>
+          </div>
+
+          <dl class="meta-grid">
+            <div>
+              <dt>Brand</dt>
+              <dd id="manualBrand">-</dd>
+            </div>
+            <div>
+              <dt>Model</dt>
+              <dd id="manualModel">-</dd>
+            </div>
+            <div>
+              <dt>Manual Code</dt>
+              <dd id="manualCode">-</dd>
+            </div>
+            <div>
+              <dt>Last Updated</dt>
+              <dd id="manualUpdated">-</dd>
+            </div>
+          </dl>
+          <p id="manualNotes" class="manual-notes"></p>
+        </article>
+
+        <article class="viewer-panel" aria-label="PDF manual viewer">
+          <div class="crt-viewer-frame">
+            <div class="crt-viewer-glow" aria-hidden="true"></div>
+            <div class="crt-viewer-scanlines" aria-hidden="true"></div>
+
+            <div id="viewerEmpty" class="viewer-empty">
+              Choose a manual from search or recent sold units.
+            </div>
+
+            <div id="pdfJsContainer" class="pdfjs-container is-hidden">
+              <div class="pdf-toolbar" role="toolbar" aria-label="PDF viewer controls">
+                <button id="prevPageButton" type="button">Prev</button>
+                <span id="pageIndicator">Page 1 / 1</span>
+                <button id="nextPageButton" type="button">Next</button>
+                <button id="zoomOutButton" type="button" aria-label="Zoom out">-</button>
+                <button id="zoomInButton" type="button" aria-label="Zoom in">+</button>
+                <span id="zoomIndicator" class="zoom-indicator">100%</span>
+              </div>
+              <div id="pdfCanvasWrap" class="pdf-canvas-wrap">
+                <canvas id="pdfCanvas"></canvas>
+              </div>
+            </div>
+
+            <iframe id="pdfFallback" class="pdf-fallback is-hidden" title="Manual PDF fallback viewer"></iframe>
+          </div>
+        </article>
+
+        <section class="print-note" aria-label="QR instructions">
+          <h3>QR Landing</h3>
+          <p>Manual lookup URL: <strong>otorlymern-electrical.com/manuals</strong></p>
+          <p>If asked, type your Manual Code exactly as printed on the insert card.</p>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 – Otorlymern Electrical Systems – Manuals Archive</p>
+    <div class="footer-badges">
+      <a href="https://reverb.com/shop/otorlymern-electrical" target="_blank" rel="noopener noreferrer"><img
+          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+          alt="Shop My Store on Reverb" /></a>
+      <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
+      <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
+      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
+    </div>
+  </footer>
+
+  <script src="/manuals/manuals-archive.js" defer></script>
+</body>
+
+</html>
