@@ -3,6 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OES CRT Video Wall</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/altstyle.css" />
+  <link rel="stylesheet" href="/css/videolibrary.css" />
+</head>
+
+<head>
+  <meta charset="UTF-8" />
   <title>OES CRT Wall</title>
   <style>
     @font-face {
@@ -38,9 +47,7 @@
       text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 255, 0, 0.04) !important;
     }
 
-    /* remove the dark highlight "background" behind inline text
-         so text sits directly on the backdrop; keep box-decoration-break
-         settings for elements that may wrap */
+
     body :is(a, p, li, span, .page-title, .page-subtitle, .wall-title, .crt-label, .footer-note) {
       background-color: transparent;
       box-decoration-break: clone;
@@ -75,17 +82,15 @@
       margin: 0 auto 22px;
       max-width: 1200px;
       padding: 0 8px;
-      overflow: visible;
-      width: 100%;
+      overflow: hidden;
+      width: 100%
     }
 
     .main-crt-bezel {
       position: relative;
       width: 100%;
-      padding-top: 87.5%;
-      background: radial-gradient(circle at top, #101030, #010105 70%);
+      padding-top: 95%;
       border-radius: 18px;
-      box-shadow: 0 0 22px #00ff9988, 0 14px 28px rgba(0, 0, 0, 0.6);
       overflow: hidden;
     }
 
@@ -94,14 +99,12 @@
       height: 62.1%;
       left: 12.7%;
       top: 11.4%;
-      background: #0b0b0f;
-      overflow: hidden;
-      border-radius: 12px;
-      border: 2px solid #91969488;
-      box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.65),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+      background: url("/images/staticsnow.png"),
+        box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.8),
+        inset 0 0 0 1px rgba(255, 212, 212, 0.06);
       position: absolute;
       z-index: 2;
+      overflow: hidden;
     }
 
     .main-crt-screen {
@@ -404,18 +407,7 @@
     });
   </script>
   <footer>
-    <p>&copy; 2025 – Otorlymern Electrical Systems – Archive</p>
-    <div class="footer-badges">
-      <a href="https://reverb.com/shop/otorlymern-electrical"><img
-          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
-          alt="Shop My Store on Reverb" /></a>
-      <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
-      <img src="/images/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
-      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
-      <a href="https://reverb.com/shop/otorlymern-electrical"><img
-          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
-          alt="Shop My Store on Reverb" /></a>
-    </div>
+    <p>&copy; 2025 –Otorlymern Electrical Systems – Archive</p>
   </footer>
 </body>
 
