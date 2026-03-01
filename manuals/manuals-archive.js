@@ -1,8 +1,8 @@
 (() => {
-  const DATA_URL = "/manuals/data/archive.json";
+  const ARCHIVE_JSON_PATH = "/manuals/data/archive.json";
   const STORAGE_KEY = "oes.manuals.lastOpenedId";
-  const PDFJS_SCRIPT_URL = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
-  const PDFJS_WORKER_URL = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const PDFJS_LIB_URL = "/manuals/vendor/pdfjs/pdf.min.js";
+  const PDFJS_WORKER_URL = "/manuals/vendor/pdfjs/pdf.worker.min.js";
 
   const state = {
     config: {
@@ -21,6 +21,7 @@
     pageNum: 1,
     zoomFactor: 1,
     pdfJsReadyPromise: null,
+    archiveData: null,
   };
 
   const els = {};
@@ -63,6 +64,21 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+  }
+
+  function getDataUrlWithVersion(dataVersion) {
+    const v = (dataVersion || "").trim();
+    return v ? `${ARCHIVE_JSON_PATH}?v=${encodeURIComponent(v)}` : ARCHIVE_JSON_PATH;
+  }
+
+  function resolveAssetUrl(rawUrl, assetBaseUrl) {
+    if (!rawUrl) return "";
+    if (/^https?:\/\//i.test(rawUrl)) return rawUrl;
+
+    const base = (assetBaseUrl || "").trim().replace(/\/$/, "");
+    if (!base) return rawUrl;
+
+    return rawUrl.startsWith("/") ? `${base}${rawUrl}` : `${base}/${rawUrl}`;
   }
 
   function readManualIdFromLocation() {
@@ -182,7 +198,9 @@
       button.type = "button";
       button.className = `manual-result${manual.id === activeId ? " is-active" : ""}`;
       button.setAttribute("data-manual-id", manual.id);
+      const thumbnailUrl = resolveAssetUrl(manual.thumbnailUrl, state.config.assetBaseUrl);
       button.innerHTML = `
+        ${thumbnailUrl ? `<img class="result-thumb" src="${escapeHtml(thumbnailUrl)}" alt="${escapeHtml(manual.title)} thumbnail" loading="lazy" style="width:42px;height:42px;object-fit:cover;border-radius:6px;display:block;margin-bottom:0.3rem;" />` : ""}
         <div class="result-title">${escapeHtml(manual.title)}</div>
         <div class="result-meta">${escapeHtml(manual.brand)} · ${escapeHtml(manual.model)}${manual.manualCode ? ` · ${escapeHtml(manual.manualCode)}` : ""}</div>
       `;
@@ -227,7 +245,10 @@
 
       const isActive = activeManualCode && normalize(activeManualCode) === unit._manualCodeNormalized;
       button.className = `recent-unit${isActive ? " is-active" : ""}`;
+      const manual = state.manualById.get(unit.manualId);
+      const thumbnailUrl = resolveAssetUrl(manual && manual.thumbnailUrl, state.config.assetBaseUrl);
       button.innerHTML = `
+        ${thumbnailUrl ? `<img class="result-thumb" src="${escapeHtml(thumbnailUrl)}" alt="${manual ? escapeHtml(manual.title) : "Manual"} thumbnail" loading="lazy" style="width:42px;height:42px;object-fit:cover;border-radius:6px;display:block;margin-bottom:0.3rem;" />` : ""}
         <div class="result-title">${escapeHtml(unit.manualCode)} · ${escapeHtml(unit.itemName)}</div>
         <div class="result-meta">${formatDate(unit.soldDate)} · ${escapeHtml(unit.platform)}${unit.serial ? ` · S/N ${escapeHtml(unit.serial)}` : ""}</div>
       `;
@@ -273,7 +294,7 @@
       mainEntityOfPage: shareUrl,
       associatedMedia: {
         "@type": "MediaObject",
-        contentUrl: manual.pdfUrl,
+        contentUrl: resolveAssetUrl(manual.pdfUrl, state.config.assetBaseUrl),
       },
     };
 
@@ -290,7 +311,7 @@
 
     const shareUrl = `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
     els.copyShareButton.setAttribute("data-share-url", shareUrl);
-    els.openPdfExternal.href = manual.pdfUrl;
+    els.openPdfExternal.href = resolveAssetUrl(manual.pdfUrl, state.config.assetBaseUrl);
 
     const serviceUrl = new URL("/services/repairrequest.html", window.location.origin);
     serviceUrl.searchParams.set("brand", manual.brand);
@@ -315,7 +336,7 @@
 
     state.pdfJsReadyPromise = new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      script.src = PDFJS_SCRIPT_URL;
+      script.src = PDFJS_LIB_URL;
       script.async = true;
       script.onload = () => {
         if (!window.pdfjsLib) {
@@ -388,12 +409,20 @@
     els.pdfFallback.src = pdfUrl;
   }
 
+  function useIframeFallback(pdfUrl, message) {
+    if (pdfUrl) {
+      showPdfFallback(pdfUrl);
+    }
+    if (message) {
+      updateStatus(message);
+    }
+  }
+
   async function openManualPdf(pdfUrl) {
     try {
       await showPdfWithPdfJs(pdfUrl);
     } catch (err) {
-      showPdfFallback(pdfUrl);
-      updateStatus("PDF.js unavailable, using embedded PDF fallback.");
+      useIframeFallback(pdfUrl, "PDF.js unavailable, using embedded PDF fallback.");
     }
   }
 
@@ -440,7 +469,8 @@
     writeManualIdToLocation(manual.id);
     setSelectedManualInStorage(manual.id);
 
-    await openManualPdf(manual.pdfUrl);
+    const resolvedPdfUrl = resolveAssetUrl(manual.pdfUrl, state.config.assetBaseUrl);
+    await openManualPdf(resolvedPdfUrl);
   }
 
   function bindUiEvents() {
@@ -515,7 +545,11 @@
         return;
       }
       state.pageNum -= 1;
-      await renderPdfPage();
+      try {
+        await renderPdfPage();
+      } catch (err) {
+        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+      }
     });
 
     els.nextPageButton.addEventListener("click", async () => {
@@ -523,7 +557,11 @@
         return;
       }
       state.pageNum += 1;
-      await renderPdfPage();
+      try {
+        await renderPdfPage();
+      } catch (err) {
+        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+      }
     });
 
     els.zoomOutButton.addEventListener("click", async () => {
@@ -531,7 +569,11 @@
         return;
       }
       state.zoomFactor = Math.max(0.6, state.zoomFactor - 0.1);
-      await renderPdfPage();
+      try {
+        await renderPdfPage();
+      } catch (err) {
+        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+      }
     });
 
     els.zoomInButton.addEventListener("click", async () => {
@@ -539,14 +581,18 @@
         return;
       }
       state.zoomFactor = Math.min(2.4, state.zoomFactor + 0.1);
-      await renderPdfPage();
+      try {
+        await renderPdfPage();
+      } catch (err) {
+        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+      }
     });
 
     window.addEventListener("resize", () => {
       if (state.pdfDoc) {
         window.requestAnimationFrame(() => {
           renderPdfPage().catch(() => {
-            // Ignore resize render errors.
+            useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
           });
         });
       }
@@ -566,6 +612,7 @@
   }
 
   function normalizeData(raw) {
+    state.archiveData = raw;
     state.config = {
       ...state.config,
       ...(raw.config || {}),
@@ -600,12 +647,21 @@
   }
 
   async function loadData() {
-    const response = await fetch(DATA_URL, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Failed to load archive data: ${response.status}`);
+    const baseResponse = await fetch(ARCHIVE_JSON_PATH);
+    if (!baseResponse.ok) {
+      throw new Error(`Failed to load archive data: ${baseResponse.status}`);
     }
 
-    const data = await response.json();
+    const baseData = await baseResponse.json();
+    const versionedUrl = getDataUrlWithVersion(baseData && baseData.config && baseData.config.dataVersion);
+    let data = baseData;
+    if (versionedUrl !== ARCHIVE_JSON_PATH) {
+      const versionedResponse = await fetch(versionedUrl);
+      if (versionedResponse.ok) {
+        data = await versionedResponse.json();
+      }
+    }
+
     normalizeData(data);
   }
 
