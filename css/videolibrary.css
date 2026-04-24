@@ -18,7 +18,7 @@
 body.vhs-library {
   /* VHS logo tiled at roughly 1/6 size over the solid base */
   background:
-    url("/images/VHSlogo.png") repeat,
+    url("https://media.otorlymern-electrical.com/images/clip-art/VHSlogo.png") repeat,
     radial-gradient(circle at 12% 18%, rgba(255, 217, 166, 0.08), transparent 18%),
     radial-gradient(circle at 78% 22%, rgba(125, 241, 180, 0.06), transparent 18%),
     #2c1606;
@@ -134,7 +134,7 @@ body.vhs-library .nav-bar a:hover {
 }
 
 .crt-wall {
-  background-image: url("/images/VHSlogo.png"),
+  background-image: url("https://media.otorlymern-electrical.com/images/clip-art/VHSlogo.png"),
     linear-gradient(160deg, rgba(26, 12, 5, 0.88), rgba(11, 6, 3, 0.9));
   background-repeat: no-repeat, no-repeat;
   background-position: center 6px, center;
@@ -155,7 +155,7 @@ body.vhs-library .nav-bar a:hover {
   width: min(1280px, 95vw);
   height: calc(min(1280px, 95vw) * 0.51);
   aspect-ratio: 1280 / 654;
-  background: url("/images/VHSlogo.png") center/contain no-repeat;
+  background: url("https://media.otorlymern-electrical.com/images/clip-art/VHSlogo.png") center/contain no-repeat;
   opacity: 0.3;
   filter: grayscale(1) brightness(1.3) drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
   mix-blend-mode: screen;

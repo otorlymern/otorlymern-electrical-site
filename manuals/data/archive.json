@@ -3,22 +3,39 @@
     "recentLimit": 8,
     "hideSoldOlderThanDays": 900,
     "defaultManualId": "revox-a77",
-    "dataVersion": "2026-02-28",
-    "assetBaseUrl": "https://archive.otorlymern-electrical.com"
+    "dataVersion": "2026-04-24",
+    "assetBaseUrl": "https://media.otorlymern-electrical.com"
   },
   "manuals": [
     {
-      "id": "revox-a77",
-      "title": "Revox A77 User Manual",
-      "brand": "Revox",
-      "model": "A77",
-      "manualCode": "OES-REVOX-A77",
-      "tags": ["tape", "reel-to-reel", "calibration", "transport"],
-      "pdfUrl": "/solutions/techniques/resources/Revox_A77_User_Manual_EN.pdf",
-      "thumbnailUrl": "/images/r2r1.png",
-      "notes": "Service alignment and operation reference for shipped A77 units.",
-      "createdAt": "2025-09-14",
-      "updatedAt": "2026-02-21"
+      "id": "488portastudio-om-tascam-d",
+      "title": "488portastudio Om Tascam D",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-488PORTASTUDIO-OM-TASCAM-D",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/488portastudio_om_tascam_d.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "a3340s-sm-teac",
+      "title": "A3340s Sm Teac",
+      "brand": "Teac",
+      "model": "",
+      "manualCode": "OES-MANUAL-A3340S-SM-TEAC",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/a3340s_sm_teac.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
     },
     {
       "id": "arp-2600",
@@ -26,12 +43,335 @@
       "brand": "ARP",
       "model": "2600",
       "manualCode": "OES-ARP-2600",
-      "tags": ["synthesizer", "semi-modular", "signal flow", "patching"],
-      "pdfUrl": "/solutions/techniques/resources/arp-2600-owners-manual.pdf",
-      "thumbnailUrl": "/images/arp2600.webp",
+      "tags": [
+        "synthesizer",
+        "semi-modular",
+        "signal flow",
+        "patching"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/arp-2600-owners-manual.pdf",
+      "thumbnailUrl": "https://media.otorlymern-electrical.com/images/clip-art/arp2600.webp",
       "notes": "Patch architecture and operation guide for ARP 2600 units serviced by OES.",
       "createdAt": "2025-08-12",
-      "updatedAt": "2026-01-29"
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "buchla-200-manual",
+      "title": "Buchla 200 Manual",
+      "brand": "Buchla",
+      "model": "",
+      "manualCode": "OES-MANUAL-BUCHLA-200-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Buchla_200_manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "buchla-music-easel-manual",
+      "title": "Buchla Music Easel Manual",
+      "brand": "Buchla",
+      "model": "",
+      "manualCode": "OES-MANUAL-BUCHLA-MUSIC-EASEL-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Buchla_Music_Easel_Manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "eml-polybox-manual",
+      "title": "EML Polybox Manual",
+      "brand": "EML",
+      "model": "",
+      "manualCode": "OES-MANUAL-EML-POLYBOX-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/EML_polybox_manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "fisher-pr6-manual",
+      "title": "Fisher PR6 Manual",
+      "brand": "Fisher",
+      "model": "",
+      "manualCode": "OES-MANUAL-FISHER-PR6-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Fisher_PR6_Manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "hfe-tascam-m-208-216-en",
+      "title": "Hfe Tascam M 208 216 En",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-HFE-TASCAM-M-208-216-EN",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/hfe_tascam_m-208_216_en.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "hfe-teac-a-1500u-flyer-en",
+      "title": "Hfe Teac A 1500u Flyer En",
+      "brand": "Teac",
+      "model": "",
+      "manualCode": "OES-MANUAL-HFE-TEAC-A-1500U-FLYER-EN",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/hfe_teac_a-1500u_flyer_en.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "hfe-teac-a-3340s",
+      "title": "Hfe Teac A 3340s",
+      "brand": "Teac",
+      "model": "",
+      "manualCode": "OES-MANUAL-HFE-TEAC-A-3340S",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/hfe_teac_a-3340s.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "hfe-teac-stereo-tape-recorders-1966-en",
+      "title": "Hfe Teac Stereo Tape Recorders 1966 En",
+      "brand": "Teac",
+      "model": "",
+      "manualCode": "OES-MANUAL-HFE-TEAC-STEREO-TAPE-RECORDERS-1966-",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/hfe_teac_stereo_tape_recorders_1966_en.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "hfe-yamaha-mt4x-en",
+      "title": "Hfe Yamaha Mt4x En",
+      "brand": "Yamaha",
+      "model": "",
+      "manualCode": "OES-MANUAL-HFE-YAMAHA-MT4X-EN",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/hfe_yamaha_mt4x_en.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "mungoeuro",
+      "title": "Mungoeuro",
+      "brand": "Mungo",
+      "model": "",
+      "manualCode": "OES-MANUAL-MUNGOEURO",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/mungoeuro.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "oberheim-matrix-1000-owners-manual",
+      "title": "Oberheim Matrix 1000 Owners Manual",
+      "brand": "Oberheim",
+      "model": "",
+      "manualCode": "OES-MANUAL-OBERHEIM-MATRIX-1000-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/oberheim-matrix-1000-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "ppg-w23-dm",
+      "title": "Ppg W23 Dm",
+      "brand": "PPG",
+      "model": "",
+      "manualCode": "OES-MANUAL-PPG-W23-DM",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/ppg-w23-dm.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "revox-a77",
+      "title": "Revox A77 User Manual",
+      "brand": "Revox",
+      "model": "A77",
+      "manualCode": "OES-REVOX-A77",
+      "tags": [
+        "tape",
+        "reel-to-reel",
+        "calibration",
+        "transport"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/revox_a77_user_manual_en.pdf",
+      "thumbnailUrl": "https://media.otorlymern-electrical.com/images/clip-art/r2r1.png",
+      "notes": "Service alignment and operation reference for shipped A77 units.",
+      "createdAt": "2025-09-14",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-alpha-juno-1",
+      "title": "Roland Alpha Juno 1",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-ALPHA-JUNO-1",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Alpha_Juno_1.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-alpha-juno-1-2",
+      "title": "Roland Alpha Juno 1",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-ALPHA-JUNO-1",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-alpha-juno-1.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-juno-2-usermanual",
+      "title": "Roland Juno 2 Usermanual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-JUNO-2-USERMANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Juno-2_Usermanual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-juno-2-usermanual-2",
+      "title": "Roland Juno 2 Usermanual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-JUNO-2-USERMANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno-2-usermanual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-juno106-owners-manual",
+      "title": "Roland Juno106 Owners Manual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-JUNO106-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Juno106_Owners_Manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-juno106-owners-manual-2",
+      "title": "Roland Juno106 Owners Manual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-JUNO106-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno106-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-juno106-service-notes",
+      "title": "Roland Juno106 Service Notes",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-JUNO106-SERVICE-NOTES",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno106-service-notes.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-jx-3p-owners-manual",
+      "title": "Roland Jx 3p Owners Manual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-JX-3P-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-jx-3p-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
     },
     {
       "id": "roland-jx3p",
@@ -39,12 +379,62 @@
       "brand": "Roland",
       "model": "JX-3P",
       "manualCode": "OES-JX3P-OWNERS",
-      "tags": ["roland", "poly synth", "patch memory", "programmer"],
-      "pdfUrl": "/images/Roland_JX-3P_Owners_Manual.pdf",
-      "thumbnailUrl": "/images/roland_jx3p_bro83p23.jpg",
+      "tags": [
+        "roland",
+        "poly synth",
+        "patch memory",
+        "programmer"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_JX-3P_Owners_Manual.pdf",
+      "thumbnailUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland_jx3p_bro83p23.jpg",
       "notes": "User-facing operation manual included with restored JX-3P shipments.",
       "createdAt": "2025-11-02",
-      "updatedAt": "2026-02-10"
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-tr-606-owners-manual",
+      "title": "Roland Tr 606 Owners Manual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-TR-606-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-tr-606-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "roland-tr-909-owners-manual",
+      "title": "Roland Tr 909 Owners Manual",
+      "brand": "Roland",
+      "model": "",
+      "manualCode": "OES-MANUAL-ROLAND-TR-909-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-tr-909-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "sergemanual",
+      "title": "Sergemanual",
+      "brand": "Serge",
+      "model": "",
+      "manualCode": "OES-MANUAL-SERGEMANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/sergemanual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
     },
     {
       "id": "buchla-cookbook",
@@ -52,12 +442,152 @@
       "brand": "Buchla",
       "model": "200 Series",
       "manualCode": "OES-BUCHLA-COOKBOOK",
-      "tags": ["buchla", "west coast", "patch examples", "composition"],
-      "pdfUrl": "/solutions/techniques/musictech/Ciani_BuchlaCookbook.pdf",
-      "thumbnailUrl": "/images/emumodular.jpg",
+      "tags": [
+        "buchla",
+        "west coast",
+        "patch examples",
+        "composition"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/ciani-buchla-cookbook.pdf",
+      "thumbnailUrl": "https://media.otorlymern-electrical.com/images/clip-art/emumodular.jpg",
       "notes": "Patch-building reference supplied with select Buchla-oriented systems.",
       "createdAt": "2025-07-17",
-      "updatedAt": "2026-01-14"
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascam-144-brochure",
+      "title": "Tascam 144 Brochure",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAM-144-BROCHURE",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-144-brochure.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascam-144-owners-manual",
+      "title": "Tascam 144 Owners Manual",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAM-144-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-144-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascam-234-brochure",
+      "title": "Tascam 234 Brochure",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAM-234-BROCHURE",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-234-brochure.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascam-234-owners-manual",
+      "title": "Tascam 234 Owners Manual",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAM-234-OWNERS-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-234-owners-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascam-porta-02-manual",
+      "title": "Tascam Porta 02 Manual",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAM-PORTA-02-MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-porta-02-manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascam32",
+      "title": "Tascam32",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAM32",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam32.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "tascammfp01manual",
+      "title": "Tascammfp01manual",
+      "brand": "Tascam",
+      "model": "",
+      "manualCode": "OES-MANUAL-TASCAMMFP01MANUAL",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/tascammfp01manual.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "teac-multitrack-primer",
+      "title": "Teac Multitrack Primer",
+      "brand": "Teac",
+      "model": "",
+      "manualCode": "OES-MANUAL-TEAC-MULTITRACK-PRIMER",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/teac-multitrack-primer.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
+    },
+    {
+      "id": "teac-white-paper",
+      "title": "Teac White Paper",
+      "brand": "Teac",
+      "model": "",
+      "manualCode": "OES-MANUAL-TEAC-WHITE-PAPER",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/teac_white_paper.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
     },
     {
       "id": "hordijk-twinpeak",
@@ -65,51 +595,32 @@
       "brand": "Hordijk",
       "model": "Twin Peak",
       "manualCode": "OES-HORDIJK-TWINPEAK",
-      "tags": ["filter", "resonator", "hordijk", "module"],
-      "pdfUrl": "/solutions/DIY/designers/hordijk/twinpeak-manual.pdf",
-      "thumbnailUrl": "/solutions/DIY/designers/hordijk/WiardSystem.jpg",
+      "tags": [
+        "filter",
+        "resonator",
+        "hordijk",
+        "module"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/twinpeak-manual.pdf",
+      "thumbnailUrl": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/WiardSystem.jpg",
       "notes": "Reference guide for Twin Peak inspired builds and serviced modules.",
       "createdAt": "2025-10-05",
-      "updatedAt": "2026-02-01"
+      "updatedAt": "2026-04-24"
     },
     {
-      "id": "hordijk-nordmodular",
-      "title": "Nord Modular Book (Hordijk)",
-      "brand": "Clavia",
-      "model": "Nord Modular",
-      "manualCode": "OES-NORDMOD-HORDIJK",
-      "tags": ["nord modular", "digital patching", "hordijk", "modular"],
-      "pdfUrl": "/solutions/DIY/designers/hordijk/nordmodularbook.pdf",
-      "thumbnailUrl": "/solutions/DIY/designers/hordijk/BLIPPOOBOXDIAGRAM.jpg",
-      "notes": "Companion reference used in OES modular setup and education sessions.",
-      "createdAt": "2025-06-21",
-      "updatedAt": "2026-01-08"
-    },
-    {
-      "id": "synth-and-recording",
-      "title": "Synthesizers and Recording",
-      "brand": "Educational",
-      "model": "Reference Guide",
-      "manualCode": "OES-SYNTH-REC-GUIDE",
-      "tags": ["recording", "signal chain", "studio workflow", "reference"],
-      "pdfUrl": "/solutions/techniques/musictech/synthesizers-and-recording.pdf",
-      "thumbnailUrl": "/images/mixerblurbg.JPG",
-      "notes": "General studio setup and gain-staging reference included with mixed rigs.",
-      "createdAt": "2025-05-10",
-      "updatedAt": "2026-01-02"
-    },
-    {
-      "id": "learn-music-with-synths",
-      "title": "Learn Music With Synthesizers (1974)",
-      "brand": "Educational",
-      "model": "Vintage Guide",
-      "manualCode": "OES-LEARN-SYNTHS-1974",
-      "tags": ["learning", "history", "synthesis", "basics"],
-      "pdfUrl": "/solutions/techniques/resources/LearnMusicWithSynths1974.pdf",
-      "thumbnailUrl": "/images/handbook.png",
-      "notes": "Starter text for beginner support packages and class follow-up.",
-      "createdAt": "2025-04-03",
-      "updatedAt": "2025-12-19"
+      "id": "vcs3",
+      "title": "Vcs3",
+      "brand": "OES Archive",
+      "model": "",
+      "manualCode": "OES-MANUAL-VCS3",
+      "tags": [
+        "manual"
+      ],
+      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/vcs3.pdf",
+      "thumbnailUrl": "",
+      "notes": "Manual from the OES media archive.",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24"
     }
   ],
   "soldUnits": [
@@ -164,16 +675,6 @@
       "listingUrl": ""
     },
     {
-      "id": "sold-2025-010",
-      "manualId": "synth-and-recording",
-      "manualCode": "OES-CLASS-031",
-      "itemName": "Home Recording Starter Bundle",
-      "soldDate": "2025-10-14",
-      "platform": "Direct",
-      "serial": "HR-031",
-      "listingUrl": ""
-    },
-    {
       "id": "sold-2025-008",
       "manualId": "buchla-cookbook",
       "manualCode": "OES-REVERB-006",
@@ -182,16 +683,6 @@
       "platform": "Reverb",
       "serial": "BK-006",
       "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
-    },
-    {
-      "id": "sold-2025-005",
-      "manualId": "learn-music-with-synths",
-      "manualCode": "OES-DIRECT-021",
-      "itemName": "Beginner Synthesis Learning Pack",
-      "soldDate": "2025-08-07",
-      "platform": "Direct",
-      "serial": "LS-021",
-      "listingUrl": ""
     }
   ]
 }

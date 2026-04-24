@@ -243,11 +243,11 @@ body.service-page {
 }
 
 .service-tile-install {
-  background-image: url("/images/200-10.webp");
+  background-image: url("https://media.otorlymern-electrical.com/images/clip-art/200-10.webp");
 }
 
 .service-tile-commission {
-  background-image: url("/images/200-12.webp");
+  background-image: url("https://media.otorlymern-electrical.com/images/clip-art/200-12.webp");
 }
 
 .service-page main {

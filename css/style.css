@@ -509,19 +509,19 @@ footer {
 }
 
 .video-section {
-  background-image: url("../images/staticsnow.png");
+  background-image: url("https://media.otorlymern-electrical.com/images/textures/staticsnow.png");
   background-repeat: no-repeat;
   background-size: auto 1000px;
 }
 
 .lit-section {
-  background: url("../images/5NOWA1a.png");
+  background: url("https://media.otorlymern-electrical.com/images/textures/5NOWA1a.png");
   background-repeat: no-repeat;
   background-size: auto 1000px;
 }
 
 .diy-section {
-  background: url("../images/pcbbg.png");
+  background: url("https://media.otorlymern-electrical.com/images/textures/pcbbg.png");
   background-repeat: no-repeat;
   background-size: auto;
 }
