@@ -268,11 +268,11 @@
 
     .crt-frame--youtube {
       background: #050403;
-      aspect-ratio: 4/ 3;
-      --embed-top: 25%;
-      --embed-right: 90%;
-      --embed-bottom: 90%;
-      --embed-left: 20%;
+      aspect-ratio: 1 / 1;
+      --embed-top: 19%;
+      --embed-right: 30%;
+      --embed-bottom: 34%;
+      --embed-left: 10%;
     }
 
     .crt-video {
@@ -294,6 +294,11 @@
     .crt-frame--youtube .crt-embed {
       inset: var(--embed-top) var(--embed-right) var(--embed-bottom) var(--embed-left);
       border-radius: 6px;
+    }
+
+    .crt-unit--feature {
+      width: min(100%, 700px);
+      margin: 0 auto;
     }
 
     .crt-overlay {
@@ -356,24 +361,7 @@
       background: rgba(0, 0, 0, 0.08);
     }
 
-    .choice-card {
-      background: #fdf6e3;
-      border: 3px solid #5a2f00;
-      border-radius: 20px;
-      padding: 1rem 1.2rem 1.2rem;
-      box-shadow: 6px 7px 0 rgba(47, 18, 1, 0.65);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      text-align: left;
-      cursor: pointer;
-      transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
-      color: inherit;
-      font-family: inherit;
-      font-size: 1em;
-      line-height: 1.4;
-      width: 100%;
-    }
+
 
     .choice-title {
       text-align: center;
@@ -553,13 +541,14 @@
         <div class="tv-bottom">
           <div class="crt-unit">
             <div class="crt-frame crt-frame--youtube">
-              <iframe class="crt-embed" width="480" height="380"
+              <iframe class="crt-embed" width="850" height="700"
                 src="https://www.youtube-nocookie.com/embed/yqkwJDG5grk?si=CdO_ljrcEzJk0UoX&amp;controls=0&amp;start=898&amp;clip=UgkxHU-lAChgvyJ6A4AsndcBN1x7qDFkfmZU&amp;clipt=EPjoNxjk1zo"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <div class="crt-overlay" aria-hidden="true"></div>
             </div>
+            <p>R Stevie Moore on Home Recording</p>
           </div>
         </div>
       </section>
@@ -708,15 +697,20 @@
 
         <h2>Eraserheadless Tape Recording </h2>
         <div class="crt-grid">
-          <div class="crt-unit">
-            <div class="crt-frame">
-              <video class="crt-video" controls preload="metadata">
-                <source src="/video/0921.mp4" type="video/mp4">
-              </video>
+          <div class="crt-unit crt-unit--feature">
+            <div class="crt-frame crt-frame--youtube">
+              <iframe class="crt-embed" width="850" height="700"
+                src="https://www.youtube.com/embed/shyGIwfPN5Q?si=WMW1qaDCbd3vHJRb"
+                title="Eraserheadless Tape Recording videoplayer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <div class="crt-overlay" aria-hidden="true"></div>
             </div>
             <div class="crt-label"></div>
+            <p>joey pizza slice aka son of salami aka salami jr. aka joey agresta shares his ingenius computerless
+              recording method with us by demonstrating, track by track, how he makes a song. </p>
           </div>
+        </div>
       </section>
       <section class="text-panel">
         <h2>the 4 Track</h2>
@@ -818,33 +812,8 @@
           welcome
           to being a fucking recording artist.</p>
       </section>
-
-      <section class="text-panel">
-
-        <div class="crt-unit">
-          <div class="crt-frame">
-            <video class="crt-video" controls preload="metadata">
-              <source src="/video/0921.mp4" type="video/mp4">
-            </video>
-            <div class="crt-overlay" aria-hidden="true"></div>
-          </div>
-          <div class="crt-label">Video slot B (swap source as needed).</div>
-        </div>
     </div>
-    </section>
-
-    <section class="text-panel">
-      <h2>PDF embeds</h2>
-      <div class="pdf-grid">
-        <div>
-          <iframe class="pdf-embed" src="" title="PDF embed slot A"></iframe>
-          <p class="highlight">PDF slot A (replace the source when ready).</p>
-        </div>
-        <div>
-          <iframe class="pdf-embed" src="/" title="PDF embed slot B"></iframe>
-          <p class="highlight">PDF slot B (replace the source when ready).</p>
-        </div>
-      </div>
+    </div>
     </section>
     </div>
   </main>
