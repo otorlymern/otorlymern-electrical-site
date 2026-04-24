@@ -97,6 +97,13 @@
       margin: 0 auto;
       display: grid;
       gap: 2rem;
+      justify-items: center;
+    }
+
+    .content-wrap>section,
+    .content-wrap>.section-gap {
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .intro-grid {
@@ -206,6 +213,21 @@
       margin-top: 1rem;
     }
 
+    .slimline {
+      max-width: 520px;
+      margin: 0 auto 1rem;
+      text-align: center;
+    }
+
+    .slimline img {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      border-radius: 12px;
+      margin: 0 auto;
+    }
+
     .mfp01-rotate {
       animation: slow-rotate 60s linear infinite;
       transform-origin: center;
@@ -235,7 +257,7 @@
 
     .pingpong-diagram {
       width: min(100%, 860px);
-      margin: 1.5rem auto 0;
+      margin: 0 auto;
       text-align: center;
     }
 
@@ -258,6 +280,10 @@
       font-family: 'VCR OSD Mono', monospace;
       font-size: 0.7em;
       color: #2a1206;
+    }
+
+    .pingpong-panel h2 {
+      text-align: center;
     }
 
     .gear-list {
@@ -565,12 +591,6 @@
             </div>
           </aside>
         </div>
-        <figure class="pingpong-diagram">
-          <a href="https://media.otorlymern-electrical.com/pdfs/resources/pingpong-r2r.pdf">
-            <img src="/images/diagrams/pingpong-r2r.png" alt="Ping ponging two stereo decks diagram">
-          </a>
-          <figcaption>ping ponging two stereo decks: the r stevie method</figcaption>
-        </figure>
         <div class="tv-bottom">
           <div class="crt-unit">
             <div class="crt-frame crt-frame--youtube">
@@ -584,6 +604,15 @@
             <p>R Stevie Moore on Home Recording</p>
           </div>
         </div>
+      </section>
+
+      <section class="text-panel pingpong-panel">
+        <h2>ping ponging two stereo decks: the r stevie method</h2>
+        <figure class="pingpong-diagram">
+          <a href="https://media.otorlymern-electrical.com/pdfs/resources/pingpong-r2r.pdf">
+            <img src="/images/diagrams/pingpong-r2r.png" alt="Ping ponging two stereo decks diagram">
+          </a>
+        </figure>
       </section>
 
       <div class="section-gap" aria-hidden="true"></div>
