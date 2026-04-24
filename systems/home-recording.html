@@ -817,25 +817,6 @@
     </section>
     </div>
   </main>
-
-  <script>
-    (function () {
-      const panel = document.getElementById('choicePanel');
-      if (!panel) {
-        return;
-      }
-      const cards = Array.from(panel.querySelectorAll('.choice-card'));
-      cards.forEach((card) => {
-        card.addEventListener('click', () => {
-          panel.classList.add('choice-selected');
-          cards.forEach((item) => {
-            item.classList.toggle('is-selected', item === card);
-            item.classList.toggle('is-faded', item !== card);
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 
 </html>
