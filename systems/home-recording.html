@@ -255,31 +255,75 @@
       text-align: center;
     }
 
-    .pingpong-diagram {
+    .pingpong-viewer {
       width: min(100%, 860px);
       margin: 0 auto;
       text-align: center;
     }
 
-    .pingpong-diagram a {
-      display: block;
+    .pingpong-toolbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+      font-family: 'VCR OSD Mono', monospace;
+      font-size: 0.62em;
     }
 
-    .pingpong-diagram img {
+    .pingpong-toolbar button,
+    .pingpong-open {
+      border: 2px solid #5a2f00;
+      border-radius: 8px;
+      background: #7b3f00;
+      color: #fff5e1;
+      padding: 0.35rem 0.65rem;
+      font: inherit;
+      text-decoration: none;
+      box-shadow: 3px 4px 0 rgba(47, 18, 1, 0.65);
+    }
+
+    .pingpong-toolbar button:disabled {
+      opacity: 0.45;
+    }
+
+    .pingpong-canvas-wrap,
+    .pingpong-fallback {
       display: block;
       width: 100%;
-      height: auto;
       border: 3px solid #5a2f00;
       border-radius: 14px;
       background: #fff;
       box-shadow: 6px 7px 0 rgba(47, 18, 1, 0.65);
+      box-sizing: border-box;
     }
 
-    .pingpong-diagram figcaption {
-      margin-top: 0.75rem;
+    .pingpong-canvas-wrap {
+      overflow: auto;
+      padding: 0.75rem;
+    }
+
+    .pingpong-canvas-wrap canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .pingpong-fallback {
+      min-height: 680px;
+    }
+
+    .pingpong-status {
+      margin: 0.5rem 0;
       font-family: 'VCR OSD Mono', monospace;
       font-size: 0.7em;
       color: #2a1206;
+    }
+
+    .is-hidden {
+      display: none !important;
     }
 
     .pingpong-panel h2 {
@@ -322,10 +366,10 @@
     .crt-frame--youtube {
       background: #050403;
       aspect-ratio: 1 / 1;
-      --embed-top: 19%;
-      --embed-right: 30%;
-      --embed-bottom: 34%;
-      --embed-left: 10%;
+      --embed-top: 18%;
+      --embed-right: 14%;
+      --embed-bottom: 30%;
+      --embed-left: 15%;
     }
 
     .crt-video {
@@ -342,6 +386,8 @@
       height: auto;
       border: 0;
       display: block;
+      background: #000;
+      z-index: 2;
     }
 
     .crt-frame--youtube .crt-embed {
@@ -359,6 +405,7 @@
       inset: 0;
       background: url('/video/crt-overlays/Sony-KV-20TTriniton-Tube-TV-RF-Composite-1993-Televisions_700x700%20copy.png') center/contain no-repeat;
       pointer-events: none;
+      z-index: 1;
     }
 
     .crt-frame--youtube .crt-overlay {
@@ -608,11 +655,29 @@
 
       <section class="text-panel pingpong-panel">
         <h2>ping ponging two stereo decks: the r stevie method</h2>
-        <figure class="pingpong-diagram">
-          <a href="https://media.otorlymern-electrical.com/pdfs/resources/pingpong-r2r.pdf">
-            <img src="/images/diagrams/pingpong-r2r.png" alt="Ping ponging two stereo decks diagram">
-          </a>
-        </figure>
+        <div class="pingpong-viewer" data-pingpong-pdf="/images/diagrams/pingpong-r2r.pdf">
+          <div class="pingpong-toolbar" role="toolbar" aria-label="Ping pong PDF viewer controls">
+            <button id="pingpongPrev" type="button" aria-label="Previous page">&lt;</button>
+            <span id="pingpongPageIndicator">Page 1 / 2</span>
+            <button id="pingpongNext" type="button" aria-label="Next page">&gt;</button>
+            <a class="pingpong-open" href="https://media.otorlymern-electrical.com/pdfs/resources/pingpong-r2r.pdf">
+              Open PDF
+            </a>
+          </div>
+          <div id="pingpongStatus" class="pingpong-status">Loading PDF viewer...</div>
+          <div id="pingpongCanvasWrap" class="pingpong-canvas-wrap">
+            <canvas id="pingpongCanvas"></canvas>
+          </div>
+          <iframe id="pingpongFallback" class="pingpong-fallback is-hidden" src="/images/diagrams/pingpong-r2r.pdf"
+            title="Ping ponging two stereo decks PDF viewer"></iframe>
+        </div>
+        <noscript>
+          <p class="pingpong-status">
+            <a href="https://media.otorlymern-electrical.com/pdfs/resources/pingpong-r2r.pdf">
+              Open the ping ponging two stereo decks PDF.
+            </a>
+          </p>
+        </noscript>
       </section>
 
       <div class="section-gap" aria-hidden="true"></div>
@@ -866,10 +931,121 @@
           to being a fucking recording artist.</p>
       </section>
     </div>
-    </div>
-    </section>
-    </div>
   </main>
+  <script>
+    (function () {
+      const viewer = document.querySelector('[data-pingpong-pdf]');
+      if (!viewer) {
+        return;
+      }
+
+      const PDFJS_LIB_URL = '/manuals/vendor/pdfjs/pdf.min.js';
+      const PDFJS_WORKER_URL = '/manuals/vendor/pdfjs/pdf.worker.min.js';
+      const pdfUrl = viewer.dataset.pingpongPdf;
+      const canvas = document.getElementById('pingpongCanvas');
+      const canvasWrap = document.getElementById('pingpongCanvasWrap');
+      const fallback = document.getElementById('pingpongFallback');
+      const status = document.getElementById('pingpongStatus');
+      const prevButton = document.getElementById('pingpongPrev');
+      const nextButton = document.getElementById('pingpongNext');
+      const pageIndicator = document.getElementById('pingpongPageIndicator');
+
+      let pdfDoc = null;
+      let pageNum = 1;
+      let renderInProgress = false;
+      let pendingPage = null;
+
+      function loadPdfJs() {
+        if (window.pdfjsLib) {
+          return Promise.resolve(window.pdfjsLib);
+        }
+
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = PDFJS_LIB_URL;
+          script.async = true;
+          script.onload = () => {
+            if (!window.pdfjsLib) {
+              reject(new Error('PDF.js failed to load.'));
+              return;
+            }
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER_URL;
+            resolve(window.pdfjsLib);
+          };
+          script.onerror = () => reject(new Error('PDF.js failed to load.'));
+          document.head.appendChild(script);
+        });
+      }
+
+      function updateControls() {
+        pageIndicator.textContent = pdfDoc ? `Page ${pageNum} / ${pdfDoc.numPages}` : 'Page 1 / 2';
+        prevButton.disabled = !pdfDoc || pageNum <= 1;
+        nextButton.disabled = !pdfDoc || pageNum >= pdfDoc.numPages;
+      }
+
+      async function renderPage(num) {
+        if (!pdfDoc || renderInProgress) {
+          pendingPage = num;
+          return;
+        }
+
+        renderInProgress = true;
+        pageNum = num;
+        updateControls();
+
+        const page = await pdfDoc.getPage(pageNum);
+        const baseViewport = page.getViewport({ scale: 1 });
+        const availableWidth = Math.max(320, canvasWrap.clientWidth - 24);
+        const viewport = page.getViewport({ scale: availableWidth / baseViewport.width });
+        const context = canvas.getContext('2d', { alpha: false });
+
+        canvas.width = Math.ceil(viewport.width);
+        canvas.height = Math.ceil(viewport.height);
+
+        await page.render({
+          canvasContext: context,
+          viewport,
+        }).promise;
+
+        renderInProgress = false;
+        status.textContent = '';
+
+        if (pendingPage !== null && pendingPage !== pageNum) {
+          const nextPage = pendingPage;
+          pendingPage = null;
+          renderPage(nextPage);
+        } else {
+          pendingPage = null;
+        }
+      }
+
+      function showFallback() {
+        status.textContent = 'PDF viewer unavailable. Using embedded PDF fallback.';
+        canvasWrap.classList.add('is-hidden');
+        fallback.classList.remove('is-hidden');
+      }
+
+      prevButton.addEventListener('click', () => {
+        if (pdfDoc && pageNum > 1) {
+          renderPage(pageNum - 1);
+        }
+      });
+
+      nextButton.addEventListener('click', () => {
+        if (pdfDoc && pageNum < pdfDoc.numPages) {
+          renderPage(pageNum + 1);
+        }
+      });
+
+      loadPdfJs()
+        .then((pdfjsLib) => pdfjsLib.getDocument(pdfUrl).promise)
+        .then((doc) => {
+          pdfDoc = doc;
+          return renderPage(1);
+        })
+        .catch(showFallback);
+    })();
+  </script>
 </body>
 
 </html>
