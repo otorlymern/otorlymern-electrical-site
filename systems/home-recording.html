@@ -366,10 +366,10 @@
     .crt-frame--youtube {
       background: #050403;
       aspect-ratio: 1 / 1;
-      --embed-top: 18%;
-      --embed-right: 14%;
-      --embed-bottom: 30%;
-      --embed-left: 15%;
+      --embed-top: 21.43%;
+      --embed-right: 15.71%;
+      --embed-bottom: 28.14%;
+      --embed-left: 17%;
     }
 
     .crt-video {
@@ -387,11 +387,14 @@
       border: 0;
       display: block;
       background: #000;
-      z-index: 2;
+      z-index: 1;
     }
 
     .crt-frame--youtube .crt-embed {
-      inset: var(--embed-top) var(--embed-right) var(--embed-bottom) var(--embed-left);
+      top: var(--embed-top);
+      left: var(--embed-left);
+      width: calc(100% - var(--embed-left) - var(--embed-right));
+      height: calc(100% - var(--embed-top) - var(--embed-bottom));
       border-radius: 6px;
     }
 
@@ -405,7 +408,7 @@
       inset: 0;
       background: url('/video/crt-overlays/Sony-KV-20TTriniton-Tube-TV-RF-Composite-1993-Televisions_700x700%20copy.png') center/contain no-repeat;
       pointer-events: none;
-      z-index: 1;
+      z-index: 5;
     }
 
     .crt-frame--youtube .crt-overlay {

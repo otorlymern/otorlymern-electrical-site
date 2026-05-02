@@ -259,10 +259,10 @@ body.vhs-library .nav-bar a:hover {
 /* Aligns video to the transparent window of the Sony Trinitron frame */
 .crt-screen {
   position: absolute;
-  top: 20.4%;
-  left: 20.3%;
-  width: 59.7%;
-  height: 42.3%;
+  top: 20.41%;
+  left: 20.21%;
+  width: 59.86%;
+  height: 42.29%;
   overflow: hidden;
   border-radius: 12px;
   box-shadow:
@@ -285,6 +285,22 @@ body.vhs-library .nav-bar a:hover {
 
 .tv-screen--embed {
   object-fit: cover;
+}
+
+.crt-screen > .tv-screen,
+.crt-screen > .crt-embed-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.crt-embed-fill iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .mute-toggle {
