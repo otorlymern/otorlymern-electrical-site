@@ -233,6 +233,31 @@
       filter: saturate(0.92) contrast(1.04);
     }
 
+    .crt-static {
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.14), rgba(0, 0, 0, 0) 58%),
+        url("https://media.otorlymern-electrical.com/images/textures/staticsnow.png");
+      background-size: cover, 220px 220px;
+      background-position: center, 0 0;
+      animation: crtStaticShift 0.18s steps(2) infinite;
+    }
+
+    @keyframes crtStaticShift {
+      0% {
+        background-position: center, 0 0;
+      }
+
+      50% {
+        background-position: center, 18px -14px;
+      }
+
+      100% {
+        background-position: center, -16px 12px;
+      }
+    }
+
     .crt-mini-scan {
       display: legacy;
     }
@@ -388,7 +413,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-
+        <div class="crt-label">RClown Tape 01</div>
       </div>
 
       <!-- CRT 6 -->
@@ -417,6 +442,22 @@
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
         <div class="crt-label">Circle Center Japan! (VHS)</div>
+      </div>
+
+      <!-- CRT 8 -->
+      <div class="crt-tile" data-title="Open Deck 08" data-meta="VHS CHANNEL 08">
+        <div class="crt-inner-frame">
+          <div class="crt-static" aria-hidden="true"></div>
+        </div>
+        <div class="crt-label">Open Deck 08</div>
+      </div>
+
+      <!-- CRT 9 -->
+      <div class="crt-tile" data-title="Open Deck 09" data-meta="VHS CHANNEL 09">
+        <div class="crt-inner-frame">
+          <div class="crt-static" aria-hidden="true"></div>
+        </div>
+        <div class="crt-label">Open Deck 09</div>
       </div>
     </div>
 
