@@ -43,17 +43,18 @@
   </header>
 
   <main class="viewing-room-v2">
-    <section class="viewing-room-intro" aria-label="Viewing room heading">
-      <p class="room-kicker">OES Video Library</p>
-      <h1 class="room-title">Viewing Roov 2</h1>
-      <p class="room-subtitle">Playback chamber for the selected tape. The case remains in the room after selection.</p>
-      <!-- Example link from the art wall/gallery room: <a href="/video/viewingroov2.html?tape=r-clown">Enter R. Clown Viewing Room</a> -->
-    </section>
-
     <section class="room-stage" aria-label="Viewing room">
-      <!-- Put afroomdesignwider.png in the /video/ folder next to viewingroov2.html -->
-      <img class="room-bg" src="afroomdesignwider.png"
+      <!-- Current local room image file: afroomwider.png -->
+      <img class="room-bg" src="afroomwider.png"
         alt="A strange yellow room with a wooden floor, table, shelf, window, and glowing pink wall object." />
+
+      <section class="viewing-room-intro" aria-label="Viewing room heading">
+        <p class="room-kicker">OES Video Library</p>
+        <h1 class="room-title">Viewing Roov 2</h1>
+        <p class="room-subtitle">Playback chamber for the selected tape. The case remains in the room after selection.
+        </p>
+        <!-- Example link from the art wall/gallery room: <a href="/video/viewingroov2.html?tape=r-clown">Enter R. Clown Viewing Room</a> -->
+      </section>
 
       <div class="crt-player" aria-label="CRT video player">
         <div class="crt-player-frame">
@@ -64,18 +65,17 @@
         </div>
       </div>
 
-      <button class="room-vhs-object" id="room-vhs-object" type="button"
-        aria-label="Inspect selected VHS case artwork">
+      <button class="room-vhs-object" id="room-vhs-object" type="button" aria-label="Inspect selected VHS case artwork">
         <img id="tape-cover-object" src="" alt="" />
       </button>
-    </section>
 
-    <section class="tape-document" aria-label="Tape information">
-      <p class="room-label">NOW PLAYING</p>
-      <h1 id="tape-title"></h1>
-      <p id="tape-catalog"></p>
-      <p id="tape-notes"></p>
-      <p class="inspect-note">Click the tape case in the room to lift it up for inspection.</p>
+      <section class="tape-document" aria-label="Tape information">
+        <p class="room-label">NOW PLAYING</p>
+        <h2 id="tape-title"></h2>
+        <p id="tape-catalog"></p>
+        <p id="tape-notes"></p>
+        <p class="inspect-note">Click the tape case in the room to lift it up for inspection.</p>
+      </section>
     </section>
 
     <div class="case-art-modal" id="case-art-modal" role="dialog" aria-modal="true"
@@ -95,7 +95,7 @@
         title: "R. Clown",
         catalog: "OJC044",
         video: "/video/deleted-video-placeholder.mp4",
-        cover: "/images/video/vhs-covers/rclown-hlptv-vhs.jpeg",
+        cover: "vhs-tapes/vhsbox-rclown-hlptv.jpg",
         notes: "OJC Recordings / VHS viewing-room test."
       }
     };
