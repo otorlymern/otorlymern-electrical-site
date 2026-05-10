@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --roov-paper: #ead9b6;
+  --roov-ink: #1f1309;
+  --roov-brown: #5c3214;
+  --roov-panel: rgba(41, 20, 8, 0.86);
+  --roov-panel-border: rgba(250, 220, 170, 0.42);
+  --roov-glow: rgba(255, 185, 108, 0.2);
+}
+
+body.viewing-roov2-page {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--roov-paper);
+  background:
+    radial-gradient(circle at top, rgba(255, 205, 123, 0.16), transparent 34%),
+    linear-gradient(180deg, #6e3916 0%, #281207 100%);
+  font-family: "VCR OSD Mono", "Courier New", monospace;
+}
+
+body.viewing-roov2-page footer {
+  background: rgba(22, 11, 5, 0.9);
+  color: var(--roov-paper);
+}
+
+body.case-art-open {
+  overflow: hidden;
+}
+
+.viewing-room-v2 {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+.viewing-room-intro {
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+
+.room-kicker {
+  margin: 0 0 0.35rem;
+  color: #ffd8a0;
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+}
+
+.room-title {
+  margin: 0;
+  font-family: "Lyno-Jean", sans-serif;
+  font-size: clamp(2.8rem, 9vw, 6rem);
+  line-height: 0.94;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.48);
+}
+
+.room-subtitle {
+  max-width: 52rem;
+  margin: 0.55rem auto 0;
+  color: #f6d3a8;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.room-stage {
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 223, 177, 0.34);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.38);
+  background: #29140b;
+
+  --crt-left: 49%;
+  --crt-top: 47%;
+  --crt-width: 26%;
+
+  --vhs-left: 51%;
+  --vhs-top: 78%;
+  --vhs-width: 23%;
+}
+
+.room-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 12, 8, 0.22);
+  opacity: 0;
+  transition: opacity 160ms ease;
+  pointer-events: none;
+}
+
+.room-stage.is-inspecting::after {
+  opacity: 1;
+}
+
+.room-stage.is-inspecting .room-bg,
+.room-stage.is-inspecting .crt-player,
+.room-stage.is-inspecting .room-vhs-object {
+  filter: blur(4px) brightness(0.72);
+}
+
+.room-bg {
+  width: 100%;
+  display: block;
+  height: auto;
+  transition: filter 160ms ease;
+}
+
+.crt-player {
+  position: absolute;
+  left: var(--crt-left);
+  top: var(--crt-top);
+  width: var(--crt-width);
+  transform: translate(-50%, -50%);
+  transition: filter 160ms ease;
+}
+
+.crt-player-frame {
+  position: relative;
+  aspect-ratio: 1 / 0.82;
+  padding: 7% 9% 13%;
+  background: url("/video/sonycrtfrfame.png") center center / contain no-repeat;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.52));
+}
+
+.crt-player video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: #050505;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.75);
+}
+
+.room-vhs-object {
+  position: absolute;
+  left: var(--vhs-left);
+  top: var(--vhs-top);
+  width: var(--vhs-width);
+  transform: translate(-50%, -50%) rotate(-3deg);
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: zoom-in;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.room-vhs-object:hover,
+.room-vhs-object:focus-visible {
+  transform: translate(-50%, -52%) rotate(-1deg) scale(1.03);
+}
+
+.room-vhs-object img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.35));
+}
+
+.tape-document {
+  margin: 1rem auto 0;
+  padding: 1rem 1.1rem 1.15rem;
+  border: 1px solid var(--roov-panel-border);
+  background:
+    linear-gradient(180deg, rgba(83, 43, 15, 0.72), rgba(28, 14, 7, 0.92)),
+    repeating-linear-gradient(180deg, transparent 0, transparent 24px, rgba(255, 235, 201, 0.05) 25px);
+  box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.26);
+  color: var(--roov-paper);
+}
+
+.room-label {
+  margin: 0;
+  color: #ffd8a0;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+}
+
+#tape-title {
+  margin: 0.5rem 0 0.35rem;
+  font-family: "Lyno-Stan", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: #fff0d6;
+}
+
+#tape-catalog,
+#tape-notes,
+.inspect-note {
+  margin: 0.35rem 0 0;
+  line-height: 1.5;
+  color: #f2d5ae;
+}
+
+.inspect-note {
+  color: #ffd18d;
+}
+
+.case-art-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(20, 12, 8, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.case-art-modal[hidden] {
+  display: none;
+}
+
+.case-art-modal img {
+  max-width: 92vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  transform: translateY(26px) scale(0.82) rotate(-2deg);
+  transform-origin: center center;
+  animation: lift-case 180ms ease forwards;
+}
+
+.close-modal {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  border: 1px solid rgba(255, 223, 177, 0.6);
+  padding: 0.45rem 0.7rem;
+  background: rgba(49, 26, 12, 0.94);
+  color: #fff0d6;
+  font: inherit;
+  cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus-visible {
+  background: rgba(79, 42, 18, 0.96);
+}
+
+@keyframes lift-case {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.82) rotate(-2deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@media (max-width: 820px) {
+  .viewing-room-v2 {
+    padding: 1rem 0.65rem 2rem;
+  }
+
+  .room-stage {
+    --crt-left: 49%;
+    --crt-top: 47%;
+    --crt-width: 34%;
+
+    --vhs-left: 53%;
+    --vhs-top: 82%;
+    --vhs-width: 30%;
+  }
+
+  .case-art-modal {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .room-stage {
+    --crt-left: 49%;
+    --crt-top: 46%;
+    --crt-width: 41%;
+
+    --vhs-left: 52%;
+    --vhs-top: 84%;
+    --vhs-width: 34%;
+  }
+
+  .tape-document {
+    padding: 0.9rem;
+  }
+}

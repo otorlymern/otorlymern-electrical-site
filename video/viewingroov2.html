@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OES Viewing Roov 2</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/altstyle.css" />
+  <link rel="stylesheet" href="/css/viewingroov2.css" />
+</head>
+
+<body class="viewing-roov2-page">
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/systems/systems.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown">
+          <a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and
+                Synthesis</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="viewing-room-v2">
+    <section class="viewing-room-intro" aria-label="Viewing room heading">
+      <p class="room-kicker">OES Video Library</p>
+      <h1 class="room-title">Viewing Roov 2</h1>
+      <p class="room-subtitle">Playback chamber for the selected tape. The case remains in the room after selection.</p>
+      <!-- Example link from the art wall/gallery room: <a href="/video/viewingroov2.html?tape=r-clown">Enter R. Clown Viewing Room</a> -->
+    </section>
+
+    <section class="room-stage" aria-label="Viewing room">
+      <!-- Put afroomdesignwider.png in the /video/ folder next to viewingroov2.html -->
+      <img class="room-bg" src="afroomdesignwider.png"
+        alt="A strange yellow room with a wooden floor, table, shelf, window, and glowing pink wall object." />
+
+      <div class="crt-player" aria-label="CRT video player">
+        <div class="crt-player-frame">
+          <video id="tape-video" controls playsinline poster="">
+            <source id="tape-source" src="" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <button class="room-vhs-object" id="room-vhs-object" type="button"
+        aria-label="Inspect selected VHS case artwork">
+        <img id="tape-cover-object" src="" alt="" />
+      </button>
+    </section>
+
+    <section class="tape-document" aria-label="Tape information">
+      <p class="room-label">NOW PLAYING</p>
+      <h1 id="tape-title"></h1>
+      <p id="tape-catalog"></p>
+      <p id="tape-notes"></p>
+      <p class="inspect-note">Click the tape case in the room to lift it up for inspection.</p>
+    </section>
+
+    <div class="case-art-modal" id="case-art-modal" role="dialog" aria-modal="true"
+      aria-label="Selected VHS case artwork" hidden>
+      <button class="close-modal" id="close-modal" type="button">Close</button>
+      <img id="modal-cover" src="" alt="" />
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 – Otorlymern Electrical Systems – Viewing Room</p>
+  </footer>
+
+  <script>
+    const tapes = {
+      "r-clown": {
+        title: "R. Clown",
+        catalog: "OJC044",
+        video: "/video/deleted-video-placeholder.mp4",
+        cover: "/images/video/vhs-covers/rclown-hlptv-vhs.jpeg",
+        notes: "OJC Recordings / VHS viewing-room test."
+      }
+    };
+
+    const defaultTapeKey = "r-clown";
+    const params = new URLSearchParams(window.location.search);
+    const selectedTapeKey = params.get("tape");
+    const activeTape = tapes[selectedTapeKey] || tapes[defaultTapeKey];
+
+    const roomStage = document.querySelector(".room-stage");
+    const video = document.getElementById("tape-video");
+    const source = document.getElementById("tape-source");
+    const title = document.getElementById("tape-title");
+    const catalog = document.getElementById("tape-catalog");
+    const notes = document.getElementById("tape-notes");
+    const roomVhsObject = document.getElementById("room-vhs-object");
+    const tapeCoverObject = document.getElementById("tape-cover-object");
+    const modal = document.getElementById("case-art-modal");
+    const modalCover = document.getElementById("modal-cover");
+    const closeModalButton = document.getElementById("close-modal");
+
+    function loadTape(tape) {
+      title.textContent = tape.title;
+      catalog.textContent = tape.catalog;
+      notes.textContent = tape.notes;
+
+      source.src = tape.video;
+      video.poster = tape.cover;
+      video.load();
+
+      tapeCoverObject.src = tape.cover;
+      tapeCoverObject.alt = tape.title + " VHS wrap artwork";
+      modalCover.src = tape.cover;
+      modalCover.alt = tape.title + " VHS wrap artwork, enlarged for inspection";
+    }
+
+    function openModal() {
+      modal.hidden = false;
+      roomStage.classList.add("is-inspecting");
+      document.body.classList.add("case-art-open");
+      closeModalButton.focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      roomStage.classList.remove("is-inspecting");
+      document.body.classList.remove("case-art-open");
+      roomVhsObject.focus();
+    }
+
+    roomVhsObject.addEventListener("click", openModal);
+    closeModalButton.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !modal.hidden) {
+        closeModal();
+      }
+    });
+
+    loadTape(activeTape);
+  </script>
+</body>
+
+</html>
