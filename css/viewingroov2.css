@@ -26,29 +26,40 @@ body.viewing-roov2-page {
 }
 
 html.viewing-roov2-root::-webkit-scrollbar,
-body.viewing-roov2-page::-webkit-scrollbar {
+body.viewing-roov2-page::-webkit-scrollbar,
+.viewing-room-v2::-webkit-scrollbar {
   width: auto;
   height: auto;
   background: initial;
 }
 
 html.viewing-roov2-root::-webkit-scrollbar-track,
-body.viewing-roov2-page::-webkit-scrollbar-track {
+body.viewing-roov2-page::-webkit-scrollbar-track,
+.viewing-room-v2::-webkit-scrollbar-track {
   background: initial;
   border: 0;
 }
 
 html.viewing-roov2-root::-webkit-scrollbar-thumb,
-body.viewing-roov2-page::-webkit-scrollbar-thumb {
+body.viewing-roov2-page::-webkit-scrollbar-thumb,
+.viewing-room-v2::-webkit-scrollbar-thumb {
   background: initial;
   border: 0;
 }
 
 html.viewing-roov2-root::-webkit-scrollbar-button,
-body.viewing-roov2-page::-webkit-scrollbar-button {
+body.viewing-roov2-page::-webkit-scrollbar-button,
+.viewing-room-v2::-webkit-scrollbar-button {
   display: none;
   width: 0;
   height: 0;
+}
+
+html.viewing-roov2-root,
+body.viewing-roov2-page,
+.viewing-room-v2 {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
 }
 
 body.viewing-roov2-page header,
