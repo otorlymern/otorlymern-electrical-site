@@ -13,16 +13,42 @@
   --roov-panel: rgba(41, 20, 8, 0.86);
   --roov-panel-border: rgba(250, 220, 170, 0.42);
   --roov-glow: rgba(255, 185, 108, 0.2);
+  --room-native-width: 1672px;
+  --room-native-height: 941px;
 }
 
 body.viewing-roov2-page {
   margin: 0;
   min-height: 100vh;
-  color: var(--roov-paper);
-  background:
-    radial-gradient(circle at top, rgba(255, 205, 123, 0.16), transparent 34%),
-    linear-gradient(180deg, #6e3916 0%, #281207 100%);
+  color: #111;
+  background: transparent;
   font-family: "VCR OSD Mono", "Courier New", monospace;
+}
+
+html.viewing-roov2-root::-webkit-scrollbar,
+body.viewing-roov2-page::-webkit-scrollbar {
+  width: auto;
+  height: auto;
+  background: initial;
+}
+
+html.viewing-roov2-root::-webkit-scrollbar-track,
+body.viewing-roov2-page::-webkit-scrollbar-track {
+  background: initial;
+  border: 0;
+}
+
+html.viewing-roov2-root::-webkit-scrollbar-thumb,
+body.viewing-roov2-page::-webkit-scrollbar-thumb {
+  background: initial;
+  border: 0;
+}
+
+html.viewing-roov2-root::-webkit-scrollbar-button,
+body.viewing-roov2-page::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body.viewing-roov2-page header,
@@ -31,19 +57,16 @@ body.viewing-roov2-page footer {
   z-index: 20;
 }
 
-body.viewing-roov2-page footer {
-  background: rgba(22, 11, 5, 0.9);
-  color: var(--roov-paper);
-}
-
-body.case-art-open {
-  overflow: hidden;
+body.viewing-roov2-page .nav-bar a,
+body.viewing-roov2-page .dropdown-content a {
+  font-family: "Lyno-Stan", sans-serif;
 }
 
 .viewing-room-v2 {
   width: 100%;
   min-height: calc(100vh - 7.5rem);
   padding: 0;
+  overflow-x: auto;
 }
 
 .viewing-room-intro {
@@ -54,7 +77,6 @@ body.case-art-open {
   width: min(30rem, calc(100% - 2rem));
   margin: 0;
   padding: 1.2rem 1.1rem 1rem;
-  background: linear-gradient(180deg, rgba(36, 18, 9, 0.9), rgba(36, 18, 9, 0.22));
   text-align: left;
   pointer-events: none;
 }
@@ -86,52 +108,43 @@ body.case-art-open {
 
 .room-stage {
   position: relative;
-  width: 100%;
-  min-height: calc(100vh - 7.5rem);
+  width: var(--room-native-width);
+  min-width: var(--room-native-width);
+  max-width: var(--room-native-width);
+  height: var(--room-native-height);
+  min-height: var(--room-native-height);
+  max-height: var(--room-native-height);
+  margin: 0 auto;
   overflow: hidden;
-  background: #29140b;
+  background: transparent;
+  aspect-ratio: 1672 / 941;
+  flex: none;
 
-  --crt-left: 49%;
-  --crt-top: 46%;
-  --crt-width: min(34vw, 24rem);
-  --crt-screen-left: 13%;
-  --crt-screen-top: 10%;
-  --crt-screen-width: 74%;
-  --crt-screen-height: 64%;
+  --crt-left: 50.8%;
+  --crt-top: 80%;
+  --crt-width: 34%;
+  --crt-screen-left: 12.7%;
+  --crt-screen-top: 11%;
+  --crt-screen-width: 75.6%;
+  --crt-screen-height: 67.1%;
 
-  --vhs-left: 52%;
-  --vhs-top: 79%;
-  --vhs-width: min(28vw, 19rem);
-}
-
-.room-stage::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 12;
-  background: rgba(20, 12, 8, 0.22);
-  opacity: 0;
-  transition: opacity 160ms ease;
-  pointer-events: none;
-}
-
-.room-stage.is-inspecting::after {
-  opacity: 1;
-}
-
-.room-stage.is-inspecting .room-bg,
-.room-stage.is-inspecting .crt-player,
-.room-stage.is-inspecting .room-vhs-object {
-  filter: blur(4px) brightness(0.72);
+  --vhs-left: 65.4%;
+  --vhs-top: 63.6%;
+  --vhs-width: 13%;
 }
 
 .room-bg {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: var(--room-native-width);
+  min-width: var(--room-native-width);
+  max-width: var(--room-native-width);
+  height: var(--room-native-height);
+  min-height: var(--room-native-height);
+  max-height: var(--room-native-height);
   display: block;
-  object-fit: cover;
+  object-fit: none;
   transition: filter 160ms ease;
 }
 
@@ -140,15 +153,15 @@ body.case-art-open {
   left: var(--crt-left);
   top: var(--crt-top);
   width: var(--crt-width);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-2.2deg);
   z-index: 6;
   transition: filter 160ms ease;
 }
 
 .crt-player-frame {
   position: relative;
-  aspect-ratio: 1 / 0.82;
-  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.52));
+  aspect-ratio: 1500 / 1313;
+  filter: drop-shadow(0 20px 18px rgba(0, 0, 0, 0.4));
 }
 
 .crt-player-frame::after {
@@ -156,7 +169,7 @@ body.case-art-open {
   position: absolute;
   inset: 0;
   z-index: 3;
-  background: url("/video/sonycrtfrfame.png") center center / contain no-repeat;
+  background: url("/video/crt-overlays/crt-main.png") center center / contain no-repeat;
   pointer-events: none;
 }
 
@@ -179,18 +192,23 @@ body.case-art-open {
   left: var(--vhs-left);
   top: var(--vhs-top);
   width: var(--vhs-width);
-  transform: translate(-50%, -50%) rotate(-3deg);
+  transform: translate(-50%, -50%) rotate(-8deg);
   padding: 0;
   border: none;
   background: transparent;
   cursor: zoom-in;
-  z-index: 7;
+  z-index: 8;
   transition: transform 160ms ease, filter 160ms ease;
 }
 
 .room-vhs-object:hover,
 .room-vhs-object:focus-visible {
-  transform: translate(-50%, -52%) rotate(-1deg) scale(1.03);
+  transform: translate(-50%, -52%) rotate(-5deg) scale(1.03);
+}
+
+.room-vhs-object:focus-visible {
+  outline: 2px dashed rgba(255, 242, 215, 0.85);
+  outline-offset: 0.35rem;
 }
 
 .room-vhs-object img {
@@ -202,32 +220,65 @@ body.case-art-open {
 
 .tape-document {
   position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  z-index: 6;
-  width: min(28rem, calc(100% - 2rem));
+  left: 1.2rem;
+  bottom: 1.1rem;
+  z-index: 8;
+  width: 27rem;
+  max-width: none;
   margin: 0;
-  padding: 1rem 1.1rem 1.15rem;
-  border: 1px solid var(--roov-panel-border);
-  background:
-    linear-gradient(180deg, rgba(83, 43, 15, 0.72), rgba(28, 14, 7, 0.92)),
-    repeating-linear-gradient(180deg, transparent 0, transparent 24px, rgba(255, 235, 201, 0.05) 25px);
-  box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.26);
-  color: var(--roov-paper);
+}
+
+.tape-document .window,
+.case-art-modal .window {
+  width: 100%;
+  margin: 0;
+  background-color: #c0c0c0;
+  box-shadow: 10px 14px 0 rgba(0, 0, 0, 0.28);
+  color: var(--roov-ink);
+}
+
+.tape-document .title-bar,
+.case-art-modal .title-bar {
+  cursor: default;
+}
+
+.tape-document .title-bar .title,
+.case-art-modal .title-bar .title {
+  background: #c0c0c0;
+}
+
+.tape-document .window-pane,
+.case-art-modal .window-pane {
+  background-color: #c0c0c0;
+  overflow: hidden;
+  padding: 0.95rem 1rem 1rem;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: #22150c;
+}
+
+.tape-document .window.is-minimized .window-pane,
+.case-art-modal .window.is-minimized .window-pane {
+  display: none;
+}
+
+.tape-document .window.is-minimized,
+.case-art-modal .window.is-minimized {
+  width: auto;
 }
 
 .room-label {
   margin: 0;
-  color: #ffd8a0;
+  color: #6a4325;
   letter-spacing: 0.18em;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
 }
 
 #tape-title {
   margin: 0.5rem 0 0.35rem;
-  font-family: "Lyno-Stan", sans-serif;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  color: #fff0d6;
+  font-family: Chicago, "Lyno-Stan", sans-serif;
+  font-size: 1.55rem;
+  color: #24160a;
 }
 
 #tape-catalog,
@@ -235,69 +286,38 @@ body.case-art-open {
 .inspect-note {
   margin: 0.35rem 0 0;
   line-height: 1.5;
-  color: #f2d5ae;
+  color: #3c2918;
 }
 
 .inspect-note {
-  color: #ffd18d;
+  color: #7b552b;
 }
 
 .case-art-modal {
   position: fixed;
-  inset: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: rgba(20, 12, 8, 0.72);
-  backdrop-filter: blur(6px);
+  top: 6rem;
+  right: 1.25rem;
+  z-index: 60;
+  width: min(52rem, calc(100vw - 2.5rem));
+  margin: 0;
 }
 
 .case-art-modal[hidden] {
   display: none;
 }
 
+.case-art-pane {
+  max-height: calc(100vh - 11rem);
+  overflow: auto;
+}
+
 .case-art-modal img {
-  max-width: 92vw;
-  max-height: 86vh;
-  width: auto;
+  max-width: 100%;
+  max-height: none;
+  width: 100%;
   height: auto;
   object-fit: contain;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-  transform: translateY(26px) scale(0.82) rotate(-2deg);
-  transform-origin: center center;
-  animation: lift-case 180ms ease forwards;
-}
-
-.close-modal {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-  border: 1px solid rgba(255, 223, 177, 0.6);
-  padding: 0.45rem 0.7rem;
-  background: rgba(49, 26, 12, 0.94);
-  color: #fff0d6;
-  font: inherit;
-  cursor: pointer;
-}
-
-.close-modal:hover,
-.close-modal:focus-visible {
-  background: rgba(79, 42, 18, 0.96);
-}
-
-@keyframes lift-case {
-  from {
-    opacity: 0;
-    transform: translateY(26px) scale(0.82) rotate(-2deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotate(0deg);
-  }
+  display: block;
 }
 
 @media (max-width: 820px) {
@@ -306,18 +326,13 @@ body.case-art-open {
   }
 
   .room-stage {
-    min-height: 100vh;
-    --crt-left: 49%;
-    --crt-top: 44%;
-    --crt-width: min(46vw, 21rem);
-
-    --vhs-left: 54%;
-    --vhs-top: 79%;
-    --vhs-width: min(34vw, 14rem);
+    margin: 0;
   }
 
   .case-art-modal {
-    padding: 1rem;
+    top: 5rem;
+    right: 0.6rem;
+    width: calc(100vw - 1.2rem);
   }
 
   .viewing-room-intro,
@@ -331,23 +346,12 @@ body.case-art-open {
   }
 
   .tape-document {
+    width: 22rem;
     bottom: 0.6rem;
-    padding: 0.85rem 0.9rem 0.95rem;
   }
 }
 
 @media (max-width: 560px) {
-  .room-stage {
-    min-height: 100svh;
-    --crt-left: 51%;
-    --crt-top: 40%;
-    --crt-width: min(56vw, 15rem);
-
-    --vhs-left: 56%;
-    --vhs-top: 73%;
-    --vhs-width: min(40vw, 10.5rem);
-  }
-
   .viewing-room-intro {
     width: min(18rem, calc(100% - 1rem));
     padding: 0.75rem 0.7rem 0.7rem;
@@ -363,13 +367,23 @@ body.case-art-open {
   }
 
   .tape-document {
-    width: min(17rem, calc(100% - 1rem));
+    width: 16.25rem;
     left: 0.5rem;
     bottom: 0.5rem;
-    padding: 0.75rem 0.75rem 0.85rem;
+  }
+
+  .tape-document .window-pane,
+  .case-art-modal .window-pane {
+    padding: 0.7rem 0.75rem 0.8rem;
   }
 
   #tape-title {
-    font-size: clamp(1.35rem, 7vw, 1.8rem);
+    font-size: 1.25rem;
+  }
+
+  .case-art-modal {
+    top: 4.4rem;
+    right: 0.5rem;
+    width: calc(100vw - 1rem);
   }
 }

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="viewing-roov2-root">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OES Viewing Roov 2</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/system7.css/style.css" />
   <link rel="stylesheet" href="/css/altstyle.css" />
+  <link rel="stylesheet" href="/css/system7-services.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/viewingroov2.css" />
 </head>
 
@@ -44,21 +46,21 @@
 
   <main class="viewing-room-v2">
     <section class="room-stage" aria-label="Viewing room">
-      <!-- Current local room image file: afroomwider.png -->
-      <img class="room-bg" src="afroomwider.png"
+      <!-- Current local room image file: widecrtcenter.png -->
+      <img class="room-bg" src="widecrtcenter.png"
         alt="A strange yellow room with a wooden floor, table, shelf, window, and glowing pink wall object." />
 
       <section class="viewing-room-intro" aria-label="Viewing room heading">
         <p class="room-kicker">OES Video Library</p>
-        <h1 class="room-title">Viewing Roov 2</h1>
-        <p class="room-subtitle">Playback chamber for the selected tape. The case remains in the room after selection.
+        <h1 class="room-title">Viewing Room</h1>
+        <p class="room-subtitle">
         </p>
         <!-- Example link from the art wall/gallery room: <a href="/video/viewingroov2.html?tape=r-clown">Enter R. Clown Viewing Room</a> -->
       </section>
 
       <div class="crt-player" aria-label="CRT video player">
         <div class="crt-player-frame">
-          <video id="tape-video" controls playsinline poster="">
+          <video id="tape-video" poster="">
             <source id="tape-source" src="" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -69,20 +71,41 @@
         <img id="tape-cover-object" src="" alt="" />
       </button>
 
-      <section class="tape-document" aria-label="Tape information">
-        <p class="room-label">NOW PLAYING</p>
-        <h2 id="tape-title"></h2>
-        <p id="tape-catalog"></p>
-        <p id="tape-notes"></p>
-        <p class="inspect-note">Click the tape case in the room to lift it up for inspection.</p>
+      <section class="tape-document service-form-window" aria-label="Tape information">
+        <div class="window" id="tape-info-window">
+          <div class="title-bar">
+            <button class="close hidden" type="button" aria-hidden="true" tabindex="-1"></button>
+            <h2 class="title">Now Playing</h2>
+            <button class="resize window-toggle" type="button" aria-controls="tape-info-pane"
+              aria-expanded="true"></button>
+          </div>
+          <div class="separator"></div>
+          <div class="window-pane" id="tape-info-pane">
+            <p class="room-label">NOW PLAYING</p>
+            <h2 id="tape-title"></h2>
+            <p id="tape-catalog"></p>
+            <p id="tape-notes"></p>
+            <p class="inspect-note">Click the tape case in the room to open the cover in a tape window.</p>
+          </div>
+        </div>
       </section>
     </section>
 
-    <div class="case-art-modal" id="case-art-modal" role="dialog" aria-modal="true"
+    <aside class="case-art-modal service-form-window" id="case-art-modal" role="dialog"
       aria-label="Selected VHS case artwork" hidden>
-      <button class="close-modal" id="close-modal" type="button">Close</button>
-      <img id="modal-cover" src="" alt="" />
-    </div>
+      <div class="window">
+        <div class="title-bar">
+          <button class="close" id="close-modal" type="button" aria-label="Close cover window"></button>
+          <h2 class="title">VHS Cover</h2>
+          <button class="resize window-toggle" id="cover-window-toggle" type="button" aria-controls="cover-window-pane"
+            aria-expanded="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane case-art-pane" id="cover-window-pane">
+          <img id="modal-cover" src="" alt="" />
+        </div>
+      </div>
+    </aside>
   </main>
 
   <footer>
@@ -95,7 +118,7 @@
         title: "R. Clown",
         catalog: "OJC044",
         video: "/video/deleted-video-placeholder.mp4",
-        cover: "vhs-tapes/vhsbox-rclown-hlptv.jpg",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/vhsbox-rclown-hlptv.jpg",
         notes: "OJC Recordings / VHS viewing-room test."
       }
     };
@@ -105,7 +128,6 @@
     const selectedTapeKey = params.get("tape");
     const activeTape = tapes[selectedTapeKey] || tapes[defaultTapeKey];
 
-    const roomStage = document.querySelector(".room-stage");
     const video = document.getElementById("tape-video");
     const source = document.getElementById("tape-source");
     const title = document.getElementById("tape-title");
@@ -116,6 +138,7 @@
     const modal = document.getElementById("case-art-modal");
     const modalCover = document.getElementById("modal-cover");
     const closeModalButton = document.getElementById("close-modal");
+    const windowToggleButtons = Array.from(document.querySelectorAll(".window-toggle"));
 
     function loadTape(tape) {
       title.textContent = tape.title;
@@ -134,25 +157,34 @@
 
     function openModal() {
       modal.hidden = false;
-      roomStage.classList.add("is-inspecting");
-      document.body.classList.add("case-art-open");
+      modal.classList.remove("is-minimized");
+      const coverPane = document.getElementById("cover-window-pane");
+      const coverToggle = document.getElementById("cover-window-toggle");
+      coverPane.hidden = false;
+      coverToggle.setAttribute("aria-expanded", "true");
       closeModalButton.focus();
     }
 
     function closeModal() {
       modal.hidden = true;
-      roomStage.classList.remove("is-inspecting");
-      document.body.classList.remove("case-art-open");
       roomVhsObject.focus();
+    }
+
+    function toggleWindow(button) {
+      const targetId = button.getAttribute("aria-controls");
+      const pane = document.getElementById(targetId);
+      const windowElement = button.closest(".window");
+      const expanded = button.getAttribute("aria-expanded") !== "false";
+
+      button.setAttribute("aria-expanded", expanded ? "false" : "true");
+      pane.hidden = expanded;
+      windowElement.classList.toggle("is-minimized", expanded);
     }
 
     roomVhsObject.addEventListener("click", openModal);
     closeModalButton.addEventListener("click", closeModal);
-
-    modal.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        closeModal();
-      }
+    windowToggleButtons.forEach((button) => {
+      button.addEventListener("click", () => toggleWindow(button));
     });
 
     window.addEventListener("keydown", (event) => {
