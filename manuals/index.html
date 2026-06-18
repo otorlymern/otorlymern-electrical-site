@@ -10,7 +10,6 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://otorlymern-electrical.com/manuals/" />
   <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/altstyle.css" />
   <link rel="stylesheet" href="/manuals/manuals-archive.css" />
 
   <script type="application/ld+json" id="archive-page-jsonld">
@@ -25,7 +24,11 @@
   <script type="application/ld+json" id="manual-jsonld">{}</script>
 </head>
 
-<body class="manuals-archive-page">
+<body class="manuals-archive-page archive-glitz">
+  <div class="archive-atmosphere" aria-hidden="true"></div>
+  <div class="archive-grid-field" aria-hidden="true"></div>
+  <div class="archive-scanlines" aria-hidden="true"></div>
+  <div class="archive-noise" aria-hidden="true"></div>
   <header>
     <nav>
       <ul class="nav-bar">
@@ -58,10 +61,13 @@
   </header>
 
   <main class="archive-shell">
-    <section class="archive-hero title-section">
-      <div class="title-container">
-        <h1 class="threeD archive-title"><span class="wiggle-title">Manuals Archive</span></h1>
-        <p class="archive-subtitle">One QR code. Every shipped unit. Find your exact manual and support path in seconds.
+    <section class="archive-hero title-section reveal-on-scroll">
+      <div class="archive-title-blob" aria-hidden="true"></div>
+      <div class="title-container archive-title-container">
+        <h1 class="threeD archive-title archive-chrome-title archive-mouse-reactive" data-text="MANUALS ARCHIVE"><span
+            class="wiggle-title">Manuals Archive</span></h1>
+        <p class="archive-subtitle archive-text-plate">One QR code. Every shipped unit. Find your exact manual and
+          support path in seconds.
         </p>
       </div>
     </section>
@@ -72,8 +78,8 @@
     </button>
 
     <div class="archive-layout">
-      <aside id="archiveSidebar" class="archive-sidebar" aria-label="Manual lookup tools">
-        <section class="side-block">
+      <aside id="archiveSidebar" class="archive-sidebar archive-metal-panel" aria-label="Manual lookup tools">
+        <section class="side-block archive-metal-panel">
           <h2>Find Your Manual</h2>
           <form id="manualSearchForm" class="search-form" role="search" aria-label="Search manuals">
             <label for="manualSearchInput">Manual Code or Model Keyword</label>
@@ -88,7 +94,7 @@
           <ul id="manualSearchResults" class="manual-results" aria-label="Manual search results"></ul>
         </section>
 
-        <section class="side-block">
+        <section class="side-block archive-metal-panel">
           <div class="block-head">
             <h2>Recent Sold Units</h2>
             <span id="recentCount" class="small-note"></span>
@@ -96,7 +102,7 @@
           <ul id="recentUnitsList" class="recent-units" aria-label="Recent sold units"></ul>
         </section>
 
-        <section class="side-block cta-block">
+        <section class="side-block cta-block archive-metal-panel">
           <h2>Need Help?</h2>
           <p>Service, restoration, calibration, and classes.</p>
           <a class="text-link" href="/services/repairrequest.html">Need Service For This Unit</a>
@@ -108,7 +114,7 @@
             OES</a>
         </section>
 
-        <section class="side-block signup-block" aria-label="Email updates">
+        <section class="side-block signup-block archive-metal-panel" aria-label="Email updates">
           <h2>Optional Updates</h2>
           <p>Get occasional updates about new uploads and support notes.</p>
           <form id="emailSignupForm" class="signup-form">
@@ -122,12 +128,14 @@
       </aside>
 
       <section class="archive-main" aria-label="Manual viewer">
-        <article class="manual-meta" aria-live="polite">
+        <article class="manual-meta archive-metal-panel" aria-live="polite">
           <div class="manual-meta-head">
             <h2 id="manualTitle">Select a manual</h2>
             <div class="meta-actions">
               <button id="copyShareButton" type="button">Copy Share Link</button>
               <a id="openPdfExternal" href="#" target="_blank" rel="noopener noreferrer">Open PDF</a>
+              <a id="serviceButton" class="text-link" href="#" target="_blank" rel="noopener noreferrer">Request
+                Service</a>
             </div>
           </div>
 
@@ -152,7 +160,7 @@
           <p id="manualNotes" class="manual-notes"></p>
         </article>
 
-        <article class="viewer-panel" aria-label="PDF manual viewer">
+        <article class="viewer-panel archive-metal-panel" aria-label="PDF manual viewer">
           <div class="crt-viewer-frame">
             <div class="crt-viewer-glow" aria-hidden="true"></div>
             <div class="crt-viewer-scanlines" aria-hidden="true"></div>
@@ -179,7 +187,7 @@
           </div>
         </article>
 
-        <section class="print-note" aria-label="QR instructions">
+        <section class="print-note archive-metal-panel" aria-label="QR instructions">
           <h3>QR Landing</h3>
           <p>Manual lookup URL: <strong>otorlymern-electrical.com/manuals</strong></p>
           <p>If asked, type your Manual Code exactly as printed on the insert card.</p>
@@ -202,6 +210,17 @@
   </footer>
 
   <script src="/manuals/manuals-archive.js" defer></script>
+  <script>
+    document.querySelectorAll(
+      ".archive-hero, .archive-title, .archive-metal-panel, .side-block, .manual-meta, .viewer-panel, .print-note, .manual-results li, .recent-units li, .text-link, .meta-actions button, .meta-actions a, .sidebar-toggle"
+    ).forEach((element) => {
+      element.addEventListener("pointermove", (event) => {
+        const rect = element.getBoundingClientRect();
+        element.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+        element.style.setProperty("--my", `${event.clientY - rect.top}px`);
+      });
+    });
+  </script>
 </body>
 
 </html>

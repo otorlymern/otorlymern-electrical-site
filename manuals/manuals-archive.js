@@ -31,11 +31,7 @@
   }
 
   function normalize(str) {
-    return (str || "")
-      .toString()
-      .trim()
-      .toUpperCase()
-      .replace(/\s+/g, "");
+    return (str || "").toString().trim().toUpperCase().replace(/\s+/g, "");
   }
 
   function tokenize(str) {
@@ -68,7 +64,9 @@
 
   function getDataUrlWithVersion(dataVersion) {
     const v = (dataVersion || "").trim();
-    return v ? `${ARCHIVE_JSON_PATH}?v=${encodeURIComponent(v)}` : ARCHIVE_JSON_PATH;
+    return v
+      ? `${ARCHIVE_JSON_PATH}?v=${encodeURIComponent(v)}`
+      : ARCHIVE_JSON_PATH;
   }
 
   function resolveAssetUrl(rawUrl, assetBaseUrl) {
@@ -90,7 +88,11 @@
 
     const path = window.location.pathname.replace(/\/+$/, "");
     const parts = path.split("/").filter(Boolean);
-    if (parts.length >= 2 && parts[0] === "manuals" && parts[1] !== "index.html") {
+    if (
+      parts.length >= 2 &&
+      parts[0] === "manuals" &&
+      parts[1] !== "index.html"
+    ) {
       return parts[1];
     }
 
@@ -100,7 +102,11 @@
   function writeManualIdToLocation(manualId) {
     const url = new URL(window.location.href);
     url.searchParams.set("m", manualId);
-    window.history.replaceState({}, "", `${url.pathname}?${url.searchParams.toString()}`);
+    window.history.replaceState(
+      {},
+      "",
+      `${url.pathname}?${url.searchParams.toString()}`,
+    );
   }
 
   function updateStatus(text) {
@@ -128,7 +134,9 @@
       return null;
     }
 
-    const soldUnit = state.soldUnits.find((unit) => unit._manualCodeNormalized === normalizedCode);
+    const soldUnit = state.soldUnits.find(
+      (unit) => unit._manualCodeNormalized === normalizedCode,
+    );
     if (soldUnit) {
       const manual = state.manualById.get(soldUnit.manualId);
       if (manual) {
@@ -140,7 +148,9 @@
       }
     }
 
-    const manual = state.manuals.find((entry) => entry._manualCodeNormalized === normalizedCode);
+    const manual = state.manuals.find(
+      (entry) => entry._manualCodeNormalized === normalizedCode,
+    );
     if (manual) {
       return {
         manual,
@@ -173,7 +183,10 @@
           }
         }
 
-        if (manual._manualCodeNormalized && manual._manualCodeNormalized.includes(normalize(query))) {
+        if (
+          manual._manualCodeNormalized &&
+          manual._manualCodeNormalized.includes(normalize(query))
+        ) {
           score += 5;
         }
 
@@ -184,7 +197,10 @@
         if (b.score !== a.score) {
           return b.score - a.score;
         }
-        return new Date(b.manual.updatedAt).getTime() - new Date(a.manual.updatedAt).getTime();
+        return (
+          new Date(b.manual.updatedAt).getTime() -
+          new Date(a.manual.updatedAt).getTime()
+        );
       })
       .map((row) => row.manual);
   }
@@ -198,7 +214,10 @@
       button.type = "button";
       button.className = `manual-result${manual.id === activeId ? " is-active" : ""}`;
       button.setAttribute("data-manual-id", manual.id);
-      const thumbnailUrl = resolveAssetUrl(manual.thumbnailUrl, state.config.assetBaseUrl);
+      const thumbnailUrl = resolveAssetUrl(
+        manual.thumbnailUrl,
+        state.config.assetBaseUrl,
+      );
       button.innerHTML = `
         ${thumbnailUrl ? `<img class="result-thumb" src="${escapeHtml(thumbnailUrl)}" alt="${escapeHtml(manual.title)} thumbnail" loading="lazy" style="width:42px;height:42px;object-fit:cover;border-radius:6px;display:block;margin-bottom:0.3rem;" />` : ""}
         <div class="result-title">${escapeHtml(manual.title)}</div>
@@ -243,10 +262,15 @@
       const button = document.createElement("button");
       button.type = "button";
 
-      const isActive = activeManualCode && normalize(activeManualCode) === unit._manualCodeNormalized;
+      const isActive =
+        activeManualCode &&
+        normalize(activeManualCode) === unit._manualCodeNormalized;
       button.className = `recent-unit${isActive ? " is-active" : ""}`;
       const manual = state.manualById.get(unit.manualId);
-      const thumbnailUrl = resolveAssetUrl(manual && manual.thumbnailUrl, state.config.assetBaseUrl);
+      const thumbnailUrl = resolveAssetUrl(
+        manual && manual.thumbnailUrl,
+        state.config.assetBaseUrl,
+      );
       button.innerHTML = `
         ${thumbnailUrl ? `<img class="result-thumb" src="${escapeHtml(thumbnailUrl)}" alt="${manual ? escapeHtml(manual.title) : "Manual"} thumbnail" loading="lazy" style="width:42px;height:42px;object-fit:cover;border-radius:6px;display:block;margin-bottom:0.3rem;" />` : ""}
         <div class="result-title">${escapeHtml(unit.manualCode)} · ${escapeHtml(unit.itemName)}</div>
@@ -305,22 +329,34 @@
     els.manualTitle.textContent = manual.title;
     els.manualBrand.textContent = manual.brand;
     els.manualModel.textContent = manual.model;
-    els.manualCode.textContent = manualCodeOverride || manual.manualCode || "Not assigned";
+    els.manualCode.textContent =
+      manualCodeOverride || manual.manualCode || "Not assigned";
     els.manualUpdated.textContent = formatDate(manual.updatedAt);
     els.manualNotes.textContent = manual.notes || "";
 
     const shareUrl = `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
     els.copyShareButton.setAttribute("data-share-url", shareUrl);
-    els.openPdfExternal.href = resolveAssetUrl(manual.pdfUrl, state.config.assetBaseUrl);
+    els.openPdfExternal.href = resolveAssetUrl(
+      manual.pdfUrl,
+      state.config.assetBaseUrl,
+    );
 
-    const serviceUrl = new URL("/services/repairrequest.html", window.location.origin);
+    const serviceUrl = new URL(
+      "/services/repairrequest.html",
+      window.location.origin,
+    );
     serviceUrl.searchParams.set("brand", manual.brand);
     serviceUrl.searchParams.set("model", manual.model);
     if (manualCodeOverride || manual.manualCode) {
-      serviceUrl.searchParams.set("manualCode", manualCodeOverride || manual.manualCode);
+      serviceUrl.searchParams.set(
+        "manualCode",
+        manualCodeOverride || manual.manualCode,
+      );
     }
     serviceUrl.searchParams.set("source", "manuals-archive");
-    els.serviceButton.href = `${serviceUrl.pathname}?${serviceUrl.searchParams.toString()}`;
+    if (els.serviceButton) {
+      els.serviceButton.href = `${serviceUrl.pathname}?${serviceUrl.searchParams.toString()}`;
+    }
 
     updateManualJsonLd(manual);
   }
@@ -422,7 +458,10 @@
     try {
       await showPdfWithPdfJs(pdfUrl);
     } catch (err) {
-      useIframeFallback(pdfUrl, "PDF.js unavailable, using embedded PDF fallback.");
+      useIframeFallback(
+        pdfUrl,
+        "PDF.js unavailable, using embedded PDF fallback.",
+      );
     }
   }
 
@@ -430,7 +469,9 @@
     const trimmed = query.trim();
     if (!trimmed) {
       state.filteredManuals = [...state.manuals].sort((a, b) => {
-        return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+        return (
+          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
+        );
       });
       updateStatus(`Showing all manuals (${state.filteredManuals.length}).`);
       return;
@@ -440,7 +481,7 @@
     if (exact) {
       state.filteredManuals = [exact.manual];
       updateStatus(
-        `Exact code match from ${exact.source === "soldUnit" ? "sold unit" : "manual"}: ${exact.manualCode || exact.manual.manualCode}`
+        `Exact code match from ${exact.source === "soldUnit" ? "sold unit" : "manual"}: ${exact.manualCode || exact.manual.manualCode}`,
       );
       return;
     }
@@ -449,7 +490,9 @@
     if (!state.filteredManuals.length) {
       updateStatus("No manuals matched that query.");
     } else {
-      updateStatus(`Found ${state.filteredManuals.length} matching manual${state.filteredManuals.length === 1 ? "" : "s"}.`);
+      updateStatus(
+        `Found ${state.filteredManuals.length} matching manual${state.filteredManuals.length === 1 ? "" : "s"}.`,
+      );
     }
   }
 
@@ -469,7 +512,10 @@
     writeManualIdToLocation(manual.id);
     setSelectedManualInStorage(manual.id);
 
-    const resolvedPdfUrl = resolveAssetUrl(manual.pdfUrl, state.config.assetBaseUrl);
+    const resolvedPdfUrl = resolveAssetUrl(
+      manual.pdfUrl,
+      state.config.assetBaseUrl,
+    );
     await openManualPdf(resolvedPdfUrl);
   }
 
@@ -548,7 +594,10 @@
       try {
         await renderPdfPage();
       } catch (err) {
-        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+        useIframeFallback(
+          state.currentPdfUrl,
+          "PDF render error. Switched to embedded PDF fallback.",
+        );
       }
     });
 
@@ -560,7 +609,10 @@
       try {
         await renderPdfPage();
       } catch (err) {
-        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+        useIframeFallback(
+          state.currentPdfUrl,
+          "PDF render error. Switched to embedded PDF fallback.",
+        );
       }
     });
 
@@ -572,7 +624,10 @@
       try {
         await renderPdfPage();
       } catch (err) {
-        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+        useIframeFallback(
+          state.currentPdfUrl,
+          "PDF render error. Switched to embedded PDF fallback.",
+        );
       }
     });
 
@@ -584,7 +639,10 @@
       try {
         await renderPdfPage();
       } catch (err) {
-        useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+        useIframeFallback(
+          state.currentPdfUrl,
+          "PDF render error. Switched to embedded PDF fallback.",
+        );
       }
     });
 
@@ -592,7 +650,10 @@
       if (state.pdfDoc) {
         window.requestAnimationFrame(() => {
           renderPdfPage().catch(() => {
-            useIframeFallback(state.currentPdfUrl, "PDF render error. Switched to embedded PDF fallback.");
+            useIframeFallback(
+              state.currentPdfUrl,
+              "PDF render error. Switched to embedded PDF fallback.",
+            );
           });
         });
       }
@@ -606,7 +667,9 @@
       }
 
       const subject = encodeURIComponent("OES updates signup");
-      const body = encodeURIComponent(`Please add this email to OES updates: ${email}`);
+      const body = encodeURIComponent(
+        `Please add this email to OES updates: ${email}`,
+      );
       window.location.href = `mailto:info@otorlymern-electrical.com?subject=${subject}&body=${body}`;
     });
   }
@@ -641,9 +704,14 @@
         ...unit,
         _manualCodeNormalized: normalize(unit.manualCode),
       }))
-      .sort((a, b) => new Date(b.soldDate).getTime() - new Date(a.soldDate).getTime());
+      .sort(
+        (a, b) =>
+          new Date(b.soldDate).getTime() - new Date(a.soldDate).getTime(),
+      );
 
-    state.manualById = new Map(state.manuals.map((manual) => [manual.id, manual]));
+    state.manualById = new Map(
+      state.manuals.map((manual) => [manual.id, manual]),
+    );
   }
 
   async function loadData() {
@@ -653,7 +721,9 @@
     }
 
     const baseData = await baseResponse.json();
-    const versionedUrl = getDataUrlWithVersion(baseData && baseData.config && baseData.config.dataVersion);
+    const versionedUrl = getDataUrlWithVersion(
+      baseData && baseData.config && baseData.config.dataVersion,
+    );
     let data = baseData;
     if (versionedUrl !== ARCHIVE_JSON_PATH) {
       const versionedResponse = await fetch(versionedUrl);
@@ -719,11 +789,14 @@
 
     const urlManualId = readManualIdFromLocation();
     const storedManualId = getStoredManualId();
-    const defaultId = state.config.defaultManualId || (state.manuals[0] && state.manuals[0].id);
+    const defaultId =
+      state.config.defaultManualId || (state.manuals[0] && state.manuals[0].id);
 
     const startupId =
       (urlManualId && state.manualById.has(urlManualId) && urlManualId) ||
-      (storedManualId && state.manualById.has(storedManualId) && storedManualId) ||
+      (storedManualId &&
+        state.manualById.has(storedManualId) &&
+        storedManualId) ||
       defaultId;
 
     if (startupId) {

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cyborgsister&display=swap');
+
 :root {
   --arc-bg-1: #1a0d065a;
   --arc-bg-2: #d4d3d3;
@@ -202,20 +204,24 @@ button:focus-visible,
 
 .manual-result,
 .recent-unit {
+  display: block;
   width: 100%;
-  border: 1px solid var(--arc-border);
-  border-radius: 9px;
-  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 0;
+  background: transparent;
   color: var(--arc-text);
-  padding: 0.5rem 0.55rem;
+  padding: 1rem 1.1rem;
   text-align: left;
   cursor: pointer;
+  font: inherit;
 }
 
 .manual-result.is-active,
 .recent-unit.is-active {
-  border-color: var(--arc-focus);
-  box-shadow: 0 0 0 2px rgba(2, 2, 2, 0.884);
+  border-color: transparent;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 107, 157, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .result-title {
@@ -339,7 +345,6 @@ button:focus-visible,
   background: repeating-linear-gradient(to bottom,
       rgba(0, 0, 0, 0.2) 0,
       rgba(252, 249, 197, 0.93) 2px);
-  rgba (230, 28, 28, 0.958) 3px);
   mix-blend-mode: soft-light;
   z-index: 5;
 }
@@ -535,5 +540,661 @@ button:focus-visible,
 
   footer {
     margin-top: 0.8rem;
+  }
+}
+
+/* =========================================================
+   OES Manuals Archive — shiny synthetic futurism glitz skin
+   Page-scoped archive redesign: silver/grey with pink/red/blue.
+   ========================================================= */
+body.archive-glitz {
+  --archive-silver-bright: #f5f5f7;
+  --archive-silver: #e8e8ec;
+  --archive-grey-light: #d4d4d8;
+  --archive-grey-mid: #b0b0b8;
+  --archive-grey-dark: #8a8a92;
+  --archive-grey-darkest: #5a5a62;
+  --archive-pink: #ff6b9d;
+  --archive-hot-pink: #ff85b3;
+  --archive-red: #ff4444;
+  --archive-baby-blue: #7dd3fc;
+  --archive-accent-blue: #0ea5e9;
+  --archive-border: rgba(90, 90, 146, 0.3);
+  --archive-shadow: rgba(90, 90, 98, 0.25);
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(247, 195, 215, 0.22), transparent 28%),
+    radial-gradient(circle at 82% 22%, rgba(125, 211, 252, 0.18), transparent 31%),
+    radial-gradient(circle at 52% 84%, rgba(240, 80, 140, 0.15), transparent 36%),
+    linear-gradient(180deg, #f8f8fa 0%, #e8e8f0 54%, #f0f0f8 100%);
+  color: #3a3a42;
+}
+
+body.archive-glitz .archive-atmosphere,
+body.archive-glitz .archive-grid-field,
+body.archive-glitz .archive-scanlines,
+body.archive-glitz .archive-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body.archive-glitz .archive-atmosphere {
+  z-index: -10;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(247, 195, 215, 0.28), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(125, 211, 252, 0.22), transparent 30%),
+    radial-gradient(circle at 52% 84%, rgba(240, 80, 140, 0.2), transparent 36%),
+    linear-gradient(180deg, #f8f8fa 0%, #e0e8f8 60%, #f0f0f8 100%);
+  filter: saturate(1.1) contrast(1.05);
+  animation: archive-atmosphere-drift 18s ease-in-out infinite alternate;
+}
+
+body.archive-glitz .archive-grid-field {
+  z-index: -9;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(90, 90, 146, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 90, 146, 0.15) 1px, transparent 1px);
+  background-size: 42px 42px;
+  transform-origin: center;
+  animation: archive-grid-float 22s ease-in-out infinite alternate;
+}
+
+body.archive-glitz .archive-scanlines {
+  z-index: 9998;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  background:
+    repeating-linear-gradient(to bottom,
+      rgba(90, 90, 98, 0.04) 0,
+      rgba(90, 90, 98, 0.04) 1px,
+      transparent 1px,
+      transparent 4px);
+}
+
+body.archive-glitz .archive-noise {
+  z-index: 9997;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: radial-gradient(circle, rgba(90, 90, 98, 0.8) 0 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+@keyframes archive-atmosphere-drift {
+  from {
+    transform: scale(1);
+    filter: hue-rotate(0deg) saturate(0.86) contrast(1.1);
+  }
+
+  to {
+    transform: scale(1.08);
+    filter: hue-rotate(-8deg) saturate(1.02) contrast(1.2);
+  }
+}
+
+@keyframes archive-grid-float {
+  from {
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    transform: translateY(-18px) scale(1.035);
+  }
+}
+
+body.archive-glitz header {
+  position: relative;
+  z-index: 12;
+}
+
+body.archive-glitz main,
+body.archive-glitz footer {
+  position: relative;
+  z-index: 2;
+}
+
+body.archive-glitz .nav-bar,
+body.archive-glitz .nav-bar a {
+  background:
+    linear-gradient(180deg, #fafbfc 0%, #e6e7ea 45%, #d4d4d8 100%);
+  color: #3a3a42;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 6px 18px rgba(90, 90, 98, 0.1);
+}
+
+body.archive-glitz .nav-bar a {
+  border-right: 1px solid rgba(90, 90, 98, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+body.archive-glitz .nav-bar a:hover,
+body.archive-glitz .nav-bar a:focus {
+  transform: translateY(-1px);
+  background:
+    linear-gradient(180deg, #f5f5f7 0%, #e8e8ec 46%, #ff6b9d 47%, #ff85b3 100%);
+  color: #ffffff;
+}
+
+body.archive-glitz .dropdown-content {
+  background: linear-gradient(180deg, #f8f8fa 0%, #e8e8ec 100%);
+  border: 2px solid rgba(255, 107, 157, 0.28);
+  box-shadow:
+    0 12px 30px rgba(90, 90, 98, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  animation: dropdown-jiggle 8s ease-in-out infinite alternate;
+}
+
+body.archive-glitz .dropdown-content a {
+  color: #3a3a42;
+  background: transparent;
+  display: block;
+  padding: 0.75rem 1rem;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+body.archive-glitz .dropdown-content a:hover,
+body.archive-glitz .dropdown-content a:focus {
+  background: rgba(255, 107, 157, 0.18);
+  color: #1f1f24;
+  transform: translateX(2px);
+}
+
+@keyframes dropdown-jiggle {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+body.archive-glitz .archive-shell {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 clamp(0.8rem, 2vw, 1.5rem) 2rem;
+}
+
+body.archive-glitz .archive-hero {
+  position: relative;
+  overflow: hidden;
+  margin: clamp(1.5rem, 5vw, 4rem) auto 1.5rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  max-width: 1280px;
+  min-height: clamp(240px, 32vw, 410px);
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255, 107, 157, 0.4);
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(245, 245, 247, 0.9), rgba(232, 232, 236, 0.85) 45%, rgba(240, 80, 140, 0.1)),
+    linear-gradient(180deg, rgba(232, 232, 236, 0.95), rgba(208, 208, 216, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -32px 70px rgba(125, 211, 252, 0.08),
+    0 36px 100px rgba(90, 90, 98, 0.15),
+    0 0 60px rgba(255, 107, 157, 0.12);
+}
+
+body.archive-glitz .archive-hero::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.4), transparent 24%, transparent 68%, rgba(125, 211, 252, 0.2));
+  pointer-events: none;
+}
+
+body.archive-glitz .archive-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 107, 157, 0.25), rgba(125, 211, 252, 0.12) 22%, transparent 46%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+body.archive-glitz .archive-hero:hover::after {
+  opacity: 1;
+}
+
+body.archive-glitz .archive-title-blob {
+  position: absolute;
+  z-index: 1;
+  width: clamp(280px, 48vw, 680px);
+  height: clamp(150px, 23vw, 320px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -52%) rotate(-7deg);
+  transition: transform 180ms ease, filter 180ms ease, opacity 180ms ease;
+  border-radius: 58% 42% 46% 54% / 48% 60% 40% 52%;
+  background:
+    radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.92), transparent 11%),
+    radial-gradient(circle at 38% 38%, rgba(255, 107, 157, 0.9), rgba(240, 80, 140, 0.75) 52%, rgba(255, 107, 157, 0.3) 72%, transparent 78%);
+  filter: blur(0.6px) saturate(1.15);
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  box-shadow:
+    inset 18px 22px 40px rgba(255, 255, 255, 0.35),
+    inset -28px -34px 60px rgba(240, 80, 140, 0.4),
+    0 0 100px rgba(255, 107, 157, 0.35),
+    0 28px 120px rgba(255, 107, 157, 0.25);
+  animation: archive-blob-jiggle 9s ease-in-out infinite alternate;
+}
+
+@keyframes archive-blob-jiggle {
+  0% {
+    transform: translate(-50%, -52%) rotate(-7deg) scale(1);
+    border-radius: 58% 42% 46% 54% / 48% 60% 40% 52%;
+  }
+
+  35% {
+    transform: translate(-49%, -53%) rotate(4deg) scale(1.035);
+    border-radius: 44% 56% 52% 48% / 58% 40% 60% 42%;
+  }
+
+  70% {
+    transform: translate(-51%, -50%) rotate(-2deg) scale(0.985);
+    border-radius: 62% 38% 43% 57% / 45% 66% 34% 55%;
+  }
+
+  100% {
+    transform: translate(-50%, -52%) rotate(6deg) scale(1.02);
+    border-radius: 50% 50% 59% 41% / 54% 42% 58% 46%;
+  }
+}
+
+body.archive-glitz .archive-title-container {
+  position: relative;
+  z-index: 3;
+}
+
+body.archive-glitz .archive-title-container:hover .archive-title-blob {
+  transform: translate(-50%, -52%) rotate(-7deg) scale(1.04);
+  filter: blur(0.4px) saturate(1.25) brightness(1.12);
+}
+
+body.archive-glitz .archive-title.archive-chrome-title {
+  position: relative;
+  font-size: clamp(4rem, 14vw, 12.5rem);
+  line-height: 0.78;
+  letter-spacing: -0.085em;
+  text-transform: uppercase;
+  margin: 0 auto 1rem;
+  background:
+    linear-gradient(120deg,
+      #ffffff 0%,
+      #d4d4d8 12%,
+      #8a8a92 26%,
+      #f5f5f7 42%,
+      #0ea5e9 58%,
+      #ff6b9d 72%,
+      #ff4444 86%,
+      #7dd3fc 100%);
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: archive-chrome-pan 8s linear infinite;
+  filter:
+    drop-shadow(0 0 0.06em rgba(255, 107, 157, 0.8)) drop-shadow(0 0 0.22em rgba(232, 232, 236, 0.5)) drop-shadow(0 0 0.4em rgba(125, 211, 252, 0.35));
+}
+
+body.archive-glitz .archive-title.archive-chrome-title .wiggle-title {
+  animation: wiggle-title 48s infinite ease-in-out;
+}
+
+body.archive-glitz .archive-title.archive-chrome-title::before,
+body.archive-glitz .archive-title.archive-chrome-title::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body.archive-glitz .archive-title.archive-chrome-title:hover::before {
+  opacity: 0.58;
+  color: #d8d6d2;
+  transform: translate(3px, -2px);
+  clip-path: inset(0 0 55% 0);
+}
+
+body.archive-glitz .archive-title.archive-chrome-title:hover::after {
+  opacity: 0.65;
+  color: var(--archive-hot-pink);
+  transform: translate(-3px, 2px);
+  clip-path: inset(55% 0 0 0);
+}
+
+@keyframes archive-chrome-pan {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 280% 50%;
+  }
+}
+
+body.archive-glitz .archive-text-plate,
+body.archive-glitz .side-help,
+body.archive-glitz .manual-notes,
+body.archive-glitz .print-note p,
+body.archive-glitz .signup-block p,
+body.archive-glitz .cta-block p,
+body.archive-glitz .viewer-empty,
+body.archive-glitz .pdf-toolbar,
+body.archive-glitz .pdf-toolbar button,
+body.archive-glitz .pdf-toolbar span {
+  font-family: "Cyborgsister", sans-serif;
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+  padding: 0.35rem 0.65rem;
+  background: rgba(245, 245, 247, 0.85);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 8px 24px rgba(90, 90, 98, 0.12);
+  color: #3a3a42;
+}
+
+body.archive-glitz .archive-subtitle {
+  max-width: 850px;
+  color: #3a3a42;
+  font-family: "EnterCommand", monospace;
+  font-size: clamp(1.15rem, 2.4vw, 1.8rem);
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+body.archive-glitz .archive-metal-panel {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--archive-border);
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 107, 157, 0.08), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(232, 232, 236, 0.4) 42%, rgba(125, 211, 252, 0.08)),
+    linear-gradient(180deg, rgba(232, 232, 236, 0.9), rgba(208, 208, 216, 0.85));
+  color: #3a3a42;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(90, 90, 98, 0.15),
+    0 18px 58px var(--archive-shadow);
+}
+
+body.archive-glitz .archive-metal-panel::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(118deg, rgba(255, 255, 255, 0.4), transparent 22%, transparent 72%, rgba(125, 211, 252, 0.15));
+  pointer-events: none;
+}
+
+body.archive-glitz .archive-metal-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(105deg, transparent 0%, transparent 38%, rgba(255, 255, 255, 0.4) 46%, transparent 54%, transparent 100%);
+  transform: translateX(-120%);
+  transition: transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+body.archive-glitz .archive-metal-panel:hover::after,
+body.archive-glitz .archive-metal-panel:focus-within::after {
+  transform: translateX(120%);
+}
+
+body.archive-glitz .side-block,
+body.archive-glitz .manual-meta,
+body.archive-glitz .viewer-panel,
+body.archive-glitz .print-note,
+body.archive-glitz .archive-sidebar {
+  border-radius: 22px;
+}
+
+body.archive-glitz h1,
+body.archive-glitz h2,
+body.archive-glitz h3,
+body.archive-glitz dt,
+body.archive-glitz label,
+body.archive-glitz .block-head,
+body.archive-glitz .small-note {
+  color: #3a3a42;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 16px rgba(125, 211, 252, 0.1);
+}
+
+body.archive-glitz input[type="search"],
+body.archive-glitz input[type="email"] {
+  color: #3a3a42;
+  background:
+    linear-gradient(180deg, #f5f5f7, #e8e8ec);
+  border: 2px solid rgba(90, 90, 98, 0.25);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 2px 8px rgba(90, 90, 98, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+body.archive-glitz input::placeholder {
+  color: rgba(90, 90, 98, 0.5);
+}
+
+body.archive-glitz button,
+body.archive-glitz .cta-button,
+body.archive-glitz .meta-actions a,
+body.archive-glitz .sidebar-toggle {
+  border-radius: 999px;
+  font-family: "Cyborgsister", sans-serif;
+}
+
+body.archive-glitz button,
+body.archive-glitz .cta-button,
+body.archive-glitz .meta-actions a,
+body.archive-glitz .sidebar-toggle {
+  color: #ffffff;
+  border: 2px solid rgba(255, 107, 157, 0.5);
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.9), transparent 15%),
+    linear-gradient(135deg, #ff6b9d, #ff85b3 45%, #0ea5e9 100%);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.7),
+    inset 0 -12px 22px rgba(255, 107, 157, 0.15),
+    0 10px 26px rgba(90, 90, 98, 0.2),
+    0 0 24px rgba(255, 107, 157, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+body.archive-glitz button::before,
+body.archive-glitz .cta-button::before,
+body.archive-glitz .meta-actions a::before,
+body.archive-glitz .sidebar-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.3) 50%, transparent 65%, transparent 100%);
+  transform: translateX(-100%);
+  animation: button-shine 2.5s ease-in-out infinite;
+}
+
+@keyframes button-shine {
+
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+body.archive-glitz button:hover,
+body.archive-glitz button:focus,
+body.archive-glitz .cta-button:hover,
+body.archive-glitz .cta-button:focus,
+body.archive-glitz .meta-actions a:hover,
+body.archive-glitz .meta-actions a:focus,
+body.archive-glitz .sidebar-toggle:hover,
+body.archive-glitz .sidebar-toggle:focus {
+  transform: translateY(-2px);
+  filter: saturate(1.2) contrast(1.1);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.9),
+    inset 0 -12px 22px rgba(255, 107, 157, 0.25),
+    0 14px 34px rgba(90, 90, 98, 0.3),
+    0 0 40px rgba(255, 107, 157, 0.4);
+}
+
+body.archive-glitz .text-link {
+  display: inline-flex;
+  color: #ff6b9d;
+  border: 2px solid rgba(255, 107, 157, 0.3);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.45rem 0.75rem;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+}
+
+body.archive-glitz .text-link:hover,
+body.archive-glitz .text-link:focus {
+  color: #ff4444;
+  background: rgba(255, 107, 157, 0.15);
+  border-color: rgba(255, 68, 68, 0.5);
+}
+
+body.archive-glitz .manual-results li,
+body.archive-glitz .recent-units li {
+  position: relative;
+  overflow: hidden;
+  color: #3a3a42;
+  border: 2px solid rgba(125, 211, 252, 0.3);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 107, 157, 0.12), transparent 38%),
+    linear-gradient(180deg, rgba(245, 245, 247, 0.9), rgba(232, 232, 236, 0.8));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 10px 28px rgba(90, 90, 98, 0.12);
+}
+
+body.archive-glitz .manual-results li:hover,
+body.archive-glitz .recent-units li:hover {
+  border-color: rgba(255, 107, 157, 0.6);
+  transform: translateY(-2px);
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 107, 157, 0.18), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 247, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 36px rgba(90, 90, 98, 0.18);
+}
+
+body.archive-glitz .meta-grid>div {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(245, 245, 247, 0.3));
+  border: 2px solid rgba(125, 211, 252, 0.25);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+body.archive-glitz .meta-grid dt {
+  color: #ff6b9d;
+  font-family: "EnterCommand", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.archive-glitz .meta-grid dd {
+  color: #3a3a42;
+}
+
+body.archive-glitz .crt-viewer-frame {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(245, 245, 247, 0.4), transparent 42%),
+    linear-gradient(180deg, #e8e8ec, #d4d4d8 72%);
+  box-shadow:
+    inset 0 0 80px rgba(255, 255, 255, 0.3),
+    inset 0 0 120px rgba(125, 211, 252, 0.08),
+    0 0 44px rgba(255, 107, 157, 0.15),
+    0 30px 90px rgba(90, 90, 98, 0.2);
+}
+
+body.archive-glitz .viewer-empty {
+  color: #5a5a62;
+  text-shadow: 0 0 12px rgba(125, 211, 252, 0.2);
+}
+
+body.archive-glitz .pdf-toolbar {
+  background:
+    linear-gradient(180deg, rgba(232, 232, 236, 0.95), rgba(208, 208, 216, 0.9));
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  color: #3a3a42;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 12px 30px rgba(90, 90, 98, 0.15);
+}
+
+body.archive-glitz .zoom-indicator,
+body.archive-glitz #pageIndicator {
+  color: #3a3a42;
+  font-family: "EnterCommand", monospace;
+}
+
+body.archive-glitz footer {
+  background:
+    linear-gradient(180deg, #d4d4d8, #c0c0c8 52%, #b0b0b8);
+  border-top: 2px solid rgba(255, 107, 157, 0.2);
+  color: #3a3a42;
+  box-shadow: 0 -20px 50px rgba(90, 90, 98, 0.1);
+}
+
+@media (max-width: 760px) {
+  body.archive-glitz .archive-hero {
+    border-radius: 22px;
+    min-height: 260px;
+  }
+
+  body.archive-glitz .archive-title.archive-chrome-title {
+    font-size: clamp(3.2rem, 18vw, 6.5rem);
+    letter-spacing: -0.065em;
+  }
+
+  body.archive-glitz .archive-title-blob {
+    width: 92vw;
+    height: 210px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  body.archive-glitz *,
+  body.archive-glitz *::before,
+  body.archive-glitz *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
