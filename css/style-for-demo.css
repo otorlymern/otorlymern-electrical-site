@@ -1,0 +1,908 @@
+@font-face {
+  font-family: "Lyno-Jean";
+  src: url("../Lyno-Jean 2.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Lyno-Stan";
+  src: url("../Lyno-Stan 2.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Lyno-Ulys";
+  src: url("../Lyno-Ulys 2.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ecommandfont";
+  src: url("../fonts/EnterCommand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EnterCommand";
+  src: url("../fonts/EnterCommand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes wiggle {
+  1% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  1% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+  }
+}
+
+@keyframes wiggle-title {
+  1% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotateX(-10deg) rotateY(-15deg) scale(0.85);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  1% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotateX(10deg) rotateY(15deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotateX(1.9deg) rotateY(-1.5deg) scale(1);
+  }
+}
+
+@keyframes moveBlob {
+  0% {
+    transform: translate(60px, 2px) scale(1) rotate(200deg);
+    border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+  }
+
+  25% {
+    transform: translate(24px, 30px) scale(0.99) rotate(22deg);
+    border-radius: 50% 60% 60% 40% / 40% 60% 30% 60%;
+  }
+
+  50% {
+    transform: translate(-42px, 20px) scale(1.08) rotate(58deg);
+    border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%;
+  }
+
+  75% {
+    transform: translate(30px, -16px) scale(0.91) rotate(118deg);
+    border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.97) rotate(180deg);
+    border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes sticker-wiggle {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  20% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+/* Navigation */
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #7b3f00;
+  /* brown background */
+  justify-content: center;
+  font-family: "Lyno-Stan", sans-serif;
+}
+
+nav {
+  position: relative;
+  z-index: 40;
+}
+
+.nav-bar,
+.nav-bar>li {
+  position: relative;
+  z-index: inherit;
+}
+
+.nav-bar>li {
+  position: relative;
+}
+
+.nav-bar a {
+  display: block;
+  padding: 7px 7px;
+  text-decoration: none;
+  color: #fff5e1;
+  background-color: #7b3f00;
+}
+
+.nav-bar a:hover {
+  background-color: #aa4c1b;
+  color: #ffeedc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #cd9066;
+  min-width: 180px;
+  z-index: 1000;
+  border: 2px solid #5a2f00;
+  font-size: 90%;
+}
+
+.dropdown-content a {
+  padding: 8px 12px;
+  color: #fff5e1;
+}
+
+.nav-bar li:hover .dropdown-content {
+  display: block;
+}
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.title-container {
+  perspective: 1600px;
+  perspective-origin: center 42%;
+}
+
+.title-container h2,
+.title-container .threeD,
+.title-container .wiggle {
+  position: relative;
+  font-family: "Lyno-Jean", sans-serif;
+  font-size: 2em;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  z-index: 1;
+}
+
+.wiggle-title {
+  display: inline-block;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  backface-visibility: hidden;
+  will-change: transform;
+  animation: wiggle-title 48s infinite ease-in-out;
+  filter: drop-shadow(0 26px 52px rgba(0, 0, 0, 0.2));
+}
+
+:is(h1, h2, h3, h4, h5, h6).wiggle-title {
+  display: block;
+}
+
+.wiggle-title img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.35rem;
+  transform: translateZ(16px);
+  transform-origin: center;
+}
+
+.system-photo {
+  margin: 2.5rem auto;
+  max-width: 960px;
+  padding: 0 1rem;
+}
+
+.system-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.18);
+  display: block;
+}
+
+.system-photo-caption {
+  font-family: "EnterCommand", monospace;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-top: 0.85rem;
+  color: #a7d9f9;
+  font-weight: 700;
+}
+
+.system-gallery {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.system-group-card {
+  background: #7b3f00;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.system-group-card h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Lyno-Stan", sans-serif;
+  color: #ffeedc;
+}
+
+.brochure-card {
+  text-align: center;
+}
+
+.brochure-card img {
+  width: 100%;
+  max-width: 1080px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.6rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.brochure-card .system-photo-caption {
+  font-size: 1.26rem;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 9999;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 60px);
+  max-height: calc(100vh - 60px);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 2rem;
+  color: #ffeedc;
+  cursor: pointer;
+  font-family: "EnterCommand", monospace;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.system-intro p,
+.system-process ul {
+  font-family: "EnterCommand", monospace;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.9rem;
+  overflow: visible;
+}
+
+.system-card {
+  background: #fff9ef;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  padding: 0.4rem;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.system-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+  z-index: 4;
+}
+
+.system-thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.system-card:hover .system-thumb {
+  transform: scale(1.65);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+  z-index: 8;
+}
+
+/* Intro Paragraph Attributes */
+.intro-paragraphs {
+  font-family: "ecommandfont", sans-serif;
+  font-size: 1.7em;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Body Attributes */
+body {
+  background-color: #fdf6e3;
+  color: #333;
+  font-family: "Lyno-Stan", Arial, sans-serif;
+  margin: 10px;
+  padding: 10px;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.musictech-page {
+  font-family: "ecommandfont", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.musictech-page header,
+.musictech-page .nav-bar,
+.musictech-page .nav-bar a {
+  font-family: "Lyno-Stan", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+header {
+  position: relative;
+  z-index: 40;
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Highlight for Headings */
+.music-section h2,
+.video-section h2,
+.lit-section h2,
+.diy-section h2 {
+  background-color: rgba(255, 253, 208, 0.7);
+  padding: 0.2em 0.6em;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+  z-index: 4;
+}
+
+/* Sections */
+.title-section>.title-container {
+  margin: 20px auto;
+  max-width: 1000px;
+  position: relative;
+  z-index: 4;
+}
+
+.musictech-title {
+  position: relative;
+  padding: 4rem 0 2rem;
+  margin-top: 0.75rem;
+  z-index: 5;
+}
+
+.musictech-title .title-container h1 {
+  font-size: 4.5rem;
+  text-shadow: 5px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.musictech-title .title-blob {
+  position: absolute;
+  top: 16px;
+  left: 24%;
+  width: clamp(360px, 60vw, 580px);
+  height: clamp(160px, 28vw, 240px);
+  transform: translate(-30%, 0);
+  background: radial-gradient(circle at 14% 72%, rgba(247, 144, 150, 0.72), rgba(207, 2, 2, 0.92));
+  border-radius: 55% 60% 35% 75% / 55% 60% 35% 75%;
+  z-index: 6;
+  animation: sticker-wiggle 16s ease-in-out infinite alternate;
+  filter: blur(1.2px);
+  pointer-events: none;
+  box-shadow: 0 18px 50px rgba(71, 27, 27, 0.661);
+}
+
+.musictech-title .title-container {
+  position: relative;
+  z-index: 10;
+}
+
+.music-section,
+.video-section,
+.lit-section,
+.diy-section {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.music-section {
+  background-image: url("../images/audio-tape-0437.gif");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.video-section {
+  background-image: url("https://media.otorlymern-electrical.com/images/textures/staticsnow.png");
+  background-repeat: no-repeat;
+  background-size: auto 1000px;
+}
+
+.lit-section {
+  background: url("https://media.otorlymern-electrical.com/images/textures/5NOWA1a.png");
+  background-repeat: no-repeat;
+  background-size: auto 1000px;
+}
+
+.diy-section {
+  background: url("https://media.otorlymern-electrical.com/images/textures/pcbbg.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.musictech-page .resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.musictech-page .resource-list li {
+  background: rgba(255, 253, 208, 0.92);
+  border: 2px solid rgba(90, 47, 0, 0.25);
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.musictech-page .resource-list a {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #2c1500;
+}
+
+.musictech-page .resource-list p {
+  margin: 0.35rem 0 0 0;
+  font-size: 1.5rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  position: relative;
+  z-index: 4;
+}
+
+.reverb-sticker {
+  position: fixed;
+  top: 90px;
+  left: 16px;
+  z-index: 60;
+  animation: sticker-wiggle 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.reverb-sticker img {
+  width: 150px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(3px 6px 0 rgba(0, 0, 0, 0.2));
+}
+
+.primary-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.intro-section {
+  text-align: left;
+  background: rgba(255, 253, 208, 0.8);
+  border: 2px solid rgba(90, 47, 0, 0.25);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.intro-section p {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.sss-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sss-card {
+  flex: 1 1 220px;
+  background: #fffaf0;
+  border: 1px solid rgba(90, 47, 0, 0.35);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sss-card h3 {
+  margin: 0 0 0.35rem 0;
+  font-family: "Lyno-Jean", sans-serif;
+}
+
+.sss-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.category-section {
+  border: 2px solid rgba(90, 47, 0, 0.25);
+  border-radius: 20px;
+  padding: 1.25rem;
+  backdrop-filter: blur(1px);
+  box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-header img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.category-header a {
+  color: #3d1c00;
+  text-decoration: none;
+}
+
+.category-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.category-link {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #2c1500;
+  background: rgba(255, 253, 208, 0.95);
+  border: 1px solid rgba(44, 21, 0, 0.2);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.category-link img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.category-link .title-img {
+  height: 48px;
+}
+
+.category-link div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.link-title {
+  font-weight: 700;
+}
+
+.link-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.recent-highlights {
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(90, 47, 0, 0.25);
+  border-radius: 22px;
+  padding: 1.25rem;
+  box-shadow: 10px 14px 0 rgba(0, 0, 0, 0.18);
+  position: sticky;
+  top: 110px;
+  z-index: 5;
+}
+
+.recent-highlights h2 {
+  margin-top: 0;
+  font-family: "Lyno-Jean", sans-serif;
+}
+
+.highlight-card {
+  border: 1px solid rgba(44, 21, 0, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fffef8;
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.highlight-card+.highlight-card {
+  margin-top: 1.25rem;
+}
+
+.highlight-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.highlight-card img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.highlight-crt-frame {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  background: #000;
+  overflow: hidden;
+}
+
+.highlight-crt-overlay {
+  position: absolute;
+  inset: -8%;
+  background: url("/video/sonycrtfrfame.png") center center / contain no-repeat;
+  transform: translateY(4%) scale(1.15);
+  transform-origin: center top;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.highlight-body {
+  padding: 0.95rem 1rem 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.highlight-body h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.highlight-body p {
+  margin: 0;
+}
+
+.highlight-tag {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #a04f0a;
+}
+
+.highlight-btn {
+  margin-top: 0.4rem;
+  align-self: flex-start;
+  background: #7b3f00;
+  color: #fff5e1;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.highlight-card a:hover .highlight-btn {
+  background: #aa4c1b;
+}
+
+@media (max-width: 1100px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-highlights {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .category-link {
+    flex-direction: column;
+  }
+
+  .category-link img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reverb-sticker {
+    top: auto;
+    bottom: 20px;
+    left: 12px;
+  }
+
+  .reverb-sticker img {
+    width: 120px;
+  }
+}
+
+/* Title Images Wiggle */
+.title-img {
+  height: 50px;
+}
+
+.wiggle {
+  animation: wiggle 20s infinite alternate ease-in-out;
+}
+
+.wiggle-slow {
+  animation: wiggle 40s infinite alternate ease-in-out;
+}
+
+.blob-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: min(75vh, 900px);
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.blob {
+  position: absolute;
+  mix-blend-mode: luminosity;
+  opacity: 0.55;
+  animation: moveBlob infinite alternate ease-in-out;
+}
+
+.blob-red {
+  background: #d94e4e;
+  width: 420px;
+  height: 310px;
+  top: 12%;
+  left: 8%;
+  animation-duration: 30s;
+}
+
+.blob-blue {
+  background: #b0e0e6;
+  width: 320px;
+  height: 430px;
+  top: 48%;
+  left: 68%;
+  animation-duration: 29s;
+}
+
+.blob-red-2 {
+  background: #fffba7;
+  width: 260px;
+  height: 360px;
+  top: 72%;
+  left: 38%;
+  animation-duration: 19s;
+}
+
+footer {
+  background-color: #8b4513;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  font-family: "Lyno-Stan", Arial, sans-serif;
+  font-size: 0.9em;
+}
+
+.footer-badges {
+  display: inline;
+  max-height: 50px;
+}

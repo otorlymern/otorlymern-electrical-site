@@ -8,11 +8,11 @@
   },
   "manuals": [
     {
-      "id": "488portastudio-om-tascam-d",
-      "title": "488portastudio Om Tascam D",
+      "id": "488portastudio-tascam",
+      "title": "488portastudio Om Tascam",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-488PORTASTUDIO-OM-TASCAM-D",
+      "manualCode": "OES-MAN-488",
       "tags": [
         "manual"
       ],
@@ -24,10 +24,10 @@
     },
     {
       "id": "a3340s-sm-teac",
-      "title": "A3340s Sm Teac",
+      "title": "A3340s Teac",
       "brand": "Teac",
       "model": "",
-      "manualCode": "OES-MANUAL-A3340S-SM-TEAC",
+      "manualCode": "OES-MAN-A3340S",
       "tags": [
         "manual"
       ],
@@ -42,7 +42,7 @@
       "title": "ARP 2600 Owners Manual",
       "brand": "ARP",
       "model": "2600",
-      "manualCode": "OES-ARP-2600",
+      "manualCode": "OES-MAN-A2600",
       "tags": [
         "synthesizer",
         "semi-modular",
@@ -60,7 +60,7 @@
       "title": "Buchla 200 Manual",
       "brand": "Buchla",
       "model": "",
-      "manualCode": "OES-MANUAL-BUCHLA-200-MANUAL",
+      "manualCode": "OES-MAN-B200",
       "tags": [
         "manual"
       ],
@@ -75,7 +75,7 @@
       "title": "Buchla Music Easel Manual",
       "brand": "Buchla",
       "model": "",
-      "manualCode": "OES-MANUAL-BUCHLA-MUSIC-EASEL-MANUAL",
+      "manualCode": "OES-MAN-BMUSEAS",
       "tags": [
         "manual"
       ],
@@ -90,7 +90,7 @@
       "title": "EML Polybox Manual",
       "brand": "EML",
       "model": "",
-      "manualCode": "OES-MANUAL-EML-POLYBOX-MANUAL",
+      "manualCode": "OES-MAN-EMLPB",
       "tags": [
         "manual"
       ],
@@ -105,7 +105,7 @@
       "title": "Fisher PR6 Manual",
       "brand": "Fisher",
       "model": "",
-      "manualCode": "OES-MANUAL-FISHER-PR6-MANUAL",
+      "manualCode": "OES-MAN-FISHPR6",
       "tags": [
         "manual"
       ],
@@ -120,7 +120,7 @@
       "title": "Hfe Tascam M 208 216 En",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-HFE-TASCAM-M-208-216-EN",
+      "manualCode": "OES-MAN-TASCM208",
       "tags": [
         "manual"
       ],
@@ -135,7 +135,7 @@
       "title": "Hfe Teac A 1500u Flyer En",
       "brand": "Teac",
       "model": "",
-      "manualCode": "OES-MANUAL-HFE-TEAC-A-1500U-FLYER-EN",
+      "manualCode": "OES-MAN-TEAC1500",
       "tags": [
         "manual"
       ],
@@ -150,7 +150,7 @@
       "title": "Hfe Teac A 3340s",
       "brand": "Teac",
       "model": "",
-      "manualCode": "OES-MANUAL-HFE-TEAC-A-3340S",
+      "manualCode": "OES-MAN-3340S",
       "tags": [
         "manual"
       ],
@@ -165,7 +165,7 @@
       "title": "Hfe Teac Stereo Tape Recorders 1966 En",
       "brand": "Teac",
       "model": "",
-      "manualCode": "OES-MANUAL-HFE-TEAC-STEREO-TAPE-RECORDERS-1966-",
+      "manualCode": "OES-DOC-TEACTAPERECS66",
       "tags": [
         "manual"
       ],
@@ -180,7 +180,7 @@
       "title": "Hfe Yamaha Mt4x En",
       "brand": "Yamaha",
       "model": "",
-      "manualCode": "OES-MANUAL-HFE-YAMAHA-MT4X-EN",
+      "manualCode": "OES-MAN-YAMAMT4X",
       "tags": [
         "manual"
       ],
@@ -195,7 +195,7 @@
       "title": "Mungoeuro",
       "brand": "Mungo",
       "model": "",
-      "manualCode": "OES-MANUAL-MUNGOEURO",
+      "manualCode": "OES-MAN-MUNGOEURO",
       "tags": [
         "manual"
       ],
@@ -210,7 +210,7 @@
       "title": "Oberheim Matrix 1000 Owners Manual",
       "brand": "Oberheim",
       "model": "",
-      "manualCode": "OES-MANUAL-OBERHEIM-MATRIX-1000-OWNERS-MANUAL",
+      "manualCode": "OES-MAN-OBEMAT1000",
       "tags": [
         "manual"
       ],
@@ -225,7 +225,7 @@
       "title": "Ppg W23 Dm",
       "brand": "PPG",
       "model": "",
-      "manualCode": "OES-MANUAL-PPG-W23-DM",
+      "manualCode": "OES-MAN-PPG",
       "tags": [
         "manual"
       ],
@@ -240,7 +240,7 @@
       "title": "Revox A77 User Manual",
       "brand": "Revox",
       "model": "A77",
-      "manualCode": "OES-REVOX-A77",
+      "manualCode": "OES-MAN-REVOXA77",
       "tags": [
         "tape",
         "reel-to-reel",
@@ -258,7 +258,7 @@
       "title": "Roland Alpha Juno 1",
       "brand": "Roland",
       "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-ALPHA-JUNO-1",
+      "manualCode": "OES-MAN-ROLALPHAJUNO1",
       "tags": [
         "manual"
       ],
@@ -288,7 +288,7 @@
       "title": "Roland Juno 2 Usermanual",
       "brand": "Roland",
       "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-JUNO-2-USERMANUAL",
+      "manualCode": "OES-MAN-ROLJUNO2",
       "tags": [
         "manual"
       ],
@@ -299,26 +299,11 @@
       "updatedAt": "2026-04-24"
     },
     {
-      "id": "roland-juno-2-usermanual-2",
-      "title": "Roland Juno 2 Usermanual",
-      "brand": "Roland",
-      "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-JUNO-2-USERMANUAL",
-      "tags": [
-        "manual"
-      ],
-      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno-2-usermanual.pdf",
-      "thumbnailUrl": "",
-      "notes": "Manual from the OES media archive.",
-      "createdAt": "2026-04-24",
-      "updatedAt": "2026-04-24"
-    },
-    {
       "id": "roland-juno106-owners-manual",
       "title": "Roland Juno106 Owners Manual",
       "brand": "Roland",
       "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-JUNO106-OWNERS-MANUAL",
+      "manualCode": "OES-MAN-ROLJUNO106",
       "tags": [
         "manual"
       ],
@@ -348,7 +333,7 @@
       "title": "Roland Juno106 Service Notes",
       "brand": "Roland",
       "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-JUNO106-SERVICE-NOTES",
+      "manualCode": "OES-DOC-ROLUNO106-SERVNOTES",
       "tags": [
         "manual"
       ],
@@ -358,27 +343,13 @@
       "createdAt": "2026-04-24",
       "updatedAt": "2026-04-24"
     },
-    {
-      "id": "roland-jx-3p-owners-manual",
-      "title": "Roland Jx 3p Owners Manual",
-      "brand": "Roland",
-      "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-JX-3P-OWNERS-MANUAL",
-      "tags": [
-        "manual"
-      ],
-      "pdfUrl": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-jx-3p-owners-manual.pdf",
-      "thumbnailUrl": "",
-      "notes": "Manual from the OES media archive.",
-      "createdAt": "2026-04-24",
-      "updatedAt": "2026-04-24"
-    },
+
     {
       "id": "roland-jx3p",
       "title": "Roland JX-3P Owners Manual",
       "brand": "Roland",
       "model": "JX-3P",
-      "manualCode": "OES-JX3P-OWNERS",
+      "manualCode": "OES-MAN-ROLANDJX3P",
       "tags": [
         "roland",
         "poly synth",
@@ -396,7 +367,7 @@
       "title": "Roland Tr 606 Owners Manual",
       "brand": "Roland",
       "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-TR-606-OWNERS-MANUAL",
+      "manualCode": "OES-MAN-ROLTR606",
       "tags": [
         "manual"
       ],
@@ -411,7 +382,7 @@
       "title": "Roland Tr 909 Owners Manual",
       "brand": "Roland",
       "model": "",
-      "manualCode": "OES-MANUAL-ROLAND-TR-909-OWNERS-MANUAL",
+      "manualCode": "OES-MAN-ROLTR909",
       "tags": [
         "manual"
       ],
@@ -426,7 +397,7 @@
       "title": "Sergemanual",
       "brand": "Serge",
       "model": "",
-      "manualCode": "OES-MANUAL-SERGEMANUAL",
+      "manualCode": "OES-MAN-SERGE",
       "tags": [
         "manual"
       ],
@@ -441,7 +412,7 @@
       "title": "Suzanne Ciani Buchla Cookbook",
       "brand": "Buchla",
       "model": "200 Series",
-      "manualCode": "OES-BUCHLA-COOKBOOK",
+      "manualCode": "OES-DOC-BUCHLA-COOKBOOK",
       "tags": [
         "buchla",
         "west coast",
@@ -459,7 +430,7 @@
       "title": "Tascam 144 Brochure",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAM-144-BROCHURE",
+      "manualCode": "OES-BROCH-TASC144",
       "tags": [
         "manual"
       ],
@@ -474,7 +445,7 @@
       "title": "Tascam 144 Owners Manual",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAM-144-OWNERS-MANUAL",
+      "manualCode": "OES-MAN-TASC144",
       "tags": [
         "manual"
       ],
@@ -489,7 +460,7 @@
       "title": "Tascam 234 Brochure",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAM-234-BROCHURE",
+      "manualCode": "OES-BROCH-TASC234",
       "tags": [
         "manual"
       ],
@@ -504,7 +475,7 @@
       "title": "Tascam 234 Owners Manual",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAM-234-OWNERS-MANUAL",
+      "manualCode": "OES-MAN-TASC234",
       "tags": [
         "manual"
       ],
@@ -519,7 +490,7 @@
       "title": "Tascam Porta 02 Manual",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAM-PORTA-02-MANUAL",
+      "manualCode": "OES-MAN-TASCPORTA02",
       "tags": [
         "manual"
       ],
@@ -534,7 +505,7 @@
       "title": "Tascam32",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAM32",
+      "manualCode": "OES-MAN-TASCAM32",
       "tags": [
         "manual"
       ],
@@ -549,7 +520,7 @@
       "title": "Tascammfp01manual",
       "brand": "Tascam",
       "model": "",
-      "manualCode": "OES-MANUAL-TASCAMMFP01MANUAL",
+      "manualCode": "OES-MAN-TASCMFP01",
       "tags": [
         "manual"
       ],
@@ -564,7 +535,7 @@
       "title": "Teac Multitrack Primer",
       "brand": "Teac",
       "model": "",
-      "manualCode": "OES-MANUAL-TEAC-MULTITRACK-PRIMER",
+      "manualCode": "OES-DOC-TEACMTPRIMER",
       "tags": [
         "manual"
       ],
@@ -579,7 +550,7 @@
       "title": "Teac White Paper",
       "brand": "Teac",
       "model": "",
-      "manualCode": "OES-MANUAL-TEAC-WHITE-PAPER",
+      "manualCode": "OES-DOC-TEACWHITEPAP",
       "tags": [
         "manual"
       ],
@@ -594,7 +565,7 @@
       "title": "Twin Peak Resonator Manual",
       "brand": "Hordijk",
       "model": "Twin Peak",
-      "manualCode": "OES-HORDIJK-TWINPEAK",
+      "manualCode": "OES-MAN-TWINPEAK",
       "tags": [
         "filter",
         "resonator",
@@ -612,7 +583,7 @@
       "title": "Vcs3",
       "brand": "OES Archive",
       "model": "",
-      "manualCode": "OES-MANUAL-VCS3",
+      "manualCode": "OES-MAN-VCS3",
       "tags": [
         "manual"
       ],
@@ -622,67 +593,4 @@
       "createdAt": "2026-04-24",
       "updatedAt": "2026-04-24"
     }
-  ],
-  "soldUnits": [
-    {
-      "id": "sold-2026-001",
-      "manualId": "revox-a77",
-      "manualCode": "OES-REVERB-011",
-      "itemName": "Revox A77 Mk IV Service + Alignment Unit",
-      "soldDate": "2026-02-22",
-      "platform": "Reverb",
-      "serial": "A77-18429",
-      "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
-    },
-    {
-      "id": "sold-2026-002",
-      "manualId": "roland-jx3p",
-      "manualCode": "OES-REVERB-009",
-      "itemName": "Roland JX-3P Restored + Calibrated",
-      "soldDate": "2026-02-10",
-      "platform": "Reverb",
-      "serial": "JX3P-29316",
-      "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
-    },
-    {
-      "id": "sold-2026-003",
-      "manualId": "arp-2600",
-      "manualCode": "OES-REVERB-008",
-      "itemName": "ARP 2600 Setup Package",
-      "soldDate": "2026-01-27",
-      "platform": "Direct",
-      "serial": "ARP2600-102",
-      "listingUrl": ""
-    },
-    {
-      "id": "sold-2025-014",
-      "manualId": "hordijk-twinpeak",
-      "manualCode": "OES-EBAY-142",
-      "itemName": "Twin Peak Resonator Build",
-      "soldDate": "2025-12-19",
-      "platform": "eBay",
-      "serial": "TP-041",
-      "listingUrl": ""
-    },
-    {
-      "id": "sold-2025-013",
-      "manualId": "revox-a77",
-      "manualCode": "OES-DIRECT-044",
-      "itemName": "Revox A77 Playback Deck",
-      "soldDate": "2025-11-26",
-      "platform": "Direct",
-      "serial": "A77-17280",
-      "listingUrl": ""
-    },
-    {
-      "id": "sold-2025-008",
-      "manualId": "buchla-cookbook",
-      "manualCode": "OES-REVERB-006",
-      "itemName": "Buchla Patch Reference Kit",
-      "soldDate": "2025-09-30",
-      "platform": "Reverb",
-      "serial": "BK-006",
-      "listingUrl": "https://reverb.com/shop/otorlymern-electrical"
-    }
-  ]
 }
