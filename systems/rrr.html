@@ -5,12 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    Otorlymern Electrical Systems — Repairs, Refurbs & Restorations
+    Otorlymern Electrical Systems — Repairs, Refurbs &amp; Restorations
   </title>
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/systems/rrr.css" />
 </head>
 
-<body>
+<body class="rrr-page">
+  <div class="rrr-atmosphere" aria-hidden="true"></div>
+  <div class="rrr-grid-field" aria-hidden="true"></div>
+  <div class="rrr-scanlines" aria-hidden="true"></div>
+  <div class="rrr-noise" aria-hidden="true"></div>
+
   <header>
     <nav>
       <ul class="nav-bar">
@@ -42,25 +48,29 @@
     </nav>
   </header>
 
-  <main>
-    <section class="title-section">
-      <div class="title-container">
-        <h1 class="threeD">
-          <span class="wiggle-title">
-            <img src="/systems/systemsv4.png" alt="Systems Logo" style="
-                  max-width: 480px;
-                  max-height: 480px;
-                  object-fit: contain;
-                  display: block;
-                  margin: 0 auto;
-                " />
-            Repairs, Refurbs &amp; Restorations
+  <main class="rrr-shell">
+    <section class="title-section rrr-hero rrr-reveal">
+      <div class="rrr-hero-membrane" aria-hidden="true"></div>
+      <div class="rrr-hero-coil" aria-hidden="true"></div>
+      <div class="title-container rrr-hero-content">
+        <h1 class="threeD rrr-title">
+          <span class="wiggle-title rrr-title-stack">
+            <span class="rrr-logo-wrap">
+              <img class="rrr-system-logo" src="/systems/systemsv4.png" alt="Systems Logo" />
+            </span>
+            <span class="rrr-title-text">Repairs, Refurbs &amp; Restorations</span>
           </span>
         </h1>
+        <div class="rrr-status-strip" aria-label="Repair bench status">
+          <span><i aria-hidden="true"></i> Bench online</span>
+          <span>Signal: unstable</span>
+          <span>Potential: excessive</span>
+        </div>
       </div>
     </section>
 
-    <section class="system-intro">
+    <section class="system-intro rrr-panel rrr-intro rrr-reveal">
+      <div class="rrr-panel-label">Intake / Initial Condition</div>
       <p>
         We find old gear, wipe away the grime, layer by layer, the terrible
         disgusting grime, then open it up and see whats up with it. <br />
@@ -83,33 +93,34 @@
       </p>
     </section>
 
-    <section class="system-process">
+    <section class="system-process rrr-process rrr-reveal">
       <h2>Our Process</h2>
       <ul>
-        <li>
+        <li data-step="01" data-stage="RECOVER">
           finding forgotten, junked, or otherwise unappreciated bits of
           vintage kit, and wipe em down and fix em up for studio use, whether
           they were intended for the studio or not
         </li>
-        <li>
+        <li data-step="02" data-stage="RESEARCH">
           pull together everything we can find, documentation wise, on the
           thing not just for our use in the servicing process but to share
           with any of you that are wild about this stuff enough to be
           interested
         </li>
-        <li>
+        <li data-step="03" data-stage="REWIRE">
           make any necessary modifications to either bring the thing up to
           date, make it safe, or emphasize/access its potential as a piece of
           a/v gear
         </li>
-        <li>
+        <li data-step="04" data-stage="RELEASE">
           document the process and hopefully find the piece a good home when
           its up to snuff again!
         </li>
       </ul>
     </section>
 
-    <section>
+    <section class="rrr-cta rrr-reveal">
+      <div class="rrr-cta-glow" aria-hidden="true"></div>
       <h2>
         Have something you need fixed up?<br />
         Have a old dusty heavy metal box with a lotta knobs and dont know what
@@ -117,15 +128,16 @@
       </h2>
       <p>
         Use the appropiate form
-        <a href="/services/index.html">repair request form</a> or email
+        <a class="rrr-action-button" href="/services/index.html">repair request form</a> or email
         <a href="mailto:contact@otorlymern-services.com">contact@otorlymern-services.com</a>
         with photos, symptoms, and the vision for the piece. We’ll send a plan
         covering parts sourcing, lead time, and pricing tiers.
       </p>
     </section>
 
-    <section class="system-gallery">
+    <section class="system-gallery rrr-gallery rrr-reveal">
       <div class="system-group-card brochure-card">
+        <div class="rrr-panel-label">Case File / OES-RRR-111B</div>
         <h2>Orban 111B Dual Spring Reverb</h2>
         <img src="https://media.otorlymern-electrical.com/photos/oes-gear/orban111b/orban111bbrochure.png"
           alt="Orban 111B service brochure" />
@@ -197,8 +209,9 @@
       </div>
     </section>
 
-    <section class="system-gallery">
+    <section class="system-gallery rrr-gallery rrr-reveal">
       <div class="system-group-card">
+        <div class="rrr-panel-label">Output / Documentation</div>
         <h2>Sales Listing Photos</h2>
         <p class="system-photo-caption">
           Final detail shots for listings and handoff docs.
@@ -270,13 +283,21 @@
     </section>
   </main>
 
-  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Expanded image view">
-    <span class="lightbox-close" id="lightbox-close" aria-label="Close enlarged image">&times;</span>
-    <img id="lightbox-image" src="" alt="" />
+  <div class="lightbox rrr-lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Expanded image view"
+    aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close enlarged image">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button"
+      aria-label="Previous image">&larr;</button>
+    <figure class="rrr-lightbox-stage">
+      <img id="lightbox-image" src="" alt="" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next image">&rarr;</button>
+    <div class="lightbox-counter" id="lightbox-counter" aria-live="polite"></div>
   </div>
 
   <footer>
-    <p>&copy; 2025 – Otorlymern Electrical Systems – RRR</p>
+    <p>&copy; 2026 – Otorlymern Electrical Systems – RRR</p>
     <div class="footer-badges">
       <a href="https://reverb.com/shop/otorlymern-electrical"><img
           src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
@@ -290,44 +311,7 @@
           alt="Shop My Store on Reverb" /></a>
     </div>
   </footer>
-  <script>
-    (() => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-image");
-      const closeBtn = document.getElementById("lightbox-close");
-      const body = document.body;
-
-      function openLightbox(src, alt) {
-        lightboxImg.src = src;
-        lightboxImg.alt = alt || "Expanded image";
-        lightbox.classList.add("open");
-        body.classList.add("no-scroll");
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("open");
-        body.classList.remove("no-scroll");
-        lightboxImg.src = "";
-        lightboxImg.alt = "";
-      }
-
-      document.querySelectorAll(".system-thumb").forEach((img) => {
-        img.addEventListener("click", () => openLightbox(img.src, img.alt));
-      });
-
-      lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox || e.target === closeBtn) {
-          closeLightbox();
-        }
-      });
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && lightbox.classList.contains("open")) {
-          closeLightbox();
-        }
-      });
-    })();
-  </script>
+  <script src="/systems/rrr.js" defer></script>
 </body>
 
 </html>
