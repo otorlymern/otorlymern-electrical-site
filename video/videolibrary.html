@@ -54,8 +54,11 @@
         <p class="wall-eyebrow">Otorlymern Electrical Systems / Video Archive</p>
         <h1 id="wall-title">CRT WALL</h1>
         <p class="wall-intro">
-          Nine channels of degraded tape, live synthesis, camera feedback, found images, and signals caught between
-          formats.
+          Nine simultaneously playing video artworks and short films, made by or in conjunction with OES and show casing
+          a wide range of analog and digital hardware and software video proessing, editing, and capturing tehniques.
+        </p>
+        <p>Select a video on the deck to see its title, access its transport ocntrols and read a brief description of
+          the techniques used in its making. </p>
         </p>
       </div>
 
@@ -100,8 +103,8 @@
         <div class="transport-row" aria-label="Selected deck transport">
           <button class="transport-button transport-button--play" id="play-selected" type="button">▶ Play</button>
           <button class="transport-button" id="pause-selected" type="button">Ⅱ Pause</button>
-          <button class="transport-button transport-button--link" id="open-selected" type="button"
-            aria-expanded="false" aria-controls="tape-artwork-bay">Open Tape ↓</button>
+          <button class="transport-button transport-button--link" id="open-selected" type="button" aria-expanded="false"
+            aria-controls="tape-artwork-bay">Open Tape ↓</button>
         </div>
 
         <div class="rack-readout" aria-live="polite">
@@ -131,7 +134,7 @@
       <div class="tape-artwork-bay" id="tape-artwork-bay" hidden>
         <div class="tape-artwork-stage">
           <span class="tape-artwork-stage__label">Loaded artwork / Deck A</span>
-          <img id="selected-artwork" src="" alt="" referrerpolicy="no-referrer" />
+          <img id="selected-artwork" src="" alt="" />
           <span class="tape-artwork-scanlines" aria-hidden="true"></span>
           <span class="tape-artwork-glare" aria-hidden="true"></span>
         </div>
@@ -526,7 +529,7 @@
 
         if (media instanceof HTMLVideoElement) {
           if (shouldPlay) {
-            media.play().catch(() => {});
+            media.play().catch(() => { });
           } else {
             media.pause();
           }

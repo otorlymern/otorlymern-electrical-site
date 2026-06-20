@@ -408,7 +408,7 @@ body.video-wall-page .dropdown-content {
 }
 
 .tape-artwork-bay {
-  grid-column: 2;
+  grid-column: 1 / -1;
   min-width: 0;
   padding: clamp(0.9rem, 2vw, 1.4rem);
   border-top: 1px solid rgba(230, 220, 215, 0.18);
@@ -1145,7 +1145,7 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
   }
 
   .tape-artwork-bay {
-    grid-column: 1;
+    grid-column: 1 / -1;
   }
 }
 
