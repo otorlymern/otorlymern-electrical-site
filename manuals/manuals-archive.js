@@ -4,6 +4,150 @@
   const PDFJS_LIB_URL = "/manuals/vendor/pdfjs/pdf.min.js";
   const PDFJS_WORKER_URL = "/manuals/vendor/pdfjs/pdf.worker.min.js";
 
+  const MANUAL_PRESENTATION = Object.freeze({
+    "488portastudio-tascam": {
+      title: "Tascam 488 Portastudio Owner's Manual",
+      era: "Introduced 1991",
+    },
+    "a3340s-sm-teac": {
+      title: "TEAC A-3340S Service Manual",
+      era: "Introduced 1973",
+    },
+    "arp-2600": {
+      title: "ARP 2600 User Manual",
+      era: "Introduced 1971",
+    },
+    "buchla-200-manual": {
+      title: "Buchla 200 Series Manual",
+      era: "Introduced 1970",
+    },
+    "buchla-music-easel-manual": {
+      title: "Buchla Music Easel Manual",
+      era: "Introduced 1973",
+    },
+    "eml-polybox-manual": {
+      title: "EML Poly-Box Manual",
+      era: "Introduced 1977",
+    },
+    "fisher-pr6-manual": {
+      title: "Fisher PR-6 Manual",
+    },
+    "hfe-tascam-m-208-216-en": {
+      title: "Tascam M-208 / M-216 Manual",
+    },
+    "hfe-teac-a-1500u-flyer-en": {
+      title: "TEAC A-1500U Flyer",
+    },
+    "hfe-teac-a-3340s": {
+      title: "TEAC A-3340S Manual",
+      era: "Introduced 1973",
+    },
+    "hfe-teac-stereo-tape-recorders-1966-en": {
+      title: "TEAC Stereo Tape Recorders",
+      era: "Published 1966",
+    },
+    "hfe-yamaha-mt4x-en": {
+      title: "Yamaha MT4X Owner's Manual",
+    },
+    mungoeuro: {
+      title: "Mungo Euro Manual",
+    },
+    "oberheim-matrix-1000-owners-manual": {
+      title: "Oberheim Matrix-1000 Owner's Manual",
+      era: "Introduced 1988",
+    },
+    "ppg-w23-dm": {
+      title: "PPG Wave 2.3 Manual",
+      era: "Introduced 1984",
+    },
+    "revox-a77": {
+      title: "Revox A77 User Manual",
+      era: "Introduced 1967",
+    },
+    "roland-alpha-juno-1": {
+      title: "Roland Alpha Juno-1 Manual",
+      era: "Introduced 1985",
+    },
+    "roland-alpha-juno-1-2": {
+      title: "Roland Alpha Juno-1 Manual",
+      era: "Introduced 1985",
+    },
+    "roland-juno-2-usermanual": {
+      title: "Roland Alpha Juno-2 User Manual",
+      era: "Introduced 1985",
+    },
+    "roland-juno106-owners-manual": {
+      title: "Roland Juno-106 Owner's Manual",
+      era: "Introduced 1984",
+    },
+    "roland-juno106-owners-manual-2": {
+      title: "Roland Juno-106 Owner's Manual",
+      era: "Introduced 1984",
+    },
+    "roland-juno106-service-notes": {
+      title: "Roland Juno-106 Service Notes",
+      era: "Introduced 1984",
+    },
+    "roland-jx3p": {
+      title: "Roland JX-3P Owner's Manual",
+      era: "Introduced 1983",
+    },
+    "roland-tr-606-owners-manual": {
+      title: "Roland TR-606 Owner's Manual",
+      era: "Introduced 1981",
+    },
+    "roland-tr-909-owners-manual": {
+      title: "Roland TR-909 Owner's Manual",
+      era: "Introduced 1983",
+    },
+    sergemanual: {
+      title: "Serge Modular Synthesizer Manual",
+      era: "Introduced 1973",
+    },
+    "buchla-cookbook": {
+      title: "Suzanne Ciani's Buchla Cookbook",
+      era: "Published 1976",
+    },
+    "tascam-144-brochure": {
+      title: "Tascam 144 Brochure",
+      era: "Introduced 1979",
+    },
+    "tascam-144-owners-manual": {
+      title: "Tascam 144 Owner's Manual",
+      era: "Introduced 1979",
+    },
+    "tascam-234-brochure": {
+      title: "Tascam 234 Brochure",
+      era: "Introduced 1983",
+    },
+    "tascam-234-owners-manual": {
+      title: "Tascam 234 Owner's Manual",
+      era: "Introduced 1983",
+    },
+    "tascam-porta-02-manual": {
+      title: "Tascam Porta 02 Manual",
+    },
+    tascam32: {
+      title: "Tascam 32 Manual",
+    },
+    tascammfp01manual: {
+      title: "Tascam MF-P01 Manual",
+    },
+    "teac-multitrack-primer": {
+      title: "TEAC Multitrack Recording Primer",
+    },
+    "teac-white-paper": {
+      title: "TEAC Recording White Paper",
+    },
+    "hordijk-twinpeak": {
+      title: "Hordijk Twin Peak Resonator Manual",
+    },
+    vcs3: {
+      title: "EMS VCS 3 Manual",
+      era: "Introduced 1969",
+    },
+  });
+
   const state = {
     config: {
       recentLimit: 8,
@@ -42,7 +186,8 @@
   }
 
   function formatDate(value) {
-    const date = new Date(value);
+    const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(value || "");
+    const date = new Date(dateOnly ? `${value}T12:00:00` : value);
     if (Number.isNaN(date.getTime())) {
       return "Unknown";
     }
@@ -60,6 +205,16 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+  }
+
+  function getManualPresentation(manual) {
+    return {
+      title:
+        manual.displayTitle ||
+        MANUAL_PRESENTATION[manual.id]?.title ||
+        manual.title,
+      era: manual.releaseLabel || MANUAL_PRESENTATION[manual.id]?.era || "",
+    };
   }
 
   function getDataUrlWithVersion(dataVersion) {
@@ -207,21 +362,26 @@
 
   function renderManualResults(manuals, activeId) {
     els.manualSearchResults.innerHTML = "";
+    els.searchResultCount.textContent = `${manuals.length} ${manuals.length === 1 ? "file" : "files"}`;
 
-    manuals.forEach((manual) => {
+    manuals.forEach((manual, index) => {
       const li = document.createElement("li");
       const button = document.createElement("button");
       button.type = "button";
       button.className = `manual-result${manual.id === activeId ? " is-active" : ""}`;
       button.setAttribute("data-manual-id", manual.id);
-      const thumbnailUrl = resolveAssetUrl(
-        manual.thumbnailUrl,
-        state.config.assetBaseUrl,
+      const presentation = getManualPresentation(manual);
+      button.setAttribute(
+        "aria-label",
+        `${presentation.title}${presentation.era ? `, ${presentation.era}` : ""}`,
       );
+      button.style.setProperty("--result-index", index);
       button.innerHTML = `
-        ${thumbnailUrl ? `<img class="result-thumb" src="${escapeHtml(thumbnailUrl)}" alt="${escapeHtml(manual.title)} thumbnail" loading="lazy" style="width:42px;height:42px;object-fit:cover;border-radius:6px;display:block;margin-bottom:0.3rem;" />` : ""}
-        <div class="result-title">${escapeHtml(manual.title)}</div>
-        <div class="result-meta">${escapeHtml(manual.brand)} · ${escapeHtml(manual.model)}${manual.manualCode ? ` · ${escapeHtml(manual.manualCode)}` : ""}</div>
+        <span class="result-file-icon" aria-hidden="true"></span>
+        <span class="result-copy">
+          <span class="result-title">${escapeHtml(presentation.title)}</span>
+          ${presentation.era ? `<span class="result-era">${escapeHtml(presentation.era)}</span>` : ""}
+        </span>
       `;
       button.addEventListener("click", () => {
         selectManual(manual.id, {
@@ -267,14 +427,13 @@
         normalize(activeManualCode) === unit._manualCodeNormalized;
       button.className = `recent-unit${isActive ? " is-active" : ""}`;
       const manual = state.manualById.get(unit.manualId);
-      const thumbnailUrl = resolveAssetUrl(
-        manual && manual.thumbnailUrl,
-        state.config.assetBaseUrl,
-      );
+      const presentation = manual ? getManualPresentation(manual) : null;
       button.innerHTML = `
-        ${thumbnailUrl ? `<img class="result-thumb" src="${escapeHtml(thumbnailUrl)}" alt="${manual ? escapeHtml(manual.title) : "Manual"} thumbnail" loading="lazy" style="width:42px;height:42px;object-fit:cover;border-radius:6px;display:block;margin-bottom:0.3rem;" />` : ""}
-        <div class="result-title">${escapeHtml(unit.manualCode)} · ${escapeHtml(unit.itemName)}</div>
-        <div class="result-meta">${formatDate(unit.soldDate)} · ${escapeHtml(unit.platform)}${unit.serial ? ` · S/N ${escapeHtml(unit.serial)}` : ""}</div>
+        <span class="result-file-icon result-unit-icon" aria-hidden="true"></span>
+        <span class="result-copy">
+          <span class="result-title">${escapeHtml(unit.itemName || presentation?.title || "Sold unit")}</span>
+          <span class="result-meta">${formatDate(unit.soldDate)} · ${escapeHtml(unit.platform)}${unit.serial ? ` · S/N ${escapeHtml(unit.serial)}` : ""}</span>
+        </span>
       `;
 
       button.addEventListener("click", () => {
@@ -742,6 +901,7 @@
       manualSearchForm: getEl("manualSearchForm"),
       manualSearchInput: getEl("manualSearchInput"),
       manualSearchResults: getEl("manualSearchResults"),
+      searchResultCount: getEl("searchResultCount"),
       searchStatus: getEl("searchStatus"),
       recentUnitsList: getEl("recentUnitsList"),
       recentCount: getEl("recentCount"),

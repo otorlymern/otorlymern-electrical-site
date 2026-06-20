@@ -90,28 +90,47 @@
             </div>
           </form>
           <p class="side-help">Exact code match checks sold-unit codes first, then manual codes.</p>
-          <div id="searchStatus" class="search-status" role="status" aria-live="polite"></div>
-          <ul id="manualSearchResults" class="manual-results" aria-label="Manual search results"></ul>
-        </section>
-
-        <section class="side-block archive-metal-panel">
-          <div class="block-head">
-            <h2>Recent Sold Units</h2>
-            <span id="recentCount" class="small-note"></span>
+          <div class="search-results-window">
+            <div class="search-results-titlebar" aria-hidden="true">
+              <span>Search Results</span>
+              <span id="searchResultCount" class="search-results-count">0 files</span>
+              <span class="search-window-controls">_ □ ×</span>
+            </div>
+            <div id="searchStatus" class="search-status" role="status" aria-live="polite"></div>
+            <ul id="manualSearchResults" class="manual-results" aria-label="Manual search results"></ul>
           </div>
-          <ul id="recentUnitsList" class="recent-units" aria-label="Recent sold units"></ul>
         </section>
 
-        <section class="side-block cta-block archive-metal-panel">
-          <h2>Need Help?</h2>
-          <p>Service, restoration, calibration, and classes.</p>
-          <a class="text-link" href="/services/repairrequest.html">Need Service For This Unit</a>
-          <a class="text-link" href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a>
-          <a class="text-link" href="/services/experience.html">Classes / Sessions</a>
-          <a class="text-link" href="https://reverb.com/shop/otorlymern-electrical#shop-reviews" target="_blank"
-            rel="noopener noreferrer">Read Reverb Reviews</a>
-          <a class="text-link" href="mailto:info@otorlymern-electrical.com?subject=OES%20Manual%20Support">Contact
-            OES</a>
+        <section class="side-block archive-metal-panel sidebar-window-block">
+          <div class="sidebar-ui-window recent-units-window">
+            <div class="sidebar-ui-titlebar">
+              <h2>Recent Sold Units</h2>
+              <span id="recentCount" class="sidebar-ui-count"></span>
+              <span class="sidebar-ui-controls" aria-hidden="true">_ □ ×</span>
+            </div>
+            <div class="sidebar-ui-window-body recent-units-body">
+              <ul id="recentUnitsList" class="recent-units" aria-label="Recent sold units"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="side-block cta-block archive-metal-panel sidebar-window-block">
+          <div class="sidebar-ui-window help-window">
+            <div class="sidebar-ui-titlebar sidebar-ui-titlebar-simple">
+              <h2>Need Help?</h2>
+              <span class="sidebar-ui-controls" aria-hidden="true">_ □ ×</span>
+            </div>
+            <div class="sidebar-ui-window-body help-window-body">
+              <p class="help-window-intro">Service, restoration, calibration, and classes.</p>
+              <a class="text-link" href="/services/repairrequest.html">Need Service For This Unit</a>
+              <a class="text-link" href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a>
+              <a class="text-link" href="/services/experience.html">Classes / Sessions</a>
+              <a class="text-link" href="https://reverb.com/shop/otorlymern-electrical#shop-reviews" target="_blank"
+                rel="noopener noreferrer">Read Reverb Reviews</a>
+              <a class="text-link" href="mailto:info@otorlymern-electrical.com?subject=OES%20Manual%20Support">Contact
+                OES</a>
+            </div>
+          </div>
         </section>
 
         <section class="side-block signup-block archive-metal-panel" aria-label="Email updates">

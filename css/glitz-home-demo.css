@@ -300,6 +300,7 @@ body.home-glitz a {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 800;
+  font-size: 1.25rem;
   background:
     radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.85), transparent 14%),
     linear-gradient(135deg, #f7e4bd, #f0a13a 48%, #86c8e8);

@@ -3,7 +3,7 @@
     "recentLimit": 8,
     "hideSoldOlderThanDays": 900,
     "defaultManualId": "revox-a77",
-    "dataVersion": "2026-04-24",
+    "dataVersion": "2026-06-19",
     "assetBaseUrl": "https://media.otorlymern-electrical.com"
   },
   "manuals": [
@@ -501,6 +501,16 @@
       "notes": "Manual from the OES media archive.",
       "createdAt": "2026-04-24",
       "updatedAt": "2026-04-24"
+    }
+  ],
+  "soldUnits": [
+    {
+      "id": "sold-2026-0619-tascam-mfp01",
+      "manualId": "tascammfp01manual",
+      "manualCode": "OES-MAN-TASCMFP01",
+      "itemName": "Tascam MF-P01 Multitrack Recorder",
+      "soldDate": "2026-06-19",
+      "platform": "OES"
     }
   ]
 }
