@@ -17,7 +17,9 @@
   }
 
   document
-    .querySelectorAll(".rrr-panel, .rrr-cta, .system-group-card, .system-card")
+    .querySelectorAll(
+      ".rrr-panel, .rrr-cta, .system-group-card, .system-card, .rrr-process li",
+    )
     .forEach((element) => {
       element.addEventListener("pointermove", (event) => {
         setPointerLight(element, event);
@@ -35,6 +37,38 @@
       hero.style.setProperty("--hero-ry", `${(xRatio - 0.5) * 3.2}deg`);
       hero.style.setProperty("--logo-x", `${(xRatio - 0.5) * 16}px`);
       hero.style.setProperty("--logo-y", `${(yRatio - 0.5) * 10}px`);
+      hero.style.setProperty("--title-shift-x", `${(xRatio - 0.5) * 24}px`);
+      hero.style.setProperty("--title-shift-y", `${(yRatio - 0.5) * 12}px`);
+      hero.style.setProperty("--title-slant", `${(xRatio - 0.5) * -22}deg`);
+      hero.style.setProperty(
+        "--title-stretch",
+        `${1 + Math.abs(xRatio - 0.5) * 0.12}`,
+      );
+      hero.style.setProperty(
+        "--title-crush",
+        `${1 - Math.abs(yRatio - 0.5) * 0.13}`,
+      );
+      hero.style.setProperty(
+        "--title-twist-x",
+        `${(0.5 - yRatio) * 9}deg`,
+      );
+      hero.style.setProperty(
+        "--title-twist-y",
+        `${(xRatio - 0.5) * 13}deg`,
+      );
+      hero.style.setProperty(
+        "--title-spacing",
+        `${(xRatio - 0.5) * 0.018}em`,
+      );
+      hero.style.setProperty(
+        "--title-brightness",
+        `${1.08 + (1 - yRatio) * 0.5}`,
+      );
+      hero.style.setProperty(
+        "--title-contrast",
+        `${1.04 + Math.abs(xRatio - 0.5) * 0.38}`,
+      );
+      hero.classList.add("is-pointer-active");
     });
 
     hero.addEventListener("pointerleave", () => {
@@ -44,6 +78,17 @@
       hero.style.setProperty("--hero-ry", "0deg");
       hero.style.setProperty("--logo-x", "0px");
       hero.style.setProperty("--logo-y", "0px");
+      hero.style.setProperty("--title-shift-x", "0px");
+      hero.style.setProperty("--title-shift-y", "0px");
+      hero.style.setProperty("--title-slant", "0deg");
+      hero.style.setProperty("--title-stretch", "1");
+      hero.style.setProperty("--title-crush", "1");
+      hero.style.setProperty("--title-twist-x", "0deg");
+      hero.style.setProperty("--title-twist-y", "0deg");
+      hero.style.setProperty("--title-spacing", "0em");
+      hero.style.setProperty("--title-brightness", "1");
+      hero.style.setProperty("--title-contrast", "1");
+      hero.classList.remove("is-pointer-active");
     });
   }
 
