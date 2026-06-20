@@ -1,4 +1,4 @@
-/* OES CRT video library wall */
+/* OES CRT Wall */
 
 @font-face {
   font-family: "VCR OSD Mono";
@@ -9,586 +9,1298 @@
 }
 
 :root {
-  --crt-amber: #fbd7a3;
-  --crt-olive: #7df1b4;
-  --crt-ink: #0c0704;
-  --crt-deep: #1a0d06;
+  --wall-ink: #070506;
+  --wall-cream: #e8ded6;
+  --wall-muted: #a99fa0;
+  --wall-red: #8f1d3d;
+  --wall-hot-red: #e05672;
+  --wall-green: #a3f7bd;
+  --wall-line: rgba(230, 220, 215, 0.22);
 }
 
-body.vhs-library {
-  /* VHS logo tiled at roughly 1/6 size over the solid base */
+* {
+  box-sizing: border-box;
+}
+
+body.video-wall-page {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background:
-    url("https://media.otorlymern-electrical.com/images/clip-art/VHSlogo.png") repeat,
-    radial-gradient(circle at 12% 18%, rgba(255, 217, 166, 0.08), transparent 18%),
-    radial-gradient(circle at 78% 22%, rgba(125, 241, 180, 0.06), transparent 18%),
-    #2c1606;
-  background-size: 213px auto, auto, auto, auto;
-  color: #fcefd8;
-  font-family: "VCR OSD Mono", "Lyno-Stan", monospace;
+    radial-gradient(circle at 15% 20%, rgba(120, 20, 45, 0.22), transparent 32%),
+    radial-gradient(circle at 85% 18%, rgba(185, 185, 190, 0.12), transparent 30%),
+    linear-gradient(180deg, #070506, #140b0e 54%, #030303);
+  background-attachment: fixed;
+  color: #e8ded6;
+  font-family: "VCR OSD Mono", "Courier New", monospace;
 }
 
-body.vhs-library header {
-  background: rgba(237, 216, 204, 0.92);
-  border-bottom: 2px solid rgba(255, 217, 166, 0.28);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+html {
+  background: #070506;
 }
 
-body.vhs-library .nav-bar a {
-  background-color: transparent;
-  color: #ffe9c5;
+body.video-wall-page::before {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  content: "";
 }
 
-body.vhs-library .nav-bar a:hover {
-  background-color: rgba(210, 139, 60, 0.32);
-  color: #fffaf2;
-}
-
-.vhs-library .blob-red {
-  background: #b64f17;
-}
-
-.vhs-library .blob-blue {
-  background: #6a3210;
-}
-
-.vhs-library .blob-red-2 {
-  background: #f1c07c;
-}
-
-.vhs-library .blob-container {
-  width: 115%;
-  height: min(70vh, 820px);
-  left: -7%;
-  top: -7%;
-  right: auto;
-  bottom: auto;
-  inset: auto;
-  z-index: 0;
-}
-
-.vhs-library main {
+body.video-wall-page .site-header {
   position: relative;
-  z-index: 2;
+  z-index: 30;
+  background: rgba(7, 5, 6, 0.88);
+  border-bottom: 1px solid var(--wall-line);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(14px);
 }
 
-.library-main {
-  max-width: 1200px;
+body.video-wall-page .nav-bar {
+  background: transparent;
+}
+
+body.video-wall-page .nav-bar a {
+  background: transparent;
+  color: var(--wall-cream);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+body.video-wall-page .nav-bar a[aria-current="page"],
+body.video-wall-page .nav-bar a:hover {
+  background: rgba(143, 29, 61, 0.28);
+  color: #fff;
+}
+
+body.video-wall-page .dropdown-content {
+  background: rgba(19, 13, 15, 0.97);
+  border: 1px solid var(--wall-line);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
+}
+
+.video-wall-main {
+  width: min(1480px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 3rem;
+  padding: 2.5rem 0 4rem;
+}
+
+.wall-hero {
   position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  isolation: isolate;
+  min-height: 520px;
+  display: grid;
+  align-content: center;
+  overflow: hidden;
+  border: 1px solid var(--wall-line);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent 42%),
+    rgba(7, 5, 6, 0.64);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 32px 90px rgba(0, 0, 0, 0.48);
 }
 
-.library-hero .title-container {
-  text-align: center;
+.wall-hero::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+  content: "";
 }
 
-.hero-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #fbd7a3;
-  margin: 0 0 0.25rem;
-  font-size: 0.95rem;
-}
-
-.library-hero-title {
-  margin: 0.2rem 0 0.85rem;
-  font-family: "Lyno-Jean", sans-serif;
-  font-size: clamp(3.4rem, 11vw, 9.8rem);
-  line-height: 0.92;
-  text-transform: uppercase;
-  letter-spacing: 0.045em;
-}
-
-.library-hero-title .wiggle-title {
-  display: inline-flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: clamp(10px, 2vw, 28px);
-}
-
-.library-hero-title .hero-vcr-gif {
-  width: clamp(78px, 11vw, 170px);
-  height: auto;
-  transform: translateY(-0.06em);
-  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45));
-}
-
-.hero-description {
-  max-width: 740px;
-  margin: 0.4rem auto 0;
-  color: #f6d7ad;
-  line-height: 1.5;
-}
-
-.wall-intro {
-  background: linear-gradient(135deg, rgba(20, 10, 6, 0.82), rgba(12, 6, 3, 0.85));
-  border: 1px solid rgba(255, 221, 168, 0.2);
-  border-radius: 14px;
-  padding: 0.9rem 1rem;
-  color: #f6d7ad;
-  box-shadow: inset 0 0 0 1px rgba(255, 221, 168, 0.08);
-}
-
-.crt-wall {
-  background-image: url("https://media.otorlymern-electrical.com/images/clip-art/VHSlogo.png"),
-    linear-gradient(160deg, rgba(26, 12, 5, 0.88), rgba(11, 6, 3, 0.9));
-  background-repeat: no-repeat, no-repeat;
-  background-position: center 6px, center;
-  background-size: 1280px auto, cover;
-  border: 1px solid rgba(255, 221, 168, 0.26);
-  border-radius: 18px;
-  padding: 1.2rem;
-  box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.45), 0 16px 46px rgba(0, 0, 0, 0.55);
-  position: relative;
+.signal-field {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
   overflow: hidden;
 }
 
-.vhs-logo-bg {
+.signal-field__orb {
   position: absolute;
-  top: 6px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: min(1280px, 95vw);
-  height: calc(min(1280px, 95vw) * 0.51);
-  aspect-ratio: 1280 / 654;
-  background: url("https://media.otorlymern-electrical.com/images/clip-art/VHSlogo.png") center/contain no-repeat;
-  opacity: 0.3;
-  filter: grayscale(1) brightness(1.3) drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
-  mix-blend-mode: screen;
-  pointer-events: none;
-  z-index: 1;
+  width: min(70vw, 900px);
+  aspect-ratio: 1.6;
+  border-radius: 43% 57% 63% 37% / 51% 38% 62% 49%;
+  background:
+    radial-gradient(circle at 35% 42%, rgba(224, 86, 114, 0.62), transparent 17%),
+    radial-gradient(circle at 67% 58%, rgba(255, 217, 221, 0.25), transparent 24%),
+    conic-gradient(from 40deg, #1e0710, #7a1935, #1b0a11, #ad3452, #16070c);
+  filter: blur(3px) saturate(0.86);
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+  animation: signal-warp 13s ease-in-out infinite alternate;
 }
 
-.wall-grid {
+.signal-field__scan {
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: -30%;
+  width: 22%;
+  background: linear-gradient(90deg, transparent, rgba(255, 235, 232, 0.11), transparent);
+  filter: blur(12px);
+  transform: skewX(-12deg);
+  animation: signal-scan 8s linear infinite;
+}
+
+.wall-hero__content {
+  width: min(1120px, calc(100% - 3rem));
+  margin: auto;
+  padding: 4rem 0 6rem;
+  text-align: center;
+}
+
+.wall-eyebrow {
+  margin: 0 0 1rem;
+  color: #c6b9b6;
+  font-size: clamp(0.67rem, 1.1vw, 0.82rem);
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.wall-hero h1 {
+  margin: 0;
+  color: #eee4dc;
+  font-family: "Lyno-Jean", "Arial Black", sans-serif;
+  font-size: clamp(5rem, 16vw, 14rem);
+  font-weight: 900;
+  letter-spacing: -0.065em;
+  line-height: 0.76;
+  text-shadow:
+    0 1px 0 #fff,
+    0 5px 0 rgba(107, 25, 47, 0.9),
+    0 22px 60px rgba(0, 0, 0, 0.62);
+}
+
+.wall-intro {
+  max-width: 710px;
+  margin: 2.15rem auto 0;
+  color: rgba(232, 222, 214, 0.82);
+  font-size: clamp(0.86rem, 1.5vw, 1.05rem);
+  letter-spacing: 0.055em;
+  line-height: 1.65;
+}
+
+.wall-status {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
   display: grid;
-  gap: 1.1rem;
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  justify-items: center;
+  grid-template-columns: 1fr 0.7fr 1.5fr;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(232, 222, 214, 0.25);
+  border-radius: 12px;
+  background: rgba(4, 3, 4, 0.78);
+  backdrop-filter: blur(12px);
+}
+
+.wall-status div {
+  display: flex;
+  gap: 0.55rem;
+  align-items: baseline;
+  padding: 0.85rem 1rem;
+  border-right: 1px solid rgba(232, 222, 214, 0.14);
+}
+
+.wall-status div:last-child {
+  border-right: 0;
+}
+
+.wall-status dt,
+.wall-status dd {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wall-status dt {
+  color: #837a79;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+}
+
+.wall-status dd {
+  color: var(--wall-green);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.program-deck {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.4fr);
+  margin: 1.4rem 0;
+  overflow: hidden;
+  border: 1px solid rgba(230, 220, 215, 0.28);
+  border-radius: 8px 8px 0 0;
+  background:
+    linear-gradient(180deg, rgba(87, 87, 92, 0.54), rgba(15, 14, 16, 0.94) 58%),
+    #111;
+  box-shadow:
+    inset 0 2px rgba(255, 255, 255, 0.12),
+    0 18px 44px rgba(0, 0, 0, 0.52);
+}
+
+.program-deck__selector,
+.program-deck__info {
+  padding: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.program-deck__selector {
+  border-right: 1px solid rgba(230, 220, 215, 0.16);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(228, 81, 126, 0.13), transparent 34%),
+    rgba(5, 5, 6, 0.48);
+}
+
+.program-label,
+.deck-select-label {
+  color: #8d8586;
+  font-size: 0.61rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.program-label {
+  margin: 0 0 0.75rem;
+}
+
+.deck-select-row {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.deck-selector {
+  min-width: 0;
+  height: 40px;
+  padding: 0 2.1rem 0 0.75rem;
+  border: 1px solid rgba(238, 220, 225, 0.28);
+  border-radius: 3px;
+  background: #090809;
+  color: #f0dde3;
+  font: 0.74rem "EnterCommand", monospace;
+  letter-spacing: 0.045em;
+}
+
+.transport-row {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.transport-button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.58rem 0.75rem 0.48rem;
+  border: 1px solid rgba(232, 222, 214, 0.25);
+  border-radius: 4px;
+  background: linear-gradient(180deg, #302d2f, #0c0b0c);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.16),
+    0 3px 0 #030303;
+  color: #d7ccca;
+  cursor: pointer;
+  font: 0.67rem "VCR OSD Mono", monospace;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.transport-button:hover,
+.transport-button:focus-visible {
+  border-color: #d95d86;
+  color: #fff;
+  outline: none;
+}
+
+.transport-button:active {
+  transform: translateY(2px);
+}
+
+.transport-button--play {
+  background: linear-gradient(180deg, #7e1c3c, #350c1b);
+  color: #ffeaf1;
+}
+
+.transport-button--step {
+  width: 40px;
+  padding-inline: 0;
+}
+
+.transport-button--link {
+  margin-left: auto;
+}
+
+.rack-readout {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(163, 247, 189, 0.16);
+  border-radius: 3px;
+  background: #050a06;
+  color: #557361;
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rack-readout strong {
+  color: var(--wall-green);
+  font-weight: normal;
+  text-shadow: 0 0 8px rgba(163, 247, 189, 0.42);
+}
+
+.program-deck__info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: center;
+  column-gap: 1.5rem;
+}
+
+.program-deck__info .deck-format,
+.program-deck__info h2,
+.program-deck__info > p {
+  grid-column: 1;
+}
+
+.program-deck__info h2 {
+  margin: 0 0 0.65rem;
+  color: #f1e7e1;
+  font-family: "EnterCommand", monospace;
+  font-size: clamp(1.65rem, 3.6vw, 3rem);
+  font-weight: normal;
+  line-height: 0.96;
+}
+
+.program-deck__info > p {
+  max-width: 720px;
+  margin: 0;
+  color: #aaa09d;
+  font: 0.88rem/1.55 "Courier New", monospace;
+}
+
+.program-deck__info .signal-controls {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+  flex-direction: column;
+}
+
+.tape-artwork-bay {
+  grid-column: 2;
+  min-width: 0;
+  padding: clamp(0.9rem, 2vw, 1.4rem);
+  border-top: 1px solid rgba(230, 220, 215, 0.18);
+  background:
+    linear-gradient(135deg, rgba(119, 24, 53, 0.16), transparent 42%),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(255, 255, 255, 0.018) 48px),
+    #080708;
+  box-shadow:
+    inset 0 12px 24px rgba(0, 0, 0, 0.62),
+    inset 0 1px rgba(255, 255, 255, 0.04);
+  animation: tape-bay-open 220ms ease-out;
+}
+
+.tape-artwork-bay[hidden] {
+  display: none;
+}
+
+.tape-artwork-stage {
   position: relative;
+  display: grid;
+  min-height: clamp(310px, 42vw, 580px);
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(232, 222, 214, 0.2);
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(163, 48, 82, 0.2), transparent 42%),
+    linear-gradient(180deg, #171417, #030303 72%);
+  box-shadow:
+    inset 0 0 70px #000,
+    0 12px 34px rgba(0, 0, 0, 0.54);
+}
+
+.tape-artwork-stage::before,
+.tape-artwork-stage::after {
+  position: absolute;
+  z-index: 5;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #020202;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #8c8688, #252225 65%, #050405 66%);
+  content: "";
+}
+
+.tape-artwork-stage::before {
+  left: 9px;
+}
+
+.tape-artwork-stage::after {
+  right: 9px;
+}
+
+.tape-artwork-stage__label {
+  position: absolute;
+  z-index: 6;
+  top: 0.75rem;
+  left: 50%;
+  padding: 0.36rem 0.62rem 0.28rem;
+  border: 1px solid rgba(255, 181, 206, 0.22);
+  background: rgba(82, 14, 35, 0.88);
+  color: #f3c6d5;
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.tape-artwork-stage img {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  justify-self: center;
+  display: block;
+  width: auto;
+  max-width: min(88%, 760px);
+  height: auto;
+  max-height: min(500px, 38vw);
+  object-fit: contain;
+  filter:
+    saturate(0.82)
+    contrast(1.04)
+    drop-shadow(0 20px 24px rgba(0, 0, 0, 0.72));
+}
+
+.tape-artwork-scanlines,
+.tape-artwork-glare {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  pointer-events: none;
+}
+
+.tape-artwork-scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0 1px,
+    transparent 1px 4px
+  );
+  mix-blend-mode: overlay;
+}
+
+.tape-artwork-glare {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent 22%, transparent 72%, rgba(255, 184, 211, 0.06));
+}
+
+.tape-artwork-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 0.15rem 0;
+  color: #807678;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tape-artwork-footer a {
+  color: #e9b9c8;
+  text-underline-offset: 3px;
+}
+
+.signal-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.signal-control {
+  display: grid;
+  gap: 0.32rem;
+  justify-items: center;
+}
+
+.signal-control__label {
+  color: #756e6e;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.signal-knob {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #4c4849;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, #5d595a, #1d1b1c 54%, #080708 55%),
+    #111;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.23),
+    0 3px 8px #000;
+}
+
+.signal-knob::after {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  border-radius: 2px;
+  background: #e05672;
+  content: "";
+  transform: translateX(-50%) rotate(31deg);
+  transform-origin: 50% 13px;
+}
+
+.signal-control--wide {
+  justify-items: stretch;
+}
+
+.signal-slider {
+  position: relative;
+  width: 82px;
+  height: 7px;
+  border: 1px solid #302e2f;
+  border-radius: 8px;
+  background: #050405;
+  box-shadow: inset 0 1px 3px #000;
+}
+
+.signal-slider span {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  width: 12px;
+  height: 20px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #1b191a, #514d4e, #1b191a);
+  box-shadow: 0 3px 6px #000;
+  transform: translate(-50%, -50%);
+}
+
+.control-readout {
+  padding: 0.56rem 0.7rem;
+  border: 1px solid rgba(163, 247, 189, 0.18);
+  border-radius: 4px;
+  background: #070b08;
+  box-shadow: inset 0 0 12px rgba(66, 255, 126, 0.06);
+  color: #669675;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.control-readout strong {
+  color: var(--wall-green);
+  font-weight: normal;
+  text-shadow: 0 0 8px rgba(163, 247, 189, 0.46);
+}
+
+.monitor-grid,
+.crt-wall-grid {
+  display: grid;
+  grid-template-columns: repeat(30, minmax(0, 1fr));
+  gap: 0;
+  align-items: end;
+  margin-top: -1.4rem;
+  padding: 0 0 clamp(4rem, 8vw, 8rem);
+  overflow: visible;
+  filter: drop-shadow(0 32px 38px rgba(0, 0, 0, 0.72));
+}
+
+.crt-deck-card {
+  position: relative;
+  overflow: visible;
+  min-width: 0;
+}
+
+.crt-deck-card:nth-child(1) {
+  grid-column: 4 / span 8;
+  grid-row: 1;
+  z-index: 3;
+}
+
+.crt-deck-card:nth-child(1) .monitor-model--compact .crt-stack {
+  transform: translate(-8%, calc(-11% - 40px)) scale(1.62);
+}
+
+.crt-deck-card:nth-child(2) {
+  grid-column: 12 / span 8;
+  grid-row: 1;
+  z-index: 3;
+}
+
+.crt-deck-card:nth-child(2) .monitor-model--compact .crt-stack {
+  transform: translate(-5%, calc(-11% - 40px)) scale(1.62);
+}
+
+.crt-deck-card:nth-child(3) {
+  grid-column: 20 / span 8;
+  grid-row: 1;
+  z-index: 3;
+}
+
+.crt-deck-card:nth-child(3) .monitor-model--silver .crt-stack {
+  transform: translateX(-11%) scale(1.3);
+}
+
+.crt-deck-card:nth-child(4) {
+  grid-column: 2 / span 9;
+  grid-row: 2;
   z-index: 2;
 }
 
-.library-wall-grid {
-  width: 100%;
+.crt-deck-card:nth-child(5) {
+  grid-column: 11 / span 9;
+  grid-row: 2;
+  z-index: 2;
 }
 
-@media (min-width: 1080px) {
-  .wall-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.crt-deck-card:nth-child(6) {
+  grid-column: 20 / span 9;
+  grid-row: 2;
+  z-index: 2;
+}
+
+.crt-deck-card:nth-child(7) {
+  grid-column: 1 / span 10;
+  grid-row: 3;
+  z-index: 1;
+}
+
+.crt-deck-card:nth-child(8) {
+  grid-column: 11 / span 10;
+  grid-row: 3;
+  z-index: 1;
+}
+
+.crt-deck-card:nth-child(9) {
+  grid-column: 21 / span 10;
+  grid-row: 3;
+  z-index: 1;
+}
+
+.crt-deck-card[hidden] {
+  display: none;
+}
+
+.deck-label-row {
+  display: none;
+}
+
+.crt-monitor {
+  display: block;
+  position: relative;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.crt-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.crt-frame-overlay {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 12px rgba(0, 0, 0, 0.72));
+  transition: filter 150ms ease;
+}
+
+.crt-deck-card.is-selected {
+  z-index: 12;
+}
+
+.crt-deck-card.is-selected .crt-frame-overlay {
+  filter:
+    drop-shadow(0 14px 12px rgba(0, 0, 0, 0.72))
+    drop-shadow(0 0 3px rgba(163, 247, 189, 0.32))
+    drop-shadow(0 0 8px rgba(93, 183, 121, 0.12));
+}
+
+.monitor-model--compact .crt-stack {
+  transform: scale(1.62);
+  transform-origin: center top;
+}
+
+.monitor-model--silver .crt-stack {
+  transform: scale(1.3);
+  transform-origin: center top;
+}
+
+.monitor-model--kv20 .crt-stack {
+  transform: scale(1.18);
+  transform-origin: center top;
+}
+
+.monitor-model--console .crt-stack {
+  transform: scale(1.22);
+  transform-origin: center top;
+}
+
+.monitor-model--black .crt-stack {
+  transform: scale(1.12);
+  transform-origin: center top;
+}
+
+.crt-glass {
+  position: absolute;
+  z-index: 1;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  background: #020202;
+  transform: translateZ(0);
+}
+
+.crt-glass img,
+.crt-glass video,
+.crt-glass iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monitor-model--console .crt-glass {
+  top: 20.4102%;
+  left: 20.2148%;
+  width: 59.8633%;
+  height: 42.2852%;
+  border-radius: 3% / 6%;
+}
+
+.monitor-model--silver .crt-glass {
+  top: 19.4286%;
+  left: 22.7143%;
+  width: 62.5714%;
+  height: 45.7143%;
+  border-radius: 2% / 4%;
+}
+
+.monitor-model--black .crt-stack {
+  aspect-ratio: 1;
+}
+
+.monitor-model--black .crt-glass {
+  top: 16.166%;
+  left: 12.6667%;
+  width: 75.6%;
+  height: 54.4%;
+  border-radius: 2% / 4%;
+}
+
+.monitor-model--compact .crt-glass {
+  top: 32%;
+  left: 28.5714%;
+  width: 40.8571%;
+  height: 31.1429%;
+  border-radius: 2% / 4%;
+}
+
+.monitor-model--kv20 .crt-glass {
+  top: 21.4286%;
+  left: 17%;
+  width: 67.2857%;
+  height: 50.4286%;
+  border-radius: 3% / 5%;
+}
+
+.crt-glass::before {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 38px 9px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  content: "";
+}
+
+.crt-deck-card.is-paused .crt-glass::after {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background:
+    repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 4px),
+    rgba(4, 2, 3, 0.72);
+  color: #f5afc5;
+  font: clamp(0.55rem, 1.1vw, 0.8rem) "VCR OSD Mono", monospace;
+  letter-spacing: 0.18em;
+  text-shadow: 0 0 10px rgba(245, 102, 149, 0.75);
+  content: "Ⅱ PAUSE";
+}
+
+.deck-video {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border: 0;
+  background: #020202;
+  filter: saturate(0.83) contrast(1.07) brightness(0.8);
+  object-fit: cover;
+}
+
+.monitor-select {
+  position: absolute;
+  z-index: 7;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.monitor-select:focus-visible {
+  outline: 2px solid var(--wall-hot-red);
+  outline-offset: -5px;
+}
+
+.crt-scanlines,
+.crt-reflection {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.crt-scanlines {
+  z-index: 3;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08) 0,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  mix-blend-mode: overlay;
+  opacity: 0.42;
+  animation: scanline-drift 9s linear infinite;
+}
+
+.crt-reflection {
+  z-index: 4;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,0.26), transparent 22%, transparent 70%, rgba(255,190,215,0.12));
+  opacity: 0.55;
+}
+
+.pink-cap-bank {
+  display: none;
+}
+
+.crt-glass--standby {
+  background:
+    repeating-radial-gradient(circle at 50% 50%, transparent 0 5px, rgba(255, 255, 255, 0.02) 6px),
+    linear-gradient(135deg, #14070d, #050405 64%);
+}
+
+.standby-signal {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  color: rgba(232, 222, 214, 0.72);
+  text-align: center;
+  text-shadow: 2px 0 rgba(178, 27, 68, 0.5), -2px 0 rgba(63, 154, 143, 0.3);
+  animation: standby-jitter 2.8s steps(1) infinite;
+}
+
+.standby-signal span {
+  font-family: "Lyno-Jean", "Arial Black", sans-serif;
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  letter-spacing: -0.05em;
+}
+
+.standby-signal small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #9f7a84;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.deck-body {
+  display: none;
+}
+
+.deck-format {
+  margin: 0 0 0.62rem;
+  color: #ca6e86;
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.deck-body h2 {
+  margin: 0 0 0.6rem;
+  font-family: "EnterCommand", "VCR OSD Mono", monospace;
+  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  line-height: 1.02;
+}
+
+.deck-body h2 a {
+  color: #eee5df;
+  text-decoration: none;
+}
+
+.deck-body h2 a:hover,
+.deck-body h2 a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--wall-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.deck-body > p:last-child {
+  margin: 0;
+  color: #aaa09d;
+  font-family: "Courier New", monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+body.video-wall-page .video-wall-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem max(1rem, calc((100vw - 1480px) / 2));
+  border-top: 1px solid rgba(230, 220, 215, 0.12);
+  background: #030303;
+  color: #6d6665;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.video-wall-footer p {
+  margin: 0;
+}
+
+.video-wall-footer__copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+body.video-wall-page .video-wall-footer .footer-badges {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+body.video-wall-page .video-wall-footer .footer-badges img {
+  display: block;
+  width: auto;
+  max-width: 92px;
+  height: 28px;
+  border: 0;
+  image-rendering: auto;
+  filter: saturate(0.72) brightness(0.82);
+}
+
+body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"] {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes signal-warp {
+  0% {
+    border-radius: 43% 57% 63% 37% / 51% 38% 62% 49%;
+    transform: translate(-52%, -49%) rotate(-4deg) scale(0.95);
+  }
+
+  50% {
+    border-radius: 64% 36% 44% 56% / 37% 57% 43% 63%;
+    transform: translate(-48%, -52%) rotate(3deg) scale(1.06);
+  }
+
+  100% {
+    border-radius: 35% 65% 59% 41% / 62% 40% 60% 38%;
+    transform: translate(-50%, -48%) rotate(-2deg) scale(1);
+  }
+}
+
+@keyframes signal-scan {
+  from {
+    transform: translateX(0) skewX(-12deg);
+  }
+
+  to {
+    transform: translateX(700%) skewX(-12deg);
+  }
+}
+
+@keyframes scanline-drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 40px;
+  }
+}
+
+@keyframes standby-jitter {
+  0%,
+  91%,
+  100% {
+    transform: translate(0);
+  }
+
+  92% {
+    transform: translate(-2px, 1px);
+  }
+
+  94% {
+    transform: translate(2px, -1px);
+  }
+}
+
+@keyframes tape-bay-open {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1120px) {
+  .program-deck {
+    grid-template-columns: 1fr;
+  }
+
+  .program-deck__selector {
+    border-right: 0;
+    border-bottom: 1px solid rgba(230, 220, 215, 0.16);
+  }
+
+  .signal-controls {
+    justify-content: flex-end;
+  }
+
+  .tape-artwork-bay {
+    grid-column: 1;
   }
 }
 
 @media (max-width: 720px) {
-  .wall-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  .video-wall-main {
+    width: min(100% - 1rem, 1480px);
+    padding-top: 0.5rem;
+  }
+
+  .wall-hero {
+    min-height: 560px;
+    border-radius: 20px;
+  }
+
+  .wall-hero__content {
+    width: calc(100% - 1.5rem);
+    padding-bottom: 11rem;
+  }
+
+  .wall-hero h1 {
+    font-size: clamp(4.2rem, 21vw, 7rem);
+    line-height: 0.82;
+  }
+
+  .wall-intro {
+    max-width: 31rem;
+  }
+
+  .wall-status {
+    grid-template-columns: 1fr;
+  }
+
+  .wall-status div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(232, 222, 214, 0.14);
+  }
+
+  .wall-status div:last-child {
+    border-bottom: 0;
+  }
+
+  .signal-controls {
+    justify-content: space-between;
+  }
+
+  .program-deck__info {
+    grid-template-columns: 1fr;
+  }
+
+  .program-deck__info .signal-controls {
+    grid-column: 1;
+    grid-row: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.2rem;
+  }
+
+  .deck-label-row {
+    gap: 0.25rem;
+    padding-inline: 0.3rem;
+    font-size: 0.6rem;
+  }
+
+  .deck-status {
+    font-size: 0;
+  }
+
+  .deck-status::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .pink-cap-bank {
+    transform: scale(0.8);
+    transform-origin: right center;
+  }
+
+  .tape-artwork-stage {
+    min-height: 360px;
+  }
+
+  .tape-artwork-stage img {
+    max-height: 320px;
+  }
+
+  .tape-artwork-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body.video-wall-page .video-wall-footer {
+    grid-template-columns: 1fr;
+  }
+
+  body.video-wall-page .video-wall-footer .footer-badges {
+    justify-content: flex-start;
   }
 }
 
-.tv-unit {
-  width: 100%;
-  max-width: 520px;
-  background: linear-gradient(150deg, rgba(28, 13, 6, 0.9), rgba(12, 6, 3, 0.94));
-  border: 1px solid rgba(255, 221, 168, 0.26);
-  border-radius: 11px;
-  padding: 1rem 1rem 1.1rem;
-  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.45), 0 14px 36px rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.tv-unit::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 12% 12%, rgba(255, 217, 166, 0.08), transparent 35%);
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.tv-unit>* {
-  position: relative;
-  z-index: 1;
-}
-
-.tv-unit.tv-static .tv-screen--video,
-.tv-unit.tv-static .tv-screen--embed {
-  opacity: 0.4;
-  filter: grayscale(1) contrast(1.15);
-}
-
-.tv-unit.tv-empty .tv-screen--video,
-.tv-unit.tv-empty .tv-screen--embed {
-  opacity: 0;
-}
-
-.crt-shell {
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  margin-bottom: 0.5rem;
-  align-items: center;
-}
-
-.crt-shell--wall {
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.crt-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at 50% 35%, rgba(20, 10, 6, 0.6), rgba(10, 5, 3, 0.85));
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.crt-frame--wall {
-  background: none;
-}
-
-/* Aligns video to the transparent window of the Sony Trinitron frame */
-.crt-screen {
-  position: absolute;
-  top: 20.41%;
-  left: 20.21%;
-  width: 59.86%;
-  height: 42.29%;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow:
-    inset 0 0 30px rgba(0, 0, 0, 0.7),
-    0 0 24px rgba(125, 241, 180, 0.28);
-  background: #000;
-  z-index: 1;
-}
-
-.tv-screen {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: #000;
-  display: block;
-  position: relative;
-  z-index: 1;
-  object-fit: cover;
-}
-
-.tv-screen--embed {
-  object-fit: cover;
-}
-
-.tv-screen--static {
-  background:
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0) 58%),
-    url("https://media.otorlymern-electrical.com/images/textures/staticsnow.png");
-  background-size: cover, 240px 240px;
-  background-position: center;
-  animation: crt-static-shift 0.18s steps(2) infinite;
-}
-
-.crt-screen > .tv-screen,
-.crt-screen > .crt-embed-fill {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.crt-embed-fill iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-@keyframes crt-static-shift {
-  0% {
-    background-position: center, 0 0;
+@media (max-width: 430px) {
+  body.video-wall-page .nav-bar {
+    flex-wrap: wrap;
+    font-size: 0.8rem;
   }
 
-  50% {
-    background-position: center, 18px -12px;
+  .wall-hero__content {
+    padding-top: 3rem;
   }
 
-  100% {
-    background-position: center, -14px 16px;
+  .wall-hero h1 {
+    font-size: 22vw;
+  }
+
+  .deck-select-row {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .deck-select-label {
+    display: none;
+  }
+
+  .transport-button--link {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .deck-label-row {
+    font-size: 0.52rem;
+  }
+
+  .program-deck__info .signal-controls {
+    display: none;
+  }
+
+  .pink-cap-bank {
+    width: 52px;
+    margin-right: 0.1rem;
+    background:
+      radial-gradient(circle at 9px 50%, #ffc4dc 0 2px, #da4e83 3px 5px, transparent 6px),
+      radial-gradient(circle at 26px 50%, #ffd5e6 0 2px, #f06b9b 3px 5px, transparent 6px),
+      radial-gradient(circle at 43px 50%, #ffc4dc 0 2px, #bd396d 3px 5px, transparent 6px),
+      linear-gradient(#282427, #0a090a);
   }
 }
 
-.mute-toggle {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(8, 8, 8, 0.6);
-  color: #f2f2f2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 0;
-  z-index: 6;
-}
-
-.mute-toggle:hover {
-  background: rgba(8, 8, 8, 0.8);
-}
-
-.mute-toggle:focus-visible {
-  outline: 2px solid rgba(255, 204, 143, 0.9);
-  outline-offset: 2px;
-}
-
-.mute-toggle__icon {
-  width: 16px;
-  height: 16px;
-}
-
-.mute-toggle.is-muted::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 24px;
-  background: #ffb3b3;
-  transform: rotate(45deg);
-  border-radius: 2px;
-}
-
-.scanlines {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.22) 0px,
-      rgba(0, 0, 0, 0.22) 2px,
-      rgba(255, 255, 255, 0) 3px);
-  mix-blend-mode: soft-light;
-  opacity: 0.5;
-  z-index: 2;
-}
-
-.crt-glare {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(115deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.03) 38%,
-      rgba(255, 255, 255, 0) 60%);
-  z-index: 3;
-}
-
-.trinitron-overlay {
-  position: absolute;
-  inset: 0;
-  background: url("/video/sonycrtfrfame.png") center center / contain no-repeat;
-  pointer-events: none;
-  opacity: 0.96;
-  z-index: 5;
-}
-
-.screen-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at 30% 30%,
-      rgba(251, 215, 163, 0.08),
-      rgba(12, 7, 4, 0.7));
-  color: var(--crt-amber);
-  font-family: "VCR OSD Mono", monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  text-align: center;
-  z-index: 7;
-}
-
-.tv-unit.tv-empty .screen-overlay {
-  opacity: 0.85;
-}
-
-.tv-unit.tv-static .screen-overlay {
-  opacity: 0.9;
-  background:
-    repeating-linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.08) 0,
-      rgba(255, 255, 255, 0.08) 1px,
-      rgba(0, 0, 0, 0.08) 2px,
-      rgba(0, 0, 0, 0.08) 3px),
-    linear-gradient(120deg, rgba(255, 217, 166, 0.08), rgba(12, 7, 4, 0.9));
-  animation: crtSnow 0.18s steps(2) infinite;
-}
-
-@keyframes crtSnow {
-  0% {
-    transform: translate3d(0, 0, 0);
+@media (prefers-reduced-motion: reduce) {
+  .signal-field__orb,
+  .signal-field__scan,
+  .crt-scanlines,
+  .standby-signal {
+    animation: none;
   }
 
-  50% {
-    transform: translate3d(-3px, 2px, 0);
-  }
-
-  100% {
-    transform: translate3d(2px, -2px, 0);
-  }
-}
-
-.crt-caption {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.85rem;
-  color: var(--crt-amber);
-  letter-spacing: 0.08em;
-  padding: 0 0.1rem 0.15rem;
-  text-transform: uppercase;
-}
-
-.crt-caption__link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.crt-caption__link:hover .crt-caption__text,
-.crt-caption__link:focus-visible .crt-caption__text {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.pilot-light {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #9fe7c6, #2b7a52 75%);
-  box-shadow: 0 0 10px #7df1b4, 0 0 0 2px rgba(125, 241, 180, 0.28);
-}
-
-.vcr {
-  padding: 0.8rem 0.9rem 0.95rem;
-  background: linear-gradient(180deg, rgba(20, 10, 6, 0.95), rgba(11, 6, 3, 0.95));
-  border: 1px solid rgba(255, 221, 168, 0.24);
-  border-radius: 12px;
-  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.55), 0 12px 26px rgba(0, 0, 0, 0.45);
-  color: #ffe9c5;
-}
-
-.vcr-title-bar {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  color: var(--crt-amber);
-  margin-bottom: 0.35rem;
-}
-
-.vcr-slot {
-  margin: 0.35rem 0 0.7rem;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  border: 1px dashed rgba(255, 221, 168, 0.38);
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(32, 18, 10, 0.6));
-  color: #fcefd8;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.9rem;
-  transition: border-color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
-  text-align: center;
-  padding: 0.4rem 0.6rem;
-}
-
-.vcr-slot--wall {
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  text-transform: none;
-  letter-spacing: 0.06em;
-  padding: 0.65rem 0.7rem;
-  gap: 0.2rem;
-  flex-direction: column;
-}
-
-.slot-title {
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #ffe9c5;
-}
-
-.slot-desc {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #f6d7ad;
-  line-height: 1.4;
-}
-
-.vcr-buttons {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.vcr-btn {
-  padding: 0.38rem 0.65rem;
-  background: linear-gradient(180deg, #2a170c, #140a06);
-  border: 1px solid rgba(255, 221, 168, 0.35);
-  border-radius: 8px;
-  color: #ffe9c5;
-  font-family: "VCR OSD Mono", monospace;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.08s ease, box-shadow 0.08s ease;
-}
-
-.vcr-btn:hover {
-  box-shadow: 0 0 0 1px #d28b3c;
-}
-
-.vcr-btn:active {
-  transform: translateY(2px);
-  box-shadow: none;
-}
-
-.status-panel {
-  margin-top: 0.4rem;
-  font-size: 0.86rem;
-  letter-spacing: 0.08em;
-  color: #9fe7c6;
-  font-family: "VCR OSD Mono", monospace;
-  display: flex;
-  gap: 0.4rem;
-  align-items: baseline;
-}
-
-.status-label {
-  color: var(--crt-amber);
-}
-
-@media (max-width: 640px) {
-  .crt-frame {
-    aspect-ratio: 1 / 1;
+  .crt-deck-card,
+  .transport-button {
+    transition: none;
   }
 }

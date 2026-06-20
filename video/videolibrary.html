@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OES CRT Video Wall</title>
+  <meta name="description"
+    content="The OES CRT Wall: a collection of video art and short films created by Otorlymern Electrical Systems, some using only analog video hardware, some exploring a/v software tools, and some combining digital and analog techniques. Eah videos description goes over how its made in the desription" />
+  <title>CRT Wall — OES Video Archive</title>
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/altstyle.css" />
   <link rel="stylesheet" href="/css/videolibrary.css" />
 </head>
 
-<body class="cv-dark-page vhs-library">
-  <header>
-    <nav>
+<body class="cv-dark-page video-wall-page">
+  <header class="site-header">
+    <nav aria-label="Primary navigation">
       <ul class="nav-bar">
         <li><a href="/index.html">Home</a></li>
         <li class="dropdown">
@@ -21,7 +23,7 @@
             <li><a href="/music/studio.html">OEStudio</a></li>
             <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
             <li><a href="/systems/home-recording.html">Home Recording</a></li>
-            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/video/videolibrary.html" aria-current="page">Video Library</a></li>
             <li><a href="/solutions/resources/index.html">Resources</a></li>
           </ul>
         </li>
@@ -33,8 +35,7 @@
             <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
             <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
             <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
-            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and
-                Synthesis</a></li>
+            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video</a></li>
             <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
           </ul>
         </li>
@@ -42,303 +43,549 @@
     </nav>
   </header>
 
-  <div class="blob-container" aria-hidden="true">
-    <div class="blob blob-red"></div>
-    <div class="blob blob-blue"></div>
-    <div class="blob blob-red-2"></div>
-  </div>
+  <main class="video-wall-main">
+    <section class="wall-hero" aria-labelledby="wall-title">
+      <div class="signal-field" aria-hidden="true">
+        <span class="signal-field__orb"></span>
+        <span class="signal-field__scan"></span>
+      </div>
 
-  <main class="library-main">
-    <section class="title-section library-hero">
-      <div class="title-container">
-        <p class="hero-kicker">OES Video Library</p>
-        <h1 class="threeD library-hero-title">
-          <span class="wiggle-title">
-            <img class="hero-vcr-gif" src="https://media.otorlymern-electrical.com/images/clip-art/vhseject.gif" alt=""
-              aria-hidden="true" />
-            CRT Wall
-            <img class="hero-vcr-gif" src="https://media.otorlymern-electrical.com/images/clip-art/vhseject.gif" alt=""
-              aria-hidden="true" />
+      <div class="wall-hero__content">
+        <p class="wall-eyebrow">Otorlymern Electrical Systems / Video Archive</p>
+        <h1 id="wall-title">CRT WALL</h1>
+        <p class="wall-intro">
+          Nine channels of degraded tape, live synthesis, camera feedback, found images, and signals caught between
+          formats.
+        </p>
+      </div>
+
+      <dl class="wall-status" aria-label="Archive status">
+        <div>
+          <dt>Format</dt>
+          <dd>Mixed</dd>
+        </div>
+        <div>
+          <dt>Decks</dt>
+          <dd id="deck-count">09</dd>
+        </div>
+        <div>
+          <dt>Mode</dt>
+          <dd>Archive Playback</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="program-deck" aria-labelledby="program-title">
+      <div class="program-deck__selector">
+        <p class="program-label">Program selector</p>
+        <div class="deck-select-row">
+          <button class="transport-button transport-button--step" id="previous-deck" type="button"
+            aria-label="Select previous deck">◀</button>
+          <label class="deck-select-label" for="deck-selector">Input</label>
+          <select id="deck-selector" class="deck-selector">
+            <option value="0">Deck A — Liquid Edutainment</option>
+            <option value="1">Deck B — Girl of Graph</option>
+            <option value="2">Deck C — Sensual Crash</option>
+            <option value="3">Deck D — OES Video Demo</option>
+            <option value="4">Deck E — Soulmate Specialists</option>
+            <option value="5">Deck F — Magic in the Orange Mirror</option>
+            <option value="6">Deck G — R.Clown: The Big Break</option>
+            <option value="7">Deck H — R.Clown at Highland Park TV</option>
+            <option value="8">Deck I — Circle Center Japan!</option>
+          </select>
+          <button class="transport-button transport-button--step" id="next-deck" type="button"
+            aria-label="Select next deck">▶</button>
+        </div>
+
+        <div class="transport-row" aria-label="Selected deck transport">
+          <button class="transport-button transport-button--play" id="play-selected" type="button">▶ Play</button>
+          <button class="transport-button" id="pause-selected" type="button">Ⅱ Pause</button>
+          <button class="transport-button transport-button--link" id="open-selected" type="button"
+            aria-expanded="false" aria-controls="tape-artwork-bay">Open Tape ↓</button>
+        </div>
+
+        <div class="rack-readout" aria-live="polite">
+          <span>Selected</span>
+          <strong id="selected-deck-readout">Deck A / Play</strong>
+        </div>
+      </div>
+
+      <div class="program-deck__info">
+        <p class="deck-format" id="selected-format">CRT / FEEDBACK / LIVE VISUALS</p>
+        <h2 id="program-title">Liquid Edutainment</h2>
+        <p id="selected-note">A liquid-light transmission routed through digital feedback and recaptured as a soft
+          electronic signal.</p>
+        <div class="signal-controls" aria-hidden="true">
+          <span class="signal-control">
+            <span class="signal-control__label">Gain</span>
+            <span class="signal-knob"></span>
           </span>
-        </h1>
-        <section class="crt-wall">
-          <div class="vhs-logo-bg" aria-hidden="true"></div>
-          <div class="wall-grid library-wall-grid">
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <iframe class="tv-screen tv-screen--embed" title="Liquid Edutainment"
-                      src="https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
-                      loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="/video/viewingroom.html?video=liquid">
-                    <span class="crt-caption__text">deck a • Liquid Edutainment</span>
-                  </a>
-                </div>
-              </div>
-            </article>
+          <span class="signal-control signal-control--wide">
+            <span class="signal-control__label">Tracking</span>
+            <span class="signal-slider"><span></span></span>
+          </span>
+          <span class="control-readout">CH <strong id="selected-channel-number">01</strong> / LOCK</span>
+        </div>
+      </div>
 
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <iframe id="deck-b-frame" class="tv-screen tv-screen--embed" title="Girl of Graph (Digital)"
-                      src="https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
-                      loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-                    <button class="mute-toggle is-muted" type="button" data-target-type="iframe"
-                      data-target="deck-b-frame" data-label="Deck B"
-                      data-muted-src="https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
-                      data-unmuted-src="https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a?loop=1&amp;autoplay=1&amp;muted=0&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
-                      aria-label="Unmute Deck B" aria-pressed="true">
-                      <svg class="mute-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"></path>
-                        <path d="M16 9.5a4 4 0 0 1 0 5" fill="none" stroke="currentColor" stroke-width="2"
-                          stroke-linecap="round"></path>
-                        <path d="M19 7a7 7 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="2"
-                          stroke-linecap="round"></path>
-                      </svg>
-                    </button>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="/video/viewingroom.html?video=girl">
-                    <span class="crt-caption__text">Deck B • Girl of Graph</span>
-                  </a>
-                </div>
-              </div>
-            </article>
+      <div class="tape-artwork-bay" id="tape-artwork-bay" hidden>
+        <div class="tape-artwork-stage">
+          <span class="tape-artwork-stage__label">Loaded artwork / Deck A</span>
+          <img id="selected-artwork" src="" alt="" referrerpolicy="no-referrer" />
+          <span class="tape-artwork-scanlines" aria-hidden="true"></span>
+          <span class="tape-artwork-glare" aria-hidden="true"></span>
+        </div>
+        <div class="tape-artwork-footer">
+          <span id="artwork-readout">Tape artwork ready</span>
+          <a id="watch-selected" href="/video/viewingroom.html?video=liquid">Watch video ↗</a>
+        </div>
+      </div>
+    </section>
 
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <video class="tv-screen tv-screen--video"
-                      src="https://scanlines-videos.s3.eu-central-1.wasabisys.com/317cacbe-501b-4fe6-9a37-e7f2bd7b532c-360.mp4"
-                      poster="https://videos.scanlines.xyz/lazy-static/thumbnails/663787b3-6d83-4b02-93ef-9c0b90bc82cc.jpg"
-                      autoplay muted loop playsinline preload="metadata"></video>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="/video/viewingroom.html?video=sensual">
-                    <span class="crt-caption__text">Deck C • Sensual Crash (VHS) (2025)</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <div class="tv-screen tv-screen--static" aria-hidden="true"></div>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="/video/viewingroom.html?video=demo">
-                    <span class="crt-caption__text">Deck D • OES Video Demo (Digital) (2024)</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <iframe class="tv-screen tv-screen--embed" title="Soulmate Specialists Studio Tour (Digital) (2025)"
-                      src="https://videos.scanlines.xyz/videos/embed/d1501670-dbe4-4af2-bd28-52788f79e328?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0&amp;p2p=0"
-                      loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="/video/viewingroom.html?video=soulmate">
-                    <span class="crt-caption__text">Deck E • Soulmate Specialists Studio Tour (Digital) (2025)</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <div class="crt-embed-fill">
-                      <iframe title="Magic in the Orange Mirror (Digital) (2025)" width="100%" height="100%"
-                        src="https://videos.scanlines.xyz/videos/embed/7a9910c5-91b9-446e-a10e-b0e6308b2f44?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0&amp;p2p=0"
-                        frameborder="0" allowfullscreen="" loading="lazy"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-                    </div>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="/video/viewingroom.html?video=magic">
-                    <span class="crt-caption__text">Deck F • Magic in the Orange Mirror (Digital) (2025)</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <iframe class="tv-screen tv-screen--embed"
-                      title="R Clown Presents The Big Break Directed by Julian Shine"
-                      src="https://www.youtube.com/embed/I2fcb5h4Do4?autoplay=1&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;loop=1&amp;playlist=I2fcb5h4Do4"
-                      loading="lazy"
-                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="https://www.youtube.com/watch?v=I2fcb5h4Do4">
-                    <span class="crt-caption__text">Deck G • R.Clown - The Big Break (VHS) (2017)</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <iframe class="tv-screen tv-screen--embed" title="R Clown Doc Told Us to Meet at 5029 York Blvd"
-                      src="https://www.youtube.com/embed/ICwPJic9kXQ?autoplay=1&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;loop=1&amp;playlist=ICwPJic9kXQ"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="https://www.youtube.com/watch?v=ICwPJic9kXQ">
-                    <span class="crt-caption__text">Deck H • R.Clown Live at Highland Park TV</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="tv-unit">
-              <div class="crt-shell crt-shell--wall">
-                <div class="crt-frame crt-frame--wall">
-                  <div class="trinitron-overlay" aria-hidden="true"></div>
-                  <div class="crt-screen">
-                    <iframe class="tv-screen tv-screen--embed" title="Circle Center Japan! (VHS)"
-                      src="https://videos.scanlines.xyz/videos/embed/ifzDrnSMNZCnF4uU8T1Fgh?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0"
-                      loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-                    <div class="scanlines"></div>
-                    <div class="crt-glare"></div>
-                  </div>
-                </div>
-                <div class="crt-caption">
-                  <span class="pilot-light" aria-hidden="true"></span>
-                  <a class="crt-caption__link" href="https://videos.scanlines.xyz/videos/watch/ifzDrnSMNZCnF4uU8T1Fgh">
-                    <span class="crt-caption__text">Deck I • Circle Center Japan! (VHS)</span>
-                  </a>
-                </div>
-              </div>
-            </article>
+    <section class="monitor-grid crt-wall-grid" id="monitor-grid" aria-label="CRT video archive">
+      <article class="crt-deck-card" data-format="crt feedback live-visuals"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/vhsbox-liquid-entertainment-vhs-coverv2.png"
+        data-art-alt="Liquid Edutainment VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck A</span>
+          <span class="deck-status">Signal OK</span>
+        </div>
+        <div class="crt-monitor monitor-model--compact">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="Liquid Edutainment"
+                src="https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
+                loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck A: Liquid Edutainment</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/crt-overlays/Sony-KV1221RTrinitron-CRT-TV-overlay.png" alt=""
+              aria-hidden="true" />
           </div>
-        </section>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">CRT / FEEDBACK / LIVE VISUALS</p>
+          <h2><a href="/video/viewingroom.html?video=liquid">Liquid Edutainment</a></h2>
+          <p>A liquid-light transmission routed through digital feedback and recaptured as a soft electronic signal.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="crt feedback live-visuals"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-1two_toned_green_vhs_box_texture_by_madamblackwolf_d9me2gf-pre.jpg"
+        data-art-alt="Girl of Graph VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck B</span>
+          <span class="deck-status">Sync Lock</span>
+        </div>
+        <div class="crt-monitor monitor-model--compact">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="Girl of Graph"
+                src="https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;controlBar=0&amp;p2p=0"
+                loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck B: Girl of Graph</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/crt-overlays/Sony-KV1221RTrinitron-CRT-TV-overlay.png" alt=""
+              aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">CRT / CAMERA FEEDBACK / LIVE VISUALS</p>
+          <h2><a href="/video/viewingroom.html?video=girl">Girl of Graph</a></h2>
+          <p>Graph-paper geometry, camera recursion, and chroma smearing from an unstable studio patch.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="vhs crt found-footage"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-2vestron_video_template_by_madamblackwolf_dd1z3nf-pre.jpg"
+        data-art-alt="Sensual Crash VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck C</span>
+          <span class="deck-status deck-status--warm">Tracking</span>
+        </div>
+        <div class="crt-monitor monitor-model--silver">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <video class="deck-video" aria-label="Sensual Crash" autoplay muted loop playsinline preload="metadata"
+                poster="https://videos.scanlines.xyz/lazy-static/thumbnails/663787b3-6d83-4b02-93ef-9c0b90bc82cc.jpg">
+                <source
+                  src="https://scanlines-videos.s3.eu-central-1.wasabisys.com/317cacbe-501b-4fe6-9a37-e7f2bd7b532c-360.mp4"
+                  type="video/mp4" />
+              </video>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck C: Sensual Crash</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/crt-overlays/Sony-KVTrinitronCRT3-Overlay.png" alt=""
+              aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">VHS / CRT / FOUND FOOTAGE</p>
+          <h2><a href="/video/viewingroom.html?video=sensual">Sensual Crash (VHS) (2025)</a></h2>
+          <p>A bruised VHS collage assembled from instructional fragments, body movement, and tape damage.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="crt feedback live-visuals"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-5grey_vhs_box_texture__vestron_video__by_madamblackwolf_d9mea6a-pre.jpg"
+        data-art-alt="OES Video Demo VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck D</span>
+          <span class="deck-status deck-status--warm">Standby</span>
+        </div>
+        <div class="crt-monitor monitor-model--kv20">
+          <div class="crt-stack">
+            <div class="crt-glass crt-glass--standby">
+              <div class="standby-signal" aria-label="OES Video Demo standby signal">
+                <span>OES</span>
+                <small>Input 04 / Standby</small>
+              </div>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck D: OES Video Demo</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay"
+              src="/video/crt-overlays/Sony-KV-20TTriniton-Tube-TV-RF-Composite-1993-Televisions_700x700 copy.png"
+              alt="" aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">CRT / FEEDBACK / LIVE VISUALS</p>
+          <h2><a href="/video/viewingroom.html?video=demo">OES Video Demo (Digital) (2024)</a></h2>
+          <p>A bench-test reel for colorizers, feedback loops, processors, and other unruly video instruments.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="crt live-visuals"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/vhscover-soulmatespecialitsv1.jpg"
+        data-art-alt="Soulmate Specialists Studio Tour VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck E</span>
+          <span class="deck-status">Signal OK</span>
+        </div>
+        <div class="crt-monitor monitor-model--silver">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="Soulmate Specialists Studio Tour"
+                src="https://videos.scanlines.xyz/videos/embed/d1501670-dbe4-4af2-bd28-52788f79e328?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0&amp;p2p=0"
+                loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck E: Soulmate Specialists Studio Tour</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/crt-overlays/Sony-KVTrinitronCRT3-Overlay.png" alt=""
+              aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">CRT / STUDIO DOCUMENT / LIVE VISUALS</p>
+          <h2><a href="/video/viewingroom.html?video=soulmate">Soulmate Specialists Studio Tour (Digital) (2025)</a>
+          </h2>
+          <p>A studio transmission tracing the machines, patch paths, and personalities behind the signal.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="crt feedback live-visuals"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-4red_and_black_vhs_cover_texture_by_madamblackwolf_d9mde2r-pre.jpg"
+        data-art-alt="Magic in the Orange Mirror VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck F</span>
+          <span class="deck-status">Color Lock</span>
+        </div>
+        <div class="crt-monitor monitor-model--console">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="Magic in the Orange Mirror"
+                src="https://videos.scanlines.xyz/videos/embed/7a9910c5-91b9-446e-a10e-b0e6308b2f44?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0&amp;p2p=0"
+                loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck F: Magic in the Orange Mirror</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/sonycrtfrfame.png" alt="" aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">CRT / FEEDBACK / LIVE VISUALS</p>
+          <h2><a href="/video/viewingroom.html?video=magic">Magic in the Orange Mirror (Digital) (2025)</a></h2>
+          <p>Orange bloom, mirrored motion, and a hot feedback chain balanced just before collapse.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="vhs crt found-footage"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/vhscover-rclown-bigbreak.png"
+        data-art-alt="R.Clown The Big Break VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck G</span>
+          <span class="deck-status deck-status--warm">Tape Run</span>
+        </div>
+        <div class="crt-monitor monitor-model--black">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="R.Clown Presents The Big Break"
+                src="https://www.youtube.com/embed/I2fcb5h4Do4?autoplay=1&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;loop=1&amp;playlist=I2fcb5h4Do4"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck G: R.Clown Presents The Big Break</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/crt-overlays/crt-main.png" alt="" aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">VHS / CRT / FOUND FOOTAGE</p>
+          <h2><a href="https://www.youtube.com/watch?v=I2fcb5h4Do4">R.Clown — The Big Break (VHS) (2017)</a></h2>
+          <p>A 2017 VHS artifact directed by Julian Shine, transmitted from the stranger end of public access.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="vhs crt live-visuals"
+        data-artwork="https://media.otorlymern-electrical.com/images/vhs-tapes/vhsbox-rclown-hlptv.jpg"
+        data-art-alt="R.Clown Live at Highland Park TV VHS box artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck H</span>
+          <span class="deck-status deck-status--warm">Tape Run</span>
+        </div>
+        <div class="crt-monitor monitor-model--console">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="R.Clown Live at Highland Park TV"
+                src="https://www.youtube.com/embed/ICwPJic9kXQ?autoplay=1&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;loop=1&amp;playlist=ICwPJic9kXQ"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck H: R.Clown Live at Highland Park TV</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/sonycrtfrfame.png" alt="" aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">VHS / CRT / LIVE VISUALS</p>
+          <h2><a href="https://www.youtube.com/watch?v=ICwPJic9kXQ">R.Clown Live at Highland Park TV</a></h2>
+          <p>A live 2017 studio performance preserved with its stage signal, tape grain, and broadcast atmosphere.</p>
+        </div>
+      </article>
+
+      <article class="crt-deck-card" data-format="vhs crt found-footage"
+        data-artwork="https://videos.scanlines.xyz/lazy-static/thumbnails/985c776e-c9a0-40dd-8c30-6ab703a211be.jpg"
+        data-art-alt="Circle Center Japan archive artwork">
+        <div class="deck-label-row">
+          <span class="deck-id">Deck I</span>
+          <span class="deck-status deck-status--warm">Tracking</span>
+        </div>
+        <div class="crt-monitor monitor-model--black">
+          <div class="crt-stack">
+            <div class="crt-glass">
+              <iframe class="deck-video" title="Circle Center Japan"
+                src="https://videos.scanlines.xyz/videos/embed/ifzDrnSMNZCnF4uU8T1Fgh?loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0"
+                loading="lazy" allow="autoplay; fullscreen; picture-in-picture"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              <span class="crt-scanlines" aria-hidden="true"></span>
+              <span class="crt-reflection" aria-hidden="true"></span>
+              <button class="monitor-select" type="button">
+                <span class="visually-hidden">Select Deck I: Circle Center Japan</span>
+              </button>
+            </div>
+            <img class="crt-frame-overlay" src="/video/crt-overlays/crt-main.png" alt="" aria-hidden="true" />
+          </div>
+          <span class="pink-cap-bank" aria-hidden="true"></span>
+        </div>
+        <div class="deck-body">
+          <p class="deck-format">VHS / CRT / FOUND FOOTAGE</p>
+          <h2><a href="https://videos.scanlines.xyz/videos/watch/ifzDrnSMNZCnF4uU8T1Fgh">Circle Center Japan! (VHS)</a>
+          </h2>
+          <p>A recovered VHS transmission where travelogue color and analog texture drift out of alignment.</p>
+        </div>
+      </article>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 – Otorlymern Electrical Systems – Video Library</p>
-    <div class="footer-badges">
+  <footer class="video-wall-footer">
+    <div class="video-wall-footer__copy">
+      <p>&copy; 2026 Otorlymern Electrical Systems</p>
+      <p>Archive terminal / Los Angeles, CA</p>
+    </div>
+    <div class="footer-badges" aria-label="OES links and badges">
       <a href="https://reverb.com/shop/otorlymern-electrical"><img
           src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
-          alt="Shop My Store on Reverb" /></a>
-      <img src="/systems/systemsv4.png" class="footer-badges" alt="Systems badge" />
-      <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif" class="footer-badges"
+          alt="Shop OES on Reverb" /></a>
+      <img src="/systems/systemsv4.png" alt="OES Systems badge" />
+      <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif"
         alt="World Wide Web badge" />
-      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
-      <a href="https://reverb.com/shop/otorlymern-electrical"><img
-          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
-          alt="Shop My Store on Reverb" /></a>
+      <img src="/images/OESCirclelogo1.png" alt="OES circle logo" />
     </div>
   </footer>
+
   <script>
     (() => {
-      const toggles = document.querySelectorAll(".mute-toggle");
-      if (!toggles.length) {
-        return;
-      }
+      const cards = [...document.querySelectorAll(".crt-deck-card")];
+      const deckSelector = document.getElementById("deck-selector");
+      const selectedTitle = document.getElementById("program-title");
+      const selectedFormat = document.getElementById("selected-format");
+      const selectedNote = document.getElementById("selected-note");
+      const selectedReadout = document.getElementById("selected-deck-readout");
+      const selectedChannel = document.getElementById("selected-channel-number");
+      const previousButton = document.getElementById("previous-deck");
+      const nextButton = document.getElementById("next-deck");
+      const playButton = document.getElementById("play-selected");
+      const pauseButton = document.getElementById("pause-selected");
+      const openTapeButton = document.getElementById("open-selected");
+      const artworkBay = document.getElementById("tape-artwork-bay");
+      const artworkImage = document.getElementById("selected-artwork");
+      const artworkLabel = document.querySelector(".tape-artwork-stage__label");
+      const artworkReadout = document.getElementById("artwork-readout");
+      const watchSelected = document.getElementById("watch-selected");
+      let selectedIndex = 0;
 
-      const updateButton = (button, muted) => {
-        const label = button.dataset.label || "Deck";
-        button.classList.toggle("is-muted", muted);
-        button.setAttribute("aria-pressed", muted ? "true" : "false");
-        button.setAttribute("aria-label", muted ? `Unmute ${label}` : `Mute ${label}`);
+      const getDeckInfo = (card) => {
+        const titleLink = card.querySelector(".deck-body h2 a");
+        return {
+          deck: card.querySelector(".deck-id").textContent.trim(),
+          title: titleLink.textContent.trim(),
+          format: card.querySelector(".deck-format").textContent.trim(),
+          note: card.querySelector(".deck-body > p:last-child").textContent.trim(),
+          href: titleLink.href,
+          artwork: card.dataset.artwork,
+          artworkAlt: card.dataset.artAlt
+        };
       };
 
-      toggles.forEach((button) => {
-        const initialMuted = button.getAttribute("aria-pressed") === "true";
-        updateButton(button, initialMuted);
+      const updateReadout = () => {
+        const card = cards[selectedIndex];
+        const info = getDeckInfo(card);
+        const state = card.classList.contains("is-paused") ? "Pause" : "Play";
+        selectedReadout.textContent = `${info.deck} / ${state}`;
+      };
 
-        button.addEventListener("click", () => {
-          const isMuted = button.getAttribute("aria-pressed") === "true";
-          const nextMuted = !isMuted;
+      const closeTape = () => {
+        artworkBay.hidden = true;
+        openTapeButton.setAttribute("aria-expanded", "false");
+        openTapeButton.textContent = "Open Tape ↓";
+      };
 
-          if (button.dataset.targetType === "video") {
-            const video = document.getElementById(button.dataset.target);
-            if (video) {
-              video.muted = nextMuted;
-              if (!nextMuted) {
-                video.play().catch(() => { });
-              }
-            }
+      const selectDeck = (index) => {
+        selectedIndex = (index + cards.length) % cards.length;
+        const selectedCard = cards[selectedIndex];
+        const info = getDeckInfo(selectedCard);
+
+        cards.forEach((card, cardIndex) => {
+          const isSelected = cardIndex === selectedIndex;
+          card.classList.toggle("is-selected", isSelected);
+          card.querySelector(".monitor-select").setAttribute("aria-pressed", String(isSelected));
+        });
+
+        deckSelector.value = String(selectedIndex);
+        selectedTitle.textContent = info.title;
+        selectedFormat.textContent = info.format;
+        selectedNote.textContent = info.note;
+        selectedChannel.textContent = String(selectedIndex + 1).padStart(2, "0");
+        closeTape();
+        updateReadout();
+      };
+
+      const setPlayback = (shouldPlay) => {
+        const card = cards[selectedIndex];
+        const media = card.querySelector(".deck-video");
+
+        if (media instanceof HTMLVideoElement) {
+          if (shouldPlay) {
+            media.play().catch(() => {});
+          } else {
+            media.pause();
           }
-
-          if (button.dataset.targetType === "iframe") {
-            const frame = document.getElementById(button.dataset.target);
-            const nextSrc = nextMuted ? button.dataset.mutedSrc : button.dataset.unmutedSrc;
-            if (frame && nextSrc) {
-              frame.src = nextSrc;
-            }
+        } else if (media instanceof HTMLIFrameElement) {
+          if (shouldPlay && media.dataset.playSrc) {
+            media.setAttribute("src", media.dataset.playSrc);
+            delete media.dataset.playSrc;
+          } else if (!shouldPlay && !media.dataset.playSrc) {
+            media.dataset.playSrc = media.getAttribute("src");
+            media.setAttribute("src", "about:blank");
           }
+        }
 
-          updateButton(button, nextMuted);
+        card.classList.toggle("is-paused", !shouldPlay);
+        updateReadout();
+      };
+
+      const toggleTape = () => {
+        if (!artworkBay.hidden) {
+          closeTape();
+          return;
+        }
+
+        const info = getDeckInfo(cards[selectedIndex]);
+        artworkImage.src = info.artwork;
+        artworkImage.alt = info.artworkAlt;
+        artworkLabel.textContent = `Loaded artwork / ${info.deck}`;
+        artworkReadout.textContent = `${info.deck} / ${info.title}`;
+        watchSelected.href = info.href;
+        artworkBay.hidden = false;
+        openTapeButton.setAttribute("aria-expanded", "true");
+        openTapeButton.textContent = "Close Tape ↑";
+      };
+
+      cards.forEach((card, index) => {
+        card.querySelector(".monitor-select").addEventListener("click", () => selectDeck(index));
+      });
+
+      deckSelector.addEventListener("change", () => selectDeck(Number(deckSelector.value)));
+      previousButton.addEventListener("click", () => selectDeck(selectedIndex - 1));
+      nextButton.addEventListener("click", () => selectDeck(selectedIndex + 1));
+      playButton.addEventListener("click", () => setPlayback(true));
+      pauseButton.addEventListener("click", () => setPlayback(false));
+      openTapeButton.addEventListener("click", toggleTape);
+
+      document.querySelectorAll(".crt-deck-card, .crt-monitor").forEach((element) => {
+        element.addEventListener("pointermove", (event) => {
+          const rect = element.getBoundingClientRect();
+          element.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+          element.style.setProperty("--my", `${event.clientY - rect.top}px`);
+        });
+
+        element.addEventListener("pointerleave", () => {
+          element.style.removeProperty("--mx");
+          element.style.removeProperty("--my");
         });
       });
+
+      selectDeck(0);
     })();
   </script>
 </body>
