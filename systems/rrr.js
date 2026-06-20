@@ -62,7 +62,7 @@
       );
       hero.style.setProperty(
         "--title-brightness",
-        `${1.08 + (1 - yRatio) * 0.5}`,
+        `${1.05 + (1 - yRatio) * 0.3}`,
       );
       hero.style.setProperty(
         "--title-contrast",
