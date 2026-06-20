@@ -23,6 +23,8 @@
 }
 
 body.video-wall-page {
+  --cursor-x: 50vw;
+  --cursor-y: 35vh;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -49,6 +51,21 @@ body.video-wall-page::before {
     transparent 3px,
     rgba(255, 255, 255, 0.012) 4px
   );
+  pointer-events: none;
+  content: "";
+}
+
+body.video-wall-page::after {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle 260px at var(--cursor-x) var(--cursor-y),
+      rgba(132, 231, 164, 0.045),
+      rgba(126, 29, 61, 0.025) 36%,
+      transparent 72%
+    );
   pointer-events: none;
   content: "";
 }
@@ -86,12 +103,18 @@ body.video-wall-page .dropdown-content {
 }
 
 .video-wall-main {
+  position: relative;
+  z-index: 1;
   width: min(1480px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 2.5rem 0 4rem;
 }
 
 .wall-hero {
+  --title-x: 0px;
+  --title-y: 0px;
+  --title-rx: 0deg;
+  --title-ry: 0deg;
   position: relative;
   isolation: isolate;
   min-height: 520px;
@@ -173,6 +196,7 @@ body.video-wall-page .dropdown-content {
 }
 
 .wall-hero h1 {
+  position: relative;
   margin: 0;
   color: #eee4dc;
   font-family: "Lyno-Jean", "Arial Black", sans-serif;
@@ -184,6 +208,25 @@ body.video-wall-page .dropdown-content {
     0 1px 0 #fff,
     0 5px 0 rgba(107, 25, 47, 0.9),
     0 22px 60px rgba(0, 0, 0, 0.62);
+  transform:
+    perspective(900px)
+    translate3d(var(--title-x), var(--title-y), 0)
+    rotateX(var(--title-rx))
+    rotateY(var(--title-ry));
+  transform-style: preserve-3d;
+  will-change: transform, filter;
+  animation: title-signal-drift 5.8s ease-in-out infinite;
+}
+
+.wall-hero h1::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  color: rgba(212, 59, 101, 0.2);
+  content: "CRT WALL";
+  filter: blur(1px);
+  transform: translate(3px, 2px);
+  animation: title-ghost-slip 4.6s steps(1) infinite;
 }
 
 .wall-intro {
@@ -1092,6 +1135,59 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
   }
 }
 
+@keyframes title-signal-drift {
+  0%,
+  100% {
+    transform:
+      perspective(900px)
+      translate3d(var(--title-x), var(--title-y), 0)
+      rotateX(var(--title-rx))
+      rotateY(var(--title-ry));
+    filter: contrast(1) saturate(1);
+  }
+
+  48% {
+    transform:
+      perspective(900px)
+      translate3d(var(--title-x), calc(var(--title-y) - 3px), 0)
+      rotateX(var(--title-rx))
+      rotateY(var(--title-ry));
+    filter: contrast(1.03) saturate(0.96);
+  }
+
+  51% {
+    transform:
+      perspective(900px)
+      translate3d(calc(var(--title-x) + 2px), calc(var(--title-y) - 1px), 0)
+      rotateX(var(--title-rx))
+      rotateY(var(--title-ry));
+  }
+}
+
+@keyframes title-ghost-slip {
+  0%,
+  88%,
+  100% {
+    clip-path: inset(0);
+    transform: translate(3px, 2px);
+  }
+
+  89% {
+    clip-path: inset(18% 0 62% 0);
+    transform: translate(-5px, 2px);
+  }
+
+  91% {
+    clip-path: inset(67% 0 12% 0);
+    transform: translate(7px, -1px);
+  }
+
+  93% {
+    clip-path: inset(0);
+    transform: translate(3px, 2px);
+  }
+}
+
 @keyframes scanline-drift {
   from {
     background-position: 0 0;
@@ -1294,6 +1390,8 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
 @media (prefers-reduced-motion: reduce) {
   .signal-field__orb,
   .signal-field__scan,
+  .wall-hero h1,
+  .wall-hero h1::after,
   .crt-scanlines,
   .standby-signal {
     animation: none;

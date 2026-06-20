@@ -475,7 +475,11 @@
       const artworkLabel = document.querySelector(".tape-artwork-stage__label");
       const artworkReadout = document.getElementById("artwork-readout");
       const watchSelected = document.getElementById("watch-selected");
+      const page = document.querySelector(".video-wall-page");
+      const hero = document.querySelector(".wall-hero");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
       let selectedIndex = 0;
+      let cursorFrame = 0;
 
       const getDeckInfo = (card) => {
         const titleLink = card.querySelector(".deck-body h2 a");
@@ -574,6 +578,36 @@
       playButton.addEventListener("click", () => setPlayback(true));
       pauseButton.addEventListener("click", () => setPlayback(false));
       openTapeButton.addEventListener("click", toggleTape);
+
+      const updateCursorReaction = (event) => {
+        if (reducedMotion.matches || cursorFrame) {
+          return;
+        }
+
+        cursorFrame = window.requestAnimationFrame(() => {
+          const heroBounds = hero.getBoundingClientRect();
+          const heroX = Math.max(0, Math.min(1, (event.clientX - heroBounds.left) / heroBounds.width));
+          const heroY = Math.max(0, Math.min(1, (event.clientY - heroBounds.top) / heroBounds.height));
+
+          page.style.setProperty("--cursor-x", `${event.clientX}px`);
+          page.style.setProperty("--cursor-y", `${event.clientY}px`);
+          hero.style.setProperty("--title-x", `${(heroX - 0.5) * 12}px`);
+          hero.style.setProperty("--title-y", `${(heroY - 0.5) * 7}px`);
+          hero.style.setProperty("--title-rx", `${(0.5 - heroY) * 3.2}deg`);
+          hero.style.setProperty("--title-ry", `${(heroX - 0.5) * 4.5}deg`);
+          cursorFrame = 0;
+        });
+      };
+
+      const resetCursorReaction = () => {
+        hero.style.setProperty("--title-x", "0px");
+        hero.style.setProperty("--title-y", "0px");
+        hero.style.setProperty("--title-rx", "0deg");
+        hero.style.setProperty("--title-ry", "0deg");
+      };
+
+      window.addEventListener("pointermove", updateCursorReaction, { passive: true });
+      document.documentElement.addEventListener("pointerleave", resetCursorReaction);
 
       document.querySelectorAll(".crt-deck-card, .crt-monitor").forEach((element) => {
         element.addEventListener("pointermove", (event) => {
