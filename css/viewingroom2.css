@@ -7,17 +7,17 @@
 }
 
 :root {
-  --roov-paper: #ead9b6;
-  --roov-ink: #1f1309;
-  --roov-brown: #5c3214;
-  --roov-panel: rgba(41, 20, 8, 0.86);
-  --roov-panel-border: rgba(250, 220, 170, 0.42);
-  --roov-glow: rgba(255, 185, 108, 0.2);
+  --room2-paper: #ead9b6;
+  --room2-ink: #1f1309;
+  --room2-brown: #5c3214;
+  --room2-panel: rgba(41, 20, 8, 0.86);
+  --room2-panel-border: rgba(250, 220, 170, 0.42);
+  --room2-glow: rgba(255, 185, 108, 0.2);
   --room-native-width: 1672px;
   --room-native-height: 941px;
 }
 
-body.viewing-roov2-page {
+body.viewing-room2-page {
   margin: 0;
   min-height: 100vh;
   color: #111;
@@ -25,55 +25,55 @@ body.viewing-roov2-page {
   font-family: "VCR OSD Mono", "Courier New", monospace;
 }
 
-html.viewing-roov2-root::-webkit-scrollbar,
-body.viewing-roov2-page::-webkit-scrollbar,
-.viewing-room-v2::-webkit-scrollbar {
+html.viewing-room2-root::-webkit-scrollbar,
+body.viewing-room2-page::-webkit-scrollbar,
+.viewing-room2::-webkit-scrollbar {
   width: auto;
   height: auto;
   background: initial;
 }
 
-html.viewing-roov2-root::-webkit-scrollbar-track,
-body.viewing-roov2-page::-webkit-scrollbar-track,
-.viewing-room-v2::-webkit-scrollbar-track {
+html.viewing-room2-root::-webkit-scrollbar-track,
+body.viewing-room2-page::-webkit-scrollbar-track,
+.viewing-room2::-webkit-scrollbar-track {
   background: initial;
   border: 0;
 }
 
-html.viewing-roov2-root::-webkit-scrollbar-thumb,
-body.viewing-roov2-page::-webkit-scrollbar-thumb,
-.viewing-room-v2::-webkit-scrollbar-thumb {
+html.viewing-room2-root::-webkit-scrollbar-thumb,
+body.viewing-room2-page::-webkit-scrollbar-thumb,
+.viewing-room2::-webkit-scrollbar-thumb {
   background: initial;
   border: 0;
 }
 
-html.viewing-roov2-root::-webkit-scrollbar-button,
-body.viewing-roov2-page::-webkit-scrollbar-button,
-.viewing-room-v2::-webkit-scrollbar-button {
+html.viewing-room2-root::-webkit-scrollbar-button,
+body.viewing-room2-page::-webkit-scrollbar-button,
+.viewing-room2::-webkit-scrollbar-button {
   display: none;
   width: 0;
   height: 0;
 }
 
-html.viewing-roov2-root,
-body.viewing-roov2-page,
-.viewing-room-v2 {
+html.viewing-room2-root,
+body.viewing-room2-page,
+.viewing-room2 {
   scrollbar-width: auto;
   scrollbar-color: auto;
 }
 
-body.viewing-roov2-page header,
-body.viewing-roov2-page footer {
+body.viewing-room2-page header,
+body.viewing-room2-page footer {
   position: relative;
   z-index: 20;
 }
 
-body.viewing-roov2-page .nav-bar a,
-body.viewing-roov2-page .dropdown-content a {
+body.viewing-room2-page .nav-bar a,
+body.viewing-room2-page .dropdown-content a {
   font-family: "Lyno-Stan", sans-serif;
 }
 
-.viewing-room-v2 {
+.viewing-room2 {
   width: 100%;
   min-height: calc(100vh - 7.5rem);
   padding: 0;
@@ -245,7 +245,7 @@ body.viewing-roov2-page .dropdown-content a {
   margin: 0;
   background-color: #c0c0c0;
   box-shadow: 10px 14px 0 rgba(0, 0, 0, 0.28);
-  color: var(--roov-ink);
+  color: var(--room2-ink);
 }
 
 .tape-document .title-bar,
@@ -332,7 +332,7 @@ body.viewing-roov2-page .dropdown-content a {
 }
 
 @media (max-width: 820px) {
-  .viewing-room-v2 {
+  .viewing-room2 {
     min-height: auto;
   }
 

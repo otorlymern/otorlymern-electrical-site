@@ -441,6 +441,8 @@ body.video-wall-page .dropdown-content {
   margin: 0;
   color: #aaa09d;
   font: 0.88rem/1.55 "Courier New", monospace;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
 }
 
 .program-deck__info .signal-controls {
@@ -1048,6 +1050,8 @@ body.video-wall-page .dropdown-content {
   font-family: "Courier New", monospace;
   font-size: 0.82rem;
   line-height: 1.55;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
 }
 
 body.video-wall-page .video-wall-footer {
