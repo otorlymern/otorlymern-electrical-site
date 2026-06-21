@@ -60,15 +60,24 @@
 
       <div class="crt-player" aria-label="CRT video player">
         <div class="crt-player-frame">
-          <video id="tape-video" poster="">
+          <iframe id="tape-frame" title="Selected archive video" src="about:blank" allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+            referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
+          <video id="tape-video" muted loop playsinline controls poster="" hidden>
             <source id="tape-source" src="" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
 
-      <button class="room-vhs-object" id="room-vhs-object" type="button" aria-label="Inspect selected VHS case artwork">
-        <img id="tape-cover-object" src="" alt="" />
+      <figure class="now-playing-art" id="now-playing-art">
+        <button class="artwork-close" id="artwork-close" type="button" aria-label="Remove selected video artwork">×</button>
+        <img id="selected-artwork" src="" alt="" />
+      </figure>
+
+      <button class="tape-pile-button" id="tape-pile-button" type="button" aria-haspopup="dialog"
+        aria-controls="tape-browser" aria-expanded="false">
+        <img src="/video/vhs_tapes/tapepile1.png" alt="" />
+        <span>Browse the tape pile</span>
       </button>
 
       <section class="tape-document service-form-window" aria-label="Tape information">
@@ -85,27 +94,25 @@
             <h2 id="tape-title"></h2>
             <p id="tape-catalog"></p>
             <p id="tape-notes"></p>
-            <p class="inspect-note">Click the tape case in the room to open the cover in a tape window.</p>
+            <p class="inspect-note">Click the tape pile on the table to choose another video.</p>
           </div>
         </div>
       </section>
-    </section>
 
-    <aside class="case-art-modal service-form-window" id="case-art-modal" role="dialog"
-      aria-label="Selected VHS case artwork" hidden>
-      <div class="window">
-        <div class="title-bar">
-          <button class="close" id="close-modal" type="button" aria-label="Close cover window"></button>
-          <h2 class="title">VHS Cover</h2>
-          <button class="resize window-toggle" id="cover-window-toggle" type="button" aria-controls="cover-window-pane"
-            aria-expanded="true"></button>
+      <section class="tape-browser" id="tape-browser" role="dialog" aria-modal="true"
+        aria-labelledby="tape-browser-title" hidden>
+        <div class="win98-titlebar">
+          <span class="win98-title-icon" aria-hidden="true">▰</span>
+          <h2 id="tape-browser-title">OES Video Archive — Select a Tape</h2>
+          <button class="win98-close" id="close-tape-browser" type="button" aria-label="Close video selector">×</button>
         </div>
-        <div class="separator"></div>
-        <div class="window-pane case-art-pane" id="cover-window-pane">
-          <img id="modal-cover" src="" alt="" />
+        <div class="win98-menu" aria-hidden="true"><span>File</span><span>View</span><span>Play</span><span>Help</span></div>
+        <div class="tape-browser-pane">
+          <div class="tape-grid" id="tape-grid"></div>
         </div>
-      </div>
-    </aside>
+        <div class="win98-statusbar"><span>9 object(s)</span><span id="selector-status">Choose a video to load the CRT</span></div>
+      </section>
+    </section>
   </main>
 
   <footer>
@@ -114,60 +121,182 @@
 
   <script>
     const tapes = {
-      "r-clown": {
-        title: "R. Clown",
-        catalog: "OJC044",
-        video: "/video/deleted-video-placeholder.mp4",
+      liquid: {
+        title: "Liquid Edutainment",
+        catalog: "CH 01 • PEERTUBE • DIGITAL",
+        type: "embed",
+        video: "https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/vhsbox-liquid-entertainment-vhs-coverv2.png",
+        notes: "Edutainment video on the dangers of computing while swimming.\nGraphics taken from an episode of Bits and Bytes, liquid background created by me in TouchDesigner, put together in VDMX."
+      },
+      girl: {
+        title: "Girl of Graph",
+        catalog: "CH 02 • PEERTUBE • DIGITAL",
+        type: "embed",
+        video: "https://videos.scanlines.xyz/videos/embed/4c2170f6-52c2-4026-a4d6-a9a27257ae6a?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-1two_toned_green_vhs_box_texture_by_madamblackwolf_d9me2gf-pre.jpg",
+        notes: "an Otorlymern Electrical Services announcment about the use of Computer Graphics"
+      },
+      sensual: {
+        title: "Sensual Crash (VHS) (2025)",
+        catalog: "CH 03 • PEERTUBE • VHS",
+        type: "embed",
+        video: "https://videos.scanlines.xyz/videos/embed/be59fe4d-997c-499f-859c-fac3c8591162?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-2vestron_video_template_by_madamblackwolf_dd1z3nf-pre.jpg",
+        notes: "watchout if nudity makees you say... ICK! composed using VSERPI: WavePools an Ambico two Channel video Mixer, Panasonic VCR, and the videot tapes entitled Sensual Massage part 1 and three tape box set of racecar crashes elegantly titled... CRASHES!"
+      },
+      demo: {
+        title: "OES Video Demo (Digital) (2024)",
+        catalog: "CH 04 • LOCAL VIDEO • DIGITAL",
+        type: "video",
+        video: "/video/0921.mp4",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-5grey_vhs_box_texture__vestron_video__by_madamblackwolf_d9mea6a-pre.jpg",
+        notes: "A bench-test reel for colorizers, feedback loops, processors, and other unruly video instruments."
+      },
+      soulmate: {
+        title: "Soulmate Specialists Studio Tour (Digital) (2025)",
+        catalog: "CH 05 • PEERTUBE • DIGITAL",
+        type: "embed",
+        video: "https://videos.scanlines.xyz/videos/embed/d1501670-dbe4-4af2-bd28-52788f79e328?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/vhscover-soulmatespecialitsv1.jpg",
+        notes: "that SSST baby, aint get no better than that.\n\nRing Doorbell Camera used as capture device, everlay taken from a photograph captured on Cannon 77d, chromokey'd and overlaye. OBS used for compositing and fx."
+      },
+      magic: {
+        title: "Magic in the Orange Mirror (Digital) (2025)",
+        catalog: "CH 06 • PEERTUBE • DIGITAL",
+        type: "embed",
+        video: "https://videos.scanlines.xyz/videos/embed/7a9910c5-91b9-446e-a10e-b0e6308b2f44?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/blank-vhsbox-4red_and_black_vhs_cover_texture_by_madamblackwolf_d9mde2r-pre.jpg",
+        notes: "No description is currently attached to the PeerTube source."
+      },
+      "big-break": {
+        title: "R.Clown — The Big Break (VHS) (2017)",
+        catalog: "CH 07 • YOUTUBE • VHS",
+        type: "embed",
+        video: "https://www.youtube.com/embed/I2fcb5h4Do4?autoplay=1&mute=1&playsinline=1&controls=1&loop=1&playlist=I2fcb5h4Do4",
+        cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/vhscover-rclown-bigbreak.png",
+        notes: "Produced by Dr. Robert Conway Lown. Directed and edited by Julian Shine."
+      },
+      "r-clown-live": {
+        title: "R.Clown Live at Highland Park TV",
+        catalog: "CH 08 • YOUTUBE • VHS",
+        type: "embed",
+        video: "https://www.youtube.com/embed/ICwPJic9kXQ?autoplay=1&mute=1&playsinline=1&controls=1&loop=1&playlist=ICwPJic9kXQ",
         cover: "https://media.otorlymern-electrical.com/images/vhs-tapes/vhsbox-rclown-hlptv.jpg",
-        notes: "OJC Recordings / VHS viewing-room test."
+        notes: "Arby, Tarny & Wrangle stir up quite the rodeo ruckus at the HLP-tv Stud."
+      },
+      circle: {
+        title: "Circle Center Japan! (VHS)",
+        catalog: "CH 09 • PEERTUBE • VHS",
+        type: "embed",
+        video: "https://videos.scanlines.xyz/videos/embed/ifzDrnSMNZCnF4uU8T1Fgh?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0",
+        cover: "https://videos.scanlines.xyz/lazy-static/thumbnails/985c776e-c9a0-40dd-8c30-6ab703a211be.jpg",
+        notes: "a live japanese performance art piece mutilated by VSERPi\ndigital input->VSERPI->VCR->VHS\nVHS into VCR->Digital Capture Card-> Mac Pro Studio Node"
       }
     };
 
-    const defaultTapeKey = "r-clown";
+    const defaultTapeKey = "liquid";
     const params = new URLSearchParams(window.location.search);
-    const selectedTapeKey = params.get("tape");
-    const activeTape = tapes[selectedTapeKey] || tapes[defaultTapeKey];
+    const selectedTapeKey = params.get("video") || params.get("tape");
+    let activeTapeKey = tapes[selectedTapeKey] ? selectedTapeKey : defaultTapeKey;
+    let lastFocusedElement = null;
 
+    const frame = document.getElementById("tape-frame");
     const video = document.getElementById("tape-video");
     const source = document.getElementById("tape-source");
     const title = document.getElementById("tape-title");
     const catalog = document.getElementById("tape-catalog");
     const notes = document.getElementById("tape-notes");
-    const roomVhsObject = document.getElementById("room-vhs-object");
-    const tapeCoverObject = document.getElementById("tape-cover-object");
-    const modal = document.getElementById("case-art-modal");
-    const modalCover = document.getElementById("modal-cover");
-    const closeModalButton = document.getElementById("close-modal");
+    const artwork = document.getElementById("now-playing-art");
+    const artworkImage = document.getElementById("selected-artwork");
+    const artworkCloseButton = document.getElementById("artwork-close");
+    const tapePileButton = document.getElementById("tape-pile-button");
+    const tapeBrowser = document.getElementById("tape-browser");
+    const tapeGrid = document.getElementById("tape-grid");
+    const closeTapeBrowserButton = document.getElementById("close-tape-browser");
+    const selectorStatus = document.getElementById("selector-status");
     const windowToggleButtons = Array.from(document.querySelectorAll(".window-toggle"));
 
-    function loadTape(tape) {
+    function createTapeButtons() {
+      Object.entries(tapes).forEach(([key, tape]) => {
+        const button = document.createElement("button");
+        const image = document.createElement("img");
+        const label = document.createElement("span");
+
+        button.className = "tape-choice";
+        button.type = "button";
+        button.dataset.tapeKey = key;
+        button.setAttribute("aria-pressed", "false");
+        image.src = tape.cover;
+        image.alt = "";
+        label.textContent = tape.title;
+        button.append(image, label);
+        button.addEventListener("click", () => {
+          loadTape(key);
+          closeTapeBrowser();
+        });
+        button.addEventListener("focus", () => {
+          selectorStatus.textContent = tape.catalog;
+        });
+        tapeGrid.append(button);
+      });
+    }
+
+    function loadTape(key) {
+      const tape = tapes[key] || tapes[defaultTapeKey];
+      activeTapeKey = tapes[key] ? key : defaultTapeKey;
       title.textContent = tape.title;
       catalog.textContent = tape.catalog;
       notes.textContent = tape.notes;
 
-      source.src = tape.video;
-      video.poster = tape.cover;
-      video.load();
+      video.pause();
+      frame.src = "about:blank";
 
-      tapeCoverObject.src = tape.cover;
-      tapeCoverObject.alt = tape.title + " VHS wrap artwork";
-      modalCover.src = tape.cover;
-      modalCover.alt = tape.title + " VHS wrap artwork, enlarged for inspection";
+      if (tape.type === "video") {
+        frame.hidden = true;
+        video.hidden = false;
+        source.src = tape.video;
+        video.poster = tape.cover;
+        video.load();
+        video.play().catch(() => {});
+      } else {
+        video.hidden = true;
+        source.removeAttribute("src");
+        video.load();
+        frame.hidden = false;
+        frame.src = tape.video;
+      }
+
+      artworkImage.src = tape.cover;
+      artworkImage.alt = tape.title + " artwork";
+      artwork.hidden = false;
+
+      document.querySelectorAll(".tape-choice").forEach((button) => {
+        const isActive = button.dataset.tapeKey === activeTapeKey;
+        button.classList.toggle("is-selected", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      const nextUrl = new URL(window.location.href);
+      nextUrl.searchParams.delete("tape");
+      nextUrl.searchParams.set("video", activeTapeKey);
+      window.history.replaceState({}, "", nextUrl);
     }
 
-    function openModal() {
-      modal.hidden = false;
-      modal.classList.remove("is-minimized");
-      const coverPane = document.getElementById("cover-window-pane");
-      const coverToggle = document.getElementById("cover-window-toggle");
-      coverPane.hidden = false;
-      coverToggle.setAttribute("aria-expanded", "true");
-      closeModalButton.focus();
+    function openTapeBrowser() {
+      lastFocusedElement = document.activeElement;
+      tapeBrowser.hidden = false;
+      tapePileButton.setAttribute("aria-expanded", "true");
+      const selectedButton = tapeGrid.querySelector(`[data-tape-key="${activeTapeKey}"]`);
+      (selectedButton || closeTapeBrowserButton).focus();
     }
 
-    function closeModal() {
-      modal.hidden = true;
-      roomVhsObject.focus();
+    function closeTapeBrowser() {
+      tapeBrowser.hidden = true;
+      tapePileButton.setAttribute("aria-expanded", "false");
+      if (lastFocusedElement instanceof HTMLElement) {
+        lastFocusedElement.focus();
+      }
     }
 
     function toggleWindow(button) {
@@ -181,19 +310,23 @@
       windowElement.classList.toggle("is-minimized", expanded);
     }
 
-    roomVhsObject.addEventListener("click", openModal);
-    closeModalButton.addEventListener("click", closeModal);
+    createTapeButtons();
+    tapePileButton.addEventListener("click", openTapeBrowser);
+    closeTapeBrowserButton.addEventListener("click", closeTapeBrowser);
+    artworkCloseButton.addEventListener("click", () => {
+      artwork.hidden = true;
+    });
     windowToggleButtons.forEach((button) => {
       button.addEventListener("click", () => toggleWindow(button));
     });
 
     window.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !modal.hidden) {
-        closeModal();
+      if (event.key === "Escape" && !tapeBrowser.hidden) {
+        closeTapeBrowser();
       }
     });
 
-    loadTape(activeTape);
+    loadTape(activeTapeKey);
   </script>
 </body>
 
