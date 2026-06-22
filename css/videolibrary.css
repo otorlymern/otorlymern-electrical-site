@@ -45,12 +45,10 @@ body.video-wall-page::before {
   position: fixed;
   z-index: 20;
   inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 3px,
-    rgba(255, 255, 255, 0.012) 4px
-  );
+  background: repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.012) 4px);
   pointer-events: none;
   content: "";
 }
@@ -60,12 +58,10 @@ body.video-wall-page::after {
   z-index: 0;
   inset: 0;
   background:
-    radial-gradient(
-      circle 260px at var(--cursor-x) var(--cursor-y),
+    radial-gradient(circle 260px at var(--cursor-x) var(--cursor-y),
       rgba(132, 231, 164, 0.045),
       rgba(126, 29, 61, 0.025) 36%,
-      transparent 72%
-    );
+      transparent 72%);
   pointer-events: none;
   content: "";
 }
@@ -209,10 +205,7 @@ body.video-wall-page .dropdown-content {
     0 5px 0 rgba(107, 25, 47, 0.9),
     0 22px 60px rgba(0, 0, 0, 0.62);
   transform:
-    perspective(900px)
-    translate3d(var(--title-x), var(--title-y), 0)
-    rotateX(var(--title-rx))
-    rotateY(var(--title-ry));
+    perspective(900px) translate3d(var(--title-x), var(--title-y), 0) rotateX(var(--title-rx)) rotateY(var(--title-ry));
   transform-style: preserve-3d;
   will-change: transform, filter;
   animation: title-signal-drift 5.8s ease-in-out infinite;
@@ -423,7 +416,7 @@ body.video-wall-page .dropdown-content {
 
 .program-deck__info .deck-format,
 .program-deck__info h2,
-.program-deck__info > p {
+.program-deck__info>p {
   grid-column: 1;
 }
 
@@ -436,7 +429,7 @@ body.video-wall-page .dropdown-content {
   line-height: 0.96;
 }
 
-.program-deck__info > p {
+.program-deck__info>p {
   max-width: 720px;
   margin: 0;
   color: #aaa09d;
@@ -536,9 +529,7 @@ body.video-wall-page .dropdown-content {
   max-height: min(500px, 38vw);
   object-fit: contain;
   filter:
-    saturate(0.82)
-    contrast(1.04)
-    drop-shadow(0 20px 24px rgba(0, 0, 0, 0.72));
+    saturate(0.82) contrast(1.04) drop-shadow(0 20px 24px rgba(0, 0, 0, 0.72));
 }
 
 .tape-artwork-scanlines,
@@ -550,11 +541,9 @@ body.video-wall-page .dropdown-content {
 }
 
 .tape-artwork-scanlines {
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.035) 0 1px,
-    transparent 1px 4px
-  );
+  background: repeating-linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.035) 0 1px,
+      transparent 1px 4px);
   mix-blend-mode: overlay;
 }
 
@@ -695,7 +684,7 @@ body.video-wall-page .dropdown-content {
 }
 
 .crt-deck-card:nth-child(1) .monitor-model--compact .crt-stack {
-  transform: translate(-8%, calc(-11% - 40px)) scale(1.62);
+  transform: translate(-8%, -11%) scale(1.62);
 }
 
 .crt-deck-card:nth-child(2) {
@@ -704,8 +693,8 @@ body.video-wall-page .dropdown-content {
   z-index: 3;
 }
 
-.crt-deck-card:nth-child(2) .monitor-model--compact .crt-stack {
-  transform: translate(-5%, calc(-11% - 40px)) scale(1.62);
+.crt-deck-card:nth-child(2) .monitor-model--silver .crt-stack {
+  transform: translate(-5%, 44px) scale(1.3);
 }
 
 .crt-deck-card:nth-child(3) {
@@ -714,8 +703,8 @@ body.video-wall-page .dropdown-content {
   z-index: 3;
 }
 
-.crt-deck-card:nth-child(3) .monitor-model--silver .crt-stack {
-  transform: translateX(-11%) scale(1.3);
+.crt-deck-card:nth-child(3) .monitor-model--compact .crt-stack {
+  transform: translate(-8%, calc(-11% - 104px)) scale(1.62);
 }
 
 .crt-deck-card:nth-child(4) {
@@ -794,9 +783,7 @@ body.video-wall-page .dropdown-content {
 
 .crt-deck-card.is-selected .crt-frame-overlay {
   filter:
-    drop-shadow(0 14px 12px rgba(0, 0, 0, 0.72))
-    drop-shadow(0 0 3px rgba(163, 247, 189, 0.32))
-    drop-shadow(0 0 8px rgba(93, 183, 121, 0.12));
+    drop-shadow(0 14px 12px rgba(0, 0, 0, 0.72)) drop-shadow(0 0 3px rgba(163, 247, 189, 0.32)) drop-shadow(0 0 8px rgba(93, 183, 121, 0.12));
 }
 
 .monitor-model--compact .crt-stack {
@@ -952,13 +939,11 @@ body.video-wall-page .dropdown-content {
 .crt-scanlines {
   z-index: 3;
   background:
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.08) 0,
-      rgba(255,255,255,0.08) 1px,
+    repeating-linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 1px,
       transparent 1px,
-      transparent 4px
-    );
+      transparent 4px);
   mix-blend-mode: overlay;
   opacity: 0.42;
   animation: scanline-drift 9s linear infinite;
@@ -967,7 +952,7 @@ body.video-wall-page .dropdown-content {
 .crt-reflection {
   z-index: 4;
   background:
-    linear-gradient(120deg, rgba(255,255,255,0.26), transparent 22%, transparent 70%, rgba(255,190,215,0.12));
+    linear-gradient(120deg, rgba(255, 255, 255, 0.26), transparent 22%, transparent 70%, rgba(255, 190, 215, 0.12));
   opacity: 0.55;
 }
 
@@ -1044,7 +1029,7 @@ body.video-wall-page .dropdown-content {
   text-underline-offset: 5px;
 }
 
-.deck-body > p:last-child {
+.deck-body>p:last-child {
   margin: 0;
   color: #aaa09d;
   font-family: "Courier New", monospace;
@@ -1140,35 +1125,28 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
 }
 
 @keyframes title-signal-drift {
+
   0%,
   100% {
     transform:
-      perspective(900px)
-      translate3d(var(--title-x), var(--title-y), 0)
-      rotateX(var(--title-rx))
-      rotateY(var(--title-ry));
+      perspective(900px) translate3d(var(--title-x), var(--title-y), 0) rotateX(var(--title-rx)) rotateY(var(--title-ry));
     filter: contrast(1) saturate(1);
   }
 
   48% {
     transform:
-      perspective(900px)
-      translate3d(var(--title-x), calc(var(--title-y) - 3px), 0)
-      rotateX(var(--title-rx))
-      rotateY(var(--title-ry));
+      perspective(900px) translate3d(var(--title-x), calc(var(--title-y) - 3px), 0) rotateX(var(--title-rx)) rotateY(var(--title-ry));
     filter: contrast(1.03) saturate(0.96);
   }
 
   51% {
     transform:
-      perspective(900px)
-      translate3d(calc(var(--title-x) + 2px), calc(var(--title-y) - 1px), 0)
-      rotateX(var(--title-rx))
-      rotateY(var(--title-ry));
+      perspective(900px) translate3d(calc(var(--title-x) + 2px), calc(var(--title-y) - 1px), 0) rotateX(var(--title-rx)) rotateY(var(--title-ry));
   }
 }
 
 @keyframes title-ghost-slip {
+
   0%,
   88%,
   100% {
@@ -1203,6 +1181,7 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
 }
 
 @keyframes standby-jitter {
+
   0%,
   91%,
   100% {
@@ -1392,6 +1371,7 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .signal-field__orb,
   .signal-field__scan,
   .wall-hero h1,

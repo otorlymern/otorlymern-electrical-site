@@ -59,7 +59,8 @@
 
       <div class="crt-player" aria-label="CRT video player">
         <div class="crt-player-frame">
-          <iframe id="tape-frame" title="Selected archive video" src="about:blank" allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+          <iframe id="tape-frame" title="Selected archive video" src="about:blank"
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
             referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
           <video id="tape-video" muted loop playsinline controls poster="" hidden>
             <source id="tape-source" src="" type="video/mp4" />
@@ -69,7 +70,11 @@
       </div>
 
       <figure class="now-playing-art" id="now-playing-art">
-        <button class="artwork-close" id="artwork-close" type="button" aria-label="Remove selected video artwork">×</button>
+        <figcaption>Selected Artwork</figcaption>
+        <button class="artwork-minimize" id="artwork-minimize" type="button"
+          aria-label="Minimize selected video artwork" aria-pressed="false">—</button>
+        <button class="artwork-close" id="artwork-close" type="button"
+          aria-label="Remove selected video artwork">×</button>
         <img id="selected-artwork" src="" alt="" />
       </figure>
 
@@ -105,11 +110,13 @@
           <h2 id="tape-browser-title">OES Video Archive — Select a Tape</h2>
           <button class="win98-close" id="close-tape-browser" type="button" aria-label="Close video selector">×</button>
         </div>
-        <div class="win98-menu" aria-hidden="true"><span>File</span><span>View</span><span>Play</span><span>Help</span></div>
+        <div class="win98-menu" aria-hidden="true"><span>File</span><span>View</span><span>Play</span><span>Help</span>
+        </div>
         <div class="tape-browser-pane">
           <div class="tape-grid" id="tape-grid"></div>
         </div>
-        <div class="win98-statusbar"><span>9 object(s)</span><span id="selector-status">Choose a video to load the CRT</span></div>
+        <div class="win98-statusbar"><span>9 object(s)</span><span id="selector-status">Choose a video to load the
+            CRT</span></div>
       </section>
     </section>
   </main>
@@ -208,6 +215,7 @@
     const notes = document.getElementById("tape-notes");
     const artwork = document.getElementById("now-playing-art");
     const artworkImage = document.getElementById("selected-artwork");
+    const artworkMinimizeButton = document.getElementById("artwork-minimize");
     const artworkCloseButton = document.getElementById("artwork-close");
     const tapePileButton = document.getElementById("tape-pile-button");
     const tapeBrowser = document.getElementById("tape-browser");
@@ -257,7 +265,7 @@
         source.src = tape.video;
         video.poster = tape.cover;
         video.load();
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       } else {
         video.hidden = true;
         source.removeAttribute("src");
@@ -269,6 +277,7 @@
       artworkImage.src = tape.cover;
       artworkImage.alt = tape.title + " artwork";
       artwork.hidden = false;
+      setArtworkMinimized(false);
 
       document.querySelectorAll(".tape-choice").forEach((button) => {
         const isActive = button.dataset.tapeKey === activeTapeKey;
@@ -280,6 +289,16 @@
       nextUrl.searchParams.delete("tape");
       nextUrl.searchParams.set("video", activeTapeKey);
       window.history.replaceState({}, "", nextUrl);
+    }
+
+    function setArtworkMinimized(shouldMinimize) {
+      artwork.classList.toggle("is-minimized", shouldMinimize);
+      artworkMinimizeButton.setAttribute("aria-pressed", String(shouldMinimize));
+      artworkMinimizeButton.setAttribute(
+        "aria-label",
+        shouldMinimize ? "Restore selected video artwork" : "Minimize selected video artwork"
+      );
+      artworkMinimizeButton.textContent = shouldMinimize ? "□" : "—";
     }
 
     function openTapeBrowser() {
@@ -312,6 +331,9 @@
     createTapeButtons();
     tapePileButton.addEventListener("click", openTapeBrowser);
     closeTapeBrowserButton.addEventListener("click", closeTapeBrowser);
+    artworkMinimizeButton.addEventListener("click", () => {
+      setArtworkMinimized(!artwork.classList.contains("is-minimized"));
+    });
     artworkCloseButton.addEventListener("click", () => {
       artwork.hidden = true;
     });
