@@ -255,11 +255,11 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: "CyborgSister", "EnterCommand", monospace;
-  font-size: clamp(2rem, 6vw, 5.25rem);
+  font-family: "Lyno-Jean", "Lyno-Stan", sans-serif;
+  font-size: clamp(2rem, 5.5vw, 4.85rem);
   font-weight: normal;
   letter-spacing: -0.025em;
-  line-height: 0.82;
+  line-height: 0.75;
   flex-direction: column;
   text-transform: uppercase;
   animation:
@@ -275,6 +275,7 @@
 .resources-heading .title-line {
   position: relative;
   display: block;
+  font-size: 0.7em;
   animation: resources-title-breathe 5.5s ease-in-out 1s infinite alternate;
   will-change: transform;
 }
@@ -282,6 +283,16 @@
 .resources-heading .title-line:nth-child(2) {
   animation-delay: 1.35s;
   animation-direction: alternate-reverse;
+}
+
+.resources-heading .title-line--oes {
+  margin-bottom: 0.05em;
+  font-size: 1em;
+  letter-spacing: 0.08em;
+}
+
+.resources-heading .title-line:nth-child(3) {
+  animation-delay: 1.7s;
 }
 
 .resources-heading .title-line::after {
@@ -1292,8 +1303,9 @@
   }
 
   .resources-heading h1 {
-    font-size: clamp(2.2rem, 12vw, 4.3rem);
-    line-height: 0.86;
+    font-size: clamp(1.7rem, 8vw, 2.85rem);
+    letter-spacing: -0.04em;
+    line-height: 0.78;
   }
 
   .resources-hero-portal {
