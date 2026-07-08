@@ -4,7 +4,7 @@ set -euo pipefail
 # CHANGE THIS to your actual originals path on MacAlpha:
 ORIG_ROOT="/Volumes/OES"
 
-STAGE_DIR="${PWD}/assets-src"
+http://127.0.0.1:3000/systems/videogear.htmlSTAGE_DIR="${PWD}/assets-src"
 
 if [ "$#" -lt 1 ]; then
   echo "Usage: $0 <relative-path-under-originals> [more paths...]"
