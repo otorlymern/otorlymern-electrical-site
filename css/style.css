@@ -119,6 +119,28 @@
   }
 }
 
+@keyframes blob-morph {
+  0% {
+    border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+  }
+
+  25% {
+    border-radius: 50% 60% 60% 40% / 40% 60% 30% 60%;
+  }
+
+  50% {
+    border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%;
+  }
+
+  75% {
+    border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%;
+  }
+}
+
 @keyframes sticker-wiggle {
   0% {
     transform: rotate(-4deg);
@@ -518,9 +540,9 @@ footer {
 }
 
 .video-section {
-  background-image: url("https://media.otorlymern-electrical.com/images/textures/staticsnow.png");
-  background-repeat: no-repeat;
-  background-size: auto 1000px;
+  background-image: url("../images/camera-011.gif");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 .lit-section {
@@ -530,8 +552,8 @@ footer {
 }
 
 .diy-section {
-  background: url("https://media.otorlymern-electrical.com/images/textures/pcbbg.png");
-  background-repeat: no-repeat;
+  background-image: url("../images/pcbbg.png");
+  background-repeat: repeat;
   background-size: auto;
 }
 
@@ -596,7 +618,9 @@ footer {
 
 .intro-section {
   text-align: left;
-  background: rgba(255, 253, 208, 0.8);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 242, 169, 0.92), transparent 34%),
+    linear-gradient(135deg, rgba(255, 253, 208, 0.92) 0%, rgba(255, 221, 145, 0.78) 46%, rgba(202, 112, 72, 0.54) 100%);
   border: 2px solid rgba(90, 47, 0, 0.25);
   border-radius: 18px;
   padding: 1.25rem;
@@ -617,11 +641,68 @@ footer {
 
 .sss-card {
   flex: 1 1 220px;
-  background: #fffaf0;
-  border: 1px solid rgba(90, 47, 0, 0.35);
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f2f3f3 42%, #c8cbce 100%);
+  border: 1px solid rgba(92, 96, 100, 0.34);
   border-radius: 14px;
   padding: 0.9rem 1rem;
   box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.12);
+  isolation: isolate;
+}
+
+.sss-card::before {
+  content: "";
+  position: absolute;
+  inset: -9px -10px -12px -8px;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 8px;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.22), rgba(255, 241, 186, 0.20) 32%, rgba(255, 255, 255, 0.08) 58%, rgba(198, 154, 77, 0.12)),
+    url("../texture-PNG-by-PhotoshopSupply14.png") center / cover no-repeat;
+  background-blend-mode: screen, normal;
+  border: 1px solid rgba(255, 245, 194, 0.2);
+  opacity: 0.62;
+  transform: rotate(-1.4deg);
+  filter:
+    drop-shadow(2px 5px 3px rgba(52, 27, 0, 0.18))
+    saturate(0.72);
+  clip-path: polygon(0 3%, 5% 0, 12% 2%, 19% 0, 28% 3%, 37% 1%, 48% 3%, 59% 0, 70% 2%, 82% 0, 91% 3%, 100% 1%, 99% 95%, 92% 100%, 82% 97%, 72% 100%, 61% 97%, 49% 100%, 38% 98%, 27% 100%, 17% 96%, 7% 100%, 0 96%);
+}
+
+.sss-card:nth-child(2)::before {
+  inset: -10px -8px -10px -11px;
+  background:
+    linear-gradient(105deg, rgba(255, 255, 255, 0.20), rgba(255, 232, 166, 0.18) 36%, rgba(255, 255, 255, 0.07) 62%, rgba(178, 126, 49, 0.12)),
+    url("../tape-tex100.png") center / cover no-repeat;
+  opacity: 0.58;
+  transform: rotate(1.1deg);
+}
+
+.sss-card:nth-child(3)::before {
+  inset: -8px -12px -13px -8px;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.22), rgba(255, 236, 176, 0.18) 34%, rgba(255, 255, 255, 0.08) 57%, rgba(190, 133, 54, 0.12)),
+    url("../tapetex-05.png") center / cover no-repeat;
+  opacity: 0.6;
+  transform: rotate(-0.7deg);
+}
+
+.sss-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px 10px auto;
+  z-index: 3;
+  height: 38%;
+  pointer-events: none;
+  border-radius: 8px 8px 30% 30%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 72%);
+  opacity: 0.42;
+}
+
+.sss-card>* {
+  position: relative;
+  z-index: 4;
 }
 
 .sss-card h3 {
@@ -706,7 +787,10 @@ footer {
 }
 
 .link-title {
+  margin: 0;
   font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.15;
 }
 
 .link-desc {
@@ -858,24 +942,53 @@ footer {
 }
 
 .blob-container {
-  position: absolute;
+  position: fixed;
   inset: 0;
   width: 100%;
-  height: min(75vh, 900px);
+  height: 100vh;
   pointer-events: none;
   overflow: hidden;
   z-index: 0;
 }
 
 .blob {
-  position: absolute;
+  position: fixed;
   mix-blend-mode: luminosity;
   opacity: 0.55;
-  animation: moveBlob infinite alternate ease-in-out;
+  border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+  overflow: hidden;
+  animation: blob-morph 24s infinite alternate ease-in-out;
+  box-shadow:
+    inset -38px -48px 70px rgba(54, 36, 20, 0.2),
+    inset 26px 32px 60px rgba(255, 255, 255, 0.28),
+    0 24px 48px rgba(50, 25, 0, 0.16);
+  transform: translate3d(var(--float-x, 0), var(--float-y, 0), 0);
+  transform-origin: center;
+  will-change: transform, border-radius;
+}
+
+.blob::before {
+  content: "";
+  position: absolute;
+  inset: 10% 14% auto auto;
+  width: 38%;
+  height: 30%;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.22) 46%, transparent 72%);
+  filter: blur(2px);
+  opacity: 0.72;
+  transform: rotate(-18deg);
+}
+
+.blob[data-bouncing="true"] {
+  border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
 }
 
 .blob-red {
-  background: #d94e4e;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 248, 225, 0.56), transparent 24%),
+    radial-gradient(circle at 72% 76%, rgba(132, 22, 24, 0.45), transparent 44%),
+    #d94e4e;
   width: 420px;
   height: 310px;
   top: 12%;
@@ -884,7 +997,10 @@ footer {
 }
 
 .blob-blue {
-  background: #b0e0e6;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.58), transparent 24%),
+    radial-gradient(circle at 72% 76%, rgba(27, 92, 132, 0.34), transparent 46%),
+    #b0e0e6;
   width: 320px;
   height: 430px;
   top: 48%;
@@ -893,7 +1009,10 @@ footer {
 }
 
 .blob-red-2 {
-  background: #fffba7;
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.78), transparent 24%),
+    radial-gradient(circle at 70% 78%, rgba(184, 132, 24, 0.35), transparent 48%),
+    #fffba7;
   width: 260px;
   height: 360px;
   top: 72%;
@@ -1258,15 +1377,22 @@ body.home-front-panel .home-gel-button:hover {
 }
 
 body.home-front-panel .intro-section {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(240, 161, 58, 0.34), transparent 32%),
+    radial-gradient(circle at 88% 12%, rgba(134, 200, 232, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(91, 42, 18, 0.78), rgba(91, 22, 42, 0.42) 52%, rgba(5, 4, 3, 0.72));
   border-radius: 20px;
   padding: 1.4rem;
 }
 
 body.home-front-panel .intro-section p,
-body.home-front-panel .sss-card p,
 body.home-front-panel .category-link,
 body.home-front-panel .highlight-body p {
   color: #fbe6bf;
+}
+
+body.home-front-panel .sss-card p {
+  color: #1f2022;
 }
 
 body.home-front-panel .sss-links {
@@ -1276,11 +1402,10 @@ body.home-front-panel .sss-links {
 body.home-front-panel .sss-card {
   min-height: 178px;
   border-radius: 12px;
-  border-color: rgba(215, 210, 204, 0.24);
+  border-color: rgba(215, 210, 204, 0.36);
   background:
-    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.16), transparent 36%),
-    linear-gradient(180deg, rgba(215, 210, 204, 0.14), rgba(91, 22, 42, 0.18)),
-    linear-gradient(135deg, rgba(91, 42, 18, 0.94), rgba(11, 9, 8, 0.94));
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.42), transparent 36%),
+    linear-gradient(135deg, #ffffff 0%, #eef0f1 44%, #bec2c6 100%);
   transition: transform 190ms ease, box-shadow 190ms ease;
 }
 
@@ -1293,8 +1418,8 @@ body.home-front-panel .sss-card:hover {
 }
 
 body.home-front-panel .sss-card h3 {
-  color: var(--home-amber);
-  text-shadow: 0 1px 0 #000;
+  color: #222426;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 body.home-front-panel .category-section {
@@ -1324,12 +1449,11 @@ body.home-front-panel .music-section::before {
 }
 
 body.home-front-panel .video-section::before {
-  background-image: url("https://media.otorlymern-electrical.com/images/textures/staticsnow.png");
-  background-size: 580px auto;
+  background-image: url("../images/camera-011.gif");
 }
 
 body.home-front-panel .diy-section::before {
-  background-image: url("https://media.otorlymern-electrical.com/images/textures/pcbbg.png");
+  background-image: url("../images/pcbbg.png");
 }
 
 body.home-front-panel .category-header h2 {
@@ -1588,5 +1712,252 @@ body.home-front-panel img.footer-badges {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+.floating-shop-button {
+  --shop-drift: 35px;
+  --shop-delay: 0s;
+  position: fixed;
+  top: 44vh;
+  left: 14px;
+  z-index: 10020;
+  display: block;
+  width: clamp(126px, 17vw, 235px);
+  aspect-ratio: 1;
+  transform: translate3d(var(--float-x, 0), var(--float-y, 0), 0);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.floating-shop-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.28));
+  transform-origin: center;
+  animation: floating-shop-sticker 4.8s ease-in-out var(--shop-delay) infinite alternate;
+}
+
+.floating-shop-button:hover img,
+.floating-shop-button:focus-visible img {
+  filter: drop-shadow(5px 6px 0 rgba(0, 0, 0, 0.34)) saturate(1.18);
+  animation-duration: 420ms;
+}
+
+.floating-shop-button:focus-visible {
+  outline: 3px solid #d6d900;
+  outline-offset: 5px;
+}
+
+@keyframes floating-shop-sticker {
+  0% {
+    transform: translate(-62px, -42px) rotate(-12deg) scale(0.95);
+  }
+
+  20% {
+    transform: translate(108px, -78px) rotate(8deg) scale(1.07);
+  }
+
+  40% {
+    transform: translate(148px, 26px) rotate(-4deg) scale(1.09);
+  }
+
+  60% {
+    transform: translate(-82px, 96px) rotate(-13deg) scale(1.03);
+  }
+
+  80% {
+    transform: translate(-138px, -34px) rotate(10deg) scale(0.98);
+  }
+
+  100% {
+    transform: translate(58px, 82px) rotate(-6deg) scale(1.08);
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-shop-button {
+    width: clamp(108px, 30vw, 160px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
+
+.oes-store-popup {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10000;
+  width: min(430px, calc(100vw - 24px));
+  color: #000;
+  font-family: "EnterCommand", "MSW98UI", Arial, sans-serif;
+  opacity: 0;
+  transform: translateY(16px) rotate(-1.5deg);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.oes-store-popup.is-visible {
+  opacity: 1;
+  transform: translateY(0) rotate(-1.5deg);
+}
+
+.oes-store-popup.is-closing {
+  opacity: 0;
+  transform: translateY(12px) rotate(1deg);
+}
+
+.oes-store-popup-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 10px;
+  position: relative;
+  min-height: 0;
+  color: #000;
+  text-decoration: none;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  box-shadow: 7px 8px 0 rgba(0, 0, 0, 0.32);
+  padding: 32px 9px 9px;
+}
+
+.oes-store-popup-link::before {
+  content: "Advertisement";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 19px;
+  padding: 2px 24px 0 6px;
+  color: #fff;
+  background: linear-gradient(90deg, #000080, #1038d9);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.oes-store-popup-art {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+  background-color: #008080;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.08) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 7px);
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 6px;
+}
+
+.oes-store-popup-copy {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.oes-store-popup-copy strong {
+  color: #1c0f76;
+  font-size: 1.45rem;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.oes-store-popup-copy span {
+  line-height: 1.15;
+}
+
+.oes-store-popup-button {
+  justify-self: end;
+  align-self: center;
+  display: inline-flex;
+  min-width: 74px;
+  min-height: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  color: #000;
+  background: #31d20a;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+.oes-store-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  color: #000;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+.oes-store-popup-close:active,
+.oes-store-popup-link:active .oes-store-popup-button {
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (max-width: 640px) {
+  .oes-store-popup {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+    transform: translateY(16px);
+  }
+
+  .oes-store-popup.is-visible {
+    transform: translateY(0);
+  }
+
+  .oes-store-popup-link {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .oes-store-popup-art {
+    max-height: 170px;
+  }
+
+  .oes-store-popup-copy strong {
+    font-size: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oes-store-popup {
+    transition: none;
+    transform: none;
+  }
+
+  .oes-store-popup.is-visible {
+    transform: none;
   }
 }

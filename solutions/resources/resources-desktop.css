@@ -350,44 +350,88 @@
 }
 
 .crt-computer {
-  width: min(1100px, 97vw);
+  position: relative;
+  isolation: isolate;
+  width: min(920px, 97vw);
   margin: 0 auto;
-  filter: drop-shadow(0 35px 28px rgba(0, 0, 0, 0.5));
+  padding: clamp(0.4rem, 1.5vw, 1.4rem) 0 clamp(3.2rem, 8vw, 5.4rem);
+}
+
+.crt-computer::before,
+.crt-computer::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.crt-computer::before {
+  z-index: 0;
+  bottom: clamp(3.2rem, 7vw, 5.9rem);
+  width: min(1220px, 118vw);
+  height: clamp(7.4rem, 20vw, 14.2rem);
+  border: 1px solid rgba(63, 30, 9, 0.62);
+  border-radius: 44% 44% 1.4rem 1.4rem / 18% 18% 1.2rem 1.2rem;
+  background:
+    linear-gradient(90deg, rgba(41, 20, 8, 0.45), transparent 15% 85%, rgba(41, 20, 8, 0.48)),
+    radial-gradient(ellipse at 50% 18%, rgba(255, 194, 118, 0.33), transparent 48%),
+    repeating-linear-gradient(92deg, rgba(46, 22, 8, 0.24) 0 2px, transparent 2px 24px),
+    linear-gradient(180deg, #96623a 0%, #74411f 58%, #4b2711 100%);
+  box-shadow:
+    inset 0 0.65rem 1.1rem rgba(255, 193, 111, 0.24),
+    inset 0 -1.1rem 1.8rem rgba(43, 19, 7, 0.42),
+    0 1.2rem 2.3rem rgba(0, 0, 0, 0.28);
+  transform: translateX(-50%) perspective(900px) rotateX(60deg);
+  transform-origin: 50% 100%;
+}
+
+.crt-computer::after {
+  z-index: 1;
+  bottom: clamp(4.2rem, 10vw, 7.2rem);
+  width: min(590px, 67vw);
+  height: clamp(1.8rem, 4vw, 3.6rem);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.62) 0 22%, rgba(0, 0, 0, 0.28) 54%, transparent 72%);
+  filter: blur(11px);
+  transform: translateX(-50%);
 }
 
 .crt-case {
   position: relative;
-  padding: clamp(1.25rem, 4vw, 3.6rem) clamp(1.1rem, 4vw, 3.5rem) clamp(3.6rem, 8vw, 6rem);
-  border: 5px solid #777364;
-  border-radius: 3.2rem 3.2rem 4.5rem 4.5rem / 2.7rem 2.7rem 3.4rem 3.4rem;
-  background:
-    linear-gradient(105deg, transparent 0 68%, rgba(255, 255, 255, 0.25) 70%, transparent 74%),
-    linear-gradient(165deg, #f0ecd5 0%, #cbc7ae 52%, #999783 100%);
-  box-shadow:
-    inset 5px 5px 2px rgba(255, 255, 255, 0.55),
-    inset -7px -8px 4px rgba(73, 69, 58, 0.28),
-    0 0 0 3px #3f3d35;
+  z-index: 2;
+  width: min(760px, 96vw);
+  aspect-ratio: 699 / 814;
+  margin: 0 auto;
+  background: none;
+}
+
+.crt-case::after {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  background: url("/video/crt-overlays/apple2macpluscrtoverlay.png") center center / 100% 100% no-repeat;
+  content: "";
+  pointer-events: none;
 }
 
 .crt-bezel {
-  padding: clamp(0.65rem, 1.8vw, 1.25rem);
-  border: 4px solid #4b4b42;
-  border-radius: 2.1rem / 1.65rem;
-  background: linear-gradient(145deg, #57564c, #191a17 70%);
-  box-shadow:
-    inset 8px 9px 12px rgba(0, 0, 0, 0.8),
-    0 3px 0 rgba(255, 255, 255, 0.4);
+  position: absolute;
+  z-index: 2;
+  inset: 0;
 }
 
 .crt-glass {
-  position: relative;
-  aspect-ratio: 4 / 3;
+  position: absolute;
+  top: 11.8%;
+  left: 14.6%;
+  width: 67.3%;
+  height: 44.5%;
   overflow: hidden;
-  border: 3px solid #111510;
-  border-radius: 7% / 5%;
+  border: 0;
+  border-radius: 6% / 8%;
   background: #007d7d;
   box-shadow:
-    inset 0 0 55px rgba(0, 0, 0, 0.75),
+    inset 0 0 42px rgba(0, 0, 0, 0.8),
     0 0 18px rgba(111, 255, 238, 0.18);
 }
 
@@ -400,7 +444,7 @@
     linear-gradient(135deg, #007d7d, #006c73);
   color: #000;
   font-family: "MSW98", "Tahoma", sans-serif;
-  font-size: clamp(9px, 1.45vw, 15px);
+  font-size: clamp(7px, 1.05vw, 11px);
   user-select: none;
 }
 
@@ -1074,77 +1118,35 @@
 }
 
 .monitor-brand {
-  position: absolute;
-  bottom: clamp(1.05rem, 2.6vw, 2.2rem);
-  left: 50%;
-  display: flex;
-  color: #4e4d44;
-  font-family: Arial, sans-serif;
-  transform: translateX(-50%);
-  align-items: baseline;
-  gap: 0.55em;
-  white-space: nowrap;
+  display: none;
 }
 
 .monitor-brand span {
-  font-size: clamp(1rem, 2.2vw, 1.55rem);
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.08em;
+  display: none;
 }
 
 .monitor-brand small {
-  font-size: clamp(0.48rem, 1.25vw, 0.72rem);
-  letter-spacing: 0.07em;
+  display: none;
 }
 
 .monitor-controls {
-  position: absolute;
-  right: clamp(1.5rem, 5vw, 4.2rem);
-  bottom: clamp(1.15rem, 2.7vw, 2.35rem);
-  display: flex;
-  align-items: center;
-  gap: clamp(0.2rem, 0.7vw, 0.48rem);
+  display: none;
 }
 
 .monitor-controls span {
-  display: block;
-  width: clamp(0.28rem, 0.7vw, 0.48rem);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #67665b;
-  box-shadow: inset 1px 1px #36362f, 1px 1px #f8f4dc;
+  display: none;
 }
 
 .monitor-controls i {
-  display: block;
-  width: clamp(0.55rem, 1.3vw, 0.9rem);
-  aspect-ratio: 1;
-  margin-left: 0.2rem;
-  border: 1px solid #304d38;
-  border-radius: 50%;
-  background: #59a56a;
-  box-shadow: 0 0 0.45rem rgba(89, 255, 122, 0.72), inset 1px 1px #b2e8bc;
+  display: none;
 }
 
 .monitor-neck {
-  width: 23%;
-  height: clamp(2.3rem, 6vw, 4.8rem);
-  margin: -0.45rem auto 0;
-  border-right: 4px solid #777364;
-  border-left: 4px solid #a7a38e;
-  background: linear-gradient(90deg, #999580, #d4d0b7 48%, #95927d);
-  clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
+  display: none;
 }
 
 .monitor-foot {
-  width: 45%;
-  height: clamp(1.25rem, 3.8vw, 2.7rem);
-  margin: -0.12rem auto 0;
-  border: 4px solid #777364;
-  border-radius: 50% 50% 18% 18% / 70% 70% 25% 25%;
-  background: linear-gradient(#dedac1, #97947f);
-  box-shadow: inset 0 0.25rem rgba(255, 255, 255, 0.35);
+  display: none;
 }
 
 .resources-help {
@@ -1317,24 +1319,28 @@
   }
 
   .crt-case {
-    padding: 0.9rem 0.72rem 3.4rem;
-    border-width: 3px;
-    border-radius: 2rem 2rem 2.7rem 2.7rem;
+    width: min(520px, 98vw);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
   }
 
   .crt-bezel {
-    padding: 0.5rem;
-    border-width: 3px;
-    border-radius: 1.2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
   }
 
   .crt-glass {
-    aspect-ratio: 3 / 4;
-    border-radius: 5% / 3%;
+    top: 11.8%;
+    left: 14.6%;
+    width: 67.3%;
+    height: 44.5%;
+    border-radius: 6% / 8%;
   }
 
   .resources-desktop {
-    font-size: clamp(9px, 2.7vw, 12px);
+    font-size: clamp(6px, 2.2vw, 9px);
   }
 
   .desktop-icons {

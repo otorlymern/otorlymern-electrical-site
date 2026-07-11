@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Otorlymern Electrical Systems store desktop for OES merch, printed matter, and weird shop objects."
+  />
+  <title>OES Store</title>
+  <link rel="stylesheet" href="/store/store.css" />
+</head>
+<body class="store-page">
+  <a class="skip-link" href="#product-grid">Skip to catalog</a>
+
+  <main class="store-desktop" id="store-desktop">
+    <header class="desktop-menu" aria-label="OES store menu">
+      <a class="desktop-brand" href="/index.html">OES</a>
+      <nav class="desktop-nav" aria-label="Store navigation">
+        <a href="/index.html">Home</a>
+        <a href="/systems/systems.html">Systems</a>
+        <a href="/services/index.html">Services</a>
+        <a href="/solutions/resources/index.html">Solutions</a>
+        <a href="/store/" aria-current="page">Store</a>
+      </nav>
+      <time class="desktop-clock" id="desktop-clock" datetime="">00:00</time>
+    </header>
+
+    <section class="desktop-workspace" aria-label="OES store desktop">
+      <div class="desktop-icons" aria-label="Desktop icons">
+        <button class="desktop-icon" type="button" data-open-window="catalog-window">
+          <img src="/images/store/shopsolo.png" alt="" aria-hidden="true" />
+          <span>Catalog</span>
+        </button>
+        <button class="desktop-icon" type="button" data-open-window="about-window">
+          <img src="/images/store/shopwindowsxpWin3solo.png" alt="" aria-hidden="true" />
+          <span>Storefront</span>
+        </button>
+        <button class="desktop-icon" type="button" data-open-window="cash-window">
+          <img src="/images/store/cashcircleassetsolo.png" alt="" aria-hidden="true" />
+          <span>Cash Desk</span>
+        </button>
+        <a class="desktop-icon" href="https://reverb.com/shop/otorlymern-electrical" target="_blank" rel="noopener noreferrer">
+          <img src="/images/store/shopwindowsxpWIndows1solo.png" alt="" aria-hidden="true" />
+          <span>Reverb</span>
+        </a>
+      </div>
+
+      <article
+        class="store-window is-open is-active"
+        id="catalog-window"
+        data-window-title="Catalog"
+        style="--window-x: 19vw; --window-y: 12vh; --window-width: min(840px, 67vw);"
+      >
+        <header class="window-titlebar" data-drag-handle>
+          <span class="window-title-icon" aria-hidden="true"></span>
+          <h1>OES Catalog</h1>
+          <div class="window-controls">
+            <button type="button" aria-label="Minimize Catalog" data-minimize-window>_</button>
+            <button type="button" aria-label="Close Catalog" data-close-window>x</button>
+          </div>
+        </header>
+        <div class="window-menubar" aria-hidden="true">
+          <span>File</span>
+          <span>Edit</span>
+          <span>Special</span>
+          <span>Help</span>
+        </div>
+        <div class="window-pane">
+          <div class="catalog-toolbar" aria-label="Catalog filters">
+            <button type="button" class="is-selected" data-filter="all">All</button>
+            <button type="button" data-filter="wearables">Wearables</button>
+            <button type="button" data-filter="paper">Paper</button>
+            <button type="button" data-filter="stickers">Stickers</button>
+            <button type="button" data-filter="audio">Audio</button>
+            <button type="button" data-filter="downloads">Downloads</button>
+          </div>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        </div>
+      </article>
+
+      <article
+        class="store-window is-open"
+        id="about-window"
+        data-window-title="Storefront"
+        style="--window-x: 7vw; --window-y: 18vh; --window-width: min(410px, 34vw);"
+      >
+        <header class="window-titlebar" data-drag-handle>
+          <span class="window-title-icon" aria-hidden="true"></span>
+          <h2>Storefront.txt</h2>
+          <div class="window-controls">
+            <button type="button" aria-label="Minimize Storefront" data-minimize-window>_</button>
+            <button type="button" aria-label="Close Storefront" data-close-window>x</button>
+          </div>
+        </header>
+        <div class="window-pane about-pane">
+          <img src="/images/store/OESwindowshoppingv2Trans.png" alt="Otorlymern Electrical Store artwork" />
+          <p>
+            Small runs of OES shirts, stickers, paper goods, audio oddments, and free downloads will live here.
+          </p>
+          <p>
+            Checkout is wired for Stripe hosted links once the real products are ready. Free files will open directly from the catalog.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="store-window is-open"
+        id="cash-window"
+        data-window-title="Cash Desk"
+        style="--window-x: 66vw; --window-y: 58vh; --window-width: min(360px, 29vw);"
+      >
+        <header class="window-titlebar" data-drag-handle>
+          <span class="window-title-icon" aria-hidden="true"></span>
+          <h2>Cash Desk</h2>
+          <div class="window-controls">
+            <button type="button" aria-label="Minimize Cash Desk" data-minimize-window>_</button>
+            <button type="button" aria-label="Close Cash Desk" data-close-window>x</button>
+          </div>
+        </header>
+        <div class="window-pane cash-pane">
+          <img src="/images/store/cash3dcircleassetsolo.png" alt="" aria-hidden="true" />
+          <p>
+            OES never sees card numbers here. Paid buttons leave this site for Stripe-hosted checkout; free buttons open downloads.
+          </p>
+          <a class="store-button" href="mailto:contact@otorlymern-services.com?subject=OES%20store%20question">Ask about stock</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="desktop-taskbar" aria-label="Store taskbar">
+      <a class="start-button" href="/index.html">OES</a>
+      <div class="taskbar-windows" id="taskbar-windows" aria-label="Open windows"></div>
+      <div class="taskbar-status" id="taskbar-status">Checkout and download links pending</div>
+    </footer>
+  </main>
+
+  <script src="/store/store.js"></script>
+</body>
+</html>
