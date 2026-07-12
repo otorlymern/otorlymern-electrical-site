@@ -55,16 +55,13 @@
   <main class="resources-main">
     <div class="resources-heading">
       <div class="resources-hero-blob" aria-hidden="true"></div>
-      <img class="resources-hero-portal" src="/images/generated/oes-resources-portal-solid.webp" alt=""
-        aria-hidden="true" />
       <div class="resources-heading__copy">
         <p class="resources-eyebrow">OES presents:</p>
-        <h1 aria-label="OES Recommended Resources Terminal">
-          <span class="title-line title-line--oes" data-text="OES">OES</span>
-          <span class="title-line" data-text="Recommended">Recommended</span>
-          <span class="title-line" data-text="Resources Terminal">Resources Terminal</span>
+        <h1 aria-label="OES-RTT">
+          <span class="title-line title-line--rrt" data-text="OES-RTT">OES-RTT</span>
         </h1>
-        <p class="resources-subtitle">A guided starting point for folks who want a little direction.</p>
+        <p class="resources-subtitle">A terminal to direct newcomers to the best and most helpful documentation for
+          learning’s sake.</p>
       </div>
     </div>
 
@@ -75,17 +72,27 @@
             <div class="resources-desktop" id="resources-desktop">
               <div class="terminal-loader" id="terminal-loader" role="status" aria-live="polite">
                 <div class="terminal-loader__panel">
-                  <div class="terminal-loader__logo" aria-hidden="true">
-                    <span>OES</span>
-                    <i></i>
+                  <div class="terminal-loader__topline" aria-hidden="true">
+                    <span>OES-RRT BIOS</span>
+                    <span>System 7.0 / Windows 98 compatible shell</span>
+                  </div>
+                  <div class="terminal-loader__mark-stack" aria-hidden="true">
+                    <img class="terminal-loader__mark terminal-loader__mark--oes"
+                      src="/solutions/resources/iconlogo-oes-ui.png" alt="" />
+                    <img class="terminal-loader__mark terminal-loader__mark--rtt"
+                      src="/solutions/resources/iconlogo-rtt-ui.png" alt="" />
                   </div>
                   <p class="terminal-loader__kicker">Otorlymern Electrical Solutions</p>
-                  <p class="terminal-loader__message">LOADING OES STARTER DOCUMENTATION UI PORTAL...</p>
+                  <p class="terminal-loader__message" id="terminal-loader-message">Starting OES Recommended Resources
+                    Terminal...</p>
+                  <div class="terminal-loader__extensions" aria-hidden="true">
+                    <span>INIT</span><span>FINDER</span><span>RTT</span><span>OES</span>
+                  </div>
                   <div class="terminal-loader__track" aria-hidden="true">
                     <span class="terminal-loader__bar"></span>
                   </div>
                   <div class="terminal-loader__readout" aria-hidden="true">
-                    <span>INDEXING RECOMMENDED MATERIAL</span>
+                    <span id="terminal-loader-readout">Checking extensions</span>
                     <span class="terminal-loader__percent">00%</span>
                   </div>
                   <p class="terminal-loader__hint">Curated routes for audio, synthesis, and recording</p>
@@ -271,7 +278,7 @@
         </div>
 
         <div class="monitor-brand">
-          <span>OES</span>
+          <span>OES-RRT</span>
           <small>Recommended Resources Terminal</small>
         </div>
         <div class="monitor-controls" aria-hidden="true">
@@ -282,11 +289,6 @@
       <div class="monitor-neck" aria-hidden="true"></div>
       <div class="monitor-foot" aria-hidden="true"></div>
     </section>
-
-    <div class="resources-help">
-      <p>Tip: multiple categories can stay open at once. Drag a blue title bar to move its window.</p>
-      <p>Already know what you need? Search the broader <a href="/manuals/">OES Manuals Archive</a>.</p>
-    </div>
   </main>
 
   <footer>

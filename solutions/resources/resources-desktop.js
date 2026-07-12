@@ -19,12 +19,26 @@
 
     const progressBar = loader.querySelector(".terminal-loader__bar");
     const progressText = loader.querySelector(".terminal-loader__percent");
-    const bootDuration = 2400;
+    const bootMessage = loader.querySelector("#terminal-loader-message");
+    const bootReadout = loader.querySelector("#terminal-loader-readout");
+    const bootExtensions = [...loader.querySelectorAll(".terminal-loader__extensions span")];
+    const bootSteps = [
+      { at: 0, message: "Starting OES Recommended Resources Terminal...", readout: "Checking extensions" },
+      { at: 18, message: "Loading OES desktop shell...", readout: "Mounting Finder" },
+      { at: 38, message: "Loading RTT document icons...", readout: "Loading RTT" },
+      { at: 62, message: "Indexing recommended resources...", readout: "Building Start menu" },
+      { at: 84, message: "Welcome to OES-RRT.", readout: "Starting desktop" }
+    ];
+    const bootDuration = 3200;
     const bootStarted = Date.now();
 
     const updateBootProgress = () => {
       const elapsed = Date.now() - bootStarted;
       const progress = Math.min(100, Math.round((elapsed / bootDuration) * 100));
+      const activeStep = bootSteps.reduce(
+        (currentStep, step) => progress >= step.at ? step : currentStep,
+        bootSteps[0]
+      );
 
       if (progressBar) {
         progressBar.style.width = `${progress}%`;
@@ -33,6 +47,18 @@
       if (progressText) {
         progressText.textContent = `${String(progress).padStart(2, "0")}%`;
       }
+
+      if (bootMessage) {
+        bootMessage.textContent = activeStep.message;
+      }
+
+      if (bootReadout) {
+        bootReadout.textContent = activeStep.readout;
+      }
+
+      bootExtensions.forEach((extension, index) => {
+        extension.classList.toggle("is-active", progress >= bootSteps[Math.min(index + 1, bootSteps.length - 1)].at);
+      });
 
       if (progress < 100) {
         window.requestAnimationFrame(updateBootProgress);
