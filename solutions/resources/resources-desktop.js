@@ -248,6 +248,7 @@
       const startLeft = windowRect.left - desktopRect.left;
       const startTop = windowRect.top - desktopRect.top;
       const taskbarHeight = desktop.querySelector(".desktop-taskbar")?.offsetHeight || 0;
+      const menuBarHeight = desktop.querySelector(".oes-ui__menu-bar")?.offsetHeight || 0;
 
       titlebar.setPointerCapture(event.pointerId);
 
@@ -255,7 +256,7 @@
         const maxLeft = desktop.clientWidth - resourceWindow.offsetWidth;
         const maxTop = desktop.clientHeight - taskbarHeight - titlebar.offsetHeight;
         const nextLeft = Math.min(Math.max(0, startLeft + moveEvent.clientX - startX), maxLeft);
-        const nextTop = Math.min(Math.max(0, startTop + moveEvent.clientY - startY), maxTop);
+        const nextTop = Math.min(Math.max(menuBarHeight, startTop + moveEvent.clientY - startY), maxTop);
 
         resourceWindow.style.left = `${nextLeft}px`;
         resourceWindow.style.top = `${nextTop}px`;

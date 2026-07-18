@@ -9,6 +9,7 @@
   <title>OES Recommended Resources Terminal</title>
   <link rel="canonical" href="https://otorlymern-electrical.com/solutions/resources/" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/oes-ui/oes-ui.css" />
   <link rel="stylesheet" href="/solutions/resources/resources-desktop.css" />
   <script src="/solutions/resources/resources-desktop.js" defer></script>
 </head>
@@ -68,7 +69,7 @@
       <div class="crt-case">
         <div class="crt-bezel">
           <div class="crt-glass">
-            <div class="resources-desktop" id="resources-desktop">
+            <div class="resources-desktop oes-ui oes-ui__desktop" id="resources-desktop">
               <div class="terminal-loader" id="terminal-loader" role="status" aria-live="polite">
                 <div class="terminal-loader__panel">
                   <div class="terminal-loader__topline" aria-hidden="true">
@@ -94,12 +95,24 @@
                     <span id="terminal-loader-readout">Checking extensions</span>
                     <span class="terminal-loader__percent">00%</span>
                   </div>
-                  <p class="terminal-loader__hint">Selelected docs for audio, synthesis, and recording</p>
+                  <p class="terminal-loader__hint">Selected docs for audio, synthesis, and recording</p>
                 </div>
               </div>
 
-              <div class="desktop-icons" role="group" aria-label="Resource categories">
-                <button class="desktop-icon is-selected" type="button" data-app="fundamentals"
+              <div class="oes-ui__menu-bar" aria-hidden="true">
+                <img class="oes-ui__menu-mark" src="/solutions/resources/iconlogo-oes-ui.png" alt="" />
+                <div class="oes-ui__menu-items">
+                  <span class="oes-ui__menu-item">File</span>
+                  <span class="oes-ui__menu-item">Edit</span>
+                  <span class="oes-ui__menu-item">View</span>
+                  <span class="oes-ui__menu-item">Special</span>
+                  <span class="oes-ui__menu-item">Window</span>
+                  <span class="oes-ui__menu-item">Help</span>
+                </div>
+              </div>
+
+              <div class="desktop-icons oes-ui__icons" role="group" aria-label="Resource categories">
+                <button class="desktop-icon oes-ui__desktop-icon is-selected" type="button" data-app="fundamentals"
                   aria-label="Open Intro to Audio and Synthesis Fundamentals">
                   <span class="pixel-icon pixel-icon--book" aria-hidden="true">
                     <span class="book-page book-page--left"></span>
@@ -109,7 +122,8 @@
                   <span class="desktop-icon__label">Audio &amp;<br />Synthesis<br />Fundamentals</span>
                 </button>
 
-                <button class="desktop-icon" type="button" data-app="synthesis" aria-label="Open Synthesis">
+                <button class="desktop-icon oes-ui__desktop-icon" type="button" data-app="synthesis"
+                  aria-label="Open Synthesis">
                   <span class="pixel-icon pixel-icon--synth" aria-hidden="true">
                     <span class="synth-panel">
                       <span class="synth-knob synth-knob--one"></span>
@@ -121,7 +135,8 @@
                   <span class="desktop-icon__label">Synthesis</span>
                 </button>
 
-                <button class="desktop-icon" type="button" data-app="recording" aria-label="Open Recording">
+                <button class="desktop-icon oes-ui__desktop-icon" type="button" data-app="recording"
+                  aria-label="Open Recording">
                   <span class="pixel-icon pixel-icon--tape" aria-hidden="true">
                     <span class="tape-reel tape-reel--left"></span>
                     <span class="tape-reel tape-reel--right"></span>
@@ -131,27 +146,24 @@
                 </button>
               </div>
 
-              <section class="resource-window" data-window="fundamentals" aria-labelledby="fundamentals-title" hidden
+              <section class="resource-window oes-window" data-window="fundamentals"
+                aria-labelledby="fundamentals-title" hidden
                 style="--window-left: 25%; --window-top: 8%; --window-width: 68%; --window-height: 75%;">
-                <div class="window-titlebar">
-                  <span class="window-titlebar__icon pixel-title-icon" aria-hidden="true">?</span>
-                  <h2 id="fundamentals-title">Audio &amp; Synthesis Fundamentals</h2>
-                  <div class="window-controls">
-                    <button type="button" data-action="minimize"
-                      aria-label="Minimize Audio and Synthesis Fundamentals">_</button>
-                    <button type="button" data-action="maximize"
-                      aria-label="Maximize Audio and Synthesis Fundamentals">□</button>
-                    <button type="button" data-action="close"
+                <div class="window-titlebar oes-window__title-bar">
+                  <div class="window-controls oes-window__controls">
+                    <button class="oes-window__control" type="button" data-action="close"
                       aria-label="Close Audio and Synthesis Fundamentals">×</button>
                   </div>
+                  <h2 class="oes-window__title" id="fundamentals-title">Audio &amp; Synthesis Fundamentals</h2>
+                  <div class="window-controls oes-window__controls oes-window__controls--end">
+                    <button class="oes-window__control" type="button" data-action="maximize"
+                      aria-label="Maximize Audio and Synthesis Fundamentals">□</button>
+                  </div>
                 </div>
-                <div class="window-menubar" aria-hidden="true">
-                  <span>File</span><span>Edit</span><span>View</span><span>Help</span>
-                </div>
-                <div class="window-content">
+                <div class="window-content oes-window__content">
                   <p class="window-intro">Start here: approachable texts on sound, instruments, and electronic
                     composition.</p>
-                  <ul class="resource-list">
+                  <ul class="resource-list oes-list-view">
                     <li>
                       <a href="https://media.otorlymern-electrical.com/pdfs/books/Electronic-Music-by-Allen-Strange.pdf"
                         target="_blank" rel="noopener noreferrer">Electronic Music: Systems, Techniques, and Controls —
@@ -185,26 +197,26 @@
                     </li>
                   </ul>
                 </div>
-                <div class="window-statusbar"><span>5 object(s)</span><span>OES Archive</span></div>
+                <div class="window-statusbar oes-window__status"><span>5 object(s)</span><span>OES Archive</span></div>
               </section>
 
-              <section class="resource-window" data-window="synthesis" aria-labelledby="synthesis-title" hidden
+              <section class="resource-window oes-window" data-window="synthesis" aria-labelledby="synthesis-title"
+                hidden
                 style="--window-left: 31%; --window-top: 14%; --window-width: 62%; --window-height: 58%;">
-                <div class="window-titlebar">
-                  <span class="window-titlebar__icon pixel-title-icon" aria-hidden="true">≈</span>
-                  <h2 id="synthesis-title">Synthesis</h2>
-                  <div class="window-controls">
-                    <button type="button" data-action="minimize" aria-label="Minimize Synthesis">_</button>
-                    <button type="button" data-action="maximize" aria-label="Maximize Synthesis">□</button>
-                    <button type="button" data-action="close" aria-label="Close Synthesis">×</button>
+                <div class="window-titlebar oes-window__title-bar">
+                  <div class="window-controls oes-window__controls">
+                    <button class="oes-window__control" type="button" data-action="close"
+                      aria-label="Close Synthesis">×</button>
+                  </div>
+                  <h2 class="oes-window__title" id="synthesis-title">Synthesis</h2>
+                  <div class="window-controls oes-window__controls oes-window__controls--end">
+                    <button class="oes-window__control" type="button" data-action="maximize"
+                      aria-label="Maximize Synthesis">□</button>
                   </div>
                 </div>
-                <div class="window-menubar" aria-hidden="true">
-                  <span>File</span><span>Edit</span><span>View</span><span>Help</span>
-                </div>
-                <div class="window-content">
+                <div class="window-content oes-window__content">
                   <p class="window-intro">Patch books and deeper listening for shaping electronic sound.</p>
-                  <ul class="resource-list">
+                  <ul class="resource-list oes-list-view">
                     <li>
                       <a href="https://media.otorlymern-electrical.com/pdfs/manuals/ciani-buchla-cookbook.pdf"
                         target="_blank" rel="noopener noreferrer">Buchla Cookbook — Suzanne Ciani</a>
@@ -218,26 +230,26 @@
                     </li>
                   </ul>
                 </div>
-                <div class="window-statusbar"><span>2 object(s)</span><span>OES Archive</span></div>
+                <div class="window-statusbar oes-window__status"><span>2 object(s)</span><span>OES Archive</span></div>
               </section>
 
-              <section class="resource-window" data-window="recording" aria-labelledby="recording-title" hidden
+              <section class="resource-window oes-window" data-window="recording" aria-labelledby="recording-title"
+                hidden
                 style="--window-left: 23%; --window-top: 23%; --window-width: 65%; --window-height: 53%;">
-                <div class="window-titlebar">
-                  <span class="window-titlebar__icon pixel-title-icon" aria-hidden="true">●</span>
-                  <h2 id="recording-title">Recording</h2>
-                  <div class="window-controls">
-                    <button type="button" data-action="minimize" aria-label="Minimize Recording">_</button>
-                    <button type="button" data-action="maximize" aria-label="Maximize Recording">□</button>
-                    <button type="button" data-action="close" aria-label="Close Recording">×</button>
+                <div class="window-titlebar oes-window__title-bar">
+                  <div class="window-controls oes-window__controls">
+                    <button class="oes-window__control" type="button" data-action="close"
+                      aria-label="Close Recording">×</button>
+                  </div>
+                  <h2 class="oes-window__title" id="recording-title">Recording</h2>
+                  <div class="window-controls oes-window__controls oes-window__controls--end">
+                    <button class="oes-window__control" type="button" data-action="maximize"
+                      aria-label="Maximize Recording">□</button>
                   </div>
                 </div>
-                <div class="window-menubar" aria-hidden="true">
-                  <span>File</span><span>Edit</span><span>View</span><span>Help</span>
-                </div>
-                <div class="window-content">
+                <div class="window-content oes-window__content">
                   <p class="window-intro">Tape recording, maintenance, and home recording references.</p>
-                  <ul class="resource-list">
+                  <ul class="resource-list oes-list-view">
                     <li>
                       <a href="https://media.otorlymern-electrical.com/pdfs/resources/homerecording-articles.pdf"
                         target="_blank" rel="noopener noreferrer">Home Recording Tips and Techniques</a>
@@ -256,18 +268,14 @@
                     </li>
                   </ul>
                 </div>
-                <div class="window-statusbar"><span>3 object(s)</span><span>OES Archive</span></div>
+                <div class="window-statusbar oes-window__status"><span>3 object(s)</span><span>OES Archive</span></div>
               </section>
 
-              <div class="desktop-taskbar">
-                <div class="start-button" aria-hidden="true">
-                  <span class="start-flag">
-                    <i></i><i></i><i></i><i></i>
-                  </span>
-                  <strong>Start</strong>
-                </div>
-                <div class="taskbar-apps" id="taskbar-apps" aria-label="Open resource windows"></div>
-                <div class="taskbar-clock" id="taskbar-clock" aria-label="Current time"></div>
+              <div class="desktop-taskbar oes-ui__status-strip">
+                <span class="oes-ui__status-segment oes-ui__status-brand" aria-hidden="true">OES-RRT</span>
+                <div class="taskbar-apps oes-ui__status-apps" id="taskbar-apps"
+                  aria-label="Open resource windows"></div>
+                <div class="taskbar-clock oes-ui__status-segment" id="taskbar-clock" aria-label="Current time"></div>
               </div>
 
               <div class="crt-scanlines" aria-hidden="true"></div>

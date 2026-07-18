@@ -9,7 +9,7 @@
   <title>CRT Wall — OES Video Archive</title>
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/altstyle.css" />
-  <link rel="stylesheet" href="/css/videolibrary.css?v=20260622" />
+  <link rel="stylesheet" href="/css/videolibrary.css?v=20260718-5" />
 </head>
 
 <body class="cv-dark-page video-wall-page">
@@ -52,33 +52,14 @@
       </div>
 
       <div class="wall-hero__content">
-        <p class="wall-eyebrow">Otorlymern Electrical Systems / Video Archive</p>
-        <h1 id="wall-title">CRT
-          <!-- Í                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -->WALL
-        </h1>
+        <h1 id="wall-title" aria-label="CRT WALL">CRT WALL</h1>
         <p class="wall-intro">
           Nine simultaneously playing video artworks and short films, made by or in conjunction with OES and show casing
           a wide range of analog and digital hardware and software video proessing, editing, and capturing tehniques.
         </p>
         <p>Select a video on the deck to see its title, access its transport ocntrols and read a brief description of
           the techniques used in its making. </p>
-        </p>
       </div>
-
-      <dl class="wall-status" aria-label="Archive status">
-        <div>
-          <dt>Format</dt>
-          <dd>Mixed</dd>
-        </div>
-        <div>
-          <dt>Decks</dt>
-          <dd id="deck-count">09</dd>
-        </div>
-        <div>
-          <dt>Mode</dt>
-          <dd>Archive Playback</dd>
-        </div>
-      </dl>
     </section>
 
     <section class="program-deck" aria-labelledby="program-title">
@@ -107,9 +88,8 @@
           <button class="transport-button transport-button--play" id="play-selected" type="button">▶ Play</button>
           <button class="transport-button" id="pause-selected" type="button">Ⅱ Pause</button>
           <button class="transport-button transport-button--link" id="open-selected" type="button" aria-expanded="false"
-            aria-controls="tape-artwork-bay">Open Tape ↓</button>
+            aria-controls="tape-artwork-bay">View Artwork</button>
         </div>
-
         <div class="rack-readout" aria-live="polite">
           <span>Selected</span>
           <strong id="selected-deck-readout">Deck A / Play</strong>
@@ -117,22 +97,13 @@
       </div>
 
       <div class="program-deck__info">
-        <p class="deck-format" id="selected-format">CRT / FEEDBACK / LIVE VISUALS</p>
         <h2 id="program-title">Liquid Edutainment</h2>
         <p id="selected-note">Edutainment video on the dangers of computing while swimming.
+
           Graphics taken from an episode of Bits and Bytes, liquid background created by me in TouchDesigner, put
-          together in VDMX.</p>
-        <div class="signal-controls" aria-hidden="true">
-          <span class="signal-control">
-            <span class="signal-control__label">Gain</span>
-            <span class="signal-knob"></span>
-          </span>
-          <span class="signal-control signal-control--wide">
-            <span class="signal-control__label">Tracking</span>
-            <span class="signal-slider"><span></span></span>
-          </span>
-          <span class="control-readout">CH <strong id="selected-channel-number">01</strong> / LOCK</span>
-        </div>
+          together in VDMX.
+        </p>
+        <span class="control-readout">CH <strong id="selected-channel-number">01</strong> / LOCK</span>
       </div>
 
       <div class="tape-artwork-bay" id="tape-artwork-bay" hidden>
@@ -144,7 +115,7 @@
         </div>
         <div class="tape-artwork-footer">
           <span id="artwork-readout">Tape artwork ready</span>
-          <a id="watch-selected" href="/video/viewingroom2.html?video=liquid">Watch video ↗</a>
+          <a id="watch-selected" href="/video/viewingroom2.html?video=liquid">Enter Viewing Room</a>
         </div>
       </div>
     </section>
@@ -542,7 +513,7 @@
       const closeTape = () => {
         artworkBay.hidden = true;
         openTapeButton.setAttribute("aria-expanded", "false");
-        openTapeButton.textContent = "Open Tape ↓";
+        openTapeButton.textContent = "View Artwork";
       };
 
       const selectDeck = (index) => {
@@ -558,7 +529,9 @@
 
         deckSelector.value = String(selectedIndex);
         selectedTitle.textContent = info.title;
-        selectedFormat.textContent = info.format;
+        if (selectedFormat) {
+          selectedFormat.textContent = info.format;
+        }
         selectedNote.textContent = info.note;
         selectedChannel.textContent = String(selectedIndex + 1).padStart(2, "0");
         closeTape();
@@ -603,7 +576,7 @@
         watchSelected.href = info.href;
         artworkBay.hidden = false;
         openTapeButton.setAttribute("aria-expanded", "true");
-        openTapeButton.textContent = "Close Tape ↑";
+        openTapeButton.textContent = "Hide Artwork Window";
       };
 
       cards.forEach((card, index) => {
