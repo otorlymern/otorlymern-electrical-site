@@ -442,7 +442,7 @@ body.video-wall-page .dropdown-content {
 }
 
 .transport-button:active {
-  --- transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .transport-button--play {
@@ -1573,6 +1573,7 @@ body.video-wall-page .video-wall-footer .footer-badges img[alt="OES circle logo"
 
   .standby-signal {
     animation: none;
+    -
   }
 
   .crt-deck-card,
