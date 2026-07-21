@@ -345,6 +345,147 @@
   padding: clamp(0.4rem, 1.5vw, 1.4rem) 0 0;
 }
 
+.immersive-toggle {
+  position: relative;
+  z-index: 6;
+  display: grid;
+  min-width: min(19rem, 86vw);
+  margin: -1.2rem auto 0;
+  padding: 0.58rem 1rem 0.48rem;
+  border: 2px solid #1d1711;
+  border-radius: 0;
+  background: #d7c9a9;
+  box-shadow:
+    inset 2px 2px #fff6d9,
+    inset -2px -2px #776b55,
+    0 0.35rem 0 rgba(43, 24, 12, 0.3);
+  color: #211a13;
+  font-family: "MSW98", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: zoom-in;
+  gap: 0.2rem;
+}
+
+.immersive-toggle small {
+  font-size: 0.68rem;
+  letter-spacing: 0.045em;
+  text-transform: none;
+}
+
+.immersive-toggle:hover,
+.immersive-toggle:focus-visible {
+  background: #eee2c4;
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.resources-desktop-page.is-immersive {
+  overflow: hidden;
+}
+
+.crt-computer.is-immersive {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.92), transparent 27rem),
+    radial-gradient(circle at 15% 44%, rgba(255, 150, 202, 0.2), transparent 28rem),
+    radial-gradient(circle at 86% 64%, rgba(96, 220, 235, 0.22), transparent 30rem),
+    linear-gradient(135deg, #ececf0 0%, #b9bbc2 23%, #72747d 54%, #d5d6da 78%, #8d8f97 100%);
+  --immersive-screen-width: min(88vw, calc((100dvh - clamp(5.5rem, 15dvh, 10rem)) * 4 / 3));
+}
+
+.crt-computer.is-immersive::before,
+.crt-computer.is-immersive::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.crt-computer.is-immersive::before {
+  z-index: 0;
+  inset: 0;
+  background:
+    repeating-linear-gradient(112deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 18px),
+    radial-gradient(circle at 50% 48%, transparent 0 52%, rgba(43, 44, 51, 0.22) 100%);
+  mix-blend-mode: soft-light;
+}
+
+.crt-computer.is-immersive::after {
+  z-index: 1;
+  top: 9%;
+  right: -8%;
+  width: min(27vw, 430px);
+  aspect-ratio: 0.86;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 47% 53% 38% 62% / 58% 43% 57% 42%;
+  background:
+    radial-gradient(circle at 31% 21%, rgba(255, 255, 255, 0.78), transparent 12%),
+    radial-gradient(circle at 52% 51%, rgba(121, 232, 239, 0.52), rgba(46, 139, 169, 0.35) 62%, rgba(255, 135, 194, 0.18));
+  filter: blur(0.7px);
+  mix-blend-mode: multiply;
+}
+
+.crt-computer.is-immersive .crt-case {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--immersive-screen-width) / 0.351);
+  max-width: none;
+  margin: 0;
+  transform: translate(-47.76%, -27.68%);
+}
+
+.crt-computer.is-immersive .crt-case::after {
+  clip-path: inset(0 0 48.6% 0);
+  filter: drop-shadow(0 1.2rem 1rem rgba(32, 14, 5, 0.46));
+}
+
+.crt-computer.is-immersive .crt-glass {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  box-shadow:
+    inset 0 0 54px rgba(0, 0, 0, 0.84),
+    0 0 30px rgba(111, 255, 238, 0.25);
+}
+
+.crt-computer.is-immersive .resources-desktop {
+  font-size: clamp(11px, 1.08vw, 17px);
+}
+
+.crt-computer.is-immersive .computer-desk {
+  display: none;
+}
+
+.crt-computer.is-immersive .immersive-toggle {
+  position: absolute;
+  z-index: 8;
+  top: clamp(0.8rem, 2.5vw, 1.6rem);
+  right: clamp(0.8rem, 2.5vw, 1.6rem);
+  min-width: 0;
+  margin: 0;
+  padding-inline: 0.82rem;
+  cursor: zoom-out;
+}
+
+.crt-computer.is-immersive .immersive-toggle small {
+  display: block;
+}
+
+.crt-computer:fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
 .crt-case {
   position: relative;
   z-index: 4;
@@ -960,6 +1101,29 @@
 
   .computer-desk {
     width: 100%;
+  }
+
+  .immersive-toggle {
+    margin-top: -0.45rem;
+    font-size: 0.72rem;
+  }
+
+  .crt-computer.is-immersive {
+    --immersive-screen-width: min(92vw, calc((100dvh - 7rem) * 4 / 3));
+  }
+
+  .crt-computer.is-immersive .resources-desktop {
+    font-size: clamp(8px, 2.25vw, 11px);
+  }
+
+  .crt-computer.is-immersive .immersive-toggle {
+    top: 0.55rem;
+    right: 0.55rem;
+    margin: 0;
+  }
+
+  .crt-computer.is-immersive .immersive-toggle small {
+    display: none;
   }
 
   .desk-leg--left {

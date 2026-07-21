@@ -65,8 +65,9 @@
       </div>
     </div>
 
-    <section class="crt-computer" aria-label="Interactive OES resources computer">
-      <div class="crt-case">
+    <section class="crt-computer" id="oes-terminal" aria-label="Interactive OES resources computer"
+      aria-describedby="immersive-mode-hint">
+      <div class="crt-case" title="Double-click the monitor frame to enter immersive mode">
         <div class="crt-bezel">
           <div class="crt-glass">
             <div class="resources-desktop oes-ui oes-ui__desktop" id="resources-desktop">
@@ -293,6 +294,12 @@
           <i></i>
         </div>
       </div>
+
+      <button class="immersive-toggle" id="immersive-toggle" type="button" aria-controls="resources-desktop"
+        aria-pressed="false">
+        <span>Enter immersive mode</span>
+        <small id="immersive-mode-hint">or double-click the monitor frame</small>
+      </button>
 
       <div class="computer-desk" aria-hidden="true">
         <div class="desk-top"></div>

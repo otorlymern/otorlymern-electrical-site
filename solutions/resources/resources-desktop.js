@@ -5,18 +5,25 @@
   const taskbarApps = document.querySelector("#taskbar-apps");
   const clock = document.querySelector("#taskbar-clock");
   const loader = document.querySelector("#terminal-loader");
+  const terminal = document.querySelector("#oes-terminal");
+  const crtCase = terminal?.querySelector(".crt-case");
+  const immersiveToggle = document.querySelector("#immersive-toggle");
 
   if (!desktop || !taskbarApps || !clock) {
     return;
   }
 
   let topZIndex = 10;
+  let bootSequenceId = 0;
+  let enteredNativeFullscreen = false;
 
   const runBootSequence = () => {
     if (!loader) {
       return;
     }
 
+    bootSequenceId += 1;
+    const currentBootSequence = bootSequenceId;
     const progressBar = loader.querySelector(".terminal-loader__bar");
     const progressText = loader.querySelector(".terminal-loader__percent");
     const bootMessage = loader.querySelector("#terminal-loader-message");
@@ -32,7 +39,23 @@
     const bootDuration = 3200;
     const bootStarted = Date.now();
 
+    loader.classList.remove("is-complete");
+    loader.removeAttribute("aria-hidden");
+    bootExtensions.forEach((extension) => extension.classList.remove("is-active"));
+
+    if (progressBar) {
+      progressBar.style.width = "0%";
+    }
+
+    if (progressText) {
+      progressText.textContent = "00%";
+    }
+
     const updateBootProgress = () => {
+      if (currentBootSequence !== bootSequenceId) {
+        return;
+      }
+
       const elapsed = Date.now() - bootStarted;
       const progress = Math.min(100, Math.round((elapsed / bootDuration) * 100));
       const activeStep = bootSteps.reduce(
@@ -66,6 +89,10 @@
       }
 
       window.setTimeout(() => {
+        if (currentBootSequence !== bootSequenceId) {
+          return;
+        }
+
         loader.classList.add("is-complete");
         loader.setAttribute("aria-hidden", "true");
       }, 250);
@@ -73,6 +100,91 @@
 
     window.requestAnimationFrame(updateBootProgress);
   };
+
+  const setImmersiveControlState = (isImmersive) => {
+    if (!immersiveToggle) {
+      return;
+    }
+
+    immersiveToggle.setAttribute("aria-pressed", String(isImmersive));
+    const label = immersiveToggle.querySelector("span");
+    const hint = immersiveToggle.querySelector("small");
+
+    if (label) {
+      label.textContent = isImmersive ? "Exit immersive mode" : "Enter immersive mode";
+    }
+
+    if (hint) {
+      hint.textContent = isImmersive ? "Escape returns to the desk" : "or double-click the monitor frame";
+    }
+  };
+
+  const exitImmersiveMode = ({ skipFullscreenExit = false } = {}) => {
+    if (!terminal?.classList.contains("is-immersive")) {
+      return;
+    }
+
+    terminal.classList.remove("is-immersive");
+    document.body.classList.remove("is-immersive");
+    setImmersiveControlState(false);
+
+    if (!skipFullscreenExit && document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
+  };
+
+  const enterImmersiveMode = () => {
+    if (!terminal || terminal.classList.contains("is-immersive")) {
+      return;
+    }
+
+    terminal.classList.add("is-immersive");
+    document.body.classList.add("is-immersive");
+    setImmersiveControlState(true);
+    runBootSequence();
+
+    if (terminal.requestFullscreen && !document.fullscreenElement) {
+      terminal.requestFullscreen({ navigationUI: "hide" })
+        .then(() => {
+          enteredNativeFullscreen = true;
+        })
+        .catch(() => {
+          enteredNativeFullscreen = false;
+        });
+    }
+  };
+
+  immersiveToggle?.addEventListener("click", () => {
+    if (terminal?.classList.contains("is-immersive")) {
+      exitImmersiveMode();
+    } else {
+      enterImmersiveMode();
+    }
+  });
+
+  crtCase?.addEventListener("dblclick", (event) => {
+    if (!event.target.closest(".crt-glass")) {
+      enterImmersiveMode();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && terminal?.classList.contains("is-immersive")) {
+      exitImmersiveMode();
+    }
+  });
+
+  document.addEventListener("fullscreenchange", () => {
+    if (document.fullscreenElement === terminal) {
+      enteredNativeFullscreen = true;
+      return;
+    }
+
+    if (enteredNativeFullscreen) {
+      enteredNativeFullscreen = false;
+      exitImmersiveMode({ skipFullscreenExit: true });
+    }
+  });
 
   const getWindow = (appName) =>
     windows.find((resourceWindow) => resourceWindow.dataset.window === appName);
