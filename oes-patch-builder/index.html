@@ -5,6 +5,18 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Modular Synth Patch Builder and Saver | Otorlymern Electrical Systems</title>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const isEmbedded = params.get("embedded") === "1";
+
+      if (isEmbedded) {
+        document.documentElement.classList.add("is-embedded");
+      } else if (window.top === window.self && params.get("standalone") !== "1") {
+        window.location.replace("/solutions/resources/?app=patch-builder");
+      }
+    })();
+  </script>
   <link href="/css/style.css" rel="stylesheet" />
   <link href="./patch-builder.css" rel="stylesheet" />
 </head>
@@ -70,12 +82,8 @@
             <button class="oe-button" data-export type="button">Export PNG</button>
           </div>
           <div class="w98-editor" role="document" aria-label="Instructions text">
-            <p><b>Patch Builder</b></p>
-            <br>Click or drag symbols onto canvas. Connect symbols with cables by clicking two nodes.<br><em>BLUE NODE =
-              CV</em>
-            <br><em>RED NODE = AUDIO</em> <br>
-            </p>
-            <p>Click a cable to delete it. <br> "Backspace" on your keyboard deletes selected symbol</p>
+            <p><b>Patch Builder</b> — Click or drag symbols onto the canvas; click two nodes to connect them.</p>
+            <p><em>Blue = CV · Red = audio</em> · Select a symbol and press Backspace to remove it.</p>
           </div>
         </div>
       </div>

@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/oes-ui/oes-ui.css" />
   <link rel="stylesheet" href="/solutions/resources/resources-desktop.css" />
+  <script src="/solutions/resources/archive-explorer.js" defer></script>
+  <script src="/solutions/resources/pdf-viewer.js" defer></script>
   <script src="/solutions/resources/resources-desktop.js" defer></script>
 </head>
 
@@ -40,7 +42,7 @@
         <li class="dropdown">
           <a href="/solutions/resources/" aria-current="page">Solutions</a>
           <ul class="dropdown-content">
-            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/resources/?app=patch-builder">Patch Builder</a></li>
             <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
             <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
             <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
@@ -144,6 +146,26 @@
                     <span class="tape-path"></span>
                   </span>
                   <span class="desktop-icon__label">Recording</span>
+                </button>
+
+                <button class="desktop-icon desktop-icon--patch oes-ui__desktop-icon" type="button"
+                  data-app="patch-builder" aria-label="Open Patch Builder">
+                  <span class="pixel-icon pixel-icon--patch" aria-hidden="true">
+                    <span class="patch-module patch-module--one"></span>
+                    <span class="patch-module patch-module--two"></span>
+                    <span class="patch-cable"></span>
+                  </span>
+                  <span class="desktop-icon__label">Patch<br />Builder</span>
+                </button>
+
+                <button class="desktop-icon desktop-icon--archive oes-ui__desktop-icon" type="button"
+                  data-app="archive-explorer" aria-label="Open OES Archive Explorer">
+                  <span class="pixel-icon pixel-icon--archive" aria-hidden="true">
+                    <span class="archive-drive-slot"></span>
+                    <span class="archive-drive-light"></span>
+                    <span class="archive-magnifier"></span>
+                  </span>
+                  <span class="desktop-icon__label">OES<br />Archive</span>
                 </button>
               </div>
 
@@ -270,6 +292,151 @@
                   </ul>
                 </div>
                 <div class="window-statusbar oes-window__status"><span>3 object(s)</span><span>OES Archive</span></div>
+              </section>
+
+              <section class="resource-window archive-explorer-window oes-window" data-window="archive-explorer"
+                data-launch-maximized aria-labelledby="archive-explorer-title" hidden
+                style="--window-left: 9%; --window-top: 7%; --window-width: 88%; --window-height: 81%;">
+                <div class="window-titlebar oes-window__title-bar">
+                  <div class="window-controls oes-window__controls">
+                    <button class="oes-window__control" type="button" data-action="close"
+                      aria-label="Close OES Archive Explorer">×</button>
+                  </div>
+                  <h2 class="oes-window__title" id="archive-explorer-title">OES Archive Explorer</h2>
+                  <div class="window-controls oes-window__controls oes-window__controls--end">
+                    <button class="oes-window__control" type="button" data-action="maximize"
+                      aria-label="Maximize OES Archive Explorer">□</button>
+                  </div>
+                </div>
+
+                <div class="archive-explorer oes-window__content" data-archive-explorer>
+                  <div class="archive-toolbar" role="toolbar" aria-label="Archive navigation">
+                    <button class="archive-toolbar__button oes-button" type="button" data-archive-back disabled
+                      aria-label="Back">← <span>Back</span></button>
+                    <button class="archive-toolbar__button oes-button" type="button" data-archive-up disabled
+                      aria-label="Up one level">↑ <span>Up</span></button>
+                    <form class="archive-search" data-archive-search role="search">
+                      <label class="archive-search__label" for="archive-search-input">Search</label>
+                      <input class="archive-search__input oes-field" id="archive-search-input" type="search"
+                        placeholder="title, brand, model, code…" autocomplete="off" data-archive-search-input />
+                      <button class="archive-toolbar__button oes-button" type="submit">Find</button>
+                      <button class="archive-toolbar__button oes-button" type="button"
+                        data-archive-clear>Clear</button>
+                    </form>
+                  </div>
+
+                  <div class="archive-address-bar">
+                    <span class="archive-address-bar__label">Address</span>
+                    <span class="archive-address-bar__path" data-archive-path>OES Archive (C:)\</span>
+                  </div>
+
+                  <div class="archive-explorer__body">
+                    <nav class="archive-tree" aria-label="Archive folders">
+                      <p class="archive-tree__heading">My Computer</p>
+                      <button class="archive-tree__item is-active" type="button" data-archive-folder="root">
+                        <span class="archive-tree__drive" aria-hidden="true"></span>
+                        OES Archive (C:)
+                      </button>
+                      <div class="archive-tree__children" data-archive-tree></div>
+                      <a class="archive-tree__manuals-link" href="/manuals/">Open full Manuals Archive</a>
+                    </nav>
+
+                    <section class="archive-file-pane" aria-label="Archive files">
+                      <div class="archive-file-pane__heading">
+                        <strong data-archive-heading>OES Archive</strong>
+                        <span data-archive-summary>Loading archive index…</span>
+                      </div>
+                      <div class="archive-column-headings" aria-hidden="true">
+                        <span>Name</span><span>Brand</span><span>Folder</span><span>Type</span>
+                      </div>
+                      <div class="archive-file-view" data-archive-view role="list">
+                        <div class="archive-loading" role="status">
+                          <span class="archive-loading__computer" aria-hidden="true"></span>
+                          Reading OES Archive (C:)…
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+
+                <div class="window-statusbar oes-window__status">
+                  <span data-archive-status>Mounting archive index…</span><span data-archive-version>OES Archive</span>
+                </div>
+              </section>
+
+              <section class="resource-window pdf-viewer-window oes-window" data-window="pdf-viewer"
+                data-launch-maximized aria-labelledby="pdf-viewer-title" hidden
+                style="--window-left: 11%; --window-top: 7%; --window-width: 86%; --window-height: 81%;">
+                <div class="window-titlebar oes-window__title-bar">
+                  <div class="window-controls oes-window__controls">
+                    <button class="oes-window__control" type="button" data-action="close"
+                      aria-label="Close OES PDF Viewer">×</button>
+                  </div>
+                  <h2 class="oes-window__title" id="pdf-viewer-title">OES PDF Viewer</h2>
+                  <div class="window-controls oes-window__controls oes-window__controls--end">
+                    <button class="oes-window__control" type="button" data-action="maximize"
+                      aria-label="Maximize OES PDF Viewer">□</button>
+                  </div>
+                </div>
+
+                <div class="pdf-viewer-app oes-window__content" data-pdf-viewer>
+                  <div class="pdf-viewer-toolbar" role="toolbar" aria-label="PDF viewer controls">
+                    <button class="pdf-viewer-button oes-button" type="button" data-pdf-previous disabled>← Prev</button>
+                    <span class="pdf-viewer-indicator" data-pdf-page>Page – / –</span>
+                    <button class="pdf-viewer-button oes-button" type="button" data-pdf-next disabled>Next →</button>
+                    <span class="pdf-viewer-toolbar__divider" aria-hidden="true"></span>
+                    <button class="pdf-viewer-button oes-button" type="button" data-pdf-zoom-out
+                      aria-label="Zoom out" disabled>−</button>
+                    <span class="pdf-viewer-indicator" data-pdf-zoom>100%</span>
+                    <button class="pdf-viewer-button oes-button" type="button" data-pdf-zoom-in
+                      aria-label="Zoom in" disabled>+</button>
+                    <button class="pdf-viewer-button oes-button" type="button" data-pdf-fit disabled>Fit</button>
+                    <span class="pdf-viewer-document-title" data-pdf-document-title>No document open</span>
+                  </div>
+
+                  <div class="pdf-viewer-viewport" data-pdf-viewport>
+                    <div class="pdf-viewer-message" data-pdf-message role="status" aria-live="polite">
+                      <span class="pdf-viewer-message__page" aria-hidden="true">PDF</span>
+                      <strong>Select a PDF from OES Archive Explorer.</strong>
+                    </div>
+                    <canvas class="pdf-viewer-canvas" data-pdf-canvas hidden></canvas>
+                    <iframe class="pdf-viewer-fallback" data-pdf-fallback title="Embedded OES PDF viewer"
+                      hidden></iframe>
+                  </div>
+                </div>
+
+                <div class="window-statusbar oes-window__status">
+                  <span data-pdf-status>Ready</span><span data-pdf-mode>OES PDF Viewer</span>
+                </div>
+              </section>
+
+              <section class="resource-window patch-builder-window oes-window" data-window="patch-builder"
+                data-launch-maximized aria-labelledby="patch-builder-title" hidden
+                style="--window-left: 12%; --window-top: 6%; --window-width: 86%; --window-height: 83%;">
+                <div class="window-titlebar oes-window__title-bar">
+                  <div class="window-controls oes-window__controls">
+                    <button class="oes-window__control" type="button" data-action="close"
+                      aria-label="Close Patch Builder">×</button>
+                  </div>
+                  <h2 class="oes-window__title" id="patch-builder-title">OES Patch Builder</h2>
+                  <div class="window-controls oes-window__controls oes-window__controls--end">
+                    <button class="oes-window__control" type="button" data-action="maximize"
+                      aria-label="Maximize Patch Builder">□</button>
+                  </div>
+                </div>
+                <div class="patch-builder-window__content oes-window__content">
+                  <div class="patch-builder-window__loading" data-patch-builder-loading role="status"
+                    aria-live="polite">
+                    <strong>Launching Patch Builder…</strong>
+                    <span>Mounting OES patch tools</span>
+                  </div>
+                  <iframe class="patch-builder-frame" data-patch-builder-frame
+                    data-src="/oes-patch-builder/index.html?embedded=1" title="OES Patch Builder"
+                    allow="clipboard-write"></iframe>
+                </div>
+                <div class="window-statusbar oes-window__status">
+                  <span data-patch-builder-status>Patch tools on standby</span><span>OES Tool</span>
+                </div>
               </section>
 
               <div class="desktop-taskbar oes-ui__status-strip">

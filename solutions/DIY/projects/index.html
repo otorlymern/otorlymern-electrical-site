@@ -1,78 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Otorlymern Electrical Solutions</title>
+  <title>DIY Audio &amp; Video Projects | Otorlymern Electrical Solutions</title>
+  <link rel="stylesheet" href="/css/system7.css/style.css">
   <link rel="stylesheet" href="/css/diystyle.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
+</head>
+
+<body class="diy-projects-page">
   <header>
-  <nav>
-    <ul class="nav-bar">
-      <li><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/systems/systems.html">Systems</a>
-        <ul class="dropdown-content">
-          <li><a href="/music/studio.html">OEStudio</a></li>
-          <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-          <li><a href="/systems/home-recording.html">Home Recording</a></li>
-          <li><a href="/video/videolibrary.html">Video Library</a></li>
-          <li><a href="/solutions/resources/index.html">Resources</a></li>
-        </ul>
-      </li>
-      <li><a href="/services/index.html">Services</a></li>
-      <li><a href="/store/">Store</a></li>
-      <li class="dropdown">
-        <a href="/solutions/index.html">Solutions</a>
-        <ul class="dropdown-content">
-                    <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
-<li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
-          <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-          <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
-          <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
-          <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
-  <main>
-    <section class="diy-section projects-section">
-      <h1 class="wiggle1">DIY Projects</h2>
-
-        <h2 class="highlighted">Audio</h3>
-      <ul>
-        <li><a href="DPGproject.html" target="_blank">Digital Pattern Generator <em>Synapse</em></a> A CMOS based pattern generator from a 1977 issue of Synapse.</li>
-        <li><a href="https://media.otorlymern-electrical.com/pdfs/diy/projects/Elctrophony(synapse).pdf" target="_blank">Electrophony <em>Synapse</em></a>Synapse project proposing the idea of Electrophony </li>
-        <li><a href="Ring MoulationAlternativesStephenBillow.pdf" target="_blank">Ring Modulation Alternatives</a>: <em>IC-based ring modulator designs from Stephen Billow’s write-up.</em></li>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/systems/systems.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li><a href="/store/">Store</a></li>
+        <li class="dropdown">
+          <a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
+            <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and
+                Synthesis</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
       </ul>
+    </nav>
+  </header>
 
-         <h2 class="highlighted">Video</h2>
-      <ul>
-      <li><a href="BlinkyLightsPolyphony.html" target="_blank">Blinky Lights: A DIY audio Interactive Light Display (Polyphony)</a>: <em>A deceptively simple way to make an A/V system on the cheap and easy</em></li><li>
-        <a href="https://media.otorlymern-electrical.com/pdfs/diy/projects/avsystediagram.pdf" target="_blank">Interactive A/V System (Synapse)</a>: <em>A complex Audio and Video Synthesis System that works with both mediums simultaneously. The Block Diagrams provided show how the system's signal path worked and how the audio and video interacted. At the time, this kind of system was expensive and completely unobtainable for the likes of you and me, but now this could be patched up (or a hodge podge version of it) with what you have in your A/V studio. Give it a shot!</em></li>
-      </ul>
-
+  <main class="projects-main">
+    <section class="projects-hero" aria-labelledby="projects-title">
+      <div class="projects-title-blob" aria-hidden="true">
+        <span class="projects-title-glare"></span>
+        <span class="projects-title-ripple projects-title-ripple--one"></span>
+        <span class="projects-title-ripple projects-title-ripple--two"></span>
+      </div>
+      <h1 id="projects-title"><span>DIY
+          <br> Projects</span></h1>
     </section>
+
+    <div class="projects-windows" aria-label="DIY audio and video project collections">
+      <section class="project-window window" aria-labelledby="audio-projects-title">
+        <div class="title-bar">
+          <button aria-label="Close Audio window" class="close"></button>
+          <h2 class="title" id="audio-projects-title">
+            <span class="threeD"><span class="project-window-name wiggle">Audio</span></span>
+          </h2>
+          <button aria-label="Resize Audio window" class="resize"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="project-list">
+            <li>
+              <a href="DPGproject.html" target="_blank" rel="noopener noreferrer">Digital Pattern Generator
+                <em>Synapse</em></a>
+              <p>A CMOS-based pattern generator from a 1977 issue of <em>Synapse</em>.</p>
+            </li>
+            <li>
+              <a href="https://media.otorlymern-electrical.com/pdfs/diy/projects/Elctrophony(synapse).pdf"
+                target="_blank" rel="noopener noreferrer">Electrophony <em>Synapse</em></a>
+              <p>A <em>Synapse</em> project proposing the idea of Electrophony.</p>
+            </li>
+            <li>
+              <a href="Ring MoulationAlternativesStephenBillow.pdf" target="_blank" rel="noopener noreferrer">Ring
+                Modulation Alternatives</a>
+              <p>IC-based ring modulator designs from Stephen Billow’s write-up.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-window window" aria-labelledby="video-projects-title">
+        <div class="title-bar">
+          <button aria-label="Close Video window" class="close"></button>
+          <h2 class="title" id="video-projects-title">
+            <span class="threeD"><span class="project-window-name wiggle2">Video</span></span>
+          </h2>
+          <button aria-label="Resize Video window" class="resize"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="project-list">
+            <li>
+              <a href="BlinkyLightsPolyphony.html" target="_blank" rel="noopener noreferrer">Blinky Lights: A DIY
+                Audio-Interactive Light Display (<em>Polyphony</em>)</a>
+              <p>A deceptively simple way to make an A/V system on the cheap and easy.</p>
+            </li>
+            <li>
+              <a href="https://media.otorlymern-electrical.com/pdfs/diy/projects/avsystediagram.pdf" target="_blank"
+                rel="noopener noreferrer">Interactive A/V System (<em>Synapse</em>)</a>
+              <p>A complex audio and video synthesis system that works with both mediums simultaneously. Its block
+                diagrams show the signal path and how the audio and video interacted. Once expensive and unobtainable,
+                a version can now be patched from gear already in an A/V studio.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <!-- Floating blobs clipped within blob-container -->
+  <footer>
+    <p>&copy; 2025 – Otorlymern Electrical Solutions – DIY – Projects</p>
+    <div class="footer-badges">
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img
+          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+          alt="Shop My Store on Reverb"></a>
+      <img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge">
+      <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif" class="footer-badges"
+        alt="World Wide Web badge">
+      <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo">
+      <a href="https://reverb.com/shop/otorlymern-electrical"><img
+          src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
+          alt="Shop My Store on Reverb"></a>
+    </div>
+  </footer>
+</body>
 
-
-  <div class="blob-container">
-    <div class="blob blob-red"></div>
-    <div class="blob blob-blue"></div>
-    <div class="blob blob-red-2"></div>
-  </div>
-
-
-  <!-- Footer -->
- <footer>
-  <p>&copy; 2025 – Otorlymern Electrical Solutions – DIY – Projects</p>
-  <div class="footer-badges">
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
-    <img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge" />
-    <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
-    <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
-  </div>
-</footer>
+</html>

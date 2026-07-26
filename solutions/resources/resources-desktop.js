@@ -195,6 +195,25 @@
   const windowTitle = (resourceWindow) =>
     resourceWindow.querySelector(".window-titlebar h2")?.textContent.trim() || "Resource";
 
+  const mountWindowApp = (resourceWindow) => {
+    const frame = resourceWindow.querySelector("[data-patch-builder-frame]");
+
+    if (!frame || frame.src) {
+      return;
+    }
+
+    const loading = resourceWindow.querySelector("[data-patch-builder-loading]");
+    const status = resourceWindow.querySelector("[data-patch-builder-status]");
+
+    frame.addEventListener("load", () => {
+      loading?.setAttribute("hidden", "");
+      status.textContent = "Patch tools ready";
+    }, { once: true });
+
+    frame.src = frame.dataset.src;
+    status.textContent = "Loading patch tools…";
+  };
+
   const setActiveWindow = (resourceWindow) => {
     windows.forEach((candidate) => candidate.classList.remove("is-active"));
     taskbarApps.querySelectorAll(".taskbar-app").forEach((button) => {
@@ -264,9 +283,22 @@
 
     resourceWindow.hidden = false;
     resourceWindow.classList.remove("is-minimized");
+    resourceWindow.classList.toggle(
+      "is-maximized",
+      resourceWindow.hasAttribute("data-launch-maximized")
+    );
+    mountWindowApp(resourceWindow);
+    resourceWindow.dispatchEvent(new CustomEvent("oes:window-open"));
     createTaskbarButton(resourceWindow);
     setActiveWindow(resourceWindow);
   };
+
+  document.addEventListener("oes:open-window", (event) => {
+    const appName = event.detail?.app;
+    if (appName) {
+      openWindow(appName);
+    }
+  });
 
   const minimizeWindow = (resourceWindow) => {
     resourceWindow.classList.add("is-minimized");
@@ -396,4 +428,9 @@
   updateClock();
   window.setInterval(updateClock, 30000);
   runBootSequence();
+
+  const requestedApp = new URLSearchParams(window.location.search).get("app");
+  if (requestedApp) {
+    openWindow(requestedApp);
+  }
 })();

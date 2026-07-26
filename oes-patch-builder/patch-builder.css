@@ -1,9 +1,6 @@
 @font-face {
   font-family: "ms-w98-ui-main";
-  src: url("./MSW98UI-Regular.woff2") format("woff2"),
-    url("./MSW98UI-Regular.woff") format("woff"),
-    url("../fonts/ms-w98-ui-main/MSW98UI-Regular.woff2") format("woff2"),
-    url("../fonts/ms-w98-ui-main/MSW98UI-Regular.woff") format("woff");
+  src: url("/fonts/MSW98UI-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,10 +8,7 @@
 
 @font-face {
   font-family: "ms-w98-ui-main";
-  src: url("./MSW98UI-Bold.woff2") format("woff2"),
-    url("./MSW98UI-Bold.woff") format("woff"),
-    url("../fonts/ms-w98-ui-main/MSW98UI-Bold.woff2") format("woff2"),
-    url("../fonts/ms-w98-ui-main/MSW98UI-Bold.woff") format("woff");
+  src: url("/fonts/MSW98UI-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -488,4 +482,217 @@ footer {
 .footer-badges {
   display: inline;
   max-height: 50px;
+}
+
+/* Embedded OES desktop application */
+html.is-embedded,
+html.is-embedded body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #c0c0c0;
+}
+
+.is-embedded .patch-builder-body > header,
+.is-embedded .patch-builder-body > footer,
+.is-embedded .title-section {
+  display: none;
+}
+
+.is-embedded .patch-builder-page {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  padding: 5px;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 5px;
+}
+
+.is-embedded .workspace-intro {
+  min-width: 0;
+  margin: 0;
+}
+
+.is-embedded .instructions-window {
+  height: auto;
+  min-height: 0;
+}
+
+.is-embedded .instructions-window .w98-titlebar {
+  height: 22px;
+}
+
+.is-embedded .instructions-window .w98-title {
+  font-size: 11px;
+}
+
+.is-embedded .instructions-window .w98-body {
+  display: grid;
+  padding: 4px;
+  overflow: visible;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+}
+
+.is-embedded .instructions-window .instructions-toolbar {
+  margin: 0;
+}
+
+.is-embedded .instructions-window .oe-button {
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.is-embedded .instructions-window .w98-editor {
+  display: flex;
+  min-height: 0;
+  padding: 4px 7px;
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 1.15;
+  white-space: nowrap;
+  gap: 0.8em;
+}
+
+.is-embedded .instructions-window .w98-editor p {
+  display: inline;
+  margin: 0;
+}
+
+.is-embedded .workspace {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  gap: 5px;
+  grid-template-columns: minmax(120px, 0.82fr) minmax(300px, 2.5fr) minmax(120px, 0.82fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.is-embedded .canvas-window {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.is-embedded .palette-audio-sources {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.is-embedded .palette-audio-modifiers {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.is-embedded .palette-cv-sources {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.is-embedded .palette-cv-modifiers {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.is-embedded .workspace .w98-window {
+  min-width: 0;
+  min-height: 0;
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.is-embedded .workspace .w98-titlebar {
+  height: 24px;
+  padding-inline: 6px 4px;
+}
+
+.is-embedded .workspace .w98-title {
+  font-size: 11px;
+}
+
+.is-embedded .workspace .w98-close {
+  width: 17px;
+  height: 17px;
+}
+
+.is-embedded .workspace .w98-body {
+  padding: 5px;
+}
+
+.is-embedded .workspace .icon-grid {
+  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+  gap: 4px;
+}
+
+.is-embedded .workspace .palette-icon {
+  min-height: 62px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.is-embedded .workspace .palette-icon img {
+  width: 42px;
+  height: 42px;
+}
+
+.is-embedded .workspace .palette-icon .icon-name {
+  overflow: hidden;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.is-embedded .workspace .palette-hint {
+  display: none;
+}
+
+.is-embedded .status-line {
+  margin: 4px 0 0;
+  overflow: hidden;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  html.is-embedded,
+  html.is-embedded body {
+    overflow: auto;
+  }
+
+  .is-embedded .patch-builder-page {
+    display: block;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .is-embedded .instructions-window {
+    margin-bottom: 5px;
+  }
+
+  .is-embedded .instructions-window .w98-editor {
+    white-space: normal;
+  }
+
+  .is-embedded .workspace {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(210px, auto);
+  }
+
+  .is-embedded .canvas-window,
+  .is-embedded .palette-audio-sources,
+  .is-embedded .palette-audio-modifiers,
+  .is-embedded .palette-cv-sources,
+  .is-embedded .palette-cv-modifiers {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .is-embedded .canvas-window {
+    min-height: 360px;
+    grid-row: 1;
+  }
 }
