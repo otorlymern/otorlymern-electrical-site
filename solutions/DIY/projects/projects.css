@@ -300,6 +300,44 @@ body.diy-projects-page {
   color: #fff;
 }
 
+.projects-windows .project-group-title {
+  display: flex;
+  margin: 0 0 1.15rem;
+  padding: 0.4rem 0.55rem;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  background: #c0c0c0;
+  box-shadow:
+    inset 1px 1px 0 #dfdfdf,
+    inset -1px -1px 0 #808080;
+  color: #111;
+  font-family: "MSW98UI-Bold", sans-serif;
+  font-size: 0.85em;
+  letter-spacing: 0.035em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.projects-windows .project-group-title--archive {
+  margin-top: 2rem;
+  border-color: #808080 #000 #000 #808080;
+  background: #000080;
+  color: #fff;
+  box-shadow: none;
+}
+
+.projects-windows .project-group-count {
+  margin-left: auto;
+  font-family: "MSW98UI", sans-serif;
+  font-size: 0.78em;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
 .projects-windows .project-list {
   width: 100%;
   margin: 0;
@@ -312,6 +350,10 @@ body.diy-projects-page {
 .projects-windows .project-list>li {
   margin: 0 0 1.35em;
   padding-left: 0.25em;
+}
+
+.projects-windows .project-list>li:last-child {
+  margin-bottom: 0;
 }
 
 .projects-windows .project-list a,
@@ -327,6 +369,37 @@ body.diy-projects-page {
   margin: 0.35em 0 0;
   color: #e7e7e7;
   line-height: 1.35;
+}
+
+.archive-shortcut {
+  width: min(100%, 58rem);
+  margin: clamp(2rem, 5vw, 5rem) auto 0;
+  padding: 0.75rem 1rem;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  background: #c0c0c0;
+  box-shadow:
+    inset 1px 1px 0 #dfdfdf,
+    inset -1px -1px 0 #808080,
+    3px 3px 0 rgba(0, 0, 0, 0.24);
+  color: #111;
+  font-family: "MSW98UI", sans-serif;
+  font-size: 0.9em;
+  line-height: 1.35;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.archive-shortcut a,
+.archive-shortcut a:visited {
+  color: #000080;
+  font-weight: 700;
+}
+
+.archive-shortcut a:hover,
+.archive-shortcut a:focus-visible {
+  background: #000080;
+  color: #fff;
 }
 
 @keyframes project-window-float {
