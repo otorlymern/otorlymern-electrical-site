@@ -5,15 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Otorlymern Electrical Systems store desktop for OES merch, printed matter, and weird shop objects."
+    content="The Otorlymern Electrical Systems store is offline while the storefront is being prepared."
   />
-  <title>OES Store</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>OES Store — Offline</title>
   <link rel="stylesheet" href="/store/store.css" />
 </head>
 <body class="store-page">
-  <a class="skip-link" href="#product-grid">Skip to catalog</a>
+  <main class="store-desktop" id="store-offline">
+    <header class="desktop-menu" aria-label="OES menu">
+      <a class="desktop-brand" href="/index.html">OES</a>
+      <nav class="desktop-nav" aria-label="Site navigation">
+        <a href="/index.html">Home</a>
+        <a href="/systems/systems.html">Systems</a>
+        <a href="/services/index.html">Services</a>
+        <a href="/solutions/resources/index.html">Solutions</a>
+      </nav>
+    </header>
 
-  <main class="store-desktop" id="store-desktop">
+    <section class="desktop-workspace">
+      <article
+        class="store-window is-open is-active"
+        style="--window-x: max(12px, calc(50vw - 280px)); --window-y: 18vh; --window-width: min(560px, calc(100vw - 24px));"
+      >
+        <header class="window-titlebar">
+          <span class="window-title-icon" aria-hidden="true"></span>
+          <h1>OES Store</h1>
+        </header>
+        <div class="window-pane">
+          <p><strong>The store is offline for now.</strong></p>
+          <p>We’re still getting the shelves ready. Please check back later.</p>
+          <a class="store-button" href="/index.html">Return home</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="desktop-taskbar">
+      <a class="start-button" href="/index.html">OES</a>
+      <div class="taskbar-status">Store offline</div>
+    </footer>
+  </main>
+
+  <main class="store-desktop" id="store-desktop" hidden aria-hidden="true" style="display: none;">
     <header class="desktop-menu" aria-label="OES store menu">
       <a class="desktop-brand" href="/index.html">OES</a>
       <nav class="desktop-nav" aria-label="Store navigation">
@@ -21,7 +54,6 @@
         <a href="/systems/systems.html">Systems</a>
         <a href="/services/index.html">Services</a>
         <a href="/solutions/resources/index.html">Solutions</a>
-        <a href="/store/" aria-current="page">Store</a>
       </nav>
       <time class="desktop-clock" id="desktop-clock" datetime="">00:00</time>
     </header>
@@ -135,6 +167,5 @@
     </footer>
   </main>
 
-  <script src="/store/store.js"></script>
 </body>
 </html>
