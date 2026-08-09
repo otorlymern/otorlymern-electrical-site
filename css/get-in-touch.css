@@ -1,0 +1,115 @@
+/* Shared animated contact badge for OES landing pages. */
+
+.get-in-touch-link {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+  filter: drop-shadow(4px 7px 3px rgba(0, 0, 0, 0.28));
+  transition: filter 180ms ease;
+}
+
+.get-in-touch-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.get-in-touch-link:hover,
+.get-in-touch-link:focus-visible {
+  filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.34)) brightness(1.08);
+}
+
+.get-in-touch-link:focus-visible {
+  outline: 3px dashed currentColor;
+  outline-offset: 5px;
+}
+
+.get-in-touch-footer {
+  position: relative;
+  margin-top: clamp(5.5rem, 11vw, 8.5rem);
+}
+
+.get-in-touch-link--footer {
+  position: absolute;
+  z-index: 5;
+  bottom: calc(100% - 1.15rem);
+  width: clamp(125px, 16vw, 190px);
+}
+
+.get-in-touch-link--left {
+  left: clamp(0.65rem, 2.5vw, 2rem);
+  transform: rotate(-2deg);
+}
+
+.get-in-touch-link--right {
+  right: clamp(0.65rem, 2.5vw, 2rem);
+  transform: rotate(2deg);
+}
+
+.home-page .reverb-sticker {
+  top: 90px;
+  bottom: auto;
+}
+
+.get-in-touch-link--home {
+  --get-in-touch-start: 158px;
+  position: fixed;
+  z-index: 59;
+  top: var(--get-in-touch-start);
+  left: 12px;
+  width: clamp(100px, 11vw, 145px);
+  animation: get-in-touch-screen-roam 30s ease-in-out infinite alternate;
+  will-change: top, transform;
+}
+
+.get-in-touch-link--home:hover,
+.get-in-touch-link--home:focus-visible {
+  animation-play-state: paused;
+}
+
+@keyframes get-in-touch-screen-roam {
+  0% {
+    top: var(--get-in-touch-start);
+    transform: translateX(0) rotate(-3deg);
+  }
+
+  30% {
+    transform: translateX(18px) rotate(2deg);
+  }
+
+  65% {
+    transform: translateX(3px) rotate(-1deg);
+  }
+
+  100% {
+    top: calc(100vh - 116px);
+    transform: translateX(22px) rotate(3deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page .reverb-sticker {
+    top: 76px;
+    bottom: auto;
+  }
+
+  .get-in-touch-link--home {
+    --get-in-touch-start: 136px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .get-in-touch-link--home {
+    animation: none;
+  }
+}
+
+@media print {
+  .get-in-touch-footer {
+    margin-top: 0;
+  }
+
+  .get-in-touch-link {
+    display: none;
+  }
+}

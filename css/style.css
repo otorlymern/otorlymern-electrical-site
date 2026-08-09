@@ -665,8 +665,7 @@ footer {
   opacity: 0.62;
   transform: rotate(-1.4deg);
   filter:
-    drop-shadow(2px 5px 3px rgba(52, 27, 0, 0.18))
-    saturate(0.72);
+    drop-shadow(2px 5px 3px rgba(52, 27, 0, 0.18)) saturate(0.72);
   clip-path: polygon(0 3%, 5% 0, 12% 2%, 19% 0, 28% 3%, 37% 1%, 48% 3%, 59% 0, 70% 2%, 82% 0, 91% 3%, 100% 1%, 99% 95%, 92% 100%, 82% 97%, 72% 100%, 61% 97%, 49% 100%, 38% 98%, 27% 100%, 17% 96%, 7% 100%, 0 96%);
 }
 
@@ -941,6 +940,7 @@ footer {
   animation: wiggle 40s infinite alternate ease-in-out;
 }
 
+/* Blobs */
 .blob-container {
   position: fixed;
   inset: 0;
@@ -1703,7 +1703,7 @@ body.home-front-panel img.footer-badges {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media {
 
   body.home-front-panel *,
   body.home-front-panel *::before,
@@ -1783,7 +1783,7 @@ body.home-front-panel img.footer-badges {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media {
   .blob {
     animation: none;
   }
@@ -1951,7 +1951,7 @@ body.home-front-panel img.footer-badges {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media {
   .oes-store-popup {
     transition: none;
     transform: none;

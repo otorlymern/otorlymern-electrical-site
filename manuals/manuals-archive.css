@@ -1682,6 +1682,7 @@ body.archive-glitz .recent-units li:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   body.archive-glitz button.manual-result,
   body.archive-glitz button.manual-result .result-title,
   body.archive-glitz button.recent-unit,
@@ -1779,7 +1780,7 @@ body.archive-glitz footer {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media {
 
   body.archive-glitz *,
   body.archive-glitz *::before,
