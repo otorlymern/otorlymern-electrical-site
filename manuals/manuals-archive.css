@@ -597,6 +597,8 @@ button:focus-visible,
 }
 
 .viewer-panel {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--arc-border);
   border-radius: 16px;
   background: linear-gradient(170deg, rgba(132, 122, 125, 0.449), rgba(151, 149, 150, 0.95));
@@ -605,8 +607,11 @@ button:focus-visible,
 
 .crt-viewer-frame {
   position: relative;
+  flex: 1 1 auto;
+  width: 100%;
   border-radius: 12px;
-  min-height: 620px;
+  min-height: clamp(720px, 88vh, 1080px);
+  min-height: clamp(720px, 88dvh, 1080px);
   overflow: hidden;
   border: 1px solid rgba(255, 220, 185, 0.22);
   background: #000;
@@ -748,7 +753,8 @@ button:focus-visible,
   }
 
   .crt-viewer-frame {
-    min-height: 72vh;
+    min-height: max(680px, 88vh);
+    min-height: max(680px, 88dvh);
   }
 }
 
@@ -772,6 +778,11 @@ button:focus-visible,
 
   .pdf-toolbar {
     justify-content: flex-start;
+  }
+
+  .crt-viewer-frame {
+    min-height: max(560px, 90vh);
+    min-height: max(560px, 90dvh);
   }
 }
 
