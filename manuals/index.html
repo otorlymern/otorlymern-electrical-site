@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OES Manuals Archive | Vintage Audio Manuals & Support</title>
+  <title>Otorlymern A/V Archive | Manuals, Schematics, Books &amp; More</title>
   <meta name="description"
-    content="Find your Otorlymern Electrical Systems manual fast by Manual Code or model. Vintage audio manuals, support links, service and restoration help." />
+    content="Explore the Otorlymern Electrical Systems A/V Archive: more than 1,000 manuals, schematics, books, magazines, technical articles, DIY projects, and archived webpages." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://otorlymern-electrical.com/manuals/" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -16,9 +16,9 @@
   <script type="application/ld+json" id="archive-page-jsonld">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "OES Manuals Archive",
-    "description": "Manual lookup and support portal for Otorlymern Electrical Systems vintage audio units.",
+    "@type": "CollectionPage",
+    "name": "Otorlymern Electrical Systems A/V Archive",
+    "description": "An expansive audio and video resource library of manuals, schematics, books, magazines, technical articles, DIY projects, and archived webpages.",
     "url": "https://otorlymern-electrical.com/manuals/"
   }
   </script>
@@ -65,9 +65,12 @@
     <section class="archive-hero title-section reveal-on-scroll">
       <div class="archive-title-blob" aria-hidden="true"></div>
       <div class="title-container archive-title-container">
-        <h1 class="threeD archive-title archive-chrome-title archive-mouse-reactive" data-text="MANUALS ARCHIVE"><span
-            class="wiggle-title">Manuals Archive</span></h1>
-        <p class="archive-subtitle archive-text-plate"> OES's database of manuals, schematics, diy projects, articls,
+        <p class="archive-kicker">Otorlymern Electrical Systems</p>
+        <h1 class="threeD archive-title archive-chrome-title archive-mouse-reactive"><span class="wiggle-title">OES
+            Audio / Video Resource Archive
+            Archive</span></h1>
+        <p class="archive-subtitle archive-text-plate">
+          OES's database of manuals, schematics, diy projects, articls,
           books, archived webpages and more. Anything helpful in learning everything A/V related from the basics to the
           sickeningly niche.<br>
           Search the name of a unit to find the manual and other related documents or try keywords like:techniques, diy,
@@ -85,18 +88,20 @@
     </button>
 
     <div class="archive-layout">
-      <aside id="archiveSidebar" class="archive-sidebar archive-metal-panel" aria-label="Manual lookup tools">
+      <aside id="archiveSidebar" class="archive-sidebar archive-metal-panel" aria-label="A/V Archive search tools">
         <section class="side-block archive-metal-panel">
-          <h2>Find Your Manual</h2>
-          <form id="manualSearchForm" class="search-form" role="search" aria-label="Search manuals">
-            <label for="manualSearchInput">Manual Code or Model Keyword</label>
+          <h2>Search the OES Audio Video Resource Archive</h2>
+          <form id="manualSearchForm" class="search-form" role="search" aria-label="Search the A/V Archive">
+            <label for="manualSearchInput">Title, Subject, Maker, Model, or Manual Code</label>
             <div class="search-row">
-              <input id="manualSearchInput" name="q" type="search" placeholder="e.g., OES-REVERB-011 or A77"
-                autocomplete="off" />
+              <input id="manualSearchInput" name="q" type="search"
+                placeholder="e.g., feedback, video synthesis, Revox A77" autocomplete="off" />
               <button type="submit">Find</button>
             </div>
           </form>
-          <p class="side-help">Exact code match checks sold-unit codes first, then manual codes.</p>
+          <p class="side-help">Search for resources like manuals, schematics, books, magazines, projects, and technical
+            / educational documents spanningf from the 60s to the early 2010s.
+          </p>
           <div class="search-results-window">
             <div class="search-results-titlebar" aria-hidden="true">
               <span>Search Results</span>
@@ -104,7 +109,7 @@
               <span class="search-window-controls">_ □ ×</span>
             </div>
             <div id="searchStatus" class="search-status" role="status" aria-live="polite"></div>
-            <ul id="manualSearchResults" class="manual-results" aria-label="Manual search results"></ul>
+            <ul id="manualSearchResults" class="manual-results" aria-label="OES-A/V-RES-ARC search results"></ul>
           </div>
         </section>
 
@@ -152,10 +157,10 @@
         </section>
       </aside>
 
-      <section class="archive-main" aria-label="Manual viewer">
+      <section class="archive-main" aria-label="Archive document viewer">
         <article class="manual-meta archive-metal-panel" aria-live="polite">
           <div class="manual-meta-head">
-            <h2 id="manualTitle">Select a manual</h2>
+            <h2 id="manualTitle">Select a document</h2>
             <div class="meta-actions">
               <button id="copyShareButton" type="button">Copy Share Link</button>
               <a id="openPdfExternal" href="#" target="_blank" rel="noopener noreferrer">Open PDF</a>
@@ -185,13 +190,13 @@
           <p id="manualNotes" class="manual-notes"></p>
         </article>
 
-        <article class="viewer-panel archive-metal-panel" aria-label="PDF manual viewer">
+        <article class="viewer-panel archive-metal-panel" aria-label="Archive PDF viewer">
           <div class="crt-viewer-frame">
             <div class="crt-viewer-glow" aria-hidden="true"></div>
             <div class="crt-viewer-scanlines" aria-hidden="true"></div>
 
             <div id="viewerEmpty" class="viewer-empty">
-              Choose a manual from search or recent sold units.
+              Choose a document from search or recent sold units.
             </div>
 
             <div id="pdfJsContainer" class="pdfjs-container is-hidden">
@@ -214,11 +219,11 @@
   </main>
 
   <footer class="oes-action-footer">
-    <a class="footer-gif-link footer-gif-link--contact"
-      href="mailto:contact@otorlymern-electrical.com" aria-label="Email Otorlymern Electrical Systems">
+    <a class="footer-gif-link footer-gif-link--contact" href="mailto:contact@otorlymern-electrical.com"
+      aria-label="Email Otorlymern Electrical Systems">
       <img src="/images/buttons/get-in-touch-transparent-bell.gif" alt="Get in touch with OES" />
     </a>
-    <p>&copy; 2026 – Otorlymern Electrical Systems – Manuals Archive</p>
+    <p>&copy; 2026 – Otorlymern Electrical Systems – A/V Archive</p>
     <div class="footer-badges">
       <a href="https://reverb.com/shop/otorlymern-electrical" target="_blank" rel="noopener noreferrer"><img
           src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
@@ -229,12 +234,12 @@
       <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
     </div>
     <a class="footer-gif-link footer-gif-link--resources" href="/manuals/"
-      aria-label="Search the OES Manuals Archive for more resources">
+      aria-label="Search the Otorlymern A/V Archive for more resources">
       <img src="/images/buttons/moreresourcessimplegif.gif" alt="Click for more resources" />
     </a>
   </footer>
 
-  <script src="/manuals/manuals-archive.js" defer></script>
+  <script src="/manuals/manuals-archive.js?v=20260820-av-archive" defer></script>
   <script>
     document.querySelectorAll(
       ".archive-hero, .archive-title, .archive-metal-panel, .side-block, .manual-meta, .viewer-panel, .print-note, .manual-results li, .recent-units li, .text-link, .meta-actions button, .meta-actions a, .sidebar-toggle"
