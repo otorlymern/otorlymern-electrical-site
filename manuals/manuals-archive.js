@@ -632,7 +632,7 @@
           new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
         );
       });
-      updateStatus(`Showing all manuals (${state.filteredManuals.length}).`);
+      updateStatus(`Showing all archive documents (${state.filteredManuals.length}).`);
       return;
     }
 
@@ -647,10 +647,10 @@
 
     state.filteredManuals = fuzzySearchManuals(trimmed);
     if (!state.filteredManuals.length) {
-      updateStatus("No manuals matched that query.");
+      updateStatus("No archive documents matched that query.");
     } else {
       updateStatus(
-        `Found ${state.filteredManuals.length} matching manual${state.filteredManuals.length === 1 ? "" : "s"}.`,
+        `Found ${state.filteredManuals.length} matching archive document${state.filteredManuals.length === 1 ? "" : "s"}.`,
       );
     }
   }
@@ -939,7 +939,7 @@
       await loadData();
     } catch (error) {
       updateStatus("Could not load archive data. Please contact OES support.");
-      els.viewerEmpty.textContent = "Manual archive data failed to load.";
+      els.viewerEmpty.textContent = "Archive data failed to load.";
       return;
     }
 
