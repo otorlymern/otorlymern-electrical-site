@@ -92,6 +92,17 @@ body.manuals-archive-page .nav-bar a:focus-visible {
   gap: 1rem;
 }
 
+@media (min-width: 981px) {
+  .archive-layout {
+    --reader-overhang: clamp(180px, 16vw, 260px);
+    margin-bottom: var(--reader-overhang);
+  }
+
+  .archive-main {
+    height: calc(100% + var(--reader-overhang));
+  }
+}
+
 .archive-sidebar {
   position: sticky;
   top: 8px;
@@ -1109,6 +1120,9 @@ body.archive-glitz .archive-title-blob {
 body.archive-glitz .archive-title-container {
   position: relative;
   z-index: 3;
+  width: 100%;
+  min-width: 0;
+  perspective: none;
 }
 
 body.archive-glitz .archive-kicker {
@@ -1138,11 +1152,15 @@ body.archive-glitz .archive-title-container:hover .archive-title-blob {
 
 body.archive-glitz .archive-title.archive-chrome-title {
   position: relative;
-  font-size: clamp(4rem, 13vw, 11.5rem);
-  line-height: 0.84;
-  letter-spacing: -0.07em;
+  max-width: min(100%, 70rem);
+  font-family: "Lyno-Stan", sans-serif;
+  font-size: clamp(3.25rem, 7vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
   margin: 0 auto 1rem;
+  transform: none;
+  transform-style: flat;
   background:
     linear-gradient(120deg,
       #ffffff 0%,
@@ -1162,8 +1180,8 @@ body.archive-glitz .archive-title.archive-chrome-title {
     drop-shadow(0 0 0.06em rgba(255, 107, 157, 0.8)) drop-shadow(0 0 0.22em rgba(232, 232, 236, 0.5)) drop-shadow(0 0 0.4em rgba(125, 211, 252, 0.35));
 }
 
-body.archive-glitz .archive-title.archive-chrome-title .wiggle-title {
-  animation: wiggle-title 48s infinite ease-in-out;
+body.archive-glitz .archive-title.archive-chrome-title .archive-title-text {
+  display: block;
 }
 
 body.archive-glitz .archive-title.archive-chrome-title:hover {
@@ -1786,8 +1804,8 @@ body.archive-glitz footer {
   }
 
   body.archive-glitz .archive-title.archive-chrome-title {
-    font-size: clamp(3.4rem, 18vw, 6.5rem);
-    letter-spacing: -0.055em;
+    font-size: clamp(2.75rem, 12vw, 4.75rem);
+    letter-spacing: -0.035em;
   }
 
   body.archive-glitz .archive-kicker {

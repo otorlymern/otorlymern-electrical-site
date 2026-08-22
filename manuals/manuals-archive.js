@@ -966,9 +966,15 @@
     }
   }
 
-  window.addEventListener("DOMContentLoaded", () => {
+  function startInitialize() {
     initialize().catch(() => {
       updateStatus("Initialization failed. Please refresh or contact OES.");
     });
-  });
+  }
+
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", startInitialize, { once: true });
+  } else {
+    startInitialize();
+  }
 })();
