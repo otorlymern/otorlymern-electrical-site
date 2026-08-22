@@ -1,0 +1,822 @@
+@font-face {
+  font-family: "Lyno-Walt";
+  src: url("/Lyno-Walt 2.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MSW98UI";
+  src: url("/fonts/MSW98UI-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MSW98UI-Bold";
+  src: url("/fonts/MSW98UI-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+body.discography-page {
+  --discography-cream: #f7ead0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  isolation: isolate;
+  overflow-x: hidden;
+  background-color: #12171c;
+  background-image:
+    linear-gradient(rgba(112, 229, 239, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 229, 239, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(112, 229, 239, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 229, 239, 0.025) 1px, transparent 1px),
+    url("/images/tape-audio-0090.gif"),
+    radial-gradient(circle at 42% 14%, rgba(126, 69, 40, 0.72), transparent 31rem),
+    linear-gradient(145deg, #28313a 0%, #17191b 43%, #080c11 100%);
+  background-repeat: repeat, repeat, repeat, repeat, repeat, no-repeat, no-repeat;
+  background-size: 72px 72px, 72px 72px, 18px 18px, 18px 18px, 76px 76px, auto, auto;
+  background-blend-mode: normal, normal, normal, normal, soft-light, screen, normal;
+  color: var(--discography-cream);
+}
+
+.discography-page *,
+.discography-page *::before,
+.discography-page *::after {
+  box-sizing: border-box;
+}
+
+.discography-page header,
+.discography-page main,
+.discography-page footer {
+  position: relative;
+  z-index: 2;
+}
+
+.discography-page header {
+  z-index: 30;
+}
+
+.discography-page .nav-bar {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  border: 2px solid;
+  border-color: #f0d7b1 #2a1308 #2a1308 #f0d7b1;
+  background: #7b3f00;
+  box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.48);
+  justify-content: flex-start;
+}
+
+.discography-page .nav-bar a:focus-visible,
+.discography-page .nav-bar a:hover,
+.discography-page .nav-bar .dropdown:hover>a,
+.discography-page nav .dropdown-content a:hover {
+  background: #1d3375;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
+.discography-page .dropdown-content {
+  margin: 0;
+  text-align: left;
+}
+
+.discography-main {
+  width: min(100%, 96rem);
+  margin: 0;
+  padding: clamp(1.25rem, 4vw, 4.5rem) 0 clamp(5rem, 10vw, 9rem);
+}
+
+.discography-hero {
+  position: relative;
+  display: grid;
+  width: min(94vw, 72rem);
+  min-height: clamp(260px, 42vw, 500px);
+  margin: 0 0 clamp(3.5rem, 8vw, 8rem) clamp(0.2rem, 5vw, 5rem);
+  isolation: isolate;
+  perspective: 1100px;
+  align-items: center;
+  justify-items: start;
+}
+
+.discography-hero-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 75rem;
+  transform: translateX(clamp(0.4rem, 5vw, 5.2rem));
+}
+
+.discography-hero h1 {
+  margin: 0;
+  font-family: "Lyno-Walt", "Lyno-Ulys", sans-serif;
+  font-size: clamp(2.9rem, 8.4vw, 8rem);
+  font-weight: 700;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+}
+
+.discography-hero h1 span {
+  display: block;
+  padding: 0.1em 0.15em 0.24em;
+  color: #fffdf7;
+  -webkit-text-stroke: 1px #111;
+  text-shadow:
+    0 1px 0 #e3d1b6,
+    0 2px 0 #bd9a72,
+    0 3px 0 #8b6241,
+    0 5px 0 #58331f,
+    0 8px 0 #17100c,
+    0 15px 18px rgba(0, 0, 0, 0.62);
+  transform-origin: 37% 72%;
+  animation: discography-title-waterbed 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.discography-hero p {
+  width: min(37rem, 78vw);
+  margin: clamp(1.2rem, 3vw, 2.5rem) 0 0 clamp(0.6rem, 5vw, 4.75rem);
+  padding: 0.65rem 0.8rem;
+  border: 2px solid;
+  border-color: #fff #3a1a0c #3a1a0c #fff;
+  background: rgba(123, 63, 0, 0.92);
+  box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.46);
+  color: #fff5e1;
+  font-family: "MSW98UI", Chicago, sans-serif;
+  font-size: clamp(0.95rem, 1.7vw, 1.3rem);
+  line-height: 1.35;
+  text-align: left;
+}
+
+.discography-title-blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 38%;
+  width: min(700px, 72vw);
+  aspect-ratio: 1.65;
+  overflow: hidden;
+  border: 2px solid rgba(54, 24, 14, 0.94);
+  border-radius: 58% 42% 54% 46% / 48% 58% 42% 52%;
+  background:
+    radial-gradient(ellipse at 28% 20%, rgba(255, 244, 220, 0.86), transparent 12%),
+    radial-gradient(ellipse at 67% 72%, rgba(205, 144, 102, 0.72), transparent 29%),
+    radial-gradient(ellipse at 44% 46%, #b95f3b 0%, #7b3f00 42%, #651d34 74%, #260d16 100%);
+  box-shadow:
+    inset 24px 28px 48px rgba(255, 255, 255, 0.24),
+    inset -36px -42px 62px rgba(10, 3, 31, 0.6),
+    0 9px 0 rgba(48, 20, 10, 0.82),
+    0 28px 42px rgba(0, 0, 0, 0.48);
+  transform: translate(-50%, -50%);
+  transform-origin: center 65%;
+  animation: discography-blob-waterbed 7s ease-in-out infinite;
+  will-change: transform, border-radius;
+}
+
+.discography-title-glare {
+  position: absolute;
+  top: 13%;
+  left: 21%;
+  width: 25%;
+  height: 14%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  filter: blur(10px);
+  opacity: 0.86;
+  transform: rotate(-14deg);
+  animation: discography-glare-drift 7s ease-in-out infinite;
+}
+
+.discography-title-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38%;
+  aspect-ratio: 2.2;
+  border: 2px solid rgba(255, 230, 194, 0.7);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 6px rgba(205, 144, 102, 0.13),
+    0 0 18px rgba(255, 211, 166, 0.34);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.35);
+  animation: discography-blob-ripple 7s ease-out infinite;
+}
+
+.discography-title-ripple--two {
+  animation-delay: -3.5s;
+}
+
+.release-stack {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 94rem);
+  margin: 0;
+  padding: 0 clamp(0.15rem, 2vw, 1.5rem);
+  gap: clamp(3.25rem, 7vw, 7rem);
+}
+
+.release-entry {
+  position: relative;
+  display: grid;
+  width: min(77vw, 54rem);
+  margin: 0;
+  align-self: flex-start;
+  contain-intrinsic-size: 20rem 58rem;
+  content-visibility: auto;
+}
+
+.release-entry:nth-child(even) {
+  align-self: flex-end;
+}
+
+.release-entry:nth-child(4n + 1) {
+  margin-left: clamp(0rem, 3vw, 3.5rem);
+}
+
+.release-entry:nth-child(4n + 2) {
+  width: min(70vw, 48rem);
+  margin-right: clamp(0rem, 4vw, 4.5rem);
+}
+
+.release-entry:nth-child(4n + 3) {
+  width: min(82vw, 60rem);
+  margin-left: clamp(0rem, 8vw, 8rem);
+}
+
+.release-entry:nth-child(4n) {
+  width: min(68vw, 45rem);
+  margin-right: clamp(0rem, 10vw, 10rem);
+}
+
+.release-entry--with-media {
+  width: min(91vw, 78rem) !important;
+  grid-template-columns: minmax(20rem, 1.35fr) minmax(16rem, 0.9fr);
+  align-items: start;
+}
+
+.release-window,
+.media-window {
+  --primary: #1c130e;
+  --secondary: #f2e5ca;
+  --tertiary: #a16f4a;
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  overflow: visible;
+  border: 2px solid #23130b;
+  background: rgba(247, 234, 208, 0.97);
+  color: #21150e;
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.72),
+    0 18px 42px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(255, 238, 206, 0.36);
+  transform-origin: center;
+  animation: release-window-wiggle 34s infinite ease-in-out;
+}
+
+.release-entry:nth-child(even) .release-window {
+  animation-name: release-window-wiggle-reverse;
+  animation-duration: 39s;
+}
+
+.release-entry:nth-child(3n) .release-window {
+  animation-delay: -11s;
+}
+
+.release-window .title-bar,
+.media-window .title-bar {
+  height: clamp(2.4rem, 4.2vw, 4rem);
+  overflow: visible;
+}
+
+.release-window .title-bar .title,
+.media-window .title-bar .title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0 0.4rem;
+  overflow: visible;
+  background: var(--secondary);
+  box-shadow: none;
+  line-height: 0.78;
+  text-align: left;
+}
+
+.release-window .release-year {
+  display: inline-block;
+  padding: 0.08em 0.1em 0.17em;
+  background:
+    linear-gradient(180deg, #fff 0%, #f8ead0 16%, #aa7c58 38%, #fff4dc 53%, #65422c 76%, #e8d3b1 100%);
+  background-clip: text;
+  color: #f2e5ca;
+  font-family: "MSW98UI-Bold", Chicago, sans-serif;
+  font-size: clamp(1.7rem, 4.2vw, 4.4rem);
+  font-weight: normal;
+  letter-spacing: -0.055em;
+  line-height: 0.78;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(32, 18, 11, 0.9);
+  text-shadow:
+    0 1px 0 #fff,
+    0 2px 0 #d7ba91,
+    0 3px 0 #aa7f57,
+    0 4px 0 #7c5637,
+    0 6px 0 #42291a,
+    0 9px 12px rgba(0, 0, 0, 0.5);
+  animation: release-year-wiggle 14s infinite ease-in-out;
+  filter: drop-shadow(1px 2px 0 rgba(255, 255, 255, 0.55));
+  transform-origin: left center;
+}
+
+.release-entry:nth-child(even) .release-year {
+  animation-name: release-year-wiggle-reverse;
+}
+
+.release-window .window-pane {
+  height: auto;
+  min-height: clamp(8rem, 16vw, 13rem);
+  padding: clamp(1rem, 2.4vw, 2rem);
+  overflow: visible;
+  text-align: left;
+}
+
+.release-window h3 {
+  margin: 0;
+  font-family: "PixelSplitter", "Lyno-Stan", sans-serif;
+  font-size: clamp(1.35rem, 2.8vw, 2.35rem);
+  line-height: 1.13;
+  text-align: left;
+}
+
+.release-window h3 a,
+.release-window h3 a:visited {
+  color: #4e210c;
+  text-decoration-color: #a14b20;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.16em;
+}
+
+.release-window h3 a:hover,
+.release-window h3 a:focus-visible {
+  background: #1d3375;
+  color: #fff;
+  outline: 3px solid #1d3375;
+  text-decoration-color: #fff;
+}
+
+.release-window p {
+  margin: 1.1rem 0 0;
+  font-family: "MSW98UI", Chicago, sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  line-height: 1.3;
+  text-align: left;
+}
+
+.media-window {
+  z-index: 3;
+  width: calc(100% + clamp(0rem, 3vw, 2rem));
+  margin-top: clamp(5rem, 10vw, 9rem);
+  margin-left: clamp(-3.5rem, -4vw, -1.25rem);
+  background: #0a0a0a;
+  animation: media-window-drift 29s infinite ease-in-out;
+}
+
+.release-entry:nth-child(even) .media-window {
+  margin-top: clamp(4rem, 8vw, 7rem);
+  animation-direction: reverse;
+  animation-duration: 33s;
+}
+
+.media-window .title-bar {
+  --primary: #f6e8cb;
+  --secondary: #0a0a0a;
+}
+
+.media-window .title-bar .title {
+  color: #f6e8cb;
+  font-family: "MSW98UI-Bold", Chicago, sans-serif;
+  font-size: clamp(1rem, 2.3vw, 1.65rem);
+  line-height: 1;
+}
+
+.media-window .separator {
+  border-color: #f6e8cb;
+}
+
+.media-window .window-pane {
+  display: grid;
+  height: auto;
+  min-height: 0;
+  padding: clamp(0.45rem, 1.2vw, 0.8rem);
+  overflow: hidden;
+  background: #0a0a0a;
+  place-items: start;
+}
+
+.media-window iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #fff;
+}
+
+.media-window--square iframe {
+  aspect-ratio: 1;
+}
+
+.media-window--strip iframe {
+  height: 120px;
+  aspect-ratio: auto;
+}
+
+.media-window--video-art .window-pane {
+  gap: 0.65rem;
+}
+
+.media-window--video-art img {
+  display: block;
+  width: min(100%, 20rem);
+  height: auto;
+  border: 1px solid #f6e8cb;
+}
+
+.discography-atmosphere {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.discography-atmosphere::before {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 3px, rgba(0, 0, 0, 0.18) 3px 4px),
+    radial-gradient(circle at 45% 40%, transparent 0 43%, rgba(0, 0, 0, 0.57) 100%);
+  content: "";
+  opacity: 0.78;
+}
+
+.discography-blob {
+  position: absolute;
+  display: block;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  mix-blend-mode: screen;
+  filter: saturate(1.12);
+  opacity: 0.34;
+  animation: discography-blob-drift infinite alternate ease-in-out;
+}
+
+.discography-blob--red {
+  top: 8%;
+  left: 4%;
+  width: min(34rem, 54vw);
+  height: min(24rem, 40vw);
+  background: #d94e4e;
+  animation-duration: 21s;
+}
+
+.discography-blob--blue {
+  top: 42%;
+  right: -5%;
+  width: min(28rem, 48vw);
+  height: min(36rem, 58vw);
+  background: #64cedd;
+  animation-duration: 27s;
+  animation-delay: -9s;
+}
+
+.discography-blob--gold {
+  top: 72%;
+  left: 31%;
+  width: min(25rem, 42vw);
+  height: min(31rem, 49vw);
+  background: #ffd659;
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.discography-page footer {
+  width: min(100%, 64rem);
+  margin: 0;
+  padding: 0.8rem;
+  border: 2px solid;
+  border-color: #f0d7b1 #2a1308 #2a1308 #f0d7b1;
+  background: rgba(123, 63, 0, 0.94);
+  box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.48);
+  color: #fff5e1;
+  text-align: left;
+}
+
+.discography-page footer p {
+  margin: 0 0 0.7rem;
+  text-align: left;
+}
+
+.discography-page .footer-badges {
+  display: flex;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.35rem;
+}
+
+.discography-page .footer-badges img {
+  display: block;
+  width: auto;
+  max-width: 72px;
+  max-height: 50px;
+}
+
+@keyframes discography-title-waterbed {
+
+  0%,
+  100% {
+    transform: translate3d(0, -0.02em, 1.1em) rotateX(34deg) rotateY(-2deg) rotateZ(-1deg);
+  }
+
+  25% {
+    transform: translate3d(-0.04em, 0.08em, 0.7em) rotateX(41deg) rotateY(4deg) rotateZ(1.2deg);
+  }
+
+  50% {
+    transform: translate3d(0.05em, -0.04em, 1.4em) rotateX(29deg) rotateY(-4deg) rotateZ(-0.7deg);
+  }
+
+  75% {
+    transform: translate3d(-0.02em, 0.06em, 0.85em) rotateX(38deg) rotateY(3deg) rotateZ(0.8deg);
+  }
+}
+
+@keyframes discography-blob-waterbed {
+
+  0%,
+  100% {
+    border-radius: 58% 42% 54% 46% / 48% 58% 42% 52%;
+    transform: translate(-50%, -50%) scaleX(1) scaleY(0.98) rotate(-1deg);
+  }
+
+  25% {
+    border-radius: 46% 54% 43% 57% / 57% 42% 58% 43%;
+    transform: translate(-50%, -49%) scaleX(1.035) scaleY(0.95) rotate(0.8deg);
+  }
+
+  50% {
+    border-radius: 62% 38% 48% 52% / 43% 61% 39% 57%;
+    transform: translate(-50%, -51%) scaleX(0.975) scaleY(1.025) rotate(-0.5deg);
+  }
+
+  75% {
+    border-radius: 49% 51% 58% 42% / 60% 45% 55% 40%;
+    transform: translate(-50%, -49.5%) scaleX(1.02) scaleY(0.965) rotate(0.6deg);
+  }
+}
+
+@keyframes discography-blob-ripple {
+
+  0%,
+  18% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+
+  28% {
+    opacity: 0.82;
+  }
+
+  62%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.35);
+  }
+}
+
+@keyframes discography-glare-drift {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-14deg) scale(1);
+  }
+
+  50% {
+    transform: translate3d(14%, 18%, 0) rotate(-8deg) scale(1.08);
+  }
+}
+
+@keyframes release-window-wiggle {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-0.75deg);
+  }
+
+  25% {
+    transform: translate(1.6vw, -0.8rem) rotate(1.25deg);
+  }
+
+  50% {
+    transform: translate(-1.2vw, 0.65rem) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(0.9vw, -0.45rem) rotate(0.9deg);
+  }
+}
+
+@keyframes release-window-wiggle-reverse {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0.75deg);
+  }
+
+  25% {
+    transform: translate(-1.6vw, 0.7rem) rotate(-1.25deg);
+  }
+
+  50% {
+    transform: translate(1.2vw, -0.7rem) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(-0.9vw, 0.4rem) rotate(-0.9deg);
+  }
+}
+
+@keyframes release-year-wiggle {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg) scaleY(1);
+  }
+
+  25% {
+    transform: translateY(-0.04em) rotate(1.5deg) scaleY(0.94);
+  }
+
+  50% {
+    transform: translateY(0.03em) rotate(-1.2deg) scaleY(1.04);
+  }
+
+  75% {
+    transform: translateY(-0.02em) rotate(1deg) scaleY(0.97);
+  }
+}
+
+@keyframes release-year-wiggle-reverse {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(1deg) scaleY(1);
+  }
+
+  25% {
+    transform: translateY(0.04em) rotate(-1.5deg) scaleY(1.04);
+  }
+
+  50% {
+    transform: translateY(-0.03em) rotate(1.2deg) scaleY(0.95);
+  }
+
+  75% {
+    transform: translateY(0.02em) rotate(-1deg) scaleY(1.03);
+  }
+}
+
+@keyframes media-window-drift {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(1.15deg);
+  }
+
+  33% {
+    transform: translate(0.8rem, -0.6rem) rotate(-0.7deg);
+  }
+
+  66% {
+    transform: translate(-0.65rem, 0.45rem) rotate(0.45deg);
+  }
+}
+
+@keyframes discography-blob-drift {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate3d(0, 0, 0) scale(1.05) rotate(18deg);
+  }
+
+  50% {
+    border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%;
+    transform: translate3d(-3rem, 2rem, 0) scale(1.22) rotate(62deg);
+  }
+
+  100% {
+    border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%;
+    transform: translate3d(2rem, -2.5rem, 0) scale(1.12) rotate(112deg);
+  }
+}
+
+@media (max-width: 760px) {
+  body.discography-page {
+    padding: 7px;
+  }
+
+  .discography-page .nav-bar {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .discography-page .nav-bar>li {
+    flex: 0 0 auto;
+  }
+
+  .discography-main {
+    padding-top: 1rem;
+  }
+
+  .discography-hero {
+    width: 100%;
+    min-height: 250px;
+    margin-left: 0;
+  }
+
+  .discography-title-blob {
+    left: 42%;
+    width: min(620px, 96vw);
+  }
+
+  .discography-hero-copy {
+    transform: translateX(0.2rem);
+  }
+
+  .discography-hero h1 {
+    font-size: clamp(2.1rem, 13.2vw, 4.3rem);
+  }
+
+  .discography-hero p {
+    width: min(88vw, 28rem);
+    margin-left: 0.75rem;
+  }
+
+  .release-stack {
+    gap: 4rem;
+    padding: 0;
+  }
+
+  .release-entry,
+  .release-entry:nth-child(n),
+  .release-entry--with-media {
+    width: calc(100vw - 22px) !important;
+    margin-right: 0;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .release-entry--with-media {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .release-window .window-pane {
+    min-height: 8.5rem;
+  }
+
+  .media-window,
+  .release-entry:nth-child(even) .media-window {
+    width: calc(100% - 1.3rem);
+    margin-top: -0.3rem;
+    margin-left: 1.3rem;
+  }
+
+  .media-window--video-art .window-pane {
+    grid-template-columns: 1fr;
+  }
+
+  .discography-page footer {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .discography-page *,
+  .discography-page *::before,
+  .discography-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

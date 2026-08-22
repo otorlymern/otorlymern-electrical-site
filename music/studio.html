@@ -4,61 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OES Studio – Music</title>
+  <link rel="stylesheet" href="/css/system7.css/style.css" />
   <link rel="stylesheet" href="/css/musicstyle.css" />
   <link rel="stylesheet" href="/css/get-in-touch.css" />
-  <style>
-
-    /* Float images to the right */
-    .image-right {
-      float: right;
-      margin: 0 0 0.7em 0.5em;
-      max-height: 500px;
-      max-width: 200px;
-    }
-    .header-image {
-      max-height: 50px;
-      max-width: 100px;
-    }
-    /* ensure section shows tiled body background */
-    section.music-section { background: transparent; }
-
-    .studio-hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 1.5rem auto 2rem;
-    }
-
-    .studio-title {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.35rem;
-      text-align: center;
-      margin: 0;
-    }
-
-    .studio-logo {
-      max-width: 220px;
-      height: auto;
-    }
-
-    .studio-hero-text {
-      display: block;
-      font-size: clamp(2.4rem, 4vw, 3rem);
-      line-height: 1.1;
-    }
-  </style>
+  <link rel="stylesheet" href="/music/studio.css" />
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="/music/studio.js" defer></script>
+  <link rel="stylesheet" href="/css/site-nav.css" />
 </head>
-<body>
+<body class="studio-page">
   <header>
-  <nav>
+<nav>
     <ul class="nav-bar">
       <li><a href="/index.html">Home</a></li>
       <li class="dropdown">
-        <a href="/systems/systems.html">Systems</a>
+        <a href="/systems/rrr.html">Systems</a>
         <ul class="dropdown-content">
           <li><a href="/music/studio.html">OEStudio</a></li>
           <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
@@ -74,11 +34,10 @@
                     <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
 <li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
           <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-          <li><a href="/solutions/techniques/musictech/index.html">Synthesis, Composition and Recording</a></li>
-          <li><a href="/solutions/techniques/vidtech/videotechniques.html">Analog &amp; Digital Video Manipulation and Synthesis</a></li>
-          <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+<li><a href="/solutions/resources/index.html">Links / Resources</a></li>
         </ul>
       </li>
+      <li><a href="/manuals/">Archive</a></li>
     </ul>
   </nav>
 </header>
@@ -118,182 +77,250 @@
       <figcaption>Studio mask</figcaption>
     </figure>
   </div>
-<!-- Gear List -->
-  <main>
-    <section class="music-section">
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/korgaddcover.png" class="header-image" alt="Korg logo" />
-          Synthesizers
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/korgaddcover.png" class="header-image" alt="Korg logo" />
-        </h2>
-        <ul class="gear-list">
-          <li>Serge-style Modular System</li>
-          <li>Wiard Music Weasel</li>
-          <li>Casio CZ-101</li>
-          <li>Ensoniq Esq-1</li>
-          <li>Roland JX-3P w/ PG-200</li>
-          <li>Korg DW-6000</li>
-          <li>Basto MicroGranny Granular</li>
-          <li>Elektron Model:Cycles</li>
-          <li>Volca FM 2</li>
-          <li>norns Monome</li>
-          <li>Ciat Lombarde Peterlin</li>
-          <li>Ciat Lokbarde Clicker</li>
-        </ul>
-      </div>
+  <!-- Gear List -->
+  <main class="studio-main">
+    <section class="studio-window-stack" aria-label="OEStudio gear">
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/korgaddcover.png" class="header-image" alt="" />
+            Synthesizers
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/korgaddcover.png" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/sergemanual.pdf" data-pdf-title="Serge Modular Synthesizer Manual">Serge-style Modular System <span>PDF</span></a></li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/Wiard300Intro-031001.pdf" data-pdf-title="Introduction to the Wiard 300 Series Modular">Wiard Music Weasel <span>PDF</span></a></li>
+            <li>Casio CZ-101</li>
+            <li>Ensoniq ESQ-1</li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/roland-jx-3p-owners-manual.pdf" data-pdf-title="Roland JX-3P Owner's Manual">Roland JX-3P w/ PG-200 <span>PDF</span></a></li>
+            <li>Korg DW-6000</li>
+            <li>Bastl MicroGranny Granular</li>
+            <li>Elektron Model:Cycles</li>
+            <li>Volca FM 2</li>
+            <li>Monome norns</li>
+            <li>Ciat-Lonbarde Peterlin</li>
+            <li>Ciat-Lonbarde Clicker</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/koii1.png" class="header-image" alt="sampler animation" />
-          Drum Machines / Samplers
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/koii1.png" class="header-image" alt="sampler animation" />
-        </h2>
-        <ul class="gear-list">
-          <li>Tr-808 Clone</li>
-          <li>Tr-606</li>
-          <li>Arturia MicroBrute</li>
-          <li>Teenage Engineering EP-133</li>
-          <li>Teenage Engineering EP-40 <em>Riddim</em></li>
-        </ul>
-      </div>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/koii1.png" class="header-image" alt="" />
+            Drum Machines / Samplers
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/koii1.png" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/service-schems/TR-808_Schematics.pdf" data-pdf-title="Roland TR-808 Schematic">TR-808 Clone <span>PDF</span></a></li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/roland-tr-606-owners-manual.pdf" data-pdf-title="Roland TR-606 Owner's Manual">TR-606 <span>PDF</span></a></li>
+            <li>Arturia MicroBrute</li>
+            <li>Teenage Engineering EP-133</li>
+            <li>Teenage Engineering EP-40 <em>Riddim</em></li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/spacestationglamourshot.png" class="header-image" alt="rack gear" />
-          Effects Processors
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/spacestationglamourshot.png" class="header-image" alt="rack gear" />
-        </h2>
-        <ul class="gear-list">
-          <li>Orban 672a EQ</li>
-          <li>Orban Spring Reverb</li>
-          <li>Delta Lab AD1024</li>
-          <li>Hofhner Echotron Tape Echo</li>
-          <li>Meng Qi Wingie 2</li>
-          <li>Parametric Tube EQ</li>
-          <li>Fostex 3040 Comp</li>
-          <li>Really Nice Limiting Amp</li>
-          <li>3rd Dimension BBD Chorus</li>
-          <li>Afterneath Earthquaker Devices Reverb Pedal</li>
-          <li>Instant Lofi Junky VibeComp Effect Pedal</li>
-          <li>Way Huge Aquapuss Analog Delay</li>
-          <li>The Accountant JFET Compressor Pedal</li>
-          <li>Danelectro Reel Tape Echo</li>
-          <li>Danelectro Spring Reverb Pedal</li>
-          <li>Pioneer Spring Reverb Amp 202</li>
-          <li>Yamaha R1000 Digital Reverb</li>
-          <li>Verbos Multitap Delay Processor</li>
-        </ul>
-      </div>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/spacestationglamourshot.png" class="header-image" alt="" />
+            Effects Processors
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/spacestationglamourshot.png" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/672A_Manual.pdf" data-pdf-title="Orban 672A Equalizer Operating Manual">Orban 672A EQ <span>PDF</span></a></li>
+            <li>Orban Spring Reverb</li>
+            <li>DeltaLab AD1024</li>
+            <li>Hofner Echotron Tape Echo</li>
+            <li>Meng Qi Wingie 2</li>
+            <li>Parametric Tube EQ</li>
+            <li>Fostex 3040 Compressor</li>
+            <li>Really Nice Limiting Amp</li>
+            <li>3rd Dimension BBD Chorus</li>
+            <li>Afterneath EarthQuaker Devices Reverb Pedal</li>
+            <li>Instant Lo-Fi Junky VibeComp Effect Pedal</li>
+            <li>Way Huge Aqua-Puss Analog Delay</li>
+            <li>The Accountant JFET Compressor Pedal</li>
+            <li>Danelectro Reel Tape Echo</li>
+            <li>Danelectro Spring Reverb Pedal</li>
+            <li>Pioneer Spring Reverb Amp 202</li>
+            <li>Yamaha R1000 Digital Reverb</li>
+            <li>Verbos Multitap Delay Processor</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/acoustic-guitar-title-img.png" class="header-image" alt="Acoustic instrument icon" />
-          Non‑Electronic Music Instruments
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/acoustic-guitar-title-img.png" class="header-image" alt="Acoustic instrument icon" />
-        </h2>
-        <ul class="gear-list">
-          <li>Dano 64' Dan Electro 6‑String Electric Guitar w/ 2 Single Coil Lipstick Pickups, Custom Pickguard and Tone/Volume Knobs</li>
-          <li>DanElectro 12‑string Electric Guitar w/ Lipstick Single Coil Pickups</li>
-          <li>Hagstrom Futurama Black Short Scale Electric Bass 1962</li>
-          <li>AutoHarp by Oscar Schmidt</li>
-          <li>Yamaha Acoustic Guitar (1990s)</li>
-          <li>Rain Stick</li>
-          <li>Kalimba</li>
-          <li>Melodica</li>
-          <li>Hand Painted Half Size Recorder</li>
-        </ul>
-      </div>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/acoustic-guitar-title-img.png" class="header-image" alt="" />
+            Non-Electronic Music Instruments
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/acoustic-guitar-title-img.png" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li>Dano '64 Danelectro 6-string Electric Guitar w/ 2 Single-Coil Lipstick Pickups, Custom Pickguard and Tone/Volume Knobs</li>
+            <li>Danelectro 12-string Electric Guitar w/ Lipstick Single-Coil Pickups</li>
+            <li>Hagstrom Futurama Black Short-Scale Electric Bass 1962</li>
+            <li>Autoharp by Oscar Schmidt</li>
+            <li>Yamaha Acoustic Guitar (1990s)</li>
+            <li>Rain Stick</li>
+            <li>Kalimba</li>
+            <li>Melodica</li>
+            <li>Hand-Painted Half-Size Recorder</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/drums8bitclipart.png" class="header-image" alt="Percussion clip art" />
-          Non‑Electronic Music Percussion Instruments
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/drums8bitclipart.png" class="header-image" alt="Percussion clip art" />
-        </h2>
-        <ul class="gear-list">
-          <li>Hand Painted Halfsize Tambourine</li>
-          <li>Bored Coconut and Dried Bean Shaker</li>
-          <li>DW6000 Kick Drum Pedal</li>
-          <li>Tama Imperialstar Snare Drum w/ Remo Heads</li>
-        </ul>
-      </div>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/drums8bitclipart.png" class="header-image" alt="" />
+            Non-Electronic Percussion
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/drums8bitclipart.png" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li>Hand-Painted Half-Size Tambourine</li>
+            <li>Bored Coconut and Dried Bean Shaker</li>
+            <li>DW6000 Kick Drum Pedal</li>
+            <li>Tama Imperialstar Snare Drum w/ Remo Heads</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/Mt4x.png" class="header-image" alt="Mixer illustration" />
-          Mixing and Routing
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/Mt4x.png" class="header-image" alt="Mixer illustration" />
-        </h2>
-        <ul class="gear-list">
-          <li>Tascam M208 8 Channel / 4 Bus Stereo Mixer</li>
-          <li>Tascam P32 Patchbay</li>
-          <li>MT8X Matrix Mixer</li>
-          <li>Micheal Rucci 8 Channel Passive Mini Mixer</li>
-          <li>3 HOSA RCA to 1/4&quot; 8‑Headed Snakes</li>
-        </ul>
-      </div>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/Mt4x.png" class="header-image" alt="" />
+            Mixing and Routing
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/Mt4x.png" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/hfe_tascam_m-208_216_en.pdf" data-pdf-title="Tascam M-208 / M-216 Manual">Tascam M-208 8-Channel / 4-Bus Stereo Mixer <span>PDF</span></a></li>
+            <li>Tascam P-32 Patchbay</li>
+            <li>MT8X Matrix Mixer</li>
+            <li>Michael Rucci 8-Channel Passive Mini Mixer</li>
+            <li>3 HOSA RCA-to-1/4&quot; 8-Headed Snakes</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/desktop-setup.webp" class="header-image" alt="Desktop computer illustration" />
-          Software (That's Stuck in the Computer)
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/desktop-setup.webp" class="header-image" alt="Desktop computer illustration" />
-        </h2>
-        <ul class="gear-list">
-          <li>PurrData</li>
-          <li>Max 8</li>
-          <li>Supercollider</li>
-          <li>Audacity</li>
-          <li>Serum 2</li>
-          <li>Maiden (enables software, code based synthesis away from computer via Monome Norns)</li>
-          <li>Teenage Engineering EP SAMPLE TOOL</li>
-        </ul>
-      </div>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/desktop-setup.webp" class="header-image" alt="" />
+            Software (That's Stuck in the Computer)
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/desktop-setup.webp" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul class="gear-list">
+            <li>Purr Data</li>
+            <li>Max 8</li>
+            <li>SuperCollider</li>
+            <li>Audacity</li>
+            <li>Serum 2</li>
+            <li>Maiden (enables software and code-based synthesis away from the computer via Monome norns)</li>
+            <li>Teenage Engineering EP Sample Tool</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="gear-block">
-        <h2 class="highlight">
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/spinningcassette.gif" class="header-image" alt="cassette" />
-          Tape Machines
-          <img src="https://media.otorlymern-electrical.com/images/clip-art/spinningcassette.gif" class="header-image" alt="cassette" />
-        </h2>
+      <article class="gear-window window">
+        <div class="title-bar">
+          <button type="button" class="close" tabindex="-1" aria-hidden="true"></button>
+          <h2 class="title">
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/spinningcassette.gif" class="header-image" alt="" />
+            Tape Machines
+            <img src="https://media.otorlymern-electrical.com/images/clip-art/spinningcassette.gif" class="header-image" alt="" />
+          </h2>
+          <button type="button" class="resize" tabindex="-1" aria-hidden="true"></button>
+        </div>
+        <div class="separator"></div>
+        <div class="window-pane tape-window-pane">
+          <figure class="model-figure">
+            <model-viewer
+              src="/manuals/models/recorder_tascam_32.glb"
+              alt="3D model of Tascam 32 reel-to-reel"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+            ></model-viewer>
+            <figcaption>
+              <strong>Tascam 32</strong> is a half-track, quarter-inch master recorder—a pro-sumer workhorse that anchors the OEStudio tape workflow.
+            </figcaption>
+          </figure>
 
-        <figure class="model-figure">
-          <model-viewer
-            src="../models/recorder_tascam_32.glb"
-            alt="3D model of Tascam 32 reel-to-reel"
-            auto-rotate
-            camera-controls
-            shadow-intensity="1"
-            style="width:100%; height:220px; background:#aa4935;"
-          ></model-viewer>
-          <figcaption class="highlight" style="font-size:1.05em; margin-top:5px;">
-            <details>
-              <summary style="cursor:pointer;">Tascam 32</summary>
-              <p style="font-size:0.9em;">
-                The <strong>Tascam 32</strong> is a half‑track, quarter‑inch master recorder — a pro‑sumer workhorse that anchors the tape workflow in OEStudio.
-              </p>
-            </details>
-          </figcaption>
-        </figure>
-
-        <ul class="gear-list">
-          <li>Tascam 32</li>
-          <li>Tascam MFP01</li>
-          <li>Tascam 242</li>
-          <li>Tascam 244</li>
-          <li>Tascam 246</li>
-          <li>Tascam 424</li>
-          <li>Tascam 488ii</li>
-          <li>Yamaha MT4X</li>
-          <li>Teac 2440</li>
-          <li>Teac 3340</li>
-          <li>Revox A77</li>
-          <li>Fostex R8</li>
-        </ul>
-      </div>
+          <ul class="gear-list">
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/tascam32.pdf" data-pdf-title="Tascam 32 Manual">Tascam 32 <span>PDF</span></a></li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/tascammfp01manual.pdf" data-pdf-title="Tascam MF-P01 Manual">Tascam MF-P01 <span>PDF</span></a></li>
+            <li>Tascam 242</li>
+            <li>Tascam 244</li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/service-schems/hfe_tascam_246_portastudio_service_en.pdf" data-pdf-title="Tascam 246 Portastudio Service Manual">Tascam 246 <span>PDF</span></a></li>
+            <li>Tascam 424</li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/488portastudio_om_tascam_d.pdf" data-pdf-title="Tascam 488 Portastudio Owner's Manual">Tascam 488II <span>PDF</span></a></li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/yamaha_mt4x.pdf" data-pdf-title="Yamaha MT4X Manual">Yamaha MT4X <span>PDF</span></a></li>
+            <li>TEAC 2440</li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/hfe_teac_a-3340s.pdf" data-pdf-title="TEAC A-3340S Manual">TEAC 3340 <span>PDF</span></a></li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/manuals/revox_a77_user_manual_en.pdf" data-pdf-title="Revox A77 User Manual">Revox A77 <span>PDF</span></a></li>
+            <li><a class="gear-manual-link" href="https://media.otorlymern-electrical.com/pdfs/service-schems/fostex_r8_service_manual.pdf" data-pdf-title="Fostex R8 Service Manual">Fostex R8 <span>PDF</span></a></li>
+          </ul>
+        </div>
+      </article>
     </section>
   </main>
+
+  <section class="studio-document-overlay" id="studio-document-overlay" role="dialog" aria-modal="true"
+    aria-labelledby="studio-document-title" hidden>
+    <div class="studio-document-window window">
+      <div class="title-bar">
+        <button type="button" class="close" id="studio-document-close" aria-label="Close document viewer"></button>
+        <h2 class="title" id="studio-document-title">Archive document</h2>
+        <span class="studio-resize-grip" aria-hidden="true"></span>
+      </div>
+      <div class="separator"></div>
+      <div class="window-pane studio-document-pane">
+        <iframe id="studio-document-frame" title="Archive PDF viewer"></iframe>
+        <p class="studio-document-actions">
+          Drag the window's lower-right corner to resize it.
+          <a id="studio-document-direct-link" href="/manuals/" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <footer class="oes-action-footer">
   <a class="footer-gif-link footer-gif-link--contact"

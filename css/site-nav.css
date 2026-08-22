@@ -1,0 +1,36 @@
+/* Shared stacking rules for every primary site navigation. */
+body > header:first-of-type,
+.desktop-menu {
+  position: relative !important;
+  z-index: 1000000 !important;
+}
+
+body > header:first-of-type nav,
+.nav-bar,
+.desktop-nav {
+  position: relative !important;
+  z-index: 1000000 !important;
+  overflow: visible;
+}
+
+.nav-bar .dropdown-content {
+  z-index: 1000001 !important;
+}
+
+@media (max-width: 480px) {
+  .nav-bar {
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .nav-bar > li {
+    flex: 0 0 auto;
+  }
+
+  .nav-bar > li > a {
+    padding: 8px 7px !important;
+    font-size: clamp(0.72rem, 3.3vw, 0.86rem) !important;
+    white-space: nowrap;
+  }
+}
