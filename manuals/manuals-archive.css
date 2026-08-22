@@ -1186,10 +1186,7 @@ body.archive-glitz .archive-title.archive-chrome-title .archive-title-text {
 
 body.archive-glitz .archive-title.archive-chrome-title:hover {
   filter:
-    drop-shadow(0.025em -0.015em 0 rgba(216, 214, 210, 0.58))
-    drop-shadow(-0.025em 0.015em 0 rgba(255, 107, 157, 0.52))
-    drop-shadow(0 0 0.22em rgba(232, 232, 236, 0.5))
-    drop-shadow(0 0 0.4em rgba(125, 211, 252, 0.35));
+    drop-shadow(0.025em -0.015em 0 rgba(216, 214, 210, 0.58)) drop-shadow(-0.025em 0.015em 0 rgba(255, 107, 157, 0.52)) drop-shadow(0 0 0.22em rgba(232, 232, 236, 0.5)) drop-shadow(0 0 0.4em rgba(125, 211, 252, 0.35));
 }
 
 @keyframes archive-chrome-pan {
