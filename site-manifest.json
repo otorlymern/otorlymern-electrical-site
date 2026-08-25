@@ -18,6 +18,46 @@
       "monitor": true
     },
     {
+      "path": "/manuals/library/arp-2600-owners-manual/",
+      "title": "ARP 2600 Owner's Manual | OES A/V Archive",
+      "description": "Read archival context for the ARP 2600 owner's manual, then open the public PDF or continue into related OES repair and synthesis resources.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/buchla-100-series-owners-manual/",
+      "title": "Buchla 100 Series Owner's Manual | OES A/V Archive",
+      "description": "Archival context and direct PDF access for the Buchla 100 Series owner's manual, with related OES electronic-music resources.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/roland-tr-606-owners-manual/",
+      "title": "Roland TR-606 Owner's Manual | OES A/V Archive",
+      "description": "Use the Roland TR-606 owner's manual with archival context, direct public PDF access, and related OES recording and repair paths.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/ems-vcs-3-manual/",
+      "title": "EMS VCS 3 Manual | OES A/V Archive",
+      "description": "Archival context and direct PDF access for the EMS VCS 3 manual, including its pin-matrix routing, oscillators, filter, envelope, and control system.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/digisound-modular-user-manual/",
+      "title": "Digisound Modular User Manual | OES A/V Archive",
+      "description": "Read archival context for the Digisound modular synthesizer user manual and open the public PDF alongside related OES DIY resources.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
       "path": "/music/discography",
       "title": "Discography | Otorlymern Electrical Systems",
       "description": "Recordings, releases, and music connected to Otorlymern Electrical Systems and the OES studio practice.",
