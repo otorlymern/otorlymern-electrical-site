@@ -390,6 +390,7 @@
     (() => {
       const shopButton = document.querySelector("[data-floating-shop]");
       const blobs = [...document.querySelectorAll(".blob-container .blob")];
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
       if (shopButton) {
         const side = Math.random() < 0.5 ? "left" : "right";

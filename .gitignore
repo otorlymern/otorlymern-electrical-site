@@ -6,6 +6,7 @@ Thumbs.db
 # build/cache (if added later)
 dist/
 node_modules/
+_deploy/
 
 # heavy/originals (keep out of repo)
 *.psd
