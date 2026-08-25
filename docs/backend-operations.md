@@ -42,6 +42,13 @@ Three-month Web Search report, last updated approximately 2026-08-25:
 
 Diagnosis: this is primarily a personal-name search-result/snippet mismatch, not broad generic service traffic. The first response is to align the title, description, visible H1, and Person/Organization structured data with the demonstrated `Augie Calabro` intent. Compare the same page/query report after four to six weeks; do not infer success from property-wide traffic alone.
 
+## Content-object pilots
+
+- Five manual records establish the `/manuals/library/<archive-id>/` pattern, including the ARP 2600, Buchla 100, Roland TR-606, EMS VCS 3, and Digisound Modular records.
+- `/systems/home-recording` is the editorial/technical-guide pilot. Its canonical page connects computerless recording history, practical tape workflows, curated recording resources, the deeper archive, and OES tape services.
+- `/oes-patch-builder/` is the interactive-tool pilot. Its dedicated canonical page explains the tool and links into related OES material; `/solutions/resources/` may still embed the builder with `?embedded=1` without replacing the dedicated page.
+- Review usefulness, indexing, query relevance, and visitor paths before adding more pilots or scaling any page pattern.
+
 ## Routine checks
 
 - After deployment: confirm current HTML, sitemap, robots, redirects, Googlebot responses, external-referrer media access, and protected Wasabi listing/write behavior.

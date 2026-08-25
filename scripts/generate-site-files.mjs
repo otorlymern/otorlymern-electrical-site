@@ -45,7 +45,7 @@ function insertBeforeHeadClose(html, markup) {
 
 function metadataMarkup(page) {
   const canonicalUrl = new URL(page.path, siteOrigin).href;
-  const ogType = ["Article"].includes(page.schema)
+  const ogType = ["Article", "TechArticle"].includes(page.schema)
     ? "article"
     : page.schema === "ProfilePage"
       ? "profile"
@@ -57,6 +57,23 @@ function metadataMarkup(page) {
     description: page.description,
     url: canonicalUrl,
   };
+
+  if (["Article", "TechArticle"].includes(page.schema)) {
+    structuredData.headline = page.title;
+    structuredData.mainEntityOfPage = canonicalUrl;
+    structuredData.publisher = {
+      "@type": "Organization",
+      name: "Otorlymern Electrical Systems",
+      url: siteOrigin,
+    };
+  }
+
+  if (page.schema === "WebApplication") {
+    structuredData.applicationCategory = "DesignApplication";
+    structuredData.operatingSystem = "Any";
+    structuredData.browserRequirements = "Requires JavaScript and a modern web browser";
+    structuredData.isAccessibleForFree = true;
+  }
 
   return [
     `  <meta name="description" content="${escapeHtml(page.description)}">`,

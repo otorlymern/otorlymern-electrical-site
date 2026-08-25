@@ -83,8 +83,8 @@
     },
     {
       "path": "/oes-patch-builder/",
-      "title": "Modular Synth Patch Builder and Saver | OES",
-      "description": "Build, document, and save modular synthesizer patches with the browser-based OES Patch Builder.",
+      "title": "Modular Synth Patch Diagram Builder | OES",
+      "description": "Draw modular synthesizer signal flow, connect audio and CV modules, and export a reusable patch diagram with the free browser-based OES Patch Builder.",
       "indexable": true,
       "schema": "WebApplication",
       "monitor": true
@@ -270,10 +270,10 @@
     },
     {
       "path": "/systems/home-recording",
-      "title": "Home Recording Systems and Techniques | OES",
-      "description": "An OES guide to home recording systems, tape workflows, limitations, equipment, decision-making, and creative studio practice.",
+      "title": "Computerless Home Recording and Tape Guide | OES",
+      "description": "Learn computerless home recording with cassette and multitrack tape workflows, stereo-deck bouncing, creative limitations, and a practical Tascam MFP01 walkthrough.",
       "indexable": true,
-      "schema": "Article",
+      "schema": "TechArticle",
       "monitor": true
     },
     {

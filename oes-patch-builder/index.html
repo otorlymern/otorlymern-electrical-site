@@ -12,8 +12,6 @@
 
       if (isEmbedded) {
         document.documentElement.classList.add("is-embedded");
-      } else if (window.top === window.self && params.get("standalone") !== "1") {
-        window.location.replace("/solutions/resources/?app=patch-builder");
       }
     })();
   </script>
@@ -148,6 +146,36 @@
           <p class="palette-hint">Click to add or drag onto the canvas.</p>
           <div class="icon-grid" data-palette="cv-modifiers"></div>
         </div>
+      </div>
+    </section>
+    <section class="patch-builder-context" aria-labelledby="patch-builder-about">
+      <h2 id="patch-builder-about">Draw a modular synth patch before the cables move</h2>
+      <p>
+        The OES Patch Builder is a free browser tool for sketching, explaining, and preserving modular synthesizer
+        signal flow. Add sound sources, audio modifiers, control-voltage sources, and CV modifiers; connect their
+        ports; then export the finished diagram as a PNG for a notebook, session log, lesson, or repair record.
+      </p>
+      <div class="patch-builder-context__grid">
+        <div>
+          <h3>A simple patch-documentation workflow</h3>
+          <ol>
+            <li>Click or drag a module symbol onto the patch canvas.</li>
+            <li>Select two compatible ports to draw a cable between them.</li>
+            <li>Use blue connections for control voltage and red connections for audio.</li>
+            <li>Select a symbol and press Delete or Backspace to remove it.</li>
+            <li>Export the completed patch as a PNG before repatching the instrument.</li>
+          </ol>
+        </div>
+        <nav aria-label="Related OES patching resources">
+          <h3>Continue through OES</h3>
+          <ul>
+            <li><a href="/solutions/resources/">Open the Recommended Resources Terminal</a></li>
+            <li><a href="/solutions/techniques/resources/">Browse synthesis books and patching references</a></li>
+            <li><a href="/manuals/library/arp-2600-owners-manual/">Read the ARP 2600 manual record</a></li>
+            <li><a href="/manuals/">Search the deeper OES A/V Archive</a></li>
+            <li><a href="/services/consultingrequest">Ask OES about a studio or synthesis system</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
   </main>
