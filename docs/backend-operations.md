@@ -51,7 +51,18 @@ Diagnosis: this is primarily a personal-name search-result/snippet mismatch, not
 
 ## Analytics event contract
 
-Cloudflare Web Analytics remains the consent-light traffic and field-performance baseline. GA4 remains optional deeper analytics through Zaraz and must be assigned to an opt-in analytics purpose before the custom events below are enabled in production.
+Cloudflare Web Analytics remains the consent-light traffic and field-performance baseline. GA4 is the optional deeper layer through Zaraz and is assigned to the opt-in `Analytics` purpose.
+
+Current privacy and accuracy controls:
+
+- GA4 web stream: `OES Website` (`G-WS5PGCZC4S`).
+- Zaraz Consent Management is enabled and displays its modal to visitors who have not made a choice.
+- Google Consent Mode v2 defaults all four Google consent signals to denied.
+- Zaraz removes URL query parameters and trims IP addresses before forwarding analytics data. External referrers remain available for useful traffic attribution.
+- GA4's originating-IP option is disabled, Audiences are off, and Enhanced Measurement is off. OES sends only the explicit events below plus normal pageviews.
+- Zaraz data-layer compatibility and SPA history tracking are off. Archive/viewer `replaceState` calls therefore do not create false pageviews.
+- Every generated page includes a small `Privacy choices` control that reopens Zaraz's consent modal.
+- `service_form_submit` is the only OES-defined GA4 key event. GA4's built-in `purchase` key-event marker cannot be disabled, but OES does not emit `purchase`.
 
 - `archive_search`: submitted archive searches; records query length, result count, and match type, never the search text.
 - `manual_open`: direct PDF/manual opens; records an archive ID when the page provides one and the asset type.
@@ -61,6 +72,14 @@ Cloudflare Web Analytics remains the consent-light traffic and field-performance
 - `contact_click`: mail or telephone contact intent without recording the address or number.
 
 Do not add events unless they answer a documented operational or editorial question. Form field contents and exact archive queries are not analytics data.
+
+## Service-form protection
+
+- All seven service forms submit through the shared dependency-free `/services/service-forms.js` controller to Formspree form `mwpnybrw`.
+- Formspree CAPTCHA protection is enabled with the managed `OES Service Forms` Turnstile widget. Formspree stores the private widget secret and performs server-side verification; only the public site key is present in the repository.
+- The widget is restricted to the apex domain, `www`, `localhost`, and `127.0.0.1`, and uses the `service_request` action.
+- Client behavior covers required-field validation, pending/success/error announcements, duplicate-submit prevention, and Turnstile reset after each completed request.
+- Analytics reports success only after Formspree returns a successful response.
 
 ## Routine checks
 

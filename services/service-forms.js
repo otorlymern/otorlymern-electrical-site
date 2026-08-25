@@ -1,6 +1,7 @@
 (() => {
   "use strict";
 
+  const TURNSTILE_SITEKEY = "0x4AAAAAAEbcDje07A7TZMWE";
   const initializedForms = new WeakSet();
   const startedForms = new WeakSet();
   const widgetIds = new WeakMap();
@@ -49,12 +50,12 @@
 
     document.querySelectorAll("form[data-oes-service-form]").forEach((form) => {
       const container = form.querySelector("[data-oes-turnstile]");
-      if (!container || widgetIds.has(form) || !container.dataset.sitekey) {
+      if (!container || widgetIds.has(form)) {
         return;
       }
 
       const widgetId = window.turnstile.render(container, {
-        sitekey: container.dataset.sitekey,
+        sitekey: TURNSTILE_SITEKEY,
         action: "service_request",
         theme: "auto",
         size: "flexible",

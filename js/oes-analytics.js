@@ -35,6 +35,51 @@
     }
   }
 
+  function showConsentChoices() {
+    if (typeof window.zaraz?.showConsentModal === "function") {
+      window.zaraz.showConsentModal();
+      return true;
+    }
+
+    if (window.zaraz?.consent) {
+      window.zaraz.consent.modal = true;
+      return true;
+    }
+
+    return false;
+  }
+
+  function addConsentChoicesControl() {
+    if (document.querySelector("#oes-privacy-choices")) {
+      return;
+    }
+
+    const button = document.createElement("button");
+    button.id = "oes-privacy-choices";
+    button.type = "button";
+    button.textContent = "Privacy choices";
+    button.style.cssText = [
+      "display:block",
+      "margin:1rem auto",
+      "padding:0",
+      "border:0",
+      "background:transparent",
+      "color:inherit",
+      "font:inherit",
+      "font-size:0.75rem",
+      "text-decoration:underline",
+      "cursor:pointer",
+    ].join(";");
+    button.addEventListener("click", () => {
+      if (!showConsentChoices()) {
+        console.warn("OES privacy choices are not available yet. Please try again.");
+      }
+    });
+
+    const footer = document.querySelector("footer");
+    (footer || document.body).append(button);
+  }
+
   function outboundDestination(url) {
     const hostname = url.hostname.toLowerCase();
     if (hostname === "reverb.com" || hostname.endsWith(".reverb.com")) {
@@ -82,5 +127,6 @@
     }
   });
 
-  window.OESAnalytics = Object.freeze({ track });
+  addConsentChoicesControl();
+  window.OESAnalytics = Object.freeze({ showConsentChoices, track });
 })();

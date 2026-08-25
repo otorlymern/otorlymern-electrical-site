@@ -139,6 +139,8 @@
                 <button class="btn" type="reset">Clear</button>
               </div>
 
+              <div data-oes-turnstile aria-label="Bot verification"></div>
+
               <div id="formStatus" class="status" data-form-status role="status" aria-live="polite"></div>
             </form>
           </div>
@@ -222,5 +224,6 @@
   </div>
 </footer>
 <script src="/services/service-forms.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=oesTurnstileReady&amp;render=explicit" defer></script>
 </body>
         </html>
