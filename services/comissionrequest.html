@@ -65,6 +65,7 @@
         <div class="separator"></div>
         <div class="window-pane">
           <form id="comissionrequestForm" class="system7-form" action="https://formspree.io/f/mwpnybrw" method="POST"
+            data-oes-service-form="commission"
             enctype="multipart/form-data" novalidate>
 
             <input type="hidden" name="_subject" value="Commission AV Art Request">
@@ -76,26 +77,26 @@
             <div class="field-row split">
               <div class="field-row stack">
                 <label for="commission-name">Name:</label>
-                <input id="commission-name" type="text" name="Name" autocomplete="name" />
+                <input id="commission-name" type="text" name="Name" autocomplete="name" required />
               </div>
 
               <div class="field-row stack">
                 <label for="commission-email">Email:</label>
                 <input id="commission-email" type="email" name="_replyto" autocomplete="email"
-                  placeholder="you@example.com" />
+                  placeholder="you@example.com" required />
               </div>
             </div>
 
             <div class="field-row stack">
               <label for="commission-details">Project Concept:</label>
               <input id="commission-details" type="text" name="details"
-                placeholder="e.g., analog video suite, interactive sculpture score, tape collage." />
+                placeholder="e.g., analog video suite, interactive sculpture score, tape collage." required />
             </div>
 
             <div class="field-row stack">
               <label for="commission-scope">Mood, Themes & Deliverables:</label>
               <textarea id="commission-scope" name="scope" rows="8"
-                placeholder="Intent, runtime, format, collaborators, references, and constraints."></textarea>
+                placeholder="Intent, runtime, format, collaborators, references, and constraints." required></textarea>
             </div>
 
             <div class="field-row split">
@@ -116,7 +117,7 @@
               <button class="btn" type="reset">Clear</button>
             </div>
 
-            <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+            <div id="formStatus" class="status" data-form-status role="status" aria-live="polite"></div>
           </form>
         </div>
       </div>
@@ -138,6 +139,7 @@
           alt="Shop My Store on Reverb" /></a>
     </div>
   </footer>
+  <script src="/services/service-forms.js" defer></script>
 </body>
 
 </html>

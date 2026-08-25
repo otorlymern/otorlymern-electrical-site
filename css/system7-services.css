@@ -99,6 +99,29 @@
   min-height: 1.4em;
 }
 
+.service-form-window .status[data-state="pending"] {
+  color: #000080;
+}
+
+.service-form-window .status[data-state="success"] {
+  color: #006400;
+  font-weight: bold;
+}
+
+.service-form-window .status[data-state="error"] {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+.service-form-window [aria-busy="true"] {
+  cursor: progress;
+}
+
+.service-form-window [data-oes-turnstile] {
+  margin-top: 1rem;
+  min-height: 65px;
+}
+
 .service-form-window .hp {
   position: absolute;
   left: -9999px;

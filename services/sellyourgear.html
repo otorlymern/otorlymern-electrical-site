@@ -69,6 +69,7 @@
               action="https://formspree.io/f/mwpnybrw"
               method="POST"
               enctype="multipart/form-data"
+              data-oes-service-form="sell_gear"
               novalidate>
 
           <input type="hidden" name="_subject" value="Sell Us Your Gear Submission">
@@ -80,23 +81,23 @@
           <div class="field-row split">
             <div class="field-row stack">
               <label for="sell-name">Name:</label>
-              <input id="sell-name" type="text" name="Name" autocomplete="name" />
+              <input id="sell-name" type="text" name="Name" autocomplete="name" required />
             </div>
 
             <div class="field-row stack">
               <label for="sell-email">Email:</label>
-              <input id="sell-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
+              <input id="sell-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" required />
             </div>
           </div>
 
           <div class="field-row stack">
             <label for="sell-location">Pickup city / neighborhood:</label>
-            <input id="sell-location" type="text" name="location" placeholder="e.g., Highland Park garage, third-floor storage, etc." />
+            <input id="sell-location" type="text" name="location" placeholder="e.g., Highland Park garage, third-floor storage, etc." required />
           </div>
 
           <div class="field-row stack">
             <label for="sell-gear">Gear we should know about:</label>
-            <textarea id="sell-gear" name="gear_list" rows="5" placeholder="List models, mods, missing pieces, and what’s included."></textarea>
+            <textarea id="sell-gear" name="gear_list" rows="5" placeholder="List models, mods, missing pieces, and what’s included." required></textarea>
           </div>
 
           <div class="field-row split">
@@ -137,7 +138,7 @@
             <button class="btn" type="reset">Clear</button>
           </div>
 
-          <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+          <div id="formStatus" class="status" data-form-status role="status" aria-live="polite"></div>
         </form>
       </div>
     </div>
@@ -154,6 +155,8 @@
     <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
   </div>
 </footer>
+
+<script src="/services/service-forms.js" defer></script>
 
 </body>
 </html>

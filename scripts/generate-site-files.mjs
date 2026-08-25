@@ -87,6 +87,7 @@ function metadataMarkup(page) {
     `  <meta name="twitter:title" content="${escapeHtml(page.title)}">`,
     `  <meta name="twitter:description" content="${escapeHtml(page.description)}">`,
     `  <script type="application/ld+json" id="oes-page-jsonld">${JSON.stringify(structuredData)}</script>`,
+    '  <script src="/js/oes-analytics.js" id="oes-analytics-script" defer></script>',
   ].join("\n");
 }
 
@@ -107,6 +108,10 @@ function replaceMetadata(html, page) {
   output = removeHeadElement(
     output,
     /\s*<script\b(?=[^>]*\bid=["']oes-page-jsonld["'])[^>]*>[\s\S]*?<\/script>/gi,
+  );
+  output = removeHeadElement(
+    output,
+    /\s*<script\b(?=[^>]*\bid=["']oes-analytics-script["'])[^>]*>[\s\S]*?<\/script>/gi,
   );
   return insertBeforeHeadClose(output, metadataMarkup(page));
 }

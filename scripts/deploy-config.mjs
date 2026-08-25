@@ -2,6 +2,7 @@ export const PUBLIC_ROOT_DIRECTORIES = [
   "css",
   "fonts",
   "images",
+  "js",
   "manuals",
   "music",
   "oes-patch-builder",

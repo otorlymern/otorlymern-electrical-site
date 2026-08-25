@@ -49,6 +49,19 @@ Diagnosis: this is primarily a personal-name search-result/snippet mismatch, not
 - `/oes-patch-builder/` is the interactive-tool pilot. Its dedicated canonical page explains the tool and links into related OES material; `/solutions/resources/` may still embed the builder with `?embedded=1` without replacing the dedicated page.
 - Review usefulness, indexing, query relevance, and visitor paths before adding more pilots or scaling any page pattern.
 
+## Analytics event contract
+
+Cloudflare Web Analytics remains the consent-light traffic and field-performance baseline. GA4 remains optional deeper analytics through Zaraz and must be assigned to an opt-in analytics purpose before the custom events below are enabled in production.
+
+- `archive_search`: submitted archive searches; records query length, result count, and match type, never the search text.
+- `manual_open`: direct PDF/manual opens; records an archive ID when the page provides one and the asset type.
+- `service_form_start`: first meaningful interaction with one of the seven service forms.
+- `service_form_submit`: emitted only after Formspree confirms a successful submission; this is the only initial GA4 key event.
+- `outbound_click`: limited to PeerTube and Reverb destinations.
+- `contact_click`: mail or telephone contact intent without recording the address or number.
+
+Do not add events unless they answer a documented operational or editorial question. Form field contents and exact archive queries are not analytics data.
+
 ## Routine checks
 
 - After deployment: confirm current HTML, sitemap, robots, redirects, Googlebot responses, external-referrer media access, and protected Wasabi listing/write behavior.

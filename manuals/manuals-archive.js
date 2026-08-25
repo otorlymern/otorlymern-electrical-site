@@ -725,6 +725,11 @@
 
       const exact = findExactManualCodeMatch(normalize(query));
       if (exact) {
+        void window.OESAnalytics?.track("archive_search", {
+          query_length: query.length,
+          result_count: 1,
+          match_type: "exact",
+        });
         await selectManual(exact.manual.id, {
           from: "search",
           manualCode: exact.manualCode,
@@ -734,6 +739,11 @@
 
       applySearch(query);
       renderManualResults(state.filteredManuals, state.selectedManualId);
+      void window.OESAnalytics?.track("archive_search", {
+        query_length: query.length,
+        result_count: state.filteredManuals.length,
+        match_type: "fuzzy",
+      });
       if (state.filteredManuals[0]) {
         await selectManual(state.filteredManuals[0].id, {
           from: "search-fuzzy",

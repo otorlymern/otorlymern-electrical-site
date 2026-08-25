@@ -70,6 +70,7 @@
             action="https://formspree.io/f/mwpnybrw"
             method="POST"
             enctype="multipart/form-data"
+            data-oes-service-form="consulting"
             novalidate>
 
         <input type="hidden" name="_subject" value="Analog Studio Consulting Request">
@@ -81,23 +82,23 @@
         <div class="field-row split">
           <div class="field-row stack">
             <label for="consulting-name">Name:</label>
-            <input id="consulting-name" type="text" name="Name" autocomplete="name" />
+            <input id="consulting-name" type="text" name="Name" autocomplete="name" required />
           </div>
 
           <div class="field-row stack">
             <label for="consulting-email">Email:</label>
-            <input id="consulting-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
+            <input id="consulting-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" required />
           </div>
         </div>
 
         <div class="field-row stack">
           <label for="consulting-details">Studio Goals / Gear List:</label>
-          <input id="consulting-details" type="text" name="details" placeholder="e.g., integrate modular with DAW, rewire patchbay, tune monitors for your room." />
+          <input id="consulting-details" type="text" name="details" placeholder="e.g., integrate modular with DAW, rewire patchbay, tune monitors for your room." required />
         </div>
 
         <div class="field-row stack">
           <label for="consulting-scope">What do you want to accomplish?</label>
-          <textarea id="consulting-scope" name="scope" rows="8" placeholder="Tell us about the current setup, pain points, and what success looks like for you."></textarea>
+          <textarea id="consulting-scope" name="scope" rows="8" placeholder="Tell us about the current setup, pain points, and what success looks like for you." required></textarea>
         </div>
 
         <div class="field-row split">
@@ -117,7 +118,7 @@
           <button class="btn" type="reset">Clear</button>
         </div>
 
-        <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+        <div id="formStatus" class="status" data-form-status role="status" aria-live="polite"></div>
       </form>
     </div>
   </div>
@@ -135,6 +136,8 @@
     <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
   </div>
 </footer>
+
+<script src="/services/service-forms.js" defer></script>
 
 </body>
         </html>
