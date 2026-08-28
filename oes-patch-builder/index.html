@@ -22,7 +22,7 @@
 
 <body class="patch-builder-body">
   <header>
-<nav>
+    <nav>
       <ul class="nav-bar">
         <li><a href="/index.html">Home</a></li>
         <li class="dropdown">
@@ -48,7 +48,7 @@
             <li>
               <a href="/solutions/DIY/designers/index.html">DIY Pioneers</a>
             </li>
-<li>
+            <li>
               <a href="/solutions/resources/index.html">Links / Resources</a>
             </li>
           </ul>
@@ -60,7 +60,7 @@
   <main class="patch-builder-page">
     <section class="title-section">
       <div class="threeD,title-container">
-        <h1 class="threeD wiggle-title">PATCH BUILDER</h1>
+        <h1 class="threeD wiggle-title">OES Patch Memory Write and Recall System</h1>
       </div>
     </section>
     <section class="workspace-intro" aria-label="Patch builder instructions">
@@ -72,10 +72,12 @@
         <div class="w98-body">
           <div class="instructions-toolbar">
             <button class="oe-button" data-export type="button">Export PNG</button>
+            <button class="oe-button" data-add-text type="button">Add Text Box</button>
           </div>
           <div class="w98-editor" role="document" aria-label="Instructions text">
-            <p><b>Patch Builder</b> — Click or drag symbols onto the canvas; click two nodes to connect them.</p>
-            <p><em>Blue = CV · Red = audio</em> · Select a symbol and press Backspace to remove it.</p>
+            <p><b>OES-PMWR-v1.5
+              </b> — Click or drag symbols onto the canvas; click two nodes to connect them.</p>
+            <p><em>Blue = CV · Red = audio · Yellow = trigger/gate/clock</em> · Double-click text to edit.</p>
           </div>
         </div>
       </div>
@@ -160,9 +162,12 @@
           <h3>A simple patch-documentation workflow</h3>
           <ol>
             <li>Click or drag a module symbol onto the patch canvas.</li>
-            <li>Select two compatible ports to draw a cable between them.</li>
-            <li>Use blue connections for control voltage and red connections for audio.</li>
+            <li>Select two compatible nodes to draw a cable between them.</li>
+            <li>Use blue connections for control voltage, red connections for audio, and yellow connections for
+              trigger, gate, pulse, clock, reset, or sync signals.</li>
             <li>Select a symbol and press Delete or Backspace to remove it.</li>
+            <li>Select the text option to add a text box to your patch page, allowing more specific labeling and other
+              helpful notes for future you. Double click to edit the text box, click and drag to move it.</li>
             <li>Export the completed patch as a PNG before repatching the instrument.</li>
           </ol>
         </div>
@@ -190,7 +195,8 @@
           src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"
           alt="Shop My Store on Reverb" /></a>
       <img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge" />
-      <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
+      <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif" class="footer-badges"
+        alt="World Wide Web badge" />
       <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
       <a href="https://reverb.com/shop/otorlymern-electrical"><img
           src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png"

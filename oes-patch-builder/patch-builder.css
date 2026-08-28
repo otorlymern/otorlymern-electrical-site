@@ -484,6 +484,28 @@
   pointer-events: none;
 }
 
+.patch-node.is-selected image,
+.patch-node.is-selected rect,
+.patch-text-box.is-selected rect {
+  outline: none;
+  stroke: #2497d0;
+  stroke-width: 2.5;
+}
+
+.patch-text-box {
+  cursor: grab;
+}
+
+.patch-text-box text {
+  pointer-events: none;
+  user-select: none;
+}
+
+.output-node text {
+  pointer-events: none;
+  user-select: none;
+}
+
 .port {
   transition: transform 0.12s ease;
 }

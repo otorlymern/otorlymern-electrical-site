@@ -12,6 +12,7 @@ const canvas = document.getElementById("patch-canvas");
 const cableLayer = document.getElementById("cable-layer");
 const nodeLayer = document.getElementById("node-layer");
 const exportButton = document.querySelector("[data-export]");
+const addTextButton = document.querySelector("[data-add-text]");
 
 // Palette containers are now per-category windows.
 const paletteContainers = new Map(
@@ -22,11 +23,14 @@ const paletteContainers = new Map(
 );
 
 const nodes = new Map();
+const textBoxes = new Map();
 const connections = [];
 let nodeCounter = 0;
+let textCounter = 0;
 let connectionCounter = 0;
 let pendingConnection = null;
 let selectedNodeId = null;
+let selectedTextId = null;
 let dragState = null;
 let manifestData = null;
 
@@ -72,7 +76,38 @@ const PORT_PRESETS = {
     ],
     outputs: [{ type: "cv", x: NODE_HALF + PORT_OFFSET, y: 0 }],
   },
+  output: {
+    inputs: [
+      { type: "audio", x: -58, y: -14 },
+      { type: "audio", x: -58, y: 14 },
+    ],
+    outputs: [],
+  },
 };
+
+const SIGNAL_COLORS = {
+  audio: "#d01919",
+  cv: "#008080",
+  trigger: "#f2c230",
+};
+
+const CABLE_COLORS = {
+  audio: "#d01919",
+  cv: "#1c6f8b",
+  trigger: "#c48a00",
+};
+
+const TRIGGER_RULES = [
+  { terms: ["env-", "envelope"], inputs: 1, outputs: 0 },
+  { terms: ["seq-", "sequencer"], inputs: 1, outputs: 1 },
+  { terms: ["clock", "trigger-pattern"], inputs: 1, outputs: 1 },
+  { terms: ["gate-delay"], inputs: 1, outputs: 1 },
+  { terms: ["sample-and-hold"], inputs: 1, outputs: 0 },
+  { terms: ["lfo-reset-sync"], inputs: 1, outputs: 0 },
+  { terms: ["sample-player", "sample-rec"], inputs: 1, outputs: 0 },
+  { terms: ["logic-", "comparator", "cv-switch", "switch.svg"], inputs: 2, outputs: 1 },
+  { terms: ["keyboard-ctrl", "touch-ctrl"], inputs: 0, outputs: 1 },
+];
 
 init();
 
@@ -95,12 +130,17 @@ async function init() {
     });
   });
 
+  addTextButton?.addEventListener("click", () => {
+    addTextBox("PATCH NOTE", CANVAS_WIDTH / 2 - 70, CANVAS_HEIGHT / 2 - 20);
+  });
+
   document.addEventListener("keydown", (event) => {
-    if (!selectedNodeId) return;
+    if (!selectedNodeId && !selectedTextId) return;
     if (event.key === "Delete" || event.key === "Backspace") {
       const activeTag = document.activeElement?.tagName;
       if (activeTag && ["INPUT", "TEXTAREA"].includes(activeTag)) return;
-      removeNode(selectedNodeId);
+      if (selectedNodeId) removeNode(selectedNodeId);
+      if (selectedTextId) removeTextBox(selectedTextId);
     }
   });
 }
@@ -285,6 +325,7 @@ async function loadManifest() {
     if (!response.ok) throw new Error("Failed to fetch manifest");
     manifestData = await response.json();
     renderPalette(manifestData.categories || []);
+    addOutputDestination();
     setStatus("Click or drag an icon into the canvas.");
   } catch (error) {
     console.error("Could not load icons manifest:", error);
@@ -369,12 +410,14 @@ function attachCanvasEvents() {
     if (
       event.target?.closest?.(".port") ||
       event.target?.closest?.(".patch-node") ||
+      event.target?.closest?.(".patch-text-box") ||
       event.target?.closest?.(".cable")
     ) {
       return;
     }
     clearPendingConnection();
     clearSelectedNode();
+    clearSelectedTextBox();
   });
 }
 
@@ -405,7 +448,7 @@ function addNode(iconPath, categoryId, label, x, y) {
   labelEl.textContent = label || categoryId;
   group.appendChild(labelEl);
 
-  const ports = buildPortsForNode(group, id, categoryId);
+  const ports = buildPortsForNode(group, id, categoryId, label);
 
   group.addEventListener("pointerdown", (event) => {
     if (event.target.closest(".port")) return;
@@ -449,8 +492,8 @@ function addNode(iconPath, categoryId, label, x, y) {
   updateNodePosition(nodes.get(id));
 }
 
-function buildPortsForNode(group, nodeId, categoryId) {
-  const preset = PORT_PRESETS[categoryId] || PORT_PRESETS["audio-sources"];
+function buildPortsForNode(group, nodeId, categoryId, label = "") {
+  const preset = portsForModule(categoryId, label);
   const ports = [];
 
   const addPort = (portConfig, role, index) => {
@@ -461,7 +504,7 @@ function buildPortsForNode(group, nodeId, categoryId) {
     circle.setAttribute("cy", portConfig.y);
     circle.setAttribute(
       "fill",
-      portConfig.type === "cv" ? "#008080" : "#d8c8ff"
+      SIGNAL_COLORS[portConfig.type] || SIGNAL_COLORS.audio
     );
     circle.setAttribute("stroke", "#fff");
     circle.setAttribute("stroke-width", "1.5");
@@ -497,6 +540,40 @@ function buildPortsForNode(group, nodeId, categoryId) {
   return ports;
 }
 
+function portsForModule(categoryId, label = "") {
+  const base = PORT_PRESETS[categoryId] || PORT_PRESETS["audio-sources"];
+  const preset = {
+    inputs: base.inputs.map((port) => ({ ...port })),
+    outputs: base.outputs.map((port) => ({ ...port })),
+  };
+  const triggerConfig = triggerConfigForLabel(label);
+  for (let index = 0; index < triggerConfig.inputs; index += 1) {
+    preset.inputs.push({
+      type: "trigger",
+      x: -NODE_HALF - PORT_OFFSET,
+      y: 30 + index * 16,
+    });
+  }
+  for (let index = 0; index < triggerConfig.outputs; index += 1) {
+    preset.outputs.push({
+      type: "trigger",
+      x: NODE_HALF + PORT_OFFSET,
+      y: 24 + index * 16,
+    });
+  }
+  return preset;
+}
+
+function triggerConfigForLabel(label = "") {
+  const normalized = label.toLowerCase();
+  const match = TRIGGER_RULES.find((rule) =>
+    rule.terms.some((term) => normalized.includes(term))
+  );
+  return match
+    ? { inputs: match.inputs, outputs: match.outputs }
+    : { inputs: 0, outputs: 0 };
+}
+
 function moveNode(nodeId, x, y) {
   const node = nodes.get(nodeId);
   if (!node) return;
@@ -525,7 +602,7 @@ function handleOutputClick(nodeId, port) {
 function handleInputClick(nodeId, port) {
   if (!pendingConnection) return;
   if (pendingConnection.type !== port.type) {
-    setStatus("Type mismatch. Connect audio-to-audio or cv-to-cv.");
+    setStatus("Type mismatch. Connect audio, CV, or trigger ports to the same color.");
     return;
   }
   addConnection(pendingConnection, {
@@ -539,11 +616,12 @@ function handleInputClick(nodeId, port) {
 function addConnection(from, to) {
   const id = `cable-${++connectionCounter}`;
   const line = document.createElementNS(SVG_NS, "line");
-  line.classList.add("cable", from.type === "cv" ? "cable-cv" : "cable-audio");
-  line.setAttribute("stroke", from.type === "cv" ? "#1c6f8b" : "#7b3f00");
+  line.classList.add("cable", `cable-${from.type}`);
+  line.setAttribute("stroke", CABLE_COLORS[from.type] || CABLE_COLORS.audio);
   line.setAttribute("stroke-width", "3");
   line.setAttribute("stroke-linecap", "round");
   if (from.type === "cv") line.setAttribute("stroke-dasharray", "10 6");
+  if (from.type === "trigger") line.setAttribute("stroke-dasharray", "3 5");
 
   line.addEventListener("pointerdown", (event) => {
     event.stopPropagation();
@@ -595,6 +673,7 @@ function updateCablePosition(connection) {
 function selectNode(nodeId) {
   if (selectedNodeId === nodeId) return;
   clearSelectedNode();
+  clearSelectedTextBox();
   selectedNodeId = nodeId;
   const node = nodes.get(nodeId);
   if (node) {
@@ -607,6 +686,189 @@ function clearSelectedNode() {
   if (!selectedNodeId) return;
   nodes.get(selectedNodeId)?.element.classList.remove("is-selected");
   selectedNodeId = null;
+}
+
+function addTextBox(text, x, y) {
+  const id = `text-${++textCounter}`;
+  const group = document.createElementNS(SVG_NS, "g");
+  group.classList.add("patch-text-box");
+  group.dataset.textId = id;
+
+  const rect = document.createElementNS(SVG_NS, "rect");
+  rect.setAttribute("x", "0");
+  rect.setAttribute("y", "0");
+  rect.setAttribute("rx", "0");
+  rect.setAttribute("width", "150");
+  rect.setAttribute("height", "42");
+  rect.setAttribute("fill", "#fff8b8");
+  rect.setAttribute("stroke", "#111");
+  rect.setAttribute("stroke-width", "1.5");
+  group.appendChild(rect);
+
+  const textEl = document.createElementNS(SVG_NS, "text");
+  textEl.setAttribute("x", "10");
+  textEl.setAttribute("y", "25");
+  textEl.setAttribute("fill", "#111");
+  textEl.setAttribute("font-family", "ms-w98-ui-main, Arial, sans-serif");
+  textEl.setAttribute("font-size", "14px");
+  textEl.textContent = text;
+  group.appendChild(textEl);
+
+  group.addEventListener("pointerdown", (event) => {
+    event.stopPropagation();
+    dragState = {
+      textId: id,
+      offset: offsetFromPointer(event, x, y),
+    };
+    group.setPointerCapture(event.pointerId);
+  });
+
+  group.addEventListener("pointermove", (event) => {
+    if (!dragState || dragState.textId !== id) return;
+    const point = svgPointFromEvent(event);
+    moveTextBox(id, point.x - dragState.offset.x, point.y - dragState.offset.y);
+  });
+
+  group.addEventListener("pointerup", (event) => {
+    if (dragState?.textId === id) dragState = null;
+    group.releasePointerCapture(event.pointerId);
+  });
+
+  group.addEventListener("click", (event) => {
+    event.stopPropagation();
+    selectTextBox(id);
+  });
+
+  group.addEventListener("dblclick", (event) => {
+    event.stopPropagation();
+    editTextBox(id);
+  });
+
+  textBoxes.set(id, { id, text, x, y, element: group, rect, textEl });
+  nodeLayer.appendChild(group);
+  updateTextBox(textBoxes.get(id));
+  selectTextBox(id);
+  setStatus("Text box added. Double-click to edit, drag to move.");
+}
+
+function moveTextBox(textId, x, y) {
+  const textBox = textBoxes.get(textId);
+  if (!textBox) return;
+  textBox.x = x;
+  textBox.y = y;
+  updateTextBox(textBox);
+}
+
+function updateTextBox(textBox) {
+  textBox.element.setAttribute("transform", `translate(${textBox.x}, ${textBox.y})`);
+  const width = Math.max(150, textBox.text.length * 8 + 24);
+  textBox.rect.setAttribute("width", String(Math.min(width, 360)));
+}
+
+function selectTextBox(textId) {
+  clearSelectedNode();
+  clearSelectedTextBox();
+  selectedTextId = textId;
+  textBoxes.get(textId)?.element.classList.add("is-selected");
+  setStatus("Text box selected. Double-click to edit or press Delete/Backspace to remove.");
+}
+
+function clearSelectedTextBox() {
+  if (!selectedTextId) return;
+  textBoxes.get(selectedTextId)?.element.classList.remove("is-selected");
+  selectedTextId = null;
+}
+
+function editTextBox(textId) {
+  const textBox = textBoxes.get(textId);
+  if (!textBox) return;
+  const next = window.prompt("Text box label", textBox.text);
+  if (next === null) return;
+  textBox.text = next.trim() || "PATCH NOTE";
+  textBox.textEl.textContent = textBox.text;
+  updateTextBox(textBox);
+  setStatus("Text box updated.");
+}
+
+function removeTextBox(textId) {
+  const textBox = textBoxes.get(textId);
+  if (!textBox) return;
+  textBox.element.remove();
+  textBoxes.delete(textId);
+  if (selectedTextId === textId) selectedTextId = null;
+  setStatus("Text box removed.");
+}
+
+function addOutputDestination() {
+  const id = `node-${++nodeCounter}`;
+  const group = document.createElementNS(SVG_NS, "g");
+  group.classList.add("patch-node", "output-node");
+  group.dataset.nodeId = id;
+  group.dataset.category = "output";
+
+  const rect = document.createElementNS(SVG_NS, "rect");
+  rect.setAttribute("x", "-46");
+  rect.setAttribute("y", "-34");
+  rect.setAttribute("width", "92");
+  rect.setAttribute("height", "68");
+  rect.setAttribute("fill", "#f0f0f0");
+  rect.setAttribute("stroke", "#111");
+  rect.setAttribute("stroke-width", "2");
+  group.appendChild(rect);
+
+  const labelEl = document.createElementNS(SVG_NS, "text");
+  labelEl.setAttribute("text-anchor", "middle");
+  labelEl.setAttribute("x", "0");
+  labelEl.setAttribute("y", "5");
+  labelEl.setAttribute("fill", "#111");
+  labelEl.setAttribute("font-family", "ms-w98-ui-main, Arial, sans-serif");
+  labelEl.setAttribute("font-size", "16px");
+  labelEl.setAttribute("font-weight", "700");
+  labelEl.textContent = "OUTPUT";
+  group.appendChild(labelEl);
+
+  const ports = buildPortsForNode(group, id, "output", "output");
+
+  group.addEventListener("pointerdown", (event) => {
+    if (event.target.closest(".port")) return;
+    event.stopPropagation();
+    const current = nodes.get(id);
+    dragState = {
+      nodeId: id,
+      offset: offsetFromPointer(event, current?.x ?? CANVAS_WIDTH - 150, current?.y ?? CANVAS_HEIGHT / 2),
+    };
+    group.setPointerCapture(event.pointerId);
+  });
+
+  group.addEventListener("pointermove", (event) => {
+    if (!dragState || dragState.nodeId !== id) return;
+    const point = svgPointFromEvent(event);
+    moveNode(id, point.x - dragState.offset.x, point.y - dragState.offset.y);
+  });
+
+  group.addEventListener("pointerup", (event) => {
+    if (dragState?.nodeId === id) dragState = null;
+    group.releasePointerCapture(event.pointerId);
+  });
+
+  group.addEventListener("click", (event) => {
+    if (event.target.closest(".port")) return;
+    event.stopPropagation();
+    selectNode(id);
+  });
+
+  nodes.set(id, {
+    id,
+    categoryId: "output",
+    iconPath: null,
+    label: "output",
+    x: CANVAS_WIDTH - 150,
+    y: CANVAS_HEIGHT / 2,
+    element: group,
+    ports,
+  });
+  nodeLayer.appendChild(group);
+  updateNodePosition(nodes.get(id));
 }
 
 function removeNode(nodeId) {
@@ -739,12 +1001,19 @@ async function fetchAsDataUrl(url) {
 }
 
 function contentBounds() {
-  // bounds based on nodes
   const nodeList = Array.from(nodes.values());
-  if (!nodeList.length) return { x: 0, y: 0, width: 400, height: 400 };
+  const textList = Array.from(textBoxes.values());
+  if (!nodeList.length && !textList.length) {
+    return { x: 0, y: 0, width: 400, height: 400 };
+  }
 
   const xs = nodeList.map((n) => n.x);
   const ys = nodeList.map((n) => n.y);
+  textList.forEach((textBox) => {
+    const width = Number(textBox.rect.getAttribute("width") || 150);
+    xs.push(textBox.x, textBox.x + width);
+    ys.push(textBox.y, textBox.y + 42);
+  });
 
   const minX = Math.min(...xs) - NODE_HALF - 40;
   const maxX = Math.max(...xs) + NODE_HALF + 40;
