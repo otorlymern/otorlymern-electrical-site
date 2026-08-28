@@ -91,12 +91,13 @@ Live verification on 2026-08-28:
 ## DNS, email, and response-security status — 2026-08-28
 
 - Namecheap remains the registrar. Public RDAP shows transfer lock, Cloudflare nameservers, and expiration on 2027-04-20.
-- Cloudflare DNSSEC signing is enabled and pending publication of the generated DS record at Namecheap. Do not claim a signed delegation until the parent-zone DS validates publicly.
+- Cloudflare DNSSEC signing is enabled. The generated DS record is published at Namecheap, resolves through both Cloudflare and Google public resolvers, and validated with the authenticated-data (`ad`) flag on 2026-08-28.
 - `mail`, `autoconfig`, and `autodiscover` now point to Private Email as DNS-only records. MX records remain DNS-only.
 - The active DKIM selector is the legacy `default._domainkey`; `privateemail._domainkey` is not published.
 - SPF remains `v=spf1 include:spf.privateemail.com ~all` until monitoring proves the sender inventory complete.
-- DMARC is not yet published. The intended first policy is monitoring-only (`p=none`) with aggregate reports sent to the verified `postmaster` role address.
-- Two obsolete apex NS records for `dns1.registrar-servers.com` and `dns2.registrar-servers.com` remain in the Cloudflare zone pending their confirmed removal. Registrar delegation already uses Cloudflare.
+- `postmaster@otorlymern-electrical.com` is a Private Email alias of `contact@otorlymern-electrical.com`; it does not consume another mailbox slot.
+- DMARC is published in monitoring-only mode (`p=none`) with relaxed SPF/DKIM alignment and aggregate reports sent to the `postmaster` alias. Review reports for at least 30 days before considering enforcement.
+- The obsolete apex NS records for `dns1.registrar-servers.com` and `dns2.registrar-servers.com` were removed from the Cloudflare zone. Authoritative responses now contain only `nola.ns.cloudflare.com` and `watson.ns.cloudflare.com`; registrar delegation remains on Cloudflare.
 - The Cloudflare response-header rule `OES baseline security headers` applies only to the apex and `www`. It sets six-month HSTS without subdomains or preload, `nosniff`, `strict-origin-when-cross-origin`, `SAMEORIGIN`, and a limited Permissions Policy denying unused sensitive capabilities.
 - The origin's permissive enforced CSP is removed at the edge. CSP remains deliberately unenforced until the documented iframe, Zaraz, Formspree, Turnstile, Wasabi, PDF.js, PeerTube, YouTube, Bandcamp, and interactive-experiment dependencies can support a tested policy.
 
