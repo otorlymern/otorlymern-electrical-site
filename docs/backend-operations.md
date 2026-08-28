@@ -81,6 +81,25 @@ Do not add events unless they answer a documented operational or editorial quest
 - Client behavior covers required-field validation, pending/success/error announcements, duplicate-submit prevention, and Turnstile reset after each completed request.
 - Analytics reports success only after Formspree returns a successful response.
 
+Live verification on 2026-08-28:
+
+- One labeled synthetic submission with a fresh managed Turnstile token reached the Formspree Inbox and produced the expected accessible success state.
+- Reusing that token and sending a fabricated non-empty token both received Formspree HTTP 200 responses, but Formspree quarantined both labeled diagnostics in Spam rather than the operational Inbox. A missing token returned HTTP 400.
+- With Analytics consent accepted, `service_form_start` and the server-confirmed `service_form_submit` were delivered to Zaraz with the documented `page_path` and `form_type` parameters. The payload contained no form contents.
+- Treat Inbox-versus-Spam placement as Formspree's managed verification boundary; its endpoint does not use a non-2xx response for every invalid-token case.
+
+## DNS, email, and response-security status — 2026-08-28
+
+- Namecheap remains the registrar. Public RDAP shows transfer lock, Cloudflare nameservers, and expiration on 2027-04-20.
+- Cloudflare DNSSEC signing is enabled and pending publication of the generated DS record at Namecheap. Do not claim a signed delegation until the parent-zone DS validates publicly.
+- `mail`, `autoconfig`, and `autodiscover` now point to Private Email as DNS-only records. MX records remain DNS-only.
+- The active DKIM selector is the legacy `default._domainkey`; `privateemail._domainkey` is not published.
+- SPF remains `v=spf1 include:spf.privateemail.com ~all` until monitoring proves the sender inventory complete.
+- DMARC is not yet published. The intended first policy is monitoring-only (`p=none`) with aggregate reports sent to the verified `postmaster` role address.
+- Two obsolete apex NS records for `dns1.registrar-servers.com` and `dns2.registrar-servers.com` remain in the Cloudflare zone pending their confirmed removal. Registrar delegation already uses Cloudflare.
+- The Cloudflare response-header rule `OES baseline security headers` applies only to the apex and `www`. It sets six-month HSTS without subdomains or preload, `nosniff`, `strict-origin-when-cross-origin`, `SAMEORIGIN`, and a limited Permissions Policy denying unused sensitive capabilities.
+- The origin's permissive enforced CSP is removed at the edge. CSP remains deliberately unenforced until the documented iframe, Zaraz, Formspree, Turnstile, Wasabi, PDF.js, PeerTube, YouTube, Bandcamp, and interactive-experiment dependencies can support a tested policy.
+
 ## Routine checks
 
 - After deployment: confirm current HTML, sitemap, robots, redirects, Googlebot responses, external-referrer media access, and protected Wasabi listing/write behavior.
