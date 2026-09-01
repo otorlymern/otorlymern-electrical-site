@@ -103,6 +103,10 @@ Live verification on 2026-08-28:
 
 ## Routine checks
 
+- `.github/workflows/backend-health.yml` runs repository-only checks on pull requests, the full bounded audit on Mondays at 17:00 UTC and manual dispatch, and live checks without a PUT diagnostic after successful Neocities deployments.
+- The full scheduled/manual audit checks intended live routes and crawler responses, robots and sitemap, one known Wasabi object, denied bucket listing, one uniquely named anonymous PUT sentinel expected to return 403, one PeerTube embed, DNSSEC, MX, SPF, DKIM, DMARC, TLS expiry, and domain expiry.
+- If a PUT ever returns 2xx, the audit preserves the sentinel URL in its failure output, stops without attempting anonymous cleanup, and opens the single `backend-health` incident path for authenticated investigation.
+- Successful runs write only a concise Actions summary. Failures create or update one open issue labeled `backend-health`; the next successful run closes it with the issue history intact.
 - After deployment: confirm current HTML, sitemap, robots, redirects, Googlebot responses, external-referrer media access, and protected Wasabi listing/write behavior.
 - Monthly: inspect Search Console indexing and queries, Cloudflare Web Analytics/Core Web Vitals, Wasabi access logs, account alerts, renewals, and email authentication reports.
 - Record incidents and rollback notes here until a real need justifies another file.
