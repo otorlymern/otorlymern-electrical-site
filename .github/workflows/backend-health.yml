@@ -61,6 +61,19 @@ jobs:
             echo "- Repository: ${{ steps.repository.outcome || 'not run' }}"
             echo "- Live services: ${{ steps.live.outcome || 'not run' }}"
             echo "- Trigger: ${{ github.event_name }}"
+            if [[ -f live-audit.log ]]; then
+              echo
+              grep '^OES health audit:' live-audit.log | tail -n 1 || true
+              if grep -q '^BLOCKED ' live-audit.log; then
+                echo
+                echo "### Monitoring access warning"
+                echo
+                echo '```text'
+                grep '^BLOCKED ' live-audit.log || true
+                echo '```'
+                echo "These requests reached Cloudflare but did not verify page content. Cloudflare Security Analytics confirmed Bot Fight Mode managed challenges for this GitHub-runner pattern."
+              fi
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Create or update backend-health issue
@@ -80,7 +93,7 @@ jobs:
           fi
 
       - name: Close recovered backend-health issue
-        if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && steps.repository.outcome == 'success' && steps.live.outcome == 'success'
+        if: always() && github.event_name != 'pull_request' && steps.repository.outcome != 'failure' && steps.live.outcome != 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

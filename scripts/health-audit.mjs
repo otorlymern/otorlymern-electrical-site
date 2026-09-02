@@ -1,6 +1,7 @@
 import { execFile } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import { promisify } from "node:util";
+import assert from "node:assert/strict";
 import dns from "node:dns/promises";
 import path from "node:path";
 import tls from "node:tls";
@@ -23,6 +24,7 @@ const runRepository = args.has("--repo") || !args.has("--live");
 const runLive = args.has("--live");
 const runPutDiagnostic = runLive && !args.has("--skip-put");
 const failures = [];
+const blocked = [];
 let checks = 0;
 
 function pass(message) {
@@ -36,12 +38,22 @@ function fail(message) {
   console.error(`FAIL ${message}`);
 }
 
+function block(message) {
+  checks += 1;
+  blocked.push(message);
+  console.warn(`BLOCKED ${message}`);
+}
+
+class MonitoringBlockedError extends Error {}
+
 async function check(name, operation) {
   try {
     const detail = await operation();
     pass(detail ? `${name}: ${detail}` : name);
   } catch (error) {
-    fail(`${name}: ${error.message}`);
+    const message = `${name}: ${error.message}`;
+    if (error instanceof MonitoringBlockedError) block(message);
+    else fail(message);
   }
 }
 
@@ -60,6 +72,15 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 15_000) {
   }
 }
 
+function isKnownGithubBotFightChallenge(response, { url, userAgentCategory }) {
+  if (process.env.GITHUB_ACTIONS !== "true") return false;
+  if (url !== `${origin}/` && url !== origin) return false;
+  if (!["normal-monitor", "googlebot"].includes(userAgentCategory)) return false;
+  if (response.status !== 403) return false;
+  if (response.headers.get("server")?.toLowerCase() !== "cloudflare") return false;
+  return /^[a-f0-9]+-[A-Z]{3}$/i.test(response.headers.get("cf-ray") || "");
+}
+
 function requireStatus(response, expected, { url, userAgentCategory = "normal-monitor" }) {
   const allowed = Array.isArray(expected) ? expected : [expected];
   if (!allowed.includes(response.status)) {
@@ -68,10 +89,43 @@ function requireStatus(response, expected, { url, userAgentCategory = "normal-mo
       .filter(([, value]) => value)
       .map(([name, value]) => `${name}=${value}`)
       .join(" ");
-    throw new Error(
-      `url=${url} expected=${allowed.join("/")} actual=${response.status} ` +
-      `user-agent=${userAgentCategory}${edgeHeaders ? ` ${edgeHeaders}` : ""}`,
+    const message = `url=${url} expected=${allowed.join("/")} actual=${response.status} ` +
+      `user-agent=${userAgentCategory}${edgeHeaders ? ` ${edgeHeaders}` : ""}`;
+    if (isKnownGithubBotFightChallenge(response, { url, userAgentCategory })) {
+      throw new MonitoringBlockedError(`${message} reason=confirmed-bot-fight-mode-edge-challenge`);
+    }
+    throw new Error(message);
+  }
+}
+
+function runResultStateTests() {
+  const priorGithubActions = process.env.GITHUB_ACTIONS;
+  const response = (status, headers = {}) => new Response(null, { status, headers });
+  try {
+    process.env.GITHUB_ACTIONS = "true";
+    assert.doesNotThrow(() => requireStatus(response(200), 200, { url: `${origin}/` }));
+    assert.throws(() => requireStatus(response(403), 200, { url: `${origin}/` }), (error) => !(error instanceof MonitoringBlockedError));
+    assert.throws(
+      () => requireStatus(response(403, { server: "cloudflare", "cf-ray": "abc123-IAD" }), 200, {
+        url: `${origin}/`, userAgentCategory: "normal-monitor",
+      }),
+      MonitoringBlockedError,
     );
+    assert.throws(
+      () => requireStatus(response(403, { server: "cloudflare", "cf-ray": "abc123-IAD" }), 200, {
+        url: `${origin}/`, userAgentCategory: "googlebot",
+      }),
+      MonitoringBlockedError,
+    );
+    for (const status of [404, 500]) {
+      assert.throws(() => requireStatus(response(status), 200, { url: `${origin}/` }), (error) => !(error instanceof MonitoringBlockedError));
+    }
+    assert.ok(!(new DOMException("timed out", "AbortError") instanceof MonitoringBlockedError));
+    assert.ok(!(new TypeError("network failure") instanceof MonitoringBlockedError));
+    console.log("PASS result-state tests: 200 passes; narrow GitHub Cloudflare challenge blocks; 403/404/500/network errors fail");
+  } finally {
+    if (priorGithubActions === undefined) delete process.env.GITHUB_ACTIONS;
+    else process.env.GITHUB_ACTIONS = priorGithubActions;
   }
 }
 
@@ -277,6 +331,11 @@ async function dnsAndExpiryAudit() {
   });
 }
 
+if (args.has("--test-result-states")) {
+  runResultStateTests();
+  process.exit(0);
+}
+
 if (runRepository) await repositoryAudit();
 if (runLive) {
   await livePageAudit();
@@ -284,7 +343,11 @@ if (runLive) {
   await dnsAndExpiryAudit();
 }
 
-console.log(`\nOES health audit: ${checks - failures.length}/${checks} checks passed.`);
+console.log(`\nOES health audit: ${checks - failures.length - blocked.length} PASS / ${blocked.length} BLOCKED / ${failures.length} FAIL (${checks} total).`);
+if (blocked.length > 0) {
+  console.warn("\nMonitoring blocked by confirmed Cloudflare Bot Fight Mode pattern; page content was not verified:");
+  for (const warning of blocked) console.warn(`- ${warning}`);
+}
 if (failures.length > 0) {
   console.error("\nFailures:");
   for (const failure of failures) console.error(`- ${failure}`);
