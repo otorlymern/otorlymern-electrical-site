@@ -15,6 +15,7 @@ const peerTubeEmbed = "https://videos.scanlines.xyz/videos/embed/93372fc7-a688-4
 const expectedDmarc = "v=DMARC1; p=none; rua=mailto:postmaster@otorlymern-electrical.com; adkim=r; aspf=r; pct=100";
 const expectedSpf = "v=spf1 include:spf.privateemail.com ~all";
 const expectedMx = new Set(["mx1.privateemail.com", "mx2.privateemail.com"]);
+const healthUserAgent = "OES-Backend-Health/1.0";
 const publicResolver = new dns.Resolver();
 publicResolver.setServers(["1.1.1.1", "8.8.8.8"]);
 const args = new Set(process.argv.slice(2));
@@ -48,16 +49,29 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 15_000) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    return await fetch(url, { redirect: "follow", ...options, signal: controller.signal });
+    return await fetch(url, {
+      redirect: "follow",
+      ...options,
+      headers: { "User-Agent": healthUserAgent, ...options.headers },
+      signal: controller.signal,
+    });
   } finally {
     clearTimeout(timer);
   }
 }
 
-function requireStatus(response, expected) {
+function requireStatus(response, expected, { url, userAgentCategory = "normal-monitor" }) {
   const allowed = Array.isArray(expected) ? expected : [expected];
   if (!allowed.includes(response.status)) {
-    throw new Error(`expected ${allowed.join("/")}, received ${response.status}`);
+    const edgeHeaders = ["server", "cf-ray", "cf-cache-status"]
+      .map((name) => [name, response.headers.get(name)])
+      .filter(([, value]) => value)
+      .map(([name, value]) => `${name}=${value}`)
+      .join(" ");
+    throw new Error(
+      `url=${url} expected=${allowed.join("/")} actual=${response.status} ` +
+      `user-agent=${userAgentCategory}${edgeHeaders ? ` ${edgeHeaders}` : ""}`,
+    );
   }
 }
 
@@ -111,10 +125,9 @@ async function livePageAudit() {
   const routes = manifest.pages.filter((page) => page.monitor);
   for (const page of routes) {
     await check(`live route ${page.path}`, async () => {
-      const response = await fetchWithTimeout(`${origin}${page.path}`, {
-        headers: { "User-Agent": "OES-Backend-Health/1.0" },
-      });
-      requireStatus(response, 200);
+      const url = `${origin}${page.path}`;
+      const response = await fetchWithTimeout(url);
+      requireStatus(response, 200, { url });
       return "200";
     });
   }
@@ -125,14 +138,18 @@ async function livePageAudit() {
   ]) {
     await check(`crawler homepage ${userAgent.includes("Inspection") ? "inspection" : "Googlebot"}`, async () => {
       const response = await fetchWithTimeout(origin, { headers: { "User-Agent": userAgent } });
-      requireStatus(response, 200);
+      requireStatus(response, 200, {
+        url: origin,
+        userAgentCategory: userAgent.includes("Inspection") ? "google-inspection" : "googlebot",
+      });
       return "200";
     });
   }
 
   await check("live robots policy", async () => {
-    const response = await fetchWithTimeout(`${origin}/robots.txt`);
-    requireStatus(response, 200);
+    const url = `${origin}/robots.txt`;
+    const response = await fetchWithTimeout(url);
+    requireStatus(response, 200, { url });
     const body = await response.text();
     if (!body.includes(`Sitemap: ${origin}/sitemap.xml`) || !body.includes("Disallow: /cdn-cgi/")) {
       throw new Error("required directives are absent");
@@ -141,8 +158,9 @@ async function livePageAudit() {
   });
 
   await check("live sitemap", async () => {
-    const response = await fetchWithTimeout(`${origin}/sitemap.xml`);
-    requireStatus(response, 200);
+    const url = `${origin}/sitemap.xml`;
+    const response = await fetchWithTimeout(url);
+    requireStatus(response, 200, { url });
     const body = await response.text();
     if (!body.includes("<urlset") || !body.includes(`<loc>${origin}/</loc>`)) {
       throw new Error("not a recognizable OES sitemap");
@@ -156,13 +174,14 @@ async function storageAndVideoAudit() {
     const response = await fetchWithTimeout(knownPublicObject, {
       headers: { Range: "bytes=0-0" },
     });
-    requireStatus(response, [200, 206]);
+    requireStatus(response, [200, 206], { url: knownPublicObject, userAgentCategory: "normal-monitor-wasabi" });
     return `${response.status}`;
   });
 
   await check("Wasabi anonymous LIST denied", async () => {
-    const response = await fetchWithTimeout(`${directBucketOrigin}?list-type=2`, { redirect: "manual" });
-    requireStatus(response, 403);
+    const url = `${directBucketOrigin}?list-type=2`;
+    const response = await fetchWithTimeout(url, { redirect: "manual" });
+    requireStatus(response, 403, { url, userAgentCategory: "normal-monitor-wasabi" });
     return "403";
   });
 
@@ -181,7 +200,7 @@ async function storageAndVideoAudit() {
       if (response.status >= 200 && response.status < 300) {
         throw new Error(`PUBLIC WRITE EXPOSURE: ${response.status}; sentinel preserved at ${sentinel}`);
       }
-      requireStatus(response, 403);
+      requireStatus(response, 403, { url: sentinel, userAgentCategory: "normal-monitor-wasabi" });
       return "403";
     });
   } else {
@@ -190,7 +209,7 @@ async function storageAndVideoAudit() {
 
   await check("PeerTube embed", async () => {
     const response = await fetchWithTimeout(peerTubeEmbed);
-    requireStatus(response, 200);
+    requireStatus(response, 200, { url: peerTubeEmbed, userAgentCategory: "normal-monitor-peertube" });
     return "200";
   });
 }
@@ -245,7 +264,10 @@ async function dnsAndExpiryAudit() {
 
   await check("domain expiry", async () => {
     const response = await fetchWithTimeout("https://rdap.verisign.com/com/v1/domain/otorlymern-electrical.com");
-    requireStatus(response, 200);
+    requireStatus(response, 200, {
+      url: "https://rdap.verisign.com/com/v1/domain/otorlymern-electrical.com",
+      userAgentCategory: "normal-monitor-rdap",
+    });
     const rdap = await response.json();
     const expiration = rdap.events?.find((event) => event.eventAction === "expiration")?.eventDate;
     if (!expiration) throw new Error("RDAP did not return an expiration event");
