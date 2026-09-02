@@ -17,15 +17,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Strip repo-only files before deploy
-        run: |
-          rm -rf .git .github scripts tmp models oes-site.code-workspace .neocitiesignore
-          rm -f \
-            "solutions/DIY/projects/The Art Of Electronics - Horowitz & Hill.pdf" \
-            "solutions/techniques/resources/Curtis_Roads_Composing_Electronic_music.pdf" \
-            "solutions/techniques/resources/oram_anindividual.pdf" \
-            "solutions/techniques/resources/LearnMusicWithSynths1974.pdf" \
-            "solutions/DIY/projects/Music183-184.pdf"
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build and audit public artifact
+        run: npm test
 
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3
@@ -33,4 +31,10 @@ jobs:
           api_key: ${{ secrets.NEOCITIES_API_KEY }}
           cleanup: true
           neocities_supporter: true
-          dist_dir: .
+          dist_dir: _deploy
+
+      - name: Purge Cloudflare cache
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: npm run purge:cloudflare

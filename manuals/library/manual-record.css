@@ -1,0 +1,204 @@
+:root {
+  --record-ink: #17151e;
+  --record-paper: #f3efdb;
+  --record-accent: #ea4f38;
+  --record-blue: #3157c8;
+  --record-line: rgba(23, 21, 30, 0.35);
+}
+
+body.manual-record-page {
+  color: var(--record-ink);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(234, 79, 56, 0.25), transparent 28rem),
+    radial-gradient(circle at 88% 25%, rgba(49, 87, 200, 0.22), transparent 30rem),
+    var(--record-paper);
+}
+
+.manual-record-main {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.manual-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.4rem;
+  font: 700 0.82rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.manual-breadcrumbs a {
+  color: var(--record-blue);
+}
+
+.manual-record-hero,
+.manual-record-panel {
+  border: 2px solid var(--record-ink);
+  box-shadow: 8px 8px 0 var(--record-ink);
+  background: rgba(243, 239, 219, 0.94);
+}
+
+.manual-record-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.38fr);
+  gap: 2rem;
+  padding: clamp(1.4rem, 4vw, 3.4rem);
+  overflow: hidden;
+}
+
+.manual-record-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--record-accent);
+  font: 800 0.85rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.manual-record-hero h1 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.manual-record-deck {
+  max-width: 64ch;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.manual-record-art {
+  align-self: center;
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--record-line);
+  background: repeating-linear-gradient(
+    -12deg,
+    rgba(49, 87, 200, 0.12),
+    rgba(49, 87, 200, 0.12) 8px,
+    transparent 8px,
+    transparent 18px
+  );
+  transform: rotate(1.2deg);
+}
+
+.manual-record-art img {
+  width: min(100%, 320px);
+  max-height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(7px 9px 0 rgba(23, 21, 30, 0.22));
+}
+
+.manual-record-art span {
+  padding: 1rem;
+  font: 900 clamp(2.5rem, 7vw, 5.5rem)/0.85 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--record-blue);
+}
+
+.manual-record-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.manual-record-panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.manual-record-panel h2 {
+  margin-top: 0;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+}
+
+.manual-record-panel p,
+.manual-record-panel li,
+.manual-record-panel dd {
+  line-height: 1.65;
+}
+
+.manual-record-facts {
+  margin: 0;
+}
+
+.manual-record-facts div {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--record-line);
+}
+
+.manual-record-facts dt {
+  color: var(--record-accent);
+  font: 800 0.78rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.manual-record-facts dd {
+  margin: 0.25rem 0 0;
+}
+
+.manual-record-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.manual-record-action {
+  display: inline-block;
+  border: 2px solid var(--record-ink);
+  padding: 0.75rem 1rem;
+  color: var(--record-ink);
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--record-ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.manual-record-action--primary {
+  color: #fff;
+  background: var(--record-blue);
+}
+
+.manual-record-action:hover,
+.manual-record-action:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--record-ink);
+}
+
+.manual-related-list {
+  padding-left: 1.25rem;
+}
+
+.manual-related-list a {
+  color: var(--record-blue);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .manual-record-main {
+    width: min(100% - 1rem, 1080px);
+    padding-top: 1.4rem;
+  }
+
+  .manual-record-hero,
+  .manual-record-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-record-hero h1 {
+    max-width: none;
+  }
+
+  .manual-record-art {
+    min-height: 170px;
+  }
+}

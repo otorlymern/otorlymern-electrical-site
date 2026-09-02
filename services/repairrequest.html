@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Otorlymern Electrical Services — Repair Request</title>
-    <link rel="stylesheet" href="/css/system7.css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/system7/style.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/system7-services.css"/>
   <link rel="stylesheet" href="/css/site-nav.css" />
@@ -79,6 +79,7 @@
               action="https://formspree.io/f/mwpnybrw"
               method="POST"
               enctype="multipart/form-data"
+              data-oes-service-form="repair"
               novalidate
             >
               <input type="hidden" name="_subject" value="OES Repair Request" />
@@ -91,7 +92,7 @@
               <div class="field-row split">
                 <div class="field-row stack">
                   <label for="repair-name">Name:</label>
-                  <input id="repair-name" type="text" name="Name" autocomplete="name" />
+                  <input id="repair-name" type="text" name="Name" autocomplete="name" required />
                 </div>
 
                 <div class="field-row stack">
@@ -102,6 +103,7 @@
                     name="_replyto"
                     autocomplete="email"
                     placeholder="you@example.com"
+                    required
                   />
                 </div>
               </div>
@@ -113,6 +115,7 @@
                   type="text"
                   name="details"
                   placeholder="e.g., Korg DW-6000 (synth), Tascam 244 (4-track), etc."
+                  required
                 />
               </div>
 
@@ -123,6 +126,7 @@
                   name="scope"
                   rows="8"
                   placeholder="What’s broken, how it behaves, what you tried, when it started…"
+                  required
                 ></textarea>
               </div>
 
@@ -148,9 +152,12 @@
                 <button class="btn" type="reset">Clear</button>
               </div>
 
+              <div data-oes-turnstile aria-label="Bot verification"></div>
+
               <div
                 id="formStatus"
                 class="status"
+                data-form-status
                 role="status"
                 aria-live="polite"
               ></div>
@@ -170,5 +177,7 @@
     <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
   </div>
 </footer>
+<script src="/services/service-forms.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=oesTurnstileReady&amp;render=explicit" defer></script>
 </body>
 </html>

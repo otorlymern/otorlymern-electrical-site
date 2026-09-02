@@ -163,7 +163,7 @@
 
     .text-panel {
       background-color: #fdf6e3;
-      background-image: url('/images/video-thumbs/foilback.png');
+      background-image: url('/images/foilback.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -175,6 +175,23 @@
 
     .text-panel h2 {
       margin-top: 0;
+    }
+
+    .recording-pilot-summary {
+      font-size: 0.72em;
+      line-height: 1.45;
+    }
+
+    .recording-pilot-summary ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.65rem 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .recording-pilot-summary a {
+      color: #4b1600;
+      text-decoration-thickness: 0.12em;
     }
 
     .split {
@@ -522,6 +539,10 @@
         font-size: 1.05em;
       }
 
+      body.home-recording .wiggle-title .title-text {
+        white-space: normal;
+      }
+
       .text-panel {
         padding: 1.2rem 1.3rem;
       }
@@ -599,7 +620,27 @@
     </section>
 
     <div class="content-wrap">
-      <section class="text-panel intro-paragraphs">
+      <section class="text-panel recording-pilot-summary" aria-labelledby="recording-guide-overview">
+        <h2 id="recording-guide-overview">A practical OES guide to computerless home recording</h2>
+        <p>
+          This living guide connects the history and creative freedom of home recording to practical tape workflows:
+          bouncing between stereo decks, building layers without an erase head, starting with a portable cassette
+          recorder, and making a first multitrack song on a Tascam MFP01. It is written for musicians who want fewer
+          menus, firmer decisions, and a recording system they can understand with their hands and ears.
+        </p>
+        <nav aria-label="Home recording guide and related OES resources">
+          <ul>
+            <li><a href="#recording-history">Why home recording and limitations matter</a></li>
+            <li><a href="#ping-pong-recording">Diagram: bouncing between two stereo decks</a></li>
+            <li><a href="#recording-to-tape">Start recording to tape without a computer</a></li>
+            <li><a href="/solutions/resources/?app=recording">Open curated home-recording resources</a></li>
+            <li><a href="/manuals/">Search recording manuals in the OES A/V Archive</a></li>
+            <li><a href="/services/tapebounce">Explore OES analog tape-bounce service</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="text-panel intro-paragraphs" id="recording-history">
         <h2>Home Recording: <br>Then vs. Now</h2>
         <div class="intro-grid">
           <div class="intro-copy">
@@ -671,7 +712,7 @@
         </div>
       </section>
 
-      <section class="text-panel pingpong-panel">
+      <section class="text-panel pingpong-panel" id="ping-pong-recording">
         <h2>ping ponging two stereo decks: the r stevie method</h2>
         <div class="pingpong-viewer" data-pingpong-pdf="/images/diagrams/pingpong-r2r.pdf">
           <div class="pingpong-toolbar" role="toolbar" aria-label="Ping pong PDF viewer controls">
@@ -700,7 +741,7 @@
 
       <div class="section-gap" aria-hidden="true"></div>
 
-      <section class="text-panel intro-paragraphs">
+      <section class="text-panel intro-paragraphs" id="recording-to-tape">
         <h2>Computerless Home Recording: Recording to Tape</h2>
         <div class="intro-grid">
           <div class="intro-copy">

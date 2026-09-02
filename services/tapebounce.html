@@ -4,7 +4,7 @@
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <title>Otorlymern Electrical Services — Tape Bounce</title>
-          <link rel="stylesheet" href="/css/system7.css/style.css"/>
+          <link rel="stylesheet" href="https://unpkg.com/system7/style.css"/>
           <link rel="stylesheet" href="/css/style.css"/>
           <link rel="stylesheet" href="/css/altstyle.css"/>
           <link rel="stylesheet" href="/css/system7-services.css"/>
@@ -91,6 +91,7 @@
                   action="https://formspree.io/f/mwpnybrw"
                   method="POST"
                   enctype="multipart/form-data"
+                  data-oes-service-form="tape_bounce"
                   novalidate>
 
               <input type="hidden" name="_subject" value="Tape Bounce Request">
@@ -102,23 +103,23 @@
               <div class="field-row split">
                 <div class="field-row stack">
                   <label for="tapebounce-name">Name:</label>
-                  <input id="tapebounce-name" type="text" name="Name" autocomplete="name" />
+                  <input id="tapebounce-name" type="text" name="Name" autocomplete="name" required />
                 </div>
 
                 <div class="field-row stack">
                   <label for="tapebounce-email">Email:</label>
-                  <input id="tapebounce-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
+                  <input id="tapebounce-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" required />
                 </div>
               </div>
 
               <div class="field-row stack">
                 <label for="tapebounce-details">Project Overview:</label>
-                <input id="tapebounce-details" type="text" name="details" placeholder="e.g., 6-song LP master, stems for analog summing, mix touch-ups." />
+                <input id="tapebounce-details" type="text" name="details" placeholder="e.g., 6-song LP master, stems for analog summing, mix touch-ups." required />
               </div>
 
               <div class="field-row stack">
                 <label for="tapebounce-scope">Mix / Mastering Notes:</label>
-                <textarea id="tapebounce-scope" name="scope" rows="8" placeholder="References, technical specs, revision expectations, delivery formats, etc."></textarea>
+                <textarea id="tapebounce-scope" name="scope" rows="8" placeholder="References, technical specs, revision expectations, delivery formats, etc." required></textarea>
               </div>
 
               <div class="field-row split">
@@ -138,7 +139,9 @@
                 <button class="btn" type="reset">Clear</button>
               </div>
 
-              <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+              <div data-oes-turnstile aria-label="Bot verification"></div>
+
+              <div id="formStatus" class="status" data-form-status role="status" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -220,5 +223,7 @@
     <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
   </div>
 </footer>
+<script src="/services/service-forms.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=oesTurnstileReady&amp;render=explicit" defer></script>
 </body>
         </html>

@@ -4,6 +4,17 @@
   const PDFJS_LIB_URL = "/manuals/vendor/pdfjs/pdf.min.js";
   const PDFJS_WORKER_URL = "/manuals/vendor/pdfjs/pdf.worker.min.js";
 
+  const MANUAL_RECORD_PATHS = Object.freeze({
+    "arp-2600": "/manuals/library/arp-2600-owners-manual/",
+    "books-buchla-100-series-owners-manual":
+      "/manuals/library/buchla-100-series-owners-manual/",
+    "roland-tr-606-owners-manual":
+      "/manuals/library/roland-tr-606-owners-manual/",
+    vcs3: "/manuals/library/ems-vcs-3-manual/",
+    "books-digisound-userman":
+      "/manuals/library/digisound-modular-user-manual/",
+  });
+
   const MANUAL_PRESENTATION = Object.freeze({
     "488portastudio-tascam": {
       title: "Tascam 488 Portastudio Owner's Manual",
@@ -458,7 +469,10 @@
       return;
     }
 
-    const shareUrl = `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
+    const recordPath = MANUAL_RECORD_PATHS[manual.id];
+    const shareUrl = recordPath
+      ? new URL(recordPath, window.location.origin).href
+      : `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -493,8 +507,18 @@
     els.manualUpdated.textContent = formatDate(manual.updatedAt);
     els.manualNotes.textContent = manual.notes || "";
 
-    const shareUrl = `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
+    const recordPath = MANUAL_RECORD_PATHS[manual.id];
+    const shareUrl = recordPath
+      ? new URL(recordPath, window.location.origin).href
+      : `${window.location.origin}/manuals/?m=${encodeURIComponent(manual.id)}`;
     els.copyShareButton.setAttribute("data-share-url", shareUrl);
+    if (recordPath) {
+      els.recordPageLink.href = recordPath;
+      els.recordPageLink.hidden = false;
+    } else {
+      els.recordPageLink.removeAttribute("href");
+      els.recordPageLink.hidden = true;
+    }
     els.openPdfExternal.href = resolveAssetUrl(
       manual.pdfUrl,
       state.config.assetBaseUrl,
@@ -701,6 +725,11 @@
 
       const exact = findExactManualCodeMatch(normalize(query));
       if (exact) {
+        void window.OESAnalytics?.track("archive_search", {
+          query_length: query.length,
+          result_count: 1,
+          match_type: "exact",
+        });
         await selectManual(exact.manual.id, {
           from: "search",
           manualCode: exact.manualCode,
@@ -710,6 +739,11 @@
 
       applySearch(query);
       renderManualResults(state.filteredManuals, state.selectedManualId);
+      void window.OESAnalytics?.track("archive_search", {
+        query_length: query.length,
+        result_count: state.filteredManuals.length,
+        match_type: "fuzzy",
+      });
       if (state.filteredManuals[0]) {
         await selectManual(state.filteredManuals[0].id, {
           from: "search-fuzzy",
@@ -916,6 +950,7 @@
       manualUpdated: getEl("manualUpdated"),
       manualNotes: getEl("manualNotes"),
       copyShareButton: getEl("copyShareButton"),
+      recordPageLink: getEl("recordPageLink"),
       openPdfExternal: getEl("openPdfExternal"),
 
       viewerEmpty: getEl("viewerEmpty"),

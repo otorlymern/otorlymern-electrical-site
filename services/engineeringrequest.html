@@ -4,7 +4,7 @@
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <title>Otorlymern Electrical Services — Engineering & Recording</title>
-          <link rel="stylesheet" href="/css/system7.css/style.css"/>
+          <link rel="stylesheet" href="https://unpkg.com/system7/style.css"/>
           <link rel="stylesheet" href="/css/style.css"/>
           <link rel="stylesheet" href="/css/musicstyle.css"/>
           <link rel="stylesheet" href="/css/altstyle.css"/>
@@ -70,6 +70,7 @@
             action="https://formspree.io/f/mwpnybrw"
             method="POST"
             enctype="multipart/form-data"
+            data-oes-service-form="engineering"
             novalidate>
 
         <input type="hidden" name="_subject" value="Engineering Recording Request">
@@ -81,23 +82,23 @@
         <div class="field-row split">
           <div class="field-row stack">
             <label for="engineering-name">Name:</label>
-            <input id="engineering-name" type="text" name="Name" autocomplete="name" />
+            <input id="engineering-name" type="text" name="Name" autocomplete="name" required />
           </div>
 
           <div class="field-row stack">
             <label for="engineering-email">Email:</label>
-            <input id="engineering-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" />
+            <input id="engineering-email" type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" required />
           </div>
         </div>
 
         <div class="field-row stack">
           <label for="engineering-details">Session Details:</label>
-          <input id="engineering-details" type="text" name="details" placeholder="e.g., 3-song EP tracking, live band rehearsal capture, synth overdubs." />
+          <input id="engineering-details" type="text" name="details" placeholder="e.g., 3-song EP tracking, live band rehearsal capture, synth overdubs." required />
         </div>
 
         <div class="field-row stack">
           <label for="engineering-scope">Sound & Workflow Notes:</label>
-          <textarea id="engineering-scope" name="scope" rows="8" placeholder="Instrumentation, vibe references, special requirements, deliverables, etc."></textarea>
+          <textarea id="engineering-scope" name="scope" rows="8" placeholder="Instrumentation, vibe references, special requirements, deliverables, etc." required></textarea>
         </div>
 
         <div class="field-row split">
@@ -117,7 +118,9 @@
           <button class="btn" type="reset">Clear</button>
         </div>
 
-        <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+        <div data-oes-turnstile aria-label="Bot verification"></div>
+
+        <div id="formStatus" class="status" data-form-status role="status" aria-live="polite"></div>
       </form>
     </div>
   </div>
@@ -135,6 +138,9 @@
     <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
   </div>
 </footer>
+
+<script src="/services/service-forms.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=oesTurnstileReady&amp;render=explicit" defer></script>
 
 </body>
         </html>

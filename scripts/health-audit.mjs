@@ -1,0 +1,270 @@
+import { execFile } from "node:child_process";
+import { readFile } from "node:fs/promises";
+import { promisify } from "node:util";
+import dns from "node:dns/promises";
+import path from "node:path";
+import tls from "node:tls";
+import { fileURLToPath } from "node:url";
+
+const execFileAsync = promisify(execFile);
+const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const origin = "https://otorlymern-electrical.com";
+const directBucketOrigin = "https://s3.us-west-2.wasabisys.com/media.otorlymern-electrical.com";
+const knownPublicObject = `${directBucketOrigin}/pdfs/manuals/arp-2600-owners-manual.pdf`;
+const peerTubeEmbed = "https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff";
+const expectedDmarc = "v=DMARC1; p=none; rua=mailto:postmaster@otorlymern-electrical.com; adkim=r; aspf=r; pct=100";
+const expectedSpf = "v=spf1 include:spf.privateemail.com ~all";
+const expectedMx = new Set(["mx1.privateemail.com", "mx2.privateemail.com"]);
+const publicResolver = new dns.Resolver();
+publicResolver.setServers(["1.1.1.1", "8.8.8.8"]);
+const args = new Set(process.argv.slice(2));
+const runRepository = args.has("--repo") || !args.has("--live");
+const runLive = args.has("--live");
+const runPutDiagnostic = runLive && !args.has("--skip-put");
+const failures = [];
+let checks = 0;
+
+function pass(message) {
+  checks += 1;
+  console.log(`PASS ${message}`);
+}
+
+function fail(message) {
+  checks += 1;
+  failures.push(message);
+  console.error(`FAIL ${message}`);
+}
+
+async function check(name, operation) {
+  try {
+    const detail = await operation();
+    pass(detail ? `${name}: ${detail}` : name);
+  } catch (error) {
+    fail(`${name}: ${error.message}`);
+  }
+}
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = 15_000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { redirect: "follow", ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function requireStatus(response, expected) {
+  const allowed = Array.isArray(expected) ? expected : [expected];
+  if (!allowed.includes(response.status)) {
+    throw new Error(`expected ${allowed.join("/")}, received ${response.status}`);
+  }
+}
+
+async function loadManifest() {
+  const source = await readFile(path.join(repositoryRoot, "site-manifest.json"), "utf8");
+  const manifest = JSON.parse(source);
+  if (!Array.isArray(manifest.pages) || manifest.pages.length === 0) {
+    throw new Error("site-manifest.json has no pages");
+  }
+  return manifest;
+}
+
+async function repositoryAudit() {
+  await check("manifest is small and internally consistent", async () => {
+    const manifest = await loadManifest();
+    const paths = new Set();
+    for (const page of manifest.pages) {
+      const allowed = new Set(["path", "title", "description", "indexable", "schema", "redirects", "monitor"]);
+      const extras = Object.keys(page).filter((key) => !allowed.has(key));
+      if (extras.length > 0) throw new Error(`${page.path} has unsupported fields: ${extras.join(", ")}`);
+      if (!page.path?.startsWith("/")) throw new Error(`invalid path ${page.path}`);
+      if (paths.has(page.path)) throw new Error(`duplicate path ${page.path}`);
+      if (!page.title || !page.description || typeof page.indexable !== "boolean") {
+        throw new Error(`${page.path} is missing required metadata`);
+      }
+      paths.add(page.path);
+    }
+    return `${manifest.pages.length} routes`;
+  });
+
+  await check("generated crawler files exist", async () => {
+    const [robots, sitemap] = await Promise.all([
+      readFile(path.join(repositoryRoot, "_deploy", "robots.txt"), "utf8"),
+      readFile(path.join(repositoryRoot, "_deploy", "sitemap.xml"), "utf8"),
+    ]);
+    if (!robots.includes(`Sitemap: ${origin}/sitemap.xml`) || !robots.includes("Disallow: /cdn-cgi/")) {
+      throw new Error("robots.txt does not contain the required sitemap and /cdn-cgi/ policy");
+    }
+    const manifest = await loadManifest();
+    for (const page of manifest.pages.filter((entry) => entry.indexable)) {
+      if (!sitemap.includes(`<loc>${origin}${page.path}</loc>`)) {
+        throw new Error(`sitemap is missing ${page.path}`);
+      }
+    }
+    return "robots and sitemap match policy";
+  });
+}
+
+async function livePageAudit() {
+  const manifest = await loadManifest();
+  const routes = manifest.pages.filter((page) => page.monitor);
+  for (const page of routes) {
+    await check(`live route ${page.path}`, async () => {
+      const response = await fetchWithTimeout(`${origin}${page.path}`, {
+        headers: { "User-Agent": "OES-Backend-Health/1.0" },
+      });
+      requireStatus(response, 200);
+      return "200";
+    });
+  }
+
+  for (const userAgent of [
+    "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+    "Mozilla/5.0 (compatible; Google-InspectionTool/1.0;)",
+  ]) {
+    await check(`crawler homepage ${userAgent.includes("Inspection") ? "inspection" : "Googlebot"}`, async () => {
+      const response = await fetchWithTimeout(origin, { headers: { "User-Agent": userAgent } });
+      requireStatus(response, 200);
+      return "200";
+    });
+  }
+
+  await check("live robots policy", async () => {
+    const response = await fetchWithTimeout(`${origin}/robots.txt`);
+    requireStatus(response, 200);
+    const body = await response.text();
+    if (!body.includes(`Sitemap: ${origin}/sitemap.xml`) || !body.includes("Disallow: /cdn-cgi/")) {
+      throw new Error("required directives are absent");
+    }
+    return "valid";
+  });
+
+  await check("live sitemap", async () => {
+    const response = await fetchWithTimeout(`${origin}/sitemap.xml`);
+    requireStatus(response, 200);
+    const body = await response.text();
+    if (!body.includes("<urlset") || !body.includes(`<loc>${origin}/</loc>`)) {
+      throw new Error("not a recognizable OES sitemap");
+    }
+    return "valid";
+  });
+}
+
+async function storageAndVideoAudit() {
+  await check("Wasabi known public object GET", async () => {
+    const response = await fetchWithTimeout(knownPublicObject, {
+      headers: { Range: "bytes=0-0" },
+    });
+    requireStatus(response, [200, 206]);
+    return `${response.status}`;
+  });
+
+  await check("Wasabi anonymous LIST denied", async () => {
+    const response = await fetchWithTimeout(`${directBucketOrigin}?list-type=2`, { redirect: "manual" });
+    requireStatus(response, 403);
+    return "403";
+  });
+
+  if (runPutDiagnostic) {
+    await check("Wasabi anonymous PUT denied", async () => {
+      const sentinel = `${directBucketOrigin}/oes-health-sentinels/${new Date().toISOString().replace(/[:.]/g, "-")}.txt`;
+      const response = await fetchWithTimeout(sentinel, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "text/plain",
+          "If-None-Match": "*",
+        },
+        body: "",
+        redirect: "manual",
+      });
+      if (response.status >= 200 && response.status < 300) {
+        throw new Error(`PUBLIC WRITE EXPOSURE: ${response.status}; sentinel preserved at ${sentinel}`);
+      }
+      requireStatus(response, 403);
+      return "403";
+    });
+  } else {
+    console.log("SKIP Wasabi anonymous PUT diagnostic (--skip-put)");
+  }
+
+  await check("PeerTube embed", async () => {
+    const response = await fetchWithTimeout(peerTubeEmbed);
+    requireStatus(response, 200);
+    return "200";
+  });
+}
+
+async function dnsAndExpiryAudit() {
+  await check("MX", async () => {
+    const records = await publicResolver.resolveMx("otorlymern-electrical.com");
+    const exchanges = new Set(records.map((record) => record.exchange.replace(/\.$/, "")));
+    for (const expected of expectedMx) if (!exchanges.has(expected)) throw new Error(`missing ${expected}`);
+    return [...exchanges].sort().join(", ");
+  });
+
+  await check("SPF", async () => {
+    const values = (await publicResolver.resolveTxt("otorlymern-electrical.com")).map((parts) => parts.join(""));
+    if (!values.includes(expectedSpf)) throw new Error("expected Private Email SPF record is absent");
+    return "present";
+  });
+
+  await check("DKIM", async () => {
+    const values = (await publicResolver.resolveTxt("default._domainkey.otorlymern-electrical.com")).map((parts) => parts.join(""));
+    if (!values.some((value) => value.startsWith("v=DKIM1;"))) throw new Error("default selector is absent");
+    return "default selector present";
+  });
+
+  await check("DMARC", async () => {
+    const values = (await publicResolver.resolveTxt("_dmarc.otorlymern-electrical.com")).map((parts) => parts.join(""));
+    if (!values.includes(expectedDmarc)) throw new Error("monitoring policy differs from the operations record");
+    return "p=none";
+  });
+
+  await check("DNSSEC validation", async () => {
+    const { stdout } = await execFileAsync("dig", ["@1.1.1.1", "+dnssec", "otorlymern-electrical.com", "A"]);
+    if (!/flags:.*\bad\b/.test(stdout) || !/RRSIG/.test(stdout)) throw new Error("validated AD response was not returned");
+    return "AD and RRSIG present";
+  });
+
+  await check("TLS certificate expiry", async () => {
+    const certificate = await new Promise((resolve, reject) => {
+      const socket = tls.connect(443, "otorlymern-electrical.com", { servername: "otorlymern-electrical.com" }, () => {
+        const peer = socket.getPeerCertificate();
+        socket.end();
+        resolve(peer);
+      });
+      socket.setTimeout(15_000, () => socket.destroy(new Error("TLS timeout")));
+      socket.once("error", reject);
+    });
+    const expires = new Date(certificate.valid_to);
+    const days = Math.floor((expires - Date.now()) / 86_400_000);
+    if (!Number.isFinite(days) || days < 21) throw new Error(`only ${days} days remain`);
+    return `${days} days`;
+  });
+
+  await check("domain expiry", async () => {
+    const response = await fetchWithTimeout("https://rdap.verisign.com/com/v1/domain/otorlymern-electrical.com");
+    requireStatus(response, 200);
+    const rdap = await response.json();
+    const expiration = rdap.events?.find((event) => event.eventAction === "expiration")?.eventDate;
+    if (!expiration) throw new Error("RDAP did not return an expiration event");
+    const days = Math.floor((new Date(expiration) - Date.now()) / 86_400_000);
+    if (days < 60) throw new Error(`only ${days} days remain`);
+    return `${expiration.slice(0, 10)} (${days} days)`;
+  });
+}
+
+if (runRepository) await repositoryAudit();
+if (runLive) {
+  await livePageAudit();
+  await storageAndVideoAudit();
+  await dnsAndExpiryAudit();
+}
+
+console.log(`\nOES health audit: ${checks - failures.length}/${checks} checks passed.`);
+if (failures.length > 0) {
+  console.error("\nFailures:");
+  for (const failure of failures) console.error(`- ${failure}`);
+  process.exitCode = 1;
+}

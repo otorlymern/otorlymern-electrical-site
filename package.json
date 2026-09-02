@@ -1,0 +1,13 @@
+{
+  "name": "oes-static-site",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-deploy.mjs && node scripts/generate-site-files.mjs",
+    "audit:deploy": "node scripts/audit-deploy.mjs",
+    "audit:links": "node scripts/audit-links.mjs",
+    "audit:health": "node scripts/health-audit.mjs --repo",
+    "audit:health:live": "node scripts/health-audit.mjs --live",
+    "purge:cloudflare": "node scripts/purge-cloudflare.mjs",
+    "test": "npm run build && npm run audit:deploy && npm run audit:links && npm run audit:health"
+  }
+}

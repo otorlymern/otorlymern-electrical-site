@@ -1,0 +1,338 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "title": "Otorlymern Electrical Systems",
+      "description": "Otorlymern Electrical Systems is a hand-built archive and studio for electronic instruments, repair, recording, video, manuals, and experimental media.",
+      "indexable": true,
+      "schema": "WebSite",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/",
+      "title": "OES A/V Archive | Manuals, Schematics, Books & More",
+      "description": "Search the OES A/V Archive for electronic instrument manuals, service documents, schematics, books, video references, and DIY material.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "redirects": ["/archive/", "/archive/index.html"],
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/arp-2600-owners-manual/",
+      "title": "ARP 2600 Owner's Manual | OES A/V Archive",
+      "description": "Read archival context for the ARP 2600 owner's manual, then open the public PDF or continue into related OES repair and synthesis resources.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/buchla-100-series-owners-manual/",
+      "title": "Buchla 100 Series Owner's Manual | OES A/V Archive",
+      "description": "Archival context and direct PDF access for the Buchla 100 Series owner's manual, with related OES electronic-music resources.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/roland-tr-606-owners-manual/",
+      "title": "Roland TR-606 Owner's Manual | OES A/V Archive",
+      "description": "Use the Roland TR-606 owner's manual with archival context, direct public PDF access, and related OES recording and repair paths.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/ems-vcs-3-manual/",
+      "title": "EMS VCS 3 Manual | OES A/V Archive",
+      "description": "Archival context and direct PDF access for the EMS VCS 3 manual, including its pin-matrix routing, oscillators, filter, envelope, and control system.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/manuals/library/digisound-modular-user-manual/",
+      "title": "Digisound Modular User Manual | OES A/V Archive",
+      "description": "Read archival context for the Digisound modular synthesizer user manual and open the public PDF alongside related OES DIY resources.",
+      "indexable": true,
+      "schema": "DigitalDocument",
+      "monitor": true
+    },
+    {
+      "path": "/music/discography",
+      "title": "Discography | Otorlymern Electrical Systems",
+      "description": "Recordings, releases, and music connected to Otorlymern Electrical Systems and the OES studio practice.",
+      "indexable": true,
+      "schema": "MusicGroup",
+      "monitor": true
+    },
+    {
+      "path": "/music/projects",
+      "title": "Music Projects | Otorlymern Electrical Systems",
+      "description": "OES music projects combining recording, electronic instruments, tape, composition, and experimental production methods.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "monitor": true
+    },
+    {
+      "path": "/music/studio",
+      "title": "OES Studio | Music and Recording",
+      "description": "Explore the OES studio, its recording systems, instruments, working methods, and independent music production environment.",
+      "indexable": true,
+      "schema": "WebPage",
+      "monitor": true
+    },
+    {
+      "path": "/oes-patch-builder/",
+      "title": "Modular Synth Patch Diagram Builder | OES",
+      "description": "Draw modular synthesizer signal flow, connect audio and CV modules, and export a reusable patch diagram with the free browser-based OES Patch Builder.",
+      "indexable": true,
+      "schema": "WebApplication",
+      "monitor": true
+    },
+    {
+      "path": "/services/",
+      "title": "Electronic Repair and Studio Services | OES",
+      "description": "OES services for electronic instrument repair, restoration, audio engineering, tape, installation, consulting, and custom commissions.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "monitor": true
+    },
+    {
+      "path": "/services/comissionrequest",
+      "title": "Commission Audio or Video Art | OES",
+      "description": "Request a custom audio, video, electronic, or mixed-media commission from Otorlymern Electrical Systems.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/consultingrequest",
+      "title": "Analog Studio Consulting | OES",
+      "description": "Request practical consulting for analog studios, recording workflows, electronic instruments, routing, and system design.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/engineeringrequest",
+      "title": "Audio Engineering and Recording | OES",
+      "description": "Request recording, mixing, audio engineering, editing, or production support from Otorlymern Electrical Systems.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/experience",
+      "title": "Augie Calabro | Experience, Bio, and CV",
+      "description": "Background, experience, and selected work of Augie Calabro, founder of Otorlymern Electrical Systems.",
+      "indexable": true,
+      "schema": "ProfilePage",
+      "monitor": true
+    },
+    {
+      "path": "/services/installationrequest",
+      "title": "Studio and Media Installation | OES",
+      "description": "Request installation help for studios, electronic instruments, audio systems, video systems, and creative technical environments.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/manuals",
+      "title": "Manual and Documentation Services | OES",
+      "description": "OES documentation and manual resources for electronic instruments, recording equipment, repairs, and technical systems.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/repairrequest",
+      "title": "Electronic Instrument Repair Request | OES",
+      "description": "Request repair, troubleshooting, maintenance, or restoration for synthesizers, recording equipment, and electronic instruments.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/sellyourgear",
+      "title": "Sell Electronic Music Gear | OES",
+      "description": "Contact OES about selling synthesizers, recording equipment, electronic instruments, parts, or unusual studio gear.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/services/tapebounce",
+      "title": "Analog Tape Bounce Service | OES",
+      "description": "Request analog tape bounce and tape-processing services for mixes, stems, loops, recordings, and experimental sound.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/designers/",
+      "title": "DIY Synth Designers | OES",
+      "description": "Explore OES resources about influential electronic instrument designers, circuits, systems, and DIY synthesizer practices.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/designers/g-richter/",
+      "title": "Grant Richter and Wiard Resources | OES",
+      "description": "OES archive links and context for Grant Richter, Wiard modular synthesizers, circuits, manuals, and related designs.",
+      "indexable": true,
+      "schema": "ProfilePage",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/designers/hordijk/",
+      "title": "Rob Hordijk Resources | OES",
+      "description": "OES resources on Rob Hordijk instruments, synthesis concepts, Nord Modular techniques, and electronic design work.",
+      "indexable": true,
+      "schema": "ProfilePage",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/designers/j-haible/",
+      "title": "Jürgen Haible Resources | OES",
+      "description": "OES archive material about Jürgen Haible synthesizer circuits, effects, electronic designs, and DIY documentation.",
+      "indexable": true,
+      "schema": "ProfilePage",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/",
+      "title": "DIY Audio and Video Projects | OES",
+      "description": "Browse OES DIY projects for electronic sound, video, circuits, instruments, repairs, and experimental systems.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/BlinkyLightsPolyphony",
+      "title": "Blinky Lights Polyphony | OES DIY Project",
+      "description": "An OES DIY electronics project exploring blinking-light circuits, rhythm, control signals, and polyphonic behavior.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/DPGproject",
+      "title": "DIY Digital Signal Generator | OES Project",
+      "description": "Build notes and documentation for an OES digital signal generator and experimental electronic instrument project.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/vocalsynthesisus",
+      "title": "Vocal Synthesis US | OES DIY Project",
+      "description": "Historical vocal-synthesis documentation and project material presented within the OES DIY archive.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/resources/",
+      "title": "OES Recommended Resources Terminal",
+      "description": "A curated OES terminal for recommended manuals, archives, tools, references, and electronic-media resources.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "redirects": ["/solutions/", "/solutions/index.html"],
+      "monitor": true
+    },
+    {
+      "path": "/solutions/techniques/resources/",
+      "title": "Synthesis and Electronic Music Resources | OES",
+      "description": "Curated books, manuals, and references for synthesis, electronic music, patching, sound design, and studio practice.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "redirects": ["/solutions/techniques/musictech/", "/solutions/techniques/musictech/index.html"],
+      "monitor": true
+    },
+    {
+      "path": "/solutions/techniques/vidtech/videotechniques",
+      "title": "Analog and Experimental Video Techniques | OES",
+      "description": "OES techniques and references for analog video, feedback, video synthesis, processing, and experimental image systems.",
+      "indexable": true,
+      "schema": "Article",
+      "redirects": ["/video/techniques", "/video/techniques.html"],
+      "monitor": true
+    },
+    {
+      "path": "/store/",
+      "title": "OES Store | Offline",
+      "description": "The OES store is currently offline while the independent storefront is being prepared.",
+      "indexable": false,
+      "schema": "WebPage",
+      "monitor": true
+    },
+    {
+      "path": "/systems/home-recording",
+      "title": "Computerless Home Recording and Tape Guide | OES",
+      "description": "Learn computerless home recording with cassette and multitrack tape workflows, stereo-deck bouncing, creative limitations, and a practical Tascam MFP01 walkthrough.",
+      "indexable": true,
+      "schema": "TechArticle",
+      "monitor": true
+    },
+    {
+      "path": "/systems/rrr",
+      "title": "Repairs, Refurbs, and Restorations | OES",
+      "description": "OES repair, refurbishment, and restoration work for electronic instruments, recording equipment, and unusual media systems.",
+      "indexable": true,
+      "schema": "Service",
+      "monitor": true
+    },
+    {
+      "path": "/systems/systems",
+      "title": "Electronic Music and Media Systems | OES",
+      "description": "Explore OES systems for electronic instruments, recording, repair, video, sound, and experimental creative technology.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "monitor": true
+    },
+    {
+      "path": "/systems/videogear",
+      "title": "Analog Video Gear and Systems | OES",
+      "description": "OES notes and media about analog video equipment, processors, playback systems, feedback, and experimental video tools.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/video/",
+      "title": "OES Legacy Video Portal",
+      "description": "A legacy entrance to OES video experiments and archive interfaces.",
+      "indexable": false,
+      "schema": "WebPage",
+      "monitor": true
+    },
+    {
+      "path": "/video/portal",
+      "title": "OES Video Portal",
+      "description": "An experimental legacy portal for navigating OES video work.",
+      "indexable": false,
+      "schema": "WebPage",
+      "monitor": true
+    },
+    {
+      "path": "/video/videolibrary",
+      "title": "OES Video Archive",
+      "description": "Browse the OES video archive of electronic instruments, recording systems, repairs, visual experiments, and studio material.",
+      "indexable": true,
+      "schema": "CollectionPage",
+      "redirects": ["/video/archive", "/video/archive.html", "/video/videolibraryv1", "/video/videolibraryv1.html"],
+      "monitor": true
+    },
+    {
+      "path": "/video/viewingroom2",
+      "title": "OES Legacy Viewing Room",
+      "description": "An experimental legacy OES video viewing-room interface.",
+      "indexable": false,
+      "schema": "WebPage",
+      "redirects": ["/video/viewingroom", "/video/viewingroom.html"],
+      "monitor": true
+    }
+  ]
+}

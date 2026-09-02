@@ -1,0 +1,94 @@
+name: OES Backend Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * 1"
+  pull_request:
+  workflow_run:
+    workflows:
+      - Deploy to Neocities
+    types:
+      - completed
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build and audit repository
+        id: repository
+        if: github.event_name != 'workflow_run'
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          npm test 2>&1 | tee repository-audit.log
+          node scripts/health-audit.mjs --repo 2>&1 | tee -a repository-audit.log
+
+      - name: Audit live services
+        id: live
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          if [[ "${{ github.event_name }}" == "schedule" || "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            node scripts/health-audit.mjs --live 2>&1 | tee live-audit.log
+          else
+            node scripts/health-audit.mjs --live --skip-put 2>&1 | tee live-audit.log
+          fi
+
+      - name: Write concise summary
+        if: always()
+        run: |
+          {
+            echo "## OES backend health"
+            echo
+            echo "- Repository: ${{ steps.repository.outcome || 'not run' }}"
+            echo "- Live services: ${{ steps.live.outcome || 'not run' }}"
+            echo "- Trigger: ${{ github.event_name }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create or update backend-health issue
+        if: always() && github.event_name != 'pull_request' && (steps.repository.outcome == 'failure' || steps.live.outcome == 'failure')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="OES backend health check is failing"
+          issue_number="$(gh issue list --state open --label backend-health --json number --jq '.[0].number // empty')"
+          details="$(tail -n 80 repository-audit.log live-audit.log 2>/dev/null || true)"
+          body=$(printf 'The recurring OES backend health audit found a failure.\n\nRun: %s/actions/runs/%s\n\n```text\n%s\n```' "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" "$details")
+          gh label create backend-health --color B60205 --description "Recurring OES backend health failure" --force
+          if [[ -n "$issue_number" ]]; then
+            gh issue comment "$issue_number" --body "$body"
+          else
+            gh issue create --title "$title" --label backend-health --body "$body"
+          fi
+
+      - name: Close recovered backend-health issue
+        if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && steps.repository.outcome == 'success' && steps.live.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          issue_number="$(gh issue list --state open --label backend-health --json number --jq '.[0].number // empty')"
+          if [[ -n "$issue_number" ]]; then
+            gh issue close "$issue_number" --comment "Recovered in $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID."
+          fi
+
+      - name: Fail workflow when an audit failed
+        if: always() && (steps.repository.outcome == 'failure' || steps.live.outcome == 'failure')
+        run: exit 1
