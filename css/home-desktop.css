@@ -1,0 +1,495 @@
+@font-face {
+  font-family: "Lyno-Stan";
+  src: url("/Lyno-Stan%202.otf") format("opentype");
+  font-display: swap;
+}
+/* Isolated homepage experiment. Uses shared OES window chrome without changing it. */
+body.home-desktop {
+  --oes-ui-font-text: "Lyno-Stan", "OES Chicago", sans-serif;
+  --oes-ui-font-mono: "Courier New", monospace;
+  margin: 0;
+  background: #397d79;
+  background-image: radial-gradient(#154c494d .7px, transparent .7px);
+  background-size: 4px 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.home-desktop a { color: #303578; text-underline-offset: 3px; }
+.home-desktop a:hover { color: #872949; }
+.home-desktop a:focus-visible, .home-desktop summary:focus-visible { outline: 3px solid #a73763; outline-offset: 3px; }
+.home-desktop img { max-width: 100%; }
+.home-desktop > header { position: relative; z-index: 20; background: #deded7; border-bottom: 2px solid #171b1a; box-shadow: inset 0 2px white, 0 2px #ffffff66; }
+.home-desktop .nav-bar { max-width: 1280px; margin: auto; padding: 0 20px; list-style: none; display: flex; gap: 8px; font-family: var(--oes-ui-font-display); }
+.home-desktop .nav-bar > li { position: relative; }
+.home-desktop .nav-bar > li > a { display: block; padding: 9px 15px; color: #171b1a; text-decoration: none; }
+.home-desktop .nav-bar > li:first-child { margin-right: auto; }
+.home-desktop .nav-bar a:hover { background: #263e4b; color: white; }
+.home-desktop .dropdown-content { display: none; position: absolute; left: 0; top: 100%; min-width: 240px; padding: 5px; list-style: none; background: #deded7; border: 1px solid #111; box-shadow: 3px 3px #162f38; }
+.home-desktop .dropdown-content a { display: block; padding: 7px 12px; text-decoration: none; }
+.home-desktop .dropdown:hover .dropdown-content, .home-desktop .dropdown:focus-within .dropdown-content { display: block; }
+.desktop-welcome { max-width: 1250px; margin: 0 auto; padding: 44px 28px 38px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; align-items: center; color: #faf7de; }
+.desktop-brand > img { width: 330px; height: 115px; object-fit: contain; object-position: left center; filter: drop-shadow(3px 3px 0 #183f41); }
+.desktop-eyebrow { font: 10px var(--oes-ui-font-mono); letter-spacing: 2px; margin: 18px 0 12px; }
+.desktop-brand h1 { font-family: var(--oes-ui-font-display); font-size: clamp(25px, 3.3vw, 43px); line-height: 1.2; font-weight: normal; margin: 0 0 16px; text-shadow: 2px 2px #183f41; }
+.desktop-brand > p:last-child { margin: 0; font-size: 14px; }
+.desktop-shortcuts { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+.desktop-shortcuts a { display: flex; align-items: center; flex-direction: column; gap: 9px; text-align: center; text-decoration: none; font-family: var(--oes-ui-font-display); }
+.desktop-shortcuts a > span:last-child { background: #245854; color: #fffce9; padding: 2px 7px; }
+.desktop-shortcuts a:hover > span:last-child { background: #303578; }
+.desktop-shortcuts img, .folder-icon, .mail-icon { width: 48px; height: 43px; object-fit: contain; filter: drop-shadow(2px 3px #173c3f); }
+.folder-icon { display: block; position: relative; background: #e7cf7f; border: 2px solid #172527; box-shadow: inset 2px 2px #fff2b9; margin-top: 7px; height: 36px; }
+.folder-icon::before { content: ''; position: absolute; top: -9px; left: -2px; width: 24px; height: 7px; border: 2px solid #172527; border-bottom: 0; background: #e7cf7f; }
+.mail-icon { background: #eae9e0; border: 2px solid #172527; color: #303578; font: 30px var(--oes-ui-font-display); line-height: 38px; }
+.desktop-path { max-width: 1194px; margin: 0 auto 22px; display: flex; justify-content: space-between; gap: 12px; color: #faf7de; border-top: 1px solid #b0c3a988; padding-top: 10px; font: 11px var(--oes-ui-font-mono); }
+.desktop-path a { color: #faf7de; }
+.home-desktop .home-grid { max-width: 1250px; padding: 0 28px; margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 355px); gap: 30px; align-items: start; }
+.primary-column, .recent-highlights { min-width: 0; display: grid; gap: 30px; align-content: start; }
+.home-desktop .desktop-window { position: relative; display: block; top: auto; left: auto; width: auto; height: auto; min-width: 0; min-height: 0; margin: 0; padding: 4px; border-width: 1px; box-shadow: var(--oes-ui-raised), 6px 7px 0 #143e4680; }
+.home-desktop .desktop-window .oes-window__title-bar { cursor: pointer; touch-action: auto; list-style: none; min-height: 29px; font-size: 13px; }
+.home-desktop summary::-webkit-details-marker { display: none; }
+.window-toggle { display: grid; place-items: center; width: 17px; height: 17px; background: #dedede; border: 1px solid #171717; box-shadow: inset 1px 1px white, inset -1px -1px #808080; }
+.window-toggle::before { content: '+'; font: bold 15px monospace; }
+[open] > summary .window-toggle::before { content: '−'; }
+.window-number { font: 9px var(--oes-ui-font-mono); background: #dedede; padding: 2px; }
+.home-desktop .desktop-window .oes-window__content { margin: 5px 1px 0; padding: 20px; background: #f5f4e9; overflow: visible; }
+.desktop-window-status { display: flex; justify-content: space-between; gap: 5px; font: 10px var(--oes-ui-font-mono); padding: 7px 5px 2px; color: #424548; }
+.home-desktop .about-window .oes-window__title-bar { background: repeating-linear-gradient(to bottom,#7d7899 0 1px,#ccc5dd 1px 3px); }
+.home-desktop .about-window .oes-window__title { background: #ccc5dd; box-shadow: 3px 0 #ccc5dd, -3px 0 #ccc5dd; }
+.intro-section > p { margin: 0 0 20px; font-size: 17px; line-height: 1.5; }
+.sss-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+.sss-card { border-top: 3px double #8c8e86; padding-top: 10px; }
+.sss-card h3 { margin: 0 0 8px; font: 16px var(--oes-ui-font-display); }
+.sss-card p { font-size: 12px; line-height: 1.65; margin: 0; }
+.home-desktop .audio-window { margin-right: 22px; }
+.home-desktop .video-window { margin-left: 22px; }
+.category-header { display: flex; gap: 14px; align-items: center; border-bottom: 1px solid #94978c; padding-bottom: 14px; }
+.category-header img { width: 45px; height: 40px; object-fit: contain; }
+.category-header h2 { margin: 0; font: 24px var(--oes-ui-font-display); }
+.category-header a { text-decoration: none; color: #23292a; }
+.category-links { list-style: none; padding: 0; margin: 0; }
+.category-links li + li { border-top: 1px dotted #a8aba1; }
+.category-link { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 13px; padding: 18px 4px; text-decoration: none; }
+.category-link:hover { background: #e2e3d6; }
+.category-link > img { width: 28px; height: 28px; object-fit: contain; }
+.link-title { margin: 0 0 6px; font: 14px/1.5 var(--oes-ui-font-display); }
+.link-desc { font-size: 12px; line-height: 1.65; color: #454b48; display: block; }
+.desktop-aside-label { color: #faf7de; font: 11px var(--oes-ui-font-mono); text-transform: uppercase; letter-spacing: 2px; margin: 0 0 -16px; }
+.home-desktop .recent-highlights .oes-window__content { padding: 4px; background: #efeee4; }
+.highlight-card a { display: block; text-decoration: none; color: inherit; }
+.highlight-card img { width: 100%; height: 190px; object-fit: contain; background: #d4d7cd; display: block; border: 1px solid #90938d; }
+.highlight-body { padding: 15px 12px; }
+.highlight-body h3 { font: 17px/1.4 var(--oes-ui-font-display); margin: 0 0 12px; color: #303578; }
+.highlight-body p { font-size: 12px; line-height: 1.7; }
+.highlight-tag { font-family: var(--oes-ui-font-mono); font-size: 9px !important; text-transform: uppercase; color: #62685e; }
+.highlight-tag:empty { display: none; }
+.highlight-btn { display: block; margin-top: 16px; padding: 8px 10px; background: #d1d1c9; box-shadow: var(--oes-ui-raised); text-align: center; font: 12px/1.5 var(--oes-ui-font-display); color: #202833; }
+.highlight-card a:hover .highlight-btn { background: #ccc5dd; }
+.highlight-crt-frame { height: 170px; background: repeating-linear-gradient(0deg,transparent 0 3px,#071a1b99 3px 5px),linear-gradient(110deg,#172532,#457c72,#ab97a0,#2c4c57); border: 12px solid #494b49; box-shadow: inset 0 0 22px #14292a; position: relative; }
+.highlight-crt-frame::after { content: 'OES VIDEO LIBRARY\A PLAY ▷'; white-space: pre; position: absolute; top: 40px; left: 20px; color: #d1f9c4; text-shadow: 2px 2px #16351e; font: 13px/2 var(--oes-ui-font-mono); }
+.home-desktop .oes-action-footer { max-width: 1194px; margin: 50px auto 25px; padding: 20px 0; border-top: 1px solid #b0c3a988; display: flex; align-items: center; justify-content: space-between; gap: 25px; color: #f5f4e9; }
+.oes-action-footer__center { text-align: center; font-size: 11px; }
+.footer-gif-link img { width: 130px; max-height: 90px; object-fit: contain; }
+.footer-badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+.footer-badges img { width: auto; max-width: 80px; height: 28px; object-fit: contain; }
+.skip-link { position: absolute; top: -100px; left: 12px; background: white; padding: 10px; z-index: 100; }
+.skip-link:focus { top: 8px; }
+@media (min-width: 1000px) { .home-desktop .crt-window { margin-left: -12px; margin-right: 12px; } }
+@media (max-width: 850px) {
+ .desktop-welcome { grid-template-columns: 1fr; padding: 30px 20px; gap: 28px; }
+ .desktop-shortcuts { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; }
+ .home-desktop .home-grid { grid-template-columns: 1fr; padding: 0 16px; }
+ .desktop-path { margin: 0 20px 22px; font-size: 9px; line-height: 1.6; }
+ .home-desktop .audio-window, .home-desktop .video-window { margin: 0; }
+ .home-desktop .oes-action-footer { margin: 30px 20px 15px; flex-wrap: wrap; justify-content: center; }
+ .oes-action-footer__center { order: 3; width: 100%; }
+}
+@media (max-width: 520px) {
+ .home-desktop .nav-bar { gap: 0; padding: 0 4px; justify-content: space-between; }
+ .home-desktop .nav-bar > li > a { padding: 11px 6px; font-size: 11px; }
+ .home-desktop .nav-bar > li:first-child { margin: 0; }
+ .home-desktop .dropdown-content { min-width: 190px; }
+ .home-desktop .dropdown:nth-last-child(2) .dropdown-content { left: auto; right: 0; }
+ .desktop-brand > img { width: 280px; height: 95px; }
+ .desktop-eyebrow { font-size: 8px; letter-spacing: 1px; }
+ .desktop-shortcuts { font-size: 11px; }
+ .home-desktop .desktop-window .oes-window__content { padding: 16px; }
+ .sss-links { grid-template-columns: 1fr; gap: 16px; }
+ .sss-card p { font-size: 13px; }
+ .desktop-window-status { font-size: 9px; }
+}
+
+/* Original homepage blobs, isolated to this experiment. */
+@keyframes blob-morph {
+  0% {
+    border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+  }
+
+  25% {
+    border-radius: 50% 60% 60% 40% / 40% 60% 30% 60%;
+  }
+
+  50% {
+    border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%;
+  }
+
+  75% {
+    border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%;
+  }
+}
+
+/* Blobs */
+.blob-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.blob {
+  position: fixed;
+  mix-blend-mode: luminosity;
+  opacity: 0.55;
+  border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+  overflow: hidden;
+  animation: blob-morph 24s infinite alternate ease-in-out;
+  box-shadow:
+    inset -38px -48px 70px rgba(54, 36, 20, 0.2),
+    inset 26px 32px 60px rgba(255, 255, 255, 0.28),
+    0 24px 48px rgba(50, 25, 0, 0.16);
+  transform: translate3d(var(--float-x, 0), var(--float-y, 0), 0);
+  transform-origin: center;
+  will-change: transform, border-radius;
+}
+
+.blob::before {
+  content: "";
+  position: absolute;
+  inset: 10% 14% auto auto;
+  width: 38%;
+  height: 30%;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.22) 46%, transparent 72%);
+  filter: blur(2px);
+  opacity: 0.72;
+  transform: rotate(-18deg);
+}
+
+.blob[data-bouncing="true"] {
+  border-radius: 61% 41% 31% 70% / 60% 30% 70% 40%;
+}
+
+.blob-red {
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 248, 225, 0.56), transparent 24%),
+    radial-gradient(circle at 72% 76%, rgba(132, 22, 24, 0.45), transparent 44%),
+    #d94e4e;
+  width: 420px;
+  height: 310px;
+  top: 12%;
+  left: 8%;
+  animation-duration: 30s;
+}
+
+.blob-blue {
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.58), transparent 24%),
+    radial-gradient(circle at 72% 76%, rgba(27, 92, 132, 0.34), transparent 46%),
+    #b0e0e6;
+  width: 320px;
+  height: 430px;
+  top: 48%;
+  left: 68%;
+  animation-duration: 29s;
+}
+
+.blob-red-2 {
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.78), transparent 24%),
+    radial-gradient(circle at 70% 78%, rgba(184, 132, 24, 0.35), transparent 48%),
+    #fffba7;
+  width: 260px;
+  height: 360px;
+  top: 72%;
+  left: 38%;
+  animation-duration: 19s;
+}
+/* Original artwork and content inside the OES window frames. */
+body.home-desktop {
+  background-color: #397d79;
+  background-image: linear-gradient(to bottom, #397d79 0%, #689b94 30%, #aac7bd 65%, #f8faf4 100%);
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+.home-desktop > header { background: #7b3f00; border-bottom-color: #5a2f00; box-shadow: 0 2px #cd906666; }
+.home-desktop .nav-bar { max-width: none; justify-content: center; margin: 0; padding: 0; gap: 0; }
+.home-desktop .nav-bar > li:first-child { margin-right: 0; }
+.home-desktop .nav-bar > li > a { padding: 9px 12px; color: #fff5e1; }
+.home-desktop .nav-bar a:hover { background: #aa4c1b; color: #ffeedc; }
+.home-desktop .dropdown-content { background: #cd9066; border: 2px solid #5a2f00; padding: 0; min-width: 180px; }
+.home-desktop .dropdown-content a { padding: 8px 12px; background: #7b3f00; color: #fff5e1; }
+.desktop-welcome, .home-desktop .home-grid, .home-desktop .oes-action-footer { position: relative; z-index: 1; }
+.desktop-welcome { display: block; padding: 25px 28px 32px; }
+.desktop-brand { max-width: 810px; text-align: center; perspective: 1000px; }
+.desktop-brand > img { display: block; width: min(600px, 100%); height: auto; max-height: 400px; object-fit: contain; object-position: center; margin: 0 auto 18px; filter: drop-shadow(5px 7px 0 #183f4166); }
+.desktop-brand h1 { font-size: clamp(23px, 2.5vw, 35px); margin-bottom: 16px; }
+.desktop-brand > p:last-child { max-width: 690px; margin: auto; font-size: 16px; line-height: 1.65; color: #fff9e4; text-shadow: 0 1px 2px #123d3b; }
+.home-desktop .desktop-hero-logo { transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform 180ms ease-out; }
+.desktop-shortcuts { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px 12px; padding: 0 8px 8px; }
+.desktop-shortcuts a { justify-content: center; }
+.desktop-shortcuts .shortcut-gif img { width: 145px; height: 115px; filter: drop-shadow(3px 4px 2px #173c3f88); }
+.desktop-shortcuts a > img { transition: transform 180ms ease, filter 180ms ease; }
+.desktop-shortcuts a:hover > img { transform: translateY(-4px) rotate(-4deg); filter: drop-shadow(4px 7px 2px #173c3f88) brightness(1.12); }
+.home-desktop .recent-highlights { margin-top: 0; }
+.home-desktop .desktop-aside-label { font: 20px var(--oes-ui-font-display); letter-spacing: 0; text-transform: none; margin: 0 0 -12px; text-shadow: 2px 2px #173c3f; }
+.home-desktop .desktop-window-status { min-height: 17px; padding-top: 1px; }
+.home-desktop .audio-window > .oes-window__content,
+.home-desktop .video-window > .oes-window__content,
+.home-desktop .diy-window > .oes-window__content { padding: 0; }
+.category-section { padding: 20px; background-repeat: repeat; background-size: auto; }
+.music-section { background-image: url('/images/audio-tape-0437.gif'); }
+.video-section { background-image: url('/images/camera-011.gif'); }
+.diy-section { background-image: url('/images/pcbbg.png'); }
+.category-header { border-bottom: 0; padding: 0 0 18px; }
+.category-header h2 { padding: 6px 10px; background: #fffdd0f2; box-shadow: 3px 3px #17252744; }
+.category-header img { width: 60px; height: 60px; }
+.category-links { display: flex; flex-direction: column; gap: 14px; }
+.category-links li + li { border-top: 0; }
+.category-link { grid-template-columns: 40px minmax(0,1fr); padding: 14px; background: #fffdd0f5; border: 1px solid #2c150033; border-radius: 9px; box-shadow: 4px 6px #00000022; transition: transform 180ms ease, box-shadow 180ms ease; }
+.category-link > img { width: 40px; height: 40px; }
+.link-title { font-size: 16px; }
+.link-desc { font-size: 14px; color: #342e23; }
+.category-link:hover { background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), #fffef0, #fff5c4); transform: translateY(-2px); box-shadow: 6px 8px #00000033; }
+.highlight-crt-frame::after { content: none; }
+.blob { opacity: .4; mix-blend-mode: normal; }
+.blob-red { width: min(420px, 65vw); height: min(310px, 48vw); }
+.blob-blue { width: min(320px, 60vw); height: min(430px, 75vw); }
+.blob-red-2 { width: min(260px, 50vw); height: min(360px, 65vw); }
+@media (min-width: 851px) {
+ .home-desktop .recent-highlights { margin-top: -320px; }
+}
+@media (max-width: 850px) {
+ .desktop-brand { max-width: none; }
+ .desktop-welcome { padding: 24px 20px 30px; }
+ .desktop-shortcuts { grid-template-columns: repeat(4,minmax(0,1fr)); }
+ .desktop-shortcuts .shortcut-gif img { width: 130px; height: 100px; }
+}
+@media (max-width: 520px) {
+ .home-desktop .nav-bar > li > a { padding: 10px 9px; }
+ .desktop-brand > img { width: 100%; max-height: 310px; }
+ .desktop-brand > p:last-child { font-size: 14px; }
+ .category-section { padding: 12px; }
+ .category-link { grid-template-columns: 30px minmax(0,1fr); gap: 10px; padding: 12px; }
+ .category-link > img { width: 30px; height: 30px; }
+ .link-title { font-size: 14px; }
+ .link-desc { font-size: 13px; }
+ .desktop-shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+ .home-desktop *, .home-desktop *::before { animation: none !important; transition: none !important; }
+ .desktop-shortcuts a:hover > img, .category-link:hover { transform: none; }
+}
+/* Page-length fade, floating original badges, and slightly askew windows. */
+.home-desktop .sss-card p, .home-desktop .highlight-body p { font-size: 14px; line-height: 1.7; }
+.home-desktop .link-desc { font-size: 15px; line-height: 1.65; }
+.desktop-sticker-rail { position: fixed; z-index: 15; top: 90px; left: 16px; width: 150px; display: grid; gap: 24px; justify-items: center; }
+.desktop-sticker-rail a { display: block; width: 125px; transform-origin: center; animation: desktop-sticker-rock 7s ease-in-out infinite alternate; }
+.desktop-sticker-rail .reverb-sticker { width: 150px; }
+.desktop-sticker-rail a:nth-child(2) { animation-delay: -2s; }
+.desktop-sticker-rail a:nth-child(3) { animation-delay: -4s; }
+.desktop-sticker-rail img { display: block; width: 100%; height: auto; max-height: 140px; object-fit: contain; filter: drop-shadow(3px 6px 0 #0003); }
+.desktop-sticker-rail a:hover { animation-play-state: paused; filter: brightness(1.1); }
+@keyframes desktop-sticker-rock { from { transform: rotate(-3deg) translateY(-2px); } to { transform: rotate(3deg) translateY(2px); } }
+.home-desktop .desktop-welcome, .home-desktop .home-grid { max-width: 1250px; width: calc(100% - 190px); margin-left: max(180px, calc((100% - 1250px) / 2)); margin-right: 10px; }
+.home-desktop .primary-column > .desktop-window { --window-angle: -.6deg; transform: rotate(var(--window-angle)); transform-origin: center top; transition: transform 320ms cubic-bezier(.22,1.6,.4,1), box-shadow 250ms ease; }
+.home-desktop .primary-column > .desktop-window:nth-child(even) { --window-angle: .6deg; }
+@media (hover: hover) and (pointer: fine) {
+ .home-desktop .primary-column > .desktop-window:hover { transform: translateY(-5px) rotate(var(--window-angle)); box-shadow: var(--oes-ui-raised), 8px 12px 0 #143e4644; }
+}
+.home-desktop .oes-action-footer { max-width: none; width: 100%; margin: 55px 0 0; padding: 24px max(28px, calc((100% - 1000px) / 2)); display: grid; grid-template-columns: minmax(75px,130px) minmax(0,1fr) minmax(75px,130px); gap: 24px; background: #8b4513; border-top: 2px solid #5a2f00; }
+.home-desktop .oes-action-footer__center { order: 0; font-size: 13px; }
+.home-desktop .footer-gif-link { width: 100%; }
+.home-desktop .footer-gif-link img { width: 100%; max-height: 125px; }
+.home-desktop .desktop-shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 12px; }
+@media (max-width: 1100px) {
+ .desktop-sticker-rail { width: 85px; left: 8px; gap: 20px; }
+ .desktop-sticker-rail a, .desktop-sticker-rail .reverb-sticker { width: 85px; }
+ .home-desktop .desktop-welcome, .home-desktop .home-grid { width: calc(100% - 112px); margin-left: 102px; }
+}
+@media (min-width: 851px) and (max-width: 1100px) {
+ .home-desktop .home-grid { grid-template-columns: minmax(0,1fr) minmax(250px, .7fr); gap: 20px; }
+ .home-desktop .sss-links { grid-template-columns: 1fr; }
+ .home-desktop .desktop-brand { max-width: calc(100% - 270px); }
+ .home-desktop .desktop-brand h1 { font-size: 22px; }
+ .home-desktop .recent-highlights { margin-top: -240px; }
+}
+@media (max-width: 850px) {
+ .home-desktop .oes-action-footer { padding: 22px 20px 22px 104px; gap: 12px; }
+ .home-desktop .desktop-shortcuts { grid-template-columns: repeat(4,minmax(0,1fr)); }
+}
+@media (max-width: 520px) {
+ .desktop-sticker-rail { width: 56px; left: 5px; top: 80px; gap: 20px; }
+ .desktop-sticker-rail a, .desktop-sticker-rail .reverb-sticker { width: 56px; }
+ .home-desktop .desktop-welcome, .home-desktop .home-grid { width: calc(100% - 70px); margin-left: 65px; padding-left: 8px; padding-right: 8px; }
+ .home-desktop .primary-column > .desktop-window { --window-angle: -.3deg; }
+ .home-desktop .primary-column > .desktop-window:nth-child(even) { --window-angle: .3deg; }
+ .home-desktop .desktop-shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .home-desktop .oes-action-footer { padding: 20px 10px 20px 68px; grid-template-columns: 45px minmax(0,1fr) 45px; gap: 8px; }
+ .home-desktop .oes-action-footer__center { font-size: 11px; }
+ .home-desktop .footer-badges img { max-width: 45px; height: 20px; }
+ .home-desktop .link-desc, .home-desktop .sss-card p, .home-desktop .highlight-body p { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .home-desktop .desktop-sticker-rail a { animation: none; }
+ .home-desktop .primary-column > .desktop-window:hover { transform: rotate(var(--window-angle)); }
+}
+/* Larger type throughout, with compact chrome still readable on phones. */
+body.home-desktop { font-size: 17px; }
+.home-desktop .nav-bar > li > a { font-size: 17px; padding: 11px 15px; }
+.home-desktop .dropdown-content a { font-size: 16px; }
+.home-desktop .desktop-window .oes-window__title-bar { font-size: 16px; min-height: 34px; }
+.home-desktop .window-number { font-size: 11px; }
+.home-desktop .sss-card h3 { font-size: 20px; }
+.home-desktop .sss-card p, .home-desktop .highlight-body p, .home-desktop .link-desc { font-size: 17px; line-height: 1.65; }
+.home-desktop .link-title { font-size: 18px; }
+.home-desktop .highlight-body h3 { font-size: 21px; }
+.home-desktop .highlight-tag { font-size: 12px !important; }
+.home-desktop .highlight-btn { font-size: 15px; }
+.home-desktop .desktop-brand > p:last-child { font-size: 19px; }
+.home-desktop .desktop-brand h1 { font-size: clamp(28px, 2.8vw, 40px); }
+.home-desktop .category-header h2 { font-size: 29px; }
+.home-desktop .desktop-aside-label { font-size: 24px; }
+.home-desktop .oes-action-footer__center { font-size: 15px; }
+@media (max-width: 1100px) { .home-desktop .sss-links { grid-template-columns: 1fr; } }
+@media (max-width: 520px) {
+ .home-desktop .nav-bar > li > a { font-size: 14px; padding: 12px 8px; }
+ .home-desktop .desktop-window .oes-window__title-bar { font-size: 14px; }
+ .home-desktop .sss-card p, .home-desktop .highlight-body p, .home-desktop .link-desc { font-size: 16px; }
+ .home-desktop .link-title { font-size: 17px; }
+ .home-desktop .desktop-brand > p:last-child { font-size: 17px; }
+ .home-desktop .desktop-shortcuts { font-size: 15px; }
+ .home-desktop .oes-action-footer__center { font-size: 13px; }
+}
+/* These are document-flow windows, not the UI kit's fixed-height mobile desktop. */
+@media (max-width: 700px) {
+ .home-desktop .desktop-window { top: auto !important; left: auto !important; width: auto !important; height: auto !important; }
+}
+@media (max-width: 520px) {
+ .home-desktop .home-grid { padding-right: 22px; }
+}
+/* Readable terminal body text inside the windows. */
+@font-face {
+ font-family: "EnterCommand";
+ src: url("/fonts/EnterCommand.ttf") format("truetype");
+ font-display: swap;
+}
+.home-desktop .desktop-window .oes-window__content {
+ font-family: "EnterCommand", "Courier New", monospace;
+}
+.home-desktop .sss-card p,
+.home-desktop .highlight-body p:not(.highlight-tag),
+.home-desktop .link-desc {
+ font-size: 24px;
+ line-height: 1.3;
+}
+@media (max-width: 520px) {
+ .home-desktop .sss-card p,
+ .home-desktop .highlight-body p:not(.highlight-tag),
+ .home-desktop .link-desc { font-size: 22px; }
+}
+
+@font-face {
+ font-family: "OES VCR";
+ src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+ font-display: swap;
+}
+.home-desktop .desktop-brand > p:last-child {
+ font-family: "OES VCR", monospace;
+ font-size: clamp(15px, 1.2vw, 18px);
+ line-height: 1.55;
+}
+/* Independent rotate/translate keep idle wiggle separate from pointer tilt. */
+.home-desktop .desktop-hero-logo {
+ animation: desktop-hero-wiggle 18s ease-in-out infinite alternate;
+ transform-origin: 50% 55%;
+}
+@keyframes desktop-hero-wiggle {
+ 0% { rotate: -1.5deg; translate: 0 -3px; }
+ 50% { rotate: .4deg; translate: 0 3px; }
+ 100% { rotate: 1.5deg; translate: 0 -1px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .home-desktop .desktop-hero-logo { animation: none; rotate: none; translate: none; }
+}
+/* Fixed desktop shortcuts replace the floating sticker rail. */
+.home-desktop .desktop-icon-rail {
+ position: fixed;
+ z-index: 15;
+ top: 90px;
+ left: 16px;
+ width: 150px;
+ max-height: none;
+ overflow: visible;
+ grid-template-columns: minmax(0, 1fr);
+ gap: 24px;
+ padding: 6px;
+ font-size: 16px;
+ 
+}
+.home-desktop .desktop-icon-rail a { min-width: 0; }
+.home-desktop .desktop-icon-rail a > span:last-child { max-width: 100%; }
+.home-desktop .recent-highlights { margin-top: 0; }
+@media (max-width: 1100px) {
+ .home-desktop .desktop-icon-rail { left: 8px; width: 85px; padding: 4px; font-size: 14px; gap: 20px; }
+}
+@media (max-width: 520px) {
+ .home-desktop .desktop-icon-rail { left: 3px; top: 72px; width: 60px; max-height: none; padding: 3px; font-size: 12px; gap: 18px; }
+ .home-desktop .desktop-icon-rail img { width: 38px; height: 36px; }
+ .home-desktop .desktop-icon-rail a > span:last-child { padding: 3px 1px; overflow-wrap: anywhere; line-height: 1.3; }
+}
+
+/* Use two rows when the left margin can accommodate three desktop icons. */
+@media (min-width: 1400px) {
+ .home-desktop .desktop-icon-rail { width: 264px; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px 8px; font-size: 14px; }
+ .home-desktop .desktop-welcome, .home-desktop .home-grid { width: calc(100% - 310px); margin-left: max(300px, calc((100% - 1250px) / 2)); }
+}
+/* Short viewports get a wrapping sticky strip so every icon remains reachable. */
+@media (max-height: 600px) {
+ .home-desktop .desktop-icon-rail { position: sticky; top: 0; left: auto; width: calc(100% - 16px); margin: 8px; padding: 8px; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 8px; font-size: 12px; background: #397d79f2; }
+ .home-desktop .desktop-icon-rail img { width: 36px; height: 32px; }
+ .home-desktop .desktop-welcome, .home-desktop .home-grid { width: calc(100% - 20px); margin: 0 auto; }
+}
+/* Wallpaper composition: OES in the center, shortcuts at the hero's edges. */
+.home-desktop .desktop-welcome,
+.home-desktop .home-grid { width: 100%; max-width: 1400px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+.home-desktop .desktop-brand { width: 100%; max-width: none; margin: 0 auto; }
+.home-desktop .desktop-brand > img { width: min(600px, calc(100% - 320px)); }
+.home-desktop .desktop-brand h1 { max-width: 810px; margin-left: auto; margin-right: auto; }
+.home-desktop .desktop-icon-rail { position: absolute; inset: 65px 28px auto; width: auto; max-height: none; margin: 0; padding: 0; display: flex; justify-content: space-between; background: none; pointer-events: none; }
+.home-desktop .desktop-icon-edge { width: 140px; display: grid; align-content: start; justify-items: center; gap: 30px; pointer-events: auto; }
+.home-desktop .desktop-icon-edge a { width: 100%; font-size: 16px; }
+.home-desktop .desktop-icon-edge img { width: 48px; height: 43px; }
+.home-desktop .oes-action-footer { padding-left: max(28px, calc((100% - 1000px) / 2)); }
+@media (max-width: 850px) {
+ .home-desktop .desktop-welcome, .home-desktop .home-grid { padding-left: 20px; padding-right: 20px; }
+ .home-desktop .desktop-icon-rail { inset: 40px 12px auto; }
+ .home-desktop .desktop-icon-edge { width: 90px; gap: 22px; }
+ .home-desktop .desktop-icon-edge a { font-size: 13px; }
+ .home-desktop .desktop-brand > img { width: calc(100% - 180px); }
+}
+@media (max-width: 520px) {
+ .home-desktop .desktop-icon-rail { inset: 28px 6px auto; }
+ .home-desktop .desktop-icon-edge { width: 65px; gap: 16px; }
+ .home-desktop .desktop-icon-edge a { font-size: 12px; }
+ .home-desktop .desktop-icon-edge img { width: 36px; height: 33px; }
+ .home-desktop .desktop-brand > img { width: calc(100% - 110px); height: 250px; margin-bottom: 20px; }
+ .home-desktop .desktop-brand h1 { font-size: 28px; }
+ .home-desktop .oes-action-footer { padding-left: 10px; }
+}

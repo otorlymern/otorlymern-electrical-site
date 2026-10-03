@@ -1,0 +1,120 @@
+/* Dark System 7 window treatment from DIY Projects, scoped to six services. */
+@font-face {
+ font-family: "Services MSW98";
+ src: url("/fonts/MSW98UI-Bold.ttf") format("truetype");
+ font-display: swap;
+}
+.services-windows.oes-ui { --oes-ui-paper: #000; --oes-ui-ink: #fff; --oes-ui-surface: #000; }
+.services-windows .service-card.oes-window {
+ position: relative;
+ display: block;
+ top: auto !important;
+ left: auto !important;
+ width: auto !important;
+ height: auto !important;
+ min-width: 0;
+ min-height: 0;
+ padding: 5px;
+ border: 1px solid #fff;
+ border-radius: 0;
+ background: #000;
+ color: #fff;
+ box-shadow: 0 2px #000e, 0 18px 38px #0005, 0 0 0 1px #ffffffb8;
+ align-self: start;
+}
+.services-windows .oes-window__title-bar {
+ display: grid;
+ grid-template-columns: 20px minmax(0,1fr);
+ gap: 8px;
+ min-height: 38px;
+ padding: 5px;
+ border: 0;
+ background: repeating-linear-gradient(to bottom,#fff 0 1px,#000 1px 3px);
+ cursor: pointer;
+ touch-action: auto;
+ list-style: none;
+}
+.services-windows summary::-webkit-details-marker { display: none; }
+.services-windows .service-card h2.oes-window__title {
+ margin: 0;
+ padding: 3px 7px;
+ background: #000;
+ box-shadow: 3px 0 #000, -3px 0 #000;
+ color: #eef0f3;
+ font-family: "Services MSW98", "OES Chicago", sans-serif;
+ font-size: 21px;
+ line-height: 1.15;
+ white-space: normal;
+ overflow-wrap: anywhere;
+ text-shadow: 0 1px #9297a0, 0 2px #4c5058;
+}
+.service-window-toggle { width: 18px; height: 18px; display: grid; place-items: center; border: 1px solid #fff; background: #000; color: #fff; }
+.service-window-toggle::before { content: '+'; font: 17px monospace; }
+.services-windows [open] > summary .service-window-toggle::before { content: '−'; }
+.services-windows .service-card .oes-window__content { margin: 5px 0 0; padding: 22px 17px; background: #000; color: #fff; box-shadow: none; border-top: 1px solid #fff; overflow: visible; }
+.services-windows .service-card p { font-family: "EnterCommand", monospace; font-size: 26px; line-height: 1.3; color: #fff; margin: 0 0 22px; }
+.services-windows .service-card a { display: inline-block; padding: 9px 11px; margin: 0; font: 16px/1.35 "OES Chicago", sans-serif; color: #111; background: #c0c0c0; border: 2px solid; border-color: #fff #404040 #404040 #fff; box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #808080; text-decoration: none; }
+.services-windows .service-card a:hover { background: #000080; color: #fff; }
+.services-windows :is(summary,a):focus-visible { outline: 2px dashed #fff; outline-offset: 4px; }
+/* Freestanding windows with a small alternating tilt. */
+.services-collection { padding: 16px 12px 24px; }
+.services-windows .service-card.oes-window {
+ --service-angle: -.8deg;
+ transform: rotate(var(--service-angle));
+ transform-origin: center top;
+ transition: transform 260ms cubic-bezier(.22,1.4,.4,1), box-shadow 260ms ease;
+}
+.services-windows .service-card:nth-child(even) { --service-angle: .8deg; }
+.services-windows .service-card:focus-within { z-index: 2; box-shadow: 10px 14px 0 #0007, 0 24px 38px #0008, 0 0 0 1px #fff; }
+@media (hover: hover) and (pointer: fine) {
+ .services-windows .service-card.oes-window:hover { z-index: 2; transform: translateY(-7px) rotate(var(--service-angle)) scale(1.015); box-shadow: 10px 14px 0 #0007, 0 24px 38px #0008, 0 0 0 1px #fff; }
+}
+/* Light hybrid window for the existing introductory line. */
+.services-intro.oes-ui { width: 100%; }
+.services-intro .services-intro-window.oes-window {
+ position: relative;
+ display: block;
+ top: auto !important;
+ left: auto !important;
+ width: 100% !important;
+ height: auto !important;
+ min-width: 0;
+ min-height: 0;
+ margin: 0;
+ padding: 5px;
+}
+.services-intro .oes-window__title-bar { grid-template-columns: 20px minmax(0,1fr) 20px; cursor: pointer; touch-action: auto; list-style: none; font-size: 19px; }
+.services-intro summary::-webkit-details-marker { display: none; }
+.services-intro h2.oes-window__title { font-size: 19px; }
+.services-intro .service-window-toggle { background: #dfdfdf; color: #111; border-color: #111; box-shadow: inset 1px 1px #fff, inset -1px -1px #808080; }
+.services-intro [open] > summary .service-window-toggle::before { content: '−'; }
+.services-intro .oes-window__content { background: #d8c39d; padding: 22px 25px; }
+.services-main .services-intro p { margin: 0; color: #241c13; font: 28px/1.35 "EnterCommand", monospace; }
+.services-intro summary:focus-visible { outline: 2px dashed #111; outline-offset: 3px; }
+/* Newspaper assistant and cream speech bubble, linked as one target. */
+.services-cv-assistant { align-self: flex-end; margin: 12px 20px 30px; }
+.services-cv-assistant a { display: flex; gap: 24px; align-items: center; color: #171717; text-decoration: none; }
+.services-cv-assistant img { width: 70px; height: 90px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(4px 6px 0 #0005); transform: rotate(-5deg); transition: transform 200ms ease; }
+.services-cv-assistant span { position: relative; padding: 17px 22px; border: 2px solid #171717; border-radius: 10px; background: #fffbd1; box-shadow: 4px 5px #0005; font: 25px/1.2 "EnterCommand", monospace; }
+.services-cv-assistant span::before { content: ''; position: absolute; width: 15px; height: 15px; left: -10px; top: calc(50% - 8px); background: #fffbd1; border-left: 2px solid #171717; border-bottom: 2px solid #171717; transform: rotate(45deg); }
+.services-cv-assistant a:hover img { transform: rotate(3deg) translateY(-3px); }
+.services-cv-assistant a:hover span { background: #fff4ad; }
+.services-cv-assistant a:hover span::before { background: #fff4ad; }
+.services-cv-assistant a:focus-visible { outline: 3px dashed #fffbd1; outline-offset: 8px; }
+@media (max-width: 520px) {
+ .services-collection { padding: 12px 8px 18px; }
+ .services-windows .service-card.oes-window { --service-angle: -.4deg; }
+ .services-windows .service-card:nth-child(even) { --service-angle: .4deg; }
+ .services-cv-assistant { align-self: center; margin: 10px 0 24px; }
+ .services-cv-assistant a { gap: 18px; }
+ .services-cv-assistant img { width: 48px; height: 70px; }
+ .services-cv-assistant span { padding: 14px; font-size: 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .services-windows .service-card.oes-window, .services-cv-assistant img { transition: none; }
+ .services-windows .service-card.oes-window:hover { transform: rotate(var(--service-angle)); }
+ .services-cv-assistant a:hover img { transform: rotate(-5deg); }
+}
+.services-main .services-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2.2rem; }
+@media (max-width: 900px) { .services-main .services-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) { .services-main .services-grid { grid-template-columns: minmax(0,1fr); } }

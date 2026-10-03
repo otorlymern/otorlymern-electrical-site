@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link "Home" [ref=e6] [cursor=pointer]:
+            - /url: /index.html
+        - listitem [ref=e7]:
+          - link "Systems" [ref=e8] [cursor=pointer]:
+            - /url: /systems/rrr.html
+        - listitem [ref=e9]:
+          - link "Services" [ref=e10] [cursor=pointer]:
+            - /url: /services/index.html
+        - listitem [ref=e11]:
+          - link "Solutions" [ref=e12] [cursor=pointer]:
+            - /url: /solutions/index.html
+        - listitem [ref=e13]:
+          - link "Archive" [ref=e14] [cursor=pointer]:
+            - /url: /manuals/
+  - main [ref=e15]:
+    - heading [level=1] [ref=e18]:
+      - generic [ref=e19]:
+        - img "Services Logo" [ref=e20]
+        - text: Services
+    - group [ref=e22]:
+      - generic [ref=e23] [cursor=pointer]:
+        - generic [ref=e24]: −
+        - heading "Services" [level=2] [ref=e25]
+      - paragraph [ref=e27]: We offer services you fool, the things you cant do! Ill do em!
+    - generic [ref=e29]:
+      - group [ref=e30]:
+        - generic [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: −
+          - heading "Affordable Audio Gear Repairs" [level=2] [ref=e33]
+        - generic [ref=e34]:
+          - paragraph [ref=e35]:
+            - text: Need to fix anything you use to make music with? Not trying to spend an arm and a leg doing it? Submit a request, let us know whats broke and if you know why or how, and include ur budget. We
+            - emphasis [ref=e36]: WILL WORK WITH YOU ON PRICE, DONT BE AFRAID!
+          - link "Start a repair request →" [ref=e37] [cursor=pointer]:
+            - /url: repairrequest.html
+      - group [ref=e38]:
+        - generic [ref=e39] [cursor=pointer]:
+          - generic [ref=e40]: −
+          - heading "Sell Us Your Gear" [level=2] [ref=e41]
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: Have some dusty junk taking up precious garage space? have a big reel to reel tape recorder you dont know how to use but know its old and cool lookin? Fill out the form with details and we can take it off your hands!
+          - link "Junk pickup / sell us your gear →" [ref=e44] [cursor=pointer]:
+            - /url: sellyourgear.html
+      - group [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: −
+          - heading "Book a Recording Session" [level=2] [ref=e49]
+        - generic [ref=e50]:
+          - paragraph [ref=e51]: Have a irrational need to have someone else record your songs? Have the sudden feeling that what ur next project needs is an all analog/harware studio based out of a small apatment? Want to record without computers but dont have a ton money?
+          - link "Book a session at OEStudios →" [ref=e52] [cursor=pointer]:
+            - /url: engineeringrequest.html
+      - group [ref=e53]:
+        - generic [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: −
+          - heading "Tape Bounce" [level=2] [ref=e56]
+        - generic [ref=e57]:
+          - paragraph [ref=e58]: Digital mix feeling all angular and noncongruent? Confused why your mix sounds bad when your track is hot? Might need to bounce that shit to tape, get it all glued up and mingling nicely. I'll do it for you!
+          - link "Request a tape bounce →" [ref=e59] [cursor=pointer]:
+            - /url: tapebounce.html
+      - group [ref=e60]:
+        - generic [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]: −
+          - heading "A/V Installations" [level=2] [ref=e63]
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: Happen to own a small contemporary art gallery, have a show planned with A/V elements, have no idea how you were gunna make that happen, then strumbled across this page?
+          - link "Request an A/V Install →" [ref=e66] [cursor=pointer]:
+            - /url: installationrequest.html
+      - group [ref=e67]:
+        - generic [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: −
+          - heading "Bookings/Commissions" [level=2] [ref=e70]
+        - generic [ref=e71]:
+          - paragraph [ref=e72]: Need music for a video? Video for a music? Projections for a noise show, noise for a projections show?
+          - link "Book Me/Commission Something →" [ref=e73] [cursor=pointer]:
+            - /url: comissionrequest.html
+    - complementary [ref=e74]:
+      - link "Click here to see CV" [ref=e75] [cursor=pointer]:
+        - /url: experience.html
+  - contentinfo [ref=e77]:
+    - link "Email Otorlymern Electrical Systems" [ref=e78] [cursor=pointer]:
+      - /url: mailto:contact@otorlymern-electrical.com
+      - img "Get in touch with OES" [ref=e79]
+    - paragraph [ref=e80]: © 2025 – Otorlymern Electrical Services – Services
+    - generic [ref=e81]:
+      - link [ref=e82] [cursor=pointer]:
+        - /url: https://reverb.com/shop/otorlymern-electrical
+        - img "Shop My Store on Reverb" [ref=e83]
+      - img "Services badge" [ref=e84]
+      - img "World Wide Web badge" [ref=e85]
+      - img "OES circle logo" [ref=e86]
+      - link [ref=e87] [cursor=pointer]:
+        - /url: https://reverb.com/shop/otorlymern-electrical
+        - img "Shop My Store on Reverb" [ref=e88]
+    - link "Search the OES Manuals Archive for more resources" [ref=e89] [cursor=pointer]:
+      - /url: /manuals/
+      - img "Click for more resources" [ref=e90]
