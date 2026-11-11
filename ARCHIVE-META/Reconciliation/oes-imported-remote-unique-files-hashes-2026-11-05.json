@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Remote-Only/diy/CIRCUITS/fig26-02_rungling.jpg",
+    "size": 119400,
+    "md5": "527f66de3c040a071caaab6a31a07af1",
+    "sha256": "32120319bbe74c336aee205822cb9ebe15fa26b0927469e42986ce7c5aed6fcb",
+    "source_path": "diy/CIRCUITS/fig26-02_rungling.jpg",
+    "expected_size": 119400,
+    "expected_md5": "527f66de3c040a071caaab6a31a07af1",
+    "same_content_as_source_metadata": true
+  },
+  {
+    "path": "Remote-Only/electronicas music structures.png",
+    "size": 1732406,
+    "md5": "ebb1caf13b4d530582c549b0faae321e",
+    "sha256": "f77725570a74b7cf3b63164d46a5bc1f670cf67b08ec5c65e52a18a090b544ae",
+    "source_path": "electronicas music structures.png",
+    "expected_size": 1732406,
+    "expected_md5": "ebb1caf13b4d530582c549b0faae321e",
+    "same_content_as_source_metadata": true
+  },
+  {
+    "path": "Remote-Only/manuals/federal-am-864-u-manual-copy.pdf",
+    "size": 7754647,
+    "md5": "68034861552c7531c20050234dac913b",
+    "sha256": "1868996384210bbfdd21d675be3c39b31291a195e93a77e3e780758aae0909ef",
+    "source_path": "manuals/federal-am-864-u-manual-copy.pdf",
+    "expected_size": 7754647,
+    "expected_md5": "68034861552c7531c20050234dac913b",
+    "same_content_as_source_metadata": true
+  },
+  {
+    "path": "Remote-Only/service-docs/patch-diagrams/.DS_Store",
+    "size": 8196,
+    "md5": "79fc7ad47fd8214b7950d49fcc0106e6",
+    "sha256": "162ec0564bcae4218587d1d2f0746b5ae5681e53626ae9dc77fbee702d01ace7",
+    "source_path": "service-docs/patch-diagrams/.DS_Store",
+    "expected_size": 8196,
+    "expected_md5": "79fc7ad47fd8214b7950d49fcc0106e6",
+    "same_content_as_source_metadata": true
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-11-01",
+  "worker_version": "81a897a1-0954-4a8e-b78e-df519ee359f6",
+  "worker_redirect_entries": 4220,
+  "remote_keys_after_first_wave": 4912,
+  "first_wave_candidate_count": 1540,
+  "first_wave_verified_deleted": 1540,
+  "prior_verified_deleted": 25,
+  "total_deleted_through_wave": 1565,
+  "first_wave_failed": 0,
+  "logged_old_keys_absent": true,
+  "canonical_targets_missing": [],
+  "canonical_target_count": 1249,
+  "canonical_target_paths_missing_count": 0,
+  "deleted_paths_required_as_redirect_targets": [],
+  "representative_url_tests": [
+    {
+      "old_path": "referene/CMOS pinouts4001-4040.PNG",
+      "expected_target": "referene/cmos-pinouts4001-4040.png",
+      "old_status": 308,
+      "location_path": "/OES-ARCHIVE/referene/cmos-pinouts4001-4040.png",
+      "location_query": "oes-audit-check=1",
+      "followed_status": 200,
+      "pass": true
+    },
+    {
+      "old_path": "manuals/omnichord/OM300 Brochure.pdf",
+      "expected_target": "manuals/omnichord/omnichord-om300-service-manual.pdf",
+      "old_status": 308,
+      "location_path": "/OES-ARCHIVE/manuals/omnichord/omnichord-om300-service-manual.pdf",
+      "location_query": "oes-audit-check=1",
+      "followed_status": 200,
+      "pass": true
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/VU008/VU008_Control_Rev_E_Schematic-image-png.pdf",
+      "expected_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/VU008_Control_Rev_E_Schematic-image-png.pdf",
+      "old_status": 308,
+      "location_path": "/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/VU008_Control_Rev_E_Schematic-image-png.pdf",
+      "location_query": "oes-audit-check=1",
+      "followed_status": 200,
+      "pass": true
+    },
+    {
+      "old_path": "video-docs/video_guide (1).pdf",
+      "expected_target": "video-docs/video_guide.pdf",
+      "old_status": 308,
+      "location_path": "/OES-ARCHIVE/video-docs/video_guide.pdf",
+      "location_query": "oes-audit-check=1",
+      "followed_status": 200,
+      "pass": true
+    }
+  ],
+  "unmapped_fallthrough_test": {
+    "path": "2015.187760.Conversations-With-Kafka_text.pdf",
+    "status": 200,
+    "pass": true
+  },
+  "remote_inventory_path": "oes-archive-wasabi-post-wave-2026-11-01.tsv",
+  "all_representative_tests_pass": true
+}

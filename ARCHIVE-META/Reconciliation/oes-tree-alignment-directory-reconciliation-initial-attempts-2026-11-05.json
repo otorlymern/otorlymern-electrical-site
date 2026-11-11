@@ -1,0 +1,1275 @@
+{
+  "local_only_empty_dirs_created": 17,
+  "extra_empty_remote_dirs_removed": 0,
+  "blocked_extra_dirs_with_files": [],
+  "operations": [
+    {
+      "operation": "mkdir",
+      "path": "manuals/untitled folder",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "books/synthesizer-elec-music/engineering-recording-techniques/Musical Engineer's Handbook_jp2.sb-7830f5ff-SY8MYO",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/arp/untitled folder",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/euro/Befaco",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/euro/Instruo",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "diy/DESIGNERS/j-haible/Wayback Machine_files/proaudio",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "diy/DESIGNERS/j-haible/Wayback Machine_files/start_data",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/MonoPoly/Presets",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/Polysix/Presets",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/Prophecy/Presets",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/TRITON/Settings",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/TRITON/UserSamples",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/miniKORG/Presets",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/MonoPoly/Presets/User",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/Polysix/Presets/User",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/Prophecy/Presets/User",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "mkdir",
+      "path": "manuals/synths/korg/miniKORG/Presets/User",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Gerbers/AVEMODV2.2_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Control_Board_Gerber/TRQV2 - Controlboard Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Main_Board_Gerber/TRQV2 - Mainboard Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_PCB_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Hora\u0301k)/files",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Hora\u0301k)/images",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/FFG/FFG_Gerbers/FFG_RevD_Main_Board_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/FFG/FFG_Gerbers/FFG_RevE_Control_Board_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/FFG/Visualist original doc/Visualist_OG_RevA_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Control_Board_Gerber",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Main_Board_Gerber",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files/proaudio",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files/start_data",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/modules/601-difference-amplifier",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-extras/img",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/src/components/HomepageFeatures",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/cadet1_1.0.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/diver_1.0.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/dsg3_1.0.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/eschersketch_1.0.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/esg3_1.1.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_1.8.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_1.9.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_2.0.1",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_2.0.2",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/scrolls_1.0.1",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/scrolls_1.0.2",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.0",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.1",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.2",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.3",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/pdf/3trinsrgb+-rgb-output-expander",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Hora\u0301k)",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/FFG/FFG_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/FFG/Visualist original doc",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/wiardpdfs/wiard-docs/wiardmusicweasel-manual-material",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/VEIL v1.1F",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/VEIL v1.2F",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/Bitvision",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/andor-1",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/arch",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/bridge",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-i-sync-generator",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-ii-rgb-encoder",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-iii-video-input",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-iv-dual-ramp-generator",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-ix-voltage-controlled-oscillator",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-v-scaler",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-vi-fader",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-vii-processor",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-viii-hard-key-generator",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/cadet-x-multiplier",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-000-adc",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-001-dac",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-010-clock-vco",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-011-shift-register",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-100-multi-gate",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-101-quad-gate",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-110-counter",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/castle-111-d-flip-flops",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/color-chords",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/curtain",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/doorway",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/escher-sketch",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/liquid-tv",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/marble-index",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/memory-palace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/modules",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/navigator",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/pendulum",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/polar-fringe",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/prismatic-ray",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/reference-designs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/shapechanger",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/staircase",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-basics",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-extras",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/vidiot",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/visual-cortex",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs/war-of-the-ants",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/src/components",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/src/css",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/src/pages",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/firmware",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/img",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static/pdf",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_BOMs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_Docs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_Enclosure",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_BOMs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Docs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Enclosure",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/CBV001S",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/DISCRET11",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/FFG",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TEA5114 1-to-3 Video Splitter",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy/TRQ",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU002/VU002_BOM",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU002/VU002_Doc",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU002/VU002_Gerbers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU002/VU002_Schematic_PCB",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/g-richter/Wiard 300 Manual",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/g-richter/Wiard Frac",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/j-haible copy/polymoog schems",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/projects/TridexMuse",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/projects/video-technique-article",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/wiardpdfs/Wiard 300 Manual",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/wiardpdfs/wiard-docs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "manuals/manuals-misc/videogame-manuals/N64Manuals",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "manuals/manuals-misc/videogame-manuals/NintendoVirtualBoyManuals",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "manuals/manuals-misc/videogame-manuals/SNES-manuals",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/andreijay-vserpi/VSERPI and VSEJET controller templates, overlays, scene settings, etc/gravity waaaves launch control stuff",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/ACCESS - Triple Attenuvert Bias",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/GAMMA - Dual SQU & LOG",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/LUMA - RGB2YRGB",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/MULT A - Buffered Multiple",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/MULT B - Buffered Multiple",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/NVRT - Quad Luma Inverter",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/PASS4 - Quad Passive Switch",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/RECT - Dual Rectifier",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/SHUTTER - Triple Multiplexer",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/SW6 - Switch Expander",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/blog",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/docs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/src",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master/static",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Adapter board",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Animate",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Animate_EXP",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV001",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/CBV002",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Cadrans",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Courbes",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Entre\u0301e",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Isohe\u0301lie",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Legacy",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Rampes",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Seuils",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Solaire",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/Stable",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU001",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU001B",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU001C",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU002",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU003",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU003B",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU004",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU005",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU006",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU007",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU007B",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU008",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU009",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master/VU010",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/j-haible copy",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/p-blasser",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/paper-circuits",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/projects",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/DESIGNERS/wiardpdfs",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "manuals/manuals-misc/videogame-manuals",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "manuals/tape-machines/tascam",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/andreijay-vserpi/VSERPI and VSEJET controller templates, overlays, scene settings, etc",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/vdmx-media/ISF",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/vdmx-media/Movies",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/foxdocs-main",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/lzxdocs-master",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies/syntonie-master",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "books/analog-computing",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "books/misc",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/TridexMuse",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/paper-circuits",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/pesoundsynth",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/projects",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/r-hordijk",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/schematics-diagrams",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "diy/t-henry",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "manuals/mixing-desks-mixers",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "resources/fosterx",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/MUSICVISION",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/andreijay-vserpi",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/vdmx-media",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "video-docs/video-euro-companies",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "operation": "rmdir_empty_marker",
+      "path": "resources",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "extra_empty_remote_dirs_attempted": 194,
+  "note": "Initial rclone rmdir pass returned success but did not remove S3 marker-only prefixes. Final removal is recorded in oes-tree-alignment-directory-reconciliation-final-2026-11-05.json and oes-tree-alignment-empty-directory-marker-removal-2026-11-05.json."
+}

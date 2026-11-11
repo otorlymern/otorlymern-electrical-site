@@ -1,0 +1,13 @@
+{
+  "worker_name": "oes-archive-url-compat",
+  "version_id": "402d5e71-9119-435a-89d3-30a036ca9e80",
+  "deployed_at": "2026-11-01T11:35:55.642Z",
+  "route": "media.otorlymern-electrical.com/*",
+  "base_map_entries": 4220,
+  "unicode_overrides": 11,
+  "effective_map_entries": 4220,
+  "effective_map_file": "oes-archive-url-compat-effective-map-v402d5e71-2026-11-01.mjs",
+  "effective_map_sha256": "ea8e1d3fff24e7e1bbe96254ed01175b630193c9cf1a92c9f9c377f3cfcdef6a",
+  "previous_full_map_version": "81a897a1-0954-4a8e-b78e-df519ee359f6",
+  "live_verification": "Four representative deleted URLs returned 308 with query preserved and followed to 200; all 11 Unicode override URLs returned 308 to the exact NFD key with query preserved and followed to 200; an unmapped archive URL returned 200 via origin fallback."
+}

@@ -1,0 +1,12 @@
+{
+  "worker_name": "oes-archive-url-compat",
+  "route": "media.otorlymern-electrical.com/*",
+  "zone_name": "otorlymern-electrical.com",
+  "deployed_version": "81a897a1-0954-4a8e-b78e-df519ee359f6",
+  "deployed_at": "2026-11-01T10:37:10.604Z",
+  "redirect_entries": 4220,
+  "map_file": "oes-archive-url-compat-deployed-map-2026-11-01.mjs",
+  "map_sha256": "1b14168fa39dcf311e6735313cc8614c3e16821f88b13ff3e2356da61a6c01eb",
+  "worker_source": "scripts/archive-url-compat/worker.mjs",
+  "verification": "Live HEAD checks confirmed 308 old URLs, exact target location and query preservation, canonical HEAD 200; unrelated unmapped URL returned 200 via origin fallback."
+}

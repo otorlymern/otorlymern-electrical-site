@@ -1,0 +1,13 @@
+{
+  "deployed_at": "2026-11-06T06:06:33Z",
+  "worker": "oes-archive-url-compat",
+  "active_version_id": "8d1250af-6625-43a1-9956-49afb17b269e",
+  "superseded_version_id": "c20b0b10-b058-4b4f-a8c0-0146f6e86a3e",
+  "original_compatibility_version_id": "402d5e71-9119-435a-89d3-30a036ca9e80",
+  "route": "media.otorlymern-electrical.com/*",
+  "original_effective_routes": 4220,
+  "final_effective_routes": 6393,
+  "new_old-path_alias_routes": 2184,
+  "pre-existing_routes_retargeted_to_current_local_paths": 160,
+  "verification": "Wrangler deployment status shows 100% traffic on active version; dry run passed; 160 retargeted existing aliases and 1,172 /pdfs aliases live checked; zero failures; query strings preserved."
+}

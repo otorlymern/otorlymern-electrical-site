@@ -1,0 +1,3226 @@
+{
+  "links": 1031,
+  "bad": 460,
+  "failures": [
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/10318_dual_borg_board_1-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/10318_dual_borg_board_1-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/emm_83_11-39-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/emm_83_11-39-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/HSR_86_08_doing_the_vi_1_full-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/HSR_86_08_doing_the_vi_1_full-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/wiardflash-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/wiardflash-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/IMG_0125-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/IMG_0125-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/RUNGLER_flowchart-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/RUNGLER_flowchart-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/96746974_10224230729302309_7637865094096879616_n-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/96746974_10224230729302309_7637865094096879616_n-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/241306899_5758318510886853_821859032987027823_n-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/241306899_5758318510886853_821859032987027823_n-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/VEIL%20-%20Priority%20Layering/VEIL%20v1.2F/veil12PCBbw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/VEIL%20-%20Priority%20Layering/VEIL%20v1.2F/veil12PCBbw-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecordingpart2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecordingpart2.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/absolutebeginnersreeltoreel4trackbuying-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/absolutebeginnersreeltoreel4trackbuying-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/fkg3-mk2-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/fkg3-mk2-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU009/VU009_14pin_Sync_Rev_B_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU009/VU009_14pin_Sync_Rev_B_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Ring_Mod_Layout_03%20copy-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/Ring_Mod_Layout_03%20copy-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/IMG_0262-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Wiard%20300%20Manual/IMG_0262-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecording-poly-monitors.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecording-poly-monitors.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/jh4_vcf_vca_schemo3-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/jh4_vcf_vca_schemo3-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/electronicmusic.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/electronicmusic.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/angles-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/angles-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/sstfeldon%20ad-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/sstfeldon%20ad-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/anti-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/anti-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/homerecording-articles.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/homerecording-articles.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/zzz2-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/zzz2-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Buchla_2170_3A-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Buchla_2170_3A-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno-2-usermanual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno-2-usermanual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/17p3-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/17p3-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/proc-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/proc-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/tiny_thumb_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/tiny_thumb_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/Atari-punk-console-PCB-syntherjack-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/Atari-punk-console-PCB-syntherjack-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/conrad_swoopspokes-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/conrad_swoopspokes-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiargargoyle%20copy-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiargargoyle%20copy-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/zzz2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/zzz2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/Commonschematicsymbols-image-jpeg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/Commonschematicsymbols-image-jpeg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/232a927e872d7854e08864584b0d591949122204-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/232a927e872d7854e08864584b0d591949122204-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_JX-3P_Owners_Manual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_JX-3P_Owners_Manual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Studio_Echo_Chamber_1945-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Studio_Echo_Chamber_1945-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Juno-2_Usermanual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Juno-2_Usermanual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/emm_83_11-38-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/emm_83_11-38-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/audiofax_12x3_console_2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/audiofax_12x3_console_2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Buchla_2170_1A-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Buchla_2170_1A-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU010/VU010_Main_RevB_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU010/VU010_Main_RevB_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/AMF%20775-A%20Integrator%20%26%20Timer%20Schematic-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/AMF%20775-A%20Integrator%20%26%20Timer%20Schematic-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Fairchild_627_block_diagram-672x372-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Fairchild_627_block_diagram-672x372-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/interpscanjhSCHEM-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/interpscanjhSCHEM-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/BORG%20INFO-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/BORG%20INFO-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/dwo3-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/dwo3-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/SHUTTER%20-%20Triple%20Multiplexer/SHUTTER%20PCB%202-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/SHUTTER%20-%20Triple%20Multiplexer/SHUTTER%20PCB%202-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/80-230_schemetic-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/80-230_schemetic-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/spider_schematic-image-jpeg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/spider_schematic-image-jpeg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/08-2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/08-2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/SW6%20-%20Switch%20Expander/SW6facebw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/SW6%20-%20Switch%20Expander/SW6facebw-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/conrad_checkerboard-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/conrad_checkerboard-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007B/VU007B_Power_Rev_C_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007B/VU007B_Power_Rev_C_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/MicMixer-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/MicMixer-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/LIL%20SIDRASSI%20MANUEL_0002-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/LIL%20SIDRASSI%20MANUEL_0002-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/14o2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/14o2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/AMF%20775-A%20Integrator%20%26%20Timer%20Schematic%20%281%29-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/AMF%20775-A%20Integrator%20%26%20Timer%20Schematic%20%281%29-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVE_MOD_V2.2_Schematic-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVE_MOD_V2.2_Schematic-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/seqblockdiagram-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Wiard%20300%20Manual/seqblockdiagram-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/small_preview_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/small_preview_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/sst282-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/sst282-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/dwo3-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/dwo3-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/hordijk-TWINPEAK_flowchart-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/hordijk-TWINPEAK_flowchart-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/663981597_1280x720-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/663981597_1280x720-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/buildinghomestudio2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/buildinghomestudio2-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Waaave%20Pool-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Waaave%20Pool-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU006/VU006_Control_RevB_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU006/VU006_Control_RevB_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/MULT%20B%20-%20Buffered%20Multiple/MULTB_part2-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/MULT%20B%20-%20Buffered%20Multiple/MULTB_part2-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007/VU007_Clip_Rev_F_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007/VU007_Clip_Rev_F_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/TubeMixer_DIY_1954-1024x579-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/TubeMixer_DIY_1954-1024x579-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/VEIL%20-%20Priority%20Layering/VEIL%20v1.1F/VEIL%20v1.1F%20PCB%20bw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/VEIL%20-%20Priority%20Layering/VEIL%20v1.1F/VEIL%20v1.1F%20PCB%20bw-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Pop-1966-08tapeechobuild.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/pop-1966-08tapeechobuild.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/CBV001S/CBV001S_Switchwiring-image-bmp.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/CBV001S/CBV001S_Switchwiring-image-bmp.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/RTS_Practical2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/books/RTS_Practical2.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/microphones/AT_Mic_Wardobe_2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/microphones/AT_Mic_Wardobe_2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/IMG_0262-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/IMG_0262-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/first_AES_CM22t282-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/first_AES_CM22t282-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/mutronldr2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/mutronldr2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/AVEMODV2.2_Board_Measurements_millimeters-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/AVEMODV2.2_Board_Measurements_millimeters-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVE_MOD_V2.2_Layout_Bottom-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVE_MOD_V2.2_Layout_Bottom-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/blipooboxflowchart-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/blipooboxflowchart-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/06namasbetter-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/06namasbetter-image-gif.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/swatch-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/swatch-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/jh_720_vco_scanner-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/jh_720_vco_scanner-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/ACCESS%20-%20Triple%20Attenuvert%20Bias/ACCESS%20v1.3F%20Part1%20bw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/ACCESS%20-%20Triple%20Attenuvert%20Bias/ACCESS%20v1.3F%20Part1%20bw-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno106-service-notes.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno106-service-notes.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/microphones/Mech_voco-981x1024-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/microphones/Mech_voco-981x1024-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_Schematic-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_Schematic-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/large_thumb_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/large_thumb_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/blackgroundcorn-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/blackgroundcorn-image-gif.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/switcher-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/switcher-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/11c4-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/11c4-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/CBV002/CBV002_Docs/CBV002_Main_RevF_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/CBV002/CBV002_Docs/CBV002_Main_RevF_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_Schematic-image-bmp.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_Schematic-image-bmp.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/gravity%20waaaves%20launch%20control%20stuff/GravWav%20LaunchControlXL-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/gravity%20waaaves%20launch%20control%20stuff/GravWav%20LaunchControlXL-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/ems_synthi-e-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/ems_synthi-e-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/AES1.PDF",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/magazines/Articles/Experimental%20Electronic%20Music%20Devices%20Employing%20Walsh%20Functions.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Paia_4710-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Paia_4710-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/multirollz-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/multirollz-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/3polesim-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/3polesim-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/sos_91_11-42-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/sos_91_11-42-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/tkbpg1OGSCHEM-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/tkbpg1OGSCHEM-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/SHUTTER%20-%20Triple%20Multiplexer/SHUTTER%20PCB%201-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/SHUTTER%20-%20Triple%20Multiplexer/SHUTTER%20PCB%201-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/IMG_0120-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/IMG_0120-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/circut-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/circut-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/MutronOct-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/MutronOct-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/roolz-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/roolz-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/CBV001S/CBV001S_REVB_Schematic-image-bmp.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/CBV001S/CBV001S_REVB_Schematic-image-bmp.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/dodecaoutput%202-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/dodecaoutput%202-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/11_squirted_twisted-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/11_squirted_twisted-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/hordijkVCAShaperPhaser-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/hordijkVCAShaperPhaser-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/buildinghomestudio2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/buildinghomestudio2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/Digital%20Recording%2C%20Mixing%20And%20Mastering%20Volume%201.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/magazines/Articles/digital-recording-mixing-and-mastering-volume-1.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/808ho2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/808ho2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/grassischem3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/grassischem3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/Fairchild_Conax_1-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/Fairchild_Conax_1-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/tkbpg2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/tkbpg2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/Audiofax_4x2_st_console-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/Audiofax_4x2_st_console-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0487-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0487-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/DigitalCpmputerasMusicalInstrument_0011-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/DigitalCpmputerasMusicalInstrument_0011-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Envelope_Follower_Layout_04-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Envelope_Follower_Layout_04-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/IMG_0119-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/IMG_0119-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/bbbrightdim-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/bbbrightdim-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/deerhorn_balt-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/deerhorn_balt-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/07-2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/07-2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Otorlymern_Hybrid_Production_Manual_Regenerated.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/Otorlymern_Hybrid_Production_Manual_Regenerated.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007/VU007_Control_Rev_F_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007/VU007_Control_Rev_F_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Paia_2720_12-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Paia_2720_12-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/CBV002/CBV002_Docs/CBV002_PSU_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Docs/CBV002_PSU_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Buchla_2170_2A-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Buchla_2170_2A-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/Electronic-Music-by-Allen-Strange.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/Electronic-Music-by-Allen-Strange.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0488-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0488-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/rungler_0208-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/rungler_0208-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/MUTRON_SPEC_SHEET-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/MUTRON_SPEC_SHEET-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/boogietshirt3-1-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/boogietshirt3-1-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/dsg3-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/dsg3-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/interpscanjhSCHEM-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/interpscanjhSCHEM-image-gif.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/stencil-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/stencil-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Rollz-5.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/Rollz-5.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/808ho3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/808ho3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/wirecapswitch-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/wirecapswitch-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/vidtechnque3-3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/vidtechnque3-3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/contour-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/contour-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/241306899_5758318510886853_821859032987027823_n-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/241306899_5758318510886853_821859032987027823_n-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/mutron3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/mutron3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/40106vco_954-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/40106vco_954-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/96746974_10224230729302309_7637865094096879616_n-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/96746974_10224230729302309_7637865094096879616_n-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/04%20copy-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/04%20copy-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/borg2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/borg2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-pcb-revg-proto-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-pcb-revg-proto-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/IMG_0124-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/IMG_0124-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/BORG%20INFO-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/BORG%20INFO-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/zzz1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/zzz1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Buchla_2160_1A-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Buchla_2160_1A-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/microphones/micwardrobe-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/microphones/micwardrobe-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/IMG_3305-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/IMG_3305-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Alpha_Juno_1.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Alpha_Juno_1.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/07-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/07-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/MUTRON_SPEC_SHEET_2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/MUTRON_SPEC_SHEET_2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/13-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/13-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/fkg3-mk2-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/fkg3-mk2-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/absolutebeginnersreeltoreel4trackbuying-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/absolutebeginnersreeltoreel4trackbuying-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/PaMtEO_23a-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/PaMtEO_23a-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/card_preview_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/card_preview_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/sos_91_11-46-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/sos_91_11-46-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/08-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/08-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/absolutebeginersreeltoreel4track%20buying-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/absolutebeginersreeltoreel4track%20buying-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/09-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/09-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/budget-homestudio-eq-project%20%28dragged%29.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/magazines/Articles/synth-as-medium.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/MEchnical_Vocoder_Schematic-1024x754-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/MEchnical_Vocoder_Schematic-1024x754-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/vcadb-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/vcadb-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/RUNGLER_flowchart.jpg",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/RUNGLER_flowchart.jpg",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/envelatorpcb-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Wiard%20300%20Manual/envelatorpcb-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Wave%20Pool%20nanoKONTROL2%20%281%29-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Wave%20Pool%20nanoKONTROL2%20%281%29-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/GAMMA%20-%20Dual%20SQU%20%26%20LOG/gammaPCBbw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/GAMMA%20-%20Dual%20SQU%20%26%20LOG/gammaPCBbw-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/nicholas-collins/TapeOpReverb.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/DESIGNERS/NICCOLLINS/tapeopreverb.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/bbpwm1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/bbpwm1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVE_MOD_V2.2_Layout_Top-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVE_MOD_V2.2_Layout_Top-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Baby8_Sequencer_Layout_01-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Baby8_Sequencer_Layout_01-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007/VU007_Conv_Rev_F_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007/VU007_Conv_Rev_F_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/mut1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/mut1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/IMG_3892-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/IMG_3892-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Wave%20Pool%20nanoKONTROL2-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Wave%20Pool%20nanoKONTROL2-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/grassischem2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/grassischem2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/19-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/19-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/24dB_FILTER_flowchart-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/24dB_FILTER_flowchart-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/grassischem-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/grassischem-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/07namastitard-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/07namastitard-image-gif.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/DigitalCpmputerasMusicalInstrument_0010-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/DigitalCpmputerasMusicalInstrument_0010-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/advancedmusicsynthesis.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/magazines/Articles/advancedmusicsynthesis.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/stacker-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/stacker-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Wave%20Pool%20nanoKONTROL2-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Wave%20Pool%20nanoKONTROL2-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/stacker-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/stacker-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-box-bottom-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-box-bottom-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/RECT%20-%20Dual%20Rectifier/Dual_Rectifier_PCB_v11-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/RECT%20-%20Dual%20Rectifier/Dual_Rectifier_PCB_v11-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/dcdistro3a-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/dcdistro3a-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/tkbpots-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/tkbpots-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/p99-mk2a1w-1-768x976-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/p99-mk2a1w-1-768x976-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/12-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/12-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/ACCESS%20-%20Triple%20Attenuvert%20Bias/ACCESS%20v1.3F%20Part2%20bw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/ACCESS%20-%20Triple%20Attenuvert%20Bias/ACCESS%20v1.3F%20Part2%20bw-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/vidtechnique3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/vidtechnique3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0483-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0483-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/AVDOGSbasedquadvca-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/AVDOGSbasedquadvca-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiargargoyle-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiargargoyle-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/woggleblockdiagram-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/woggleblockdiagram-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Wind_Machine_Layout_02-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Wind_Machine_Layout_02-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/24dBFilter-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/24dBFilter-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/wvshaper-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/wvshaper-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/IMG_0065-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/IMG_0065-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/HORDIJK-VCA-SHAPER-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/HORDIJK-VCA-SHAPER-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-alpha-juno-1.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-alpha-juno-1.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/conrad_dogvoice-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/conrad_dogvoice-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Paia_9730sch-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Paia_9730sch-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/BORGFILTERSOUTPUTINFO-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/BORGFILTERSOUTPUTINFO-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Wave%20Pool%20nanoKONTROL2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Wave%20Pool%20nanoKONTROL2.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/ar329-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/ar329-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/08-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/08-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/1f17fa5aa6291a9ec9ab57fcb28d209d38d612fd_2_386x500-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/1f17fa5aa6291a9ec9ab57fcb28d209d38d612fd_2_386x500-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Spectral%20Mesh-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/Spectral%20Mesh-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/CBV002/CBV002_Docs/CBV002_Control_RevF_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/CBV002/CBV002_Docs/CBV002_Control_RevF_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/schematic-v2-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/schematic-v2-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/11-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/11-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/BrpqFeLl-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/BrpqFeLl-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU008/VU008_Control_Rev_E_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/VU008_Control_Rev_E_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU010/VU010_Control_RevB_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU010/VU010_Control_RevB_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/esg3-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/esg3-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/sos_91_11-43-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/sos_91_11-43-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU008/VU008_Clip_Rev_E_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/VU008_Clip_Rev_E_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/Fairchild_740_605_666-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/Fairchild_740_605_666-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/hjipsfro-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/hjipsfro-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/1954_mixer_schematic-943x1024-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/1954_mixer_schematic-943x1024-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/BORG%20FILTER%20CHARATERISTICKORGMS20-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/BORG%20FILTER%20CHARATERISTICKORGMS20-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/IMG_3891-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/IMG_3891-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/pollysynthshemjapan1975-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/pollysynthshemjapan1975-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0486-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0486-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/docs/tutorial-extras/img/localeDropdown-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/docs/tutorial-extras/img/localeDropdown-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Spring_Reverb_layout_02-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Spring_Reverb_layout_02-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/fostexr8ad89-image-webp.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/fosterx/fostexr8ad89-image-webp.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/nicholas-collins/SMCT4-3.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/DESIGNERS/NICCOLLINS/smct4-3.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/boogietshirt3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/boogietshirt3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/05namastitar-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/05namastitar-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/BORGFILTERSOUTPUTINFO-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/BORGFILTERSOUTPUTINFO-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/IMG_0138-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/IMG_0138-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/mt4x-tracking-sheet-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/mt4x-tracking-sheet-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/jh_ipsc_blk-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/jh_ipsc_blk-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno106-owners-manual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-juno106-owners-manual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/10318_dual_borg_board_1-1-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/10318_dual_borg_board_1-1-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/Reminded_by_the_Instruments_David_Tudors.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/Reminded_by_the_Instruments_David_Tudors.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/homerecording-poly-monitors.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/homerecording-poly-monitors.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Korg%20NanoKontrol2%20WaaavePool%20Overlay.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Korg%20NanoKontrol2%20WaaavePool%20Overlay.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/00_schematics_ikegami-limiter1959-1024x548-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/00_schematics_ikegami-limiter1959-1024x548-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/b62-ad3w-485x705-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/b62-ad3w-485x705-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/conrad_swoop-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/conrad_swoop-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/HordijkTwinPeakPanel-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/HordijkTwinPeakPanel-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/mut3-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/mut3-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/small_thumb_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/small_thumb_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/swatch-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/swatch-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Preamp_1958-1024x804-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Preamp_1958-1024x804-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Spectral%20Mesh-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Spectral%20Mesh-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/IMG_3889-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/IMG_3889-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/morph-lagschematic-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/morph-lagschematic-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/matte-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/matte-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Buchla_2160_1B-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Buchla_2160_1B-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/arrl_1936.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/arrl_1936.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Trisawrodrone-schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Trisawrodrone-schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/fig26-02_rungling.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/fig26-02_rungling.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/MULT%20B%20-%20Buffered%20Multiple/MULTB_part1-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/MULT%20B%20-%20Buffered%20Multiple/MULTB_part1-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/NVRT%20-%20Quad%20Luma%20Inverter/4xNVRT-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/NVRT%20-%20Quad%20Luma%20Inverter/4xNVRT-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/mu-tron3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/mu-tron3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/e347d8f86236d5b1af3491b9d485ed73f320680d_2_666x500-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/e347d8f86236d5b1af3491b9d485ed73f320680d_2_666x500-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/tiny_preview_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/tiny_preview_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/mt_87_08-74-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/mt_87_08-74-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/Buchla-Euro-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/Buchla-Euro-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Juno106_Owners_Manual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/Roland_Juno106_Owners_Manual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/IMG_0260-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/IMG_0260-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Paia_2720-3l-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Paia_2720-3l-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/CAlvinJohnsonStudioNotes_0204-image-jpeg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/CAlvinJohnsonStudioNotes_0204-image-jpeg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/home-studio-techniques%20.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/home-studio-techniques%20.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/IMG_0261-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Wiard%20300%20Manual/IMG_0261-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/rungler_0207%202-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/rungler_0207%202-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU006/VU006_Main_RevB_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU006/VU006_Main_RevB_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007B/VU007B_Control_Rev_C_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007B/VU007B_Control_Rev_C_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU009/VU009_Main_Rev_B_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU009/VU009_Main_Rev_B_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/sst286endless%20variety%20ad-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/sst286endless%20variety%20ad-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecording-poly-monitors%20%28dragged%29%202.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/homerecording-poly-monitors%20%28dragged%29%202.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/microphones/Reminded_by_the_Instruments_David_Tudors.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/Reminded_by_the_Instruments_David_Tudors.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/LUMA%20-%20RGB2YRGB/lumaPCB-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/LUMA%20-%20RGB2YRGB/lumaPCB-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/tmpl_orban_672a-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/tmpl_orban_672a-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/06-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/06-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/V2N4.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/V2N4.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/BORGOUTPUTS-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/BORGOUTPUTS-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Untitled-768x932-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/Untitled-768x932-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU005/VU005_Main_RevD_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU005/VU005_Main_RevD_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/large_preview_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/large_preview_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0488%202-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0488%202-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/hdrot-schmatic-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/hdrot-schmatic-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/3TrinsRGB1c-Schematic-RGBoscs-VGND-LFO-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/3TrinsRGB1c-Schematic-RGBoscs-VGND-LFO-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/SERGE106B%20PCO%20Schematic-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/SERGE106B%20PCO%20Schematic-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/MS-20VCF-CuSiMods-Board-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/MS-20VCF-CuSiMods-Board-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/stencil-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/stencil-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/19-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/19-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/RTS_Foundation.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/books/RTS_Foundation.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/400px-Jag2_302-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/400px-Jag2_302-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/ribbons-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/ribbons-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/dsg3-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/dsg3-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/angles-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/angles-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU009/VU009_RCA_Sync_Rev_B_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU009/VU009_RCA_Sync_Rev_B_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/roland_jx3p_bro83p23-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/roland/roland_jx3p_bro83p23-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/311C_Quickstart_v2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Wiard%20300%20Manual/311C_Quickstart_v2.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/2dbf4eba733ede3ceb33bd3837811ba44e3e1da9-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/2dbf4eba733ede3ceb33bd3837811ba44e3e1da9-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/grassTOObac-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/grassTOObac-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/microphones/AltecLansing_680A-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/microphones/AltecLansing_680A-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/homerecordingpart2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/homerecordingpart2.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/07-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/07-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/1f17fa5aa6291a9ec9ab57fcb28d209d38d612fd-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/1f17fa5aa6291a9ec9ab57fcb28d209d38d612fd-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/sos_91_11-44-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/sos_91_11-44-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/hj_vcfsc-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/hj_vcfsc-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/protoboard-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/protoboard-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU009/VU009_Control_Rev_B_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU009/VU009_Control_Rev_B_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/sbplan3-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/sbplan3-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/Teac%20Multitrack%20Primer.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/Teac%20Multitrack%20Primer.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/nicholas-collins/perfectbeep.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/DESIGNERS/NICCOLLINS/perfectbeep.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/sumdist-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/sumdist-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU003B/VU003B_Main_Rev_B_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU003B/VU003B_Main_Rev_B_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-porta-02-manual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/tascam-porta-02-manual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/SW6%20-%20Switch%20Expander/SW6bw-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/SW6%20-%20Switch%20Expander/SW6bw-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/400px-Jag4_112-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/400px-Jag4_112-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/400px-Jag_Wiard_Model_1211_Page_6-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/400px-Jag_Wiard_Model_1211_Page_6-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/giantVoice-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/giantVoice-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/wiargargoyle-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/wiargargoyle-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0484-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0484-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/matte-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/matte-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/dc-distro3a-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/dc-distro3a-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/docusaurus-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/docusaurus-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/SKEWVELOPE-FLOW-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/SKEWVELOPE-FLOW-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/13-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/13-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/DigitalCpmputerasMusicalInstrument_0012-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/DigitalCpmputerasMusicalInstrument_0012-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/absolutebeginersreeltoreel4track%20buying-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/absolutebeginersreeltoreel4track%20buying-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/first_AES_boothsst282-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/first_AES_boothsst282-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/wp_nanokontrol_guide-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/andreijay-vserpi/wp_nanokontrol_guide-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/RECT%20-%20Dual%20Rectifier/Dual_Rectifier_face_v11-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/RECT%20-%20Dual%20Rectifier/Dual_Rectifier_face_v11-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/sumdist-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/sumdist-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/IMG_3894-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/IMG_3894-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/radiophonicworkshop-bbc-gearlist-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/radiophonicworkshop-bbc-gearlist-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/WiardSystem-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/WiardSystem-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/keychain-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/keychain-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/PhaseShifter_Layout_02-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/PhaseShifter_Layout_02-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/alnano2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/alnano2.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/Elctrophony(synapse).pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/diy/projects/Elctrophony(synapse).pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/BORG%20FILTER%20CHARATERISTICKORGMS20-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/BORG%20FILTER%20CHARATERISTICKORGMS20-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/stairs-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/stairs-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/TridexMuse/large_2011_0091__0007_-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/TridexMuse/large_2011_0091__0007_-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/docusaurus-social-card-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/docusaurus-social-card-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU006/VU006_Power_RevC_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU006/VU006_Power_RevC_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/808ho1-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/808ho1-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/sbplan4-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/sbplan4-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/07down-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/07down-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzxpatchdiagramcastle-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/lzxpatchdiagramcastle-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/smx3-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/smx3-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Buchla-Euro-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Buchla-Euro-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/CAlvinJohnsonStudioNotes_0205-image-jpeg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/CAlvinJohnsonStudioNotes_0205-image-jpeg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/PASS4%20-%20Quad%20Passive%20Switch/pass4pic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/PASS4%20-%20Quad%20Passive%20Switch/pass4pic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/Fairchild_integra_console_modules_c1963-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/Fairchild_integra_console_modules_c1963-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/complementory-lfo-build.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/complementory-lfo-build.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/mt_87_08-73-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/mt_87_08-73-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/TEA5114%201-to-3%20Video%20Splitter/TEA5114_1-to-3_Video_Splitter_Schematic-image-bmp.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/TEA5114%201-to-3%20Video%20Splitter/TEA5114_1-to-3_Video_Splitter_Schematic-image-bmp.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/IMG_0260-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/IMG_0260-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/conrad_checkerboard-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/conrad_checkerboard-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/R8psu-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/R8psu-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/microphones/altec_m20_1956-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/microphones/altec_m20_1956-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/audiofax_12x3_console_innards-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/audiofax_12x3_console_innards-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/docs/tutorial-extras/img/docsVersionDropdown-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/docs/tutorial-extras/img/docsVersionDropdown-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/14o3-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/14o3-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/contour-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/contour-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/07-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/07-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/jh_fxrack_highres-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/jh_fxrack_highres-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/07up-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/07up-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/AES1.PDF",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/magazines/Articles/Experimental%20Electronic%20Music%20Devices%20Employing%20Walsh%20Functions.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/sbplan2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/sbplan2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/sst282sophisticated%20tracks%20ad-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/sst282sophisticated%20tracks%20ad-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/images-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/images-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/RTS_Practical1.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/books/RTS_Practical1.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/BLIPPOOBOXDIAGRAM-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/BLIPPOOBOXDIAGRAM-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/ribbons-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/ribbons-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007/VU007_Power_Rev_F_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007/VU007_Power_Rev_F_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/mixing-desks-mixers/Fairchild_audio_1961-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/mixing-desks-mixers/Fairchild_audio_1961-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/borg2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/borg2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Paia_2720-14-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Paia_2720-14-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/keychain-front-line-art-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/keychain-front-line-art-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Waaave%20Pool-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/Waaave%20Pool-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/medium_preview_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/medium_preview_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/smnano2.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/VSERPI%20and%20VSEJET%20controller%20templates%2C%20overlays%2C%20scene%20settings%2C%20etc/smnano2.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/Elements-Musical-Sounds-and-Musical-Signals.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/Elements-Musical-Sounds-and-Musical-Signals.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU008/VU008_Power_Rev_E_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/VU008_Power_Rev_E_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU005/VU005_Control_RevC_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU005/VU005_Control_RevC_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/bbbrightdimcd-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/bbbrightdimcd-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/projects/vidtechnique3-2-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/projects/vidtechnique3-2-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/gera-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/gera-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/spacestationglamourshot-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/spacestationglamourshot-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Fairchild_627_equalizer_Schematic-768x390-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Fairchild_627_equalizer_Schematic-768x390-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/jh_ipsc_blk-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/jh_ipsc_blk-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/mt_87_08-72-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/mt_87_08-72-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/esg3-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/esg3-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/grassWON-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/grassWON-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/electronic%20musician%20coverzappa%20spacestation-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/electronic%20musician%20coverzappa%20spacestation-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/klm366-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/klm366-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/woggleblockdiagram-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/woggleblockdiagram-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/paper-circuits/crucfxAVdogs-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/paper-circuits/crucfxAVdogs-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/IMG_0065-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/IMG_0065-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/foxdocs-main/MULT%20A%20-%20Buffered%20Multiple/MULTA%20PCB-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/foxdocs-main/MULT%20A%20-%20Buffered%20Multiple/MULTA%20PCB-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/resources/mtr10b1w-small-458x705-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/resources/mtr10b1w-small-458x705-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/Wiard%20300%20Manual/ClassicVCO-031001.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/Wiard%20300%20Manual/ClassicVCO-031001.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/IMG_3902-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/IMG_3902-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/studio%20sound%20coversst282-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/studio%20sound%20coversst282-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-patch-preview-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-patch-preview-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Paia_2720-3l.gif%20-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Paia_2720-3l.gif%20-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/SergeMagAd-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/Andrei%20Jay%20VSERP%20Images/SergeMagAd-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/stairs-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/stairs-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/teac-multitrack-primer.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/teac-multitrack-primer.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU007B/VU007B_Main_Rev_C_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007B/VU007B_Main_Rev_C_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/switcher-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/switcher-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU008/VU008_Phase_Rev_E_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/VU008_Phase_Rev_E_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/BLIPPOOBOXDIAGRAM.jpg",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/BLIPPOOBOXDIAGRAM.jpg",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecording-articles.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/homerecording-articles.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-jx-3p-owners-manual.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/manuals/roland-jx-3p-owners-manual.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/BORGOUTPUTS-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/BORGOUTPUTS-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/IMG_3888-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/IMG_3888-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/jh_ipscan_and_octfilt-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/jh_ipscan_and_octfilt-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/medium_thumb_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/medium_thumb_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/boogietshirt3-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/boogietshirt3-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/xray-image-tif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/xray-image-tif.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Alien_Screamer_Stripboard_Layout_02-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Alien_Screamer_Stripboard_Layout_02-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/WiardSystem-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/WiardSystem-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/manuals/fx-rackunits/mut2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/manuals/fx-rackunits/mut2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/10318_dual_borg_board_1-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/10318_dual_borg_board_1-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/grassischem-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/grassischem-image-jpg.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/MUSICVISION/MUSICVISION_0481-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/MUSICVISION/MUSICVISION_0481-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/WaveblenderJPEG_zpsy38olbs5-image-webp.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/service-schems/WaveblenderJPEG_zpsy38olbs5-image-webp.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU003B/VU003B_Control_Rev_B_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/VU003B/VU003B_Control_Rev_B_Schematic-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/Bogen_DB10_EQ_schematic-768x656-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/Bogen_DB10_EQ_schematic-768x656-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/IMG_0127-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/IMG_0127-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/polymoog%20schems/ASRhaible-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/polymoog%20schems/ASRhaible-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/r-hordijk/CrHL_ufWgAAsrOS.jpg-large-image-jpeg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/r-hordijk/CrHL_ufWgAAsrOS.jpg-large-image-jpeg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/nicholas-collins/19680020053.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/DESIGNERS/NICCOLLINS/19680020053.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/service-schems/bbpwmcd-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/service-docs/bbpwmcd-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/hj_qph_2-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/hj_qph_2-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/nicholas-collins/RoomtoneScore2017.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/DESIGNERS/NICCOLLINS/roomtonescore2017.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/tinycard_preview_20191120_161851-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/tinycard_preview_20191120_161851-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/books/5_Schaeffer.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/books/5_Schaeffer.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/smx3-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/smx3-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/j-haible/hjipschm-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/j-haible/hjipschm-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU005/VU005_Power_RevC_Schematic-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/VU005/VU005_Power_RevC_Schematic-image-png.pdf",
+      "redirects": 0,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/engineering-recording-techniques/homerecording-poly-monitors%20%28dragged%29.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/references/homerecording-poly-monitors%20%28dragged%29.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/static/img/proc-front-panel-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/proc-front-panel-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/g-richter/wiard-docs/IMG_0261-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/g-richter/wiard-docs/IMG_0261-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/large_display_GT2_-_10mm_Alu._Spanner-image-jpg.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2_3D_Printed_Enclosure%20%28made%20by%20Silvester%20Hor%C3%A1k%29/images/large_display_GT2_-_10mm_Alu._Spanner-image-jpg.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-box-top-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/chromagnon-box-top-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/09-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/09-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/video-docs/lzx-style-video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/AVEMODV2.2_Board_Measurements_inches-image-png.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE%20MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/AVEMODV2.2_Board_Measurements_inches-image-png.pdf",
+      "redirects": 1,
+      "error": ""
+    },
+    {
+      "url": "https://media.otorlymern-electrical.com/pdfs/diy/p-blasser/08-1-image-gif.pdf",
+      "status": "404",
+      "effective": "https://media.otorlymern-electrical.com/OES-ARCHIVE/Remote-Only/diy/p-blasser/08-1-image-gif.pdf",
+      "redirects": 1,
+      "error": ""
+    }
+  ]
+}

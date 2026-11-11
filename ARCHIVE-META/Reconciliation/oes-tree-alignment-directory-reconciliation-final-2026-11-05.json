@@ -1,0 +1,20 @@
+{
+  "completed_at": "2026-11-06T06:15:00Z",
+  "local_directories": 577,
+  "wasabi_directories": 577,
+  "directory_paths_match": true,
+  "local_empty_directories_created": 18,
+  "remote_extra_empty_directories_initially": 194,
+  "initial_rmdir_command_effective_removals": 0,
+  "effective_removals": {
+    "single_empty_directory_marker": "books/analog-computing",
+    "remaining_empty_marker_roots_purged": 24,
+    "nested_extra_empty_markers_removed": 193
+  },
+  "files_under_removed_directory_roots": 0,
+  "local_directories_under_removed_roots": 0,
+  "file_objects_touched_by_directory_operations": 0,
+  "final_unmatched_local_directories": [],
+  "final_unmatched_wasabi_directories": [],
+  "note": "The first rmdir pass returned success but did not remove Wasabi marker-only prefixes; the subsequent rclone purge commands removed only verified empty directory markers."
+}

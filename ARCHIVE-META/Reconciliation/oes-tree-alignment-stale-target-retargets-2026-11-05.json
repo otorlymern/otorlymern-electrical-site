@@ -1,0 +1,16 @@
+{
+  "matches_by_sha256": {
+    "referene/cmos-pinouts4001-4040.png": "references/cmos-pinouts4001-4040.png",
+    "referene/fullsoldercomic-en.pdf": "references/fullsoldercomic-en.pdf",
+    "diy/s-franco-ota-vcf-1976-edited.pdf": "diy/CIRCUITS/s-franco-ota-vcf-1976-edited.pdf",
+    "referene/datasheets/an1628-d.pdf": "references/datasheets/an1628-d.pdf",
+    "referene/datasheets/philips-semiconductors-tda8360-tda8361-tda8362-datasheet.pdf": "references/datasheets/philips-semiconductors-tda8360-tda8361-tda8362-datasheet.pdf",
+    "referene/datasheets/semiconductor-components-industries-llc-2n3903-2n3904-datasheet.pdf": "references/datasheets/semiconductor-components-industries-llc-2n3903-2n3904-datasheet.pdf",
+    "referene/datasheets/us3900823.pdf": "references/datasheets/us3900823.pdf",
+    "referene/datasheets/us4052565.pdf": "references/datasheets/us4052565.pdf",
+    "referene/datasheets/us4134076.pdf": "references/datasheets/us4134076.pdf"
+  },
+  "verified_count": 9,
+  "routes_updated": 20,
+  "prior_worker_map": "c20b0b10-b058-4b4f-a8c0-0146f6e86a3e"
+}

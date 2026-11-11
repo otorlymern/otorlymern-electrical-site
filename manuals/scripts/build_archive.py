@@ -25,10 +25,7 @@ from urllib.parse import quote, unquote, urlsplit
 
 
 MEDIA_ORIGIN = "https://media.otorlymern-electrical.com"
-DEFAULT_SOURCE_ROOT = Path(
-    "/Users/augie/Library/Application Support/Mountain Duck/Volumes.noindex/"
-    "AlphaWasabi.localized/media.otorlymern-electrical.com/pdfs"
-)
+DEFAULT_SOURCE_ROOT = Path("/Volumes/admin2/Documents/OES-ARCHIVE/DOCUMENTS")
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_ARCHIVE_PATH = REPO_ROOT / "manuals/data/archive.json"
 TEMP_ROOT = REPO_ROOT / "tmp/pdfs/archive-image-conversion"
@@ -577,10 +574,10 @@ def archive_relative_from_url(raw_url: str) -> str | None:
     if not raw_url:
         return None
     path = unquote(urlsplit(raw_url).path)
-    marker = "/pdfs/"
-    if marker not in path:
-        return None
-    return unicodedata.normalize("NFC", path.split(marker, 1)[1]).casefold()
+    for marker in ("/pdfs/", "/OES-ARCHIVE/"):
+        if marker in path:
+            return unicodedata.normalize("NFC", path.split(marker, 1)[1]).casefold()
+    return None
 
 
 def load_existing(archive_path: Path) -> dict:
@@ -806,7 +803,7 @@ def notes_for(title: str, type_phrase: str, category_label: str, converted_from:
 
 
 def public_url(relative: PurePosixPath) -> str:
-    return f"{MEDIA_ORIGIN}/pdfs/{quote(relative.as_posix(), safe='/-._~')}"
+    return f"{MEDIA_ORIGIN}/OES-ARCHIVE/{quote(relative.as_posix(), safe='/-._~')}"
 
 
 def build_records(root: Path, existing_data: dict, today: str) -> list[dict]:

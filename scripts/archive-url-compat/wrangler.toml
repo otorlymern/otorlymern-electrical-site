@@ -1,0 +1,8 @@
+name = "oes-archive-url-compat"
+main = "worker.mjs"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+[[routes]]
+pattern = "media.otorlymern-electrical.com/*"
+zone_name = "otorlymern-electrical.com"

@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-06T06:00:56.395489+00:00",
+  "apply_requested": true,
+  "candidate_count": 17,
+  "verified_count": 17,
+  "failed_count": 0,
+  "failures": [],
+  "deleted": [
+    "video-docs/video-euro-companies/syntonie-master/VU008/README.md",
+    "video-docs/video-euro-companies/syntonie-master/VU008/VU008_Clip_Rev_E_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU008/VU008_Control_Rev_E_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU008/VU008_Phase_Rev_E_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU008/VU008_Power_Rev_E_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU008/VU008_Rev_E_BOM.csv",
+    "video-docs/video-euro-companies/syntonie-master/VU009/README.md",
+    "video-docs/video-euro-companies/syntonie-master/VU009/VU009_14pin_Sync_Rev_B_BOM.csv",
+    "video-docs/video-euro-companies/syntonie-master/VU009/VU009_14pin_Sync_Rev_B_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU009/VU009_Control_Rev_B_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU009/VU009_Main_Rev_B_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU009/VU009_RCA_Sync_Power_Rev_B_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU009/VU009_RCA_Sync_Rev_B_BOM.csv",
+    "video-docs/video-euro-companies/syntonie-master/VU010/README.md",
+    "video-docs/video-euro-companies/syntonie-master/VU010/VU010_Control_Rev_B_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU010/VU010_Main_Rev_B_iBOM.html",
+    "video-docs/video-euro-companies/syntonie-master/VU010/VU010_RevB_BOM.csv"
+  ]
+}

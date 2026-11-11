@@ -68,6 +68,13 @@ function metadataMarkup(page) {
     };
   }
 
+  if (page.schema === "ProfilePage") {
+    structuredData.mainEntity = {
+      "@type": "Person",
+      name: page.title.replace(/\s*\|.*$/, "").replace(/ Resources$/, ""),
+    };
+  }
+
   if (page.schema === "WebApplication") {
     structuredData.applicationCategory = "DesignApplication";
     structuredData.operatingSystem = "Any";

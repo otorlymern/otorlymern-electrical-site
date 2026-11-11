@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-11-05T21:18:18-0800",
+  "objects": [
+    {
+      "path": "books/electronics/Cypress-BiCMOSandCMOSDatabookOCR.pdf",
+      "local_size": 495897724,
+      "remote_size": 495897724,
+      "local_sha256": "1f05f77794b0ba5c978d3894f79a8a2ac5dcbf12db05b3d5edb0bbe738dc6479",
+      "remote_sha256": "1f05f77794b0ba5c978d3894f79a8a2ac5dcbf12db05b3d5edb0bbe738dc6479",
+      "same_content": true
+    },
+    {
+      "path": "books/electronics/analogcomputer/parks-the-story-of-microelectronics-1966.pdf",
+      "local_size": 474571954,
+      "remote_size": 474571954,
+      "local_sha256": "eb19320d884f13a7f2b6ae5bcece71658a4d52991434717515f1f12099502705",
+      "remote_sha256": "eb19320d884f13a7f2b6ae5bcece71658a4d52991434717515f1f12099502705",
+      "same_content": true
+    },
+    {
+      "path": "books/synthesizer-elec-music/engineering-recording-techniques/Musical Engineer's Handbook_jp2.zip",
+      "local_size": 589258398,
+      "remote_size": 589258398,
+      "local_sha256": "80624020e1ac2e72a4345a7cb68414364f3e560747f5d6ed77952154f5bcef8e",
+      "remote_sha256": "80624020e1ac2e72a4345a7cb68414364f3e560747f5d6ed77952154f5bcef8e",
+      "same_content": true
+    },
+    {
+      "path": "magazines/v-2-n-3/v-2-n-3.zip",
+      "local_size": 303997399,
+      "remote_size": 303997399,
+      "local_sha256": "424233ec1219ad2a039620e0b95f86d68915b637a368db74ce837abcf0f865b7",
+      "remote_sha256": "424233ec1219ad2a039620e0b95f86d68915b637a368db74ce837abcf0f865b7",
+      "same_content": true
+    },
+    {
+      "path": "manuals/synths/buchla/bb6013197p-1.pdf",
+      "local_size": 320972251,
+      "remote_size": 320972251,
+      "local_sha256": "a2c78223c51bfb18b177edfe6e944f66c7f1bb88d2109748c817dcbf2e4be6c2",
+      "remote_sha256": "a2c78223c51bfb18b177edfe6e944f66c7f1bb88d2109748c817dcbf2e4be6c2",
+      "same_content": true
+    }
+  ],
+  "all_equal": true,
+  "seconds": 110
+}

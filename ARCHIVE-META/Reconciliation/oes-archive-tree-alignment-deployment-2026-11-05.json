@@ -1,0 +1,12 @@
+{
+  "deployed_at": "2026-11-06T05:33:33Z",
+  "worker": "oes-archive-url-compat",
+  "version_id": "c20b0b10-b058-4b4f-a8c0-0146f6e86a3e",
+  "route": "media.otorlymern-electrical.com/*",
+  "prior_version_id": "402d5e71-9119-435a-89d3-30a036ca9e80",
+  "effective_route_count": 6393,
+  "tree_alignment_overlay_route_count": 2173,
+  "dry_run_bundle_bytes": 1274726.4,
+  "sample_verification": "3 moved keys tested across /OES-ARCHIVE and /pdfs; all returned 308 to expected canonical path, query preserved, canonical HTTP 200",
+  "npm_test": "PASS 2026-11-05"
+}

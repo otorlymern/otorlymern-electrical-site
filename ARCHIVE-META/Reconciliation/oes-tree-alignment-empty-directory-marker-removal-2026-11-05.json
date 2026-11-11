@@ -1,0 +1,175 @@
+{
+  "verified_no_files_or_local_directories_under_roots": true,
+  "top_level_roots_attempted": 24,
+  "removed_roots": 24,
+  "operations": [
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "resources",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:15:59 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/resources: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: D371ACB8309A8E77:B, HostID: e2QmuI3NaOvGQ5R+w0Zn8ULVCJIrJKp7SXBN3Takbg68N+e6qYu3WrqMsP6ZienbFpAWBD6LLJg6, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "books/misc",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:00 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/books/misc: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 3AD6FE6FAD403082:A, HostID: K+FKi3OrMxmR0HWJsSVYsrWC05faNmhmVS/ojeJw6gc7ZvNnW9WvABJj5nRRc8LERo7hDaaSHryo, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/TridexMuse",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:00 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/TridexMuse: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: D8F0E7BE44D867C3:B, HostID: cabieP/XVC0P84cWPoYvw51FBZGjRCme5+gRzjg0ByxvHPM6TT1fQO+iz1qw1gNGOzVfdwfRgkT5, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/paper-circuits",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:00 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/paper-circuits: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 28DC345296E104BC:B, HostID: rPNzuRk2cjfK4CWzgt9p6BYvzDSR6eXrTiC4RijzW1jVFj632qg2nU9TH/GcWECSf2uJxBqj9gMG, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/pesoundsynth",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:01 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/pesoundsynth: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 79D91B04933A4BA4:B, HostID: IzGtkoNu+xl+o4/d2wbNbJqz7aiWBP3WipjiKtwavWUYmApEPmHEWCwAGzlZAcb00IbFpBI926Ly, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/projects",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:01 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/projects: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 0A802841AEA317BC:B, HostID: KZMszNlYoLUrOLUVM4r32iop0/VaXH1sesO0ggzI2aCTX9vyGjLPx4HDlFG7Pj9dXj4JYX6uN+vL, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/r-hordijk",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:01 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/r-hordijk: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: CD88D062C107B091:B, HostID: ZNKCKVCVCPwSsvID7JeaNg9EJz3oPZZVZH9Iz1zgDSPX/8kWt9dsFUiAxO308DOCVsOJgiFOYbCU, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/schematics-diagrams",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:02 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/schematics-diagrams: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 5531C340F9398911:A, HostID: j2biAcHhgXIxTQzXhrPFZrjIPl2m4Zfq6pJ24LKONCcWMRKpsCYjn5PYt3E4etFH/v7mDCjT9GgO, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/t-henry",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:02 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/t-henry: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 211A489539A4446E:A, HostID: lIUlcq1eJftYH1E8STjIMuo/YD+IZJvXZxMuGFE3hc1Ipog35din+SqQvQJDxUKo6QzxMsMinvWf, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "manuals/mixing-desks-mixers",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:02 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/manuals/mixing-desks-mixers: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: F6835545FEF597D7:B, HostID: krrI1iuFBN4eQmxSCTf0CoqdzLvssdpjKYYVm8aFFbkThxJkrc4Wud+HfMHoKsJk56J/jCVY5LIj, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "video-docs/MUSICVISION",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:02 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/video-docs/MUSICVISION: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 9C5AFC7265A9C342:B, HostID: ZXuLcdPZL4nwQ+9fCa5FXPT1z6aGuxs6pCIBjFi0WfW8gxH2lNlJ6aq7BzG+UqftZo/ZCb4/fQRm, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "video-docs/andreijay-vserpi",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:03 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/video-docs/andreijay-vserpi: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: F3A438D42534AC6C:A, HostID: g6fDKC/B1fVFuWvIg1lwnsXPtNr4JMuD0LrvljlLDVAvTGTtnTC/rZIHzlZxCU7adBUZKEKmpR4v, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "video-docs/vdmx-media",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:03 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/video-docs/vdmx-media: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: A17013837A8FAABE:B, HostID: gOttYYMIy0xELeJtoA8I5fKrOpRzL4lDyORJKvSu6WF2yeVbiTfSnrdFxIs61poERWCJOghFPWZd, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "video-docs/video-euro-companies",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:04 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/video-docs/video-euro-companies: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 47972DFD0FBF2146:A, HostID: kWHJ2ymDcht8PQYGgxAIWLXKwe+moURbsVJt5LnNpDIg+d8r/D4VDF2OwqOu1gWQD8PQCBvNnPgR, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/j-haible copy",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:05 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/j-haible copy: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: A3814E2462368B49:A, HostID: bv5FhkrZEq6MerZix1YJZoAljsWAcbSZpA5M2q8aRTCHctBSaimUUkdKaAgiegPcbSW7YWZtGfbH, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/p-blasser",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:05 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/p-blasser: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 28E2555EAADA553B:A, HostID: SK1Yp3+o+W+/X62h6bAVJgBUkrTxnndsmWWQIPcntbAlBQsDNKh6jYSX+GpzWm/A2+ISJoVbCR6s, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/paper-circuits",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:05 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/paper-circuits: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: CA1C634B53A12EB3:B, HostID: 6uOum4iD8QbLmjWm6S9FneuPYJXmB4XEPEX/XMPkzNPpN+rf/RITCWozolbQ1nflrVwSdk5WDIWe, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/projects",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:06 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/projects: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 704A8C675AEBFBDB:A, HostID: Mn0XhCX6+7YweCeou7zAMjBAeD0Tax0NiWHT8YBbFDIyi0yLQRq/XYz82rFEXgKJ7qj5Kk9gq0cH, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/wiardpdfs",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:06 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/wiardpdfs: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: F254BCC499CBA79A:A, HostID: KIjHrPJ3hEb/d561x25FtGKoQfjupClYo2IZBgSSggcwNmYuB6ny5IzztWRmtVFzo7jwGDwVAgYT, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "manuals/manuals-misc/videogame-manuals",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:07 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/manuals/manuals-misc/videogame-manuals: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: CF2799897C5AA871:B, HostID: A+UmjcnCDri4CF7pcx16MozkY8xox4RZdjPZi0RNNPIdxyav3XOMrz98HBii/6jzL65ofVDgd/7/, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "manuals/tape-machines/tascam",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:07 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/manuals/tape-machines/tascam: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 5047C030E2FAE8F7:B, HostID: 9V817AHuLBXpHtjkT4RF9Nd2vBnDWqPr71C5Vu9Glocg7PLQTq9fySrfcT4VOfp3dL+tD2Tx4zv6, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/g-richter/Wiard 300 Manual",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:07 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/g-richter/Wiard 300 Manual: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 9FBE77BECE33D803:A, HostID: Y8jNnaFKCoG8rq0ptKzNrvfwWkaWUxsqEezGuWvhewbtZVGn0OW3RJvXbs1xSZ9Tgp4fhdYzaahl, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/g-richter/Wiard Frac",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:08 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/g-richter/Wiard Frac: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 4E0AB07028087C50:A, HostID: X99D3hrdwcC5OFABRMO+XaWobB6bWAIrcRPrNAAus1//1yJvd4MRzcQRV0+jKwfDLPzP2roAlJHt, api error AccessDenied: Access Denied"
+    },
+    {
+      "operation": "purge_empty_directory_markers",
+      "root": "diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "2026/11/05 22:16:08 ERROR : S3 bucket media.otorlymern-electrical.com path OES-ARCHIVE/diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files: Failed to read versioning status, assuming unversioned: operation error S3: GetBucketVersioning, https response error StatusCode: 403, RequestID: 1819E73C275FA842:A, HostID: UNz0h+S/OVLZE+7wiQU+x9hMzqLtjZVyZ2XNYQWJXziWxHEb6K67wjc1yn2B4WXxyoukPfGB0dmR, api error AccessDenied: Access Denied"
+    }
+  ]
+}

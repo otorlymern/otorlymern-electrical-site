@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-11-11",
+  "scope": "archive links at media.otorlymern-electrical.com referenced by local site HTML/JS/JSON scan",
+  "worker": "oes-archive-url-compat",
+  "deployed_version": "325be8d9-cd70-4120-bde6-cd348b34874a",
+  "deployed_route": "media.otorlymern-electrical.com/*",
+  "baseline": {
+    "unique_archive_urls_scanned": 1031,
+    "initially_broken": 460,
+    "initially_working": 571
+  },
+  "repair": {
+    "source_aliases_added": 189,
+    "unique_canonical_objects_sha256_and_size_verified": 186,
+    "unique_canonical_bytes_verified": 262455821,
+    "all_candidate_checks_passed": true,
+    "query_string_preservation": "verified"
+  },
+  "post_deploy": {
+    "baseline_broken_rechecked": 460,
+    "now_resolve_http_200": 189,
+    "still_http_404": 271,
+    "unresolved_redirects_to_missing_target": 190,
+    "unresolved_no_redirect": 81
+  },
+  "unrelated_unmapped_path": "HTTP 404 from origin; no redirect",
+  "archive_object_mutations": {
+    "uploads": 0,
+    "deletions": 0
+  },
+  "human_review_required": "271 previously broken URLs remain: inspect post-deploy audit for 190 redirected-to-missing and 81 without redirects. No unverified filename-only matches were added."
+}

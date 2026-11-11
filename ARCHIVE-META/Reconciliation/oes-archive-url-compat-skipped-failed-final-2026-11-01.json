@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-11-01",
+  "failed_candidates": 0,
+  "skipped_or_unresolved_candidates": 11,
+  "reason_counts": {
+    "already_deleted_and_verified": 2171,
+    "ineligible_canonical_target_missing_unicode_normalization": 11
+  },
+  "candidates": [
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/card_preview_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/card_preview_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 25532,
+      "actual_old_size": 25532,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/card_preview_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_display_GT2_-_10mm_Alu._Spanner-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_display_GT2_-_10mm_Alu._Spanner-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 277270,
+      "actual_old_size": 277270,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_display_GT2_-_10mm_Alu._Spanner-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_preview_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_preview_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 18682,
+      "actual_old_size": 18682,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_preview_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_thumb_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_thumb_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 9256,
+      "actual_old_size": 9256,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/large_thumb_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/medium_preview_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/medium_preview_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 14209,
+      "actual_old_size": 14209,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/medium_preview_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/medium_thumb_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/medium_thumb_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 5266,
+      "actual_old_size": 5266,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/medium_thumb_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/small_preview_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/small_preview_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 7586,
+      "actual_old_size": 7586,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/small_preview_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/small_thumb_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/small_thumb_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 3853,
+      "actual_old_size": 3853,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/small_thumb_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tiny_preview_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tiny_preview_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 6329,
+      "actual_old_size": 6329,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tiny_preview_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tiny_thumb_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tiny_thumb_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 3207,
+      "actual_old_size": 3207,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tiny_thumb_20191120_161851-image-jpg.pdf"
+    },
+    {
+      "old_path": "video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tinycard_preview_20191120_161851-image-jpg.pdf",
+      "canonical_path": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tinycard_preview_20191120_161851-image-jpg.pdf",
+      "status": "ineligible_canonical_target_missing_unicode_normalization",
+      "detail": "Manifest target uses NFC spelling and is absent; byte-identical NFD target exists and effective Worker override points there. Retained because source reconciliation canonical key is absent.",
+      "size": 3616,
+      "actual_old_size": 3616,
+      "actual_canonical_size": null,
+      "effective_redirect_target": "Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/tinycard_preview_20191120_161851-image-jpg.pdf"
+    }
+  ],
+  "review_note": "All 11 remaining objects are retained. Manifest canonical keys use NFC spelling and are absent exactly; the byte-identical NFD counterparts exist, match manifest SHA-256 and size, and receive live redirects through URL-only Worker overrides. No source reconciliation target was rewritten and no unresolved old key was deleted."
+}

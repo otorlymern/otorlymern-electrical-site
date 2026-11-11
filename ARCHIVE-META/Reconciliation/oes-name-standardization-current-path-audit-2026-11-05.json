@@ -1,0 +1,384 @@
+{
+  "planned_renames": 1096,
+  "planned_paths_present_exact": 1021,
+  "planned_paths_moved_but_same_sha256": 75,
+  "planned_content_unresolved": 0,
+  "relocated": [
+    {
+      "planned_path": "referene/cmos-pinouts4001-4040.png",
+      "current_path": "references/cmos-pinouts4001-4040.png",
+      "sha256": "4d7fd3c8a40c1007d7af89b05dfa4215358eddb941d72a84bcfe50aeb9d42072"
+    },
+    {
+      "planned_path": "referene/fullsoldercomic-en.pdf",
+      "current_path": "references/fullsoldercomic-en.pdf",
+      "sha256": "eb981250e9ea86d8b3d35f138226b4af9ebb985cd56ec91c957bb1247d093c4d"
+    },
+    {
+      "planned_path": "diy/raymond-scott-artifacts-1-0-lo-res.pdf",
+      "current_path": "books/raymond-scott-artifacts-1-0-lo-res.pdf",
+      "sha256": "3bf6ed1d073fc889aa576233b143fed7a5c990c0e112f92549729184c9583108"
+    },
+    {
+      "planned_path": "diy/s-franco-ota-vcf-1976-edited.pdf",
+      "current_path": "diy/CIRCUITS/s-franco-ota-vcf-1976-edited.pdf",
+      "sha256": "fcfff1a083d1b02b37f0c4633a93bef06bb49ad33bb1079f1fa220bc161091a6"
+    },
+    {
+      "planned_path": "books/electronics/intro-tuthill-tape.pdf",
+      "current_path": "books/tape reording/intro-tuthill-tape.pdf",
+      "sha256": "3a57a494303eee96330d4efe9b4c86029bd0ce43009e0442a5bf5352d5a3981c"
+    },
+    {
+      "planned_path": "diy/SCHEMATICS/schematic-manual-1449-1457.pdf",
+      "current_path": "diy/CIRCUITS/schematic-manual-1449-1457.pdf",
+      "sha256": "8e46f13c4b2e376515b0fd3c3da445bafdb55b394f1c6325abe5db80d475b79d"
+    },
+    {
+      "planned_path": "referene/datasheets/semiconductor-components-industries-llc-2n3903-2n3904-datasheet.pdf",
+      "current_path": "references/datasheets/semiconductor-components-industries-llc-2n3903-2n3904-datasheet.pdf",
+      "sha256": "f970606af26dc4c80b4cf76168380102111c2a7dcea6d85fa835fae1d93f4a75"
+    },
+    {
+      "planned_path": "referene/datasheets/an1628-d.pdf",
+      "current_path": "references/datasheets/an1628-d.pdf",
+      "sha256": "74daabf544d62356d19a5a3be4cfc02d364a57f5a21d1147654b399118a253d3"
+    },
+    {
+      "planned_path": "referene/datasheets/philips-semiconductors-tda8360-tda8361-tda8362-datasheet.pdf",
+      "current_path": "references/datasheets/philips-semiconductors-tda8360-tda8361-tda8362-datasheet.pdf",
+      "sha256": "f3a58eb14c234f7e5b47cc3ba1c29c3a791090a138c43e6d105ebce431d61368"
+    },
+    {
+      "planned_path": "referene/datasheets/us3900823.pdf",
+      "current_path": "references/datasheets/us3900823.pdf",
+      "sha256": "b44d2dea3791f7af38aed14eee9e9863953e87df15840564384b40eb0270c241"
+    },
+    {
+      "planned_path": "referene/datasheets/us4052565.pdf",
+      "current_path": "references/datasheets/us4052565.pdf",
+      "sha256": "250c96359c96b5d05f65de04cbd7b3a6bb31c4c7a0aa0083b460e655f23f4686"
+    },
+    {
+      "planned_path": "referene/datasheets/us4134076.pdf",
+      "current_path": "references/datasheets/us4134076.pdf",
+      "sha256": "ca94dfbb6fbcd63f23e6cd4fa5e06981267d2d8f1de4700c1322efd1c45da85b"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/entropical-paradise-patch-diagram-allen-strange.png",
+      "current_path": "references/patch-diagrams/entropical-paradise-patch-diagram-allen-strange.png",
+      "sha256": "bf131d17218e4be93fa7cc2ceb1b7a8968ea4139b01286ea4c51a5851cd22af9"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/krell-diagram.png",
+      "current_path": "references/patch-diagrams/krell-diagram.png",
+      "sha256": "af2205bce697f8fa2bf3bb774929fabfdefab0c1ebfaf2c9d82e5e581af25d6c"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/krell-variation1.png",
+      "current_path": "references/patch-diagrams/krell-variation1.png",
+      "sha256": "506d4ffc41a5411533e0fc23e68d274764890625931d393451807c456f7a37cb"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/krell-variatuon2.png",
+      "current_path": "references/patch-diagrams/krell-variatuon2.png",
+      "sha256": "0cf0705bd33aa889b941c6975a28ec9d3f3f2db31c95d62f8f60cf60cf64ab31"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/krellbwvoicepatch.png",
+      "current_path": "references/patch-diagrams/krellbwvoicepatch.png",
+      "sha256": "89cbb32defb25f638986424dec6ad74afd17b83fcf31c8b9258f82ecce2afe6f"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/krellmelodycv.png",
+      "current_path": "references/patch-diagrams/krellmelodycv.png",
+      "sha256": "0a4eb8a157c2c72a8158a96872f5a029c543dcfe1747621b5aea429eb1d5b0f6"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/noiseringpatchideas.png",
+      "current_path": "references/patch-diagrams/noiseringpatchideas.png",
+      "sha256": "6b967e1fb51e27964f416e950b24e5da0b75ff20714b34eade0d09a6fa812043"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/noiseringpatchideas2.png",
+      "current_path": "references/patch-diagrams/noiseringpatchideas2.png",
+      "sha256": "39a0933860840810f02f8fc07e9a61dc18d1ca697c5423c6c8e20b59b03217c5"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/noiseringpatchideas3.png",
+      "current_path": "references/patch-diagrams/noiseringpatchideas3.png",
+      "sha256": "b93e084b964fb20fbac3164f9fd9182bc7510cc149b3cf1d46375eb0931c5fc5"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/noiseringpatchideas4.png",
+      "current_path": "references/patch-diagrams/noiseringpatchideas4.png",
+      "sha256": "522670c583dc3efccf5da4428d8203e121f83adcda3cbe8f6e287afff52b8ede"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/pt-26-skew-velope.pdf",
+      "current_path": "references/patch-diagrams/pt-26-skew-velope.pdf",
+      "sha256": "f44781b4512939e32ef6162355692850d8b3835fac8de0fb77c2119cffc2c0c9"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/sergeanimalpatch1.png",
+      "current_path": "references/patch-diagrams/sergeanimalpatch1.png",
+      "sha256": "773498106b41ca4051010f9f1ae5ae8eb8401a4cab9110f40b119c3dbee5ddc1"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/sergeanimalpatch2.png",
+      "current_path": "references/patch-diagrams/sergeanimalpatch2.png",
+      "sha256": "2b8ab4424e5adec170c5b18e62124f7c8622903d762ebfd280b6796dc4d73aea"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/sergeanimalpatch3.png",
+      "current_path": "references/patch-diagrams/sergeanimalpatch3.png",
+      "sha256": "9055b5264e55c6cfa57a4cc366ae5980d9f3bc6d5a8cfbc7b138d81f300c69a0"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/feedback-ringmod-randompatch.png",
+      "current_path": "references/patch-diagrams/feedback-ringmod-randompatch.png",
+      "sha256": "cd9d9970c102e72a8165bef50417a41ebe039c5367f5d30e22c71a67d480c908"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-06-get-more-out-of-your-beatstep-pro.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-06-get-more-out-of-your-beatstep-pro.pdf",
+      "sha256": "b87c785b5c945cd04dd8d18f32c5826af51cf84005dbaffbd41bdda52a64f2d1"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-07-how-to-use-modular-utilities.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-07-how-to-use-modular-utilities.pdf",
+      "sha256": "c277d42070df4985436c96e7e5295c1282d6e1b8bedfeffc2000ad6f87379795"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-08-introduction-to-eurorack-drones.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-08-introduction-to-eurorack-drones.pdf",
+      "sha256": "9ce0ad454562833445574553f580e0218c7072d9458e5d0bdca04f1763d73b6c"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-09-introduction-to-generative-music.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-09-introduction-to-generative-music.pdf",
+      "sha256": "375f0b28b44337442fd6c58e906ce0c261a625abb2213103723b53c79d69a473"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-15-why-you-need-smooth-random-voltages.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-15-why-you-need-smooth-random-voltages.pdf",
+      "sha256": "ac3c4b90e5945ec5b3cdddee28e8d047a503df168b9131d01f8e865f39536c49"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-16-how-to-make-a-techno-live-patch.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-16-how-to-make-a-techno-live-patch.pdf",
+      "sha256": "f7c3fae16de93376769b6eb91b5bced96dbc77d54fa2c4de456d6e9d857505a8"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-17-why-your-lfo-needs-a-cv-input.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-17-why-your-lfo-needs-a-cv-input.pdf",
+      "sha256": "c342bcaf026ec4c27948d334107a6799abb61ac27897cc8c1d1463d153da8305"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-18-get-more-out-of-wavetable-oscillators.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-18-get-more-out-of-wavetable-oscillators.pdf",
+      "sha256": "9b09f84747c930e94161f0d30352e7ca684e9cb45f0d992e832e881e0d0d6c89"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-19-the-power-of-a-simple-sequencer-for-eurorack.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-19-the-power-of-a-simple-sequencer-for-eurorack.pdf",
+      "sha256": "dfca0db7a1db0796b41f40341fdae6b55085a282470f76e7107b70ca024f2d11"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-20-the-eurorack-quantizer-and-1v-oct.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-20-the-eurorack-quantizer-and-1v-oct.pdf",
+      "sha256": "5ecdee3fa02aaf60489be2ac86c4fa9f42d7f44e064647d41513e664d6f192e0"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-21-sound-sculpting-with-erica-synths-filters.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-21-sound-sculpting-with-erica-synths-filters.pdf",
+      "sha256": "73bd08885c10adb64c6485c6c79febe8ed646a7c5df5eb09c688ed2cb3cee867"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-22-synchronized-low-frequency-modulation.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-22-synchronized-low-frequency-modulation.pdf",
+      "sha256": "4ee81c3d947c02f7992b482ccddfedfe9156a7f7ae8b296e553653f11c35d363"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-23-mixing-panning-polarizing-and-feedback-with-papomi.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-23-mixing-panning-polarizing-and-feedback-with-papomi.pdf",
+      "sha256": "40c125ba99fd363f79ee9256ca4264917abea1dd3c6f4001ca96c0229b4f354f"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-24-how-to-use-sample-hold.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-24-how-to-use-sample-hold.pdf",
+      "sha256": "66ee2246ffa5034dd6aa9129e1d218b5fec274abec73e3e7bc541ca121ecd5fb"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/erica-synths-black-ring-xfade-service-manual.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/erica-synths-black-ring-xfade-service-manual.pdf",
+      "sha256": "2defa229cc56ffe765ba35374ce971c159dab7e9b5a520ba02cf54ef1dd848ec"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-26-how-to-get-more-out-of-analog-delay-black-bbd.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-26-how-to-get-more-out-of-analog-delay-black-bbd.pdf",
+      "sha256": "52e894f70c97679038b26006c070f8b1569c29ed262dff669a93d9e91b8c1987"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-27-patch-tips-and-ideas-for-overdrive-and-distortion-dual-drive.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-27-patch-tips-and-ideas-for-overdrive-and-distortion-dual-drive.pdf",
+      "sha256": "475a1ab1c323af567870a2ab4f1349eca1d87a5aca9b4d0c0a53372bc13ad58d"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-28-why-your-modular-needs-a-clock-divider.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-28-why-your-modular-needs-a-clock-divider.pdf",
+      "sha256": "be74b6e36b3e1c9885f971e10379d92ba6a37c2ffa0e40c8f11d9f5462ae15d5"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-29-overview-and-patches-for-the-erica-synths-black-joystick-2.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-29-overview-and-patches-for-the-erica-synths-black-joystick-2.pdf",
+      "sha256": "1205de26c530cdebeddc788bafda0164acad27389134e4fdbf0d9e94756c5868"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-30-what-to-do-with-track-hold.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-30-what-to-do-with-track-hold.pdf",
+      "sha256": "ee7e5aa3febae31927cfc1d7b00554a40c5c4ebef68b30a3f753440807ac37ad"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-32-the-power-of-a-dual-low-pass-gate.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-32-the-power-of-a-dual-low-pass-gate.pdf",
+      "sha256": "74342a01a53fb7bb99075b08fa82cf3e53d5468f4f207ff81ea412e9f38c8272"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-33-how-to-spice-up-patterns-with-probabilistic-gates.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-33-how-to-spice-up-patterns-with-probabilistic-gates.pdf",
+      "sha256": "6a35d83df2ef35fde68fbce9875fd5d659103cd41e0bbce4b565074c4f2c99fe"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-34-the-allmighty-stochastic-function-generator.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-34-the-allmighty-stochastic-function-generator.pdf",
+      "sha256": "c8f6d79322f0312326959aefc590e3ebde78a8f1ed35146ba35b5657aef22f7b"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-35-why-you-can-have-enough-vcas.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-35-why-you-can-have-enough-vcas.pdf",
+      "sha256": "61efdbf17c250c61a6479833f1b4b31260a73761068206430b16f613383b1d39"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-36-combining-an-oscillator-with-a-wave-folder.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-36-combining-an-oscillator-with-a-wave-folder.pdf",
+      "sha256": "12abecfcc79e5977cdc23e1d4bc211b91226260b9e33980953514a9df064de45"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-37-lets-explore-frequency-shifting.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-37-lets-explore-frequency-shifting.pdf",
+      "sha256": "64f5cdffeed0a31444ff414146bb7ba47e819f78eedc53118ea6dc4f1814200e"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-39-how-i-record-the-modular.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-39-how-i-record-the-modular.pdf",
+      "sha256": "7ef3c1ef5dd544802f092675d17b4ef34d667c45758685481e1c85681697ba8f"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-40-through-zero-phase-modulation.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-40-through-zero-phase-modulation.pdf",
+      "sha256": "e7cb702b07885892524c0909fc3628149d293a124d0f8aad1228d3d556a8ee7a"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-41-how-to-use-bandpass-filters.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-41-how-to-use-bandpass-filters.pdf",
+      "sha256": "7bb41f42a9d5e7a2507b396a5fece45b81be7b63f86d8e39badbcfe25b1deb71"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-42-techno-rumble.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-42-techno-rumble.pdf",
+      "sha256": "831f647de6a9654b4215f5217f3d4cbe0f688235cba6b7d7fbbde199e9d66a60"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-43-complex-lfo.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-43-complex-lfo.pdf",
+      "sha256": "c0f1de333f0ef07cede0743bc6d0b27474b59da8277f0cc12f4e4ccd72857946"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-44-teia-optocore.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-44-teia-optocore.pdf",
+      "sha256": "1fa1c957ed32ca6b64ee937e022e1f067066b914efb2bfd51b69bade82941c3e"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-45-the-mighty-crossfader.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-45-the-mighty-crossfader.pdf",
+      "sha256": "1c029717d08a4f107bdc85c44b86a836a0185f3954fe420db386654dcd7b06ff"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-46-creative-stereo-processing.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-46-creative-stereo-processing.pdf",
+      "sha256": "1d750b450ddb8f8b4ab2d834539f8fa4a6d939f826b7b6cc9771faedf243f0bc"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-47-atov-project-cdvca.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-47-atov-project-cdvca.pdf",
+      "sha256": "59f062079b8a0e94baa311970224a716a18b6b5e08ec78a5f168a8efcdce9fac"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-48-moog-mavis.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-48-moog-mavis.pdf",
+      "sha256": "356dfce33a018627e662139cfd1959436b60836cac8e16c0f9ec6ef1eae40b55"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-49-velocity-patches.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-49-velocity-patches.pdf",
+      "sha256": "b23425400cc60890714fb64081690431506d566a1ed72d10f8b70fd7fe10bacc"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-50-how-to-use-modular-effects.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-50-how-to-use-modular-effects.pdf",
+      "sha256": "deba88433fcbe799bd7f5dc4874e7afa1f1272a08355a37ec76968dbbb64a9e5"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-51-patch-tips-for-xaoc-koszalin.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-51-patch-tips-for-xaoc-koszalin.pdf",
+      "sha256": "f955da7e2500fb898bffcc440b0697b0dd61a2612d5ef1681c48f601b18c1262"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-53-matrix-mixer.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-53-matrix-mixer.pdf",
+      "sha256": "25c11e6a2a5eef81c3a6c478796edcdd4227bbe7bd2177e5489fce1865abbf78"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-56-sidechain-compression-and-kickain.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-56-sidechain-compression-and-kickain.pdf",
+      "sha256": "b5f9d0a4814fd1ecc99f11ea9f07336293d9747b0d248a312513411cdcd8d715"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-58-marble-physics.pdf",
+      "current_path": "references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/monotrail-tech-talk-58-marble-physics.pdf",
+      "sha256": "c5bc6f51b506632485590a33ff2799e9259e908fec6a92db823681a345095403"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/1-composition-techniques.pdf",
+      "current_path": "references/patch-diagrams/Patching Techniques and Ideas February 2023/1-composition-techniques.pdf",
+      "sha256": "447b3c8a4855146fad6f13ef7080cb2f1e3ce7f87beb88c42a910fda384a579f"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/2-sound-design-techniques.pdf",
+      "current_path": "references/patch-diagrams/Patching Techniques and Ideas February 2023/2-sound-design-techniques.pdf",
+      "sha256": "fa769c06bbb1f4f906800b88ef78f4f6ea3a47534e9472995783e4071986239d"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/3-cv-and-modulation.pdf",
+      "current_path": "references/patch-diagrams/Patching Techniques and Ideas February 2023/3-cv-and-modulation.pdf",
+      "sha256": "06b42f8a1adc23dcf071fc46064b51be11b1f649000d76f5734a2cd689256ee7"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/4-hardware-modules.pdf",
+      "current_path": "references/patch-diagrams/Patching Techniques and Ideas February 2023/4-hardware-modules.pdf",
+      "sha256": "f4f268d9af3c373c3100dc8828ec881dafc5a85c5e7cb74ae26c816002d6b817"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/glossary.pdf",
+      "current_path": "references/patch-diagrams/Patching Techniques and Ideas February 2023/glossary.pdf",
+      "sha256": "01cf2b59a9ed2baa91598d827b414b67f23a67eacbf25f2faa1b6928435ccd70"
+    },
+    {
+      "planned_path": "service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/readme.pdf",
+      "current_path": "references/patch-diagrams/Patching Techniques and Ideas February 2023/readme.pdf",
+      "sha256": "f2bb7a439ff5f99987af516b91d5604c9583f14b591cc44a3ece4fd68c672515"
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,16 @@
+{
+  "worker_version": "8d1250af-6625-43a1-9956-49afb17b269e",
+  "full_effective_route_count": 6393,
+  "existing_routes_retargeted_and_live_checked": 160,
+  "pdfs_alias_routes_live_checked": 1172,
+  "failures": 0,
+  "post_delete_legacy_samples": 3,
+  "post_delete_legacy_status": "308",
+  "post_delete_query_preservation": true,
+  "canonical_sample_status": "200",
+  "unmapped_probe_status": 404,
+  "unmapped_probe_redirect_location": null,
+  "rename_standardization_old_url_sources": 1096,
+  "rename_sources_without_routes": 0,
+  "rename_routes_without_live_targets": 0
+}

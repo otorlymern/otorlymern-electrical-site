@@ -1,0 +1,1490 @@
+[
+  {
+    "path": "diy/DESIGNERS/g-richter/10318_dual_borg_board_1-image-png.pdf",
+    "ok": true,
+    "size": 595492,
+    "sha256": "52f0e0d5b1329f8af33896584026bee8e3793ae6b249aaaffacab64fba1de37e",
+    "expected_size": 595492,
+    "expected_sha256": "52f0e0d5b1329f8af33896584026bee8e3793ae6b249aaaffacab64fba1de37e"
+  },
+  {
+    "path": "references/emm_83_11-39-image-jpg.pdf",
+    "ok": true,
+    "size": 233653,
+    "sha256": "7ae4674df631bbbddea9329ed96b6f8f09ca390eeaf208926eec54881f70e92e",
+    "expected_size": 233653,
+    "expected_sha256": "7ae4674df631bbbddea9329ed96b6f8f09ca390eeaf208926eec54881f70e92e"
+  },
+  {
+    "path": "diy/CIRCUITS/IMG_0125-image-png.pdf",
+    "ok": true,
+    "size": 208925,
+    "sha256": "1f846cba0dbaa8682039db86b2ca1d264af3c8baa6e67fae3b7c0e7a9d39520d",
+    "expected_size": 208925,
+    "expected_sha256": "1f846cba0dbaa8682039db86b2ca1d264af3c8baa6e67fae3b7c0e7a9d39520d"
+  },
+  {
+    "path": "books/computer-music/electronicmusic.pdf",
+    "ok": true,
+    "size": 371526,
+    "sha256": "b4179bd89f19dd9bb819ea2c7be7a391f9df3902c06e8852342ff849ad5354f3",
+    "expected_size": 371526,
+    "expected_sha256": "b4179bd89f19dd9bb819ea2c7be7a391f9df3902c06e8852342ff849ad5354f3"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/anti-image-gif.pdf",
+    "ok": true,
+    "size": 161757,
+    "sha256": "8271f0840dc21a7f6ebedf199acf3aa73e07b5392801f8a34b2b9bf1fedb28d6",
+    "expected_size": 161757,
+    "expected_sha256": "8271f0840dc21a7f6ebedf199acf3aa73e07b5392801f8a34b2b9bf1fedb28d6"
+  },
+  {
+    "path": "references/homerecording-articles.pdf",
+    "ok": true,
+    "size": 10833023,
+    "sha256": "94d25b68deed046fa9cae59a41128ee7a6ff7275018b7efa0e3fac684c857f47",
+    "expected_size": 10833023,
+    "expected_sha256": "94d25b68deed046fa9cae59a41128ee7a6ff7275018b7efa0e3fac684c857f47"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/zzz2-1-image-gif.pdf",
+    "ok": true,
+    "size": 29874,
+    "sha256": "b3e5bb4e00f2c494363b412d982826961dfcba071f3b91753c737dd58c9cebe0",
+    "expected_size": 29874,
+    "expected_sha256": "b3e5bb4e00f2c494363b412d982826961dfcba071f3b91753c737dd58c9cebe0"
+  },
+  {
+    "path": "diy/CIRCUITS/Buchla_2170_3A-image-gif.pdf",
+    "ok": true,
+    "size": 78732,
+    "sha256": "be52e5be71f077bf9343033d4ff2efe156b533956b687919c7142057acd6dc36",
+    "expected_size": 78732,
+    "expected_sha256": "be52e5be71f077bf9343033d4ff2efe156b533956b687919c7142057acd6dc36"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/17p3-image-gif.pdf",
+    "ok": true,
+    "size": 88240,
+    "sha256": "ba8e2960d19033ee58dc6a3743002c9bb48bd90945b9801c2cf06006d9de39fe",
+    "expected_size": 88240,
+    "expected_sha256": "ba8e2960d19033ee58dc6a3743002c9bb48bd90945b9801c2cf06006d9de39fe"
+  },
+  {
+    "path": "references/Atari-punk-console-PCB-syntherjack-image-jpg.pdf",
+    "ok": true,
+    "size": 1672345,
+    "sha256": "43c1fe9ea59bf80acfedcdac6363da69e3aa87078a07d14d1328606e3b36b31d",
+    "expected_size": 1672345,
+    "expected_sha256": "43c1fe9ea59bf80acfedcdac6363da69e3aa87078a07d14d1328606e3b36b31d"
+  },
+  {
+    "path": "diy/CIRCUITS/conrad_swoopspokes-image-gif.pdf",
+    "ok": true,
+    "size": 151558,
+    "sha256": "55687a1a1438749e289f10e2b6e770daa2a3b4ae0c79f24abcd78ec2411de751",
+    "expected_size": 151558,
+    "expected_sha256": "55687a1a1438749e289f10e2b6e770daa2a3b4ae0c79f24abcd78ec2411de751"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/wiargargoyle copy-image-jpg.pdf",
+    "ok": true,
+    "size": 22896,
+    "sha256": "6f6378d66e69768f0af1f2f19581c47bcef121d0e79fad1c9483687f69c0bc67",
+    "expected_size": 22896,
+    "expected_sha256": "6f6378d66e69768f0af1f2f19581c47bcef121d0e79fad1c9483687f69c0bc67"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/zzz2-image-gif.pdf",
+    "ok": true,
+    "size": 29874,
+    "sha256": "3bd8b11e8ad7a817a82482ce347423d23f9b052355cdf44653d9e6f547d00020",
+    "expected_size": 29874,
+    "expected_sha256": "3bd8b11e8ad7a817a82482ce347423d23f9b052355cdf44653d9e6f547d00020"
+  },
+  {
+    "path": "references/Commonschematicsymbols-image-jpeg.pdf",
+    "ok": true,
+    "size": 219452,
+    "sha256": "3ac3625274aec97a3f08995b1637452a3b8f65f787613591f288462886435048",
+    "expected_size": 219452,
+    "expected_sha256": "3ac3625274aec97a3f08995b1637452a3b8f65f787613591f288462886435048"
+  },
+  {
+    "path": "diy/CIRCUITS/232a927e872d7854e08864584b0d591949122204-image-jpg.pdf",
+    "ok": true,
+    "size": 150427,
+    "sha256": "8168e991b88cdca8d1a4f5f58c744fe7508c500641c78582ffe546fd634c304b",
+    "expected_size": 150427,
+    "expected_sha256": "8168e991b88cdca8d1a4f5f58c744fe7508c500641c78582ffe546fd634c304b"
+  },
+  {
+    "path": "diy/CIRCUITS/Studio_Echo_Chamber_1945-image-png.pdf",
+    "ok": true,
+    "size": 329401,
+    "sha256": "7f81f75c2b57ec8aec62ee81ad8bf18962b1c4eb47815fa8aa774177d8831173",
+    "expected_size": 329401,
+    "expected_sha256": "7f81f75c2b57ec8aec62ee81ad8bf18962b1c4eb47815fa8aa774177d8831173"
+  },
+  {
+    "path": "references/emm_83_11-38-image-jpg.pdf",
+    "ok": true,
+    "size": 240448,
+    "sha256": "f9aba09864b22681eca2233d13ab6bb0bc707f820c0ec779d7d7b845a491220a",
+    "expected_size": 240448,
+    "expected_sha256": "f9aba09864b22681eca2233d13ab6bb0bc707f820c0ec779d7d7b845a491220a"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/audiofax_12x3_console_2-image-jpg.pdf",
+    "ok": true,
+    "size": 268158,
+    "sha256": "f60b8f897367674ccd2dd15cf678322ebc3cb804c54954e089299268b5a64a9d",
+    "expected_size": 268158,
+    "expected_sha256": "f60b8f897367674ccd2dd15cf678322ebc3cb804c54954e089299268b5a64a9d"
+  },
+  {
+    "path": "diy/CIRCUITS/Buchla_2170_1A-image-gif.pdf",
+    "ok": true,
+    "size": 213777,
+    "sha256": "c6e86ca64e1e2589e0375bc583419f44b38d7dfbb2e23277d3f60a878bd51740",
+    "expected_size": 213777,
+    "expected_sha256": "c6e86ca64e1e2589e0375bc583419f44b38d7dfbb2e23277d3f60a878bd51740"
+  },
+  {
+    "path": "diy/CIRCUITS/AMF 775-A Integrator & Timer Schematic-image-jpg.pdf",
+    "ok": true,
+    "size": 826355,
+    "sha256": "58877700c2a1bf480dd324a537a6ec2bcdaa0a7f62a638d71c56aee50c325b12",
+    "expected_size": 826355,
+    "expected_sha256": "58877700c2a1bf480dd324a537a6ec2bcdaa0a7f62a638d71c56aee50c325b12"
+  },
+  {
+    "path": "diy/CIRCUITS/Fairchild_627_block_diagram-672x372-image-jpg.pdf",
+    "ok": true,
+    "size": 65598,
+    "sha256": "bc0f6a824f40b58d1ee06bffaa3bf9ba062c30c8861193f2ff74577c20552eaa",
+    "expected_size": 65598,
+    "expected_sha256": "bc0f6a824f40b58d1ee06bffaa3bf9ba062c30c8861193f2ff74577c20552eaa"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/BORG INFO-image-png.pdf",
+    "ok": true,
+    "size": 165996,
+    "sha256": "730c8180b689a2455c687eaaebc27a39e971dff25b77d28e85d087ce98347905",
+    "expected_size": 165996,
+    "expected_sha256": "730c8180b689a2455c687eaaebc27a39e971dff25b77d28e85d087ce98347905"
+  },
+  {
+    "path": "diy/CIRCUITS/80-230_schemetic-image-jpg.pdf",
+    "ok": true,
+    "size": 58768,
+    "sha256": "c28803245ed5ce60bac94a9807aab20a48ba2293c7017f62a4422e5904b5b7d1",
+    "expected_size": 58768,
+    "expected_sha256": "c28803245ed5ce60bac94a9807aab20a48ba2293c7017f62a4422e5904b5b7d1"
+  },
+  {
+    "path": "diy/CIRCUITS/spider_schematic-image-jpeg.pdf",
+    "ok": true,
+    "size": 517742,
+    "sha256": "f0830c548d42b0024e3dc810ce2d921bc99b5e45f67b037206952678e78c40fb",
+    "expected_size": 517742,
+    "expected_sha256": "f0830c548d42b0024e3dc810ce2d921bc99b5e45f67b037206952678e78c40fb"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/08-2-image-gif.pdf",
+    "ok": true,
+    "size": 29315,
+    "sha256": "ae8b184de0c768b01127bf9569ff971e966f435d83836ad31eda1fc9189fedee",
+    "expected_size": 29315,
+    "expected_sha256": "ae8b184de0c768b01127bf9569ff971e966f435d83836ad31eda1fc9189fedee"
+  },
+  {
+    "path": "diy/CIRCUITS/conrad_checkerboard-image-gif.pdf",
+    "ok": true,
+    "size": 113496,
+    "sha256": "d8a0925e271807e7831b07f2b94d5c69c972354b1d8a0f75d4babcabbd5d817d",
+    "expected_size": 113496,
+    "expected_sha256": "d8a0925e271807e7831b07f2b94d5c69c972354b1d8a0f75d4babcabbd5d817d"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/LIL SIDRASSI MANUEL_0002-image-jpg.pdf",
+    "ok": true,
+    "size": 117988,
+    "sha256": "c6c4a3da8ce088c1bcfcb4a2e238d580b5ddc251834e0db42f97a42625deab7c",
+    "expected_size": 117988,
+    "expected_sha256": "c6c4a3da8ce088c1bcfcb4a2e238d580b5ddc251834e0db42f97a42625deab7c"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/14o2-image-gif.pdf",
+    "ok": true,
+    "size": 65604,
+    "sha256": "97f3984f78faa2dd9a97876a4a5538ef0376b52a5cf6577d127e67e8de3dc69c",
+    "expected_size": 65604,
+    "expected_sha256": "97f3984f78faa2dd9a97876a4a5538ef0376b52a5cf6577d127e67e8de3dc69c"
+  },
+  {
+    "path": "diy/PROJECTS/pop-1966-08tapeechobuild.pdf",
+    "ok": true,
+    "size": 7483000,
+    "sha256": "0a58855a9c316bf2af72ac11e2288f2219972e4688d384c4687fd5d41451163e",
+    "expected_size": 7483000,
+    "expected_sha256": "0a58855a9c316bf2af72ac11e2288f2219972e4688d384c4687fd5d41451163e"
+  },
+  {
+    "path": "manuals/microphones/AT_Mic_Wardobe_2-image-jpg.pdf",
+    "ok": true,
+    "size": 500526,
+    "sha256": "af50b4f67d7ef43ee8b509b3e28d74e0184d3e4d009babb524db48cad71b8a13",
+    "expected_size": 500526,
+    "expected_sha256": "af50b4f67d7ef43ee8b509b3e28d74e0184d3e4d009babb524db48cad71b8a13"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/11c4-1-image-gif.pdf",
+    "ok": true,
+    "size": 72457,
+    "sha256": "b93a5df85301e04ef3c9fbe8b08d9cbdbef075365a2d6c6bf31fa75fdce05a2d",
+    "expected_size": 72457,
+    "expected_sha256": "b93a5df85301e04ef3c9fbe8b08d9cbdbef075365a2d6c6bf31fa75fdce05a2d"
+  },
+  {
+    "path": "references/ems_synthi-e-image-jpg.pdf",
+    "ok": true,
+    "size": 63827,
+    "sha256": "e0eb295216f0e1b6bedea64add561953089355ed6b0def738d8df5e6a1ef6335",
+    "expected_size": 63827,
+    "expected_sha256": "e0eb295216f0e1b6bedea64add561953089355ed6b0def738d8df5e6a1ef6335"
+  },
+  {
+    "path": "references/Experimental Electronic Music Devices Employing Walsh Functions.pdf",
+    "ok": true,
+    "size": 1820524,
+    "sha256": "85d7ab22f44e90efe1baeff2b1d9c95de7de5250cf6390bfe0e63870c98d6577",
+    "expected_size": 1820524,
+    "expected_sha256": "85d7ab22f44e90efe1baeff2b1d9c95de7de5250cf6390bfe0e63870c98d6577"
+  },
+  {
+    "path": "diy/CIRCUITS/Paia_4710-image-gif.pdf",
+    "ok": true,
+    "size": 21394,
+    "sha256": "f688a5016026f9873ae6ab2fd5ead6eac46ce44af8caff8e5cc84bc59245d994",
+    "expected_size": 21394,
+    "expected_sha256": "f688a5016026f9873ae6ab2fd5ead6eac46ce44af8caff8e5cc84bc59245d994"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/multirollz-image-png.pdf",
+    "ok": true,
+    "size": 354927,
+    "sha256": "ed3066afdc89bd5d371235a2a8e79c188ca47131921f68f01991c5a9a1d45c29",
+    "expected_size": 354927,
+    "expected_sha256": "ed3066afdc89bd5d371235a2a8e79c188ca47131921f68f01991c5a9a1d45c29"
+  },
+  {
+    "path": "references/sos_91_11-42-image-jpg.pdf",
+    "ok": true,
+    "size": 258044,
+    "sha256": "372bfa202ab75b5cc50733c4dcf58f30ae9ec16ac920221484fdba4466d6e32c",
+    "expected_size": 258044,
+    "expected_sha256": "372bfa202ab75b5cc50733c4dcf58f30ae9ec16ac920221484fdba4466d6e32c"
+  },
+  {
+    "path": "diy/CIRCUITS/tkbpg1OGSCHEM-image-gif.pdf",
+    "ok": true,
+    "size": 120215,
+    "sha256": "3d363cbbee915926baac3b78d6ed29b6c4de1a9e00b29d908964e4d2cbac2f68",
+    "expected_size": 120215,
+    "expected_sha256": "3d363cbbee915926baac3b78d6ed29b6c4de1a9e00b29d908964e4d2cbac2f68"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/IMG_0120-image-jpg.pdf",
+    "ok": true,
+    "size": 99484,
+    "sha256": "992d9ede8873c69d0d068477133e9d679a4675add4e6088f5894e588bce3af1e",
+    "expected_size": 99484,
+    "expected_sha256": "992d9ede8873c69d0d068477133e9d679a4675add4e6088f5894e588bce3af1e"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/circut-image-gif.pdf",
+    "ok": true,
+    "size": 86438,
+    "sha256": "220dd051ab8995a44ac14be0856480aa598c26756cf412632f42a4d00b986ac4",
+    "expected_size": 86438,
+    "expected_sha256": "220dd051ab8995a44ac14be0856480aa598c26756cf412632f42a4d00b986ac4"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/roolz-image-jpg.pdf",
+    "ok": true,
+    "size": 467449,
+    "sha256": "0b03109de7fb5007cfa1429389dc9006ad8981c7d5ccec3015e2d3f9eb7d790b",
+    "expected_size": 467449,
+    "expected_sha256": "0b03109de7fb5007cfa1429389dc9006ad8981c7d5ccec3015e2d3f9eb7d790b"
+  },
+  {
+    "path": "diy/CIRCUITS/dodecaoutput 2-image-jpg.pdf",
+    "ok": true,
+    "size": 686683,
+    "sha256": "a253d089c76afb0acff891bac0bb64686f16697fe85a713b820edbfdae4c0445",
+    "expected_size": 686683,
+    "expected_sha256": "a253d089c76afb0acff891bac0bb64686f16697fe85a713b820edbfdae4c0445"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/11_squirted_twisted-image-gif.pdf",
+    "ok": true,
+    "size": 390862,
+    "sha256": "dd00cc8a60b2091dc87bde721df5b3695a158231f445e09421a405389db42e77",
+    "expected_size": 390862,
+    "expected_sha256": "dd00cc8a60b2091dc87bde721df5b3695a158231f445e09421a405389db42e77"
+  },
+  {
+    "path": "references/Articles/digital-recording-mixing-and-mastering-volume-1.pdf",
+    "ok": true,
+    "size": 6689699,
+    "sha256": "1a15a6c04e7bd2ad03025e49e3615fa0207f9557060f1fc1fa4449a8a342d309",
+    "expected_size": 6689699,
+    "expected_sha256": "1a15a6c04e7bd2ad03025e49e3615fa0207f9557060f1fc1fa4449a8a342d309"
+  },
+  {
+    "path": "references/808ho2-image-jpg.pdf",
+    "ok": true,
+    "size": 343652,
+    "sha256": "a949d01f03f901cee1c5c49515c75a5310daefab15c7a843c0758ca9af0414ca",
+    "expected_size": 343652,
+    "expected_sha256": "a949d01f03f901cee1c5c49515c75a5310daefab15c7a843c0758ca9af0414ca"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/grassischem3-image-jpg.pdf",
+    "ok": true,
+    "size": 84183,
+    "sha256": "928ecdd76941a9683f987dc6281e51139f3c53f9edcadf8760d14f5b7394f347",
+    "expected_size": 84183,
+    "expected_sha256": "928ecdd76941a9683f987dc6281e51139f3c53f9edcadf8760d14f5b7394f347"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/Fairchild_Conax_1-image-jpg.pdf",
+    "ok": true,
+    "size": 363232,
+    "sha256": "d0e37592f625e37436ee64322f396321a3a9e6d106d9bb7865921617ee0bcbf2",
+    "expected_size": 363232,
+    "expected_sha256": "d0e37592f625e37436ee64322f396321a3a9e6d106d9bb7865921617ee0bcbf2"
+  },
+  {
+    "path": "diy/CIRCUITS/tkbpg2-image-gif.pdf",
+    "ok": true,
+    "size": 129786,
+    "sha256": "0421076cf5e5d8d0231c52cbac2e4fadf3a8141025adc8abe693329bbc117927",
+    "expected_size": 129786,
+    "expected_sha256": "0421076cf5e5d8d0231c52cbac2e4fadf3a8141025adc8abe693329bbc117927"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/Audiofax_4x2_st_console-image-jpg.pdf",
+    "ok": true,
+    "size": 273038,
+    "sha256": "424a40c50e46790f4c128764ba5636d62dd65b36e641ae436dae72528e94701f",
+    "expected_size": 273038,
+    "expected_sha256": "424a40c50e46790f4c128764ba5636d62dd65b36e641ae436dae72528e94701f"
+  },
+  {
+    "path": "references/DigitalCpmputerasMusicalInstrument_0011-image-png.pdf",
+    "ok": true,
+    "size": 1692816,
+    "sha256": "4c9db2885c0b40274703703d28f401154a64e831b5061fb75b03c6bf049d95de",
+    "expected_size": 1692816,
+    "expected_sha256": "4c9db2885c0b40274703703d28f401154a64e831b5061fb75b03c6bf049d95de"
+  },
+  {
+    "path": "diy/CIRCUITS/Envelope_Follower_Layout_04-image-png.pdf",
+    "ok": true,
+    "size": 29794,
+    "sha256": "4faaaf9beaecdb35ce956ce7dc3f3ebb59d5bb9a60b948f8bca51063b8583023",
+    "expected_size": 29794,
+    "expected_sha256": "4faaaf9beaecdb35ce956ce7dc3f3ebb59d5bb9a60b948f8bca51063b8583023"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/IMG_0119-image-gif.pdf",
+    "ok": true,
+    "size": 163557,
+    "sha256": "e6e07c45e8f07ec6ad0ccd7b165a0c904b6f8722a0bd8a94a680f63dad700f41",
+    "expected_size": 163557,
+    "expected_sha256": "e6e07c45e8f07ec6ad0ccd7b165a0c904b6f8722a0bd8a94a680f63dad700f41"
+  },
+  {
+    "path": "diy/CIRCUITS/bbbrightdim-image-gif.pdf",
+    "ok": true,
+    "size": 46497,
+    "sha256": "1537651600f650404a6339fea92f01d130bada587cb5267491642612b1744abc",
+    "expected_size": 46497,
+    "expected_sha256": "1537651600f650404a6339fea92f01d130bada587cb5267491642612b1744abc"
+  },
+  {
+    "path": "diy/CIRCUITS/deerhorn_balt-image-gif.pdf",
+    "ok": true,
+    "size": 105533,
+    "sha256": "d8ed5d7ece2b6b9fb8ca6969d1af889514eb243efabb4a5e549f6868e9764ee2",
+    "expected_size": 105533,
+    "expected_sha256": "d8ed5d7ece2b6b9fb8ca6969d1af889514eb243efabb4a5e549f6868e9764ee2"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/07-2-image-gif.pdf",
+    "ok": true,
+    "size": 30900,
+    "sha256": "9d4f122a60d7640cdbe2bdda1b035b4b99469c9cddf5cffdd322708bd68099bc",
+    "expected_size": 30900,
+    "expected_sha256": "9d4f122a60d7640cdbe2bdda1b035b4b99469c9cddf5cffdd322708bd68099bc"
+  },
+  {
+    "path": "diy/CIRCUITS/Paia_2720_12-image-gif.pdf",
+    "ok": true,
+    "size": 11312,
+    "sha256": "8372d0e95aa892716e631595877ed45967beb37e51c66f0b22541156d8129d9a",
+    "expected_size": 11312,
+    "expected_sha256": "8372d0e95aa892716e631595877ed45967beb37e51c66f0b22541156d8129d9a"
+  },
+  {
+    "path": "diy/CIRCUITS/Buchla_2170_2A-image-gif.pdf",
+    "ok": true,
+    "size": 103575,
+    "sha256": "40566c43362620430ed8a14cfa06d30f238dda47d6b27b3da2600b6946c6c828",
+    "expected_size": 103575,
+    "expected_sha256": "40566c43362620430ed8a14cfa06d30f238dda47d6b27b3da2600b6946c6c828"
+  },
+  {
+    "path": "books/computer-music/Electronic-Music-by-Allen-Strange.pdf",
+    "ok": true,
+    "size": 55224028,
+    "sha256": "60411cbced65fa0e2720ab2e6231ceae98f4e5984a021cd11220d3135b7c8a1f",
+    "expected_size": 55224028,
+    "expected_sha256": "60411cbced65fa0e2720ab2e6231ceae98f4e5984a021cd11220d3135b7c8a1f"
+  },
+  {
+    "path": "references/808ho3-image-jpg.pdf",
+    "ok": true,
+    "size": 357386,
+    "sha256": "51d72234b01c33cba7af34e10c65c6dfa9f3bfba646c79b6c0380cd3eb028f20",
+    "expected_size": 357386,
+    "expected_sha256": "51d72234b01c33cba7af34e10c65c6dfa9f3bfba646c79b6c0380cd3eb028f20"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/wirecapswitch-image-gif.pdf",
+    "ok": true,
+    "size": 22969,
+    "sha256": "d4f1a4cc509d808b8efc27a316e6fcf9f46c8b84d0cc6619170923b8cfe6b7c5",
+    "expected_size": 22969,
+    "expected_sha256": "d4f1a4cc509d808b8efc27a316e6fcf9f46c8b84d0cc6619170923b8cfe6b7c5"
+  },
+  {
+    "path": "references/vidtechnque3-3-image-jpg.pdf",
+    "ok": true,
+    "size": 234781,
+    "sha256": "6027e49db65c55286d08a744192380352b883e91fabae0321a62f65fd5eff838",
+    "expected_size": 234781,
+    "expected_sha256": "6027e49db65c55286d08a744192380352b883e91fabae0321a62f65fd5eff838"
+  },
+  {
+    "path": "diy/CIRCUITS/40106vco_954-image-png.pdf",
+    "ok": true,
+    "size": 35151,
+    "sha256": "e95461713840185e86bdf4c1b875009874a90406c75a277c6b320e70be343799",
+    "expected_size": 35151,
+    "expected_sha256": "e95461713840185e86bdf4c1b875009874a90406c75a277c6b320e70be343799"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/04 copy-image-gif.pdf",
+    "ok": true,
+    "size": 19191,
+    "sha256": "b02186947e0931872416f66bcd9851fbe26f48021a7058809745bbda8a90402b",
+    "expected_size": 19191,
+    "expected_sha256": "b02186947e0931872416f66bcd9851fbe26f48021a7058809745bbda8a90402b"
+  },
+  {
+    "path": "diy/CIRCUITS/IMG_0124-image-png.pdf",
+    "ok": true,
+    "size": 298706,
+    "sha256": "b603db5145ef79f6a5985aa8570c4dd1ee658b932c3fb548866681dcb7c29ec9",
+    "expected_size": 298706,
+    "expected_sha256": "b603db5145ef79f6a5985aa8570c4dd1ee658b932c3fb548866681dcb7c29ec9"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/zzz1-image-gif.pdf",
+    "ok": true,
+    "size": 31487,
+    "sha256": "a7b9597fa81f1af6655e0ecbb93aeb3a50811e6030e3ec49f9a82d82002809d2",
+    "expected_size": 31487,
+    "expected_sha256": "a7b9597fa81f1af6655e0ecbb93aeb3a50811e6030e3ec49f9a82d82002809d2"
+  },
+  {
+    "path": "diy/CIRCUITS/Buchla_2160_1A-image-jpg.pdf",
+    "ok": true,
+    "size": 557758,
+    "sha256": "71cab97fbb9280eb582a6c26433644fc3a17618581ce7cc2be94196ce9e1d507",
+    "expected_size": 557758,
+    "expected_sha256": "71cab97fbb9280eb582a6c26433644fc3a17618581ce7cc2be94196ce9e1d507"
+  },
+  {
+    "path": "diy/CIRCUITS/IMG_3305-image-png.pdf",
+    "ok": true,
+    "size": 68250,
+    "sha256": "542326079cf471fb467469beb668737d07e65b18178d83998f771ca339f51a5b",
+    "expected_size": 68250,
+    "expected_sha256": "542326079cf471fb467469beb668737d07e65b18178d83998f771ca339f51a5b"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/07-1-image-gif.pdf",
+    "ok": true,
+    "size": 30900,
+    "sha256": "20133b69ec2c2c1b6d6d69f283d9076c0a0679cacd2aa1d7401280e191bb458b",
+    "expected_size": 30900,
+    "expected_sha256": "20133b69ec2c2c1b6d6d69f283d9076c0a0679cacd2aa1d7401280e191bb458b"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/13-1-image-gif.pdf",
+    "ok": true,
+    "size": 21072,
+    "sha256": "995f93c720a10b0e7a1ed3d6a15d31de8fd4fffa4842408455c744f81f234d08",
+    "expected_size": 21072,
+    "expected_sha256": "995f93c720a10b0e7a1ed3d6a15d31de8fd4fffa4842408455c744f81f234d08"
+  },
+  {
+    "path": "books/computer-music/PaMtEO_23a-image-gif.pdf",
+    "ok": true,
+    "size": 402406,
+    "sha256": "481529358abcd95186a4e3075538186c6014d0950e8a1a43150b407a4458a061",
+    "expected_size": 402406,
+    "expected_sha256": "481529358abcd95186a4e3075538186c6014d0950e8a1a43150b407a4458a061"
+  },
+  {
+    "path": "references/sos_91_11-46-image-jpg.pdf",
+    "ok": true,
+    "size": 299278,
+    "sha256": "aec7e8713bf925bd564a4546d6293ce9c2661985a3bd23d34526a0de8b68ccb0",
+    "expected_size": 299278,
+    "expected_sha256": "aec7e8713bf925bd564a4546d6293ce9c2661985a3bd23d34526a0de8b68ccb0"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/08-image-gif.pdf",
+    "ok": true,
+    "size": 44464,
+    "sha256": "8b3bf4c4416e63c170bb3ebeed86787fcffaf81526e70a04ebacb5bdec202345",
+    "expected_size": 44464,
+    "expected_sha256": "8b3bf4c4416e63c170bb3ebeed86787fcffaf81526e70a04ebacb5bdec202345"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/09-image-jpg.pdf",
+    "ok": true,
+    "size": 68904,
+    "sha256": "ee8a1f4efbeb55c01b35407557137657a397407ae4bebb456796ee251a2fba87",
+    "expected_size": 68904,
+    "expected_sha256": "ee8a1f4efbeb55c01b35407557137657a397407ae4bebb456796ee251a2fba87"
+  },
+  {
+    "path": "references/synth-as-medium.pdf",
+    "ok": true,
+    "size": 2165319,
+    "sha256": "e54d76ecdde924610289a0fe8b4fb85478d0d8759c2ab0f83db795a41fd6ba3c",
+    "expected_size": 2165319,
+    "expected_sha256": "e54d76ecdde924610289a0fe8b4fb85478d0d8759c2ab0f83db795a41fd6ba3c"
+  },
+  {
+    "path": "diy/CIRCUITS/MEchnical_Vocoder_Schematic-1024x754-image-jpg.pdf",
+    "ok": true,
+    "size": 154991,
+    "sha256": "39f9006c67297153d6c03e9068d81ed7fb287b1b2634268234dbe6b61b46c990",
+    "expected_size": 154991,
+    "expected_sha256": "39f9006c67297153d6c03e9068d81ed7fb287b1b2634268234dbe6b61b46c990"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/vcadb-image-png.pdf",
+    "ok": true,
+    "size": 47197,
+    "sha256": "c5d91f87365641107229fbcc0ea4e18e5c44706ffde0f47a2fa58b8c6b7c3b74",
+    "expected_size": 47197,
+    "expected_sha256": "c5d91f87365641107229fbcc0ea4e18e5c44706ffde0f47a2fa58b8c6b7c3b74"
+  },
+  {
+    "path": "diy/DESIGNERS/nic-collins/tapeopreverb.pdf",
+    "ok": true,
+    "size": 1064326,
+    "sha256": "655d390b45bcbbd4cd76516bc09620113f97de2cb6695369ae31729fe91d3a21",
+    "expected_size": 1064326,
+    "expected_sha256": "655d390b45bcbbd4cd76516bc09620113f97de2cb6695369ae31729fe91d3a21"
+  },
+  {
+    "path": "diy/CIRCUITS/bbpwm1-image-gif.pdf",
+    "ok": true,
+    "size": 48445,
+    "sha256": "5bb700ad6344f61d3cea4321c508712b1efdc7bb31ec9362e3eb08b2fe02763c",
+    "expected_size": 48445,
+    "expected_sha256": "5bb700ad6344f61d3cea4321c508712b1efdc7bb31ec9362e3eb08b2fe02763c"
+  },
+  {
+    "path": "diy/CIRCUITS/Baby8_Sequencer_Layout_01-image-jpg.pdf",
+    "ok": true,
+    "size": 23557,
+    "sha256": "92cfd56bdcaff6873bdbfada57fa6610984776aa9c2723290cc8c5b1bfa3f8d7",
+    "expected_size": 23557,
+    "expected_sha256": "92cfd56bdcaff6873bdbfada57fa6610984776aa9c2723290cc8c5b1bfa3f8d7"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/IMG_3892-image-png.pdf",
+    "ok": true,
+    "size": 53754,
+    "sha256": "3eec0aca3021deb76680d98483228c4c0328c25e633962652a57100f8f26b401",
+    "expected_size": 53754,
+    "expected_sha256": "3eec0aca3021deb76680d98483228c4c0328c25e633962652a57100f8f26b401"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/grassischem2-image-jpg.pdf",
+    "ok": true,
+    "size": 123150,
+    "sha256": "25c2c51b9f51a96abb7e29c8e4bd534481417bc32befa92a638dcfa321f5f6e2",
+    "expected_size": 123150,
+    "expected_sha256": "25c2c51b9f51a96abb7e29c8e4bd534481417bc32befa92a638dcfa321f5f6e2"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/19-image-gif.pdf",
+    "ok": true,
+    "size": 41171,
+    "sha256": "feb85326266efb37f18e3adfe4a5117f587f68ab3dc0328ba607715e4d610f9a",
+    "expected_size": 41171,
+    "expected_sha256": "feb85326266efb37f18e3adfe4a5117f587f68ab3dc0328ba607715e4d610f9a"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/grassischem-image-jpg.pdf",
+    "ok": true,
+    "size": 239587,
+    "sha256": "157ce609ccd211deaa09f576e4aeebc06029212730d48c8e020d71f256fe0cfe",
+    "expected_size": 239587,
+    "expected_sha256": "157ce609ccd211deaa09f576e4aeebc06029212730d48c8e020d71f256fe0cfe"
+  },
+  {
+    "path": "references/DigitalCpmputerasMusicalInstrument_0010-image-png.pdf",
+    "ok": true,
+    "size": 1715255,
+    "sha256": "303a805fe797b8ee2560250959ea4cbf439fb085d05bdc6a09e606072e60b436",
+    "expected_size": 1715255,
+    "expected_sha256": "303a805fe797b8ee2560250959ea4cbf439fb085d05bdc6a09e606072e60b436"
+  },
+  {
+    "path": "references/advancedmusicsynthesis.pdf",
+    "ok": true,
+    "size": 827763,
+    "sha256": "670cdd7c58fa39f31f24f93b0f5f34b172ba285936791ebb5e49426a548b59d4",
+    "expected_size": 827763,
+    "expected_sha256": "670cdd7c58fa39f31f24f93b0f5f34b172ba285936791ebb5e49426a548b59d4"
+  },
+  {
+    "path": "diy/CIRCUITS/tkbpots-image-gif.pdf",
+    "ok": true,
+    "size": 39305,
+    "sha256": "ae1cd9a648491829ada7fd23d44139ff687a818aea0789d41a8eb44ac8f6ee49",
+    "expected_size": 39305,
+    "expected_sha256": "ae1cd9a648491829ada7fd23d44139ff687a818aea0789d41a8eb44ac8f6ee49"
+  },
+  {
+    "path": "references/p99-mk2a1w-1-768x976-image-jpg.pdf",
+    "ok": true,
+    "size": 218250,
+    "sha256": "df32aa0f237be33af947861a7fec41758c5ecc6e46b8ce0fd6040d7e2b568c01",
+    "expected_size": 218250,
+    "expected_sha256": "df32aa0f237be33af947861a7fec41758c5ecc6e46b8ce0fd6040d7e2b568c01"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/12-image-gif.pdf",
+    "ok": true,
+    "size": 21094,
+    "sha256": "be084d10c92400a32cc62ecb9f2652457fb156448671c66d9b9b83aa9396ab1e",
+    "expected_size": 21094,
+    "expected_sha256": "be084d10c92400a32cc62ecb9f2652457fb156448671c66d9b9b83aa9396ab1e"
+  },
+  {
+    "path": "references/vidtechnique3-image-jpg.pdf",
+    "ok": true,
+    "size": 212234,
+    "sha256": "86a4edddfc678c4f97e056e669b3d610940bd9674d6ec06df49a279b02013672",
+    "expected_size": 212234,
+    "expected_sha256": "86a4edddfc678c4f97e056e669b3d610940bd9674d6ec06df49a279b02013672"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/AVDOGSbasedquadvca-image-jpg.pdf",
+    "ok": true,
+    "size": 424869,
+    "sha256": "6ee03087b97250776623e7def239100f70bed97d689b5532f771ef449e294b9d",
+    "expected_size": 424869,
+    "expected_sha256": "6ee03087b97250776623e7def239100f70bed97d689b5532f771ef449e294b9d"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/wiargargoyle-image-jpg.pdf",
+    "ok": true,
+    "size": 22896,
+    "sha256": "c27a5b4c45ae4b8e03b4a222f265a56ca605ce96b405da953ab8c505bdd54a16",
+    "expected_size": 22896,
+    "expected_sha256": "c27a5b4c45ae4b8e03b4a222f265a56ca605ce96b405da953ab8c505bdd54a16"
+  },
+  {
+    "path": "diy/CIRCUITS/Wind_Machine_Layout_02-image-png.pdf",
+    "ok": true,
+    "size": 109013,
+    "sha256": "43e903388d1b7fbb200339567117cef099be3e678438319637e797461e232b9e",
+    "expected_size": 109013,
+    "expected_sha256": "43e903388d1b7fbb200339567117cef099be3e678438319637e797461e232b9e"
+  },
+  {
+    "path": "diy/CIRCUITS/wvshaper-image-gif.pdf",
+    "ok": true,
+    "size": 33372,
+    "sha256": "513e470a18196e3e0c24bb3975961897e61d372971aeb0e4328678aead6ab9b5",
+    "expected_size": 33372,
+    "expected_sha256": "513e470a18196e3e0c24bb3975961897e61d372971aeb0e4328678aead6ab9b5"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/IMG_0065-image-png.pdf",
+    "ok": true,
+    "size": 136141,
+    "sha256": "ebc50725aa1d748fd9a164f6a2e290060fd32e5627a8e6405c2c347f8ffa2870",
+    "expected_size": 136141,
+    "expected_sha256": "ebc50725aa1d748fd9a164f6a2e290060fd32e5627a8e6405c2c347f8ffa2870"
+  },
+  {
+    "path": "diy/CIRCUITS/conrad_dogvoice-image-gif.pdf",
+    "ok": true,
+    "size": 92711,
+    "sha256": "fea87c8b7d6107cab555b88e8850bbd47f85386d12efc8c927e8c8436180b7d7",
+    "expected_size": 92711,
+    "expected_sha256": "fea87c8b7d6107cab555b88e8850bbd47f85386d12efc8c927e8c8436180b7d7"
+  },
+  {
+    "path": "diy/CIRCUITS/Paia_9730sch-image-gif.pdf",
+    "ok": true,
+    "size": 71439,
+    "sha256": "38cf22c5925c6566ec73dc92779a3ccfcc18e8d84040d423c39a5e695c2f6900",
+    "expected_size": 71439,
+    "expected_sha256": "38cf22c5925c6566ec73dc92779a3ccfcc18e8d84040d423c39a5e695c2f6900"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/BORGFILTERSOUTPUTINFO-image-png.pdf",
+    "ok": true,
+    "size": 802903,
+    "sha256": "3890f3ce32c580b14e5751bed7c348d27ec6b8e31f33374db508e0002f3c0269",
+    "expected_size": 802903,
+    "expected_sha256": "3890f3ce32c580b14e5751bed7c348d27ec6b8e31f33374db508e0002f3c0269"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/08-image-jpg.pdf",
+    "ok": true,
+    "size": 53173,
+    "sha256": "3b67bd1e643b34ec9a6871d05f499c1ea7f8296e7d6908e7d62827b9d530d198",
+    "expected_size": 53173,
+    "expected_sha256": "3b67bd1e643b34ec9a6871d05f499c1ea7f8296e7d6908e7d62827b9d530d198"
+  },
+  {
+    "path": "diy/CIRCUITS/1f17fa5aa6291a9ec9ab57fcb28d209d38d612fd_2_386x500-image-jpg.pdf",
+    "ok": true,
+    "size": 36523,
+    "sha256": "ccd59105c20e03b1ab31034361d1168311144dfd5dc4b722b3f62459ccb5a76a",
+    "expected_size": 36523,
+    "expected_sha256": "ccd59105c20e03b1ab31034361d1168311144dfd5dc4b722b3f62459ccb5a76a"
+  },
+  {
+    "path": "diy/CIRCUITS/schematic-v2-image-png.pdf",
+    "ok": true,
+    "size": 204428,
+    "sha256": "96ff46f0fbbb2c0ed62b1494f155277b8682203f14a5051b842b0d74fe45993d",
+    "expected_size": 204428,
+    "expected_sha256": "96ff46f0fbbb2c0ed62b1494f155277b8682203f14a5051b842b0d74fe45993d"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/11-image-gif.pdf",
+    "ok": true,
+    "size": 21582,
+    "sha256": "7474cf61f60b060872d8bc68202942e248e9efe8dc828f5d13cf89bedcf4685c",
+    "expected_size": 21582,
+    "expected_sha256": "7474cf61f60b060872d8bc68202942e248e9efe8dc828f5d13cf89bedcf4685c"
+  },
+  {
+    "path": "references/sos_91_11-43-image-jpg.pdf",
+    "ok": true,
+    "size": 253566,
+    "sha256": "a431e560c3c3ffa3ad5a3353810e4c08444a02065dcc906db02e2b86080a72e8",
+    "expected_size": 253566,
+    "expected_sha256": "a431e560c3c3ffa3ad5a3353810e4c08444a02065dcc906db02e2b86080a72e8"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/Fairchild_740_605_666-image-jpg.pdf",
+    "ok": true,
+    "size": 1012309,
+    "sha256": "72dfe4afbdfd288cf7617d9576a77700db9bad8964c0d92331dcce2ca65b8efd",
+    "expected_size": 1012309,
+    "expected_sha256": "72dfe4afbdfd288cf7617d9576a77700db9bad8964c0d92331dcce2ca65b8efd"
+  },
+  {
+    "path": "diy/CIRCUITS/1954_mixer_schematic-943x1024-image-jpg.pdf",
+    "ok": true,
+    "size": 349306,
+    "sha256": "ff76071bfbb783a03ee4295aaf36d833aabfcac86f8c6cf3bcd4b6d3ababb1cd",
+    "expected_size": 349306,
+    "expected_sha256": "ff76071bfbb783a03ee4295aaf36d833aabfcac86f8c6cf3bcd4b6d3ababb1cd"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/BORG FILTER CHARATERISTICKORGMS20-image-png.pdf",
+    "ok": true,
+    "size": 140735,
+    "sha256": "26d538a7e7d976a3247c7065ceb0e0406de3696efb9421cdedc10a2151444005",
+    "expected_size": 140735,
+    "expected_sha256": "26d538a7e7d976a3247c7065ceb0e0406de3696efb9421cdedc10a2151444005"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/IMG_3891-image-png.pdf",
+    "ok": true,
+    "size": 46248,
+    "sha256": "90a813f1d8cb2bb3448421373b4f2a951e48d6239f255c406636c63f1b994fca",
+    "expected_size": 46248,
+    "expected_sha256": "90a813f1d8cb2bb3448421373b4f2a951e48d6239f255c406636c63f1b994fca"
+  },
+  {
+    "path": "diy/CIRCUITS/Spring_Reverb_layout_02-image-png.pdf",
+    "ok": true,
+    "size": 396443,
+    "sha256": "8b7469ee0875c2ebf2b1a2cdf712f961d2bdddd097e3d8fc4c350847aa9d628b",
+    "expected_size": 396443,
+    "expected_sha256": "8b7469ee0875c2ebf2b1a2cdf712f961d2bdddd097e3d8fc4c350847aa9d628b"
+  },
+  {
+    "path": "diy/DESIGNERS/nic-collins/smct4-3.pdf",
+    "ok": true,
+    "size": 115643,
+    "sha256": "259afe2470f8ce9ea3ca448a348538aaf9c66c45ae7ff708d5aeadd68e29725b",
+    "expected_size": 115643,
+    "expected_sha256": "259afe2470f8ce9ea3ca448a348538aaf9c66c45ae7ff708d5aeadd68e29725b"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/boogietshirt3-image-jpg.pdf",
+    "ok": true,
+    "size": 62248,
+    "sha256": "9a8d985b8818de62cb35b89ea19ef9d7aa4c29b11a7e851343de2acc99ad86fb",
+    "expected_size": 62248,
+    "expected_sha256": "9a8d985b8818de62cb35b89ea19ef9d7aa4c29b11a7e851343de2acc99ad86fb"
+  },
+  {
+    "path": "diy/CIRCUITS/05namastitar-image-gif.pdf",
+    "ok": true,
+    "size": 85982,
+    "sha256": "12675fedf5cf8dfe7c3d226a110b991cd71e9ab5921b31a0d02c2c223072efb8",
+    "expected_size": 85982,
+    "expected_sha256": "12675fedf5cf8dfe7c3d226a110b991cd71e9ab5921b31a0d02c2c223072efb8"
+  },
+  {
+    "path": "diy/CIRCUITS/IMG_0138-image-png.pdf",
+    "ok": true,
+    "size": 573556,
+    "sha256": "d890fc9527054d9370970ab3f874af10d134ea91fae40269607ce28e132ac147",
+    "expected_size": 573556,
+    "expected_sha256": "d890fc9527054d9370970ab3f874af10d134ea91fae40269607ce28e132ac147"
+  },
+  {
+    "path": "references/mt4x-tracking-sheet-image-png.pdf",
+    "ok": true,
+    "size": 48831,
+    "sha256": "aeb0a355381b9f48efd30759065b904e0f9f84b9764042ec4f3185d30250e132",
+    "expected_size": 48831,
+    "expected_sha256": "aeb0a355381b9f48efd30759065b904e0f9f84b9764042ec4f3185d30250e132"
+  },
+  {
+    "path": "books/computer-music/Reminded_by_the_Instruments_David_Tudors.pdf",
+    "ok": true,
+    "size": 345683,
+    "sha256": "aa86d92fb96c6f538a6c0609e3f79b93be066426c7c9ba6d3715cb2e48ca2e6f",
+    "expected_size": 345683,
+    "expected_sha256": "aa86d92fb96c6f538a6c0609e3f79b93be066426c7c9ba6d3715cb2e48ca2e6f"
+  },
+  {
+    "path": "references/homerecording-poly-monitors.pdf",
+    "ok": true,
+    "size": 16442509,
+    "sha256": "988b620c9440e5bf2d29699a0bfd4254fde205ddced56efeede1e1a409260a2c",
+    "expected_size": 16442509,
+    "expected_sha256": "988b620c9440e5bf2d29699a0bfd4254fde205ddced56efeede1e1a409260a2c"
+  },
+  {
+    "path": "references/b62-ad3w-485x705-image-jpg.pdf",
+    "ok": true,
+    "size": 59418,
+    "sha256": "348a103fefb86a7cc198db381b07e18e264e978a0b9b4e13287c86260d4b849a",
+    "expected_size": 59418,
+    "expected_sha256": "348a103fefb86a7cc198db381b07e18e264e978a0b9b4e13287c86260d4b849a"
+  },
+  {
+    "path": "diy/CIRCUITS/conrad_swoop-image-gif.pdf",
+    "ok": true,
+    "size": 28411,
+    "sha256": "b017d0532e1c086089164926fe498bc3ee1b85e0d4cdf59944dc0e23055a5745",
+    "expected_size": 28411,
+    "expected_sha256": "b017d0532e1c086089164926fe498bc3ee1b85e0d4cdf59944dc0e23055a5745"
+  },
+  {
+    "path": "diy/CIRCUITS/Preamp_1958-1024x804-image-jpg.pdf",
+    "ok": true,
+    "size": 298221,
+    "sha256": "27de5b7ada0f45a5d67c0ae77512f1c1f3c752d1defe9be11efa1d541b418210",
+    "expected_size": 298221,
+    "expected_sha256": "27de5b7ada0f45a5d67c0ae77512f1c1f3c752d1defe9be11efa1d541b418210"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/IMG_3889-image-png.pdf",
+    "ok": true,
+    "size": 79556,
+    "sha256": "d12e44ec07daeb2c4fc05a7401aeea34cfd109a7a6319c1eb6d3685d89f0a722",
+    "expected_size": 79556,
+    "expected_sha256": "d12e44ec07daeb2c4fc05a7401aeea34cfd109a7a6319c1eb6d3685d89f0a722"
+  },
+  {
+    "path": "diy/CIRCUITS/morph-lagschematic-image-gif.pdf",
+    "ok": true,
+    "size": 12114,
+    "sha256": "5b4b32262157ec811108ff22f8e2789a23abf2df8888bd80933c6eab3d6489a0",
+    "expected_size": 12114,
+    "expected_sha256": "5b4b32262157ec811108ff22f8e2789a23abf2df8888bd80933c6eab3d6489a0"
+  },
+  {
+    "path": "diy/CIRCUITS/Buchla_2160_1B-image-jpg.pdf",
+    "ok": true,
+    "size": 610010,
+    "sha256": "04e05afeb53dbe5bec510167e161ff0d4ecd416217514f3509557060f0d893f9",
+    "expected_size": 610010,
+    "expected_sha256": "04e05afeb53dbe5bec510167e161ff0d4ecd416217514f3509557060f0d893f9"
+  },
+  {
+    "path": "books/computer-music/arrl_1936.pdf",
+    "ok": true,
+    "size": 55330275,
+    "sha256": "67b427b8bd2f548f57c809675656151f711667213fe792079786f61f2f6e4936",
+    "expected_size": 55330275,
+    "expected_sha256": "67b427b8bd2f548f57c809675656151f711667213fe792079786f61f2f6e4936"
+  },
+  {
+    "path": "diy/CIRCUITS/Trisawrodrone-schematic-image-png.pdf",
+    "ok": true,
+    "size": 185827,
+    "sha256": "411ed8b460fadb1ac5bf0a099e2058861e9f532a21da108cf50e7fd142bbaf9a",
+    "expected_size": 185827,
+    "expected_sha256": "411ed8b460fadb1ac5bf0a099e2058861e9f532a21da108cf50e7fd142bbaf9a"
+  },
+  {
+    "path": "references/fig26-02_rungling.pdf",
+    "ok": true,
+    "size": 273023,
+    "sha256": "6c544979acb9aa409f80739fd896da784731d283fa42f247266f8194cece864f",
+    "expected_size": 273023,
+    "expected_sha256": "6c544979acb9aa409f80739fd896da784731d283fa42f247266f8194cece864f"
+  },
+  {
+    "path": "diy/CIRCUITS/e347d8f86236d5b1af3491b9d485ed73f320680d_2_666x500-image-jpg.pdf",
+    "ok": true,
+    "size": 93095,
+    "sha256": "82b933bc86b51e27c27fcbf24230ca77178e0e548c1d13ae0325915e2b3d23f7",
+    "expected_size": 93095,
+    "expected_sha256": "82b933bc86b51e27c27fcbf24230ca77178e0e548c1d13ae0325915e2b3d23f7"
+  },
+  {
+    "path": "references/mt_87_08-74-image-jpg.pdf",
+    "ok": true,
+    "size": 313598,
+    "sha256": "8ce5da8e5a99e576f177cc2c3ec75b9baa2d0bd0f89aa6676734bf7ac85ca9ad",
+    "expected_size": 313598,
+    "expected_sha256": "8ce5da8e5a99e576f177cc2c3ec75b9baa2d0bd0f89aa6676734bf7ac85ca9ad"
+  },
+  {
+    "path": "diy/CIRCUITS/Paia_2720-3l-image-gif.pdf",
+    "ok": true,
+    "size": 12808,
+    "sha256": "8e1162e7f36d0aa9a496c0f1dc28f0b25f3427a78784b5fb50d94d7d7636f59f",
+    "expected_size": 12808,
+    "expected_sha256": "8e1162e7f36d0aa9a496c0f1dc28f0b25f3427a78784b5fb50d94d7d7636f59f"
+  },
+  {
+    "path": "references/homerecording-poly-monitors (dragged) 2.pdf",
+    "ok": true,
+    "size": 771435,
+    "sha256": "ae5e06349f009d5ccc73679553f5bf63ed823b97eda5f1d3c08f37c174571aa4",
+    "expected_size": 771435,
+    "expected_sha256": "ae5e06349f009d5ccc73679553f5bf63ed823b97eda5f1d3c08f37c174571aa4"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/06-image-gif.pdf",
+    "ok": true,
+    "size": 21213,
+    "sha256": "38aed30afe98285b0bb36643cdc051359e4ac287b57a555ac6ff1c7573eee8d4",
+    "expected_size": 21213,
+    "expected_sha256": "38aed30afe98285b0bb36643cdc051359e4ac287b57a555ac6ff1c7573eee8d4"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/BORGOUTPUTS-image-png.pdf",
+    "ok": true,
+    "size": 245427,
+    "sha256": "bc0ebf10ed1afc12fd6e857671af01212c79aa5f4ebcfc1129117663f01becad",
+    "expected_size": 245427,
+    "expected_sha256": "bc0ebf10ed1afc12fd6e857671af01212c79aa5f4ebcfc1129117663f01becad"
+  },
+  {
+    "path": "diy/CIRCUITS/hdrot-schmatic-image-jpg.pdf",
+    "ok": true,
+    "size": 83016,
+    "sha256": "2e19ac51a39ea4b48b7801a969a11145e02b8f5acb38cd3ea42d6ce02976dbea",
+    "expected_size": 83016,
+    "expected_sha256": "2e19ac51a39ea4b48b7801a969a11145e02b8f5acb38cd3ea42d6ce02976dbea"
+  },
+  {
+    "path": "diy/CIRCUITS/SERGE106B PCO Schematic-image-jpg.pdf",
+    "ok": true,
+    "size": 1560800,
+    "sha256": "6871dde7e9f084850c30277fe8fef01658e9fa574d543b05e74b53c1edeb42d9",
+    "expected_size": 1560800,
+    "expected_sha256": "6871dde7e9f084850c30277fe8fef01658e9fa574d543b05e74b53c1edeb42d9"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/19-1-image-gif.pdf",
+    "ok": true,
+    "size": 41171,
+    "sha256": "80bf916bb96ebaebb1fe4dde993f6229f61faa060790930ab5c8e4d0cc516832",
+    "expected_size": 41171,
+    "expected_sha256": "80bf916bb96ebaebb1fe4dde993f6229f61faa060790930ab5c8e4d0cc516832"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/grassTOObac-image-jpg.pdf",
+    "ok": true,
+    "size": 320378,
+    "sha256": "10f69229f026b5a110b68bc83df06c78723cc62e6d74b1b79ddb183ec671a37e",
+    "expected_size": 320378,
+    "expected_sha256": "10f69229f026b5a110b68bc83df06c78723cc62e6d74b1b79ddb183ec671a37e"
+  },
+  {
+    "path": "manuals/microphones/AltecLansing/AltecLansing_680A-image-jpg.pdf",
+    "ok": true,
+    "size": 466856,
+    "sha256": "1a36cdb1d8883ac718552dd91ff83b7f9456159a010e64dfe136fe65a6922648",
+    "expected_size": 466856,
+    "expected_sha256": "1a36cdb1d8883ac718552dd91ff83b7f9456159a010e64dfe136fe65a6922648"
+  },
+  {
+    "path": "references/homerecordingpart2.pdf",
+    "ok": true,
+    "size": 14744248,
+    "sha256": "d2e4b254a72f1f213bea92a84f5d359ea613422c6b54219c28ca0531de505b11",
+    "expected_size": 14744248,
+    "expected_sha256": "d2e4b254a72f1f213bea92a84f5d359ea613422c6b54219c28ca0531de505b11"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/07-image-jpg.pdf",
+    "ok": true,
+    "size": 132379,
+    "sha256": "0f27ce76bde25f318ad8fe98e6c6c5548a72615df58f5ef09823c9412f765958",
+    "expected_size": 132379,
+    "expected_sha256": "0f27ce76bde25f318ad8fe98e6c6c5548a72615df58f5ef09823c9412f765958"
+  },
+  {
+    "path": "diy/CIRCUITS/1f17fa5aa6291a9ec9ab57fcb28d209d38d612fd-image-jpg.pdf",
+    "ok": true,
+    "size": 247288,
+    "sha256": "1556caa7c0a55366624b24491add95488cf1edea94ed7e75463cc03537369baf",
+    "expected_size": 247288,
+    "expected_sha256": "1556caa7c0a55366624b24491add95488cf1edea94ed7e75463cc03537369baf"
+  },
+  {
+    "path": "references/sos_91_11-44-image-jpg.pdf",
+    "ok": true,
+    "size": 283275,
+    "sha256": "5ab0d4d8339efc800652f2486fa7d7047e6f239d8d9935a788e169a24614f3aa",
+    "expected_size": 283275,
+    "expected_sha256": "5ab0d4d8339efc800652f2486fa7d7047e6f239d8d9935a788e169a24614f3aa"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/protoboard-image-png.pdf",
+    "ok": true,
+    "size": 5929,
+    "sha256": "a0b1ac813d2d07c92dcc399cbdf75e14b4f069c61b710a944d23858f8ad582ef",
+    "expected_size": 5929,
+    "expected_sha256": "a0b1ac813d2d07c92dcc399cbdf75e14b4f069c61b710a944d23858f8ad582ef"
+  },
+  {
+    "path": "diy/CIRCUITS/sbplan3-image-gif.pdf",
+    "ok": true,
+    "size": 14814,
+    "sha256": "cfb05dd61b61c0501aeb79bbc67b818cf0789b88e1c79489b1f1131ab6b8f9ea",
+    "expected_size": 14814,
+    "expected_sha256": "cfb05dd61b61c0501aeb79bbc67b818cf0789b88e1c79489b1f1131ab6b8f9ea"
+  },
+  {
+    "path": "diy/DESIGNERS/nic-collins/perfectbeep.pdf",
+    "ok": true,
+    "size": 1318356,
+    "sha256": "813cad68bbf21d0d647a426074390568060f781c6b1e5214814318395b0d666c",
+    "expected_size": 1318356,
+    "expected_sha256": "813cad68bbf21d0d647a426074390568060f781c6b1e5214814318395b0d666c"
+  },
+  {
+    "path": "diy/CIRCUITS/SKEWVELOPE-FLOW-image-gif.pdf",
+    "ok": true,
+    "size": 28601,
+    "sha256": "2ee330375fce2d22c0a1b6d60e643954b18f283cea06cb6c5aa606d0d5fb381c",
+    "expected_size": 28601,
+    "expected_sha256": "2ee330375fce2d22c0a1b6d60e643954b18f283cea06cb6c5aa606d0d5fb381c"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/13-image-gif.pdf",
+    "ok": true,
+    "size": 21072,
+    "sha256": "0ea38eb698ab12e467197f2af6faf84b4b2674e1eed6a5287c0a957eb3cfa1f0",
+    "expected_size": 21072,
+    "expected_sha256": "0ea38eb698ab12e467197f2af6faf84b4b2674e1eed6a5287c0a957eb3cfa1f0"
+  },
+  {
+    "path": "references/DigitalCpmputerasMusicalInstrument_0012-image-png.pdf",
+    "ok": true,
+    "size": 1756638,
+    "sha256": "3ac9930d6afd00772d8be496b1087014b59a076d625d1b100d6b25a01c344185",
+    "expected_size": 1756638,
+    "expected_sha256": "3ac9930d6afd00772d8be496b1087014b59a076d625d1b100d6b25a01c344185"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/IMG_3894-image-png.pdf",
+    "ok": true,
+    "size": 61384,
+    "sha256": "095d860919191a528ecac65f74928f5f1181dcf000533c9ad2267a3e1243f7de",
+    "expected_size": 61384,
+    "expected_sha256": "095d860919191a528ecac65f74928f5f1181dcf000533c9ad2267a3e1243f7de"
+  },
+  {
+    "path": "references/radiophonicworkshop-bbc-gearlist-image-jpg.pdf",
+    "ok": true,
+    "size": 230784,
+    "sha256": "a94bbe03cf937ac532bc08318f24311b3f3d30a285a2f229713d24918c8bd760",
+    "expected_size": 230784,
+    "expected_sha256": "a94bbe03cf937ac532bc08318f24311b3f3d30a285a2f229713d24918c8bd760"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/WiardSystem-image-jpg.pdf",
+    "ok": true,
+    "size": 126615,
+    "sha256": "d1ec471fac21d1246ef1b01c9454493f2d4091d443277a873338a7d1bc6dc953",
+    "expected_size": 126615,
+    "expected_sha256": "d1ec471fac21d1246ef1b01c9454493f2d4091d443277a873338a7d1bc6dc953"
+  },
+  {
+    "path": "references/808ho1-image-jpg.pdf",
+    "ok": true,
+    "size": 247104,
+    "sha256": "a2f0e964856fb1ea8deb274f82cb768610643ae2c829695ce741a03e08aa7621",
+    "expected_size": 247104,
+    "expected_sha256": "a2f0e964856fb1ea8deb274f82cb768610643ae2c829695ce741a03e08aa7621"
+  },
+  {
+    "path": "diy/CIRCUITS/sbplan4-image-gif.pdf",
+    "ok": true,
+    "size": 14749,
+    "sha256": "c195b34b6c2bd8d911831291a8d7b8946b8f0812440e42a6b970cd7c9b9e2cdf",
+    "expected_size": 14749,
+    "expected_sha256": "c195b34b6c2bd8d911831291a8d7b8946b8f0812440e42a6b970cd7c9b9e2cdf"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/07down-image-gif.pdf",
+    "ok": true,
+    "size": 3716,
+    "sha256": "51d8095b2313110540cd32e74fe5d3d8df15b3f023b5269f7a32bcea0cb9884e",
+    "expected_size": 3716,
+    "expected_sha256": "51d8095b2313110540cd32e74fe5d3d8df15b3f023b5269f7a32bcea0cb9884e"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/Buchla-Euro-image-jpg.pdf",
+    "ok": true,
+    "size": 330942,
+    "sha256": "c1f70048d8c8b01644991a4a5b8f6fc32a26c0bfcc6310b037cd878272a75529",
+    "expected_size": 330942,
+    "expected_sha256": "c1f70048d8c8b01644991a4a5b8f6fc32a26c0bfcc6310b037cd878272a75529"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/Fairchild_integra_console_modules_c1963-image-jpg.pdf",
+    "ok": true,
+    "size": 486731,
+    "sha256": "c82c82d28154a0614ce084c08d519a109dafaebd906dc19b82d2b8bf01cb815b",
+    "expected_size": 486731,
+    "expected_sha256": "c82c82d28154a0614ce084c08d519a109dafaebd906dc19b82d2b8bf01cb815b"
+  },
+  {
+    "path": "references/complementory-lfo-build.pdf",
+    "ok": true,
+    "size": 15215963,
+    "sha256": "fdc2278ce7c8a157f7d769ce8bb8671e03a31d47619444be4c8e55f200580143",
+    "expected_size": 15215963,
+    "expected_sha256": "fdc2278ce7c8a157f7d769ce8bb8671e03a31d47619444be4c8e55f200580143"
+  },
+  {
+    "path": "references/mt_87_08-73-image-jpg.pdf",
+    "ok": true,
+    "size": 309573,
+    "sha256": "715d6ff45448496f101f0cf65fa24b39c56d8faf7a8f2df6effd1245ab87be32",
+    "expected_size": 309573,
+    "expected_sha256": "715d6ff45448496f101f0cf65fa24b39c56d8faf7a8f2df6effd1245ab87be32"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/IMG_0260-image-gif.pdf",
+    "ok": true,
+    "size": 190753,
+    "sha256": "13fa12163a5fc3b54fbcded8595c7fd7c1b72c05f595412ab6747fd3d3e6b7ba",
+    "expected_size": 190753,
+    "expected_sha256": "13fa12163a5fc3b54fbcded8595c7fd7c1b72c05f595412ab6747fd3d3e6b7ba"
+  },
+  {
+    "path": "diy/CIRCUITS/conrad_checkerboard-1-image-gif.pdf",
+    "ok": true,
+    "size": 113496,
+    "sha256": "dba9024893b153052c9d68f5fc9dc0ea5cea4a3b13b560ec3002d4a1072d2d63",
+    "expected_size": 113496,
+    "expected_sha256": "dba9024893b153052c9d68f5fc9dc0ea5cea4a3b13b560ec3002d4a1072d2d63"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/audiofax_12x3_console_innards-image-jpg.pdf",
+    "ok": true,
+    "size": 276551,
+    "sha256": "77c9f1ad0d23e1447d9992c343ad292c936ead2f4920cdc013694bf9023be49e",
+    "expected_size": 276551,
+    "expected_sha256": "77c9f1ad0d23e1447d9992c343ad292c936ead2f4920cdc013694bf9023be49e"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/14o3-image-gif.pdf",
+    "ok": true,
+    "size": 75769,
+    "sha256": "023cf1cd351ecb5ede8476241475aef61339dc710a10aeab8a81f0b66d1d61da",
+    "expected_size": 75769,
+    "expected_sha256": "023cf1cd351ecb5ede8476241475aef61339dc710a10aeab8a81f0b66d1d61da"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/07-image-gif.pdf",
+    "ok": true,
+    "size": 62996,
+    "sha256": "b0e43271ad1aeb8dde944922ba15414303d7a669f50d842ff27868114972bd09",
+    "expected_size": 62996,
+    "expected_sha256": "b0e43271ad1aeb8dde944922ba15414303d7a669f50d842ff27868114972bd09"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/07up-image-gif.pdf",
+    "ok": true,
+    "size": 3747,
+    "sha256": "7f2740d0226cb70f6f9fdc8d183234e1d4dea49a0692d9a84bf08eb8ef8d2219",
+    "expected_size": 3747,
+    "expected_sha256": "7f2740d0226cb70f6f9fdc8d183234e1d4dea49a0692d9a84bf08eb8ef8d2219"
+  },
+  {
+    "path": "diy/CIRCUITS/sbplan2-image-gif.pdf",
+    "ok": true,
+    "size": 12717,
+    "sha256": "8ff724267d6e60a03ed18034303b452f9accb622779c865be153013cc8af49e5",
+    "expected_size": 12717,
+    "expected_sha256": "8ff724267d6e60a03ed18034303b452f9accb622779c865be153013cc8af49e5"
+  },
+  {
+    "path": "manuals/mixing-desks-mixers/Fairchild_audio_1961-image-jpg.pdf",
+    "ok": true,
+    "size": 814818,
+    "sha256": "051dea8376d82d8d844f022e110c72137410dd057d1b79210acd2371c5e120fa",
+    "expected_size": 814818,
+    "expected_sha256": "051dea8376d82d8d844f022e110c72137410dd057d1b79210acd2371c5e120fa"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/borg2-image-jpg.pdf",
+    "ok": true,
+    "size": 58270,
+    "sha256": "26adfc32351063cbc4fcccf2bbd0ebdd515bd132692e8f2ca3d45dc85a45015b",
+    "expected_size": 58270,
+    "expected_sha256": "26adfc32351063cbc4fcccf2bbd0ebdd515bd132692e8f2ca3d45dc85a45015b"
+  },
+  {
+    "path": "diy/CIRCUITS/Paia_2720-14-image-gif.pdf",
+    "ok": true,
+    "size": 18854,
+    "sha256": "7ab42a5925d7df3a16741f91bd1327d4ac401016ec8ec2f977952c58096779a5",
+    "expected_size": 18854,
+    "expected_sha256": "7ab42a5925d7df3a16741f91bd1327d4ac401016ec8ec2f977952c58096779a5"
+  },
+  {
+    "path": "books/computer-music/Elements-Musical-Sounds-and-Musical-Signals.pdf",
+    "ok": true,
+    "size": 1202756,
+    "sha256": "8fb3a751d8f5c3c6faa680838d954b19a03be6146b04fc441dc6d99648184c2c",
+    "expected_size": 1202756,
+    "expected_sha256": "8fb3a751d8f5c3c6faa680838d954b19a03be6146b04fc441dc6d99648184c2c"
+  },
+  {
+    "path": "diy/CIRCUITS/bbbrightdimcd-image-gif.pdf",
+    "ok": true,
+    "size": 11032,
+    "sha256": "fb1b96f273cc912d50b93c89eea2c766794ad7f4fc8b2d4f71bd2d27e9f91876",
+    "expected_size": 11032,
+    "expected_sha256": "fb1b96f273cc912d50b93c89eea2c766794ad7f4fc8b2d4f71bd2d27e9f91876"
+  },
+  {
+    "path": "references/vidtechnique3-2-image-jpg.pdf",
+    "ok": true,
+    "size": 262609,
+    "sha256": "f3fa11e6844c74346d1d2dd0412623c44be8903b548a030dbec4680f6cf40e70",
+    "expected_size": 262609,
+    "expected_sha256": "f3fa11e6844c74346d1d2dd0412623c44be8903b548a030dbec4680f6cf40e70"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/gera-image-gif.pdf",
+    "ok": true,
+    "size": 253466,
+    "sha256": "2fc9525b1207186a01a20c4cfdd5b6389c6a9ef7365a840a0698649864824d42",
+    "expected_size": 253466,
+    "expected_sha256": "2fc9525b1207186a01a20c4cfdd5b6389c6a9ef7365a840a0698649864824d42"
+  },
+  {
+    "path": "diy/CIRCUITS/Fairchild_627_equalizer_Schematic-768x390-image-jpg.pdf",
+    "ok": true,
+    "size": 95501,
+    "sha256": "cfdd527625a8c3a364fc0383360cdd3c913f75ee97e731bcc34a8ce469193194",
+    "expected_size": 95501,
+    "expected_sha256": "cfdd527625a8c3a364fc0383360cdd3c913f75ee97e731bcc34a8ce469193194"
+  },
+  {
+    "path": "references/mt_87_08-72-image-jpg.pdf",
+    "ok": true,
+    "size": 350159,
+    "sha256": "efe857f496884505947590afd7790e351f92c75f6ff8e820f08cfbcf4398cacc",
+    "expected_size": 350159,
+    "expected_sha256": "efe857f496884505947590afd7790e351f92c75f6ff8e820f08cfbcf4398cacc"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/grassWON-image-jpg.pdf",
+    "ok": true,
+    "size": 284574,
+    "sha256": "3f9b5d24b56f910a096fd0504a0a22b95d355b8139a11bc5d1be61421188e0f9",
+    "expected_size": 284574,
+    "expected_sha256": "3f9b5d24b56f910a096fd0504a0a22b95d355b8139a11bc5d1be61421188e0f9"
+  },
+  {
+    "path": "diy/DESIGNERS/g-richter/woggleblockdiagram-image-gif.pdf",
+    "ok": true,
+    "size": 34871,
+    "sha256": "7f2fe475f5341eb023c5f3b80e0a6241ca0f8fdf9af90fae9bcc23685be0d8b6",
+    "expected_size": 34871,
+    "expected_sha256": "7f2fe475f5341eb023c5f3b80e0a6241ca0f8fdf9af90fae9bcc23685be0d8b6"
+  },
+  {
+    "path": "diy/PAPER_CIRCUITS/crucfxAVdogs-image-png.pdf",
+    "ok": true,
+    "size": 348191,
+    "sha256": "2218fa58314ff14b6dfc1857b9f3efbf4d3c1d8a78b6168c420e82bf715228ba",
+    "expected_size": 348191,
+    "expected_sha256": "2218fa58314ff14b6dfc1857b9f3efbf4d3c1d8a78b6168c420e82bf715228ba"
+  },
+  {
+    "path": "references/mtr10b1w-small-458x705-image-jpg.pdf",
+    "ok": true,
+    "size": 127282,
+    "sha256": "97b411b1ff7811a6d5926acfd74d61428fb09d8f2a4cab1a01c507659d3d2b1d",
+    "expected_size": 127282,
+    "expected_sha256": "97b411b1ff7811a6d5926acfd74d61428fb09d8f2a4cab1a01c507659d3d2b1d"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/IMG_3902-image-gif.pdf",
+    "ok": true,
+    "size": 7033,
+    "sha256": "b0e1921a9b6a0e9f39a0fa8d23ab3b4d605c575885cbae08cce745b661e6b8ee",
+    "expected_size": 7033,
+    "expected_sha256": "b0e1921a9b6a0e9f39a0fa8d23ab3b4d605c575885cbae08cce745b661e6b8ee"
+  },
+  {
+    "path": "diy/CIRCUITS/Paia_2720-3l.gif -image-gif.pdf",
+    "ok": true,
+    "size": 12808,
+    "sha256": "d1ae036133bd1323153257639e58d9cffda4ff47e4be9f3cdbefe71577aecde4",
+    "expected_size": 12808,
+    "expected_sha256": "d1ae036133bd1323153257639e58d9cffda4ff47e4be9f3cdbefe71577aecde4"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/IMG_3888-image-png.pdf",
+    "ok": true,
+    "size": 42496,
+    "sha256": "01dd4cfed9c579f23687ab7e890c85344a6a4b9e33413371f89dd89cb0206f0a",
+    "expected_size": 42496,
+    "expected_sha256": "01dd4cfed9c579f23687ab7e890c85344a6a4b9e33413371f89dd89cb0206f0a"
+  },
+  {
+    "path": "diy/CIRCUITS/Alien_Screamer_Stripboard_Layout_02-image-png.pdf",
+    "ok": true,
+    "size": 41348,
+    "sha256": "bbfbadfc7d372ad3dbde8fc6ac5ec291b0be3320e3a2eae0fe86f14fa4218554",
+    "expected_size": 41348,
+    "expected_sha256": "bbfbadfc7d372ad3dbde8fc6ac5ec291b0be3320e3a2eae0fe86f14fa4218554"
+  },
+  {
+    "path": "diy/CIRCUITS/Bogen_DB10_EQ_schematic-768x656-image-png.pdf",
+    "ok": true,
+    "size": 177917,
+    "sha256": "a40f55299ba9993fa89489f6ea859c8ba2e39d4485a46e098be231073cea892e",
+    "expected_size": 177917,
+    "expected_sha256": "a40f55299ba9993fa89489f6ea859c8ba2e39d4485a46e098be231073cea892e"
+  },
+  {
+    "path": "diy/CIRCUITS/IMG_0127-image-png.pdf",
+    "ok": true,
+    "size": 452591,
+    "sha256": "23c1f50b6063c8ff30c49b1a87b455b3ba581a3f4ee9c6e535444a4de69f413a",
+    "expected_size": 452591,
+    "expected_sha256": "23c1f50b6063c8ff30c49b1a87b455b3ba581a3f4ee9c6e535444a4de69f413a"
+  },
+  {
+    "path": "diy/DESIGNERS/nic-collins/19680020053.pdf",
+    "ok": true,
+    "size": 14270316,
+    "sha256": "e8b76737248f047fab7cad346fc2fd878c7c28af2a2271d67dfa4b95b6f42d60",
+    "expected_size": 14270316,
+    "expected_sha256": "e8b76737248f047fab7cad346fc2fd878c7c28af2a2271d67dfa4b95b6f42d60"
+  },
+  {
+    "path": "diy/CIRCUITS/bbpwmcd-image-gif.pdf",
+    "ok": true,
+    "size": 10538,
+    "sha256": "1efb3ef3cf9122a884cae9b72fb3c82aad60dbac0031dcdc00e3491a84670078",
+    "expected_size": 10538,
+    "expected_sha256": "1efb3ef3cf9122a884cae9b72fb3c82aad60dbac0031dcdc00e3491a84670078"
+  },
+  {
+    "path": "diy/DESIGNERS/nic-collins/roomtonescore2017.pdf",
+    "ok": true,
+    "size": 325239,
+    "sha256": "4ec0330dae9081742656967d38f92345dcfc8ee27cf168e00f8beab920067739",
+    "expected_size": 325239,
+    "expected_sha256": "4ec0330dae9081742656967d38f92345dcfc8ee27cf168e00f8beab920067739"
+  },
+  {
+    "path": "books/computer-music/5_Schaeffer.pdf",
+    "ok": true,
+    "size": 17981376,
+    "sha256": "272199c0458dcd2f2ea99b4db5d4b6013808b4dc60a1b575ea69859fc1959e53",
+    "expected_size": 17981376,
+    "expected_sha256": "272199c0458dcd2f2ea99b4db5d4b6013808b4dc60a1b575ea69859fc1959e53"
+  },
+  {
+    "path": "references/homerecording-poly-monitors (dragged).pdf",
+    "ok": true,
+    "size": 1151203,
+    "sha256": "3019bc0e7b9c6be40c88635a91965c681b649d5a3e4241ae0d88deb88b46716f",
+    "expected_size": 1151203,
+    "expected_sha256": "3019bc0e7b9c6be40c88635a91965c681b649d5a3e4241ae0d88deb88b46716f"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/09-image-gif.pdf",
+    "ok": true,
+    "size": 20354,
+    "sha256": "cd1e238e22ab4f201e2de750d75cabf5125ce6252b0eeff34317332993d3871f",
+    "expected_size": 20354,
+    "expected_sha256": "cd1e238e22ab4f201e2de750d75cabf5125ce6252b0eeff34317332993d3871f"
+  },
+  {
+    "path": "diy/DESIGNERS/ciat-lombarde/08-1-image-gif.pdf",
+    "ok": true,
+    "size": 29315,
+    "sha256": "323637097d68f0b6f45e6c9c21078fc8d42e1c0614f9d0a703fbfad2f65917ef",
+    "expected_size": 29315,
+    "expected_sha256": "323637097d68f0b6f45e6c9c21078fc8d42e1c0614f9d0a703fbfad2f65917ef"
+  }
+]

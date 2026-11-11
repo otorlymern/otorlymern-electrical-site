@@ -1,0 +1,875 @@
+books/
+books/analog-computing/
+books/misc/
+diy/
+diy/DESIGNERS/g-richter/GrantRichterWebsitePreserved/
+diy/DESIGNERS/g-richter/GrantRichterWebsitePreserved/GR-AriesModules/
+diy/DESIGNERS/g-richter/Wiard 300 Manual/
+diy/DESIGNERS/g-richter/Wiard Frac/
+diy/DESIGNERS/j-haible copy/
+diy/DESIGNERS/j-haible copy/polymoog schems/
+diy/DESIGNERS/j-haible/polymoog schems/
+diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files/
+diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files/proaudio/
+diy/DESIGNERS/j-haible/polymoog schems/Wayback Machine_files/start_data/
+diy/DESIGNERS/p-blasser/
+diy/DESIGNERS/paper-circuits/
+diy/DESIGNERS/projects/
+diy/DESIGNERS/projects/TridexMuse/
+diy/DESIGNERS/projects/video-technique-article/
+diy/DESIGNERS/wiardpdfs/
+diy/DESIGNERS/wiardpdfs/Wiard 300 Manual/
+diy/DESIGNERS/wiardpdfs/wiard-docs/
+diy/DESIGNERS/wiardpdfs/wiard-docs/wiardmusicweasel-manual-material/
+diy/TridexMuse/
+diy/paper-circuits/
+diy/pesoundsynth/
+diy/projects/
+diy/r-hordijk/
+diy/schematics-diagrams/
+diy/t-henry/
+magazines/
+magazines/Articles/
+magazines/Articles/danelectro-ads-docs/
+magazines/DB/
+magazines/EMM MAgazine/
+magazines/Interviews/
+magazines/MusicTechMag/
+magazines/New Folder With Items/
+magazines/Polyphony mag/
+magazines/Synapse Magazine/
+magazines/catsandbrochures/
+magazines/catsandbrochures/teac-brochures/
+magazines/modern-recording/
+magazines/music-mag-ads/
+magazines/tape-recording-magazine/
+magazines/tudor/
+magazines/v-2-n-3/
+manuals/
+manuals/fx-rackunits/
+manuals/manuals-misc/videogame-manuals/
+manuals/manuals-misc/videogame-manuals/N64Manuals/
+manuals/manuals-misc/videogame-manuals/NintendoVirtualBoyManuals/
+manuals/manuals-misc/videogame-manuals/SNES-manuals/
+manuals/mixing-desks-mixers/
+manuals/tape-machines/tascam/
+references/
+references/datasheets/
+resources/
+resources/fosterx/
+service-docs/
+video-docs/
+video-docs/3TrinsRGBPatcher/
+video-docs/Film/
+video-docs/MUSICVISION/
+video-docs/Virtus VR/
+video-docs/Virtus VR/2-D Galleries/
+video-docs/Virtus VR/3-D Galleries/
+video-docs/Virtus VR/Textures/
+video-docs/Virtus VR/VR Scenes/
+video-docs/andreijay-vserpi/
+video-docs/andreijay-vserpi/VSERPI and VSEJET controller templates, overlays, scene settings, etc/
+video-docs/andreijay-vserpi/VSERPI and VSEJET controller templates, overlays, scene settings, etc/gravity waaaves launch control stuff/
+video-docs/chavv-docs/
+video-docs/chavv-docs/arduino chav/
+video-docs/chavv-docs/arduino chav/SolidBackgrounds/
+video-docs/chavv-docs/arduino chav/VGA4EVA_Abstract_Waves/
+video-docs/chavv-docs/arduino chav/VGA4EVA_Color_Bars/
+video-docs/chavv-docs/arduino chav/VGA4EVA_Palindrome_/
+video-docs/chavv-docs/arduino chav/VGA4EVA_V_BARS/
+video-docs/chavv-docs/arduino chav/VGA4EVA_Waves/
+video-docs/vdmx-media/
+video-docs/vdmx-media/ISF/
+video-docs/vdmx-media/Movies/
+video-docs/video-euro-companies/
+video-docs/video-euro-companies/foxdocs-main/
+video-docs/video-euro-companies/foxdocs-main/ACCESS - Triple Attenuvert Bias/
+video-docs/video-euro-companies/foxdocs-main/GAMMA - Dual SQU & LOG/
+video-docs/video-euro-companies/foxdocs-main/LUMA - RGB2YRGB/
+video-docs/video-euro-companies/foxdocs-main/MULT A - Buffered Multiple/
+video-docs/video-euro-companies/foxdocs-main/MULT B - Buffered Multiple/
+video-docs/video-euro-companies/foxdocs-main/NVRT - Quad Luma Inverter/
+video-docs/video-euro-companies/foxdocs-main/PASS4 - Quad Passive Switch/
+video-docs/video-euro-companies/foxdocs-main/RECT - Dual Rectifier/
+video-docs/video-euro-companies/foxdocs-main/SHUTTER - Triple Multiplexer/
+video-docs/video-euro-companies/foxdocs-main/SW6 - Switch Expander/
+video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/
+video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/VEIL v1.1F/
+video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/VEIL v1.2F/
+video-docs/video-euro-companies/lzxdocs-master/
+video-docs/video-euro-companies/lzxdocs-master/blog/
+video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/
+video-docs/video-euro-companies/lzxdocs-master/docs/
+video-docs/video-euro-companies/lzxdocs-master/docs/Bitvision/
+video-docs/video-euro-companies/lzxdocs-master/docs/andor-1/
+video-docs/video-euro-companies/lzxdocs-master/docs/arch/
+video-docs/video-euro-companies/lzxdocs-master/docs/bridge/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-i-sync-generator/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-ii-rgb-encoder/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-iii-video-input/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-iv-dual-ramp-generator/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-ix-voltage-controlled-oscillator/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-v-scaler/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-vi-fader/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-vii-processor/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-viii-hard-key-generator/
+video-docs/video-euro-companies/lzxdocs-master/docs/cadet-x-multiplier/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-000-adc/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-001-dac/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-010-clock-vco/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-011-shift-register/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-100-multi-gate/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-101-quad-gate/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-110-counter/
+video-docs/video-euro-companies/lzxdocs-master/docs/castle-111-d-flip-flops/
+video-docs/video-euro-companies/lzxdocs-master/docs/color-chords/
+video-docs/video-euro-companies/lzxdocs-master/docs/curtain/
+video-docs/video-euro-companies/lzxdocs-master/docs/doorway/
+video-docs/video-euro-companies/lzxdocs-master/docs/escher-sketch/
+video-docs/video-euro-companies/lzxdocs-master/docs/liquid-tv/
+video-docs/video-euro-companies/lzxdocs-master/docs/marble-index/
+video-docs/video-euro-companies/lzxdocs-master/docs/memory-palace/
+video-docs/video-euro-companies/lzxdocs-master/docs/modules/
+video-docs/video-euro-companies/lzxdocs-master/docs/modules/601-difference-amplifier/
+video-docs/video-euro-companies/lzxdocs-master/docs/navigator/
+video-docs/video-euro-companies/lzxdocs-master/docs/pendulum/
+video-docs/video-euro-companies/lzxdocs-master/docs/polar-fringe/
+video-docs/video-euro-companies/lzxdocs-master/docs/prismatic-ray/
+video-docs/video-euro-companies/lzxdocs-master/docs/reference-designs/
+video-docs/video-euro-companies/lzxdocs-master/docs/shapechanger/
+video-docs/video-euro-companies/lzxdocs-master/docs/staircase/
+video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-basics/
+video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-extras/
+video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-extras/img/
+video-docs/video-euro-companies/lzxdocs-master/docs/vidiot/
+video-docs/video-euro-companies/lzxdocs-master/docs/visual-cortex/
+video-docs/video-euro-companies/lzxdocs-master/docs/war-of-the-ants/
+video-docs/video-euro-companies/lzxdocs-master/src/
+video-docs/video-euro-companies/lzxdocs-master/src/components/
+video-docs/video-euro-companies/lzxdocs-master/src/components/HomepageFeatures/
+video-docs/video-euro-companies/lzxdocs-master/src/css/
+video-docs/video-euro-companies/lzxdocs-master/src/pages/
+video-docs/video-euro-companies/lzxdocs-master/static/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/cadet1_1.0.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/diver_1.0.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/dsg3_1.0.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/eschersketch_1.0.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/esg3_1.1.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_1.8.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_1.9.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_2.0.1/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/memorypalace_2.0.2/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/scrolls_1.0.1/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/scrolls_1.0.2/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.0/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.1/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.2/
+video-docs/video-euro-companies/lzxdocs-master/static/firmware/tbc2_1.0.3/
+video-docs/video-euro-companies/lzxdocs-master/static/img/
+video-docs/video-euro-companies/lzxdocs-master/static/pdf/
+video-docs/video-euro-companies/lzxdocs-master/static/pdf/3trinsrgb+-rgb-output-expander/
+video-docs/video-euro-companies/syntonie-master/
+video-docs/video-euro-companies/syntonie-master/Adapter board/
+video-docs/video-euro-companies/syntonie-master/Animate/
+video-docs/video-euro-companies/syntonie-master/Animate_EXP/
+video-docs/video-euro-companies/syntonie-master/CBV001/
+video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_BOMs/
+video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_Docs/
+video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_Enclosure/
+video-docs/video-euro-companies/syntonie-master/CBV001/CBV001_Gerbers/
+video-docs/video-euro-companies/syntonie-master/CBV002/
+video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_BOMs/
+video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Docs/
+video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Enclosure/
+video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Cadrans/
+video-docs/video-euro-companies/syntonie-master/Courbes/
+video-docs/video-euro-companies/syntonie-master/Entrée/
+video-docs/video-euro-companies/syntonie-master/Isohélie/
+video-docs/video-euro-companies/syntonie-master/Legacy/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Gerbers/AVEMODV2.2_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_PCB_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/files/
+video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/
+video-docs/video-euro-companies/syntonie-master/Legacy/CBV001S/
+video-docs/video-euro-companies/syntonie-master/Legacy/DISCRET11/
+video-docs/video-euro-companies/syntonie-master/Legacy/FFG/
+video-docs/video-euro-companies/syntonie-master/Legacy/FFG/FFG_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/FFG/FFG_Gerbers/FFG_RevD_Main_Board_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/FFG/FFG_Gerbers/FFG_RevE_Control_Board_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/FFG/Visualist original doc/
+video-docs/video-euro-companies/syntonie-master/Legacy/FFG/Visualist original doc/Visualist_OG_RevA_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/TEA5114 1-to-3 Video Splitter/
+video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/
+video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Control_Board_Gerber/
+video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Control_Board_Gerber/TRQV2 - Controlboard Gerbers/
+video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Main_Board_Gerber/
+video-docs/video-euro-companies/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Main_Board_Gerber/TRQV2 - Mainboard Gerbers/
+video-docs/video-euro-companies/syntonie-master/Rampes/
+video-docs/video-euro-companies/syntonie-master/Seuils/
+video-docs/video-euro-companies/syntonie-master/Solaire/
+video-docs/video-euro-companies/syntonie-master/Stable/
+video-docs/video-euro-companies/syntonie-master/VU001/
+video-docs/video-euro-companies/syntonie-master/VU001B/
+video-docs/video-euro-companies/syntonie-master/VU001C/
+video-docs/video-euro-companies/syntonie-master/VU002/
+video-docs/video-euro-companies/syntonie-master/VU002/VU002_BOM/
+video-docs/video-euro-companies/syntonie-master/VU002/VU002_Doc/
+video-docs/video-euro-companies/syntonie-master/VU002/VU002_Gerbers/
+video-docs/video-euro-companies/syntonie-master/VU002/VU002_Schematic_PCB/
+video-docs/video-euro-companies/syntonie-master/VU003/
+video-docs/video-euro-companies/syntonie-master/VU003B/
+video-docs/video-euro-companies/syntonie-master/VU004/
+video-docs/video-euro-companies/syntonie-master/VU005/
+video-docs/video-euro-companies/syntonie-master/VU006/
+video-docs/video-euro-companies/syntonie-master/VU007/
+video-docs/video-euro-companies/syntonie-master/VU007B/
+video-docs/video-euro-companies/syntonie-master/VU008/
+video-docs/video-euro-companies/syntonie-master/VU009/
+video-docs/video-euro-companies/syntonie-master/VU010/
+Remote-Only/
+Remote-Only/books/
+Remote-Only/diy/
+Remote-Only/diy/CIRCUITS/
+Remote-Only/diy/g-richter/
+Remote-Only/diy/g-richter/Wiard 300 Manual/
+Remote-Only/diy/g-richter/wiard-docs/
+Remote-Only/diy/g-richter/wiard-docs/wiardmusicweasel-manual-material/
+Remote-Only/diy/j-haible/
+Remote-Only/diy/j-haible/polymoog schems/
+Remote-Only/diy/p-blasser/
+Remote-Only/diy/paper-circuits/
+Remote-Only/diy/projects/
+Remote-Only/diy/projects/TridexMuse/
+Remote-Only/diy/r-hordijk/
+Remote-Only/manuals/
+Remote-Only/manuals/fx-rackunits/
+Remote-Only/manuals/mixing-desks-mixers/
+Remote-Only/manuals/roland/
+Remote-Only/manuals/tascam/
+Remote-Only/microphones/
+Remote-Only/references/
+Remote-Only/resources/
+Remote-Only/resources/fosterx/
+Remote-Only/service-docs/
+Remote-Only/service-docs/patch-diagrams/
+Remote-Only/video-docs/
+Remote-Only/video-docs/MUSICVISION/
+Remote-Only/video-docs/andreijay-vserpi/
+Remote-Only/video-docs/andreijay-vserpi/VSERPI and VSEJET controller templates, overlays, scene settings, etc/
+Remote-Only/video-docs/andreijay-vserpi/VSERPI and VSEJET controller templates, overlays, scene settings, etc/gravity waaaves launch control stuff/
+Remote-Only/video-docs/vdmx-media/
+Remote-Only/video-docs/vdmx-media/ISF/
+Remote-Only/video-docs/vdmx-media/Movies/
+Remote-Only/video-docs/video-euro-companies/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/ACCESS - Triple Attenuvert Bias/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/GAMMA - Dual SQU & LOG/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/LUMA - RGB2YRGB/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/MULT A - Buffered Multiple/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/MULT B - Buffered Multiple/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/NVRT - Quad Luma Inverter/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/PASS4 - Quad Passive Switch/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/RECT - Dual Rectifier/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/SHUTTER - Triple Multiplexer/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/SW6 - Switch Expander/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/VEIL v1.1F/
+Remote-Only/video-docs/video-euro-companies/foxdocs-main/VEIL - Priority Layering/VEIL v1.2F/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/blog/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/blog/2024-05-18-chromagnon-box/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/docs/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-extras/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/docs/tutorial-extras/img/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/
+Remote-Only/video-docs/video-euro-companies/lzxdocs-master/static/img/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/CBV002/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/CBV002/CBV002_Docs/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/CBV001S/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/Legacy/TEA5114 1-to-3 Video Splitter/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU003B/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU005/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU006/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU007B/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU008/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU009/
+Remote-Only/video-docs/video-euro-companies/syntonie-master/VU010/
+books/computer-music/
+books/electronics/
+books/electronics/analogcomputer/
+books/electronics/analogcomputer/alpaca-analog-computer-learning series/
+books/electronics/analogcomputer/understanding/
+books/electronics/analogcomputer/zerolimiter-circuit-schem-and-bb/
+books/synthesizer-elec-music/
+books/synthesizer-elec-music/engineering-recording-techniques/
+books/synthesizer-elec-music/engineering-recording-techniques/808handson/
+books/synthesizer-elec-music/engineering-recording-techniques/home-recording/
+books/synthesizer-elec-music/theroy-comp-performance-texts/
+books/synthesizer-elec-music/theroy-comp-performance-texts/Harmony/
+books/tape reording/
+books/video-graphics/
+diy/CIRCUITS/
+diy/CIRCUITS/ADA_Flanger/
+diy/CIRCUITS/Buchla;Schems/
+diy/CIRCUITS/Buchla;Schems/Buchla259/
+diy/CIRCUITS/Buchla;Schems/Buchla266/
+diy/CIRCUITS/MUSICVISION/
+diy/CIRCUITS/Proto layoputs from Circuits for Musicians/
+diy/CIRCUITS/Roland_jx3p_schematics/
+diy/CIRCUITS/circuitbending/
+diy/CIRCUITS/paia-synth-schems/
+diy/CIRCUITS/pesoundsynth/
+diy/CIRCUITS/polyfusion_rev_eng/
+diy/CIRCUITS/xpander_schematics/
+diy/DESIGNERS/
+diy/DESIGNERS/NICCOLLINS/
+diy/DESIGNERS/ciat-lombarde/
+diy/DESIGNERS/ciat-lombarde/Grassi 2016/
+diy/DESIGNERS/ciat-lombarde/foursesBOMs/
+diy/DESIGNERS/ciat-lombarde/rolz5unzipME/
+diy/DESIGNERS/dylan-b/
+diy/DESIGNERS/g-richter/
+diy/DESIGNERS/g-richter/WIARDSTUFF/
+diy/DESIGNERS/g-richter/wiard manuals/
+diy/DESIGNERS/g-richter/wiardmusicweasel-manual-material/
+diy/DESIGNERS/gisekes/
+diy/DESIGNERS/j-haible/
+diy/DESIGNERS/j-haible/Wayback Machine_files/
+diy/DESIGNERS/j-haible/interpolating-scanner-jh/
+diy/DESIGNERS/r-hordijk/
+diy/DESIGNERS/thomashenry/
+diy/PAPER_CIRCUITS/
+diy/PROJECTS/
+diy/SCHEMATICS/
+dub/
+dub/DUBDRUMPATTERNS/
+manuals/fx-rackunits/altec/
+manuals/fx-rackunits/compressors/
+manuals/fx-rackunits/effectron/
+manuals/fx-rackunits/fischer-price/
+manuals/fx-rackunits/mutron/
+manuals/fx-rackunits/orban/
+manuals/fx-rackunits/simmons/
+manuals/fx-rackunits/ursamajor/
+manuals/manuals-misc/
+manuals/manuals-misc/BJFEOwnersManuals/
+manuals/manuals-misc/Model Kits/
+manuals/manuals-misc/N64Manuals/
+manuals/manuals-misc/NintendoVirtualBoyManuals/
+manuals/manuals-misc/SNES-manuals/
+manuals/manuals-misc/TimexSinclair2068Manuals/
+manuals/manuals-misc/WizardryManuals/
+manuals/manuals-misc/redstone-rocket-technical-manuals/
+manuals/manuals-misc/z-89-full-main-manual/
+manuals/microphones/
+manuals/microphones/AltecLansing/
+manuals/microphones/shure/
+manuals/omnichord/
+manuals/organs/
+manuals/synths/
+manuals/synths/New Folder With Items/
+manuals/synths/arp/
+manuals/synths/arp/Arp_Odyssey_Manual/
+manuals/synths/buchla/
+manuals/synths/buchla/Barton Easel Patches/
+manuals/synths/casio/
+manuals/synths/ciat-lombarde/
+manuals/synths/code-synthesis/
+manuals/synths/code-synthesis/shnth-master/
+manuals/synths/code-synthesis/shnth-master/bin/
+manuals/synths/code-synthesis/shnth-master/lib/
+manuals/synths/crumar/
+manuals/synths/ems/
+manuals/synths/ems/emu/
+manuals/synths/ensoniq/
+manuals/synths/euro/
+manuals/synths/euro/Toppobrillo/
+manuals/synths/euro/Verbos/
+manuals/synths/korg/
+manuals/synths/korg/MUSIICHISTORY/
+manuals/synths/korg/MonoPoly/
+manuals/synths/korg/MonoPoly/Settings/
+manuals/synths/korg/Polysix/
+manuals/synths/korg/Polysix/Settings/
+manuals/synths/korg/Prophecy/
+manuals/synths/korg/Prophecy/Settings/
+manuals/synths/korg/TRITON/
+manuals/synths/korg/miniKORG/
+manuals/synths/korg/miniKORG/Settings/
+manuals/synths/make-noise/
+manuals/synths/moog/
+manuals/synths/moog/Lab_Series_L5_L7_L9_L11_service/
+manuals/synths/oberheim/
+manuals/synths/oberheim/Manuals/
+manuals/synths/oberheim/Oberheim_Matrix6_Servicemanual/
+manuals/synths/oberheim/ROM Images/
+manuals/synths/oberheim/ROM Images/Calibration/
+manuals/synths/oberheim/ROM Images/Operating System/
+manuals/synths/oberheim/ROM Images/Voice Board/
+manuals/synths/oberheim/Schematics/
+manuals/synths/oberheim/Schematics/Master Board/
+manuals/synths/oberheim/Schematics/Voice Board/
+manuals/synths/oberheim/Source Code/
+manuals/synths/oberheim/Source Code/OBERBUCH001/
+manuals/synths/oberheim/Source Code/OBERBUCH001/AFILES/
+manuals/synths/oberheim/Source Code/OBERBUCH001/CFILES/
+manuals/synths/oberheim/Source Code/OBERBUCH001/DOC/
+manuals/synths/oberheim/Source Code/OBERBUCH001/DOC/ICE/
+manuals/synths/oberheim/Source Code/_original_archive/
+manuals/synths/roland/
+manuals/synths/roland/Roland_jx3p/
+manuals/synths/roland/junos/
+manuals/synths/roland/tr-x0x/
+manuals/synths/sequential-circuits/
+manuals/synths/serge/
+manuals/synths/serge/Serge Gold Book/
+manuals/synths/tridex/
+manuals/tape-machines/
+manuals/tape-machines/denondrm400 3/
+manuals/tape-machines/fostex/
+manuals/tape-machines/sony/
+manuals/tape-machines/studer-revox/
+manuals/tape-machines/teac-tascam/
+manuals/tape-machines/teac-tascam/recording-gear/
+manuals/tape-machines/teac-tascam/recording-gear/fairchild/
+manuals/tape-machines/teac-tascam/recording-gear/tascam-m-300-series/
+manuals/tape-machines/yamaha/
+references/Barton Easel Patches/
+references/patch-diagrams/
+references/patch-diagrams/Logic w: MN MAths/
+references/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with LFOs/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with a Sequencer/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with a Switch/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with multiple envelopes/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Drunken Walk S&H/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Ducking LFOs for Rhythmic Results/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Ducking with an Inverted Envelope/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Filter as a Slew Limiter/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Freezing Modulation with T&H/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Gating LFOs with VCAs/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with AM/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with FM/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with T&H/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with Wave Folders/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with reset/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Inverting Gates/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/No two Gates together/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Resonant Envelopes/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Rhythmic Modulation with Track and Hold/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Shaping Envelopes with Folders/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Shaping LFOs with Envelopes/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Syncing LFOs/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Taming S&H with Filters/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Using Slew-Limiters as Envelopes/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/VCA as AND logic/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Velocity with Multiple Envelopes/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Harmony with S&H/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Probability per step/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Rests with a VCA/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Swing with Trigger Delay/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Variation with a VCA/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Chaining Sequences With Sequential Switches/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Composing With Logic/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Composing with LFOs/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Composing with Shift Registers/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating Arps with Sequential Switches/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating Wonky Beats/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating a One-Shot Sequence with a Burst Generator/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating melodic sequences by mixing gates/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Decoupling Pitch and Triggers/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ducking Pitch for Trills and Ratchets/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Extracting rhythms from complex modulation/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Gating Sequences with T&H/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Generative Envelopes and Clocks/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Getting Rid Of Note Tails/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Glissando with an Envelope/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Interesting Sequences with Reset/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Mixing Sequences/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Pitch Stutters with Track and Hold/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Pitch through Delay/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Quantizing with AND Logic/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Random Gates with a Comparator/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Random Notes per step/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ratcheting using Sequential Switches/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ratcheting with a Burst Generator/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ratcheting with a delay/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Rhythms with Clock Dividers and Logic/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Splitting Sequences with S&H/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Splitting a Sequence with Flip-Flops/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Splitting a Sequence with a Comparator/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Swing and Ratchets with Oscillator Sync/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/The Quantum Trick/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Using OR Logic to combine Gates and Triggers/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Using Sequential Switches To Add Movement To Sequences/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Befaco/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Befaco/Rampage/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/Cnoc/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/Ochd/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/Tain/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Character with Noise/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Grit with Sample-Rate Reduction/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Grit with a Comparator/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Punch with an extra Envelope/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Tremolo/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Velocity Control/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Width with Delay/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding effect layers with a comparator/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Analog Sound with Drift/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Band-Pass with HP and LP/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Boosting the lows with HP filters/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Brighter High Notes/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Delay on the Highs/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Delayed Vibrato with an Envelope/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Double Filter Fun/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Drum Synthesis/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Drums into a short Delay/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Ducking Effects/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Envelope to LFO rate/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Fat Sound with Three Oscillators/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Filter in delay feedback/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Flanger and Chorus with Delay/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Karplus Strong/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Matrix Mixer Feedback Loops/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Mixing Waves with Logic/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Negative Key-Tracking/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Oscillator Sync/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Panning with two VCAs/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Pulse Width not only for Pulse Wave/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Sequencers as sound sources/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Shifting in Delay Feedback/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Stable FM with Sync/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Stereo Width with 2 Filters/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Sub Oscillator with Flip-Flop/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Sub-Oscillator with a Clock Divider/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Talking Voice/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Tamed Squelchy Filter/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Tuning Noise/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Using Drums to shape Timbre/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Vocoding Drums/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Vowel Effect with Audio Rate Modulation/
+references/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Wave Splicing/
+service-docs/patch-diagrams/
+service-docs/patch-diagrams/Logic w: MN MAths/
+service-docs/patch-diagrams/Monotrail Tech Talk - All regular PDF sheets/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with LFOs/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with a Sequencer/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with a Switch/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Complex Envelopes with multiple envelopes/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Drunken Walk S&H/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Ducking LFOs for Rhythmic Results/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Ducking with an Inverted Envelope/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Filter as a Slew Limiter/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Freezing Modulation with T&H/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Gating LFOs with VCAs/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with AM/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with FM/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with T&H/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with Wave Folders/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Interesting LFOs with reset/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Inverting Gates/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/No two Gates together/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Resonant Envelopes/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Rhythmic Modulation with Track and Hold/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Shaping Envelopes with Folders/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Shaping LFOs with Envelopes/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Syncing LFOs/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Taming S&H with Filters/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Using Slew-Limiters as Envelopes/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/VCA as AND logic/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/CV and Modulation/Velocity with Multiple Envelopes/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Harmony with S&H/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Probability per step/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Rests with a VCA/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Swing with Trigger Delay/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Adding Variation with a VCA/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Chaining Sequences With Sequential Switches/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Composing With Logic/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Composing with LFOs/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Composing with Shift Registers/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating Arps with Sequential Switches/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating Wonky Beats/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating a One-Shot Sequence with a Burst Generator/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Creating melodic sequences by mixing gates/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Decoupling Pitch and Triggers/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ducking Pitch for Trills and Ratchets/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Extracting rhythms from complex modulation/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Gating Sequences with T&H/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Generative Envelopes and Clocks/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Getting Rid Of Note Tails/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Glissando with an Envelope/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Interesting Sequences with Reset/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Mixing Sequences/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Pitch Stutters with Track and Hold/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Pitch through Delay/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Quantizing with AND Logic/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Random Gates with a Comparator/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Random Notes per step/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ratcheting using Sequential Switches/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ratcheting with a Burst Generator/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Ratcheting with a delay/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Rhythms with Clock Dividers and Logic/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Splitting Sequences with S&H/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Splitting a Sequence with Flip-Flops/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Splitting a Sequence with a Comparator/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Swing and Ratchets with Oscillator Sync/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/The Quantum Trick/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Using OR Logic to combine Gates and Triggers/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Composition Techniques/Using Sequential Switches To Add Movement To Sequences/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Befaco/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Befaco/Rampage/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/Cnoc/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/Ochd/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Hardware Modules/Instruo/Tain/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Character with Noise/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Grit with Sample-Rate Reduction/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Grit with a Comparator/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Punch with an extra Envelope/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Tremolo/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Velocity Control/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding Width with Delay/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Adding effect layers with a comparator/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Analog Sound with Drift/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Band-Pass with HP and LP/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Boosting the lows with HP filters/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Brighter High Notes/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Delay on the Highs/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Delayed Vibrato with an Envelope/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Double Filter Fun/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Drum Synthesis/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Drums into a short Delay/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Ducking Effects/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Envelope to LFO rate/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Fat Sound with Three Oscillators/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Filter in delay feedback/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Flanger and Chorus with Delay/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Karplus Strong/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Matrix Mixer Feedback Loops/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Mixing Waves with Logic/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Negative Key-Tracking/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Oscillator Sync/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Panning with two VCAs/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Pulse Width not only for Pulse Wave/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Sequencers as sound sources/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Shifting in Delay Feedback/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Stable FM with Sync/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Stereo Width with 2 Filters/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Sub Oscillator with Flip-Flop/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Sub-Oscillator with a Clock Divider/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Talking Voice/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Tamed Squelchy Filter/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Tuning Noise/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Using Drums to shape Timbre/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Vocoding Drums/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Vowel Effect with Audio Rate Modulation/
+service-docs/patch-diagrams/Patching Techniques and Ideas February 2023/Patches/Sound-Design Techniques/Wave Splicing/
+service-docs/scores/
+service-docs/scores/graphicscores/
+service-docs/software/
+service-docs/software/arduino/
+service-docs/software/arduino/VGA4EVA_Color_Bars/
+service-docs/software/arduino/libraries/
+service-docs/software/arduino/libraries/TimerHelpers/
+service-docs/software/arduino/lsdj/
+service-docs/software/arduino/lsdj/lsdj9_3_3-arduinoboy/
+service-docs/software/arduino/lsdj/lsdj9_4_0-stable/
+service-docs/software/arduino/lsdj/lsdj9_4_0-stable 2/
+service-docs/software/arduino/lsdj/lsdj9_4_1/
+service-docs/software/arduino/sketch_apr29b/
+service-docs/software/arduino/sketch_may01c/
+service-docs/software/blippoo_for_wingie_upload_pack/
+service-docs/software/blippoo_for_wingie_upload_pack/Drivers/
+service-docs/software/blippoo_for_wingie_upload_pack/Drivers/OSX/
+service-docs/software/blippoo_for_wingie_upload_pack/Drivers/OSX/CH34XSER_MAC/
+service-docs/software/blippoo_for_wingie_upload_pack/Resources/
+video-docs/Andrei Jay VSERP Images/
+video-docs/Andrei Jay VSERP Images/VSERPI and VSEJET controller templates, overlays, scene settings, etc/
+video-docs/Andrei Jay VSERP Images/VSERPI and VSEJET controller templates, overlays, scene settings, etc/gravity waaaves launch control stuff/
+video-docs/EURO/
+video-docs/EURO/foxdocs-main/
+video-docs/EURO/foxdocs-main/ACCESS - Triple Attenuvert Bias/
+video-docs/EURO/foxdocs-main/GAMMA - Dual SQU & LOG/
+video-docs/EURO/foxdocs-main/LUMA - RGB2YRGB/
+video-docs/EURO/foxdocs-main/MULT A - Buffered Multiple/
+video-docs/EURO/foxdocs-main/MULT B - Buffered Multiple/
+video-docs/EURO/foxdocs-main/NVRT - Quad Luma Inverter/
+video-docs/EURO/foxdocs-main/PASS4 - Quad Passive Switch/
+video-docs/EURO/foxdocs-main/RECT - Dual Rectifier/
+video-docs/EURO/foxdocs-main/SHUTTER - Triple Multiplexer/
+video-docs/EURO/foxdocs-main/SW6 - Switch Expander/
+video-docs/EURO/foxdocs-main/VEIL - Priority Layering/
+video-docs/EURO/foxdocs-main/VEIL - Priority Layering/VEIL v1.1F/
+video-docs/EURO/foxdocs-main/VEIL - Priority Layering/VEIL v1.2F/
+video-docs/EURO/lzxdocs-master/
+video-docs/EURO/lzxdocs-master/blog/
+video-docs/EURO/lzxdocs-master/blog/2024-05-18-chromagnon-box/
+video-docs/EURO/lzxdocs-master/docs/
+video-docs/EURO/lzxdocs-master/docs/Bitvision/
+video-docs/EURO/lzxdocs-master/docs/andor-1/
+video-docs/EURO/lzxdocs-master/docs/arch/
+video-docs/EURO/lzxdocs-master/docs/bridge/
+video-docs/EURO/lzxdocs-master/docs/cadet-i-sync-generator/
+video-docs/EURO/lzxdocs-master/docs/cadet-ii-rgb-encoder/
+video-docs/EURO/lzxdocs-master/docs/cadet-iii-video-input/
+video-docs/EURO/lzxdocs-master/docs/cadet-iv-dual-ramp-generator/
+video-docs/EURO/lzxdocs-master/docs/cadet-ix-voltage-controlled-oscillator/
+video-docs/EURO/lzxdocs-master/docs/cadet-v-scaler/
+video-docs/EURO/lzxdocs-master/docs/cadet-vi-fader/
+video-docs/EURO/lzxdocs-master/docs/cadet-vii-processor/
+video-docs/EURO/lzxdocs-master/docs/cadet-viii-hard-key-generator/
+video-docs/EURO/lzxdocs-master/docs/cadet-x-multiplier/
+video-docs/EURO/lzxdocs-master/docs/castle-000-adc/
+video-docs/EURO/lzxdocs-master/docs/castle-001-dac/
+video-docs/EURO/lzxdocs-master/docs/castle-010-clock-vco/
+video-docs/EURO/lzxdocs-master/docs/castle-011-shift-register/
+video-docs/EURO/lzxdocs-master/docs/castle-100-multi-gate/
+video-docs/EURO/lzxdocs-master/docs/castle-101-quad-gate/
+video-docs/EURO/lzxdocs-master/docs/castle-110-counter/
+video-docs/EURO/lzxdocs-master/docs/castle-111-d-flip-flops/
+video-docs/EURO/lzxdocs-master/docs/color-chords/
+video-docs/EURO/lzxdocs-master/docs/curtain/
+video-docs/EURO/lzxdocs-master/docs/doorway/
+video-docs/EURO/lzxdocs-master/docs/escher-sketch/
+video-docs/EURO/lzxdocs-master/docs/liquid-tv/
+video-docs/EURO/lzxdocs-master/docs/marble-index/
+video-docs/EURO/lzxdocs-master/docs/memory-palace/
+video-docs/EURO/lzxdocs-master/docs/modules/
+video-docs/EURO/lzxdocs-master/docs/modules/601-difference-amplifier/
+video-docs/EURO/lzxdocs-master/docs/navigator/
+video-docs/EURO/lzxdocs-master/docs/pendulum/
+video-docs/EURO/lzxdocs-master/docs/polar-fringe/
+video-docs/EURO/lzxdocs-master/docs/prismatic-ray/
+video-docs/EURO/lzxdocs-master/docs/reference-designs/
+video-docs/EURO/lzxdocs-master/docs/shapechanger/
+video-docs/EURO/lzxdocs-master/docs/staircase/
+video-docs/EURO/lzxdocs-master/docs/tutorial-basics/
+video-docs/EURO/lzxdocs-master/docs/tutorial-extras/
+video-docs/EURO/lzxdocs-master/docs/tutorial-extras/img/
+video-docs/EURO/lzxdocs-master/docs/vidiot/
+video-docs/EURO/lzxdocs-master/docs/visual-cortex/
+video-docs/EURO/lzxdocs-master/docs/war-of-the-ants/
+video-docs/EURO/lzxdocs-master/src/
+video-docs/EURO/lzxdocs-master/src/components/
+video-docs/EURO/lzxdocs-master/src/components/HomepageFeatures/
+video-docs/EURO/lzxdocs-master/src/css/
+video-docs/EURO/lzxdocs-master/src/pages/
+video-docs/EURO/lzxdocs-master/static/
+video-docs/EURO/lzxdocs-master/static/firmware/
+video-docs/EURO/lzxdocs-master/static/firmware/cadet1_1.0.0/
+video-docs/EURO/lzxdocs-master/static/firmware/diver_1.0.0/
+video-docs/EURO/lzxdocs-master/static/firmware/dsg3_1.0.0/
+video-docs/EURO/lzxdocs-master/static/firmware/eschersketch_1.0.0/
+video-docs/EURO/lzxdocs-master/static/firmware/esg3_1.1.0/
+video-docs/EURO/lzxdocs-master/static/firmware/memorypalace_1.8.0/
+video-docs/EURO/lzxdocs-master/static/firmware/memorypalace_1.9.0/
+video-docs/EURO/lzxdocs-master/static/firmware/memorypalace_2.0.1/
+video-docs/EURO/lzxdocs-master/static/firmware/memorypalace_2.0.2/
+video-docs/EURO/lzxdocs-master/static/firmware/scrolls_1.0.1/
+video-docs/EURO/lzxdocs-master/static/firmware/scrolls_1.0.2/
+video-docs/EURO/lzxdocs-master/static/firmware/tbc2_1.0.0/
+video-docs/EURO/lzxdocs-master/static/firmware/tbc2_1.0.1/
+video-docs/EURO/lzxdocs-master/static/firmware/tbc2_1.0.2/
+video-docs/EURO/lzxdocs-master/static/firmware/tbc2_1.0.3/
+video-docs/EURO/lzxdocs-master/static/img/
+video-docs/EURO/lzxdocs-master/static/pdf/
+video-docs/EURO/lzxdocs-master/static/pdf/3trinsrgb+-rgb-output-expander/
+video-docs/EURO/syntonie-master/
+video-docs/EURO/syntonie-master/Adapter board/
+video-docs/EURO/syntonie-master/Animate/
+video-docs/EURO/syntonie-master/Animate_EXP/
+video-docs/EURO/syntonie-master/CBV001/
+video-docs/EURO/syntonie-master/CBV001/CBV001_BOMs/
+video-docs/EURO/syntonie-master/CBV001/CBV001_Docs/
+video-docs/EURO/syntonie-master/CBV001/CBV001_Enclosure/
+video-docs/EURO/syntonie-master/CBV001/CBV001_Gerbers/
+video-docs/EURO/syntonie-master/CBV002/
+video-docs/EURO/syntonie-master/CBV002/CBV002_BOMs/
+video-docs/EURO/syntonie-master/CBV002/CBV002_Docs/
+video-docs/EURO/syntonie-master/CBV002/CBV002_Enclosure/
+video-docs/EURO/syntonie-master/CBV002/CBV002_Gerbers/
+video-docs/EURO/syntonie-master/Cadrans/
+video-docs/EURO/syntonie-master/Courbes/
+video-docs/EURO/syntonie-master/Entrée/
+video-docs/EURO/syntonie-master/Isohélie/
+video-docs/EURO/syntonie-master/Legacy/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Board_Measurements/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.2/AVEMODV2.2_Gerbers/AVEMODV2.2_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2.3/AVE_MOD_V2.3_PCB_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/files/
+video-docs/EURO/syntonie-master/Legacy/AVE MOD/AVE_MOD_V2_3D_Printed_Enclosure (made by Silvester Horák)/images/
+video-docs/EURO/syntonie-master/Legacy/CBV001S/
+video-docs/EURO/syntonie-master/Legacy/DISCRET11/
+video-docs/EURO/syntonie-master/Legacy/FFG/
+video-docs/EURO/syntonie-master/Legacy/FFG/FFG_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/FFG/FFG_Gerbers/FFG_RevD_Main_Board_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/FFG/FFG_Gerbers/FFG_RevE_Control_Board_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/FFG/Visualist original doc/
+video-docs/EURO/syntonie-master/Legacy/FFG/Visualist original doc/Visualist_OG_RevA_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/TEA5114 1-to-3 Video Splitter/
+video-docs/EURO/syntonie-master/Legacy/TRQ/
+video-docs/EURO/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/
+video-docs/EURO/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Control_Board_Gerber/
+video-docs/EURO/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Control_Board_Gerber/TRQV2 - Controlboard Gerbers/
+video-docs/EURO/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Main_Board_Gerber/
+video-docs/EURO/syntonie-master/Legacy/TRQ/TRQ_V2_Gerbers/TRQ_V2_Main_Board_Gerber/TRQV2 - Mainboard Gerbers/
+video-docs/EURO/syntonie-master/Rampes/
+video-docs/EURO/syntonie-master/Seuils/
+video-docs/EURO/syntonie-master/Solaire/
+video-docs/EURO/syntonie-master/Stable/
+video-docs/EURO/syntonie-master/VU001/
+video-docs/EURO/syntonie-master/VU001B/
+video-docs/EURO/syntonie-master/VU001C/
+video-docs/EURO/syntonie-master/VU002/
+video-docs/EURO/syntonie-master/VU002/VU002_BOM/
+video-docs/EURO/syntonie-master/VU002/VU002_Doc/
+video-docs/EURO/syntonie-master/VU002/VU002_Gerbers/
+video-docs/EURO/syntonie-master/VU002/VU002_Schematic_PCB/
+video-docs/EURO/syntonie-master/VU003/
+video-docs/EURO/syntonie-master/VU003B/
+video-docs/EURO/syntonie-master/VU004/
+video-docs/EURO/syntonie-master/VU005/
+video-docs/EURO/syntonie-master/VU006/
+video-docs/EURO/syntonie-master/VU007/
+video-docs/EURO/syntonie-master/VU007B/
+video-docs/EURO/syntonie-master/VU008/
+video-docs/EURO/syntonie-master/VU009/
+video-docs/EURO/syntonie-master/VU010/
+video-docs/MANUALS/
+video-docs/early-video-synth-documentation/

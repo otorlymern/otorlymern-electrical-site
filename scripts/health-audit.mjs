@@ -11,7 +11,7 @@ const execFileAsync = promisify(execFile);
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://otorlymern-electrical.com";
 const directBucketOrigin = "https://s3.us-west-2.wasabisys.com/media.otorlymern-electrical.com";
-const knownPublicObject = `${directBucketOrigin}/pdfs/manuals/arp-2600-owners-manual.pdf`;
+const knownPublicObject = `${origin}/manuals/documents/arp-2600-owners-manual.pdf`;
 const peerTubeEmbed = "https://videos.scanlines.xyz/videos/embed/93372fc7-a688-465e-a9e3-cd3d47ab4eff";
 const expectedDmarc = "v=DMARC1; p=none; rua=mailto:postmaster@otorlymern-electrical.com; adkim=r; aspf=r; pct=100";
 const expectedSpf = "v=spf1 include:spf.privateemail.com ~all";
@@ -228,14 +228,14 @@ async function storageAndVideoAudit() {
     const response = await fetchWithTimeout(knownPublicObject, {
       headers: { Range: "bytes=0-0" },
     });
-    requireStatus(response, [200, 206], { url: knownPublicObject, userAgentCategory: "normal-monitor-wasabi" });
+    requireStatus(response, [200, 206], { url: knownPublicObject, userAgentCategory: "normal-monitor-site-asset" });
     return `${response.status}`;
   });
 
   await check("Wasabi anonymous LIST denied", async () => {
     const url = `${directBucketOrigin}?list-type=2`;
     const response = await fetchWithTimeout(url, { redirect: "manual" });
-    requireStatus(response, 403, { url, userAgentCategory: "normal-monitor-wasabi" });
+    requireStatus(response, 403, { url, userAgentCategory: "normal-monitor-site-asset" });
     return "403";
   });
 
@@ -254,7 +254,7 @@ async function storageAndVideoAudit() {
       if (response.status >= 200 && response.status < 300) {
         throw new Error(`PUBLIC WRITE EXPOSURE: ${response.status}; sentinel preserved at ${sentinel}`);
       }
-      requireStatus(response, 403, { url: sentinel, userAgentCategory: "normal-monitor-wasabi" });
+      requireStatus(response, 403, { url: sentinel, userAgentCategory: "normal-monitor-site-asset" });
       return "403";
     });
   } else {

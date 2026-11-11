@@ -79,6 +79,7 @@ export const EXCLUDED_FILE_NAMES = new Set([
 // each page is migrated to a verified Wasabi or PeerTube destination.
 export const TEMPORARY_PUBLIC_BINARY_ALLOWLIST = new Set([
   "images/diagrams/pingpong-r2r.pdf",
+  "manuals/documents/arp-2600-owners-manual.pdf",
   "solutions/DIY/projects/Ring MoulationAlternativesStephenBillow.pdf",
   "solutions/DIY/projects/vocalsynthesiuss.pdf",
   "video/0921.mp4",
