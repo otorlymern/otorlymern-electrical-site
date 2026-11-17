@@ -1,7 +1,135 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A compact analog-delay guitar flanger using a SAD-1024 delay line and supporting clock, filter, and mixing circuitry. The source explains delay-line behavior, component selection, construction, and setup."><title>Anderton Flanger DIY Guide | Otorlymern Electrical Solutions</title><link rel="stylesheet" href="/css/diystyle.css"><link rel="stylesheet" href="/solutions/DIY/projects/projects.css"><link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css"><link rel="stylesheet" href="/css/site-nav.css"></head>
-<body class="diy-projects-page diy-project-guide"><header><nav><ul class="nav-bar"><li><a href="/index.html">Home</a></li><li class="dropdown"><a href="/systems/rrr.html">Systems</a><ul class="dropdown-content"><li><a href="/music/studio.html">OEStudio</a></li><li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li><li><a href="/systems/home-recording.html">Home Recording</a></li><li><a href="/video/videolibrary.html">Video Library</a></li><li><a href="/solutions/resources/index.html">Resources</a></li></ul></li><li><a href="/services/index.html">Services</a></li><li class="dropdown"><a href="/solutions/index.html">Solutions</a><ul class="dropdown-content"><li><a href="/oes-patch-builder/index.html">Patch Builder</a></li><li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li><li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li><li><a href="/solutions/resources/index.html">Links / Resources</a></li></ul></li><li><a href="/manuals/">Archive</a></li></ul></nav></header><main class="projects-main"><section class="projects-hero project-guide-hero"><div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div><div class="project-guide-title"><p class="project-guide-kicker">Craig Anderton · Electronic Guitar</p><h1><span>Anderton Flanger</span></h1><p class="project-guide-kind">Analog delay pedal construction article</p></div></section><p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
-<div class="project-guide-grid"><section class="project-window window guide-window guide-window--description"><div class="title-bar"><span class="project-window-name">Description</span></div><div class="separator"></div><div class="window-pane"><p>A compact analog-delay guitar flanger using a SAD-1024 delay line and supporting clock, filter, and mixing circuitry. The source explains delay-line behavior, component selection, construction, and setup.</p><p class="guide-source-link"><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/anderton-flanger.pdf" target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p></div></section>
-<section class="project-window window guide-window guide-window--materials"><div class="title-bar"><span class="project-window-name">Materials</span></div><div class="separator"></div><div class="window-pane"><ul><li>SAD-1024 analog delay IC (vintage; confirm availability and compatibility of any substitute)</li><li>RC4136/XR4136 quad op amp and the remaining ICs listed in the original parts table</li><li>Resistors, capacitors, trimmers, jacks, DPDT/SPST switches, sockets, wire, and enclosure per the article’s BOM</li><li>Audio test source, amplifier, and oscilloscope or audio probe for setup</li></ul></div></section>
-<section class="project-window window guide-window guide-window--steps"><div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div><div class="separator"></div><div class="window-pane"><ol class="guide-steps"><li><strong>Check the complete article and parts table.</strong><p>The article spans a two-part design and relies on the SAD-1024. Confirm that the available scan includes the circuit pages you intend to build and verify any replacement delay IC before laying out a board.</p></li><li><strong>Build the power and clock sections.</strong><p>Assemble the supply and clock circuitry from the schematic. Keep the clock wiring short and separate from audio wiring to reduce noise bleed.</p></li><li><strong>Wire the delay and filter path.</strong><p>Install the delay IC with correct orientation, then connect the input conditioning, output low-pass filter, and feedback/mix path exactly as shown.</p></li><li><strong>Add controls and jacks.</strong><p>Wire delay/feedback/phase controls and the bypass/input/output hardware. Check jack grounding and switch contacts against the article.</p></li><li><strong>Bring up with a limited test signal.</strong><p>Verify supply rails first, then confirm the clock and dry/wet signal paths independently before closing the enclosure.</p></li><li><strong>Calibrate and listen.</strong><p>Follow the article’s trim/setup notes, then test short delay for flanging, slower delay for vibrato, and the feedback/phase options at low amplifier volume.</p></li></ol><p class="guide-caution">The delay IC is a vintage part, and a substitute changes the design. Do not assume pin compatibility; verify the clock, bias, and filter interfaces before substituting.</p></div></section>
-<section class="project-window window guide-window guide-window--source"><div class="title-bar"><span class="project-window-name">Original article</span></div><div class="separator"></div><div class="window-pane"><div class="guide-pdf"><iframe src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/anderton-flanger.pdf" title="Original source PDF for Anderton Flanger" loading="lazy"></iframe></div><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/anderton-flanger.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p></div></section></div></main><footer><p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p><div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div></footer></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="A compact analog-delay guitar flanger using a SAD-1024 delay line and supporting clock, filter, and mixing circuitry. The source explains delay-line behavior, component selection, construction, and setup.">
+  <title>Anderton Flanger DIY Guide | Otorlymern Electrical Solutions</title>
+  <link rel="stylesheet" href="/css/diystyle.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css">
+  <link rel="stylesheet" href="/css/site-nav.css">
+</head>
+
+<body class="diy-projects-page diy-project-guide">
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/manuals/">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="projects-main">
+    <section class="projects-hero project-guide-hero">
+      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
+          class="projects-title-ripple projects-title-ripple--one"></span><span
+          class="projects-title-ripple projects-title-ripple--two"></span></div>
+      <div class="project-guide-title">
+        <p class="project-guide-kicker">Craig Anderton · Electronic Guitar</p>
+        <h1><span>Anderton Flanger</span></h1>
+        <p class="project-guide-kind">Analog delay pedal construction article</p>
+      </div>
+    </section>
+    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+    <div class="project-guide-grid">
+      <section class="project-window window guide-window guide-window--description">
+        <div class="title-bar"><span class="project-window-name">Description</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <p>A compact analog-delay guitar flanger using a SAD-1024 delay line and supporting clock, filter, and mixing
+            circuitry. The source explains delay-line behavior, component selection, construction, and setup.</p>
+          <p class="guide-source-link"><a
+              href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/anderton-flanger.pdf"
+              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--materials">
+        <div class="title-bar"><span class="project-window-name">Materials</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul>
+            <li>SAD-1024 analog delay IC (vintage; confirm availability and compatibility of any substitute)</li>
+            <li>RC4136/XR4136 quad op amp and the remaining ICs listed in the original parts table</li>
+            <li>Resistors, capacitors, trimmers, jacks, DPDT/SPST switches, sockets, wire, and enclosure per the
+              article’s BOM</li>
+            <li>Audio test source, amplifier, and oscilloscope or audio probe for setup</li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--steps">
+        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ol class="guide-steps">
+            <li><strong>Check the complete article and parts table.</strong>
+              <p>The article spans a two-part design and relies on the SAD-1024. Confirm that the available scan
+                includes the circuit pages you intend to build and verify any replacement delay IC before laying out a
+                board.</p>
+            </li>
+            <li><strong>Build the power and clock sections.</strong>
+              <p>Assemble the supply and clock circuitry from the schematic. Keep the clock wiring short and separate
+                from audio wiring to reduce noise bleed.</p>
+            </li>
+            <li><strong>Wire the delay and filter path.</strong>
+              <p>Install the delay IC with correct orientation, then connect the input conditioning, output low-pass
+                filter, and feedback/mix path exactly as shown.</p>
+            </li>
+            <li><strong>Add controls and jacks.</strong>
+              <p>Wire delay/feedback/phase controls and the bypass/input/output hardware. Check jack grounding and
+                switch contacts against the article.</p>
+            </li>
+            <li><strong>Bring up with a limited test signal.</strong>
+              <p>Verify supply rails first, then confirm the clock and dry/wet signal paths independently before closing
+                the enclosure.</p>
+            </li>
+            <li><strong>Calibrate and listen.</strong>
+              <p>Follow the article’s trim/setup notes, then test short delay for flanging, slower delay for vibrato,
+                and the feedback/phase options at low amplifier volume.</p>
+            </li>
+          </ol>
+          <p class="guide-caution">The delay IC is a vintage part, and a substitute changes the design. Do not assume
+            pin compatibility; verify the clock, bias, and filter interfaces before substituting.</p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--source">
+        <div class="title-bar"><span class="project-window-name">Original article</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <div class="guide-pdf"><iframe
+              src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/anderton-flanger.pdf"
+              title="Original source PDF for Anderton Flanger" loading="lazy"></iframe></div>
+          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/anderton-flanger.pdf"
+              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
+        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
+  </footer>
+</body>
+
+</html>

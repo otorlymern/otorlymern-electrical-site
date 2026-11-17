@@ -1,7 +1,131 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A four-voice just-intonation drone concept. The article explains combining a reference frequency, phase-locked loops, and programmable binary division to derive related pitches; it includes a programming truth table."><title>Digital Dronezilla DIY Guide | Otorlymern Electrical Solutions</title><link rel="stylesheet" href="/css/diystyle.css"><link rel="stylesheet" href="/solutions/DIY/projects/projects.css"><link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css"><link rel="stylesheet" href="/css/site-nav.css"></head>
-<body class="diy-projects-page diy-project-guide"><header><nav><ul class="nav-bar"><li><a href="/index.html">Home</a></li><li class="dropdown"><a href="/systems/rrr.html">Systems</a><ul class="dropdown-content"><li><a href="/music/studio.html">OEStudio</a></li><li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li><li><a href="/systems/home-recording.html">Home Recording</a></li><li><a href="/video/videolibrary.html">Video Library</a></li><li><a href="/solutions/resources/index.html">Resources</a></li></ul></li><li><a href="/services/index.html">Services</a></li><li class="dropdown"><a href="/solutions/index.html">Solutions</a><ul class="dropdown-content"><li><a href="/oes-patch-builder/index.html">Patch Builder</a></li><li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li><li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li><li><a href="/solutions/resources/index.html">Links / Resources</a></li></ul></li><li><a href="/manuals/">Archive</a></li></ul></nav></header><main class="projects-main"><section class="projects-hero project-guide-hero"><div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div><div class="project-guide-title"><p class="project-guide-kicker">Philip C. Gallo · Synapse</p><h1><span>Digital Dronezilla</span></h1><p class="project-guide-kind">Design concept · source lacks complete construction details</p></div></section><p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
-<div class="project-guide-grid"><section class="project-window window guide-window guide-window--description"><div class="title-bar"><span class="project-window-name">Description</span></div><div class="separator"></div><div class="window-pane"><p>A four-voice just-intonation drone concept. The article explains combining a reference frequency, phase-locked loops, and programmable binary division to derive related pitches; it includes a programming truth table.</p><p class="guide-source-link"><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dronezillacmosbuild.pdf" target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p></div></section>
-<section class="project-window window guide-window guide-window--materials"><div class="title-bar"><span class="project-window-name">Materials</span></div><div class="separator"></div><div class="window-pane"><ul><li>Stable reference oscillator</li><li>Four PLL-based multiplier paths; the article discusses the CD4046</li><li>Programmable binary divider devices; the article cites the National 6281</li><li>Logic-level load switches for the divider inputs</li><li>Oscilloscope or frequency counter and current-limited bench supply</li></ul></div></section>
-<section class="project-window window guide-window guide-window--steps"><div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div><div class="separator"></div><div class="window-pane"><ol class="guide-steps"><li><strong>Treat the article as an architecture brief.</strong><p>The one-page source does not include a complete schematic or BOM. Do not wire a replica from the block diagram alone.</p></li><li><strong>Recreate the frequency-ratio table.</strong><p>Use the source truth table to list each binary load state and its intended output interval before selecting modern parts.</p></li><li><strong>Prototype one voice path.</strong><p>Research a suitable PLL and programmable divider pair, then build a single path from reference input to divided output using their current datasheets.</p></li><li><strong>Measure before duplicating.</strong><p>Check lock range, output frequency, logic thresholds, and tuning stability with a counter/scope. Only after one path works should you consider repeating it for four voices.</p></li><li><strong>Add programmable loads and mix.</strong><p>Use the source table to select load states and combine outputs through an appropriate audio interface. This stage needs a newly verified schematic.</p></li></ol><p class="guide-caution">The archive source is a conceptual article, not a complete build article. The named divider is a legacy part; this guide deliberately does not invent substitute wiring or a complete BOM.</p></div></section>
-<section class="project-window window guide-window guide-window--source"><div class="title-bar"><span class="project-window-name">Original article</span></div><div class="separator"></div><div class="window-pane"><div class="guide-pdf"><iframe src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dronezillacmosbuild.pdf" title="Original source PDF for Digital Dronezilla" loading="lazy"></iframe></div><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dronezillacmosbuild.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p></div></section></div></main><footer><p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p><div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div></footer></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="A four-voice just-intonation drone concept. The article explains combining a reference frequency, phase-locked loops, and programmable binary division to derive related pitches; it includes a programming truth table.">
+  <title>Digital Dronezilla DIY Guide | Otorlymern Electrical Solutions</title>
+  <link rel="stylesheet" href="/css/diystyle.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css">
+  <link rel="stylesheet" href="/css/site-nav.css">
+</head>
+
+<body class="diy-projects-page diy-project-guide">
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/manuals/">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="projects-main">
+    <section class="projects-hero project-guide-hero">
+      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
+          class="projects-title-ripple projects-title-ripple--one"></span><span
+          class="projects-title-ripple projects-title-ripple--two"></span></div>
+      <div class="project-guide-title">
+        <p class="project-guide-kicker">Philip C. Gallo · Synapse</p>
+        <h1><span>Digital Dronezilla</span></h1>
+        <p class="project-guide-kind">Design concept · source lacks complete construction details</p>
+      </div>
+    </section>
+    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+    <div class="project-guide-grid">
+      <section class="project-window window guide-window guide-window--description">
+        <div class="title-bar"><span class="project-window-name">Description</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <p>A four-voice just-intonation drone concept. The article explains combining a reference frequency,
+            phase-locked loops, and programmable binary division to derive related pitches; it includes a programming
+            truth table.</p>
+          <p class="guide-source-link"><a
+              href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dronezillacmosbuild.pdf"
+              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--materials">
+        <div class="title-bar"><span class="project-window-name">Materials</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul>
+            <li>Stable reference oscillator</li>
+            <li>Four PLL-based multiplier paths; the article discusses the CD4046</li>
+            <li>Programmable binary divider devices; the article cites the National 6281</li>
+            <li>Logic-level load switches for the divider inputs</li>
+            <li>Oscilloscope or frequency counter and current-limited bench supply</li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--steps">
+        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ol class="guide-steps">
+            <li><strong>Treat the article as an architecture brief.</strong>
+              <p>The one-page source does not include a complete schematic or BOM. Do not wire a replica from the block
+                diagram alone.</p>
+            </li>
+            <li><strong>Recreate the frequency-ratio table.</strong>
+              <p>Use the source truth table to list each binary load state and its intended output interval before
+                selecting modern parts.</p>
+            </li>
+            <li><strong>Prototype one voice path.</strong>
+              <p>Research a suitable PLL and programmable divider pair, then build a single path from reference input to
+                divided output using their current datasheets.</p>
+            </li>
+            <li><strong>Measure before duplicating.</strong>
+              <p>Check lock range, output frequency, logic thresholds, and tuning stability with a counter/scope. Only
+                after one path works should you consider repeating it for four voices.</p>
+            </li>
+            <li><strong>Add programmable loads and mix.</strong>
+              <p>Use the source table to select load states and combine outputs through an appropriate audio interface.
+                This stage needs a newly verified schematic.</p>
+            </li>
+          </ol>
+          <p class="guide-caution">The archive source is a conceptual article, not a complete build article. The named
+            divider is a legacy part; this guide deliberately does not invent substitute wiring or a complete BOM.</p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--source">
+        <div class="title-bar"><span class="project-window-name">Original article</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <div class="guide-pdf"><iframe
+              src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dronezillacmosbuild.pdf"
+              title="Original source PDF for Digital Dronezilla" loading="lazy"></iframe></div>
+          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dronezillacmosbuild.pdf"
+              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
+        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
+  </footer>
+</body>
+
+</html>

@@ -1,7 +1,133 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A CD4024 binary counter provides seven square-wave suboctaves from a VCO square wave. A DIP switch selects a division and a small potentiometer attenuates the signal before it is returned to the synthesizer VCA."><title>Seven-Stage Frequency Divider DIY Guide | Otorlymern Electrical Solutions</title><link rel="stylesheet" href="/css/diystyle.css"><link rel="stylesheet" href="/solutions/DIY/projects/projects.css"><link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css"><link rel="stylesheet" href="/css/site-nav.css"></head>
-<body class="diy-projects-page diy-project-guide"><header><nav><ul class="nav-bar"><li><a href="/index.html">Home</a></li><li class="dropdown"><a href="/systems/rrr.html">Systems</a><ul class="dropdown-content"><li><a href="/music/studio.html">OEStudio</a></li><li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li><li><a href="/systems/home-recording.html">Home Recording</a></li><li><a href="/video/videolibrary.html">Video Library</a></li><li><a href="/solutions/resources/index.html">Resources</a></li></ul></li><li><a href="/services/index.html">Services</a></li><li class="dropdown"><a href="/solutions/index.html">Solutions</a><ul class="dropdown-content"><li><a href="/oes-patch-builder/index.html">Patch Builder</a></li><li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li><li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li><li><a href="/solutions/resources/index.html">Links / Resources</a></li></ul></li><li><a href="/manuals/">Archive</a></li></ul></nav></header><main class="projects-main"><section class="projects-hero project-guide-hero"><div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div><div class="project-guide-title"><p class="project-guide-kicker">John Blacet · Synapse</p><h1><span>Seven-Stage Frequency Divider</span></h1><p class="project-guide-kind">4024 add-on for a synthesizer VCO/VCA</p></div></section><p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
-<div class="project-guide-grid"><section class="project-window window guide-window guide-window--description"><div class="title-bar"><span class="project-window-name">Description</span></div><div class="separator"></div><div class="window-pane"><p>A CD4024 binary counter provides seven square-wave suboctaves from a VCO square wave. A DIP switch selects a division and a small potentiometer attenuates the signal before it is returned to the synthesizer VCA.</p><p class="guide-source-link"><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/freq-divider-diy-synapse.pdf" target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p></div></section>
-<section class="project-window window guide-window guide-window--materials"><div class="title-bar"><span class="project-window-name">Materials</span></div><div class="separator"></div><div class="window-pane"><ul><li>CD4024 counter and the small set of supporting parts shown in the original schematic</li><li>Small PCB, miniature potentiometer, DIP switch, wire, and mounting hardware</li><li>A square-wave VCO signal and compatible VCA input</li><li>Optional Schmitt trigger if the source oscillator does not provide a suitable square wave</li></ul></div></section>
-<section class="project-window window guide-window guide-window--steps"><div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div><div class="separator"></div><div class="window-pane"><ol class="guide-steps"><li><strong>Plan the connection points.</strong><p>The article is written for a PAiA Gnome. Identify its VCO square-wave source and VCA input; for another instrument, confirm signal level, grounding, and input compatibility first.</p></li><li><strong>Make the board and control openings.</strong><p>Follow the article’s board artwork and mechanical drawing. Drill/file the control openings before mounting the board.</p></li><li><strong>Populate and inspect the divider.</strong><p>Install the CD4024 and supporting components, checking IC and capacitor polarity against the diagram.</p></li><li><strong>Wire the selector and level control.</strong><p>Connect the DIP switch to select the divide-by-2 through divide-by-128 outputs. Wire the miniature pot as shown to attenuate the chosen output.</p></li><li><strong>Connect input and return.</strong><p>Route the VCO square wave into the divider and its output back to the VCA. Keep the ground reference common; the article uses direct coupling.</p></li><li><strong>Test each division.</strong><p>Start with the lowest level setting and a simple oscillator tone. Toggle one DIP selection at a time and verify progressively lower square-wave pitches before closing the instrument.</p></li></ol><p class="guide-caution">The article’s mechanical instructions target the PAiA Gnome. Do not drill or connect another instrument until its internal layout and signal levels are confirmed.</p></div></section>
-<section class="project-window window guide-window guide-window--source"><div class="title-bar"><span class="project-window-name">Original article</span></div><div class="separator"></div><div class="window-pane"><div class="guide-pdf"><iframe src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/freq-divider-diy-synapse.pdf" title="Original source PDF for Seven-Stage Frequency Divider" loading="lazy"></iframe></div><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/freq-divider-diy-synapse.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p></div></section></div></main><footer><p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p><div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div></footer></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="A CD4024 binary counter provides seven square-wave suboctaves from a VCO square wave. A DIP switch selects a division and a small potentiometer attenuates the signal before it is returned to the synthesizer VCA.">
+  <title>Seven-Stage Frequency Divider DIY Guide | Otorlymern Electrical Solutions</title>
+  <link rel="stylesheet" href="/css/diystyle.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css">
+  <link rel="stylesheet" href="/css/site-nav.css">
+</head>
+
+<body class="diy-projects-page diy-project-guide">
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/manuals/">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="projects-main">
+    <section class="projects-hero project-guide-hero">
+      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
+          class="projects-title-ripple projects-title-ripple--one"></span><span
+          class="projects-title-ripple projects-title-ripple--two"></span></div>
+      <div class="project-guide-title">
+        <p class="project-guide-kicker">John Blacet · Synapse</p>
+        <h1><span>Seven-Stage Frequency Divider</span></h1>
+        <p class="project-guide-kind">4024 add-on for a synthesizer VCO/VCA</p>
+      </div>
+    </section>
+    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+    <div class="project-guide-grid">
+      <section class="project-window window guide-window guide-window--description">
+        <div class="title-bar"><span class="project-window-name">Description</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <p>A CD4024 binary counter provides seven square-wave suboctaves from a VCO square wave. A DIP switch selects
+            a division and a small potentiometer attenuates the signal before it is returned to the synthesizer VCA.</p>
+          <p class="guide-source-link"><a
+              href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/freq-divider-diy-synapse.pdf"
+              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--materials">
+        <div class="title-bar"><span class="project-window-name">Materials</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul>
+            <li>CD4024 counter and the small set of supporting parts shown in the original schematic</li>
+            <li>Small PCB, miniature potentiometer, DIP switch, wire, and mounting hardware</li>
+            <li>A square-wave VCO signal and compatible VCA input</li>
+            <li>Optional Schmitt trigger if the source oscillator does not provide a suitable square wave</li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--steps">
+        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ol class="guide-steps">
+            <li><strong>Plan the connection points.</strong>
+              <p>The article is written for a PAiA Gnome. Identify its VCO square-wave source and VCA input; for another
+                instrument, confirm signal level, grounding, and input compatibility first.</p>
+            </li>
+            <li><strong>Make the board and control openings.</strong>
+              <p>Follow the article’s board artwork and mechanical drawing. Drill/file the control openings before
+                mounting the board.</p>
+            </li>
+            <li><strong>Populate and inspect the divider.</strong>
+              <p>Install the CD4024 and supporting components, checking IC and capacitor polarity against the diagram.
+              </p>
+            </li>
+            <li><strong>Wire the selector and level control.</strong>
+              <p>Connect the DIP switch to select the divide-by-2 through divide-by-128 outputs. Wire the miniature pot
+                as shown to attenuate the chosen output.</p>
+            </li>
+            <li><strong>Connect input and return.</strong>
+              <p>Route the VCO square wave into the divider and its output back to the VCA. Keep the ground reference
+                common; the article uses direct coupling.</p>
+            </li>
+            <li><strong>Test each division.</strong>
+              <p>Start with the lowest level setting and a simple oscillator tone. Toggle one DIP selection at a time
+                and verify progressively lower square-wave pitches before closing the instrument.</p>
+            </li>
+          </ol>
+          <p class="guide-caution">The article’s mechanical instructions target the PAiA Gnome. Do not drill or connect
+            another instrument until its internal layout and signal levels are confirmed.</p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--source">
+        <div class="title-bar"><span class="project-window-name">Original article</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <div class="guide-pdf"><iframe
+              src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/freq-divider-diy-synapse.pdf"
+              title="Original source PDF for Seven-Stage Frequency Divider" loading="lazy"></iframe></div>
+          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/freq-divider-diy-synapse.pdf"
+              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
+        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
+  </footer>
+</body>
+
+</html>

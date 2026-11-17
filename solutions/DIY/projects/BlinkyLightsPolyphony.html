@@ -1,7 +1,137 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Three cascaded CMOS counters and decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO control, or audio input can vary the display speed, making it a simple bridge between sound and visual art."><title>Blinky Lights DIY Guide | Otorlymern Electrical Solutions</title><link rel="stylesheet" href="/css/diystyle.css"><link rel="stylesheet" href="/solutions/DIY/projects/projects.css"><link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css"><link rel="stylesheet" href="/css/site-nav.css"></head>
-<body class="diy-projects-page diy-project-guide"><header><nav><ul class="nav-bar"><li><a href="/index.html">Home</a></li><li class="dropdown"><a href="/systems/rrr.html">Systems</a><ul class="dropdown-content"><li><a href="/music/studio.html">OEStudio</a></li><li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li><li><a href="/systems/home-recording.html">Home Recording</a></li><li><a href="/video/videolibrary.html">Video Library</a></li><li><a href="/solutions/resources/index.html">Resources</a></li></ul></li><li><a href="/services/index.html">Services</a></li><li class="dropdown"><a href="/solutions/index.html">Solutions</a><ul class="dropdown-content"><li><a href="/oes-patch-builder/index.html">Patch Builder</a></li><li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li><li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li><li><a href="/solutions/resources/index.html">Links / Resources</a></li></ul></li><li><a href="/manuals/">Archive</a></li></ul></nav></header><main class="projects-main"><section class="projects-hero project-guide-hero"><div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div><div class="project-guide-title"><p class="project-guide-kicker">Craig Anderton · Polyphony</p><h1><span>Blinky Lights</span></h1><p class="project-guide-kind">Audio-reactive LED project</p></div></section><p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
-<div class="project-guide-grid"><section class="project-window window guide-window guide-window--description"><div class="title-bar"><span class="project-window-name">Description</span></div><div class="separator"></div><div class="window-pane"><p>Three cascaded CMOS counters and decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO control, or audio input can vary the display speed, making it a simple bridge between sound and visual art.</p><p class="guide-source-link"><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf" target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p></div></section>
-<section class="project-window window guide-window guide-window--materials"><div class="title-bar"><span class="project-window-name">Materials</span></div><div class="separator"></div><div class="window-pane"><ul><li>Three CD4028 one-of-eight decoders and one CD4024 binary counter</li><li>LM3900/3900 quad op amp (as shown) and transistor control stage</li><li>24 LEDs</li><li>Resistors and capacitors per the original schematic and parts list</li><li>9 V supply; the article says 12 V operation may require bias adjustment</li><li>Board, wire, and a panel/display surface</li></ul></div></section>
-<section class="project-window window guide-window guide-window--steps"><div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div><div class="separator"></div><div class="window-pane"><ol class="guide-steps"><li><strong>Lay out the three LED banks.</strong><p>Plan three groups of eight LEDs. The source suggests parallel rows or concentric circles; each group advances at a different rate.</p></li><li><strong>Build the counter/decoder chain.</strong><p>Wire the 4024 clock counter and three 4028 decoders according to the schematic. Check each decoder output with one current-limited LED before wiring all 24.</p></li><li><strong>Add the clock and rate controls.</strong><p>Build the op-amp clock and R-18 speed control. Add the optional slow LFO path only after the base clock reliably advances the LEDs.</p></li><li><strong>Add the audio interface if wanted.</strong><p>Follow the source input amplifier/attenuator circuit. Start with a low audio level and set the top-speed limit to prevent the display from locking at maximum rate.</p></li><li><strong>Mount the circuit and LED panel.</strong><p>Use perfboard or the PCB approach described in the article. The source recommends separating the LED display and control board when useful for mounting.</p></li><li><strong>Set the supply and test.</strong><p>Begin at 9 V as specified. Test steady stepping first, then the LFO, then audio response. The article notes that 12 V operation may need R-11 adjustment.</p></li></ol><p class="guide-caution">The original article scan is the source for exact resistor/capacitor values. The legacy page contained likely unit transcription errors for capacitors; confirm values from the article before ordering.</p></div></section>
-<section class="project-window window guide-window guide-window--source"><div class="title-bar"><span class="project-window-name">Original article</span></div><div class="separator"></div><div class="window-pane"><div class="guide-pdf"><iframe src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf" title="Original source PDF for Blinky Lights" loading="lazy"></iframe></div><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p></div></section></div></main><footer><p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p><div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div></footer></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="Three cascaded CMOS counters and decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO control, or audio input can vary the display speed, making it a simple bridge between sound and visual art.">
+  <title>Blinky Lights DIY Guide | Otorlymern Electrical Solutions</title>
+  <link rel="stylesheet" href="/css/diystyle.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
+  <link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css">
+  <link rel="stylesheet" href="/css/site-nav.css">
+</head>
+
+<body class="diy-projects-page diy-project-guide">
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+          <ul class="dropdown-content">
+            <li><a href="/music/studio.html">OEStudio</a></li>
+            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+            <li><a href="/systems/home-recording.html">Home Recording</a></li>
+            <li><a href="/video/videolibrary.html">Video Library</a></li>
+            <li><a href="/solutions/resources/index.html">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+          <ul class="dropdown-content">
+            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
+            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/manuals/">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="projects-main">
+    <section class="projects-hero project-guide-hero">
+      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
+          class="projects-title-ripple projects-title-ripple--one"></span><span
+          class="projects-title-ripple projects-title-ripple--two"></span></div>
+      <div class="project-guide-title">
+        <p class="project-guide-kicker">Craig Anderton · Polyphony</p>
+        <h1><span>Blinky Lights</span></h1>
+        <p class="project-guide-kind">Audio-reactive LED project</p>
+      </div>
+    </section>
+    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+    <div class="project-guide-grid">
+      <section class="project-window window guide-window guide-window--description">
+        <div class="title-bar"><span class="project-window-name">Description</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <p>Three cascaded CMOS counters and decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO
+            control, or audio input can vary the display speed, making it a simple bridge between sound and visual art.
+          </p>
+          <p class="guide-source-link"><a
+              href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
+              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--materials">
+        <div class="title-bar"><span class="project-window-name">Materials</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ul>
+            <li>Three CD4028 one-of-eight decoders and one CD4024 binary counter</li>
+            <li>LM3900/3900 quad op amp (as shown) and transistor control stage</li>
+            <li>24 LEDs</li>
+            <li>Resistors and capacitors per the original schematic and parts list</li>
+            <li>9 V supply; the article says 12 V operation may require bias adjustment</li>
+            <li>Board, wire, and a panel/display surface</li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--steps">
+        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <ol class="guide-steps">
+            <li><strong>Lay out the three LED banks.</strong>
+              <p>Plan three groups of eight LEDs. The source suggests parallel rows or concentric circles; each group
+                advances at a different rate.</p>
+            </li>
+            <li><strong>Build the counter/decoder chain.</strong>
+              <p>Wire the 4024 clock counter and three 4028 decoders according to the schematic. Check each decoder
+                output with one current-limited LED before wiring all 24.</p>
+            </li>
+            <li><strong>Add the clock and rate controls.</strong>
+              <p>Build the op-amp clock and R-18 speed control. Add the optional slow LFO path only after the base clock
+                reliably advances the LEDs.</p>
+            </li>
+            <li><strong>Add the audio interface if wanted.</strong>
+              <p>Follow the source input amplifier/attenuator circuit. Start with a low audio level and set the
+                top-speed limit to prevent the display from locking at maximum rate.</p>
+            </li>
+            <li><strong>Mount the circuit and LED panel.</strong>
+              <p>Use perfboard or the PCB approach described in the article. The source recommends separating the LED
+                display and control board when useful for mounting.</p>
+            </li>
+            <li><strong>Set the supply and test.</strong>
+              <p>Begin at 9 V as specified. Test steady stepping first, then the LFO, then audio response. The article
+                notes that 12 V operation may need R-11 adjustment.</p>
+            </li>
+          </ol>
+          <p class="guide-caution">The original article scan is the source for exact resistor/capacitor values. The
+            legacy page contained likely unit transcription errors for capacitors; confirm values from the article
+            before ordering.</p>
+        </div>
+      </section>
+      <section class="project-window window guide-window guide-window--source">
+        <div class="title-bar"><span class="project-window-name">Original article</span></div>
+        <div class="separator"></div>
+        <div class="window-pane">
+          <div class="guide-pdf"><iframe
+              src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
+              title="Original source PDF for Blinky Lights" loading="lazy"></iframe></div>
+          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
+              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
+        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
+  </footer>
+</body>
+
+</html>

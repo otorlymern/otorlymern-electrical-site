@@ -226,6 +226,86 @@
       "monitor": true
     },
     {
+      "path": "/solutions/DIY/projects/anderton-flanger",
+      "title": "Anderton Flanger DIY Guide | Otorlymern Electrical Solutions",
+      "description": "A compact analog-delay guitar flanger using a SAD-1024 delay line and supporting clock, filter, and mixing circuitry. The source explains delay-line behavior, component selection, construction, and setup.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/build-your-own-reverb",
+      "title": "Build Your Own Reverb DIY Guide | Otorlymern Electrical Solutions",
+      "description": "Make an inexpensive physical reverb from a speaker, a spring or resonant plate, and a piezo contact microphone. The speaker excites the object; the contact mic captures its vibration as a return signal.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/digital-dronezilla",
+      "title": "Digital Dronezilla DIY Guide | Otorlymern Electrical Solutions",
+      "description": "A four-voice just-intonation drone concept. The article explains combining a reference frequency, phase-locked loops, and programmable binary division to derive related pitches; it includes a programming truth table.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/electrophony",
+      "title": "Electrophony DIY Guide | Otorlymern Electrical Solutions",
+      "description": "This article proposes 'electrophony': creating the perception of several independent musical voices from a smaller set of synthesizer sources. Its examples are patch and performance techniques rather than a discrete circuit with a bill of materials.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/frequency-divider",
+      "title": "Seven-Stage Frequency Divider DIY Guide | Otorlymern Electrical Solutions",
+      "description": "A CD4024 binary counter provides seven square-wave suboctaves from a VCO square wave. A DIP switch selects a division and a small potentiometer attenuates the signal before it is returned to the synthesizer VCA.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/interactive-av-system",
+      "title": "Interactive A/V System DIY Guide | Otorlymern Electrical Solutions",
+      "description": "A historical article and block diagrams for interactive audio/video synthesis. It discusses coordinated sound and image generation, routing, modulation, and performance control; it does not provide a parts-level construction plan.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/psych-tone",
+      "title": "OE(P)SycTone Melody Weave — Complete DIY Build Guide | OES",
+      "description": "A self-contained beginner-to-intermediate build guide for OE(P)SycTone, a 9 V CMOS melody synthesizer inspired by Don Lancaster.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/pulse-width-multiplier",
+      "title": "Pulse Width Multiplier DIY Guide | Otorlymern Electrical Solutions",
+      "description": "Four comparator pulse streams are combined through exclusive-OR logic. A triangle input becomes a moving group of pulse widths, producing changing harmonic content and, at some settings, additional pulses per cycle.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/ring-modulation",
+      "title": "Ring Modulation Alternatives DIY Guide | Otorlymern Electrical Solutions",
+      "description": "A practical exploration of ring-modulator sounds beyond clangorous tones. The article uses control-wave shape, frequency, amplitude, and sequenced voltages to create tremolo, accents, and rhythmic changes.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
+      "path": "/solutions/DIY/projects/syndrums",
+      "title": "DIY Syndrums DIY Guide | Otorlymern Electrical Solutions",
+      "description": "The archive packet contains three distinct percussion circuits: Syntom (touch-triggered pitch-sweep drum synth), Synwave (noise source, tunable filter, envelope, and VCA), and Synclock (a programmable rhythm/LED sequencer). Treat each schematic and parts list as its own build.",
+      "indexable": true,
+      "schema": "Article",
+      "monitor": true
+    },
+    {
       "path": "/solutions/DIY/projects/vocalsynthesisus",
       "title": "Vocal Synthesis US | OES DIY Project",
       "description": "Historical vocal-synthesis documentation and project material presented within the OES DIY archive.",
