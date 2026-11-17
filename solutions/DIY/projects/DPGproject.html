@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description"
-    content="A CMOS up/down counter turns one clock into four related step divisions. Four level controls feed a summed control voltage, so the pattern can change direction, run from a gate or trigger, and produce uneven rhythmic phrasing. The article describes a buildable circuit and a small set of controls.">
+    content="A CMOS up/down counter turns one clock into four related step divisions. Four level controls feed a diode-selected control voltage, so the pattern can change direction, run from a gate or trigger, and produce uneven rhythmic phrasing. The article describes a buildable circuit and a small set of controls.">
   <title>Digital Pattern Generator DIY Guide | Otorlymern Electrical Solutions</title>
   <link rel="stylesheet" href="/css/diystyle.css">
   <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
@@ -17,126 +17,434 @@
   <header>
     <nav>
       <ul class="nav-bar">
-        <li><a href="/index.html">Home</a></li>
-        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+        <li>
+<a href="/index.html">Home</a>
+</li>
+        <li class="dropdown">
+<a href="/systems/rrr.html">Systems</a>
           <ul class="dropdown-content">
-            <li><a href="/music/studio.html">OEStudio</a></li>
-            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-            <li><a href="/systems/home-recording.html">Home Recording</a></li>
-            <li><a href="/video/videolibrary.html">Video Library</a></li>
-            <li><a href="/solutions/resources/index.html">Resources</a></li>
+            <li>
+<a href="/music/studio.html">OEStudio</a>
+</li>
+            <li>
+<a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a>
+</li>
+            <li>
+<a href="/systems/home-recording.html">Home Recording</a>
+</li>
+            <li>
+<a href="/video/videolibrary.html">Video Library</a>
+</li>
+            <li>
+<a href="/solutions/resources/index.html">Resources</a>
+</li>
           </ul>
         </li>
-        <li><a href="/services/index.html">Services</a></li>
-        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+        <li>
+<a href="/services/index.html">Services</a>
+</li>
+        <li class="dropdown">
+<a href="/solutions/index.html">Solutions</a>
           <ul class="dropdown-content">
-            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
-            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
-            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+            <li>
+<a href="/oes-patch-builder/index.html">Patch Builder</a>
+</li>
+            <li>
+<a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a>
+</li>
+            <li>
+<a href="/solutions/DIY/designers/index.html">DIY Pioneers</a>
+</li>
+            <li>
+<a href="/solutions/resources/index.html">Links / Resources</a>
+</li>
           </ul>
         </li>
-        <li><a href="/manuals/">Archive</a></li>
+        <li>
+<a href="/manuals/">Archive</a>
+</li>
       </ul>
     </nav>
   </header>
   <main class="projects-main">
     <section class="projects-hero project-guide-hero">
-      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
-          class="projects-title-ripple projects-title-ripple--one"></span><span
-          class="projects-title-ripple projects-title-ripple--two"></span></div>
+      <div class="projects-title-blob" aria-hidden="true">
+<span class="projects-title-glare">
+</span>
+<span
+          class="projects-title-ripple projects-title-ripple--one">
+</span>
+<span
+          class="projects-title-ripple projects-title-ripple--two">
+</span>
+</div>
       <div class="project-guide-title">
         <p class="project-guide-kicker">John Blacet · Synapse</p>
-        <h1><span>Digital Pattern Generator</span></h1>
+        <h1>
+<span>Digital Pattern Generator</span>
+</h1>
         <p class="project-guide-kind">CMOS sequencer build</p>
       </div>
     </section>
-    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+    <p class="project-guide-back">
+<a href="index.html">← Back to DIY Audio &amp; Video Projects</a>
+</p>
     <div class="project-guide-grid">
       <section class="project-window window guide-window guide-window--description">
-        <div class="title-bar"><span class="project-window-name">Description</span></div>
-        <div class="separator"></div>
+        <div class="title-bar">
+<span class="project-window-name">Description</span>
+</div>
+        <div class="separator">
+</div>
         <div class="window-pane">
           <p>A CMOS up/down counter turns one clock into four related step divisions. Four level controls feed a summed
             control voltage, so the pattern can change direction, run from a gate or trigger, and produce uneven
             rhythmic phrasing. The article describes a buildable circuit and a small set of controls.</p>
-          <p class="guide-source-link"><a
+          <p class="guide-source-link">
+<a
               href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dpgproject.pdf" target="_blank"
-              rel="noopener noreferrer">Open original source PDF ↗</a></p>
+              rel="noopener noreferrer">Open original source PDF ↗</a>
+</p>
         </div>
       </section>
       <section class="project-window window guide-window guide-window--materials">
-        <div class="title-bar"><span class="project-window-name">Materials</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <ul>
-            <li>IC1: 4516 CMOS up/down counter</li>
-            <li>IC2: 4013 CMOS flip-flop; IC3: 4001 CMOS quad NOR gate</li>
-            <li>IC5: 741, 5558, or 4136 op amp; IC6: 4069 CMOS hex inverter</li>
-            <li>Resistors, 1/4 watt: 6 × 1 kΩ, 2 × 10 kΩ, 1 × 20 kΩ, 4 × 100 kΩ, 2 × 1 MΩ</li>
-            <li>Linear potentiometers: 1 × 5 MΩ, 5 × 50 kΩ, 1 × 10 kΩ</li>
-            <li>Capacitors: 1 × 1 µF mylar, 1 × 270 pF polystyrene or ceramic, 3 × 0.047 or 0.05 µF ceramic, 2 × 1.0 µF
-              electrolytic</li>
-            <li>Miscellaneous: 4 × 1N4198 diodes, 1 SPST toggle switch, 4 1/8-inch jacks, and 4 LEDs</li>
-            <li>Regulated supply: the article recommends ±10 to ±15 V for the op amps, never above 15 V; follow its
-              supply and bypass-capacitor schematic.</li>
-          </ul>
-        </div>
-      </section>
+<div class="title-bar">
+<span class="project-window-name">Materials &amp; complete parts schedule</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<p>Source: John Blacet, <cite>Build a Digital Pattern Generator</cite>, Synapse, PDF pp. 1–2; schematic on p. 1 and parts list on p. 2. This schedule separates the printed list from parts visible only in the drawing.</p>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Qty</th>
+<th scope="col">Part / value</th>
+<th scope="col">Where it is used / source qualification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 each</td>
+<td>4516 (IC1), 4013 (IC2), 4001 (IC3), 4069 (IC6)</td>
+<td>Four CMOS packages; source PDF p. 2. The article does not designate an IC4.</td>
+</tr>
+<tr>
+<td>3 amplifier channels for both drawn outputs</td>
+<td>741, 5558 dual, or 4136 quad family</td>
+<td>The schematic shows a direct follower plus a two-amplifier glide path. One dual cannot implement all three simultaneously: use three 741 packages, two compatible duals, or one suitable quad. Package count is a schematic-derived clarification, not a count supplied in the parts list.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1 kΩ, ¼ W</td>
+<td>Four LED series resistors; two output isolation resistors.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10 kΩ, ¼ W</td>
+<td>Clock network and reset-pulse pull-up.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>20 kΩ, ¼ W</td>
+<td>Run-switch debounce network.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100 kΩ, ¼ W</td>
+<td>Direction input, gate input, and two run/debounce connections.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1 MΩ, ¼ W</td>
+<td>Direction pull-up and gate/run-node pull-down.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>5 MΩ linear potentiometer</td>
+<td>Internal clock rate.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>50 kΩ linear potentiometers</td>
+<td>Four division levels plus overall output level.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10 kΩ linear potentiometer</td>
+<td>Glide time; wired as a variable series resistance.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.1 µF Mylar / film</td>
+<td>Clock timing. The printed list says “.1”, not 1 µF.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>270 pF polystyrene or ceramic</td>
+<td>Reset monostable coupling capacitor.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.047 or 0.05 µF ceramic</td>
+<td>One run-switch capacitor and one bypass on each supply rail.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.0 µF electrolytic</td>
+<td>Supply bypass capacitors from the printed list.</td>
+</tr>
+<tr>
+<td>1 additional, if building glide output</td>
+<td>10 µF electrolytic</td>
+<td>Shown at the glide node on PDF p. 1 but omitted from the printed parts list. Do not confuse it with the two 1.0 µF supply bypass parts.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1N4198 diodes</td>
+<td>Four level-control wipers feed a common diode-selection bus.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>LEDs</td>
+<td>Indicators driven from the positive rail through the LED, 1 kΩ, and inverter output.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>SPST toggle</td>
+<td>Alternating-direction enable, as listed.</td>
+</tr>
+<tr>
+<td>1 additional</td>
+<td>Normally-open run switch / pushbutton</td>
+<td>Shown in the schematic and discussed in the text, but omitted from the parts list. A momentary contact gives one run; a maintained contact gives continuous running.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>⅛-inch jacks</td>
+<td>Gate/trigger, direction, direct output, glide output.</td>
+</tr>
+<tr>
+<td>As required</td>
+<td>Board, sockets, insulated wire, panel, seven knobs, mounting hardware, regulated bipolar supply</td>
+<td>Mechanical sizes, connector standard and hardware quantities are not specified. Capacitor voltage ratings must exceed the actual rail-to-ground voltage; do not apply the negative rail to CMOS VSS.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="guide-caution">
+<strong>Source discrepancies matter:</strong> the list omits the run switch and 10 µF glide capacitor, and does not state how many op-amp channels are needed. The three-channel count above is for the complete drawing, not the article’s minimum five-package variant. No substitute diode, IC package pinout, or unlisted capacitor rating is implied.</p>
+<p>Tools: temperature-controlled grounded soldering iron, solder, cutters, continuity meter and DC voltmeter; an oscilloscope or logic probe is strongly useful for the clock, carry and reset tests below. These are workshop recommendations, not extra circuit parts.</p>
+</div>
+</section>
       <section class="project-window window guide-window guide-window--steps">
-        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
-        <div class="separator"></div>
+<div class="title-bar">
+<span class="project-window-name">Construction, commissioning &amp; operation</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<ol class="guide-steps">
+<li>
+<strong>Inventory and mark the board before soldering.</strong>
+<p>Separate the seven pot functions, label all jack sleeves and tips, and choose the actual amplifier packages before laying out power. Mark the missing-list items above on your order sheet. Build the complete direct/glide drawing only if you have three amplifier channels.</p>
+</li>
+<li>
+<strong>Build power distribution, then test it without ICs.</strong>
+<p>Wire +V, ground and −V and their two bypass pairs. With all ICs removed, check for shorts, apply the regulated supply and meter every socket power pin relative to ground. IC1/2/3/6 must never see −V. Remove power and discharge capacitors before inserting devices.</p>
+</li>
+<li>
+<strong>Assemble the clock and counter core.</strong>
+<p>Install the 4069 RC clock and the 4516 connections listed above. Complete the control logic before normal powered testing so reset, direction and inhibit are not floating. Use the inline drawing for crossing-versus-junction details; the pin table is its readable companion.</p>
+</li>
+<li>
+<strong>Build start, completion and direction logic.</strong>
+<p>Wire the IC3 run debounce and reset monostable, then IC2 A/B. Install the run contact and direction toggle. With no external direction cable and the toggle open, the 1 MΩ pull-up selects up counting. Do not mistake the counter carry pin for a supply terminal.</p>
+</li>
+<li>
+<strong>Add the four LED and level branches.</strong>
+<p>Wire one branch at a time, checking LED polarity and the diode cathode common bus. Install the overall level pot. A level-pot wiper feeds a diode, not an inverter output. Fit the output followers and the glide RC path, keeping the 10 µF positive terminal at the signal node.</p>
+</li>
+<li>
+<strong>Commission the clock, then the logic.</strong>
+<p>Use a current-limited bench supply and no synthesizer attached. Close run and observe IC6 pin 4 / IC1 pin 15: a repeating transition train should change rate as the 5 MΩ control moves. Check counter pin 6 at half the clock frequency, pin 11 at one quarter, pin 14 at one eighth and pin 2 at one sixteenth. These are frequency ratios derived from binary counting, not measured performance from this build.</p>
+</li>
+<li>
+<strong>Test one-shot, gate and direction.</strong>
+<p>Release run; the active pattern should finish and stop, not freeze instantly. A brief run press or positive gate/trigger pulse starts a complete pattern. A held high gate repeats patterns, and removal allows completion. With toggle open, pull direction low to request down count; high requests up. With toggle closed and no competing external direction driver, completed successive triggers alternate direction.</p>
+</li>
+<li>
+<strong>Bring up the analog outputs last.</strong>
+<p>Set overall level low. Raise one division level at a time and compare its active LED with the direct CV. With two levels active, the higher one should dominate. The glide output should follow the same changes more slowly as the 10 kΩ pot resistance increases. Verify CV range with a meter before patching a VCO; the article gives no calibrated volts-per-step, output-current rating or guaranteed maximum CV.</p>
+</li>
+<li>
+<strong>Patch and operate.</strong>
+<p>Connect direct or glide output to a compatible VCO CV input and share ground. Set rate, four level controls and overall level by ear; unequal durations are the intended result. The overall control affects level rather than changing the binary division ratios. The source says all-dark/all-lit LEDs mark the start/end reference states and help identify direction.</p>
+</li>
+<li>
+<strong>Only then consider an external clock.</strong>
+<p>Power off, disconnect IC6 pin 4 from IC1 pin 15, then feed the external clock through an additional 10 kΩ series resistor to IC1 pin 15. Do not drive the internal oscillator output from outside. The source requires fast edges and a high level at least 70% of +V. That extra 10 kΩ is not included in the base BOM. Keep the external low at ground and the signal inside the CMOS rails; do not connect bipolar audio or negative triggers directly.</p>
+</li>
+</ol>
+<h3>Bring-up limits and troubleshooting</h3>
+<p>Gate/trigger and external-clock highs must reach at least 70% of the positive logic rail (PDF p. 2); a typical 5 V trigger is not automatically compatible with a higher-rail build. Use a suitable level interface if needed; this article supplies no level-converter design. The direction input is pulled up internally and goes down when grounded. Avoid shorting an external active-high driver against the direction-toggle output.</p>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Symptom</th>
+<th scope="col">Isolate and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock works but no count</td>
+<td>Measure IC1 reset pin 9 and inhibit pin 5. A held-high reset or inhibit blocks normal advancement. Check IC2/IC3 pin wiring before replacing the counter.</td>
+</tr>
+<tr>
+<td>No first sequence after power-up with gate attached</td>
+<td>The source specifically recommends briefly disconnecting gate/trigger. Then apply a new edge or run press.</td>
+</tr>
+<tr>
+<td>Runs continuously / will not finish</td>
+<td>Check gate leakage or a stuck run contact, the 1 MΩ pull-down, IC1 carry pin 7, IC3A inverter and IC2A Q path.</td>
+</tr>
+<tr>
+<td>Wrong direction / no alternation</td>
+<td>Check pin 10 pull-up, toggle continuity, IC2B pin 11 clock from carry, pin 9 data and pin 13 output. Alternation is specified only after a complete pattern.</td>
+</tr>
+<tr>
+<td>LEDs count, output does not change</td>
+<td>Check level-pot ground ends, wipers, diode orientation and overall pot. Confirm op-amp positive and negative rails and follower feedback.</td>
+</tr>
+<tr>
+<td>Direct output works; glide stuck or abrupt</td>
+<td>Check the extra 10 µF capacitor, its polarity, the 10 kΩ pot strap, and both glide followers. A diode-selected output is not expected to add simultaneous level voltages.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="guide-caution">This is a source-based reconstruction guide, not a bench-validated redesign. The scan supplies no PCB artwork, calibrated timing range or numeric quiescent-current target. Do not infer those from the drawing or treat modern buffered/unbuffered CMOS variants as automatically equivalent in the RC oscillator.</p>
+</div>
+</section>
+      <section class="project-window window guide-window guide-window--diagrams">
+<div class="title-bar">
+<span class="project-window-name">Schematic, exact wiring &amp; power</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<h2>Inline schematic and wiring map</h2>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/digital-pattern-generator/schematic.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/digital-pattern-generator/schematic.png" alt="John Blacet digital pattern generator complete schematic: clock, 4516 counter, 4013/4001 control logic, diode level network and two output paths" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>John Blacet, Synapse, source PDF p. 1, complete circuit drawing (cropped from the scan; op-amp supply pins are intentionally absent in the original). Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<p>The diode network is a <strong>highest-active-level selector</strong>, not an arithmetic voltage adder: when several counter outputs are high, the highest adjusted level wins, less the diode drop. The LEDs indicate active bits; they are not fourteen independent step controls. The article describes up to fourteen-step patterns with unequal note durations.</p>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Block</th>
+<th scope="col">Exact connections from PDF p. 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4516 core</td>
+<td>IC1 pin 16 → positive logic rail. Pins 1, 3, 4, 8, 12, 13 → ground. Clock → pin 15; inhibit → pin 5; reset pulse → pin 9; direction → pin 10. Pin 7 is carry-out, not ground.</td>
+</tr>
+<tr>
+<td>Clock</td>
+<td>IC6 pin 2 → pin 3 and through 10 kΩ to one end of the 5 MΩ pot. The pot wiper is strapped to its other end at pin 1. The 0.1 µF capacitor joins that pin-1 node to pin 4. Pin 4 → IC1 pin 15.</td>
+</tr>
+<tr>
+<td>Four division branches</td>
+<td>IC1 pins 2, 14, 11, 6 feed respectively IC6 inputs 5, 9, 11, 13 and one end of each 50 kΩ level pot; other pot ends → ground. These are /16, /8, /4, /2 respectively. IC6 outputs 6, 8, 10, 12 each sink an LED through 1 kΩ. LED anodes face the positive rail.</td>
+</tr>
+<tr>
+<td>Level selection</td>
+<td>Each level-pot wiper → diode anode; all four diode cathodes → common bus. Bus → one end of overall 50 kΩ level pot, its other end → ground. Overall wiper feeds both output paths.</td>
+</tr>
+<tr>
+<td>Stop / completion flip-flop</td>
+<td>IC1 pin 7 → tied IC3 pins 12, 13; IC3 pin 11 → IC2 pin 3. IC3 pin 3 → IC2 pin 5. IC2 pin 6 → ground. IC2 pin 1 → IC1 pin 5 and IC2 pin 9.</td>
+</tr>
+<tr>
+<td>Direction flip-flop</td>
+<td>IC1 pin 7 → IC2 pin 11. IC2 pins 8, 10 → ground. IC2 pin 13 → direction-toggle contact; other contact → IC1 pin 10. That direction node has 1 MΩ to positive rail and 100 kΩ in series to the direction jack. IC2 unused complementary outputs remain unconnected.</td>
+</tr>
+<tr>
+<td>Gate and run node</td>
+<td>Tie IC3 pins 1, 2 together. That node has 1 MΩ to ground, 100 kΩ to gate/trigger jack and 100 kΩ to IC3 pin 10. IC3 pin 3 feeds IC2 pin 5 and one side of 270 pF.</td>
+</tr>
+<tr>
+<td>Run debounce</td>
+<td>Tie IC3 pins 8, 9. Connect 100 kΩ between that tied input and IC3 pin 10. The tied input also goes through 20 kΩ to the run-contact node. Run node → 0.047 µF to ground and normally-open switch to ground.</td>
+</tr>
+<tr>
+<td>Start/reset pulse</td>
+<td>Other side of 270 pF → tied IC3 pins 5, 6 and 10 kΩ to positive rail. IC3 pin 4 → IC1 pin 9 and IC2 pin 4.</td>
+</tr>
+<tr>
+<td>Direct output</td>
+<td>Overall level wiper → follower noninverting input; follower output tied to inverting input and through 1 kΩ to direct output jack.</td>
+</tr>
+<tr>
+<td>Glide output</td>
+<td>Overall level wiper → second follower. Its output → 10 kΩ glide pot, with wiper strapped to the buffer-side end. Far end → positive terminal of 10 µF to ground and third follower noninverting input. Third follower output → its inverting input and through 1 kΩ to glide output jack.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Power and package pins</h3>
+<p>Use regulated ±10 to ±15 V rails; never exceed the article’s 15 V magnitude per rail. A regulated ±12 V bench supply is a practical commissioning choice, not a new source requirement. The CMOS uses <strong>+V and ground only</strong>; the op amps use +V and −V with ground as signal reference. On the negative-rail bypass electrolytic, positive goes to ground and negative to −V; on the positive-rail bypass, positive goes to +V. Place a 0.047/0.05 µF ceramic and 1 µF electrolytic from each rail to ground on the board (PDF p. 1).</p>
+<p>For the standard DIP devices checked against the TI data sheets: IC2/IC3/IC6 pin 14 → +V, pin 7 → ground. IC1 uses pin 16 → +V, pin 8 → ground. If using individual DIP LM741s, each follower uses pin 3 as signal input, pin 6 tied to pin 2, pin 7 → +V and pin 4 → −V; leave offset-null pins 1/5 unused and NC pin 8 unconnected. Do not apply that 741 pin map to a 5558 or 4136. The historical article deliberately omits op-amp pin numbers because the choices differ.</p>
+<p>Keep clock/reset wiring short and away from the high-impedance level and glide nodes. Use a common signal ground for every jack sleeve and supply reference. Handle CMOS with static precautions and wire sockets before installing chips.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--notes">
+<div class="title-bar">
+<span class="project-window-name">Sources &amp; remaining limits</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<h2>Source and verification notes</h2>
+<p>Primary article: John Blacet, <cite>Build a Digital Pattern Generator</cite>, Synapse, PDF p. 1 (circuit, construction and operation) and p. 2 (continued operation and parts list). The local image is a schematic excerpt, not a replacement transcription of the article.</p>
+<p>Supplemental manufacturer references used only to resolve package power and follower pins: <a href="https://www.ti.com/lit/ds/symlink/cd4516b.pdf">TI CD4516B</a>, <a href="https://www.ti.com/lit/ds/symlink/cd4013b.pdf">TI CD4013B, §5</a>, <a href="https://www.ti.com/lit/ds/symlink/cd4001b.pdf">TI CD4001B</a>, <a href="https://www.ti.com/lit/ds/symlink/cd4069ub.pdf">TI CD4069UB, functional diagram</a>, and <a href="https://www.ti.com/lit/ds/symlink/lm741.pdf">TI LM741, §5, p. 3</a>. The source circuit, not a package substitute, remains the design being described.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--source">
+        <div class="title-bar">
+<span class="project-window-name">Original article</span>
+</div>
+        <div class="separator">
+</div>
         <div class="window-pane">
-          <ol class="guide-steps">
-            <li><strong>Study the schematic and mark the power rails.</strong>
-              <p>Identify IC1–IC6, the clock, four divided outputs, level controls, trigger/gate input, direction/run
-                controls, and LED indicators before wiring. Use the original scanned schematic for every resistor and
-                capacitor value.</p>
-            </li>
-            <li><strong>Build the clock and counter section first.</strong>
-              <p>Assemble the 4069 clock and 4516 counter with the 4013/4001 control logic. Keep CMOS devices protected
-                from static and confirm pin orientation against the diagram.</p>
-            </li>
-            <li><strong>Add the four level paths and output summer.</strong>
-              <p>Wire the four controls to their separate timing divisions and combine them through the diode network
-                and op-amp buffers shown in the article.</p>
-            </li>
-            <li><strong>Wire switches and external control.</strong>
-              <p>Add run, up/down, and trigger/gate controls as drawn. The article uses a positive pulse for a trigger
-                or a sustained positive level for continuous gated sequences.</p>
-            </li>
-            <li><strong>Power up and test one block at a time.</strong>
-              <p>Use the regulated rails specified in the article. Verify the clock and counter outputs with LEDs or a
-                meter before connecting the summed output to a VCO.</p>
-            </li>
-            <li><strong>Set the levels and try external clocking.</strong>
-              <p>Confirm the four divisions change at 1×, 2×, 4×, and 8× relationships as shown by the LEDs. The article
-                also describes substituting an external fast-edge clock through a 10 kΩ resistor; follow its schematic
-                and input-level guidance.</p>
-            </li>
-          </ol>
-          <p class="guide-caution">The article’s final page contains the complete parts list. Verify every pin
-            connection against its scanned schematic, and follow the power-rail and bypass-capacitor notes before
-            powering the build.</p>
-        </div>
-      </section>
-      <section class="project-window window guide-window guide-window--source">
-        <div class="title-bar"><span class="project-window-name">Original article</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <div class="guide-pdf"><iframe
+          <div class="guide-pdf">
+<iframe
               src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dpgproject.pdf"
-              title="Original source PDF for Digital Pattern Generator" loading="lazy"></iframe></div>
-          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dpgproject.pdf" target="_blank"
-              rel="noopener noreferrer">Open PDF in a new tab</a></p>
+              title="Original source PDF for Digital Pattern Generator" loading="lazy">
+</iframe>
+</div>
+          <p>
+<a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/dpgproject.pdf" target="_blank"
+              rel="noopener noreferrer">Open PDF in a new tab</a>
+</p>
         </div>
       </section>
     </div>
   </main>
   <footer>
     <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
-    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
-        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
+    <div class="footer-badges">
+<img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge">
+<img
+        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo">
+</div>
   </footer>
 </body>
 

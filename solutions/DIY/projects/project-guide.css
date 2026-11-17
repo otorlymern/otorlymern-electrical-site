@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "ecommandfont";
+  src: url("/fonts/EnterCommand-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ecommandfont";
+  src: url("/fonts/EnterCommand-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 .diy-project-guide {
   min-height: 100vh;
 }
@@ -160,8 +176,118 @@
   padding-left: 0.25rem;
 }
 
-.guide-steps strong {
-  font-family: "MSW98UI-Bold", sans-serif;
+/* Keep descriptive copy in Lyno, and bench-reference windows in Enter Command.
+   Descendant selectors also cover BOM tables, labels and emphasized steps. */
+.diy-project-guide .guide-window--description .window-pane,
+.diy-project-guide .guide-window--description .window-pane :where(p, li, a, strong, em) {
+  font-family: "Lyno-Stan", sans-serif;
+}
+
+.diy-project-guide :is(.guide-window--materials, .guide-window--steps),
+.diy-project-guide :is(.guide-window--materials, .guide-window--steps) :where(*) {
+  font-family: "ecommandfont", monospace;
+}
+
+.diy-project-guide :is(.guide-window--materials, .guide-window--steps) .window-pane {
+  font-size: clamp(1.2rem, 1.5vw, 1.35rem);
+  line-height: 1.45;
+}
+
+.guide-window--steps {
+  grid-column: 1 / -1;
+}
+
+.guide-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.guide-window table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+}
+
+.guide-window table :is(th, td) {
+  padding: 0.5rem;
+  border: 1px solid #777;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: normal;
+}
+
+.guide-window table th {
+  background: #deddd4;
+  word-break: normal;
+}
+
+.guide-window--materials table th {
+  min-width: 5ch;
+}
+
+.guide-window figure {
+  max-width: 100%;
+  margin: 1.25rem 0;
+}
+
+.guide-window figure img,
+.guide-diagram {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #777;
+  background: #fff;
+}
+
+.guide-window figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+}
+
+.guide-window pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.75rem;
+  border: 1px solid #777;
+  background: #fff;
+}
+
+.guide-window :is(h2, h3, h4, a, td, th) {
+  overflow-wrap: anywhere;
+}
+
+.guide-window :is(h2, h3, h4)[id] {
+  scroll-margin-top: 1rem;
+}
+
+@media print {
+  .diy-project-guide header,
+  .diy-project-guide footer,
+  .project-guide-hero,
+  .project-guide-back,
+  .guide-window--source {
+    display: none;
+  }
+
+  .project-guide-grid {
+    display: block;
+    width: 100%;
+  }
+
+  .guide-window {
+    margin: 0 0 1rem;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .guide-window .window-pane {
+    padding: 0.75rem;
+    background: #fff;
+  }
+
+  .guide-window :is(tr, figure) {
+    break-inside: avoid;
+  }
 }
 
 .guide-steps p {

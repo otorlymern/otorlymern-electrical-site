@@ -8,6 +8,7 @@
     "audit:health": "node scripts/health-audit.mjs --test-result-states && node scripts/health-audit.mjs --repo",
     "audit:health:live": "node scripts/health-audit.mjs --live",
     "purge:cloudflare": "node scripts/purge-cloudflare.mjs",
-    "test": "npm run build && npm run audit:deploy && npm run audit:links && npm run audit:health"
+    "audit:diy": "node scripts/audit-diy.mjs",
+    "test": "npm run build && npm run audit:deploy && npm run audit:links && npm run audit:health && npm run audit:diy"
   }
 }

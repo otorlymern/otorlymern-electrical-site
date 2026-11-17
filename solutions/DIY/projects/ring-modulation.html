@@ -1,7 +1,405 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A practical exploration of ring-modulator sounds beyond clangorous tones. The article uses control-wave shape, frequency, amplitude, and sequenced voltages to create tremolo, accents, and rhythmic changes."><title>Ring Modulation Alternatives DIY Guide | Otorlymern Electrical Solutions</title><link rel="stylesheet" href="/css/diystyle.css"><link rel="stylesheet" href="/solutions/DIY/projects/projects.css"><link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css"><link rel="stylesheet" href="/css/site-nav.css"></head>
-<body class="diy-projects-page diy-project-guide"><header><nav><ul class="nav-bar"><li><a href="/index.html">Home</a></li><li class="dropdown"><a href="/systems/rrr.html">Systems</a><ul class="dropdown-content"><li><a href="/music/studio.html">OEStudio</a></li><li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li><li><a href="/systems/home-recording.html">Home Recording</a></li><li><a href="/video/videolibrary.html">Video Library</a></li><li><a href="/solutions/resources/index.html">Resources</a></li></ul></li><li><a href="/services/index.html">Services</a></li><li class="dropdown"><a href="/solutions/index.html">Solutions</a><ul class="dropdown-content"><li><a href="/oes-patch-builder/index.html">Patch Builder</a></li><li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li><li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li><li><a href="/solutions/resources/index.html">Links / Resources</a></li></ul></li><li><a href="/manuals/">Archive</a></li></ul></nav></header><main class="projects-main"><section class="projects-hero project-guide-hero"><div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div><div class="project-guide-title"><p class="project-guide-kicker">Stephen Billow</p><h1><span>Ring Modulation Alternatives</span></h1><p class="project-guide-kind">Patch guide · source contains diagrams</p></div></section><p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
-<div class="project-guide-grid"><section class="project-window window guide-window guide-window--description"><div class="title-bar"><span class="project-window-name">Description</span></div><div class="separator"></div><div class="window-pane"><p>A practical exploration of ring-modulator sounds beyond clangorous tones. The article uses control-wave shape, frequency, amplitude, and sequenced voltages to create tremolo, accents, and rhythmic changes.</p><p class="guide-source-link"><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/ring-moulationalternativesstephenbillow.pdf" target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p></div></section>
-<section class="project-window window guide-window guide-window--materials"><div class="title-bar"><span class="project-window-name">Materials</span></div><div class="separator"></div><div class="window-pane"><ul><li>A ring modulator or balanced modulator with carrier and signal inputs</li><li>Two VCOs, or a VCO plus a sub-audio oscillator/sequencer</li><li>Mixer and headphones or speakers</li><li>Patch cables; use the article diagrams to match the chosen setup</li></ul></div></section>
-<section class="project-window window guide-window guide-window--steps"><div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div><div class="separator"></div><div class="window-pane"><ol class="guide-steps"><li><strong>Start with the basic two-oscillator patch.</strong><p>Connect one VCO to the signal input and the other to the carrier input as in the first diagram. Begin at low levels.</p></li><li><strong>Explore slow carrier changes.</strong><p>Lower the carrier into the sub-audio range and listen for amplitude modulation/tremolo. Sweep the carrier rate and waveform.</p></li><li><strong>Try ramps and pulse waves.</strong><p>Compare the ramp and pulse examples in the article. Their changing and abrupt voltage edges create different accent patterns.</p></li><li><strong>Sequence the carrier.</strong><p>Use stepped control voltages to change the carrier pitch or level. Follow the article’s sequencer examples to create repeated accents and rhythms.</p></li><li><strong>Document useful settings.</strong><p>Record oscillator waveforms, rates, levels, and sequence steps for patches worth keeping. The diagrams are examples, not a parts-level circuit design.</p></li></ol><p class="guide-caution">The supplied article is a patching discussion with diagrams. It does not specify a component-level ring-modulator build or a full parts list.</p></div></section>
-<section class="project-window window guide-window guide-window--source"><div class="title-bar"><span class="project-window-name">Original article</span></div><div class="separator"></div><div class="window-pane"><div class="guide-pdf"><iframe src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/ring-moulationalternativesstephenbillow.pdf" title="Original source PDF for Ring Modulation Alternatives" loading="lazy"></iframe></div><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/ring-moulationalternativesstephenbillow.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p></div></section></div></main><footer><p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p><div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div></footer></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A practical exploration of ring-modulator sounds beyond clangorous tones. The article uses control-wave shape, frequency, amplitude, and sequenced voltages to create tremolo, accents, and rhythmic changes.">
+<title>Ring Modulation Alternatives DIY Guide | Otorlymern Electrical Solutions</title>
+<link rel="stylesheet" href="/css/diystyle.css">
+<link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
+<link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css">
+<link rel="stylesheet" href="/css/site-nav.css">
+</head>
+<body class="diy-projects-page diy-project-guide">
+<header>
+<nav>
+<ul class="nav-bar">
+<li>
+<a href="/index.html">Home</a>
+</li>
+<li class="dropdown">
+<a href="/systems/rrr.html">Systems</a>
+<ul class="dropdown-content">
+<li>
+<a href="/music/studio.html">OEStudio</a>
+</li>
+<li>
+<a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a>
+</li>
+<li>
+<a href="/systems/home-recording.html">Home Recording</a>
+</li>
+<li>
+<a href="/video/videolibrary.html">Video Library</a>
+</li>
+<li>
+<a href="/solutions/resources/index.html">Resources</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/services/index.html">Services</a>
+</li>
+<li class="dropdown">
+<a href="/solutions/index.html">Solutions</a>
+<ul class="dropdown-content">
+<li>
+<a href="/oes-patch-builder/index.html">Patch Builder</a>
+</li>
+<li>
+<a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a>
+</li>
+<li>
+<a href="/solutions/DIY/designers/index.html">DIY Pioneers</a>
+</li>
+<li>
+<a href="/solutions/resources/index.html">Links / Resources</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/manuals/">Archive</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="projects-main">
+<section class="projects-hero project-guide-hero">
+<div class="projects-title-blob" aria-hidden="true">
+<span class="projects-title-glare">
+</span>
+<span class="projects-title-ripple projects-title-ripple--one">
+</span>
+<span class="projects-title-ripple projects-title-ripple--two">
+</span>
+</div>
+<div class="project-guide-title">
+<p class="project-guide-kicker">Stephan Bilow</p>
+<h1>
+<span>Ring Modulation Alternatives</span>
+</h1>
+<p class="project-guide-kind">Patch guide · source contains diagrams</p>
+</div>
+</section>
+<p class="project-guide-back">
+<a href="index.html">← Back to DIY Audio &amp; Video Projects</a>
+</p>
+<div class="project-guide-grid">
+<section class="project-window window guide-window guide-window--description">
+<div class="title-bar">
+<span class="project-window-name">Description</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<p>A practical exploration of ring-modulator sounds beyond clangorous tones. The article uses control-wave shape, frequency, amplitude, and sequenced voltages to create tremolo, accents, and rhythmic changes.</p>
+<p class="guide-source-link">
+<a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/ring-moulationalternativesstephenbillow.pdf" target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a>
+</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--materials">
+<div class="title-bar">
+<span class="project-window-name">Materials &amp; complete parts schedule</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<p>
+<strong>This is a patch experiment, not a soldering project.</strong> The source is Stephan Bilow’s <cite>Beyond the Clang Tone: Alternative Ring Modulation</cite>, Synapse, July/August 1977, printed pp. 30–31. The original linked PDF contains only p. 30; the missing p. 31 and Diagram 4 were recovered and checked in the <a href="https://monoskop.org/images/8/80/Synapse_Vol_2_No_2.pdf">full issue, PDF pp. 32–33</a>. No ring-modulator circuit, resistor/capacitor list, PCB, connector pinout or power-supply design is included. The equipment schedule below is the complete source-supported inventory, not a fabricated component BOM.</p>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Qty</th>
+<th scope="col">Equipment</th>
+<th scope="col">Required for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ring modulator with separate signal and carrier inputs</td>
+<td>Every patch. The sequencer example was realized on a Steiner–Parker Synthasystem; the behavior described is not guaranteed on every multiplier or diode ring.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>VCOs</td>
+<td>Diagram 1:1 baseline: VCO 1 as audible signal, VCO 2 as carrier.</td>
+</tr>
+<tr>
+<td>1 carrier source, replacing VCO 2</td>
+<td>Subaudio VCO/LFO with sine, ramp and square/pulse outputs</td>
+<td>Slow-carrier experiments; one multiwaveform oscillator can supply these sequentially.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Four-step-capable voltage sequencer</td>
+<td>Diagram 2 / Diagram 3 stepped-carrier experiment; its CV output, not just its trigger output, feeds carrier.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>VCA plus downstream monitoring system</td>
+<td>All three source patch drawings return the ring-modulator output to a VCA. The article does not draw the VCA control source or final amplifier.</td>
+</tr>
+<tr>
+<td>3 minimum for Diagram 1:1 or 2; 4 plus a compatible CV split for Diagram 4</td>
+<td>Compatible signal patch leads</td>
+<td>Two source-to-modulator connections and modulator-to-VCA. Add the cables required by your VCA control, sequencer clock and monitor path; those are not drawn.</td>
+</tr>
+<tr>
+<td>Optional; not quantified by the article</td>
+<td>Additional carriers and a suitable mixer</td>
+<td>The prose suggests combining two or three carriers, without giving a mixing schematic or mixer count. The recovered continuation also suggests a transient generator or keyboard as alternate carriers, and frequency-divided subaudio carriers; no hardware values are specified.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Use the existing instruments’ specified power supplies and the appropriate patch-cable format. This page provides no permission to wire mains, connect a passive diode ring directly to a high-voltage CV, or bypass input-level restrictions. Turn monitoring down before every patch change. A scope is helpful for correlating voltage changes and accents but is not required by the source.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--steps">
+<div class="title-bar">
+<span class="project-window-name">Construction, commissioning &amp; operation</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<ol class="guide-steps">
+<li>
+<strong>Establish the audible signal and output path first.</strong>
+<p>Using the compatible module manuals, power the existing equipment normally and verify VCO 1 can be heard through the chosen VCA/monitor route. Open the VCA with its proper control source so a closed VCA is not mistaken for failed ring modulation. Bring monitoring down again before connecting the three leads in Diagram 1:1.</p>
+</li>
+<li>
+<strong>Test the ordinary two-VCO patch.</strong>
+<p>Connect VCO 1 to signal, VCO 2 to carrier and modulator output to VCA. Begin with conservative levels within the modules’ ratings. Change carrier pitch while the signal pitch stays fixed, then change signal pitch while carrier stays fixed. Save an audible baseline before trying subaudio control.</p>
+</li>
+<li>
+<strong>Characterize your actual carrier input.</strong>
+<p>Lower the carrier oscillator into the subaudio range. Compare a slowly changing carrier and a constant carrier if your system safely supplies one. The article’s edge-accent and DC-rejection examples depend on its modulator/input coupling. If steady DC passes a scaled signal or reverses its polarity, you may have a DC-coupled multiplier; that is not evidence of a broken unit. Do not modify a module internally to force the historical result.</p>
+</li>
+<li>
+<strong>Try a subaudio sine carrier.</strong>
+<p>Hold signal waveform, pitch and gain steady. Sweep only the carrier rate and level, listening for tremolo-like variation. Compare the sound near sine-wave peaks and zero crossings with Diagram 1:2. The source attributes loudness to rate of carrier change in its setup; record what your own module actually does instead of treating the sketch as a universal transfer function.</p>
+</li>
+<li>
+<strong>Try a ramp carrier.</strong>
+<p>Replace only the carrier waveform with ramp. In the source’s behavior the long slope gives a steadier background and the abrupt reset gives an accent. Reverse ramp direction if your oscillator provides both slopes; note that clipping, AC coupling and source offset can alter the result. No numeric carrier amplitude or frequency is specified in the article.</p>
+</li>
+<li>
+<strong>Try a pulse carrier and vary width.</strong>
+<p>Compare pulse/square at the same slow cycle rate. Diagram 1:4 identifies transitions as accent points in the historical setup. Change pulse width without changing signal pitch; this changes the spacing of rising/falling edges. If your modulator sustains sound during the flat portions, document that implementation difference rather than assuming a wiring failure.</p>
+</li>
+<li>
+<strong>Build the sequencer patch with equal voltages first.</strong>
+<p>Remove the oscillator carrier and connect the sequencer’s stepped CV output to carrier as Diagram 2 shows. Leave the audio signal source and VCA route in place. Set four steps equal and run the sequencer slowly using its own required clock. Diagram 3 predicts no changing-voltage rhythm when the carrier stays constant; the source does not specify clock wiring or absolute CV values.</p>
+</li>
+<li>
+<strong>Raise just step 1, leaving steps 2–4 equal.</strong>
+<p>Two carrier transitions now occur per four-step cycle: 1→2 and 4→1. The source marks these as two accent boundaries. Listen at those boundaries and, if using a scope, compare the CV step timing with the audio output. Do not substitute the sequencer gate output for stepped CV.</p>
+</li>
+<li>
+<strong>Set all four steps differently.</strong>
+<p>Use Diagram 3’s final case as a relative pattern, not as numeric voltage settings: all four transitions can produce accents, including the loop boundary 4→1. The article relates the greatest voltage change to the strongest accent. Compare adjacent differences rather than assuming the highest absolute CV step must be loudest.</p>
+</li>
+<li>
+<strong>Link pitch interval and accent strength (recovered Diagram 4).</strong>
+<p>Split a single sequencer CV output using a suitable multiple or supported parallel output: one branch goes to VCO pitch CV and the other to ring-modulator carrier. VCO audio goes to signal; ring-modulator output goes to VCA. This adds one CV lead to the three-lead sequence patch. Use small adjacent pitch changes, then larger ones: the article predicts the following note’s accent depends on the size of the preceding pitch/CV interval, not simply its absolute pitch. Compare both ascending and descending intervals: the source says change magnitude matters, not sign. Stay within both modules’ input ranges; a passive CV split is not permission to join two outputs.</p>
+</li>
+<li>
+<strong>Explore combinations only after the basic tests work.</strong>
+<p>The source suggests combining two or three carriers. Use a compatible mixer or a module feature intended for summing; never tie oscillator outputs together with a passive multiple. The article supplies no summing circuit, resistor values or gain recipe. Keep combined levels within the carrier input specification and reduce listening level before experimenting.</p>
+</li>
+</ol>
+<h3>Observation worksheet and expected behavior</h3>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Controlled test</th>
+<th scope="col">Source expectation / useful check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sine, slow carrier</td>
+<td>Tremolo-like modulation. Compare carrier voltage shape and audible envelope rather than expecting a calibrated rate or depth.</td>
+</tr>
+<tr>
+<td>Ramp reset</td>
+<td>A stronger transient at the abrupt return in the source’s system.</td>
+</tr>
+<tr>
+<td>Pulse-width sweep</td>
+<td>Moving edge positions changes accent spacing; exact response is implementation-dependent.</td>
+</tr>
+<tr>
+<td>Four equal sequencer CVs</td>
+<td>No transition-created rhythm; any steady feedthrough reveals the module’s DC/coupling behavior.</td>
+</tr>
+<tr>
+<td>Only step 1 raised</td>
+<td>Accents at 1→2 and 4→1.</td>
+</tr>
+<tr>
+<td>Four different CVs</td>
+<td>Four possible accents per loop; source predicts larger adjacent CV jumps produce stronger accents.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Troubleshooting without inventing a circuit</h3>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Symptom</th>
+<th scope="col">Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Silence in every patch</td>
+<td>Verify signal oscillator, VCA opening, monitor routing, carrier input level and any ring-modulator balance controls using its own manual. Restore the baseline two-audio-VCO patch.</td>
+</tr>
+<tr>
+<td>Steady tone rather than edge-only blips</td>
+<td>Check whether the carrier path is DC-coupled or the module is a four-quadrant multiplier. The historical response is not a universal specification.</td>
+</tr>
+<tr>
+<td>Rhythm occurs only at some boundaries</td>
+<td>Read the actual sequencer CV values: equal adjacent steps make no CV jump. Include the last-to-first boundary.</td>
+</tr>
+<tr>
+<td>Only clicks or harsh distortion</td>
+<td>Reduce carrier and signal levels, inspect for clipping and confirm both inputs accept the chosen signal/CV range. The source gives no universal voltage target.</td>
+</tr>
+<tr>
+<td>Combined carriers behave badly</td>
+<td>Remove the combination patch and test each independently. Do not short two actively driven outputs together.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Keep a patch log with signal waveform/pitch, carrier waveform/rate/amplitude/offset, input gain, four relative CV settings, VCA state and observed accent timing. Those observations make the patch repeatable; the source provides no build calibration or bench measurement tolerances.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--diagrams">
+<div class="title-bar">
+<span class="project-window-name">Inline patch &amp; waveform diagrams</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<h2>Complete patch diagrams, available inline</h2>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/two-vco-patch.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/two-vco-patch.png" alt="Diagram 1:1: VCO 1 to signal input, VCO 2 to carrier input, ring modulator to VCA" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Stephan Bilow, Synapse, July/August 1977, printed p. 30 / PDF p. 1, Diagram 1:1; illustrations credited to Sue Denim/And Graphics. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Patch lead</th>
+<th scope="col">Connect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>VCO 1 audible waveform output → ring-modulator signal input.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>VCO 2 or LFO waveform output → ring-modulator carrier input.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Ring-modulator output → VCA audio input. Complete the VCA control and listening route according to your own system; the source does not show them.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Waveform comparison from the source</h3>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/sine.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/sine.png" alt="Diagram 1:2 sine carrier with marked slow and fast voltage-change regions" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source p. 30, Diagram 1:2: compare peaks/zero crossings with the audible result; this is a waveform sketch, not a wiring schematic. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/ramp.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/ramp.png" alt="Diagram 1:3 ramp carrier with reset edge marked" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source p. 30, Diagram 1:3: the reset edge is marked as the accent point in the article’s system. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/pulse.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/pulse.png" alt="Diagram 1:4 pulse carrier with rising and falling transitions marked" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source p. 30, Diagram 1:4: edge positions vary with pulse width. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<h3>Stepped-voltage carrier</h3>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/sequencer-patch.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/sequencer-patch.png" alt="Diagram 2: source to signal input, sequencer CV to carrier input, ring modulator to VCA" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source p. 30, Diagram 2; example explicitly identified as a Steiner–Parker Synthasystem patch. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/sequence-examples.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/sequence-examples.png" alt="Diagram 3: four equal sequence voltages, one raised step, then four different voltages and their accent transitions" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source p. 30, Diagram 3: three four-step CV settings and their transition/accent relationships. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<h3>Pitch-interval-linked accents: recovered Diagram 4</h3>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/ring-modulation/pitch-accent-patch.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/ring-modulation/pitch-accent-patch.png" alt="Diagram 4: sequencer CV branches to VCO pitch and ring-modulator carrier; VCO audio feeds signal and ring modulator feeds VCA" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Stephan Bilow, source continuation, printed p. 31 / full-issue PDF p. 33, Diagram 4. One sequencer voltage controls both pitch and carrier so adjacent pitch intervals relate to accent strength. Select the diagram for full resolution.</figcaption>
+</figure>
+<p>The continuation also suggests using a keyboard CV in place of the sequencer, a transient generator as carrier, an audio carrier combined with a subaudio carrier, frequency-divided subaudio carriers, and modulator output as a control signal. These are experimental directions only: no levels, divider hardware, summing circuit or destination protection interface is specified.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--notes">
+<div class="title-bar">
+<span class="project-window-name">Source scope &amp; implementation limits</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<h2>Scope and attribution</h2>
+<p>The supplied PDF identifies the author as <strong>Stephan Bilow</strong>; that spelling replaces the legacy page’s Stephen Billow. Source: <cite>Beyond the Clang Tone: Alternative Ring Modulation</cite>, Synapse, July/August 1977, printed pp. 30–31. The original one-page extract stops mid-sentence. Its continuation and Diagram 4 were recovered from the <a href="https://monoskop.org/images/8/80/Synapse_Vol_2_No_2.pdf">complete issue, PDF pp. 32–33</a>, and read alongside the original. All seven diagrams (1:1–1:4 and 2–4) are now inline. The continuation supplies the pitch/accent patch and additional carrier suggestions, but no component-level build or absolute voltages.</p>
+<p class="guide-caution">The explanation is written around voltage-change-responsive behavior and identifies a Steiner–Parker system for the sequencer example. Do not generalize “no signal at constant DC carrier” to every ring modulator. This guide reproduces the experiment and flags the missing interface specifications honestly: no component BOM, power rail values, carrier voltage limits, VCA control patch or complete ring-modulator hardware design appears in either article page.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--source">
+<div class="title-bar">
+<span class="project-window-name">Original article</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<div class="guide-pdf">
+<iframe src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/ring-moulationalternativesstephenbillow.pdf" title="Original source PDF for Ring Modulation Alternatives" loading="lazy">
+</iframe>
+</div>
+<p>
+<a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/ring-moulationalternativesstephenbillow.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
+</p>
+</div>
+</section>
+</div>
+</main>
+<footer>
+<p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+<div class="footer-badges">
+<img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge">
+<img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo">
+</div>
+</footer>
+</body>
+</html>

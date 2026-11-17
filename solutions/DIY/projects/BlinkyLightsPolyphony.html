@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description"
-    content="Three cascaded CMOS counters and decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO control, or audio input can vary the display speed, making it a simple bridge between sound and visual art.">
+    content="One CMOS binary counter and three decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO control, or audio input can vary the display speed, making it a simple bridge between sound and visual art.">
   <title>Blinky Lights DIY Guide | Otorlymern Electrical Solutions</title>
   <link rel="stylesheet" href="/css/diystyle.css">
   <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
@@ -17,120 +17,522 @@
   <header>
     <nav>
       <ul class="nav-bar">
-        <li><a href="/index.html">Home</a></li>
-        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+        <li>
+<a href="/index.html">Home</a>
+</li>
+        <li class="dropdown">
+<a href="/systems/rrr.html">Systems</a>
           <ul class="dropdown-content">
-            <li><a href="/music/studio.html">OEStudio</a></li>
-            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-            <li><a href="/systems/home-recording.html">Home Recording</a></li>
-            <li><a href="/video/videolibrary.html">Video Library</a></li>
-            <li><a href="/solutions/resources/index.html">Resources</a></li>
+            <li>
+<a href="/music/studio.html">OEStudio</a>
+</li>
+            <li>
+<a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a>
+</li>
+            <li>
+<a href="/systems/home-recording.html">Home Recording</a>
+</li>
+            <li>
+<a href="/video/videolibrary.html">Video Library</a>
+</li>
+            <li>
+<a href="/solutions/resources/index.html">Resources</a>
+</li>
           </ul>
         </li>
-        <li><a href="/services/index.html">Services</a></li>
-        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+        <li>
+<a href="/services/index.html">Services</a>
+</li>
+        <li class="dropdown">
+<a href="/solutions/index.html">Solutions</a>
           <ul class="dropdown-content">
-            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
-            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
-            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+            <li>
+<a href="/oes-patch-builder/index.html">Patch Builder</a>
+</li>
+            <li>
+<a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a>
+</li>
+            <li>
+<a href="/solutions/DIY/designers/index.html">DIY Pioneers</a>
+</li>
+            <li>
+<a href="/solutions/resources/index.html">Links / Resources</a>
+</li>
           </ul>
         </li>
-        <li><a href="/manuals/">Archive</a></li>
+        <li>
+<a href="/manuals/">Archive</a>
+</li>
       </ul>
     </nav>
   </header>
   <main class="projects-main">
     <section class="projects-hero project-guide-hero">
-      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
-          class="projects-title-ripple projects-title-ripple--one"></span><span
-          class="projects-title-ripple projects-title-ripple--two"></span></div>
+      <div class="projects-title-blob" aria-hidden="true">
+<span class="projects-title-glare">
+</span>
+<span
+          class="projects-title-ripple projects-title-ripple--one">
+</span>
+<span
+          class="projects-title-ripple projects-title-ripple--two">
+</span>
+</div>
       <div class="project-guide-title">
         <p class="project-guide-kicker">Craig Anderton · Polyphony</p>
-        <h1><span>Blinky Lights</span></h1>
+        <h1>
+<span>Blinky Lights</span>
+</h1>
         <p class="project-guide-kind">Audio-reactive LED project</p>
       </div>
     </section>
-    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+    <p class="project-guide-back">
+<a href="index.html">← Back to DIY Audio &amp; Video Projects</a>
+</p>
     <div class="project-guide-grid">
       <section class="project-window window guide-window guide-window--description">
-        <div class="title-bar"><span class="project-window-name">Description</span></div>
-        <div class="separator"></div>
+        <div class="title-bar">
+<span class="project-window-name">Description</span>
+</div>
+        <div class="separator">
+</div>
         <div class="window-pane">
-          <p>Three cascaded CMOS counters and decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO
+          <p>One CMOS binary counter and three decoders drive 24 LEDs in patterns at related rates. An op-amp clock, LFO
             control, or audio input can vary the display speed, making it a simple bridge between sound and visual art.
           </p>
-          <p class="guide-source-link"><a
+          <p class="guide-source-link">
+<a
               href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
-              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p>
+              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a>
+</p>
         </div>
       </section>
       <section class="project-window window guide-window guide-window--materials">
-        <div class="title-bar"><span class="project-window-name">Materials</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <ul>
-            <li>Three CD4028 one-of-eight decoders and one CD4024 binary counter</li>
-            <li>LM3900/3900 quad op amp (as shown) and transistor control stage</li>
-            <li>24 LEDs</li>
-            <li>Resistors and capacitors per the original schematic and parts list</li>
-            <li>9 V supply; the article says 12 V operation may require bias adjustment</li>
-            <li>Board, wire, and a panel/display surface</li>
-          </ul>
-        </div>
-      </section>
+<div class="title-bar">
+<span class="project-window-name">Materials &amp; complete parts schedule</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<p>Source: Craig Anderton, <cite>Blinky Lights</cite>, Polyphony, four-page PDF, printed pp. 16–19. Figure 4 (PDF p. 2) is the display circuit; Figure 5 and the complete numbered parts list are on PDF p. 3. The old list’s “mf.” denotes microfarads here: the controller drawing explicitly marks 2.2 µF and 100 µF.</p>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Qty</th>
+<th scope="col">References / values</th>
+<th scope="col">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>R1, R2, R3: 270 Ω each</td>
+<td>One shared cathode-return resistor for each eight-LED bank.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>R4: 22 kΩ</td>
+<td>Audio input.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>R5, R6: 100 kΩ</td>
+<td>LFO/clock control networks.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>R7: 150 kΩ</td>
+<td>LFO feedback.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>R8, R9: 470 kΩ</td>
+<td>LFO and clock.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>R10, R11, R12: 1 MΩ</td>
+<td>LFO bias, clock bias and counter input pull-down.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>R13: 1.2 MΩ</td>
+<td>LFO bias.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>R14: 2.2 MΩ</td>
+<td>Clock feedback.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>R15: 3.9 MΩ</td>
+<td>Audio feedback.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>R16, R17: 10 MΩ</td>
+<td>Clock threshold/bias network.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>R18: 5 kΩ potentiometer</td>
+<td>Control depth / top-speed setting; source does not specify taper.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C1: 0.1 µF</td>
+<td>Audio input coupling; nonpolarized symbol.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C2: 2.2 µF electrolytic</td>
+<td>Clock timing; positive terminal to timing node.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C3: 100 µF electrolytic</td>
+<td>LFO timing/feedback; positive terminal at IC1 pin 10, not ground.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Q1: 2N3904 NPN transistor</td>
+<td>Voltage-controlled clock element; use manufacturer pinout for the actual package.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>IC1: 3900 / LM3900 quad Norton amplifier</td>
+<td>Four sections perform clock, audio interface and LFO. Do not substitute an ordinary quad op amp as if it had the same circuitry or pinout.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>IC2: CD4024 binary counter</td>
+<td>The only binary counter in this circuit.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>IC3, IC4, IC5: CD4028 decoders</td>
+<td>Three separate eight-LED banks; D input grounded for binary-to-octal use.</td>
+</tr>
+<tr>
+<td>24</td>
+<td>LEDs</td>
+<td>Eight per bank; source uses direct CMOS drive, not high-power lamps.</td>
+</tr>
+<tr>
+<td>As required</td>
+<td>Perfboard or PCB, insulated wire, display panel, sockets, spacers/brackets, connectors, 5 kΩ control knob</td>
+<td>The LED board may be physically separate; hardware dimensions and connector count are not specified.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>9 V DC supply</td>
+<td>Source design voltage. Source reports total current under 40 mA; allow supply margin rather than treating this as a precision acceptance limit.</td>
+</tr>
+<tr>
+<td>Optional, 1 each</td>
+<td>1 kΩ potentiometer and 10 kΩ series resistor</td>
+<td>Figure 3 audio attenuator, not included in numbered R1–R18 list.</td>
+</tr>
+<tr>
+<td>Optional</td>
+<td>Photoresistor across R11; 5 or 10 MΩ trim pot replacing R11</td>
+<td>Ambient-light speed option or bias trim described on PDF pp. 2/4. Photoresistor resistance range and pot taper are not supplied.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Resistor wattages, tolerances, LED types/current targets and capacitor voltage ratings are not specified by the list. Select parts suitable for the actual 9 V circuit; capacitors need voltage margin above the voltage across them. Workshop tools: grounded soldering equipment, meter and ideally a scope. A plug-in isolated regulated 9 V supply or battery avoids building the article’s mains-connected supply sketch.</p>
+</div>
+</section>
       <section class="project-window window guide-window guide-window--steps">
-        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
-        <div class="separator"></div>
+<div class="title-bar">
+<span class="project-window-name">Construction, commissioning &amp; operation</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<ol class="guide-steps">
+<li>
+<strong>Design the display in three banks of eight.</strong>
+<p>Mark which eight LEDs belong to IC3, IC4 and IC5. Straight rows, concentric rings or a deliberately scattered pattern are all source suggestions. Mounting a bank in reverse physical order changes apparent motion without changing the electrical binary decode. Leave room for separate common cathode returns and all 24 individual anode wires.</p>
+</li>
+<li>
+<strong>Wire and verify low-voltage power first.</strong>
+<p>Use a regulated isolated 9 V DC source. Fit sockets and rail wiring; check pin 14/pin 7 on LM3900 and CD4024, and pin 16/pin 8 on each CD4028 before installing chips. Check pin 11 on each decoder is grounded and the counter reset pin 2 is grounded. Power off and discharge capacitors before inserting ICs.</p>
+</li>
+<li>
+<strong>Build the counter and first LED bank.</strong>
+<p>Wire the IC3 A/B/C inputs from the first three counter outputs and its eight LED anodes in the sequence above. Fit R1 as that bank’s common 270 Ω return. Add R12 to the counter input. Inspect for accidental ground on decoder output pin 7: on a 4028 pin 7 is an output, unlike the 4024 ground pin.</p>
+</li>
+<li>
+<strong>Add the middle and slow banks.</strong>
+<p>Use the table’s shifted counter-output groups for IC4 and IC5. Fit R2 and R3 separately. Keep the 24 anode wires labeled; a bank’s eight LEDs may be distant from the controller board. Check every LED’s polarity before blaming a missing count.</p>
+</li>
+<li>
+<strong>Build the LM3900 voltage-controlled clock.</strong>
+<p>Assemble IC1A, Q1, R6/R9/R11/R16/R17/R18, C2 and R14 from Figure 5. Confirm Q1’s actual lead arrangement from its own manufacturer data. Keep timing and high-value resistor nodes clean and short. Leave external control sources disconnected for the initial fixed-bias clock check.</p>
+</li>
+<li>
+<strong>Commission the basic display.</strong>
+<p>Apply 9 V using current limiting and monitor the rail voltage/current. Scope IC1 pin 4 and IC2 pin 1 for a changing clock. At slow enough rate, each bank should have one lit LED, with IC4 advancing at half the speed of IC3 and IC5 at half IC4. The source reports normal total current below 40 mA; a substantial excess, a hot chip or many simultaneously illuminated LEDs calls for immediate power-off and inspection.</p>
+</li>
+<li>
+<strong>Add and test the slow LFO.</strong>
+<p>Build IC1C/D and R5/R7/R8/R10/R13/C3. Confirm C3 positive is connected to pin 10. Scope pin 10 for a slowly changing waveform, then patch pin 10 to R18’s control input. Adjust R18 for the preferred excursion from individually visible steps toward a blurred display. The source supplies no guaranteed LFO period or absolute control-voltage range.</p>
+</li>
+<li>
+<strong>Add and test the audio interface separately.</strong>
+<p>Build IC1B, C1, R4 and R15, then disconnect the LFO control patch and connect amp out pin 5 to R18’s input. Use a modest compatible audio signal, starting attenuated. The source says a microphone or guitar pickup can drive the sensitive interface. Reduce input level if the display only jumps between very slow and maximum speed.</p>
+</li>
+<li>
+<strong>Adjust control depth and optional bias.</strong>
+<p>R18 controls the modulation depth/top rate. The audio attenuator and R18 interact; set the input so signal peaks give the fastest desired flashing, not continuous saturation. For the ambient-light option, a photoresistor can be put across R11; the source says brighter light raises the rate, but provides no specific photoresistor value.</p>
+</li>
+<li>
+<strong>Mount after electrical tests pass.</strong>
+<p>Use spacers for a sandwich display/controller arrangement or brackets for separate boards. Insulate all underside conductors, strain-relieve the supply/audio/control leads and ensure the LED panel cannot short board wiring. Repeat fixed-clock, LFO and audio-mode tests after mounting. Do not connect relay coils or lamps directly to decoder outputs.</p>
+</li>
+</ol>
+<h3>Measurements and staged acceptance</h3>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Test point</th>
+<th scope="col">Expected result / diagnostic value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All logic supply pins</td>
+<td>Approximately +9 V relative to the single common ground. No negative rail is used.</td>
+</tr>
+<tr>
+<td>IC1 pin 4 / IC2 pin 1</td>
+<td>Repeating clock waveform when the clock is operating; both points are the same signal.</td>
+</tr>
+<tr>
+<td>IC2 pins 12, 11, 9, 6, 5</td>
+<td>Successive binary divisions /2, /4, /8, /16, /32 of the input clock. Each successive signal changes at half the preceding frequency.</td>
+</tr>
+<tr>
+<td>Each decoder bank</td>
+<td>One selected high output / one lit LED at a time. IC3/IC4/IC5 advance in 1:½:¼ rate relationship.</td>
+</tr>
+<tr>
+<td>IC1 pin 10</td>
+<td>Slowly varying LFO output; connecting it to R18 should vary clock rate, not directly address LEDs.</td>
+</tr>
+<tr>
+<td>IC1 pin 5</td>
+<td>Audio interface output should respond to changing input; the source describes a pseudo-envelope response, not a calibrated envelope voltage.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>These are circuit-derived checks, not a claim that a newly assembled unit has been measured. The source does not state scope amplitudes, timing tolerances, exact flash rates or a transistor-base calibration voltage.</p>
+<h3>9 V versus 12 V and power safety</h3>
+<p>The article is designed for 9 V; at 12 V it suggests changing R11 from 1 MΩ to about 2.2 MΩ. Alternatively, replace R11 with a 5 or 10 MΩ pot: disconnect control inputs, start at maximum resistance, reduce until stepping starts to speed up, then back off for the slowest usable rate. It says R13 may also need trimming at other voltages but gives no replacement value. These are source-described modifications, not necessary commissioning steps at regulated 9 V.</p>
+<p class="guide-caution">Figure 7 is a historical transformer/rectifier/dropper sketch, not a fully specified modern supply project: transformer secondary and dropper values are not given. This guide therefore uses an isolated low-voltage regulated supply rather than inventing those values. The article’s final transistor/reed-relay suggestion likewise gives no driver circuit or coil/protection specifications; it is not an instruction to connect mains loads.</p>
+<h3>Troubleshooting</h3>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Symptom</th>
+<th scope="col">Check before changing component values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All dark</td>
+<td>Check 9 V, IC orientation, decoder pin 11 low, bank cathode return resistors and LED polarity.</td>
+</tr>
+<tr>
+<td>One LED stays lit per bank</td>
+<td>Check clock at pin 4/pin 1 and reset pin 2 low. This is different from all-dark and usually means no count advancement.</td>
+</tr>
+<tr>
+<td>Some steps missing or wrong order</td>
+<td>Check A/B/C bit order and the 4028 output pin sequence; inspect 24 anode wires and reversed LEDs.</td>
+</tr>
+<tr>
+<td>All banks move at the same rate</td>
+<td>Recheck shifted input groups: middle bank starts at Q2, slow bank at Q3. Do not feed all banks from the same three bits.</td>
+</tr>
+<tr>
+<td>LFO does not change speed</td>
+<td>Verify pin 10 reaches R18 upper end, R18 wiper reaches R6, C3 polarity and the LFO bias/feedback parts.</td>
+</tr>
+<tr>
+<td>Audio gives only slow/fast switching</td>
+<td>Reduce input with the compatible attenuator or source level, then reset R18. The source explicitly warns about interface saturation.</td>
+</tr>
+<tr>
+<td>No clock at regulated 9 V</td>
+<td>Check Q1 E/B/C orientation, C2, R9/R14 and R16/R17 values before trying optional R11/R13 bias modifications.</td>
+</tr>
+<tr>
+<td>Brightness / supply current abnormal</td>
+<td>Check three separate 270 Ω returns and only one LED selected per bank. Do not lower resistors to compensate for a high-power or unsuitable LED load.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+      <section class="project-window window guide-window guide-window--diagrams">
+<div class="title-bar">
+<span class="project-window-name">Inline schematics &amp; exact wiring</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<h2>Display and controller schematics</h2>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/blinky-lights/display-schematic.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/blinky-lights/display-schematic.png" alt="Figure 4 CD4024 counter feeding three CD4028 decoders and three eight-LED banks with 270 ohm return resistors" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Craig Anderton, Polyphony, PDF p. 2 / printed p. 17, Figure 4. The asterisk note sets each 4028 pin 16 to +9 V and pins 8/11 to ground. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/blinky-lights/controller-schematic.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/blinky-lights/controller-schematic.png" alt="Figure 5 LM3900 voltage-controlled clock, triangle LFO and audio amplifier controller schematic" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source PDF p. 3 / printed p. 18, Figure 5. The upper clock-control label is partly clipped in the source scan; its connection is the upper end of R18. No missing component is inferred from that clipped heading. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<h3>Power and display wiring</h3>
+<p>Use <strong>+9 V and ground, not ±9 V</strong>. IC1 LM3900 pin 14 → +9 V, pin 7 → ground. IC2 CD4024 pin 14 → +9 V; pins 2 and 7 → ground; pin 1 is clock input and has R12 (1 MΩ) to ground. On each CD4028, pin 16 → +9 V; pin 8 → ground; D input pin 11 → ground. Unused counter outputs and decoder outputs 8/9 need no load. This is one counter with overlapping groups of output bits, not three cascaded counters.</p>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Decoder</th>
+<th scope="col">A input pin 10</th>
+<th scope="col">B input pin 13</th>
+<th scope="col">C input pin 12</th>
+<th scope="col">Relative advancement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IC3, fastest</td>
+<td>IC2 pin 12 (Q1)</td>
+<td>IC2 pin 11 (Q2)</td>
+<td>IC2 pin 9 (Q3)</td>
+<td>One LED position per counter input event</td>
+</tr>
+<tr>
+<td>IC4, middle</td>
+<td>IC2 pin 11 (Q2)</td>
+<td>IC2 pin 9 (Q3)</td>
+<td>IC2 pin 6 (Q4)</td>
+<td>One position per two input events</td>
+</tr>
+<tr>
+<td>IC5, slowest</td>
+<td>IC2 pin 9 (Q3)</td>
+<td>IC2 pin 6 (Q4)</td>
+<td>IC2 pin 5 (Q5)</td>
+<td>One position per four input events</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For <em>each</em> decoder, output numbers 0–7 are pins <strong>3, 14, 2, 15, 1, 6, 7, 4</strong> respectively. Connect each of those pins to a separate LED anode. Join only that bank’s eight cathodes and return them to ground through its own 270 Ω resistor (R1 for IC3, R2 for IC4, R3 for IC5). Do not join all three cathode banks before one shared resistor. Only one LED per bank is normally selected at a time. The original drawing directly drives the LEDs from CMOS; it does not provide transistor drivers for large LED loads.</p>
+<h3>Controller net list (Figure 5)</h3>
+<div class="guide-table-wrap">
+<table class="guide-table">
+<thead>
+<tr>
+<th scope="col">Block</th>
+<th scope="col">Connections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock threshold</td>
+<td>IC1A noninverting pin 2 → junction of R16 (10 MΩ to +9 V) and R17 (10 MΩ to output pin 4). Output pin 4 → IC2 clock pin 1.</td>
+</tr>
+<tr>
+<td>Clock timing</td>
+<td>C2 positive → timing node, C2 negative → ground. Timing node → R9 (470 kΩ) → IC1A inverting pin 3. R14 (2.2 MΩ) connects timing node to output pin 4.</td>
+</tr>
+<tr>
+<td>Clock transistor / control</td>
+<td>Q1 collector → timing node; emitter → clock output node IC1 pin 4. Base → R11 (1 MΩ) to +9 V and R6 (100 kΩ) to R18 wiper. R18 low end → ground; upper end → clock control input. Q1’s physical E/B/C lead order is package-dependent; do not infer it from the drawn symbol.</td>
+</tr>
+<tr>
+<td>Triangle LFO first section</td>
+<td>IC1D inverting pin 11 has R10 (1 MΩ) to +9 V and C3 to output pin 10. C3 positive is at pin 10. Pin 10 is LFO out; it also feeds R5 (100 kΩ) to IC1C inverting pin 8.</td>
+</tr>
+<tr>
+<td>Triangle LFO second section</td>
+<td>IC1C noninverting pin 13 → R13 (1.2 MΩ) to +9 V and R7 (150 kΩ) to IC1C output pin 9. Output pin 9 → R8 (470 kΩ) → IC1D noninverting pin 12.</td>
+</tr>
+<tr>
+<td>Audio amplifier</td>
+<td>Amp input → C1 (0.1 µF) → R4 (22 kΩ) → IC1B inverting pin 6. R15 (3.9 MΩ) connects pin 6 to output pin 5 (amp out). IC1B noninverting pin 1 → ground. LM3900 is a Norton/current-differencing amplifier; this ground connection is intentional in the source.</td>
+</tr>
+<tr>
+<td>Mode patching</td>
+<td>Connect LFO out (pin 10) <em>or</em> amp out (pin 5) to the upper end of R18 / clock control input. Do not tie these two actively driven outputs together. The source uses patch connections rather than providing a mode-switch wiring diagram.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Optional audio attenuator</h3>
+<figure class="guide-figure">
+<a href="/images/diagrams/diy/blinky-lights/audio-attenuator.png" target="_blank" rel="noopener">
+<img src="/images/diagrams/diy/blinky-lights/audio-attenuator.png" alt="Figure 3 1k input level pot across audio source and 10k series resistor to amp input" loading="lazy" style="max-width:100%;height:auto">
+</a>
+<figcaption>Source PDF p. 2 / printed p. 17, Figure 3. Ground-reference and source compatibility must be established before using this historical speaker-output example. Select the diagram to inspect its full resolution.</figcaption>
+</figure>
+<p>Figure 3 puts a 1 kΩ pot across the source with its low end grounded; its wiper feeds amp input through 10 kΩ. This is <strong>not</strong> a universally safe modern speaker tap. Bridged/class-D or floating speaker outputs must not be grounded this way. Prefer a known compatible low-level audio source; do not attach unknown powered speaker terminals, mains or a headphone output with incompatible loading. The original has no protection or isolation design for those cases.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--notes">
+<div class="title-bar">
+<span class="project-window-name">Source details &amp; limits</span>
+</div>
+<div class="separator">
+</div>
+<div class="window-pane">
+<h2>Attribution and unresolved specifications</h2>
+<p>Craig Anderton, <cite>Blinky Lights</cite>, Polyphony, PDF pp. 1–4 / printed pp. 16–19: concept and block diagram (p. 1), display Figure 4 and attenuator Figure 3 (p. 2), controller Figure 5 and numbered BOM (p. 3), construction/power/bias notes (p. 4). Inline figures are cropped circuit excerpts; article prose is paraphrased.</p>
+<p>Supplemental package verification: <a href="https://www.ti.com/lit/ds/symlink/lm3900.pdf">TI LM2900/LM3900, p. 1, pin diagram</a>; <a href="https://www.ti.com/lit/ds/symlink/cd4024b.pdf">TI CD4024B, terminal assignment</a>; <a href="https://www.ti.com/lit/ds/symlink/cd4028b.pdf">TI CD4028B, terminal assignment / binary-to-octal use with D low</a>. The source omits LED type/current targets, resistor tolerances/power ratings, photoresistor range and mechanical dimensions. It does not provide a modern protected audio input or high-power lamp driver. Those omissions are not silently filled with guessed parts.</p>
+</div>
+</section>
+<section class="project-window window guide-window guide-window--source">
+        <div class="title-bar">
+<span class="project-window-name">Original article</span>
+</div>
+        <div class="separator">
+</div>
         <div class="window-pane">
-          <ol class="guide-steps">
-            <li><strong>Lay out the three LED banks.</strong>
-              <p>Plan three groups of eight LEDs. The source suggests parallel rows or concentric circles; each group
-                advances at a different rate.</p>
-            </li>
-            <li><strong>Build the counter/decoder chain.</strong>
-              <p>Wire the 4024 clock counter and three 4028 decoders according to the schematic. Check each decoder
-                output with one current-limited LED before wiring all 24.</p>
-            </li>
-            <li><strong>Add the clock and rate controls.</strong>
-              <p>Build the op-amp clock and R-18 speed control. Add the optional slow LFO path only after the base clock
-                reliably advances the LEDs.</p>
-            </li>
-            <li><strong>Add the audio interface if wanted.</strong>
-              <p>Follow the source input amplifier/attenuator circuit. Start with a low audio level and set the
-                top-speed limit to prevent the display from locking at maximum rate.</p>
-            </li>
-            <li><strong>Mount the circuit and LED panel.</strong>
-              <p>Use perfboard or the PCB approach described in the article. The source recommends separating the LED
-                display and control board when useful for mounting.</p>
-            </li>
-            <li><strong>Set the supply and test.</strong>
-              <p>Begin at 9 V as specified. Test steady stepping first, then the LFO, then audio response. The article
-                notes that 12 V operation may need R-11 adjustment.</p>
-            </li>
-          </ol>
-          <p class="guide-caution">The original article scan is the source for exact resistor/capacitor values. The
-            legacy page contained likely unit transcription errors for capacitors; confirm values from the article
-            before ordering.</p>
-        </div>
-      </section>
-      <section class="project-window window guide-window guide-window--source">
-        <div class="title-bar"><span class="project-window-name">Original article</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <div class="guide-pdf"><iframe
+          <div class="guide-pdf">
+<iframe
               src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
-              title="Original source PDF for Blinky Lights" loading="lazy"></iframe></div>
-          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
-              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>
+              title="Original source PDF for Blinky Lights" loading="lazy">
+</iframe>
+</div>
+          <p>
+<a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/blinkylightspolyphony0302.pdf"
+              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
+</p>
         </div>
       </section>
     </div>
   </main>
   <footer>
     <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
-    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
-        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
+    <div class="footer-badges">
+<img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge">
+<img
+        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo">
+</div>
   </footer>
 </body>
 

@@ -1,100 +1,79 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vocal Synthesis US – DIY Project</title>
-
-  <!-- site-wide DIY styles -->
-  <link rel="stylesheet" href="/css/diystyle.css" />
-  <!-- project-specific overrides -->
-  <link rel="stylesheet" href="/css/projectstyle.css" />
-  <link rel="stylesheet" href="/css/site-nav.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Peter Hillen’s 1977 vocal-tract model: voiced, oral, nasal and fricative paths, a staged patch study, and the limits of the historical source." name="description"/>
+<title>Vocal Synthesis — Source and Patch Guide | Otorlymern Electrical Solutions</title>
+<link href="/css/diystyle.css" rel="stylesheet"/>
+<link href="/solutions/DIY/projects/projects.css" rel="stylesheet"/>
+<link href="/solutions/DIY/projects/project-guide.css" rel="stylesheet"/>
+<link href="/css/site-nav.css" rel="stylesheet"/>
 </head>
+<body class="diy-projects-page diy-project-guide">
 <header>
 <nav>
-    <ul class="nav-bar">
-      <li><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/systems/rrr.html">Systems</a>
-        <ul class="dropdown-content">
-          <li><a href="/music/studio.html">OEStudio</a></li>
-          <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-          <li><a href="/systems/home-recording.html">Home Recording</a></li>
-          <li><a href="/video/videolibrary.html">Video Library</a></li>
-          <li><a href="/solutions/resources/index.html">Resources</a></li>
-        </ul>
-      </li>
-      <li><a href="/services/index.html">Services</a></li>
-      <li class="dropdown">
-        <a href="/solutions/index.html">Solutions</a>
-        <ul class="dropdown-content">
-                    <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
-<li><a href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
-          <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+<ul class="nav-bar">
+<li><a href="/index.html">Home</a></li>
+<li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+<ul class="dropdown-content">
+<li><a href="/music/studio.html">OEStudio</a></li>
+<li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+<li><a href="/systems/home-recording.html">Home Recording</a></li>
+<li><a href="/video/videolibrary.html">Video Library</a></li>
+<li><a href="/solutions/resources/index.html">Resources</a></li>
+</ul>
+</li>
+<li><a href="/services/index.html">Services</a></li>
+<li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+<ul class="dropdown-content">
+<li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+<li><a aria-current="page" href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+<li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
 <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
-        </ul>
-      </li>
-      <li><a href="/manuals/">Archive</a></li>
-    </ul>
-  </nav>
+</ul>
+</li>
+<li><a href="/manuals/">Archive</a></li>
+</ul>
+</nav>
 </header>
-
-<body>
-
-  <main class="project-container">
-    <!-- TITLE -->
-    <h1 class="project-title">Vocal Synthesis</h1>
-
-    <!-- PDF EMBED -->
-    <div class="pdf-viewer">
-      <div class="pdf-page">
-        <a href="vocalsynthesiuss.pdf" target="_blank">
-          <object data="vocalsynthesiuss.pdf#page=1" type="application/pdf">
-            <p><strong><a href="vocalsynthesiuss.pdf">View Page 1</a></strong></p>
-          </object>
-        </a>
-      </div>
-      <div class="pdf-page">
-        <a href="vocalsynthesiuss.pdf" target="_blank">
-          <object data="vocalsynthesiuss.pdf#page=2" type="application/pdf">
-            <p><strong><a href="vocalsynthesiuss.pdf">View Page 2</a></strong></p>
-          </object>
-        </a>
-      </div>
-    </div>
-
-    <!-- NOTES SECTIONS -->
-    <div class="project-sections">
-      <h2>Description</h2>
-      <p>This is a fun project/patch you can do with some basic modules or a competent enough fixed architecture (non-modular) synth. This could even be implemented in Max or Pure Data. 
-        This patch shows how the basic principles of human speech work, teaches about resonances, formants, and the importance of filters. With a couple filters tuned in the right range, you can eerily but effectively mimic the human voice enunciating vowels. It has to be heard to be understood. I remember when I first got the Wiard Dual Borg filter I would run it in parallel with any other filters I had with it in parallel mode, giving me like 4 filters, and starts sweeping around in bandpass mode until I found that creepy sweet spot. It's lots of fun. Just read the article and patch based on the diagram and you should be good. 
-      </p>
-
-      <h2>Results</h2>
-      <p><!-- observations, tweaks, etc. --></p>
-    </div>
-  </main>
-
-
-  <!-- Floating blobs confined above footer -->
-  <div class="blob-container" style="position:absolute; top:0; bottom:80px; width:100%; overflow:hidden; pointer-events:none;">
-    <div class="blob blob-red"></div>
-    <div class="blob blob-blue"></div>
-    <div class="blob blob-red-2"></div>
-  </div>
-
-  <!-- FOOTER -->
-
-    <footer>
-  <p>&copy; 2025 – Otorlymern Electrical Solutions – DIY – Projects – Vocal Synthesis US</p>
-  <div class="footer-badges">
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
-    <img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge" />
-    <img src="https://media.otorlymern-electrical.com/images/clip-art/worldwideweb_badge.gif" class="footer-badges" alt="World Wide Web badge" />
-    <img src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo" />
-    <a href="https://reverb.com/shop/otorlymern-electrical"><img src="https://res.cloudinary.com/reverb-cms/image/upload/backfilled/curation/Shop-Button-72x28-Og_ffmzep.png" alt="Shop My Store on Reverb" /></a>
-  </div>
+<main class="projects-main">
+<section class="projects-hero project-guide-hero">
+<div aria-hidden="true" class="projects-title-blob"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div>
+<div class="project-guide-title">
+<p class="project-guide-kicker">Peter Hillen · Synapse · May/June 1977</p>
+<h1><span>Vocal Synthesis</span></h1>
+<p class="project-guide-kind">Vocal-tract model · modular patch study, not a Computalker kit</p>
+</div>
+</section>
+<p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+<div class="project-guide-grid">
+<section class="project-window window guide-window guide-window--description">
+<div class="title-bar"><span class="project-window-name">Description</span></div>
+<div class="separator"></div>
+<div class="window-pane"><p>Peter Hillen’s “Vocal Synthesis” explains the Computalker approach to speech: analog sound generation and filtering under timed computer control. Its electronic vocal tract separates voiced excitation, oral formants, nasal resonance and fricative noise.</p><p><strong>Source scope:</strong> the local PDF contains <strong>three</strong> pages, printed pp. 37–39 of <cite>Synapse</cite>, May/June 1977, not just the two pages previously embedded here. It is an overview with a functional block diagram and oscillator waveform drawing, not a component schematic, software listing or parts-level Computalker construction plan.</p><p>A modular adaptation can explore vowel-like sounds and articulation. It does not automatically provide intelligible text-to-speech. The article’s oral path uses three filters <strong>in series</strong>; a parallel formant bank is a different patch, not what Figure 1 draws.</p><p><a href="vocalsynthesiuss.pdf" rel="noopener noreferrer" target="_blank">Read all three original pages ↗</a></p></div>
+</section>
+<section class="project-window window guide-window guide-window--materials">
+<div class="title-bar"><span class="project-window-name">Materials</span></div>
+<div class="separator"></div>
+<div class="window-pane"><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">Function</th><th scope="col">Modules / source limitations</th></tr></thead><tbody><tr><td>Voiced excitation</td><td>Variable-frequency oscillator and VCA. The article depicts a modified sine/half-wave-like excitation; it does not provide a wave-shaper circuit or calibrated oscillator frequency limits.</td></tr><tr><td>Oral path</td><td>Mixer for voiced and noise excitation, followed by three tunable band-pass VCF stages in series. No vowel-frequency, Q, gain or control-voltage table is supplied.</td></tr><tr><td>Noise</td><td>Wideband white-noise source; separate VCAs for oral noise and fricatives.</td></tr><tr><td>Nasal path</td><td>Additional VCA and fixed, relatively broad band-pass filter, driven from the voiced branch after its first VCA.</td></tr><tr><td>Fricative path</td><td>Noise through its own VCA and low-pass VCF. The prose specifically calls this branch low-pass, distinct from the formant filters.</td></tr><tr><td>Output / controls</td><td>Final three-path summing mixer; envelopes/manual controls for a study. The complete speech system additionally needs computer timing, D/A control and substantial software, none supplied here.</td></tr><tr><td>Full Figure 1 inventory</td><td>One oscillator, one noise source, four VCAs, two mixers, three oral VCFs, one fricative VCF and one fixed nasal filter. A reduced oral-only study does not need the other branches.</td></tr></tbody></table></div></div>
+</section>
+<section class="project-window window guide-window guide-window--steps">
+<div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
+<div class="separator"></div>
+<div class="window-pane"><h2>1. Follow the vocal-tract analogy (pp. 37–38)</h2><p>The oscillator represents vocal-fold excitation, and its frequency and amplitude can change independently. The tract’s changing resonances shape that excitation into speech-like spectra. Hillen models the first three resonances with variable filters, while a separate fixed filter represents the nasal cavity. These are a simplified model, not a complete simulation of human anatomy.</p><figure><a aria-label="Open full-size functional diagram" href="/images/diagrams/diy/vocalsynthesisus/tract.svg" rel="noopener noreferrer" target="_blank"><img alt="Voiced oscillator through VCA splits to nasal VCA and fixed band-pass filter, and oral mixer; noise through VCA also enters oral mixer, then three series band-pass filters. A separate noise VCA and low-pass filter form fricatives. All paths sum to output." class="guide-diagram" loading="lazy" src="/images/diagrams/diy/vocalsynthesisus/tract.svg"/></a><figcaption>OES functional redraw after Figure 1 (printed p. 38). Control-voltage arrows are omitted here for clarity; each VCA and variable filter requires its own control.</figcaption></figure><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">Path</th><th scope="col">Audio routing</th></tr></thead><tbody><tr><td>Voiced common feed</td><td>Vocal oscillator → VCA 1. Its output feeds both oral mixer and nasal VCA.</td></tr><tr><td>Oral</td><td>Voiced feed + noise through VCA 2 → input mixer → band-pass VCF 1 → VCF 2 → VCF 3 → final mixer.</td></tr><tr><td>Nasal</td><td>Voiced feed → VCA 3 → fixed band-pass filter → final mixer.</td></tr><tr><td>Fricative</td><td>Noise source → VCA 4 → low-pass VCF → final mixer.</td></tr><tr><td>Output</td><td>Final mixer combines oral, nasal and fricative signals → suitable monitor/recording input.</td></tr></tbody></table></div><h2>2. Patch a reduced oral-path study first</h2><ol class="guide-steps"><li>Keep monitor level low and mute nasal/fricative paths. Verify oscillator → voiced VCA → mixer is audible, with a slow hand/envelope control of the VCA. Use a suitable available excitation; any substitution for the article’s waveform is an adaptation.</li><li>Add one band-pass filter and find an audible region with modest resonance. Add the second and third in series, testing after each. Serial band-pass stages may attenuate severely; do not compensate blindly with high gain or self-oscillation.</li><li>Keep oscillator pitch steady while moving filter centers independently. Listen for changing vowel-like color. Then hold filter settings and vary oscillator pitch to hear the difference between excitation frequency and tract resonance.</li><li>Record useful filter settings and gains from the actual modules. The article supplies no numeric A/E/I/O/U presets; do not present found settings as universal vowel targets.</li><li>Add white noise through its own VCA into the oral mixer. Compare voiced only, noise only and mixed excitation at conservative levels. Do not confuse noise control with a second pitched oscillator.</li></ol><h2>3. Add the other branches and timing</h2><ol class="guide-steps"><li>Split the voiced signal after its first VCA into a second VCA and fixed broad band-pass filter for the nasal branch. Add that filter’s output to a separate final-mixer channel. Keep its gain independent of the oral path.</li><li>Split raw noise into a separate VCA and low-pass filter for fricatives; route it directly to another final-mixer channel, bypassing the three oral formant filters.</li><li>Verify each branch alone before combining. Use a proper mixer for the summation rather than tying output jacks together.</li><li>Try short noise envelopes and compare early versus delayed voiced onset. In Hillen’s account, stops such as B/D/G combine opening noise with prompt voicing, while P/T/K delay voicing. Fricatives and nasals require their own paths; liquids depend on changing articulation/timing. These are qualitative contrasts, not sufficient phoneme recipes.</li><li>Return all levels to a safe baseline before each new patch. A sustainable result is an identifiable contrast between branches and articulation times, not an unverified claim of natural speech.</li></ol><h2>4. What the computer contributes (pp. 38–39)</h2><p>A D/A interface translates computer values into controls for pitch, filter frequencies and amplitudes. The omitted software must coordinate their time histories. Hillen contrasts hand synthesis—analyzing a recorded speaker’s spectra and envelopes, then coding/editing parameters—with phonetic-symbol entry, where software interprets sound units, stress and timing. The scan provides neither the control data nor the software required to implement either method.</p><p>The phonetic example illustrates why written letters do not map directly onto speech sounds: homophones can share a rendering, context can change pronunciation, and transitions between sounds matter. The article’s assessment of contemporary speech quality is historical. It is not a claim about present-day speech systems or an invitation to copy a dictionary token into arbitrary modern software.</p><h2>5. Musical uses in the third page</h2><p>Hillen emphasizes control of timing and frequency separately: sustain a vowel beyond human breath, alter word/phrase speed without tape-speed pitch shift, reverse programmed sound-event order, or retune repeated phrasing for layered harmonies. The synthesis blocks can also act as a stored musical sequencer with no speech role. These possibilities depend on a control system beyond the block diagram.</p><p>The final example proposes replacing voiced excitation with guitar or recorded sound, while warning that vocal-oscillator wave-shaping circuitry would require modification. For a modular adaptation, use a documented external-audio input and appropriate level matching; the article does not show how to modify a Computalker board.</p><h2>6. Troubleshooting and honest completion criteria</h2><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">Symptom / question</th><th scope="col">Check</th></tr></thead><tbody><tr><td>Oral chain becomes silent</td><td>Listen after each series filter. Check overlapping passbands, gain and VCA opening; reduce extreme resonance before adding gain.</td></tr><tr><td>Only a pitched whistle</td><td>Verify resonant filters are shaping the source rather than self-oscillating. Move one center frequency while keeping oscillator pitch fixed.</td></tr><tr><td>Noise dominates</td><td>Close fricative and oral-noise VCAs separately; check the branch returns have independent levels.</td></tr><tr><td>Nasal change affects all branches</td><td>Check the split is after the first voiced VCA and before the oral mixer; nasal VCA/filter should be a separate final-mixer return.</td></tr><tr><td>Changing pitch changes apparent articulation</td><td>Record oscillator pitch and filter settings separately. A musical formant study does not guarantee pitch-independent speech intelligibility.</td></tr><tr><td>Can this speak typed sentences?</td><td>Not from these instructions alone. Missing items include parameter tables, transitions, DAC/interface details, timing rules and software.</td></tr><tr><td>Record a useful result</td><td>Save routing, source waveform/pitch, all filter settings, VCA contours and mixer gains. Label the result an oral-path or three-path experiment, not a verified Computalker replica.</td></tr></tbody></table></div><p class="guide-caution">Use finished compatible modules or documented software blocks. No mains work, vintage computer-board rewiring, fabricated formant table or component BOM is needed for this study. Exact voltage ranges and interface details must come from the chosen equipment.</p></div>
+</section>
+<section class="project-window window guide-window guide-window--source">
+<div class="title-bar"><span class="project-window-name">Original article</span></div>
+<div class="separator"></div>
+<div class="window-pane"><h2>Primary source and coverage</h2><ul><li>Peter Hillen (credited as consultant, National Semiconductor), “Vocal Synthesis,” <cite>Synapse</cite>, May/June 1977, printed p. 37: hybrid analog/computer architecture, vocal-fold source and oral resonances.</li><li>P. 38: consonant categories, nasal and fricative branches, Figure 1 complete block diagram, module correspondence, DAC control and synthesis methods.</li><li>P. 39: Figure 2 source waveform, phonetic/context limitations and musical uses involving independent time/pitch control.</li></ul><p><a href="vocalsynthesiuss.pdf" rel="noopener noreferrer" target="_blank">Open the local three-page source PDF ↗</a> · <a href="vocalsynthesiuss.pdf#page=3">Go to the previously omitted third page</a></p><p>The staged patch and troubleshooting are OES editorial guidance. No physical patch, speech intelligibility or historical hardware recreation is claimed as tested. Period product prices and addresses are not reproduced as current recommendations.</p></div>
+</section>
+</div>
+</main>
+<footer>
+<p>© 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+<div class="footer-badges"><img alt="Solutions badge" class="footer-badges" src="/images/solutionsv4.png"/><img alt="OES circle logo" class="footer-badges" src="/images/OESCirclelogo1.png"/></div>
 </footer>
 </body>
 </html>

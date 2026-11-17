@@ -1,131 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description"
-    content="This article proposes “electrophony”: creating the perception of several independent musical voices from a smaller set of synthesizer sources. Its examples are patch and performance techniques rather than a discrete circuit with a bill of materials.">
-  <title>Electrophony DIY Guide | Otorlymern Electrical Solutions</title>
-  <link rel="stylesheet" href="/css/diystyle.css">
-  <link rel="stylesheet" href="/solutions/DIY/projects/projects.css">
-  <link rel="stylesheet" href="/solutions/DIY/projects/project-guide.css">
-  <link rel="stylesheet" href="/css/site-nav.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="This article proposes “electrophony”: creating the perception of several independent musical voices from a smaller set of synthesizer sources. Its examples are patch and performance techniques rather than a discrete circuit with a bill of materials." name="description"/>
+<title>Electrophony DIY Guide | Otorlymern Electrical Solutions</title>
+<link href="/css/diystyle.css" rel="stylesheet"/>
+<link href="/solutions/DIY/projects/projects.css" rel="stylesheet"/>
+<link href="/solutions/DIY/projects/project-guide.css" rel="stylesheet"/>
+<link href="/css/site-nav.css" rel="stylesheet"/>
 </head>
-
 <body class="diy-projects-page diy-project-guide">
-  <header>
-    <nav>
-      <ul class="nav-bar">
-        <li><a href="/index.html">Home</a></li>
-        <li class="dropdown"><a href="/systems/rrr.html">Systems</a>
-          <ul class="dropdown-content">
-            <li><a href="/music/studio.html">OEStudio</a></li>
-            <li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
-            <li><a href="/systems/home-recording.html">Home Recording</a></li>
-            <li><a href="/video/videolibrary.html">Video Library</a></li>
-            <li><a href="/solutions/resources/index.html">Resources</a></li>
-          </ul>
-        </li>
-        <li><a href="/services/index.html">Services</a></li>
-        <li class="dropdown"><a href="/solutions/index.html">Solutions</a>
-          <ul class="dropdown-content">
-            <li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
-            <li><a href="/solutions/DIY/projects/index.html" aria-current="page">DIY Audio and Video</a></li>
-            <li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
-            <li><a href="/solutions/resources/index.html">Links / Resources</a></li>
-          </ul>
-        </li>
-        <li><a href="/manuals/">Archive</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="projects-main">
-    <section class="projects-hero project-guide-hero">
-      <div class="projects-title-blob" aria-hidden="true"><span class="projects-title-glare"></span><span
-          class="projects-title-ripple projects-title-ripple--one"></span><span
-          class="projects-title-ripple projects-title-ripple--two"></span></div>
-      <div class="project-guide-title">
-        <p class="project-guide-kicker">Eric B. Linsky · Synapse</p>
-        <h1><span>Electrophony</span></h1>
-        <p class="project-guide-kind">Patch study · not a parts-level kit</p>
-      </div>
-    </section>
-    <p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
-    <div class="project-guide-grid">
-      <section class="project-window window guide-window guide-window--description">
-        <div class="title-bar"><span class="project-window-name">Description</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <p>This article proposes “electrophony”: creating the perception of several independent musical voices from a
-            smaller set of synthesizer sources. Its examples are patch and performance techniques rather than a discrete
-            circuit with a bill of materials.</p>
-          <p class="guide-source-link"><a
-              href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/elctrophony-synapse.pdf"
-              target="_blank" rel="noopener noreferrer">Open original source PDF ↗</a></p>
-        </div>
-      </section>
-      <section class="project-window window guide-window guide-window--materials">
-        <div class="title-bar"><span class="project-window-name">Materials</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <ul>
-            <li>Two VCOs and two sample-and-hold/noise paths for the illustrated patch</li>
-            <li>A pair of filters that can be adjusted near self-oscillation</li>
-            <li>Mixer and/or balanced modulator for combining the sources</li>
-            <li>A keyboard, sequencer, or sub-audio square-wave sources for pitch control</li>
-            <li>Patch cables and an audio mixer for monitoring</li>
-          </ul>
-        </div>
-      </section>
-      <section class="project-window window guide-window guide-window--steps">
-        <div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <ol class="guide-steps">
-            <li><strong>Choose the article’s two-voice patch.</strong>
-              <p>Use the diagram in the source as the routing map. Start with two low-frequency VCOs tuned an octave
-                apart.</p>
-            </li>
-            <li><strong>Create evolving overtone groups.</strong>
-              <p>Route each noise source through its sample-and-hold path and filter. Raise each filter’s resonance
-                close to oscillation, then set levels conservatively.</p>
-            </li>
-            <li><strong>Listen to the sources separately.</strong>
-              <p>Monitor the VCOs and filtered outputs one at a time; adjust pitch and resonance until each layer is
-                clear before combining them.</p>
-            </li>
-            <li><strong>Add the pitch-control approach.</strong>
-              <p>The article also describes cycling a sequencer through selected pitches or using several slightly
-                detuned sub-audio square waves to make long changing patterns.</p>
-            </li>
-            <li><strong>Combine, record, and refine.</strong>
-              <p>Mix the parts or follow the balanced-modulator example from the article. Change one control at a time
-                and document which combinations create the perceived extra voices.</p>
-            </li>
-          </ol>
-          <p class="guide-caution">This is a synthesis/patching article, not a standalone circuit construction plan. It
-            does not provide a component BOM or wiring schematic for building a new instrument.</p>
-        </div>
-      </section>
-      <section class="project-window window guide-window guide-window--source">
-        <div class="title-bar"><span class="project-window-name">Original article</span></div>
-        <div class="separator"></div>
-        <div class="window-pane">
-          <div class="guide-pdf"><iframe
-              src="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/elctrophony-synapse.pdf"
-              title="Original source PDF for Electrophony" loading="lazy"></iframe></div>
-          <p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/elctrophony-synapse.pdf"
-              target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
-    <div class="footer-badges"><img src="/images/solutionsv4.png" class="footer-badges" alt="Solutions badge"><img
-        src="/images/OESCirclelogo1.png" class="footer-badges" alt="OES circle logo"></div>
-  </footer>
+<header>
+<nav>
+<ul class="nav-bar">
+<li><a href="/index.html">Home</a></li>
+<li class="dropdown"><a href="/systems/rrr.html">Systems</a>
+<ul class="dropdown-content">
+<li><a href="/music/studio.html">OEStudio</a></li>
+<li><a href="/systems/rrr.html">Repairs, Refurbs &amp; Restorations</a></li>
+<li><a href="/systems/home-recording.html">Home Recording</a></li>
+<li><a href="/video/videolibrary.html">Video Library</a></li>
+<li><a href="/solutions/resources/index.html">Resources</a></li>
+</ul>
+</li>
+<li><a href="/services/index.html">Services</a></li>
+<li class="dropdown"><a href="/solutions/index.html">Solutions</a>
+<ul class="dropdown-content">
+<li><a href="/oes-patch-builder/index.html">Patch Builder</a></li>
+<li><a aria-current="page" href="/solutions/DIY/projects/index.html">DIY Audio and Video</a></li>
+<li><a href="/solutions/DIY/designers/index.html">DIY Pioneers</a></li>
+<li><a href="/solutions/resources/index.html">Links / Resources</a></li>
+</ul>
+</li>
+<li><a href="/manuals/">Archive</a></li>
+</ul>
+</nav>
+</header>
+<main class="projects-main">
+<section class="projects-hero project-guide-hero">
+<div aria-hidden="true" class="projects-title-blob"><span class="projects-title-glare"></span><span class="projects-title-ripple projects-title-ripple--one"></span><span class="projects-title-ripple projects-title-ripple--two"></span></div>
+<div class="project-guide-title">
+<p class="project-guide-kicker">Eric Valinsky · Synapse · July/August 1977</p>
+<h1><span>Electrophony</span></h1>
+<p class="project-guide-kind">Patch study · not a parts-level kit</p>
+</div>
+</section>
+<p class="project-guide-back"><a href="index.html">← Back to DIY Audio &amp; Video Projects</a></p>
+<div class="project-guide-grid">
+<section class="project-window window guide-window guide-window--description">
+<div class="title-bar"><span class="project-window-name">Description</span></div>
+<div class="separator"></div>
+<div class="window-pane"><p>“Techniques of Electrophony” asks whether perceived voices must correspond to separate keyboard voices. Eric Valinsky contrasts independent polyphonic parts with homogeneous chordal playing, then offers ways to create ambiguous, layered textures with fewer sources.</p><p><strong>Source scope:</strong> the original OES extract contains printed p. 28 only, but the complete article continues on printed p. 29. Both pages have now been checked in the full July/August 1977 issue of <cite>Synapse</cite> (PDF pages 30–31). This guide covers the complete two-page article, including balanced modulation, rotating tape echo, polyphonic voice assignment and the conclusion. The author credit is Eric Valinsky.</p><p>This is a patch/perception study, not an electronic construction project. No component values, power supply, module circuits, keyboard interface or complete tape-echo build are given.</p><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/elctrophony-synapse.pdf" rel="noopener noreferrer" target="_blank">Original one-page scan ↗</a></p><p><a href="https://monoskop.org/images/8/80/Synapse_Vol_2_No_2.pdf#page=30" rel="noopener noreferrer" target="_blank">Full issue: complete article, printed pp. 28–29 ↗</a></p></div>
+</section>
+<section class="project-window window guide-window guide-window--materials">
+<div class="title-bar"><span class="project-window-name">Materials</span></div>
+<div class="separator"></div>
+<div class="window-pane"><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">Study</th><th scope="col">Supported equipment</th></tr></thead><tbody><tr><td>Figure 1 core patch</td><td>Two audio VCOs; two VCFs with adjustable resonance; two sample-and-hold functions, each sampling its own noise source; a common clock; two-input audio mixer and monitor.</td></tr><tr><td>Sequencer experiment</td><td>A pitch-controlling sequencer and sound source. Valinsky prefers more than eight stages; a particular stage count, scale or note list is not prescribed.</td></tr><tr><td>Sequencerless experiment</td><td>Several sub-audio square-wave control sources and a compatible pitch-control path. The source does not specify CV summing circuitry or modulation depths.</td></tr><tr><td>Balanced-modulator example</td><td>Balanced modulator, fixed sine source, second pitch-controlled source, and a mixer that can monitor both inputs plus processed output.</td></tr><tr><td>Practical bench aids</td><td>Compatible patch cables, module manuals and a patch notebook. Match audio/CV functions and voltage ranges before connecting; these checks are editorial guidance, not vintage specifications.</td></tr><tr><td>Figure 2 tape experiment</td><td>Four-channel recorder with simultaneous record/playback monitoring, compatible line-level interconnections, and either a recording mix or four monitored positions. Independent access to the record and playback signal paths is essential; the source gives no tape speed, head-gap dimension or calibrated delay.</td></tr><tr><td>Polyphonic assignment experiment</td><td>A polyphonic instrument whose physical voices can be set to different sounds, such as the Oberheim cited by Valinsky. An instrument applying identical settings to every voice does not directly implement this example.</td></tr></tbody></table></div></div>
+</section>
+<section class="project-window window guide-window guide-window--steps">
+<div class="title-bar"><span class="project-window-name">Step-by-step guide</span></div>
+<div class="separator"></div>
+<div class="window-pane"><h2>1. Read Figure 1 as separate audio and control paths</h2><figure><a aria-label="Open full-size functional diagram" href="/images/diagrams/diy/electrophony/patch.svg" rel="noopener noreferrer" target="_blank"><img alt="VCO 1 through VCF 1 and VCO 2 through VCF 2 feed a mixer. Clock triggers two noise sample-and-hold sources, which control the respective VCFs." class="guide-diagram" loading="lazy" src="/images/diagrams/diy/electrophony/patch.svg"/></a><figcaption>OES functional redraw after Figure 1. The noise sample-and-hold outputs are filter controls, not the principal audio sources.</figcaption></figure><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">From</th><th scope="col">To</th><th scope="col">Role</th></tr></thead><tbody><tr><td>VCO 1 audio</td><td>VCF 1 audio input</td><td>First bass-frequency harmonic source.</td></tr><tr><td>VCO 2 audio</td><td>VCF 2 audio input</td><td>Second source, one octave apart from VCO 1.</td></tr><tr><td>VCF 1 and VCF 2 outputs</td><td>Separate mixer inputs → output</td><td>Combine the two filtered voices.</td></tr><tr><td>Common clock</td><td>Both sample-and-hold trigger inputs</td><td>Coordinates when random values are sampled.</td></tr><tr><td>Each independent noise source</td><td>Its own sample-and-hold signal input</td><td>Supplies the sampled random values.</td></tr><tr><td>S/H 1 and S/H 2 outputs</td><td>Respective VCF control inputs</td><td>Changes the filter setting to expose evolving overtone groups.</td></tr></tbody></table></div><h2>2. Establish the patch one branch at a time</h2><ol class="guide-steps"><li>Lower monitoring level. Confirm each VCO is audible on its own, tune both to bass frequencies, then tune them an octave apart. The source supplies no absolute fundamental frequency or waveform prescription beyond the drawing.</li><li>Route VCO 1 through VCF 1 and VCO 2 through VCF 2. Test the filters manually at modest resonance before adding modulation.</li><li>Patch each noise source to its sample-and-hold signal input; patch the common clock to both trigger inputs. Send each held output to its own VCF frequency-control input using the actual modules’ compatible CV range. Begin with modest modulation depth.</li><li>Bring filter resonance close to, but not into uncontrolled self-oscillation. Raise monitor level only after checking the resulting peaks. Two strongly resonant filters can produce unexpectedly loud output.</li><li>Monitor each branch alone, then both together. Listen for a fundamental and moving overtones rather than counting hardware voices as musical parts. The point is that a listener may hear one, two, three or four groupings from the same two-branch patch.</li><li>Record a passage and listen again without looking at the patch. Note perceived layers, clock rate, relative source levels, resonance and filter ranges. These observations are a repeatability exercise, not a guaranteed psychoacoustic outcome.</li></ol><h2>3. Further techniques across printed pages 28–29</h2><h3>Fast pitch sequencing</h3><p>A single rapidly sequenced sound can suggest several interleaved voices when pitches are chosen to form perceptual groups. Start slowly to establish a note list, then vary speed and spacing and listen for separate registers or contours. The article does not print a sequence, BPM or tuning table, so this is a composition experiment rather than a reproducible preset.</p><h3>Several nearly matched slow square waves</h3><p>The article proposes multiple sub-audio square waves controlling a source’s discrete pitches; slightly different rates produce long evolving rhythmic patterns. It does not show how their voltages are combined. Use an existing compatible CV mixer/control implementation; never connect several active outputs together with a passive splitter to invent the missing summing stage.</p><h3>Balanced modulation / simulated chordal texture</h3><p>The printed example puts a fixed sine, suggested as C above middle C, into one balanced-modulator input and a pitch-controlled waveform into the other; it cites Ronald Pellegrino using a live soprano. Monitor both original signals and the processed signal together. The recovered continuation on p. 29 completes the claim: suitable pitch choices for the variable source produce a limited set of four-note chords. It does not supply a chord chart, exact pitch sequence or calibrated modulator settings. Explore the variable source slowly while holding the fixed sine steady, recording useful combinations; this is not a promise that every input pitch yields a conventional chord.</p><h3>Figure 2: quad rotating tape echo</h3><p>The continuation explains Figure 2 through Valinsky’s work <cite>A Clarinet, After an Eventful Night Out, Returns Home</cite>, for clarinet and ARP 2600. A four-channel tape recorder operates with every channel recording and the playback head monitored. The inter-channel routing is a <strong>feed-forward chain, not a recirculating feedback loop</strong>: playback of channel 1 feeds record input 2, playback 2 feeds record input 3, and playback 3 feeds record input 4. No connection returns the final stage to the first input. The article describes four occurrences of the original sound followed by silence, with a choice of a mixed result or rotating quad presentation.</p><p><strong>Live monitoring matters:</strong> the four speaker symbols in Figure 2 are not the four delayed playback outputs. Speaker 1 monitors the incoming, undelayed signal; speakers 2, 3 and 4 monitor playback channels 1, 2 and 3 respectively. The prose distinguishes this live setup from the recording arrangement using the fourth channel. Monitoring only delayed returns in live performance would displace the apparent original event in time. Preserve that distinction rather than silently substituting four playback taps.</p><ol class="guide-steps"><li>Before patching, confirm that the actual recorder supports record/playback monitoring and individually accessible channels. Use its own documentation for operating modes and signal levels. This is an external routing study, not permission to modify tape-head or mains wiring.</li><li>At low levels, establish one record-to-playback path and measure/listen to its delay. Only then add each successive playback-to-next-record connection. Do not route the last playback signal back to the source; the source explicitly calls for no feedback.</li><li>Test with an isolated short sound, then stop the input. Monitor the direct signal and first three delayed stages at the marked live positions. Confirm the sequence ends rather than regenerating indefinitely. Log the actual delays; the article specifies no tape speed or head spacing.</li><li>For a recorded mix, distinguish track recording from the monitoring bus and preserve the fourth-channel arrangement in Figure 2. Make a short test recording and listen back before committing a performance. A software or digital multi-delay recreation must be labeled an adaptation, with its own explicit routing and times.</li></ol><p>The complete article supplies the operating principle and monitoring explanation, but still no tape-machine electronics, alignment procedure, gain calibration or mechanical build plan. Consult the original Figure 2 before adapting a particular recorder.</p><h3>Different sounds across polyphonic voices (p. 29)</h3><p>The last example deliberately uses a polyphonic synthesizer: set each physical voice differently, then play several keys. Voice allocation can associate a given key with different timbres in a more-or-less unpredictable way. The variation comes from key-to-voice assignment rather than a requirement for a new oscillator per perceived musical part.</p><p>For a practical comparison, record repeated chords with all voices alike, then repeat with distinct settings on each voice. Observe which notes acquire which sounds as allocation changes. The assignment algorithm and reset behavior belong to the actual instrument; the article does not prescribe them or guarantee randomness. Keep levels matched so loudness alone does not explain the result.</p><h3>The article’s conclusion</h3><p>Valinsky extends electrophony beyond pitched analog patches to musique concrète and studio techniques. Results may be pitched or unpitched, predictable or unpredictable, deterministic or stochastic, recorded or real-time. His argument is for inventive, efficient use of the available technology, not an absolute rejection of polyphonic instruments—the final example expressly uses one.</p><h2>4. Test and troubleshoot by subsystem</h2><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">Observation</th><th scope="col">Check / next action</th></tr></thead><tbody><tr><td>No sound</td><td>Monitor each VCO directly, then its filter, then the mixer. Check audio input versus CV input labeling.</td></tr><tr><td>No changing filter motion</td><td>Test a manual filter sweep; then inspect S/H trigger activity, clock routing, noise input and modulation amount.</td></tr><tr><td>Both paths move identically</td><td>Check that each S/H samples its own noise source and the control outputs have not been accidentally joined.</td></tr><tr><td>Piercing whistles or clipping</td><td>Lower resonance, branch levels and monitor level. Distinguish desired resonant harmonics from self-oscillation.</td></tr><tr><td>Only one obvious voice</td><td>That is not necessarily a wiring fault. Change filter range, relative mix, fundamental register or rate; perception is the artistic variable.</td></tr><tr><td>Acceptance record</td><td>Both branches work alone; both S/H paths advance; combined sound changes over time without overload. Log patch and listening observations rather than claiming a prescribed voice count.</td></tr></tbody></table></div><p class="guide-caution">No soldering or mains work is required to explore these patches with finished modules. Module power, CV scaling and permissible input levels must come from the equipment documentation, not the historical block drawing.</p></div>
+</section>
+<section class="project-window window guide-window guide-window--source">
+<div class="title-bar"><span class="project-window-name">Original article</span></div>
+<div class="separator"></div>
+<div class="window-pane"><h2>Complete source and page map</h2><p>Eric Valinsky, “Techniques of Electrophony,” <cite>Synapse</cite>, July/August 1977, printed pp. 28–29, full-issue PDF pages 30–31. Printed p. 28 contains the keyboard/polyphony critique, Figure 1, Figure 2 and the start of the sequence/modulation examples. Printed p. 29, left column, completes the balanced-modulator sentence, explains the tape routing and live-monitor distinction, adds differently programmed polyphonic voices, and concludes the article. The rest of p. 29 is unrelated material.</p><p><a href="https://monoskop.org/images/8/80/Synapse_Vol_2_No_2.pdf#page=30" rel="noopener noreferrer" target="_blank">Full issue: start at printed p. 28 / PDF p. 30 ↗</a> · <a href="https://monoskop.org/images/8/80/Synapse_Vol_2_No_2.pdf#page=31" rel="noopener noreferrer" target="_blank">Recovered continuation: printed p. 29 / PDF p. 31 ↗</a></p><p><a href="https://media.otorlymern-electrical.com/OES-ARCHIVE/diy/PROJECTS/elctrophony-synapse.pdf" rel="noopener noreferrer" target="_blank">Original OES one-page extract ↗</a> remains useful for its diagrams, but is not the complete article. The former missing-continuation limitation has been resolved by checking the full issue.</p><p>The article cites Willi Apel’s <cite>Harvard Dictionary of Music</cite> (1968), p. 593, for its definition of polyphony; this is Valinsky’s reference, not a separately reviewed source here. Staged tests, fault isolation and compatibility cautions are OES editorial guidance. No hardware build or listening test is claimed.</p></div>
+</section>
+</div>
+</main>
+<footer>
+<p>© 2026 – Otorlymern Electrical Solutions – DIY Projects</p>
+<div class="footer-badges"><img alt="Solutions badge" class="footer-badges" src="/images/solutionsv4.png"/><img alt="OES circle logo" class="footer-badges" src="/images/OESCirclelogo1.png"/></div>
+</footer>
 </body>
-
 </html>
