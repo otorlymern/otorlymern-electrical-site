@@ -371,6 +371,13 @@ body.diy-projects-page {
   line-height: 1.35;
 }
 
+.projects-windows .module-manual-note {
+  margin: -0.5rem 0 1rem;
+  color: #e7e7e7;
+  font-size: 0.9em;
+  line-height: 1.35;
+}
+
 .archive-shortcut {
   width: min(100%, 58rem);
   margin: clamp(2rem, 5vw, 5rem) auto 0;

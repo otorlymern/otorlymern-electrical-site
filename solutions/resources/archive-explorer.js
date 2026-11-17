@@ -85,7 +85,7 @@
   const collectionIdFromUrl = (rawUrl) => {
     try {
       const url = new URL(rawUrl, window.location.origin);
-      const archivePath = url.pathname.split("/pdfs/")[1] || "";
+      const archivePath = url.pathname.split("/OES-ARCHIVE/")[1] || "";
       return archivePath.split("/").filter(Boolean)[0] || "other";
     } catch (_) {
       return "other";
@@ -520,6 +520,7 @@
         return normalizedManual;
       })
       .filter((manual) => manual.resolvedPdfUrl);
+
 
     state.collections = new Map();
     state.brands = new Map();

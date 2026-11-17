@@ -3,6 +3,28 @@
   const STORAGE_KEY = "oes.manuals.lastOpenedId";
   const PDFJS_LIB_URL = "/manuals/vendor/pdfjs/pdf.min.js";
   const PDFJS_WORKER_URL = "/manuals/vendor/pdfjs/pdf.worker.min.js";
+  const FEATURED_MANUAL_IDS = Object.freeze([
+    "manuals-synths-arp-arpaxxe-ownersmanual",
+    "manuals-synths-arp-arpquadra-ownersmanual",
+    "manuals-synths-buchla-buchla-music-easel-manual",
+    "manuals-synths-korg-korgms20-ownersmanual",
+    "manuals-synths-korg-korgpoly800-ownersmanual",
+    "manuals-synths-korg-korgpolysixownersmanual",
+    "manuals-synths-moog-moogmemorymoog-ownersmanual",
+    "manuals-synths-moog-moogpolymoog-ownersmanual",
+    "manuals-synths-oberheim-manuals-oberheimobx-ownersmanual",
+    "manuals-synths-oberheim-manuals-oberheimxpander-ownersmanual",
+    "manuals-synths-roland-junos-roland-juno106-owners-manual",
+    "manuals-synths-roland-rolandjuno60-ownersmanual",
+    "manuals-synths-roland-rolandjupiter4-ownersmanual",
+    "manuals-synths-roland-rolandsh101-ownersmanual",
+    "manuals-synths-sequential-circuits-sequentialprophet5-operationmanual",
+    "manuals-tape-machines-studer-revox-revox-a77-user-manual-en",
+    "manuals-tape-machines-teac-tascam-tascam-144-owners-manual",
+    "manuals-tape-machines-teac-tascam-tascam-234-owners-manual",
+    "manuals-tape-machines-teac-tascam-tascam-246-owners-manual-hirez",
+    "manuals-tape-machines-teac-tascam-tascam-488-mk-ii-user-manual",
+  ]);
 
   const MANUAL_RECORD_PATHS = Object.freeze({
     "arp-2600": "/manuals/library/arp-2600-owners-manual/",
@@ -651,12 +673,10 @@
   function applySearch(query) {
     const trimmed = query.trim();
     if (!trimmed) {
-      state.filteredManuals = [...state.manuals].sort((a, b) => {
-        return (
-          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
-        );
-      });
-      updateStatus(`Showing all archive documents (${state.filteredManuals.length}).`);
+      state.filteredManuals = FEATURED_MANUAL_IDS
+        .map((id) => state.manualById.get(id))
+        .filter(Boolean);
+      updateStatus(`Featured documents (${state.filteredManuals.length}). Search to explore the full archive.`);
       return;
     }
 

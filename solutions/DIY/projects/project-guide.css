@@ -1,0 +1,222 @@
+.diy-project-guide {
+  min-height: 100vh;
+}
+
+.project-guide-hero {
+  min-height: clamp(220px, 30vw, 360px);
+  margin-bottom: 0.5rem;
+}
+
+.project-guide-title {
+  position: relative;
+  z-index: 3;
+  max-width: min(100%, 72rem);
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-guide-title h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 6rem);
+}
+
+.project-guide-title h1 span {
+  overflow-wrap: anywhere;
+}
+
+.project-guide-kicker,
+.project-guide-kind {
+  margin: 0.75rem 0;
+  color: #111;
+  font-family: "MSW98UI-Bold", sans-serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.project-guide-kind {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid #111;
+  background: #fff;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
+  font-size: 0.85rem;
+}
+
+.project-guide-back {
+  width: min(100%, 88rem);
+  margin: 0 auto 1rem;
+  font-family: "MSW98UI-Bold", sans-serif;
+}
+
+.project-guide-back a {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  background: #c0c0c0;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  color: #111;
+}
+
+.project-guide-back a:hover,
+.project-guide-back a:focus-visible {
+  background: #000080;
+  color: #fff;
+}
+
+.project-guide-grid {
+  display: grid;
+  width: min(100%, 88rem);
+  margin: 0 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(1rem, 2.5vw, 2.25rem);
+}
+
+.guide-window {
+  min-width: 0;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  background: #c0c0c0;
+  box-shadow:
+    inset 1px 1px 0 #dfdfdf,
+    inset -1px -1px 0 #808080,
+    7px 9px 0 rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.75);
+  color: #111;
+}
+
+.guide-window--steps,
+.guide-window--source {
+  margin-top: clamp(0rem, 2vw, 1.5rem);
+}
+
+.guide-window .title-bar {
+  display: flex;
+  min-height: 2.1rem;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-bottom: 1px solid #404040;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+}
+
+.guide-window .project-window-name {
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  font-family: "MSW98UI-Bold", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.guide-window .separator {
+  height: 4px;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #808080;
+  background: #c0c0c0;
+}
+
+.guide-window .window-pane {
+  height: auto;
+  padding: clamp(1rem, 2.2vw, 1.7rem);
+  overflow: visible;
+  background: #f4f3ed;
+  color: #111;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.5;
+}
+
+.guide-window p:first-child {
+  margin-top: 0;
+}
+
+.guide-window ul,
+.guide-window ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.guide-window li + li {
+  margin-top: 0.55rem;
+}
+
+.guide-window a,
+.guide-window a:visited {
+  color: #000080;
+  font-weight: 700;
+}
+
+.guide-window a:hover,
+.guide-window a:focus-visible {
+  background: #000080;
+  color: #fff;
+}
+
+.guide-steps li {
+  padding-left: 0.25rem;
+}
+
+.guide-steps strong {
+  font-family: "MSW98UI-Bold", sans-serif;
+}
+
+.guide-steps p {
+  margin: 0.25rem 0 0;
+}
+
+.guide-caution {
+  margin: 1.35rem 0 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #9c6a00;
+  background: #fff3ca;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.guide-source-link {
+  margin: 1rem 0 0;
+}
+
+.guide-pdf {
+  height: min(72vh, 760px);
+  min-height: 340px;
+  border: 2px inset #808080;
+  background: #fff;
+}
+
+.guide-pdf iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.guide-window--source .window-pane > p {
+  margin: 0.8rem 0 0;
+}
+
+@media (max-width: 760px) {
+  .project-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-window--steps,
+  .guide-window--source {
+    margin-top: 0;
+  }
+
+  .guide-pdf {
+    height: 65vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diy-project-guide .projects-title-blob,
+  .diy-project-guide .projects-title-blob *,
+  .diy-project-guide .project-guide-title h1 span {
+    animation: none !important;
+  }
+}
